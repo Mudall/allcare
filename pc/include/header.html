@@ -1,0 +1,298 @@
+<form id="headerMenuVO" action="/cm/cmm/menu/topArea.do" method="POST">
+    <input type="hidden" name="topArea" id="topArea_header">
+    <input type="hidden" name="currentMenuId" id="currentMenuId_header">
+    <input type="hidden" name="redirectUrl" id="redirectUrl_header">
+    <input type="hidden" name="menuPurpSecd" id="menuPurpSecd_header">
+    <input type="hidden" name="dtlMenuId" id="dtlMenuId">
+    <input type="hidden" name="dtlForwardPolyUrl" id="dtlForwardPolyUrl">
+    <input type="hidden" name="dtlMenuPurpSecd" id="dtlMenuPurpSecd">
+    <input type="hidden" name="dtlExnwMenuConcSecd" id="dtlExnwMenuConcSecd">
+    <input type="hidden" name="dtlPwdCfrmYn" id="dtlPwdCfrmYn">
+    <input type="hidden" name="dtlSmtmConcCtrlId" id="dtlSmtmConcCtrlId">
+    <input type="hidden" name="dtlContextPath" id="dtlContextPath">
+    <input type="hidden" name="serverToday" id="serverToday" value="20250725">
+</form>
+
+<form id="subSearchDataForm" action="/cm/f/c/0100/selectUnifySearchPost.do" method="POST">
+    <input type="hidden" id="sub_topQuerySearchArea" name="topQuerySearchArea" value="all">
+    <input type="hidden" id="sub_topQueryData" name="topQueryData">
+    <input type="hidden" id="sub_startCount" name="startCount" value="1">
+    <input type="hidden" id="sub_listCount" name="listCount" value="5">
+
+    <input type="hidden" name="systClId" id="topsystClId">
+    <input type="hidden" name="systId" id="topsystId">
+</form>
+
+<form id="bbsGoForm" action="/cm/c/a/0100/selectBbttInfoPost.do" method="POST">
+    <input type="hidden" id="header_ntceStno" name="ntceStno" value="5">
+</form>
+
+<!-- #header_top -->
+<div id="header_top">
+    <div class="header_lt">
+        <div class="get_top">
+            <i class="icon"></i>
+            <span class="text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+        </div>
+    </div>
+    <div class="header_top_area">
+        <ul class="header_type">
+            <li><a href="javascript:void(0);" onclick="fn_cliFck_header_top_area('EBM01')" title="개인 선택됨">개인</a></li>
+            <li><a href="javascript:void(0);" onclick="fn_click_header_top_area('EBM00')">기업</a></li>
+            <li class="top_noti_area">
+                <div class="noti_banner_slide swiper-initialized swiper-vertical swiper-backface-hidden">
+                    <div class="swiper-wrapper" id="swiper-wrapper-6a06e973b4c1cf06" aria-live="off" style="transition-duration: 300ms; transform: translate3d(0px, -52px, 0px);">
+                        <div class="swiper-slide swiper-slide-next swiper-slide-prev" role="group" aria-label="2 / 2" data-swiper-slide-index="1" style="height: 52px;">
+                            <span class="ad_title_p"><span class="ico16_loudspeaker_black"></span>고용24 메인화면 개편 안내</span>
+                            <a href="https://www.work24.go.kr/cm/c/a/0100/selectBbttInfo.do?ntceStno=292&amp;bbsClCd=kf9cT1sUygs8E64dnqWAxg%3D%3D&amp;currentPageNo=1&amp;recordCountPerPage=10&amp;sortTycd=1&amp;startDt=&amp;endDt=&amp;searchDeTpCd=termSearchGbn0&amp;searchTxt=&amp;searchTycd=3&amp;upprJobClCd=&amp;jobClCd=&amp;bbsUrl=%2Fc%2Fa%2F0100%2FselectBbttListPost.do" class="link btn xxsmall btn_round type02"><span>자세히 보기</span></a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 2" data-swiper-slide-index="0" style="height: 52px;">
+                            <span class="ad_title_p"><span class="ico16_loudspeaker_black"></span>고용24 시스템 작업 안내 (8.1(금) 22:00 ~ 8.2(토) 06:00)</span>
+                            <a href="https://www.work24.go.kr/cm/c/a/0100/selectBbttInfo.do?ntceStno=304&amp;bbsClCd=kf9cT1sUygs8E64dnqWAxg%3D%3D&amp;currentPageNo=1&amp;recordCountPerPage=10&amp;sortTycd=1&amp;startDt=&amp;endDt=&amp;searchDeTpCd=termSearchGbn0&amp;searchTxt=&amp;searchTycd=3&amp;upprJobClCd=&amp;jobClCd=&amp;bbsUrl=%2Fc%2Fa%2F0100%2FselectBbttListPost.do" class="link btn xxsmall btn_round type02"><span>자세히 보기</span></a>
+                        </div>
+                    </div>
+                    <div class="btn_container">
+                        <button type="button" class="btn noti_pause"><span class="blind">멈춤</span></button>
+                        <button type="button" class="btn noti_play" style="display:none"><span class="blind">재생</span></button>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //#header_top -->
+
+<!-- #header_menu -->
+<div id="header_menutree">
+    <div class="header_lt">
+        <ul class="header_info">
+            <li><a href="javascript:void(0);" onclick="fn_goPageUrl('/cm', 'EBG020000001564', '/z/b/0210/openLginPagePost.do', 'EBG02', 'N', 'ZB0210M00')">로그인</a></li>
+            <li><a href="javascript:void(0);" onclick="fn_goPageUrl('/cm', '2', '/a/a/0110/openJoinPagePost.do')">회원가입</a></li>
+            <li><a href="javascript:void(0);" onclick="fn_goPageUrl('/cm', 'x', '/c/d/0180/retrieveSiteEasyHpcmPost.do')" id="tmp_siteInfro">이용안내</a></li>
+            <li class="line"><a href="javascript:void(0);" onclick="fn_goPageUrl('/cm', 'EBG020000001589', '/c/c/0120/selectUtzeInqrLstPost.do', 'EBM02', 'N', '')">질문과 답변</a></li>
+            <li class="line"><a href="http://as82.kr/keis" target="_blank" title="새창 열림">원격지원</a></li>
+        </ul>
+    </div>
+</div>
+<!-- //#header_menu -->
+
+<!-- #header_bottom : hover시 extend 클래스 추가 -->
+<div id="header_bottom" class="">
+    <div class="header_bottom_area">
+        <h1><!-- 23/12/04 퍼블: .temp 추가 시 "고용24(시범운영)" 로고 -->
+            <a class="go24_ci" onclick="fn_click_header_top_area('EBM01')" href="javascript:void(0);" title="홈으로">
+                <span class="blind">고용24</span>
+            </a>
+        </h1>
+
+        <!-- gnb -->
+        <div id="gnb">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" title="채용정보"><span>채용정보</span></a>
+                    <ul class="gnb2depth">
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/wk', 'EBG020000000002', '/a/b/1200/retriveDtlEmpSrchListPost.do', '', 'N', '')">
+                                <span>일자리 찾기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/wk', 'EBG020000000016', '/a/b/2100/resumeMngMainPost.do', '', 'N', '')">
+                                <span>구직신청</span>
+                            </a>
+                        </li>                            <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/wk', 'EBG020000001836', '/a/f/1100/retrieveEmpEventListPost.do', '', 'N', '')">
+                                <span>채용행사</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/cm', 'EBG020000000050', '/jobyoung/smallGiants/corpInfoSrchList.do?coGbCd=small', '', 'N', '')" title="새창 열림">
+                                <span>강소기업</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="취업지원"><span>취업지원</span></a>
+                    <ul class="gnb2depth">
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/wk', 'EBG020000000054', '', '', 'N', '')">
+                                <span>취업역량강화</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/wk', 'EBG020000000084', '/r/d/1110/resumeSelfIntroGuide1Post.do', '', 'N', '')">
+                                <span>취업가이드</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/ua', 'EBG120000000001', '', '', 'N', '')">
+                                <span>국민취업지원제도</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/cm', 'EBG020000000120', '/', '', 'N', '')" title="새창 열림">
+                                <span>미래내일 일경험</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/wk', 'EBG020000000134', '', '', 'N', '')">
+                                <span>취업지원금</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="실업급여"><span>실업급여</span></a>
+                    <ul class="gnb2depth">
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/ei', 'EBG020000000160', '/a/b/1100/retrievePuIncqualClmntOnlineViewPost.do', '', 'N', '')">
+                                <span>수급자격</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/ei', 'EBG020000000206', '/a/h/1100/retrieveEmpymnHopeCardInfoPost.do', '', 'N', '')">
+                                <span>실업인정</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/ei', 'EBG020000000265', '/a/m/1200/createPuElempAllwncViewPost.do', '', 'N', '')">
+                                <span>취업촉진수당</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/cm', 'EBG020012030005', '/d/b/0003/selectCvplNotiEILI20Post.do', '', 'N', '')">
+                                <span>이직확인서</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="직업능력개발"><span>직업 능력 개발</span></a>
+                    <ul class="gnb2depth">
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/hr', 'EBG020000000308', '/a/a/1100/trnnCrsInf0Post.do', '', 'N', '')">
+                                <span>훈련 찾기·신청</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/hr', 'EBG020000000295', '/h/a/1100/selectIssueRequestPost.do', '', 'N', '')">
+                                <span>국민내일배움카드</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/hr', 'EBG020000000324', '/i/b/1100/selectCrqfcIssuReqstPost.do', '', 'N', '')">
+                                <span>훈련 기관·강사</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="출산휴가·육아휴직" class=""><span>출산휴가·육아휴직</span></a>
+                    <ul class="gnb2depth">
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/ei', 'EBG020000000393', '/b/a/1100/openHPEIBA1100M02Post.do', '', 'N', '')">
+                                <span>출산휴가</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="fn_goPageUrl('/ei', 'EBG020000000418', '/b/b/1100/openHPEIBB1100M01Post.do', '', 'N', '')">
+                                <span>육아휴직</span>
+                            </a>
+                        </li>                      
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- //gnb -->
+
+        <!-- utility -->
+        <ul class="header_util">
+            <li class="header_search">
+                <a href="#none">
+                    <span class="ico ico09"></span>
+                    <span>검색</span>
+                </a>
+                <!-- 서브검색 : 메인에서는 예외처리, 서브만 노출 -->
+                <div class="sub_search_wrap">
+                    <div class="top_search_form pt16">
+
+                        <!-- 검색영역 -->
+                        <div class="topsearch_wrap">
+                            <div class="form_search_wrap">
+                                <div class="main_search_area">
+                                    <div class="inner_search">
+                                        <button type="button" class="btn_cate_select" id="sub_topQuerySelect" title="검색 유형 열기"><span>전체</span></button>
+                                        <span class="bar"></span>
+                                        <input type="text" placeholder="필요한 서비스를 찾아보세요" title="검색어 입력" id="sub_topQuery" name="sub_topQuery" maxlength="150" class="ui-autocomplete-input" autocomplete="off">
+                                        <a href="javascript:void(0);" id="sub_findSearchData" class="btn_main_search"><span class="blind">검색</span></a>
+                                    </div>
+                                </div>
+                                <!-- 카테고리레이어 -->
+                                <div class="layer_search layer_cate_search" id="sub_topQueryCateLayer" style="display:none">
+                                    <ul>
+                                        <li><a href="javascript:void(0);" class="active" data-value="all" data-title="전체"><span>전체</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="report" data-title="신고·신청"><span>신고·신청</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="policy_emp" data-title="정책"><span>정책</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="tb_workinfo" data-title="채용"><span>채용</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="tb_bizinfo" data-title="기업"><span>기업</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="training" data-title="훈련"><span>훈련</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="news" data-title="뉴스·자료"><span>뉴스·자료</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="jobCourse" data-title="직업·진로"><span>직업·진로</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="qual" data-title="자격"><span>자격</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="tb_resident" data-title="인재"><span>인재</span></a></li>
+                                        <li><a href="javascript:void(0);" data-value="etc" data-title="기타"><span>기타</span></a></li>
+                                    </ul>
+                                </div>
+                                <!-- //카테고리레이어 -->
+                                <!-- 자동완성레이어 -->
+                                <div class="layer_auto_search_wrap" style="display:none">
+                                    <div class="layer_search layer_auto_search">
+                                        <ul class="keyword" id="sub_keyword">
+                                        </ul>
+                                        <div class="service">
+                                            <p class="b1_sb">정책/서비스 바로가기</p>
+                                            <ul class="box_list_area" id="sub_policyList">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 자동완성레이어 -->
+                            </div>
+                        </div>
+                        <!-- //검색영역 -->
+
+                        <!-- 추천검색어 -->
+                        <dl class="recommend_keyword">
+                            <dt>추천검색어</dt>
+                            <dd>
+                                <ul id="sub_recommendArea">
+                                    <li><a href="javascript:void(0);" onclick="fn_subPopWordClick('실업급여')">실업급여</a></li>
+                                    <li><a href="javascript:void(0);" onclick="fn_subPopWordClick('근로계약서')">근로계약서</a></li>
+                                    <li><a href="javascript:void(0);" onclick="fn_subPopWordClick('육아휴직')">육아휴직</a></li>
+                                    <li><a href="javascript:void(0);" onclick="fn_subPopWordClick('국민내일배움카드')">국민내일배움카드</a></li>
+                                    <li><a href="javascript:void(0);" onclick="fn_subPopWordClick('청년일자리도약장려금')">청년일자리도약장려금</a></li>
+                                    <li><a href="javascript:void(0);" onclick="fn_subPopWordClick('직업훈련')">직업훈련</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <!-- //추천검색어 -->
+                    </div>
+                </div>
+                <!-- //서브검색 -->
+            </li>
+
+            <li class="header_category">
+                <a href="javascript:void(0)" onclick="ComFnLib.fn_openLayerSiteMapPopup('sitemappopup', '/cm/c/d/0150/retrieveStmpPop.do?menuPurpSecd=EBM01', null, 'fn_callBack');">
+                    <span class="ico ico08"></span>
+                    <span>전체메뉴</span>
+                </a>
+            </li>
+        </ul>
+        <!-- //utility -->
+
+    </div>
+</div>
+<!-- //#header_bottom -->
