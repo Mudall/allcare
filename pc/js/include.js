@@ -21,3 +21,4 @@ loadSection('footer', '../pc/include/footer.html');
 loadSection('location', '../pc/include/location.html');
 loadSection('lnb', '../pc/include/lnb.html');
 loadSection('quick_menu', '../pc/include/quick_menu.html');
+loadSection('section_bottom', '../pc/include/section_bottom.html');

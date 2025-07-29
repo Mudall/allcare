@@ -10,8 +10,8 @@ str += '<meta name="google-site-verification" content="ZR1mYdQpmVo-WRHxN0KAbncDH
 str += '<link rel="icon" href="/cm/static/images/work24_logo_ico.png">';
 str += '<link rel="stylesheet" href="/cm/static/css/jquery-ui.min.css?ver=20250725-0357">';
 
-str += '<link rel="stylesheet" href="../mo/include/css/reset.css">';
-str += '<link rel="stylesheet" href="../mo/include/css/layout.css">';
-str += '<link rel="stylesheet" href="../mo/include/css/common.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/reset.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/layout.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/common.css">';
 
 document.write(str);

@@ -16,5 +16,5 @@ async function loadSection(id, file) {
 }
 
 // 파일 불러오기
-loadSection('header', '../mo/include/header.html');
-loadSection('bottom_bar', '../mo/include/bottom_bar.html');
+loadSection('header', '../mobile/include/header.html');
+loadSection('bottom_bar', '../mobile/include/bottom_bar.html');
