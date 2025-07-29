@@ -1,0 +1,123 @@
+/* A */
+/* B */
+/* C */
+/* D */
+/* E */
+/* F */
+/* G */
+/* H */
+/* I */
+/* J */
+/* K */
+/* L */
+/* M */
+/* N */
+/* O */
+/* P */
+/* Q */
+/* R */
+/* S */
+/* T */
+/* U */
+/* V */
+/* W */
+/* X */
+/* Y */
+/* Z */
+/* primay color green */
+/* bottom color green */
+/* primay color blue */
+/* color red */
+/* accent color */
+/* bg color */
+/* sub title color */
+/* sub title color */
+/* Reset */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  color: #333;
+  box-sizing: border-box;
+  font: 1rem "Pretendard", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+input[type=text], input[type=password] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input:checked[type=checkbox] {
+  -webkit-appearance: checkbox;
+}
+
+button, input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-spacing: 0;
+  width: 100%;
+}
+
+address, em {
+  font-style: normal;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+caption {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0, 0, 0);
+          clip-path: polygon(0, 0, 0);
+}
+
+strong {
+  font-weight: 600;
+}
+
+.blind {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0, 0, 0);
+          clip-path: polygon(0, 0, 0);
+}
+
+strong, p, span {
+  font-size: inherit;
+  line-height: 1.5rem;
+}/*# sourceMappingURL=reset.css.map */

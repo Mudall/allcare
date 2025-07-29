@@ -1,0 +1,493 @@
+<div class="site">
+	<div class="area">
+		<button type="button" class="btnsite btn_family" title="확장됨" aria-expanded="false">
+			<span class="text">패밀리사이트</span>
+			<span class="icon"></span>
+		</button>
+		<div class="site_list">
+			<div class="list list--family" style="display: none;">
+				<ul>
+					<li class="item"><a href="https://www.eps.go.kr" target="_blank" title="새창 열림">외국인고용(외국인전용)</a></li>
+				
+					<li class="item"><a href="https://eis.work24.go.kr" target="_blank" title="새창 열림">고용행정통계</a></li>
+					<li class="item"><a href="https://www.workplus.go.kr" target="_blank" title="새창 열림">고용복지센터</a></li>
+					<li class="item"><a href="https://www.worktogether.or.kr" target="_blank" title="새창 열림">장애인고용포털</a></li>
+					<li class="item"><a href="https://www.work.go.kr/cyberedu/main.do" target="_blank" title="새창 열림">사이버진로교육센터</a></li>
+					<li class="item"><a href="https://saeil.mogef.go.kr/hom/HOM_Main.do" target="_blank" title="새창 열림">여성새로일하기센터</a></li>
+					<li class="item"><a href="https://www.gasarang.go.kr/hpgsMain.do" target="_blank" title="새창 열림">가사랑</a></li>
+					<li class="item"><a href="https://www.work.go.kr/gongsi/empReportInfo/retrieveGetGongsiList.do" target="_blank" title="새창 열림">고용형태공시제</a></li>
+					<li class="item"><a href="https://www.wagework.go.kr" target="_blank" title="새창 열림">임금직업포털</a></li>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="btnsite btn_related" title="확장됨" aria-expanded="false">
+			<span class="text">유관기관</span>
+			<span class="icon"></span>
+		</button>
+		<div class="site_list">
+			<div class="list list--related" style="display: none;">
+				<ul>
+					<li class="item"><a href="https://www.4insure.or.kr/ins4/ptl/Main.do" target="_blank" title="새창 열림">4대사회보험정보연계센터</a></li>
+					<li class="item"><a href="https://www.comwel.or.kr" target="_blank" title="새창 열림">근로복지공단</a></li>
+					<li class="item"><a href="https://www.hrdkorea.or.kr" target="_blank" title="새창 열림">한국산업인력공단</a></li>
+					<li class="item"><a href="https://ncs.go.kr" target="_blank" title="새창 열림">직무능력표준</a></li>
+					<li class="item"><a href="https://c.q-net.or.kr" target="_blank" title="새창 열림">CQ넷</a></li>
+					<li class="item"><a href="https://www.koreatech.ac.kr" target="_blank" title="새창 열림">한국기술교육대학교</a></li>
+					<li class="item"><a href="https://www.kopo.ac.kr" target="_blank" title="새창 열림">한국폴리텍대학</a></li>
+					<li class="item"><a href="https://www.hikorea.go.kr" target="_blank" title="새창 열림">하이코리아</a></li>
+					<li class="item"><a href="https://eps.hrdkorea.or.kr/h2/main/main.do" target="_blank" title="새창 열림">외국국적동포(H-2)취업교육홈페이지</a></li>
+					<li class="item"><a href="http://www.hugkorea.or.kr" title="새창 열림" target="_blank">외국인력상담센터</a></li>
+					<li class="item"><a href="https://www.kosha.or.kr" title="새창 열림" target="_blank">안전보건공단</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script>
+	$('.site .btnsite').on('click', function() {
+		var _btnIndex = $(this).index();
+		console.log("_btnIndex============",_btnIndex);
+		if(0 == _btnIndex) {
+			if($('.list--family').is(':visible') === false) {
+				$(this).addClass('active').attr('title', '축소됨');
+				$(this).addClass('active').attr('aria-expanded', 'true');
+				$('.list--family').slideDown(200);
+				$('.list--family').children('ul').children('li').children('a').first().focus();
+			} else {
+				$(this).removeClass('active').attr('title', '확장됨');
+				$(this).removeClass('active').attr('aria-expanded', 'false');
+				$('.list--family').slideUp(200);
+			}
+		} else {
+			if($('.list--related').is(':visible') === false) {
+				$(this).addClass('active').attr('title', '축소됨');
+				$(this).addClass('active').attr('aria-expanded', 'true');
+				$('.list--related').slideDown(200);
+				$('.list--related').children('ul').children('li').children('a').first().focus();
+			} else {
+				$(this).removeClass('active').attr('title', '확장됨');
+				$(this).removeClass('active').attr('aria-expanded', 'false');
+				$('.list--related').slideUp(200);
+			}
+		}
+
+	});
+</script>
+
+<div class="group">
+	<div class="area">
+		<div class="logos">
+			<img src="/allcare/pc/include/images/footer_ci01.png" alt="고용24">
+		</div>
+		<div class="flex">
+			<div class="flex_left">
+				<p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
+				<p><strong>홈페이지 전산 이용 문의 1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~ 18시)</p>
+				<p><strong>고용·노동 분야 제도 문의 국번없이 1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~ 18시)</p>
+				<p class="etc">
+					고용24는 <strong>통신판매중개자</strong>이며, 통신판매의 당사자가 아닙니다.<br>
+					상품(훈련), 상품(훈련)정보, 거래에 관한 <strong>의무와 책임은 판매자(훈련기관)</strong>에게 있습니다.
+				</p>
+			</div>
+			<div class="flex_right">
+					<div class="guide">
+						<a role="button" href="javascript:void(0);" onclick="fn_goPageUrl('/cm', 'x', '/c/d/0180/retrieveSiteEasyHpcmPost.do');">
+							<span>이용안내</span>
+							<i class="icon"></i>
+						</a>
+					<a role="button" href="http://as82.kr/keis" target="_blank" title="새창 열림">
+						<span>원격지원</span>
+						<i class="icon"></i>
+					</a>
+				</div>
+<!-- 					<div class="sns"> -->
+<!-- 						<a href="#" title="새창 열림"><img src="../cm/static/images/main_new/img-youtube.svg" alt="유튜브"></a> -->
+<!-- 						<a href="#" title="새창 열림"><img src="../cm/static/images/main_new/img-instagram.svg" alt="인스타그램"></a> -->
+<!-- 						<a href="#" title="새창 열림"><img src="../cm/static/images/main_new/img-naverblog.svg" alt="블로그"></a> -->
+<!-- 						<a href="#" title="새창 열림"><img src="../cm/static/images/main_new/img-facebook.svg" alt="페이스북"></a> -->
+<!-- 					</div> -->
+			</div>
+		</div>
+			<div class="control">
+				<div class="links">
+					<!-- 메인일시 노출-->
+					<a href="#none" onclick="fn_goPageUrl('/cm', 'X', '/c/d/0130/retrieveUtzeStptPost.do')">이용약관</a>
+					<a href="#none" onclick="fn_goPageUrl('/cm', 'X', '/c/d/0130/selectBbttListPost.do')"><strong class="point_color02">개인정보처리방침</strong></a>
+					<a href="#none" onclick="fn_goPageUrl('/cm', 'X', '/c/d/0130/retrieveEmailAdrPrssPlcyPost.do')">이메일무단수집거부</a>
+					<a href="#none" onclick="fn_goPageUrl('/cm', 'X', '/c/d/0130/retrieveCpyrPolyPost.do')">저작권보호정책</a>
+					<a href="#none" onclick="fn_goPageUrl('/cm', 'X', '/e/a/0110/selectOpenApiIntroPost.do')">오픈API 서비스</a>
+					<a href="#none" onclick="fn_goPageUrl('/wk', 'EBG020000001790', '/s/a/1100/loginForm.do');">화상상담 관리자</a>
+					<a href="#none" onclick="ComFnLib.fn_openLayerSiteMapPopup('sitemappopup', '/cm/c/d/0150/retrieveStmpPop.do?menuPurpSecd=EBM01', null, 'fn_callBack');">사이트맵</a>
+					<!--  <a href="#none" onclick="fn_goPageUrl('/cm', 'X', '/c/d/0150/retrieveStmpPost.do')">사이트맵</a>-->
+					<a href="#none" class="quick_chatbot">챗봇</a>
+
+					
+
+					<a href="#none" style="margin-left:auto;">
+						<img src="/allcare/pc/include/images/WA_Mark.png" style="cursor:default;width:54px;height:40px;" alt="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2025.2.3 ~ 2026.2.2" title="WA 품질인증 마크, 웹와치(WebWatch) 2025.2.3 ~ 2026.2.2">
+					</a>
+					<a href="#none" onclick="window.open('https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=EP&amp;certNum=2024-EP-N007','seal','width=527,height=720,location=no,status=no,scrollbars=no')" title="새창 열림">
+						<img src="/allcare/pc/include/images/eprivacyplus_text.png" style="cursor:pointer;width:45px;height:40px;margin-left: 16px;" alt="개인정보보호우수앱 시스템 인증마크">
+					</a>
+
+				</div>
+				<span class="copyright">© Ministry of Employment and Labor, Korea Employment Information <span class="quick_chatbot">Service.</span> All rights reserved.</span>
+			</div>
+
+		<div class="logos gov">
+			<a href="http://www.moel.go.kr" target="_blank" title="새창 열림"><img src="/allcare/pc/include/images/footer_ci02.png" alt="고용노동부"></a>
+			<a href="https://www.keis.or.kr" target="_blank" title="새창 열림"><img src="/allcare/pc/include/images/footer_ci03.png" alt="한국고용정보원"></a>
+			<span class="copyright">이 누리집은 고용노동부와 고용노동부 산하기관 한국고용정보원의 누리집 입니다.</span>
+		</div>
+	</div>
+</div>
+
+
+
+<form id="pwdCfrmForm000">
+<section class="full_pop large full_01" id="chkPwdCfrmYnAdd" tabindex="0">
+<!-- 헤더 -->
+<div class="head type2">
+	<h1 class="h2_sb">비밀번호 신규 추가</h1>
+</div>
+<!--// 헤더 -->
+<!-- 본문 컨텐츠 -->
+<div class="cont">
+	<div class="box_notice_wrap">
+		<p class="tit">안내</p>
+		<ul class="box_list_area">
+			<li class="txt_list">다량의 개인정보가 포함된 메뉴를 특정사용자만 이용하시려면 비밀번호 설정 후 이용하실 수 있습니다.</li>
+			<li class="txt_list">인증서로 로그인한 사용자가 모든 메뉴를 같이 이용하려면 비밀번호 "미사용"으로 설정하시기 바랍니다.</li>
+			<li class="txt_list">비밀번호 사용여부는 기업회원 정보 수정 메뉴에서 설정 가능합니다.</li>
+<!-- 				<li class="txt_list">비밀번호 사용여부는 기업회원 정보 수정 메뉴에서 설정 가능합니다.</li> -->
+<!-- 				<li class="txt_list"> -->
+<!-- 					<p class="txt">다음과 같은 비밀번호는 피해 주십시요.</p> -->
+<!-- 					<ul class="box_list_area"> -->
+<!-- 						<li class="txt_list">아이디와 같은 비밀번호</li> -->
+<!-- 						<li class="txt_list">주민등록번호, 생일, 학번, 일반전화 등 개인정보와 관련된 숫자</li> -->
+<!-- 					</ul> -->
+<!-- 				</li> -->
+		</ul>
+	</div>
+
+	<!-- 팝업 1 -->
+	<div class="box_form_login">
+		<h3 class="t1_sb">비밀번호 신규 추가<span class="cir_required">(<span><i class="blind">필수</i></span>표시된 부분은 필수 입력 항목입니다.)</span></h3>
+
+		<ul class="box_form_table">
+			<li class="type2">
+				<label class="list_tit" for="pwdCfrmYnPwd01">새 비밀번호<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="password" class="input_txt big" title="신규 비밀번호를 입력" placeholder="신규 비밀번호를 입력해 주세요." name="pwdCfrmYnPwd01" id="pwdCfrmYnPwd01" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+							<p class="txt_notice">비밀번호는 영문(대/소문자)과 숫자, 특수문자 중 3가지 이상 종류로 조합하여 8~24 이내로 입력합니다. (단 , ^, _, \, ‘, [, ], 〮, -, &lt;, &gt; 제외)</p>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<label class="list_tit" for="pwdCfrmYnPwd02">새 비밀번호 확인<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<span class="box_ipt">
+								<input type="password" class="input_txt big" title="신규 비밀번호를 한번 더 입력" placeholder="신규 비밀번호를 한번 더 입력해 주세요." name="pwdCfrmYnPwd02" id="pwdCfrmYnPwd02" maxlength="24">
+								<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<label class="list_tit" for="pwdCfrmUsrNm">변경자 성명<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="text" class="input_txt big" title="성명입력" placeholder="성명을 입력해 주세요." name="pwdCfrmUsrNm2" id="pwdCfrmUsrNm2" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="box_btn_wrap flex_al_c">
+			<a href="#none" class="btn big closed type02" id="btn_chkPwdCfrmYnAddClose">취소</a>
+			<a href="#none" class="btn fill big type01" id="btn_chkPwdCfrmYnAdd">저장</a>
+			<a href="#none" class="btn fill big type01" id="btn_chkPwdCfrmYnCancel">미사용</a>
+		</div>
+	</div>
+	<!--// 팝업 1 -->
+</div>
+<!-- 닫기 -->
+<a href="#none" class="closed">
+	<span class="blind">팝업 닫기</span>
+</a>
+<!--// 닫기 -->
+</section>
+<!--  비밀번호 확인 -->
+<section class="full_pop large full_01" id="chkPwdCfrmYn" tabindex="0">
+<!-- 헤더 -->
+<div class="head type2">
+	<h1 class="h2_sb">비밀번호 확인</h1>
+</div>
+<!--// 헤더 -->
+<div class="cont">
+	<div class="box_notice_wrap">
+		<p class="tit">안내</p>
+		<ul class="box_list_area">
+			<li class="txt_list">다량의 개인정보가 포함된 메뉴를 특정사용자만 이용하시려면 비밀번호 설정 후 이용하실 수 있습니다.</li>
+			<li class="txt_list">"비밀번호 초기화" 버튼을 누르시는 경우 기업회원정보에 등록된 대표담당자 휴대전화로 초기화 비밀번호가 전송됩니다.</li>
+			<li class="txt_list">인증서로 로그인한 사용자가 모든 메뉴를 같이 이용하려면 기업회원 정보 수정 메뉴에서 비밀번호 "미사용"으로 설정하시기 바랍니다.</li>
+		</ul>
+	</div>
+	<!-- 팝업 2 -->
+	<div class="box_form_login">
+		<h3 class="t1_sb">비밀번호 확인<span class="cir_required">(<span><i class="blind">필수</i></span>표시된 부분은 필수 입력 항목입니다.)</span></h3>
+
+		<ul class="box_form_table">
+			<li>
+				<label class="list_tit" for="pwdCfrmYnPwd00">비밀번호<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="password" class="input_txt big" title="비밀번호를 입력" placeholder="비밀번호를 입력해 주세요." name="pwdCfrmYnPwd00" id="pwdCfrmYnPwd00" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<input type="hidden" id="chkPwdCfrmYn_sPopDivId">
+		<input type="hidden" id="chkPwdCfrmYn_sUrl">
+		<input type="hidden" id="chkPwdCfrmYn_oData">
+		<input type="hidden" id="chkPwdCfrmYn_oCallbackFunc">
+		<div class="box_btn_wrap flex_al_c">
+			<a href="#none" class="btn big closed type02">취소</a>
+			<a href="#none" class="btn fill big type01 text_center" onclick="(function fn(){$('#pwdCfrmForm000')[0].reset(); $('#chkPwdCfrmYn').hide(); $('#chkPwdCfrmYnChg').show(); })();">비밀번호<br>재설정</a>
+			<a href="#none" class="btn big type01 text_center" onclick="(function fn(){ $('#pwdCfrmForm000')[0].reset(); $('#chkPwdCfrmYn').hide(); $('#chkPwdCfrmYnReset').show(); })();">비밀번호<br>초기화</a>
+			<a href="#none" class="btn fill big type01" id="btn_chkPwdCfrmYn">확인</a>
+		</div>
+	</div>
+	<!--// 팝업 2 -->
+</div>
+<!-- 닫기 -->
+<a href="#none" class="closed">
+	<span class="blind">팝업 닫기</span>
+</a>
+<!--// 닫기 -->
+</section>
+
+<!--  비밀번호 변경 -->
+<section class="full_pop large full_01" id="chkPwdCfrmYnChg" tabindex="0">
+<!-- 헤더 -->
+<div class="head type2">
+	<h1 class="h2_sb">비밀번호 변경</h1>
+</div>
+<!--// 헤더 -->
+<!--// 헤더 -->
+<!-- 본문 컨텐츠 -->
+<div class="cont">
+	<div class="box_notice_wrap">
+		<p class="tit">안내</p>
+		<ul class="box_list_area">
+			<li class="txt_list">다량의 개인정보가 포함된 메뉴를 특정사용자만 이용하시려면 비밀번호 설정 후 이용하실 수 있습니다.</li>
+			<li class="txt_list">비밀번호 사용여부는 기업회원 정보 수정 메뉴에서 가능합니다.</li>
+		</ul>
+	</div>
+	<!-- 팝업 3 -->
+	<div class="box_form_login">
+		<h3 class="t1_sb">비밀번호 변경<span class="cir_required">(<span><i class="blind">필수</i></span>표시된 부분은 필수 입력 항목입니다.)</span></h3>
+
+		<ul class="box_form_table">
+			<li>
+				<label class="list_tit" for="pwdCfrmYnPwd04">기존 비밀번호<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="password" class="input_txt big" title="비밀번호를 입력" placeholder="비밀번호를 입력해 주세요." name="pwdCfrmYnPwd04" id="pwdCfrmYnPwd04" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<label class="list_tit" for="pwdCfrmYnPwd05">새 비밀번호<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="password" class="input_txt big" title="신규 비밀번호를 입력" placeholder="신규 비밀번호를 입력해 주세요." name="pwdCfrmYnPwd05" id="pwdCfrmYnPwd05" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+						</div>
+						<p class="txt_notice">비밀번호는 영문(대/소문자)과 숫자, 특수문자 중 3가지 이상 종류로 조합하여 8~24 이내로 입력합니다. (단 , ^, _, \, ‘, [, ], 〮, -, &lt;, &gt; 제외)</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<label class="list_tit" for="pwdCfrmYnPwd06">새 비밀번호 확인<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="password" class="input_txt big" title="신규 비밀번호를 입력" placeholder="신규 비밀번호를 입력해 주세요." name="pwdCfrmYnPwd06" id="pwdCfrmYnPwd06" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<label class="list_tit" for="pwdCfrmUsrNm">변경자 성명<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="text" class="input_txt big" title="성명입력" placeholder="성명을 입력해 주세요." name="pwdCfrmUsrNm" id="pwdCfrmUsrNm" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="box_btn_wrap flex_al_c">
+			<a href="#none" class="btn big closed type02" id="btn_chkPwdCfrmYnChgClose">취소</a>
+			<a href="#none" class="btn fill big type01" id="btn_chkPwdCfrmYnChg">변경</a>
+		</div>
+	</div>
+	<!--// 팝업 3 -->
+</div>
+<!-- 닫기 -->
+<a href="#none" class="closed">
+	<span class="blind">팝업 닫기</span>
+</a>
+<!--// 닫기 -->
+</section>
+
+<!--  비밀번호 초기화 -->
+<section class="full_pop large full_01" id="chkPwdCfrmYnReset" tabindex="0">
+<!-- 헤더 -->
+<div class="head">
+	<!-- 타이틀 -->
+	<h1 class="h2_sb">비밀번호 초기화</h1>
+	<!--// 타이틀 -->
+</div>
+<!--// 헤더 -->
+<!-- 본문 컨텐츠 -->
+<div class="cont">
+	<div class="box_notice_wrap">
+		<p class="tit">안내</p>
+		<ul class="box_list_area">
+			<li class="txt_list">"비밀번호 초기화" 버튼을 누르시는 경우 기업회원정보에 등록된 대표담당자 휴대전화로 초기화 비밀번호가 전송됩니다.</li>
+		</ul>
+	</div>
+	<div class="box_form_login">
+		<h3 class="t1_sb">비밀번호 초기화<span class="cir_required">(<span><i class="blind">필수</i></span>표시된 부분은 필수 입력 항목입니다.)</span></h3>
+
+		<ul class="box_form_table">
+			<li>
+				<label class="list_tit" for="pwdCfrmUsrNm">변경자 성명<span class="essential"><i class="blind">필수</i></span></label>
+				<div class="list_txt">
+					<div class="box_table_group">
+						<div class="cell">
+							<div class="cell_wrap">
+								<span class="box_ipt">
+									<input type="text" class="input_txt big" title="성명입력" placeholder="성명을 입력해 주세요." name="pwdCfrmUsrNm1" id="pwdCfrmUsrNm1" maxlength="24">
+									<button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 버튼 -->
+<div class="box_btn_wrap flex_al_r">
+	<a href="#none" class="btn fill big type01" id="btn_chkPwdCfrmYnReset">초기화</a>
+	<a href="#none" class="btn big closed type02" id="btn_chkPwdCfrmYnResetClose"><span>닫기</span></a>
+</div>
+<!--// 버튼 -->
+<!-- 닫기 -->
+<a href="#none" class="closed">
+	<span class="blind">팝업 닫기</span>
+</a>
+<!--// 닫기 -->
+</section>
+</form>
+
+<section class="full_pop large full_01" id="fileValidationView" style="z-index:10000;" tabindex="0">
+<!-- 헤더 -->
+<div class="head">
+	<!-- 타이틀 -->
+	<h1 class="h2_sb">첨부 파일 실패</h1>
+	<!--// 타이틀 -->
+</div>
+<!--// 헤더 -->
+<!-- 본문 컨텐츠 -->
+<div class="cont">
+	<div class="box_notice_wrap">
+		<ul class="box_list_area" id="fileValidationViewList">
+		</ul>
+	</div>
+</div>
+<!-- 버튼 -->
+<div class="box_btn_wrap flex_al_r">
+	<a href="#none" class="btn big closed type02" id="btn_fileValidationViewClose"><span>닫기</span></a>
+</div>
+<!--// 버튼 -->
+<!-- 닫기 -->
+<a href="#none" class="closed" id="btn_fileValidationViewClose2">
+	<span class="blind">팝업 닫기</span>
+</a>
+<!--// 닫기 -->
+</section>
+
+<section class="full_pop small popup_01" id="loginTime" tabindex="0"><!-- 팝업open : class="on"추가, small : 640px, middle : 800px, large : 1040px 로 각각 클래스 적용  -->
+	<!-- 헤더 -->
+	<div class="head border_clr_333">
+		<!-- 타이틀 -->
+		<h1 class="h2_sb">자동 로그아웃 안내</h1>
+		<!--// 타이틀 -->
+	</div>
+	<!--// 헤더 -->
+	<!-- 본문 컨텐츠 -->
+	<div class="cont">
+		<p class="b1_sb">로그아웃까지 남은 시간 : 	<span class="btn_txt primary">5분 00초</span></p>
+		<p>잠시 후 자동으로 로그아웃될 예정입니다.</p>
+		<p>로그인 시간을 연장하시겠습니까?</p>
+	</div>
+	<!--// 본문 컨텐츠 -->
+
+	<div class="box_btn_wrap type2 flex_al_c">
+		<button type="button" class="btn big fill type02" id="btn_logout"><span>로그아웃</span></button>
+		<button type="button" class="btn big fill type01" id="btn_expad"><span>로그인 연장</span></button>
+	</div>
+</section>

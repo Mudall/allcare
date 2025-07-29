@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sample</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/font.css">
+        <link rel="stylesheet" href="../pc/css/layout.css">
+        <link rel="stylesheet" href="../pc/css/style.css">
+        <link rel="stylesheet" href="../pc/css/common.css">
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+
+            <script type="text/javascript"> 
+                function fn_skipNavigator(param) {
+                    if($.find("."+param)) {
+                    } else {
+                        console.log("not find");
+                    }
+                }
+                //웹품질진단팀 제공소스로 변경
+                $(function(){
+                    $("#skipnaviCont").on("click", function(event) {
+                        event.preventDefault();
+                        var scrollTop = $(window).scrollTop();
+                        $(".cont_wrap").attr("tabindex", "-1").focus().removeAttr("tabindex");
+
+                        $("html, body").scrollTop(scrollTop);
+                    });
+                })
+            </script>
+            
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+            
+            <script type="text/javascript">
+                function fn_layerPopupClose(layerPopId,signYnId){
+                    var today = DateLib.addDay(7,null,"YYYYMMDD")
+
+                    //기존에 저장된것들
+                    var preList = localStorage.getItem("g24LayerPopup") == null ? null:JsonLib.parse(localStorage.getItem("g24LayerPopup"));
+                    if(preList == null ){
+                        preList = new Array();
+                    }
+                    //오늘하루체크되어 있으면
+                    if($("input:checkbox[id='"+signYnId+"']").is(":checked") == true){//체크박스에 선택이 되면
+                        var o = {};
+                        o[layerPopId] = {"extDay":today};
+                        preList.push(o);
+                        var ret = JsonLib.stringify(preList);
+                        localStorage.setItem("g24LayerPopup", ret );
+                    }
+                    $("#"+layerPopId).remove();
+                    if($('section[id^=layerPop]').length ==0){
+                        ui.dimHide();
+                    }
+                }
+            </script>
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#btn_favorate").on("click", function() {
+                            var data = {
+                                    "bkmkUrla": window.location.href.substr(window.location.href.indexOf(window.location.host)+window.location.host.length).replaceAll("#none","")
+                                , "bmkn" : $(document).find("title").text()
+                                , "strMenuId" : 'EBG020000000001'
+                                , "bkmkSeq" : $("#bkmkSeq").val()
+                            };
+
+                            if( $("#btn_favorate").attr('flag') == "true" ) {
+                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/deleteBkmkLst.do", data);
+                                request.done(function (responseObj, statusText, xhr) {
+                                    alert("즐겨찾기를 삭제했습니다.");
+                                    $("#btn_favorate").removeClass("active");
+                                    $("#btn_favorate").attr('flag', 'false');
+                                    $("#btn_favorate").attr('title', '즐겨찾기를 추가하시겠습니까?');
+                                    $("#btn_favorate").html("<span class='blind'>미등록</span>")
+                                });
+                            } else {
+                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/insertBkmkLst.do", data);
+                                request.done(function (responseObj, statusText, xhr) {
+                                    alert(responseObj.rtnMsg);
+                                    $("#bkmkSeq").val(responseObj.bkmkSeq);
+                                    $("#btn_favorate").addClass("active");
+                                    $("#btn_favorate").attr('flag', 'true');
+                                    $("#btn_favorate").attr('title', '즐겨찾기가 추가되었습니다.');
+                                    $("#btn_favorate").html("<span class='blind'>등록됨</span>")
+                                });
+                            }
+                        });
+                    });
+                    function fn_goNaviPageUrl(menuId, contextPath, strUrl){
+                        $("#currentMenuId_header").val(menuId);
+                        $("#redirectUrl_header").val(strUrl);
+                        $("#headerMenuVO").attr("action", contextPath+"/cmm/menu/clickMenu.do");
+                        ComLib.submit("headerMenuVO");
+                    }
+                    //메뉴 다운그릴 처리
+                    function fn_locationDiv(param, obj) {
+                        for(var i=1; i < 4; i++) {
+
+                            if(i == param){
+                                continue;
+                            } else {
+                                $("#loc_"+i).hide();
+                            }
+                        }
+                        $("#loc_"+param).toggle();
+                        $("div[id^=loc_]").attr("aria-expanded","false");
+
+                        if( $("#loc_"+param).css("display") == 'block' ){
+                            $("#loc_"+param).attr("aria-expanded","true");
+                            $(obj).attr("aria-expanded","true");
+                        } else {
+                            $("#loc_"+param).attr("aria-expanded","false");
+                            $(obj).attr("aria-expanded","false");
+                        }
+                        return false;
+                    }
+                </script>
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            //모바일 환경설정 삭제
+                            $("div.lnb > ul > li > a[onclick*='EBG120000000111']").parent().remove();
+                            var targetUrl = 'null';
+                            console.log(targetUrl);
+                            if(targetUrl != 'null'){
+                                $('.menuLevel3LiClassChk li').removeClass('on');
+                                $(".menuLevel3LiClassChk li").each(function (e){
+                                    if($(this).html().indexOf(decodeURIComponent(location.search).split("=")[1]) > -1){
+                                        $(this).addClass("on")
+                                        return;
+                                    }
+                                })
+                            }
+                        });
+                    </script>
+                    
+                    <!-- #lnb -->
+                    <div class="lnb"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="wk_gsprog_uni">
+                                    <div class="step_cont">
+                                        <ul>
+                                            <li><span>참여 대상</span> : 고등학교/대학교 졸업 예정자 및 졸업생</li>
+                                            <li><span>사업 내용</span> : 취업성공을 위한 취업지원 프로그램 운영 및 제공</li>
+                                            <li>
+                                                <span>참여 방법</span>
+                                                <ul>
+                                                    <li>
+                                                        <div class="tit_box"><p><span>01.</span> 졸업생 특화프로그램<br> 운영 대학조회</p></div>
+                                                        <div class="dsc_box "><p>운영 대학 목록에서<br> 참여할 대학의<br> 참여신청 버튼을<br> 클릭합니다.</p></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit_box"><p><span>02.</span> 사업 참여신청서<br> 작성 및 제출</p></div>
+                                                        <div class="dsc_box "> 
+                                                            <p>사업참여신청서를<br> 작성하고 제출합니다.<br> 신청서 승인 이후에<br> 특화프로그램을<br> 신청할 수 있습니다.</p>
+                                                            <button>나의 제출 현황 보기</button>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit_box"><p><span>03.</span> 특화프로그램<br> 신청</p></div>
+                                                        <div class="dsc_box "> 
+                                                            <p>참여신청서가 승인된<br> 대학의 프로그램을<br> 조회하고<br> 프로그램을 신청합니다.</p>
+                                                            <button>나의 신청 현황 보기</button>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit_box"><p><span>04.</span> 특화프로그램<br> 참여 및 상담</p></div>
+                                                        <div class="dsc_box ">
+                                                            <p>대상자로 선발되면<br> 프로그램을 참여할 수<br> 있습니다.</p>
+                                                            <button class="disable">나의 상담 내역 보기</button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>&#x203B; [마이페이지 > 참여 프로그램 관리 > 졸업생 특화프로그램] 메뉴에서 참여 및 프로그램 신청을 할 수 있습니다.</p>
+                                    </div>
+
+                                    <div class="uniporg_cont">
+                                        <h3 class="t2_sb">운영 대학 및 프로그램</h3>
+                                        <article class="box_form_content">
+                                            <form id="searchFrm" name="searchFrm" action="jobPsyExamList.do" method="post">
+                                                <input type="hidden" id="pageIndex" name="pageIndex" value="1">
+                                                <input type="hidden" id="pageUnit" name="pageUnit" value="6">
+                                                <table class="search_table">
+                                                    <colgroup>
+                                                        <col style="width:18%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="new_th">지역</td>
+                                                            <td>
+                                                                <div class="box_chk-group">
+                                                                    <span>
+                                                                        <input type="checkbox" id="" value="ALL" onclick="" checked="checked">
+                                                                        <label for="">전체</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion1" class="chkRegion" value="1" onclick="">
+                                                                        <label for="chkRegion1">서울</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion2" class="chkRegion" value="2" onclick="">
+                                                                        <label for="chkRegion2">부산</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion3" class="chkRegion" value="3" onclick="">
+                                                                        <label for="chkRegion3">대구</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion4" class="chkRegion" value="4" onclick="">
+                                                                        <label for="chkRegion4">인천</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion5" class="chkRegion" value="5" onclick="">
+                                                                        <label for="chkRegion5">광주</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion6" class="chkRegion" value="6" onclick="">
+                                                                        <label for="chkRegion6">대전</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion7" class="chkRegion" value="7" onclick="">
+                                                                        <label for="chkRegion7">울산</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion8" class="chkRegion" value="8" onclick="">
+                                                                        <label for="chkRegion8">세종</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion9" class="chkRegion" value="9" onclick="">
+                                                                        <label for="chkRegion9">경기</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion10" class="chkRegion" value="10" onclick="">
+                                                                        <label for="chkRegion10">충북</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion11" class="chkRegion" value="11" onclick="">
+                                                                        <label for="chkRegion11">충남</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion12" class="chkRegion" value="12" onclick="">
+                                                                        <label for="chkRegion12">전북</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion13" class="chkRegion" value="13" onclick="">
+                                                                        <label for="chkRegion13">전남</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion14" class="chkRegion" value="14" onclick="">
+                                                                        <label for="chkRegion14">경북</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion15" class="chkRegion" value="15" onclick="">
+                                                                        <label for="chkRegion15">경남</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion16" class="chkRegion" value="16" onclick="">
+                                                                        <label for="chkRegion16">강원</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="chkRegion" id="chkRegion17" class="chkRegion" value="17" onclick="">
+                                                                        <label for="chkRegion17">제주</label>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="new_th">운영대학</td>
+                                                            <td>
+                                                                <span class="box_ipt">
+                                                                    <input type="text" class="input_txt" id="srchKeyword" name="srchKeyword" value="" placeholder="운영대학" title="키워드 입력">
+                                                                    <button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="box_btn_wrap flex_al_c type02">
+                                                    <button type="button" class="btn medium type01 reset">초기화</button>
+                                                    <button type="submit" id="srchBtn" class="btn medium fill type01">검색</button>
+                                                </div>
+                                            </form>
+                                        </article>
+                                    </div>
+                                    <div class="btn_cont"></div>
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+    </body>
+    <script src="../pc/js/include.js"></script>
+
+</html>

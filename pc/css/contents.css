@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* 공통 */
+
+
+/* 03. 졸업생특화프로그램 - 운영대학조회 */
+.wk_gsprog_uni>div+div {margin-top: 40px;}
+.wk_gsprog_uni .step_cont {padding: 24px 20px; border: 1px solid #ddd; border-radius: 8px;}
+.wk_gsprog_uni .step_cont>ul {margin-bottom: 10px;}
+.wk_gsprog_uni .step_cont>ul>li {font-size: 16px; color: #333; font-weight: 400; line-height: 28px; letter-spacing: -0.32px;}
+.wk_gsprog_uni .step_cont>ul>li+li {margin-top: 10px;}
+.wk_gsprog_uni .step_cont>ul>li>span {padding-left: 16px; position: relative; color: #333; font-size: 16px; font-weight: 600; line-height: 28px; letter-spacing: -0.32px;}
+.wk_gsprog_uni .step_cont>ul>li>span::before {content: ''; width: 4px; height: 4px; position: absolute; left: 4px; top: 50%; transform: translateY(-50%); background-color: #555; border-radius: 50%; }
+.wk_gsprog_uni .step_cont>ul>li>ul {margin-top: 10px; display: flex; justify-content: space-between; align-items: stretch; gap: 24px;}
+.wk_gsprog_uni .step_cont>ul>li>ul>li {position: relative; width: 100%; padding: 24px; border: 1px solid #ddd; border-radius: 8px; text-align: center;}
+.wk_gsprog_uni .step_cont>ul>li>ul>li+li::before {content: ''; width: 24px; height: 24px; position: absolute; left: -24px; top: 50%; transform: translateY(-50%); background: url('../images/ico24_arrow2_right.svg') no-repeat center / contain;} 
+.wk_gsprog_uni .step_cont>ul>li>ul>li .tit_box {border-bottom: 1px solid #ddd; padding-bottom: 16px; margin-bottom: 16px;}
+.wk_gsprog_uni .step_cont>ul>li>ul>li .tit_box p {font-size: 16px; color: #333; font-weight: 600; line-height: 28px; letter-spacing: -0.32px;}
+.wk_gsprog_uni .step_cont>ul>li>ul>li .tit_box p span {color: var(--col_blue);}
+.wk_gsprog_uni .step_cont>ul>li>ul>li .dsc_box {height: 100%; max-height: 186px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;}
+.wk_gsprog_uni .step_cont>ul>li>ul>li .dsc_box p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px; letter-spacing: -0.28px;}
+.wk_gsprog_uni .step_cont>ul>li>ul>li .dsc_box button {padding: 6px 16px; border: 1px solid var(--col_blue); border-radius: 4px; font-size: 16px; color: var(--col_blue); font-weight: 600; line-height: 28px; letter-spacing: -0.32px; text-align: center; }
+.wk_gsprog_uni .step_cont>ul>li>ul>li .dsc_box button.disable {background-color: #f5f5f5; border: 1px solid #f5f5f5; color: #999;}
+
+.wk_gsprog_uni .uniporg_cont .box_form_content {margin-top: 16px;}
