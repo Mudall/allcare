@@ -47,3 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.textContent = index + 1;
     });
 });
+
+
+
+
+// .popup-dim의 팝업 열기/닫기 및 스크롤 제어
