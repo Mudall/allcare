@@ -12,7 +12,6 @@ document.getElementById('btnClean').addEventListener('click', () => {
     });
 });
 
-
 // chkRegion 으로 시작하는 요소의 전체 선택 체크박스와 개별 시도 체크박스 간에 상호 배타적 동작 
 document.addEventListener('DOMContentLoaded', () => {
     const allCheckbox = document.getElementById('chkRegionAll');
@@ -38,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
 
 
 // .auto_count가 붙은 table내의 .no의 넘버링 자동화
