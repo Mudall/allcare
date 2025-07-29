@@ -210,26 +210,9 @@
                                             </ol>
                                             <div class="step_btn_box">
                                                 <p id="statusNotice">희망하는 운영 프로그램이 여러 대학교에서 진행할 경우, 대학마다 각각 참여신청서를 제출하고 승인을 받아야 합니다.</p>                                   
-                                                <!-- 개발적용시에 아래 스크립트 보완/삭제/수정등이 필요함 -->
+                                                <!-- 개발적용시 버튼 구현필요 -->
                                                 <button type="button" class="btn medium type01" aria-describedby="statusNotice" id="btnMyStatus">나의 참여 현황 보기</button>
                                             </div>
-                                            <script>
-                                                document.querySelector('.step_btn_box #btnMyStatus').addEventListener('click', () => {
-                                                    const isLoggedIn = checkLoginStatus(); // 로그인 상태 확인
-
-                                                    if (!isLoggedIn) {
-                                                        alert('로그인 후 이용바랍니다.');
-                                                        window.location.href = 'https://www.work24.go.kr/cm/z/b/0210/openLginPage.do'; 
-                                                    return;
-                                                    }
-
-                                                    // 로그인된 경우 '참여신청서 관리' 페이지로 이동
-                                                    window.location.href = '/참여신청서 관리.html';
-                                                });
-
-                                                // 테스트용으로 비로그인 처리
-                                                function checkLoginStatus() {return false;}
-                                            </script>
                                         </div>
                                     </div>
 
@@ -388,7 +371,8 @@
                                                         <td>대구광역시 달서구 달구벌대로 1095(신당동) AAA 대학교</td>
                                                         <td>000-0000-0000</td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="AAA 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="AAA 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+                                                        <td><button type="button" class="btnType_b1" aria-label="AAA 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -396,7 +380,9 @@
                                                         <td>서울특별시 광진구 능동로 209(군자동) BBB대학교</td>
                                                         <td></td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="BBB 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="BBB 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="BBB 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -404,7 +390,9 @@
                                                         <td>서울특별시 노원구 공릉로 232(공릉동) CCC 대학교</td>
                                                         <td>000-0000-0000</td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="CCC 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="CCC 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="CCC 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -412,7 +400,9 @@
                                                         <td>대구광역시 달서구 달구벌대로 1095(신당동) DDD 대학교</td>
                                                         <td></td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="DDD 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="DDD 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="DDD 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -420,7 +410,9 @@
                                                         <td>서울특별시 광진구 능동로 209(군자동) EEE 대학교</td>
                                                         <td></td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="EEE 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="EEE 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="EEE 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -428,7 +420,9 @@
                                                         <td>대구광역시 달서구 달구벌대로 1095(신당동) FFF 대학교</td>
                                                         <td>000-0000-0000</td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="FFF 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="FFF 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="FFF 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -436,7 +430,9 @@
                                                         <td>서울특별시 광진구 능동로 209(군자동) GGG 대학교</td>
                                                         <td>000-0000-0000</td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="GGG 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="GGG 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="GGG 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -444,7 +440,9 @@
                                                         <td>경기도 수원시 영통구 광교산로 154-42(이의동) HHH 대학교</td>
                                                         <td></td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="HHH 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="HHH 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="HHH 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -452,7 +450,9 @@
                                                         <td>대구광역시 달서구 달구벌대로 1095(신당동) III 대학교</td>
                                                         <td>000-0000-0000</td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="III 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="III 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+
+                                                        <td><button type="button" class="btnType_b1" aria-label="III 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="no"></td>
@@ -460,41 +460,24 @@
                                                         <td>경기도 수원시 영통구 광교산로 154-42(이의동) JJJ 대학교</td>
                                                         <td>000-0000-0000</td>
                                                         <td><button type="button" class="linkPop btnType_b1" aria-label="JJJ 대학교 운영 프로그램 상세보기" onclick="location.href='./운영대학목록_프로그램조회팝업.html'">보기</button></td>
-                                                        <td><button type="button" class="submit btnType_b1" aria-label="JJJ 대학교 프로그램 신청하기">신청하기</button></td>
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+                                                        <td><button type="button" class="btnType_b1" aria-label="JJJ 대학교 프로그램 신청하기">신청하기</button></td>
                                                     </tr>
-
 
                                                     <!-- 등록된 내용이 없을시에 사용 -->
                                                     <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
                                                 </tbody>
                                             </table>
-
+                                            
                                             <div class="section_bottom"></div>
                                         </div>
                                     </div>
 
-                                    <!-- 개발적용시에 아래 스크립트 보완/삭제/수정등이 필요함 -->
                                     <div class="statusDesc_cont">
                                         <p id="statusDesc">나의 신청현황을 확인하실 수 있습니다.</p>
+                                        <!-- 개발적용시 버튼 구현필요 -->
                                         <button type="button" aria-describedby="statusDesc" id="btnStatusDesc">나의 신청현황 보기</button>
                                     </div>
-                                    <script>
-                                        document.querySelector('.statusDesc_cont #btnStatusDesc').addEventListener('click', () => {
-                                            const isLoggedIn = checkLoginStatus(); // 로그인 상태 확인
-
-                                            if (!isLoggedIn) {
-                                                alert('로그인 후 이용바랍니다.');
-                                                window.location.href = 'https://www.work24.go.kr/cm/z/b/0210/openLginPage.do'; 
-                                            return;
-                                            }
-
-                                            // 로그인된 경우 '참여신청서 관리' 페이지로 이동
-                                            window.location.href = '/참여신청서.html';
-                                        });
-
-                                        // 테스트용으로 비로그인 처리
-                                        function checkLoginStatus() {return false;}
-                                    </script>
                                 </div>
                             </div>
                             <!-- 콘텐츠영역 끝 -->
