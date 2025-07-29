@@ -13,14 +13,14 @@
             caption {font-size: 2rem; font-weight: 700;}
             table {width: 100%; border-collapse: collapse;}
             th {border: 1px solid #555; background-color: #333; padding: 8px; text-align: center; color: #fff;}
-            td {border: 1px solid #ccc; padding: 8px; text-align: left; color: #333; font-weight: 500;}
+            td {border: 1px solid #ccc; padding: 8px; text-align: left; color: #333; font-weight: 500; word-break: keep-all;}
             tbody tr:nth-child(2n) td {background-color: #f5f5f5;}
             tbody tr:hover td {background-color: #fff6cd;}
             a {color: blue; text-decoration: underline;}
             a:hover {color: #ff0000;}
-            th:nth-child(1) {width: 50px;}
-            th:nth-child(n+8):nth-child(-n+10) {width: 120px;}
-            td:nth-child(1), td:nth-child(n+9):nth-child(-n+10) {text-align: center;}
+            th:nth-child(1) {width: 30px;}
+            th:nth-child(n+8):nth-child(-n+11) {width: 120px;}
+            td:nth-child(1), td:nth-child(n+9):nth-child(-n+11) {text-align: center;}
             .top_wrap {display: flex; justify-content: space-between; align-items: center;}
             h1 {margin: 1rem 0 0.5rem;}
             .btn_box {display: flex; justify-content: flex-end; align-items: center;}
@@ -53,8 +53,8 @@
                     <th>Depth 3</th>
                     <th>Depth 4</th>
                     <th>Depth 5</th>
-                    <th>Depth 6</th>
-                    <th>비고</th>
+                    <th>화면명</th>
+                    <th>화면 ID</th>
                     <th>작업현황</th>
                     <th>링크</th>
                 </tr>
@@ -64,71 +64,23 @@
                     <td class="no"></td>
                     <td>취업지원</td>
                     <td>청년일자리 첫걸음 보장제</td>
-                    <td>사업소개</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td>참여기관</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
                     <td>졸업생 특화프로그램</td>
-                    <td>운영대학 조회</td>
                     <td></td>
                     <td></td>
-                    <td>신규</td>
+                    <td>운영대학 목록</td>
+                    <td>UI_ADHPAaM01</td>
                     <td class="status">작업중</td>
                     <td><a href="./pc/03_졸업생특화프로그램_운영대학조회.html" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>취업지원</td>
+                    <td>청년일자리 첫걸음 보장제</td>
+                    <td>졸업생 특화프로그램</td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td>프로그램 조회</td>
-                    <td></td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td>대학 재학생 맞춤형 고용서비스</td>
-                    <td>운영대학 조회</td>
-                    <td></td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td>고교생 맞춤형 고용서비스</td>
-                    <td>운영대학 조회</td>
-                    <td></td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>운영대학 목록 - 프로그램 조회 팝업</td>
+                    <td>UI_ADHPAaM02</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
@@ -138,864 +90,301 @@
                     <td>참여 프로그램 관리</td>
                     <td>졸업생 특화프로그램 관리</td>
                     <td>참여신청서</td>
-                    <td>참여순서</td>
                     <td></td>
-                    <td>신규</td>
+                    <td>참여신청서 - 목록 없음</td>
+                    <td>UI_ADHPAbM01</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>참여신청서 - 목록 있음</td>
+                    <td>UI_ADHPAbM02</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>신청(등록)</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>참여신청서 - 등록</td>
+                    <td>UI_ADHPAbM03</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>완료페이지</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>참여신청서 - 조회</td>
+                    <td>UI_ADHPAbM04</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>참여신청서 - 회수(수정)</td>
+                    <td>UI_ADHPAbM05</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>프로그램 조회 및 신청</td>
-                    <td>참여순서</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>운영 대학 검색 팝업</td>
+                    <td>UI_ADHPAbM06</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>전공찾기팝업 - 조회/선택/등록</td>
+                    <td>UI_ADHPAbM07</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>신청(등록)</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>전공찾기팝업 - 조회/선택/등록(계열분류)</td>
+                    <td>UI_ADHPAbM08</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>전공찾기팝업 - 조회/선택/등록(검색결과)</td>
+                    <td>UI_ADHPAbM09</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여신청서</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>개인정보 수집·이용·제공에 대한 동의서(참여자용)</td>
+                    <td>UI_ADHPAbM10</td>
+                    <td class="status"></td>
+                    <td><a href="" target="_blank">바로가기</a></td>
+                </tr>
+                <tr>
+                    <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
                     <td>참여 프로그램</td>
-                    <td>참여순서</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>프로그램 신청</td>
+                    <td>프로그램 신청 - 목록 없음</td>
+                    <td>UI_ADHPAcM01</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여 프로그램</td>
+                    <td>프로그램 신청</td>
+                    <td>프로그램 신청 - 목록 있음</td>
+                    <td>UI_ADHPAcM02</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여 프로그램</td>
+                    <td>프로그램 신청</td>
+                    <td>프로그램 신청 - 신청</td>
+                    <td>UI_ADHPAcS03</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>만족도조사(프로그램)</td>
-                    <td>등록</td>
-                    <td>신규</td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여 프로그램</td>
+                    <td>프로그램 신청</td>
+                    <td>프로그램 신청 - 조회</td>
+                    <td>UI_ADHPAcS04</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>상담 이력</td>
-                    <td>참여순서</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여 프로그램</td>
+                    <td>참여프로그램 관리</td>
+                    <td>참여 프로그램 관리 - 목록 없음</td>
+                    <td>UI_ADHPAdM01</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>만족도조사(전체)</td>
-                    <td>등록</td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여 프로그램</td>
+                    <td>참여프로그램 관리</td>
+                    <td>참여 프로그램 관리 - 목록 있음</td>
+                    <td>UI_ADHPAdM02</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>운영 대학 검색(P)</td>
-                    <td></td>
-                    <td></td>
-                    <td>신규</td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여 프로그램</td>
+                    <td>참여프로그램 관리</td>
+                    <td>참여 프로그램 관리 - 조회</td>
+                    <td>UI_ADHPAdS03</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>전공 찾기(P)</td>
-                    <td>검색 화면</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>참여 프로그램</td>
+                    <td>참여프로그램 관리</td>
+                    <td>참여 프로그램 관리 - 만족도 조사</td>
+                    <td>UI_ADHPAdS04</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>상담이력</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>계열 분류</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
+                    <td>상담이력 - 목록 없음</td>
+                    <td>UI_ADHPAeM01</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>상담이력</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>검색 결과</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
+                    <td>상담이력 - 목록 있음</td>
+                    <td>UI_ADHPAeM02</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>졸업생 특화프로그램</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>개인정보 수집이용제공에 대한 동의서(P)</td>
-                    <td></td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
+                    <td>완료 페이지 - 신청서 제출 완료</td>
+                    <td>UI_ADHPAbS11</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>졸업생 특화프로그램</td>
                     <td></td>
-                    <td></td>
-                    <td>대학 재학생 맞춤형 고용서비스</td>
-                    <td>사업 참여신청서 관리</td>
-                    <td>신청(등록)</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
+                    <td>완료 페이지 - 회수 완료</td>
+                    <td>UI_ADHPAbS12</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>졸업생 특화프로그램</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>개인정보 수집이용제공 동의서(P)</td>
-                    <td>신규</td>
+                    <td>완료 페이지 - 삭제 완료</td>
+                    <td>UI_ADHPAbS13</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>졸업생 특화프로그램</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>신청완료(HTML)</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
+                    <td>완료 페이지 - 수정 완료</td>
+                    <td>UI_ADHPAbS14</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
                 <tr>
                     <td class="no"></td>
+                    <td>마이페이지</td>
+                    <td>참여 프로그램 관리</td>
+                    <td>졸업생 특화프로그램 관리</td>
+                    <td>졸업생 특화프로그램</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
+                    <td>완료 페이지 - 신청 완료</td>
+                    <td>UI_ADHPAbS15</td>
                     <td class="status"></td>
                     <td><a href="" target="_blank">바로가기</a></td>
                 </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>수정</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>점프업 프로젝트</td>
-                    <td></td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>참여신청서 조회</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>상담 이력</td>
-                    <td>목록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>취업준비도검사</td>
-                    <td>목록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록(Step1)</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록(Step2)</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록(Step3)</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록(Step4)</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록(Step5)</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>IAP 관리</td>
-                    <td>목록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>IAP 결과관리</td>
-                    <td>목록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>수정</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>포인트관리</td>
-                    <td>목록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록(신청)</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>- IAP 목록 팝업</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>- 부정수급 방지 확약서 팝업</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>수정</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>빌드업 프로젝트</td>
-                    <td>참여신청서 조회</td>
-                    <td></td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>상담 이력</td>
-                    <td>목록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>경력개발로드맵</td>
-                    <td>등록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>목록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회록</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록완료(HTML)</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>수정</td>
-                    <td>기존 화면 활용</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td>고교생 맞춤형 고용서비스</td>
-                    <td>사업 참여신청서 관리</td>
-                    <td>신청(등록)</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>개인정보 수집이용제공 동의서(P)</td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회(상세)</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>경력개발로드맵</td>
-                    <td>등록</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>수정</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>IAP 관리</td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>등록</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>수정</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>상담 이력</td>
-                    <td>목록</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>조회</td>
-                    <td></td>
-                    <td>신규</td>
-                    <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
-                </tr>
+                
             </tbody>
         </table>
     </body>
