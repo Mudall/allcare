@@ -59,21 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         });
     });
-    });
-
-
-
-
-
-// .auto_count가 붙은 table내의 .no의 넘버링 자동화
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('table.auto-count .no').forEach((cell, index) => {
-        cell.textContent = index + 1;
-    });
 });
-
-
-
 
 
 // tr.new_date 내의 select#newDate 변경 시, input#schRcptStdte 및 input#schRcptEndte의 날짜 자동 설정

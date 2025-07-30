@@ -2,13 +2,11 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>Sample</title>
+        <title>참여신청서 - 목록 없음</title>
         <script src="../pc/include/js/head.js"></script>
 
         <link rel="stylesheet" href="../pc/css/font.css">
-        <link rel="stylesheet" href="../pc/css/layout.css">
-        <link rel="stylesheet" href="../pc/css/style.css">
-        <link rel="stylesheet" href="../pc/css/common.css">
+        <link rel="stylesheet" href="../pc/css/contents.css">
     </head>
     <body>
         <input type="hidden" id="currentMenuId">
@@ -180,36 +178,27 @@
                             <div class="tab_wrap bg_type" data-role="tab">
                                 <ul class="tab_title topTab" role="tablist">
                                     <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여신청서</span></button></li>
-                                    <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>프로그램 조회 및 신청</span></button></li>
                                     <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여 프로그램</span></button></li>
                                     <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
                                     <!-- D: 활성화시 class[active] add -->
                                 </ul>
 
-                                <div class="gsp_paf_pp">
-
-                                    <div class="box_notice_wrap mb08 mt10">
-                                        <p class="tit">안내</p>
-                                        <ul class="box_list_area">
-                                                <li class="txt_list">승인된 참여대학의 프로그램 목록을 조회할 수 있습니다.</li>
-                                                <li class="txt_list">복수의 프로그램 신청을 할 수 있습니다.</li>
-                                                <li class="txt_list">신청한 프로그램에 선발 되어야 프로그램을 참여할 수 있습니다.</li>
-                                                <li class="txt_list">프로그램 관련 사항은 참여 대학교의 담당자에게 문의 바랍니다.</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="guide-cont">
-                                        <figure><img src=""><img src="./images/ico60_warning_navy.svg"></figure>
-                                        <p>참여신청서 제출 및 승인 이후에<br> 졸업생 특화프로그램 서비스에 참여할 수 있습니다.</p>
-                                        <div class="box_btn_wrap flex_al_r mt16">
-                                            <a href="#none" class="btn large type01 fill" onclick="">확인</a>
-                                        </div>                                  
+                                <div class="box_notice_wrap mt24">
+                                    <p class="tit">안내</p>
+                                    <ul class="box_list_area">
+                                        <li class="txt_list">제출하신 참여신청서가 승인된 후, 해당 대학의 프로그램을 신청하실 수 있습니다.</li>
+                                        <li class="txt_list">여러 대학의 프로그램에 참여를 원하실 경우, 대학마다 별도로 참여신청서를 제출해 주셔야 합니다.</li>
+                                        <li class="txt_list">운영 대학의 졸업생이 아니어도 참여신청서를 제출하실 수 있습니다.</li>
+                                    </ul>
                                 </div>
 
-                                    <div class="step_cont"></div>
+                                <div class="pa_page_empty mt80">
+                                    <figure class="mb24"><img src=""><img src="./images/ico60_warning_navy.svg"></figure>
+                                    <p>작성하신 졸업생 특화프로그램 참여신청서가 없습니다.</p>
+                                    <div class="box_btn_wrap mt40">
+                                        <a href="#none" class="btn large type01 fill" onclick="">신청서 작성</a>
+                                    </div>                                  
                                 </div>
-
-
                             </div>
                             <!-- 콘텐츠영역 끝 -->
 
@@ -238,5 +227,6 @@
         </div>
     </body>
     <script src="../pc/js/include.js"></script>
+    <script src="../pc/js/cotents.js"></script>
 
 </html>

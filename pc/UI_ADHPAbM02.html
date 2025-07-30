@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 있음</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/font.css">
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+
+            <script type="text/javascript"> 
+                function fn_skipNavigator(param) {
+                    if($.find("."+param)) {
+                    } else {
+                        console.log("not find");
+                    }
+                }
+                //웹품질진단팀 제공소스로 변경
+                $(function(){
+                    $("#skipnaviCont").on("click", function(event) {
+                        event.preventDefault();
+                        var scrollTop = $(window).scrollTop();
+                        $(".cont_wrap").attr("tabindex", "-1").focus().removeAttr("tabindex");
+
+                        $("html, body").scrollTop(scrollTop);
+                    });
+                })
+            </script>
+            
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+            
+            <script type="text/javascript">
+                function fn_layerPopupClose(layerPopId,signYnId){
+                    var today = DateLib.addDay(7,null,"YYYYMMDD")
+
+                    //기존에 저장된것들
+                    var preList = localStorage.getItem("g24LayerPopup") == null ? null:JsonLib.parse(localStorage.getItem("g24LayerPopup"));
+                    if(preList == null ){
+                        preList = new Array();
+                    }
+                    //오늘하루체크되어 있으면
+                    if($("input:checkbox[id='"+signYnId+"']").is(":checked") == true){//체크박스에 선택이 되면
+                        var o = {};
+                        o[layerPopId] = {"extDay":today};
+                        preList.push(o);
+                        var ret = JsonLib.stringify(preList);
+                        localStorage.setItem("g24LayerPopup", ret );
+                    }
+                    $("#"+layerPopId).remove();
+                    if($('section[id^=layerPop]').length ==0){
+                        ui.dimHide();
+                    }
+                }
+            </script>
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#btn_favorate").on("click", function() {
+                            var data = {
+                                    "bkmkUrla": window.location.href.substr(window.location.href.indexOf(window.location.host)+window.location.host.length).replaceAll("#none","")
+                                , "bmkn" : $(document).find("title").text()
+                                , "strMenuId" : 'EBG020000000001'
+                                , "bkmkSeq" : $("#bkmkSeq").val()
+                            };
+
+                            if( $("#btn_favorate").attr('flag') == "true" ) {
+                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/deleteBkmkLst.do", data);
+                                request.done(function (responseObj, statusText, xhr) {
+                                    alert("즐겨찾기를 삭제했습니다.");
+                                    $("#btn_favorate").removeClass("active");
+                                    $("#btn_favorate").attr('flag', 'false');
+                                    $("#btn_favorate").attr('title', '즐겨찾기를 추가하시겠습니까?');
+                                    $("#btn_favorate").html("<span class='blind'>미등록</span>")
+                                });
+                            } else {
+                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/insertBkmkLst.do", data);
+                                request.done(function (responseObj, statusText, xhr) {
+                                    alert(responseObj.rtnMsg);
+                                    $("#bkmkSeq").val(responseObj.bkmkSeq);
+                                    $("#btn_favorate").addClass("active");
+                                    $("#btn_favorate").attr('flag', 'true');
+                                    $("#btn_favorate").attr('title', '즐겨찾기가 추가되었습니다.');
+                                    $("#btn_favorate").html("<span class='blind'>등록됨</span>")
+                                });
+                            }
+                        });
+                    });
+                    function fn_goNaviPageUrl(menuId, contextPath, strUrl){
+                        $("#currentMenuId_header").val(menuId);
+                        $("#redirectUrl_header").val(strUrl);
+                        $("#headerMenuVO").attr("action", contextPath+"/cmm/menu/clickMenu.do");
+                        ComLib.submit("headerMenuVO");
+                    }
+                    //메뉴 다운그릴 처리
+                    function fn_locationDiv(param, obj) {
+                        for(var i=1; i < 4; i++) {
+
+                            if(i == param){
+                                continue;
+                            } else {
+                                $("#loc_"+i).hide();
+                            }
+                        }
+                        $("#loc_"+param).toggle();
+                        $("div[id^=loc_]").attr("aria-expanded","false");
+
+                        if( $("#loc_"+param).css("display") == 'block' ){
+                            $("#loc_"+param).attr("aria-expanded","true");
+                            $(obj).attr("aria-expanded","true");
+                        } else {
+                            $("#loc_"+param).attr("aria-expanded","false");
+                            $(obj).attr("aria-expanded","false");
+                        }
+                        return false;
+                    }
+                </script>
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            //모바일 환경설정 삭제
+                            $("div.lnb > ul > li > a[onclick*='EBG120000000111']").parent().remove();
+                            var targetUrl = 'null';
+                            console.log(targetUrl);
+                            if(targetUrl != 'null'){
+                                $('.menuLevel3LiClassChk li').removeClass('on');
+                                $(".menuLevel3LiClassChk li").each(function (e){
+                                    if($(this).html().indexOf(decodeURIComponent(location.search).split("=")[1]) > -1){
+                                        $(this).addClass("on")
+                                        return;
+                                    }
+                                })
+                            }
+                        });
+                    </script>
+                    
+                    <!-- #lnb -->
+                    <div class="lnb"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <ul class="tab_title topTab" role="tablist">
+                                    <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여신청서</span></button></li>
+                                    <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여 프로그램</span></button></li>
+                                    <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                    <!-- D: 활성화시 class[active] add -->
+                                </ul>
+
+                                <div class="box_notice_wrap mt24">
+                                    <p class="tit">안내</p>
+                                    <ul class="box_list_area">
+                                        <li class="txt_list">제출하신 참여신청서가 승인된 후, 해당 대학의 프로그램을 신청하실 수 있습니다.</li>
+                                        <li class="txt_list">여러 대학의 프로그램에 참여를 원하실 경우, 대학마다 별도로 참여신청서를 제출해 주셔야 합니다.</li>
+                                        <li class="txt_list">운영 대학의 졸업생이 아니어도 참여신청서를 제출하실 수 있습니다.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="pa_page_empty mt40">
+                                    <div class="box_table_wrap">
+                                        <div class="box_table_hd">
+                                            <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                            <div class="section_right">
+                                                <span class="sel round new_sel_span">
+                                                    <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
+                                                        <option value="10" selected="selected">10 개씩</option>
+                                                        <option value="30">30 개씩</option>
+                                                        <option value="50">50 개씩</option>
+                                                    </select>
+                                                </span>
+                                                <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                            </div>
+                                        </div>
+                                        <!-- table -->
+                                        
+                                        <table class="box_table auto-count new_table">
+                                            <caption>번호, 참여년도, 참여대학명, 신청일자, 진행상태, 담당자 을(를) 제공하는 표</caption>
+                                            <colgroup>
+                                                <col style="width: 5%">
+                                                <col style="width: 13.75%">
+                                                <col style="width: 33.75%">
+                                                <col style="width: 17.5%">
+                                                <col style="width: 10%">
+                                                <col style="width: 10%">
+                                                <col style="width: 10%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">참여년도</th>
+                                                    <th scope="col">참여대학명</th>
+                                                    <th scope="col">신청일자</th>
+                                                    <th scope="col">진행상태</th>
+                                                    <th scope="col">담당자</th>
+                                                    <th scope="col">조회</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>2025</td>
+                                                    <td>AAA 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>신청</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="AAA 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2025</td>
+                                                    <td>BBB 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>접수</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="BBB 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>2025</td>
+                                                    <td>CCC 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>인정</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="CCC 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>2025</td>
+                                                    <td>DDD 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>불인정</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="DDD 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>2025</td>
+                                                    <td>EEE 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>신청</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="EEE 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>2025</td>
+                                                    <td>FFF 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>신청</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="FFF 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>2025</td>
+                                                    <td>GGG 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>신청</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="GGG 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>2025</td>
+                                                    <td>HHH 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>신청</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="HHH 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>2025</td>
+                                                    <td>III 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>신청</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="III 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>2025</td>
+                                                    <td>JJJ 대학교</td>
+                                                    <td>2025-07-30</td>
+                                                    <td>신청</td>
+                                                    <td>홍길동</td>
+                                                    <td><button type="button" class="btnType_b1" aria-label="JJJ 대학교 조회내용 상세보기">상세보기</button></td>
+                                                </tr>
+
+                                                <!-- 등록된 내용이 없을시에 사용 -->
+                                                <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                            </tbody>
+                                        </table>
+                                        <div class="section_bottom"></div>
+                                    </div> 
+                                    
+                                    <div class="box_btn_wrap ml_auto mt40">
+                                        <a href="#none" class="btn large type01 fill" onclick="">신청서 작성</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+    </body>
+    <script src="../pc/js/include.js"></script>
+    <script src="../pc/js/cotents.js"></script>
+
+</html>
