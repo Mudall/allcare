@@ -19,7 +19,8 @@
             a {color: blue; text-decoration: underline;}
             a:hover {color: #ff0000;}
             th:nth-child(1) {width: 45px;}
-            th:nth-child(n+8):nth-child(-n+11) {width: 140px;}
+            th:nth-child(n+8):nth-child(-n+9) {width: 140px;}
+            th:nth-child(10) {width: 100px;}
             td:nth-child(1), td:nth-child(n+8):nth-child(-n+11) {text-align: center;}
             .top_wrap {display: flex; justify-content: space-between; align-items: center;}
             h1 {margin: 1rem 0 0.5rem;}
@@ -27,6 +28,7 @@
             .btn_box a {background-color: #ff002f; text-align: center; color: #fff; font-weight: 600; border-radius: 9999px; text-decoration: none; padding: 8px 12px;}
             .btn_box a+a {margin-left: 4px; background-color: #006722;}
             .btn_box a:hover {background-color: #000;}
+            tr td:last-child a+a {margin-left: 8px;}
         </style>
         <script>
             document.addEventListener("DOMContentLoaded",() => {
@@ -70,7 +72,10 @@
                     <td>운영대학 목록</td>
                     <td>UI_ADHPAaM01</td>
                     <td class="status">작업중</td>
-                    <td><a href="./pc/UI_ADHPAaM01.html" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="./pc/UI_ADHPAaM01.html" target="_blank">PC</a>
+                        <a href="./mo/UI_ADHPAaM01.html" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -82,7 +87,10 @@
                     <td>운영대학 목록 - 프로그램 조회 팝업</td>
                     <td>UI_ADHPAaM02</td>
                     <td class="status">작업중</td>
-                    <td><a href="./pc/UI_ADHPAaM02.html" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="./pc/UI_ADHPAaM02.html" target="_blank">PC</a>
+                        <a href="./mo/UI_ADHPAaM02.html" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -94,7 +102,10 @@
                     <td>참여신청서 - 목록 없음</td>
                     <td>UI_ADHPAbM01</td>
                     <td class="status">작업중</td>
-                    <td><a href="./pc/UI_ADHPAbM01" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="./pc/UI_ADHPAbM01" target="_blank">PC</a>
+                        <a href="./mo/UI_ADHPAbM01" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -106,7 +117,10 @@
                     <td>참여신청서 - 목록 있음</td>
                     <td>UI_ADHPAbM02</td>
                     <td class="status">작업중</td>
-                    <td><a href="./pc/UI_ADHPAbM02" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="./pc/UI_ADHPAbM02" target="_blank">PC</a>
+                        <a href="./mo/UI_ADHPAbM02" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -118,7 +132,10 @@
                     <td>참여신청서 - 등록</td>
                     <td>UI_ADHPAbS03</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -130,7 +147,10 @@
                     <td>참여신청서 - 조회</td>
                     <td>UI_ADHPAbS04</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -142,7 +162,10 @@
                     <td>참여신청서 - 회수(수정)</td>
                     <td>UI_ADHPAbS05</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -154,7 +177,10 @@
                     <td>운영 대학 검색 팝업</td>
                     <td>UI_ADHPAbP06</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -166,7 +192,10 @@
                     <td>전공찾기팝업 - 조회/선택/등록</td>
                     <td>UI_ADHPAbP07</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -178,7 +207,10 @@
                     <td>전공찾기팝업 - 조회/선택/등록(계열분류)</td>
                     <td>UI_ADHPAbP08</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -190,7 +222,10 @@
                     <td>전공찾기팝업 - 조회/선택/등록(검색결과)</td>
                     <td>UI_ADHPAbP09</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -202,7 +237,10 @@
                     <td>개인정보 수집·이용·제공에 대한 동의서(참여자용)</td>
                     <td>UI_ADHPAbP10</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -214,7 +252,10 @@
                     <td>프로그램 신청 - 목록 없음</td>
                     <td>UI_ADHPAcM01</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -226,7 +267,10 @@
                     <td>프로그램 신청 - 목록 있음</td>
                     <td>UI_ADHPAcM02</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -238,7 +282,10 @@
                     <td>프로그램 신청 - 신청</td>
                     <td>UI_ADHPAcS03</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -250,7 +297,10 @@
                     <td>프로그램 신청 - 조회</td>
                     <td>UI_ADHPAcS04</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -262,7 +312,10 @@
                     <td>참여 프로그램 관리 - 목록 없음</td>
                     <td>UI_ADHPAdM01</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -274,7 +327,10 @@
                     <td>참여 프로그램 관리 - 목록 있음</td>
                     <td>UI_ADHPAdM02</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -286,7 +342,10 @@
                     <td>참여 프로그램 관리 - 조회</td>
                     <td>UI_ADHPAdS03</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -298,7 +357,10 @@
                     <td>참여 프로그램 관리 - 만족도 조사</td>
                     <td>UI_ADHPAdS04</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -310,7 +372,10 @@
                     <td>상담이력 - 목록 없음</td>
                     <td>UI_ADHPAeM01</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -322,7 +387,10 @@
                     <td>상담이력 - 목록 있음</td>
                     <td>UI_ADHPAeM02</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -334,7 +402,10 @@
                     <td>완료 페이지 - 신청서 제출 완료</td>
                     <td>UI_ADHPAbS11</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -346,7 +417,10 @@
                     <td>완료 페이지 - 회수 완료</td>
                     <td>UI_ADHPAbS12</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -358,7 +432,10 @@
                     <td>완료 페이지 - 삭제 완료</td>
                     <td>UI_ADHPAbS13</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -370,7 +447,10 @@
                     <td>완료 페이지 - 수정 완료</td>
                     <td>UI_ADHPAbS14</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="no"></td>
@@ -382,7 +462,10 @@
                     <td>완료 페이지 - 신청 완료</td>
                     <td>UI_ADHPAbS15</td>
                     <td class="status"></td>
-                    <td><a href="" target="_blank">바로가기</a></td>
+                    <td>
+                        <a href="" target="_blank">PC</a>
+                        <a href="" target="_blank">MO</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
