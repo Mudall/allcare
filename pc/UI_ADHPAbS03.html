@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 등록</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/font.css">
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+
+            <script type="text/javascript">
+                function fn_skipNavigator(param) {
+                    if($.find("."+param)) {
+                    } else {
+                        console.log("not find");
+                    }
+                }
+                //웹품질진단팀 제공소스로 변경
+                $(function(){
+                    $("#skipnaviCont").on("click", function(event) {
+                        event.preventDefault();
+                        var scrollTop = $(window).scrollTop();
+                        $(".cont_wrap").attr("tabindex", "-1").focus().removeAttr("tabindex");
+
+                        $("html, body").scrollTop(scrollTop);
+                    });
+                })
+            </script>
+            
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+            
+            <script type="text/javascript">
+                function fn_layerPopupClose(layerPopId,signYnId){
+                    var today = DateLib.addDay(7,null,"YYYYMMDD")
+
+                    //기존에 저장된것들
+                    var preList = localStorage.getItem("g24LayerPopup") == null ? null:JsonLib.parse(localStorage.getItem("g24LayerPopup"));
+                    if(preList == null ){
+                        preList = new Array();
+                    }
+                    //오늘하루체크되어 있으면
+                    if($("input:checkbox[id='"+signYnId+"']").is(":checked") == true){//체크박스에 선택이 되면
+                        var o = {};
+                        o[layerPopId] = {"extDay":today};
+                        preList.push(o);
+                        var ret = JsonLib.stringify(preList);
+                        localStorage.setItem("g24LayerPopup", ret );
+                    }
+                    $("#"+layerPopId).remove();
+                    if($('section[id^=layerPop]').length ==0){
+                        ui.dimHide();
+                    }
+                }
+            </script>
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#btn_favorate").on("click", function() {
+                            var data = {
+                                    "bkmkUrla": window.location.href.substr(window.location.href.indexOf(window.location.host)+window.location.host.length).replaceAll("#none","")
+                                , "bmkn" : $(document).find("title").text()
+                                , "strMenuId" : 'EBG020000000001'
+                                , "bkmkSeq" : $("#bkmkSeq").val()
+                            };
+
+                            if( $("#btn_favorate").attr('flag') == "true" ) {
+                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/deleteBkmkLst.do", data);
+                                request.done(function (responseObj, statusText, xhr) {
+                                    alert("즐겨찾기를 삭제했습니다.");
+                                    $("#btn_favorate").removeClass("active");
+                                    $("#btn_favorate").attr('flag', 'false');
+                                    $("#btn_favorate").attr('title', '즐겨찾기를 추가하시겠습니까?');
+                                    $("#btn_favorate").html("<span class='blind'>미등록</span>")
+                                });
+                            } else {
+                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/insertBkmkLst.do", data);
+                                request.done(function (responseObj, statusText, xhr) {
+                                    alert(responseObj.rtnMsg);
+                                    $("#bkmkSeq").val(responseObj.bkmkSeq);
+                                    $("#btn_favorate").addClass("active");
+                                    $("#btn_favorate").attr('flag', 'true');
+                                    $("#btn_favorate").attr('title', '즐겨찾기가 추가되었습니다.');
+                                    $("#btn_favorate").html("<span class='blind'>등록됨</span>")
+                                });
+                            }
+                        });
+                    });
+                    function fn_goNaviPageUrl(menuId, contextPath, strUrl){
+                        $("#currentMenuId_header").val(menuId);
+                        $("#redirectUrl_header").val(strUrl);
+                        $("#headerMenuVO").attr("action", contextPath+"/cmm/menu/clickMenu.do");
+                        ComLib.submit("headerMenuVO");
+                    }
+                    //메뉴 다운그릴 처리
+                    function fn_locationDiv(param, obj) {
+                        for(var i=1; i < 4; i++) {
+
+                            if(i == param){
+                                continue;
+                            } else {
+                                $("#loc_"+i).hide();
+                            }
+                        }
+                        $("#loc_"+param).toggle();
+                        $("div[id^=loc_]").attr("aria-expanded","false");
+
+                        if( $("#loc_"+param).css("display") == 'block' ){
+                            $("#loc_"+param).attr("aria-expanded","true");
+                            $(obj).attr("aria-expanded","true");
+                        } else {
+                            $("#loc_"+param).attr("aria-expanded","false");
+                            $(obj).attr("aria-expanded","false");
+                        }
+                        return false;
+                    }
+                </script>
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            //모바일 환경설정 삭제
+                            $("div.lnb > ul > li > a[onclick*='EBG120000000111']").parent().remove();
+                            var targetUrl = 'null';
+                            console.log(targetUrl);
+                            if(targetUrl != 'null'){
+                                $('.menuLevel3LiClassChk li').removeClass('on');
+                                $(".menuLevel3LiClassChk li").each(function (e){
+                                    if($(this).html().indexOf(decodeURIComponent(location.search).split("=")[1]) > -1){
+                                        $(this).addClass("on")
+                                        return;
+                                    }
+                                })
+                            }
+                        });
+                    </script>
+                    
+                    <!-- #lnb -->
+                    <div class="lnb"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+
+
+
+
+
+                                <div class="mypage">
+                                    <div class="progmg">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                            <!-- D: 활성화시 class[active] add -->
+                                        </ul>
+
+                                        <div class="my_ptcp_from">
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">신청인 정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>성명, 전화번호, 이메일, 주소 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">성명</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">전화번호</th>
+                                                                <td><div class="form_box"><span class="data_txt">010-0000-0000</span></div></td>
+                                                                <th scope="row">이메일</th>
+                                                                <td><div class="form_box"><span class="data_txt">abcd1234@mail.com</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">주소</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</span></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여대학, 참여자 분류</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>참여대학, 참여자 분류 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="ptcp_form_uni">
+                                                                <th scope="row">참여 대학</th>
+                                                                <td colspan="3">
+                                                                    <div class="box_table_group zipcode_area">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt new_ipt">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="대학교 명" readonly="" placeholder="AAA 대학교">
+                                                                                <button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="ptcp_form_type">
+                                                                <th scope="row">참여자 분류</th>
+                                                                <td colspan="3">
+                                                                    <fieldset class="box_radio-group">
+                                                                        <legend class="sr-only">참여자 분류 선택</legend>
+                                                                        <div class="radio_item">
+                                                                            <input type="radio" id="ptcpType1" name="ptcpType" value="graduate" checked>
+                                                                            <label for="ptcpType1" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr-only">선택지 1:</span>
+                                                                                <span class="label_text">&#9312; 졸업생 특화 프로그램을 운영하는 대학(원)의 졸업생, 졸업 유예자 및 예정자</span>
+                                                                            </label>
+                                                                        </div>
+
+                                                                        <div class="radio_item">
+                                                                            <input type="radio" id="ptcpType2" name="ptcpType" value="youth">
+                                                                            <label for="ptcpType2" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr-only">선택지 2:</span>
+                                                                                <span class="label_text">&#9313; ①에 해당하지 않는 직업계고 졸업생, 미취업 지역 청년</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap grade_wrap">
+                                                <h3 class="t2_sb">학적정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>학번, 학년, 전공, 상태, 졸업(예정)년월 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="tr_grade">
+                                                                <th scope="row"><label for="stdId">학번</label></th>
+                                                                <td>
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="srchKeyword_univ" class="sr-only">학번</label>
+                                                                        <input type="text" class="input_txt" id="stdId" name="stdId" placeholder="학번" title="학번 입력" pattern="[0-9a-zA-Z가-힣]+">
+                                                                        <button type="button" class="ico16_delete" aria-label="학번 입력내용 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </td>
+                                                                <th scope="row"><label for="grade">학년</label></th>
+                                                                <td>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="grade" class="sr-only">학년 선택</label>
+                                                                        <select id="grade" name="grade" title="학년 선택">
+                                                                            <option disabled selected>선택</option>
+                                                                            <option value="1">1학년</option>
+                                                                            <option value="2">2학년</option>
+                                                                            <option value="3">3학년</option>
+                                                                            <option value="4">4학년</option>
+                                                                            <option value="5">5학년</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="tr_major">
+                                                                <th scope="row"><label for="major">전공</label></th>
+                                                                <td>
+                                                                    <div class="box_table_group">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt new_ipt">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="전공명" readonly="" placeholder="전공">
+                                                                                <button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
+                                                                    </div>
+                                                                </td>
+                                                                <th scope="row"><label for="status">상태</label></th>
+                                                                <td>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="status" class="sr-only">상태 선택</label>
+                                                                        <select id="status" name="status" title="상태 선택">
+                                                                            <option disabled selected>선택</option>
+                                                                            <option value="graduated">졸업</option>
+                                                                            <option value="expected">졸업예정</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="tr_gradate">
+                                                                <th scope="row"><label for="gradDate">졸업(예정) 년월</label></th>
+                                                                <td colspan="3">
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="gradDate" class="sr-only">졸업(예정) 년월</label>
+                                                                        <input type="text" onkeyup="" id="gradDate" name="gradDate" class="btnCalendar input_txt" placeholder="YYYY-MM">
+                                                                        <button type="button" class="btn_calendar" aria-label="달력 선택"></button>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    // 참여자 분류에서 1번 선택시 학적정보 보여주기 
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        const ptcpType1 = document.getElementById('ptcpType1');
+                                        const ptcpType2 = document.getElementById('ptcpType2');
+                                        const gradeWrap = document.querySelector('.grade_wrap');
+
+                                        function toggleGradeWrap() {
+                                            if (ptcpType1.checked) {
+                                                gradeWrap.style.display = 'block';
+                                            } else if (ptcpType2.checked) {
+                                                gradeWrap.style.display = 'none';
+                                            }
+                                        }
+
+                                        toggleGradeWrap();
+
+                                        ptcpType1.addEventListener('change', toggleGradeWrap);
+                                        ptcpType2.addEventListener('change', toggleGradeWrap);
+                                    });
+                                </script>
+
+
+
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+    </body>
+    <script src="../pc/js/include.js"></script>
+    <script src="../pc/js/cotents.js"></script>
+
+</html>

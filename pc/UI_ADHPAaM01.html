@@ -183,281 +183,294 @@
                             </div>
                             <!-- 콘텐츠영역 시작 -->
                             <div class="tab_wrap bg_type" data-role="tab">
-                                <div class="wk_gsprog_uni">
-                                    <div class="step_cont">
-                                        <h3 class="t2_sb mb16">신청 및 참여 절차</h3>
-                                        <div class="step_cont_area">
-                                            <ol>
-                                                <li>
-                                                    <p><span>01.</span> 졸업생 특화프로그램<br aria-hidden="true"> 운영 대학조회</p>
-                                                    <p>검색 옵션에서 지역을<br aria-hidden="true"> 선택하거나 대학명을 입력 후<br aria-hidden="true"> 검색 버튼을 클릭합니다.</p>
-                                                </li>
-                                                <li>
-                                                    <p><span>02.</span> 사업 참여신청서<br aria-hidden="true"> 작성 및 제출</p>
-                                                    <p>참여신청서를 작성하고<br aria-hidden="true"> 제출하면, 참여신청서 승인 후<br aria-hidden="true"> 대학에서 운영하는 프로그램을<br aria-hidden="true"> 특화프로그램을<br aria-hidden="true"> 신청할 수 있습니다.</p>
-                                                </li>
-                                                <li>
-                                                    <p><span>03.</span> 특화프로그램<br aria-hidden="true"> 신청</p>
-                                                    <p>운영 프로그램을<br aria-hidden="true"> 조회하고 신청합니다.<br aria-hidden="true"> 참여신청서가 승인된<br aria-hidden="true"> 대학의 프로그램만<br aria-hidden="true"> 신청할 수 있습니다.</p>
-                                                </li>
-                                                <li>
-                                                    <p><span>04.</span> 특화프로그램<br aria-hidden="true"> 참여 및 상담</p>
-                                                    <p>대상자로 선발되면<br aria-hidden="true"> 프로그램에<br aria-hidden="true"> 참여할 수 있습니다.</p>
-                                                </li>
-                                            </ol>
-                                            <div class="step_btn_box">
-                                                <p id="statusNotice">희망하는 운영 프로그램이 여러 대학교에서 진행할 경우, 대학마다 각각 참여신청서를 제출하고 승인을 받아야 합니다.</p>                                   
+
+
+
+
+
+                                <div class="support">
+                                    <div class="youth">
+                                        <div class="gsprog_uni">
+                                            <div class="step_cont">
+                                                <h3 class="t2_sb mb16">신청 및 참여 절차</h3>
+                                                <div class="step_cont_area">
+                                                    <ol>
+                                                        <li>
+                                                            <p><span>01.</span> 졸업생 특화프로그램<br aria-hidden="true"> 운영 대학조회</p>
+                                                            <p>검색 옵션에서 지역을<br aria-hidden="true"> 선택하거나 대학명을 입력 후<br aria-hidden="true"> 검색 버튼을 클릭합니다.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span>02.</span> 사업 참여신청서<br aria-hidden="true"> 작성 및 제출</p>
+                                                            <p>참여신청서를 작성하고<br aria-hidden="true"> 제출하면, 참여신청서 승인 후<br aria-hidden="true"> 대학에서 운영하는 프로그램을<br aria-hidden="true"> 특화프로그램을<br aria-hidden="true"> 신청할 수 있습니다.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span>03.</span> 특화프로그램<br aria-hidden="true"> 신청</p>
+                                                            <p>운영 프로그램을<br aria-hidden="true"> 조회하고 신청합니다.<br aria-hidden="true"> 참여신청서가 승인된<br aria-hidden="true"> 대학의 프로그램만<br aria-hidden="true"> 신청할 수 있습니다.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span>04.</span> 특화프로그램<br aria-hidden="true"> 참여 및 상담</p>
+                                                            <p>대상자로 선발되면<br aria-hidden="true"> 프로그램에<br aria-hidden="true"> 참여할 수 있습니다.</p>
+                                                        </li>
+                                                    </ol>
+                                                    <div class="step_btn_box">
+                                                        <p id="statusNotice">희망하는 운영 프로그램이 여러 대학교에서 진행할 경우, 대학마다 각각 참여신청서를 제출하고 승인을 받아야 합니다.</p>                                   
+                                                        <!-- 개발적용시 버튼 구현필요 -->
+                                                        <button type="button" class="btn medium type01" aria-describedby="statusNotice" id="btnMyStatus">나의 참여 현황 보기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="uniporg_cont">
+                                                <h3 class="t2_sb m-b16">운영 대학 및 프로그램</h3>
+                                                <article class="box_form_content">
+                                                    <form id="searchFrm" name="searchFrm" action="jobPsyExamList.do" method="post" class="reset_area">
+                                                        <input type="hidden" id="pageIndex" name="pageIndex" value="1">
+                                                        <input type="hidden" id="pageUnit" name="pageUnit" value="6">
+                                                        <table class="search_table">
+                                                            <colgroup>
+                                                                <col style="width:18%">
+                                                                <col>
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr class="chk_dual">
+                                                                    <td class="new_th">지역</td>
+                                                                    <td>
+                                                                        <fieldset class="box_chk-group" role="group" aria-labelledby="regionLegend">
+                                                                            <legend id="regionLegend" class="sr-only">지역 선택</legend>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegionAll" class="chkRegion" value="ALL" checked="true">
+                                                                                <label for="chkRegionAll">전체</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion1" class="chkRegion" value="1">
+                                                                                <label for="chkRegion1">서울</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion2" class="chkRegion" value="2">
+                                                                                <label for="chkRegion2">부산</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion3" class="chkRegion" value="3">
+                                                                                <label for="chkRegion3">대구</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion4" class="chkRegion" value="4">
+                                                                                <label for="chkRegion4">인천</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion5" class="chkRegion" value="5">
+                                                                                <label for="chkRegion5">광주</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion6" class="chkRegion" value="6">
+                                                                                <label for="chkRegion6">대전</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion7" class="chkRegion" value="7">
+                                                                                <label for="chkRegion7">울산</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion8" class="chkRegion" value="8">
+                                                                                <label for="chkRegion8">세종</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion9" class="chkRegion" value="9">
+                                                                                <label for="chkRegion9">경기</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion10" class="chkRegion" value="10">
+                                                                                <label for="chkRegion10">충북</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion11" class="chkRegion" value="11">
+                                                                                <label for="chkRegion11">충남</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion12" class="chkRegion" value="12">
+                                                                                <label for="chkRegion12">전북</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion13" class="chkRegion" value="13">
+                                                                                <label for="chkRegion13">전남</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion14" class="chkRegion" value="14">
+                                                                                <label for="chkRegion14">경북</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion15" class="chkRegion" value="15">
+                                                                                <label for="chkRegion15">경남</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion16" class="chkRegion" value="16">
+                                                                                <label for="chkRegion16">강원</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="chkRegion" id="chkRegion17" class="chkRegion" value="17">
+                                                                                <label for="chkRegion17">제주</label>
+                                                                            </span>
+                                                                        </fieldset>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="new_th">운영대학</td>
+                                                                    <td>
+                                                                        <span class="box_ipt new_ipt">
+                                                                            <label for="srchKeyword" class="sr-only">운영대학 검색</label>
+                                                                            <input type="text" class="input_txt" id="srchKeyword" name="srchKeyword" value="" placeholder="운영대학" title="키워드 입력">
+                                                                            <button type="button" class="ico16_delete"><span class="blind">삭제</span></button>
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="box_btn_wrap flex_al_c type02">
+                                                            <button type="submit" id="srchBtn" class="btn medium fill type01">검색</button>
+                                                            <button type="button" id="btnClean" class="btn medium type01 reset">초기화</button>
+                                                        </div>
+                                                    </form>
+                                                </article>
+
+
+                                                <div class="box_table_wrap">
+                                                    <div class="box_table_hd">
+                                                        <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                        <div class="section_right">
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
+                                                                    <option value="10" selected="selected">10 개씩</option>
+                                                                    <option value="30">30 개씩</option>
+                                                                    <option value="50">50 개씩</option>
+                                                                </select>
+                                                            </span>
+                                                            <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- table -->
+                                                    <table class="box_table auto-count new_table">
+                                                        <caption>번호, 대학교명, 소재지, 전화번호, 운영 프로그램, 신청 버튼 정보을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width: 6%">
+                                                            <col style="width: 17%">
+                                                            <col style="width: 37%">
+                                                            <col style="width: 17%">
+                                                            <col style="width: 13%">
+                                                            <col style="width: 10%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">번호</th>
+                                                                <th scope="col">대학교명</th>
+                                                                <th scope="col">소재지</th>
+                                                                <th scope="col">전화번호</th>
+                                                                <th scope="col">운영 프로그램</th>
+                                                                <th scope="col">신청</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>AAA 대학교</td>
+                                                                <td>대구광역시 달서구 달구벌대로 1095(신당동) AAA 대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="AAA 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="AAA 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>BBB 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) BBB대학교</td>
+                                                                <td></td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="BBB 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="BBB 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>CCC 대학교</td>
+                                                                <td>서울특별시 노원구 공릉로 232(공릉동) CCC 대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="CCC 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="CCC 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>DDD 대학교</td>
+                                                                <td>대구광역시 달서구 달구벌대로 1095(신당동) DDD 대학교</td>
+                                                                <td></td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="DDD 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="DDD 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5</td>
+                                                                <td>EEE 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) EEE 대학교</td>
+                                                                <td></td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="EEE 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="EEE 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>6</td>
+                                                                <td>FFF 대학교</td>
+                                                                <td>대구광역시 달서구 달구벌대로 1095(신당동) FFF 대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="FFF 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="FFF 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7</td>
+                                                                <td>GGG 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) GGG 대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="GGG 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="GGG 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>8</td>
+                                                                <td>HHH 대학교</td>
+                                                                <td>경기도 수원시 영통구 광교산로 154-42(이의동) HHH 대학교</td>
+                                                                <td></td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="HHH 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="HHH 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>9</td>
+                                                                <td>III 대학교</td>
+                                                                <td>대구광역시 달서구 달구벌대로 1095(신당동) III 대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="III 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="III 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>10</td>
+                                                                <td>JJJ 대학교</td>
+                                                                <td>경기도 수원시 영통구 광교산로 154-42(이의동) JJJ 대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                                <td><button type="button" class="linkPop btnType_b1" aria-label="JJJ 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="JJJ 대학교 프로그램 신청하기">신청하기</button></td>
+                                                            </tr>
+
+                                                            <!-- 등록된 내용이 없을시에 사용 -->
+                                                            <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                    <div class="section_bottom"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="statusDesc_cont">
+                                                <p id="statusDesc">나의 신청현황을 확인하실 수 있습니다.</p>
                                                 <!-- 개발적용시 버튼 구현필요 -->
-                                                <button type="button" class="btn medium type01" aria-describedby="statusNotice" id="btnMyStatus">나의 참여 현황 보기</button>
+                                                <button type="button" aria-describedby="statusDesc" id="btnStatusDesc">나의 신청현황 보기</button>
                                             </div>
                                         </div>
-                                    </div>
-
-
-                                    <div class="uniporg_cont">
-                                        <h3 class="t2_sb m-b16">운영 대학 및 프로그램</h3>
-                                        <article class="box_form_content">
-                                            <form id="searchFrm" name="searchFrm" action="jobPsyExamList.do" method="post" class="reset_area">
-                                                <input type="hidden" id="pageIndex" name="pageIndex" value="1">
-                                                <input type="hidden" id="pageUnit" name="pageUnit" value="6">
-                                                <table class="search_table">
-                                                    <colgroup>
-                                                        <col style="width:18%">
-                                                        <col>
-                                                    </colgroup>
-                                                    <tbody>
-                                                        <tr class="chk_dual">
-                                                            <td class="new_th">지역</td>
-                                                            <td>
-                                                                <fieldset class="box_chk-group" role="group" aria-labelledby="regionLegend">
-                                                                    <legend id="regionLegend" class="sr-only">지역 선택</legend>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegionAll" class="chkRegion" value="ALL" checked="true">
-                                                                        <label for="chkRegionAll">전체</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion1" class="chkRegion" value="1">
-                                                                        <label for="chkRegion1">서울</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion2" class="chkRegion" value="2">
-                                                                        <label for="chkRegion2">부산</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion3" class="chkRegion" value="3">
-                                                                        <label for="chkRegion3">대구</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion4" class="chkRegion" value="4">
-                                                                        <label for="chkRegion4">인천</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion5" class="chkRegion" value="5">
-                                                                        <label for="chkRegion5">광주</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion6" class="chkRegion" value="6">
-                                                                        <label for="chkRegion6">대전</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion7" class="chkRegion" value="7">
-                                                                        <label for="chkRegion7">울산</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion8" class="chkRegion" value="8">
-                                                                        <label for="chkRegion8">세종</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion9" class="chkRegion" value="9">
-                                                                        <label for="chkRegion9">경기</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion10" class="chkRegion" value="10">
-                                                                        <label for="chkRegion10">충북</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion11" class="chkRegion" value="11">
-                                                                        <label for="chkRegion11">충남</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion12" class="chkRegion" value="12">
-                                                                        <label for="chkRegion12">전북</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion13" class="chkRegion" value="13">
-                                                                        <label for="chkRegion13">전남</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion14" class="chkRegion" value="14">
-                                                                        <label for="chkRegion14">경북</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion15" class="chkRegion" value="15">
-                                                                        <label for="chkRegion15">경남</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion16" class="chkRegion" value="16">
-                                                                        <label for="chkRegion16">강원</label>
-                                                                    </span>
-                                                                    <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion17" class="chkRegion" value="17">
-                                                                        <label for="chkRegion17">제주</label>
-                                                                    </span>
-                                                                </fieldset>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="new_th">운영대학</td>
-                                                            <td>
-                                                                <span class="box_ipt">
-                                                                    <label for="srchKeyword" class="sr-only">운영대학 검색</label>
-                                                                    <input type="text" class="input_txt" id="srchKeyword" name="srchKeyword" value="" placeholder="운영대학" title="키워드 입력">
-                                                                    <button type="button" class="ico16_delete"><span class="blind">삭제</span></button>
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="box_btn_wrap flex_al_c type02">
-                                                    <button type="submit" id="srchBtn" class="btn medium fill type01">검색</button>
-                                                    <button type="button" id="btnClean" class="btn medium type01 reset">초기화</button>
-                                                </div>
-                                            </form>
-                                        </article>
-
-
-                                        <div class="box_table_wrap">
-                                            <div class="box_table_hd">
-                                                <p class="tit">전체 <span class="txt_total">1111</span>건</p>
-                                                <div class="section_right">
-                                                    <span class="sel round new_sel_span">
-                                                        <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
-                                                            <option value="10" selected="selected">10 개씩</option>
-                                                            <option value="30">30 개씩</option>
-                                                            <option value="50">50 개씩</option>
-                                                        </select>
-                                                    </span>
-                                                    <button type="button" class="btn btn_round type02" onclick="">적용</button>
-                                                </div>
-                                            </div>
-                                            <!-- table -->
-                                            <table class="box_table auto-count new_table">
-                                                <caption>번호, 대학교명, 소재지, 전화번호, 운영 프로그램, 신청 버튼 정보을(를) 제공하는 표</caption>
-                                                <colgroup>
-                                                    <col style="width: 6%">
-                                                    <col style="width: 17%">
-                                                    <col style="width: 37%">
-                                                    <col style="width: 17%">
-                                                    <col style="width: 13%">
-                                                    <col style="width: 10%">
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">번호</th>
-                                                        <th scope="col">대학교명</th>
-                                                        <th scope="col">소재지</th>
-                                                        <th scope="col">전화번호</th>
-                                                        <th scope="col">운영 프로그램</th>
-                                                        <th scope="col">신청</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>AAA 대학교</td>
-                                                        <td>대구광역시 달서구 달구벌대로 1095(신당동) AAA 대학교</td>
-                                                        <td>000-0000-0000</td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="AAA 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="AAA 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>BBB 대학교</td>
-                                                        <td>서울특별시 광진구 능동로 209(군자동) BBB대학교</td>
-                                                        <td></td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="BBB 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="BBB 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>CCC 대학교</td>
-                                                        <td>서울특별시 노원구 공릉로 232(공릉동) CCC 대학교</td>
-                                                        <td>000-0000-0000</td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="CCC 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="CCC 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>DDD 대학교</td>
-                                                        <td>대구광역시 달서구 달구벌대로 1095(신당동) DDD 대학교</td>
-                                                        <td></td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="DDD 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="DDD 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>5</td>
-                                                        <td>EEE 대학교</td>
-                                                        <td>서울특별시 광진구 능동로 209(군자동) EEE 대학교</td>
-                                                        <td></td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="EEE 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="EEE 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>6</td>
-                                                        <td>FFF 대학교</td>
-                                                        <td>대구광역시 달서구 달구벌대로 1095(신당동) FFF 대학교</td>
-                                                        <td>000-0000-0000</td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="FFF 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="FFF 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7</td>
-                                                        <td>GGG 대학교</td>
-                                                        <td>서울특별시 광진구 능동로 209(군자동) GGG 대학교</td>
-                                                        <td>000-0000-0000</td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="GGG 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="GGG 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8</td>
-                                                        <td>HHH 대학교</td>
-                                                        <td>경기도 수원시 영통구 광교산로 154-42(이의동) HHH 대학교</td>
-                                                        <td></td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="HHH 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="HHH 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>9</td>
-                                                        <td>III 대학교</td>
-                                                        <td>대구광역시 달서구 달구벌대로 1095(신당동) III 대학교</td>
-                                                        <td>000-0000-0000</td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="III 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="III 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>10</td>
-                                                        <td>JJJ 대학교</td>
-                                                        <td>경기도 수원시 영통구 광교산로 154-42(이의동) JJJ 대학교</td>
-                                                        <td>000-0000-0000</td>
-                                                        <td><button type="button" class="linkPop btnType_b1" aria-label="JJJ 대학교 운영 프로그램 상세보기" onclick="location.href='./UI_ADHPAaM02.html'">보기</button></td>
-                                                        <td><button type="button" class="btnType_b1" aria-label="JJJ 대학교 프로그램 신청하기">신청하기</button></td>
-                                                    </tr>
-
-                                                    <!-- 등록된 내용이 없을시에 사용 -->
-                                                    <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
-                                                </tbody>
-                                            </table>
-                                            
-                                            <div class="section_bottom"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="statusDesc_cont">
-                                        <p id="statusDesc">나의 신청현황을 확인하실 수 있습니다.</p>
-                                        <!-- 개발적용시 버튼 구현필요 -->
-                                        <button type="button" aria-describedby="statusDesc" id="btnStatusDesc">나의 신청현황 보기</button>
                                     </div>
                                 </div>
+
+
+
+                                
                             </div>
                             <!-- 콘텐츠영역 끝 -->
 
