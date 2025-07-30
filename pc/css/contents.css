@@ -37,10 +37,10 @@ h3.m-b16 {margin-bottom: 16px !important;}
 .wk_gsprog_uni .statusDesc_cont p {font-size: 16px; color: #555; font-weight: 400; line-height: 28px; letter-spacing: -0.32px;}
 .wk_gsprog_uni .statusDesc_cont button {padding: 6px 16px; border-radius: 4px; border: 1px solid #757575; font-size: 16px; color: #333; font-weight: 600; line-height: 28px; letter-spacing: -0.32px;}
 
-/* 운영대학 목록 - 프로그램 조회 팝업 */
+/* 운영대학 목록 - 프로그램 조회 팝업 */ 
 .popup-dim {pointer-events: auto; position: fixed; margin: 0; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.16);  z-index: 9998;}
-.new_popup {padding: 32px 40px; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 960px; height: 680px; z-index: 9999;}
-.newpop_inner {height: 500px; overflow-y: auto;}
+.new_popup {padding: 32px 40px; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 960px; height: calc(100% - 200px); max-height: 680px; z-index: 9999;}
+.new_popup .newpop_inner {height: calc(100% - 90px); overflow-y: auto;}
 .new_popup .new_table tr th {padding: 12px 20px;}
 .new_popup .new_table tr td {padding: 24px 20px;}
 .new_popup .new_table tr th:first-child, .new_popup .new_table tr td:first-child {padding-left: 24px;}
@@ -60,9 +60,28 @@ h3.m-b16 {margin-bottom: 16px !important;}
 .new_popup .new_table td:first-child .prog_dsc .prog_site span.on {display: block;}
 .new_popup .new_table td:first-child .prog_dsc .prog_site .onsite {color: var(--col_blue); border: 1px solid var(--col_blue);}
 .new_popup .new_table td:first-child .prog_dsc .prog_year p {color: #333; font-size: 12px; font-weight: 600; line-height: 24px; letter-spacing: -0.24px;}
+
+
+.new_popup .newpop_tit {padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;}
+.new_popup .newpop_tit h4 {font-size: 28px; color: #111; font-weight: 600; line-height: 40px;}
+.new_popup .newpop_tit .closed {display: block; position: absolute; right: 40px; top: 36px; height: 32px; width: 32px; background: url('../include/images/ico32_close.svg') no-repeat 0 0; z-index: 999;}
+.new_popup fieldset {border: none;}
 .new_popup .new_table td:last-child {}
-.new_popup .new_table td:last-child li {}
-.new_popup .new_table td:last-child li span {}
-.new_popup .new_table td:last-child .oper_year {}
-.new_popup .new_table td:last-child .oper_time {}
-.new_popup .new_table td:last-child .oper_count {}
+.new_popup .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; line-height: 28px; letter-spacing: -0.32px;}
+.new_popup .new_table td:last-child li+li {margin-top: 4px;}
+.new_popup .new_table td:last-child li span {color: var(--col_blue); font-weight: 600;}
+.new_popup .new_table td:last-child li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../images/ico16_time.svg') no-repeat center / contain;}
+.new_popup .new_table td:last-child .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../images/ico16_date.svg') no-repeat center / contain;}
+.new_popup .new_table td:last-child .oper_count::before {background: url('../images/ico16_member_gray.svg') no-repeat center / contain;}
+.new_popup .new_table td:last-child .oper_year {font-weight: 600;}
+.new_popup .new_table td:last-child .oper_time, .new_popup .new_table td:last-child .oper_count {font-weight: 400;}
+.new_popup tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
+.new_popup tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; font-size: 16px; color: #555; font-weight: 400; line-height: 24px; letter-spacing: -0.32px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.new_popup tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+
+.new_popup .newpop_inner .box_form_content {padding: 24px 40px;}
+.new_popup .newpop_inner .box_chk-group input[type="checkbox"] + label {margin-left: 4px;}
+.new_popup .newpop_inner .box_chk-group > span {margin-right: 16px;}
+.new_popup .newpop_inner th, .new_popup .newpop_inner td {padding-top: 12px; padding-bottom: 12px;}
+.new_popup .newpop_inner tr+tr {border-top: 1px solid #eee;}
+.new_popup .newpop_inner .search_table td .box_chk-group {min-height: initial;}

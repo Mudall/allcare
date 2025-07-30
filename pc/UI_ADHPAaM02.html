@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../pc/css/font.css">
         <link rel="stylesheet" href="../pc/css/contents.css">
     </head>
-    <body>
+    <body class="dim">
         <input type="hidden" id="currentMenuId">
         <div id="wrap" class="person">
 
@@ -312,7 +312,7 @@
                                                                 <span class="box_ipt">
                                                                     <label for="srchKeyword" class="sr-only">운영대학 검색</label>
                                                                     <input type="text" class="input_txt" id="srchKeyword" name="srchKeyword" value="" placeholder="운영대학" title="키워드 입력">
-                                                                    <button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+                                                                    <button type="button" class="ico16_delete"><span class="blind">삭제</span></button>
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -320,7 +320,7 @@
                                                 </table>
                                                 <div class="box_btn_wrap flex_al_c type02">
                                                     <button type="submit" id="srchBtn" class="btn medium fill type01">검색</button>
-                                                    <button type="button" id="btnClean" class="btn medium type01 reset">초기화</button>
+                                                    <button type="reset" id="btnClean" class="btn medium type01 reset">초기화</button>
                                                 </div>
                                             </form>
                                         </article>
@@ -477,11 +477,10 @@
                                     </div>
                                 </div>
 
-                                <div class="popup-dim"></div>
                                 <div class="new_popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
                                     <div class="newpop_tit">   
                                         <h4>운영 프로그램</h4>
-                                        <button type="button" class="btn-close">닫기</button>
+                                        <a href="./UI_ADHPAaM01.html" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
                                     </div>
                                     <div class="newpop_inner">
                                         <article class="box_form_content">
@@ -491,104 +490,188 @@
                                                 <table class="search_table">
                                                     <colgroup>
                                                         <col style="width:18%">
-                                                        <col>
+                                                        <col style="width:32%">
+                                                        <col style="width:18%">
+                                                        <col style="width:32%">
                                                     </colgroup>
                                                     <tbody>
-                                                        <tr>
-                                                            <td class="new_th">지역</td>
+                                                        <tr class="new_reset">
+                                                            <td class="new_th">운영대학</td>
                                                             <td>
-                                                                <fieldset class="box_chk-group" role="group" aria-labelledby="regionLegend">
-                                                                    <legend id="regionLegend" class="sr-only">지역 선택</legend>
+                                                                <span class="box_ipt">
+                                                                    <label for="srchKeyword_univ" class="sr-only">운영대학 검색</label>
+                                                                    <input type="text" class="input_txt" id="srchKeyword_univ" name="srchKeyword_univ" placeholder="대학교 명" title="운영대학 키워드 입력">
+                                                                    <button type="button" class="ico16_delete" aria-label="운영대학 검색어 삭제">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </span>
+                                                            </td>
+                                                            <td class="new_th">프로그램명</td>
+                                                            <td>
+                                                                <span class="box_ipt">
+                                                                    <label for="srchKeyword_prog" class="sr-only">프로그램명 검색</label>
+                                                                    <input type="text" class="input_txt" id="srchKeyword_prog" name="srchKeyword_prog" placeholder="프로그램명" title="프로그램명 키워드 입력">
+                                                                    <button type="button" class="ico16_delete" aria-label="프로그램명 검색어 삭제">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="chk_dual">
+                                                            <td class="new_th">지역</td>
+                                                            <td colspan="3">
+                                                                <fieldset class="box_chk-group" role="group" aria-labelledby="PopregionLegend">
+                                                                    <legend id="PopregionLegend" class="sr-only">지역 선택</legend>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegionAll" class="chkRegion" value="ALL" checked="true">
-                                                                        <label for="chkRegionAll">전체</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegionAll" class="PopchkRegion" value="ALL" checked="true">
+                                                                        <label for="PopchkRegionAll">전체</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion1" class="chkRegion" value="1">
-                                                                        <label for="chkRegion1">서울</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion1" class="PopchkRegion" value="1">
+                                                                        <label for="PopchkRegion1">서울</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion2" class="chkRegion" value="2">
-                                                                        <label for="chkRegion2">부산</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion2" class="PopchkRegion" value="2">
+                                                                        <label for="PopchkRegion2">부산</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion3" class="chkRegion" value="3">
-                                                                        <label for="chkRegion3">대구</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion3" class="PopchkRegion" value="3">
+                                                                        <label for="PopchkRegion3">대구</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion4" class="chkRegion" value="4">
-                                                                        <label for="chkRegion4">인천</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion4" class="PopchkRegion" value="4">
+                                                                        <label for="PopchkRegion4">인천</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion5" class="chkRegion" value="5">
-                                                                        <label for="chkRegion5">광주</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion5" class="PopchkRegion" value="5">
+                                                                        <label for="PopchkRegion5">광주</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion6" class="chkRegion" value="6">
-                                                                        <label for="chkRegion6">대전</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion6" class="PopchkRegion" value="6">
+                                                                        <label for="PopchkRegion6">대전</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion7" class="chkRegion" value="7">
-                                                                        <label for="chkRegion7">울산</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion7" class="PopchkRegion" value="7">
+                                                                        <label for="PopchkRegion7">울산</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion8" class="chkRegion" value="8">
-                                                                        <label for="chkRegion8">세종</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion8" class="PopchkRegion" value="8">
+                                                                        <label for="PopchkRegion8">세종</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion9" class="chkRegion" value="9">
-                                                                        <label for="chkRegion9">경기</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion9" class="PopchkRegion" value="9">
+                                                                        <label for="PopchkRegion9">경기</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion10" class="chkRegion" value="10">
-                                                                        <label for="chkRegion10">충북</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion10" class="PopchkRegion" value="10">
+                                                                        <label for="PopchkRegion10">충북</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion11" class="chkRegion" value="11">
-                                                                        <label for="chkRegion11">충남</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion11" class="PopchkRegion" value="11">
+                                                                        <label for="PopchkRegion11">충남</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion12" class="chkRegion" value="12">
-                                                                        <label for="chkRegion12">전북</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion12" class="PopchkRegion" value="12">
+                                                                        <label for="PopchkRegion12">전북</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion13" class="chkRegion" value="13">
-                                                                        <label for="chkRegion13">전남</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion13" class="PopchkRegion" value="13">
+                                                                        <label for="PopchkRegion13">전남</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion14" class="chkRegion" value="14">
-                                                                        <label for="chkRegion14">경북</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion14" class="PopchkRegion" value="14">
+                                                                        <label for="PopchkRegion14">경북</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion15" class="chkRegion" value="15">
-                                                                        <label for="chkRegion15">경남</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion15" class="PopchkRegion" value="15">
+                                                                        <label for="PopchkRegion15">경남</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion16" class="chkRegion" value="16">
-                                                                        <label for="chkRegion16">강원</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion16" class="PopchkRegion" value="16">
+                                                                        <label for="PopchkRegion16">강원</label>
                                                                     </span>
                                                                     <span>
-                                                                        <input type="checkbox" name="chkRegion" id="chkRegion17" class="chkRegion" value="17">
-                                                                        <label for="chkRegion17">제주</label>
+                                                                        <input type="checkbox" name="PopchkRegion" id="PopchkRegion17" class="PopchkRegion" value="17">
+                                                                        <label for="PopchkRegion17">제주</label>
                                                                     </span>
                                                                 </fieldset>
                                                             </td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="new_th">운영대학</td>
-                                                            <td>
-                                                                <span class="box_ipt">
-                                                                    <label for="srchKeyword" class="sr-only">운영대학 검색</label>
-                                                                    <input type="text" class="input_txt" id="srchKeyword" name="srchKeyword" value="" placeholder="운영대학" title="키워드 입력">
-                                                                    <button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
-                                                                </span>
+                                                        <tr class="chk_dual">
+                                                            <td class="new_th">프로그램 유형</td>
+                                                            <td colspan="3">
+                                                                <fieldset class="box_chk-group">
+                                                                    <legend class="visually-hidden">프로그램 유형 선택</legend>
+                                                                    <span>
+                                                                        <input type="checkbox" name="programType" id="programTypeAll" class="programType" value="ALL" checked>
+                                                                        <label for="programTypeAll">전체</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="programType" id="programTypeSelfDirected" class="programType" value="SELF">
+                                                                        <label for="programTypeSelfDirected">자기주도형</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="programType" id="programTypeDemand" class="programType" value="DEMAND">
+                                                                        <label for="programTypeDemand">수요맞춤형</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="programType" id="programTypeLocalHire" class="programType" value="LOCAL">
+                                                                        <label for="programTypeLocalHire">지역기업 채용 연계</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="programType" id="programTypeMentoring" class="programType" value="MENTOR">
+                                                                        <label for="programTypeMentoring">현직자 멘토링</label>
+                                                                    </span>
+                                                                    <span>
+                                                                        <input type="checkbox" name="programType" id="programTypeOther" class="programType" value="OTHER">
+                                                                        <label for="programTypeOther">기타</label>
+                                                                    </span>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="new_date">
+                                                            <td class="new_th">운영 기간</td>
+                                                            <td colspan="3">
+                                                                <fieldset class="form_box">
+                                                                    <legend class="sr-only">조회 기간 선택 및 날짜 입력</legend>
+                                                                    <div class="date_select">
+                                                                        <label for="newDate" class="sr-only">조회 기간 선택</label>
+                                                                        <select id="newDate" name="period">
+                                                                            <option value="" selected>선택</option>
+                                                                            <option value="today">오늘</option>
+                                                                            <option value="1w">1주일</option>
+                                                                            <option value="1m">1개월</option>
+                                                                            <option value="3m">3개월</option>
+                                                                            <option value="6m">6개월</option>
+                                                                            <option value="1y">1년</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt w_small">
+                                                                                <label for="schRcptStdte" class="sr-only">등록 시작일</label>
+                                                                                <input type="text" onkeyup="fn_selfInput(this)" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
+                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 시작일 달력 선택"></button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <i class="date_line" aria-hidden="true">~</i>
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt w_small">
+                                                                                <label for="schRcptEndte" class="sr-only">등록 종료일</label>
+                                                                                <input type="text" onkeyup="fn_selfInput(this)" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
+                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 종료일 달력 선택"></button>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                                 <div class="box_btn_wrap flex_al_c type02">
                                                     <button type="submit" id="srchBtn" class="btn medium fill type01">검색</button>
-                                                    <button type="button" id="btnClean" class="btn medium type01 reset">초기화</button>
+                                                    <button type="reset" id="popBtnClean" class="btn medium type01 reset">초기화</button>
                                                 </div>
                                             </form>
                                         </article>
@@ -651,7 +734,7 @@
                                                     <tr>
                                                         <td>
                                                             <div class="prog_uni"><p>BBB 대학교</p></div>
-                                                            <div class="prog_tit"><p>빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                            <div class="prog_tit"><p>빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 </p></div>
                                                             <div class="prog_dsc">
                                                                 <div class="prog_tag">
                                                                     <span class="tag_sdl">자기주도형</span>
@@ -867,7 +950,7 @@
 
 
                                                     <!-- 등록된 내용이 없을시에 사용 -->
-                                                    <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                    <!-- <tr><td colspan="2" class="empty">등록된 내용이 없습니다.</td></tr> -->
                                                 </tbody>
                                             </table>
                                             
