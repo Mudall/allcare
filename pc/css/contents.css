@@ -32,10 +32,13 @@ h3.m-b16 {margin-bottom: 16px !important;}
 .wk_gsprog_uni .uniporg_cont article {margin-bottom: 40px;}
 .wk_gsprog_uni .uniporg_cont fieldset {border: none;}
 .wk_gsprog_uni .new_table tbody tr td:nth-child(3) {word-break: keep-all;}
+.wk_gsprog_uni th, .wk_gsprog_uni td {padding-top: 12px; padding-bottom: 12px;}
+.wk_gsprog_uni tr+tr {border-top: 1px solid #eee;}
 
 .wk_gsprog_uni .statusDesc_cont {padding: 16px 24px; border: 1px solid #ddd; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;}
 .wk_gsprog_uni .statusDesc_cont p {font-size: 16px; color: #555; font-weight: 400; line-height: 28px; letter-spacing: -0.32px;}
 .wk_gsprog_uni .statusDesc_cont button {padding: 6px 16px; border-radius: 4px; border: 1px solid #757575; font-size: 16px; color: #333; font-weight: 600; line-height: 28px; letter-spacing: -0.32px;}
+
 
 /* 운영대학 목록 - 프로그램 조회 팝업 */ 
 .popup-dim {pointer-events: auto; position: fixed; margin: 0; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.16);  z-index: 9998;}
@@ -61,12 +64,10 @@ h3.m-b16 {margin-bottom: 16px !important;}
 .new_popup .new_table td:first-child .prog_dsc .prog_site .onsite {color: var(--col_blue); border: 1px solid var(--col_blue);}
 .new_popup .new_table td:first-child .prog_dsc .prog_year p {color: #333; font-size: 12px; font-weight: 600; line-height: 24px; letter-spacing: -0.24px;}
 
-
 .new_popup .newpop_tit {padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;}
 .new_popup .newpop_tit h4 {font-size: 28px; color: #111; font-weight: 600; line-height: 40px;}
 .new_popup .newpop_tit .closed {display: block; position: absolute; right: 40px; top: 36px; height: 32px; width: 32px; background: url('../include/images/ico32_close.svg') no-repeat 0 0; z-index: 999;}
 .new_popup fieldset {border: none;}
-.new_popup .new_table td:last-child {}
 .new_popup .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; line-height: 28px; letter-spacing: -0.32px;}
 .new_popup .new_table td:last-child li+li {margin-top: 4px;}
 .new_popup .new_table td:last-child li span {color: var(--col_blue); font-weight: 600;}
