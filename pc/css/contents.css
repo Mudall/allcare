@@ -20,7 +20,7 @@
 .support .youth .gsprog_uni .step_cont_area {padding: 24px 20px; border: 1px solid #ddd; border-radius: 8px;}
 .support .youth .gsprog_uni .step_cont_area ol {margin-top: 10px; display: flex; justify-content: space-between; align-items: stretch; gap: 24px;}
 .support .youth .gsprog_uni .step_cont_area ol>li {position: relative; width: 100%; padding: 24px; border: 1px solid #ddd; border-radius: 8px; text-align: center;}
-.support .youth .gsprog_uni .step_cont_area ol>li+li::before {content: ''; width: 24px; height: 24px; position: absolute; left: -24px; top: 50%; transform: translateY(-50%); background: url('../images/ico24_arrow2_right.svg') no-repeat center / contain;} 
+.support .youth .gsprog_uni .step_cont_area ol>li+li::before {content: ''; width: 24px; height: 24px; position: absolute; left: -24px; top: 50%; transform: translateY(-50%); background: url('../include/images/ico24_arrow2_right.svg') no-repeat center / contain;} 
 .support .youth .gsprog_uni .step_cont_area ol>li p:first-child {border-bottom: 1px solid #ddd; padding-bottom: 16px; margin-bottom: 16px; font-size: 16px; color: #333; font-weight: 600; line-height: 28px; letter-spacing: -0.32px;}
 .support .youth .gsprog_uni .step_cont_area ol>li p:first-child span {color: var(--col_blue);}
 .support .youth .gsprog_uni .step_cont_area ol>li p:last-child {font-size: 14px; color: #555; font-weight: 400; line-height: 24px; letter-spacing: -0.28px;}
@@ -70,9 +70,9 @@
 .support .youth .new_popup .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; line-height: 28px; letter-spacing: -0.32px;}
 .support .youth .new_popup .new_table td:last-child li+li {margin-top: 4px;}
 .support .youth .new_popup .new_table td:last-child li span {color: var(--col_blue); font-weight: 600;}
-.support .youth .new_popup .new_table td:last-child li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../images/ico16_time.svg') no-repeat center / contain;}
-.support .youth .new_popup .new_table td:last-child .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../images/ico16_date.svg') no-repeat center / contain;}
-.support .youth .new_popup .new_table td:last-child .oper_count::before {background: url('../images/ico16_member_gray.svg') no-repeat center / contain;}
+.support .youth .new_popup .new_table td:last-child li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
+.support .youth .new_popup .new_table td:last-child .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
+.support .youth .new_popup .new_table td:last-child .oper_count::before {background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
 .support .youth .new_popup .new_table td:last-child .oper_year {font-weight: 600;}
 .support .youth .new_popup .new_table td:last-child .oper_time, 
 .support .youth .new_popup .new_table td:last-child .oper_count {font-weight: 400;}
