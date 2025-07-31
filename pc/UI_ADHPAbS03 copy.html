@@ -302,6 +302,22 @@
 
 
                                 <script>
+                                    // new_ipt 내에서만 삭제버튼 구현
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        document.querySelectorAll('.newbtn_del').forEach(function (btn) {
+                                            btn.addEventListener('click', function () {
+                                            const container = btn.closest('.new_ipt');
+                                            if (!container) return;
+
+                                            const input = container.querySelector('input');
+                                            if (input) {
+                                                input.value = '';
+                                                input.focus();
+                                            }
+                                            });
+                                        });
+                                    });
+
                                     // 참여자 분류에서 1번 선택시 학적정보 보여주기 
                                     document.addEventListener('DOMContentLoaded', function () {
                                         const ptcpType1 = document.getElementById('ptcpType1');
@@ -319,8 +335,19 @@
                                         ptcpType2.addEventListener('change', toggleGradeWrap);
                                     });
                                 </script>
+
+
+
                             </div>
                             <!-- 콘텐츠영역 끝 -->
+                                <button type="button" onclick="testScriptConnection()">스크립트 연결 확인</button>
+
+
+
+
+                        
+
+
 
 
 
