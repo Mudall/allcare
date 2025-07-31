@@ -127,8 +127,8 @@
 .mypage .progmg .agm_area {display: flex; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
 .mypage .progmg .agm_box {padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: calc(100% - 195px); background-color: #f8f8f8;}
 .mypage .progmg .agm_box .agm_desc {}
-.mypage .progmg .agm_box .agm_desc p {color: #333;}
-.mypage .progmg .agm_box .agm_desc strong {color: #ee2e62;}
+.mypage .progmg .agm_box .agm_desc p {color: #333; font-size: 16px; font-weight: 600; line-height: 24px;}
+.mypage .progmg .agm_box .agm_desc strong {color: #ee2e62; font-size: 14px; font-weight: 600; line-height: 24px;}
 .mypage .progmg .agm_box .btn_view_doc {}
 .mypage .progmg .agm_cho {width: 195px; display: flex; justify-content: center; align-items: center;}
 .mypage .progmg .agm_cho .box_radio_group {border: none; display: flex; align-items: center;}

@@ -12,35 +12,6 @@ document.getElementById('btnClean').addEventListener('click', () => {
     });
 });
 
-// new_ipt 내에서만 삭제버튼 구현
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.ico16_delete').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-        const container = btn.closest('.new_ipt');
-        if (!container) return;
-
-        const input = container.querySelector('input');
-        if (input) {
-            input.value = '';
-            input.focus();
-        }
-        });
-    });
-});
-
-// .box_ipt 내의 .ico16_delete 네이밍의 삭제버튼 클릭시 .box_ipt 내의 input 초기화
-document.querySelectorAll('.box_ipt .ico16_delete').forEach(button => {
-    button.addEventListener('click', () => {
-            const boxIpt = button.closest('.box_ipt');
-            if (!boxIpt) return;
-
-            const input = boxIpt.querySelector('input[type="text"], input[type="search"], input:not([type])');
-            if (input) {
-            input.value = '';
-            input.focus(); 
-        }
-    });
-});
 
 // tr.chk_dual 내의 전체 선택 체크박스와 개별 시도 체크박스 간에 상호 배타적 동작 
 document.addEventListener('DOMContentLoaded', () => {
@@ -139,8 +110,23 @@ document.querySelectorAll('tr.new_date').forEach(tr => {
 
 
 
+
+// .new_ipt 내의 .newbtn_del 네이밍의 삭제버튼 클릭시 .box_ipt 내의 input 초기화
+document.querySelectorAll('.new_ipt .newbtn_del').forEach(button => {
+    button.addEventListener('click', () => {
+            const NewIpt = button.closest('.new_ipt');
+            if (!NewIpt) return;
+
+            const input = NewIpt.querySelector('input[type="text"], input[type="search"], input:not([type])');
+            if (input) {
+            input.value = '';
+            input.focus(); 
+        }
+    });
+});
+
 // tr.new_reset 내의 td들의 reset버튼 이원화
-document.querySelectorAll('.new_reset .ico16_delete').forEach(btn => {
+document.querySelectorAll('.new_reset .newbtn_reset').forEach(btn => {
     btn.addEventListener('click', () => {
         const input = btn.previousElementSibling;
         if (input && input.tagName === 'INPUT') {

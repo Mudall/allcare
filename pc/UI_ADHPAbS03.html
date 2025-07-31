@@ -105,7 +105,7 @@
                                                                         <div class="cell">
                                                                             <span class="box_ipt new_ipt">
                                                                                 <input type="text" id="bassAdrTxt" class="input_txt" title="대학교 명" readonly="" placeholder="AAA 대학교">
-                                                                                <button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+                                                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                                             </span>
                                                                         </div>
                                                                         <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
@@ -168,7 +168,7 @@
                                                                     <span class="box_ipt new_ipt">
                                                                         <label for="srchKeyword_univ" class="sr_only">학번</label>
                                                                         <input type="text" class="input_txt" id="stdId" name="stdId" placeholder="학번" title="학번 입력" pattern="[0-9a-zA-Z가-힣]+">
-                                                                        <button type="button" class="ico16_delete" aria-label="학번 입력내용 삭제">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="학번 입력내용 삭제">
                                                                             <span class="blind">삭제</span>
                                                                         </button>
                                                                     </span>
@@ -205,7 +205,9 @@
                                                                         <div class="cell">
                                                                             <span class="box_ipt new_ipt">
                                                                                 <input type="text" id="bassAdrTxt" class="input_txt" title="전공명" readonly="" placeholder="전공">
-                                                                                <button type="reset" class="ico16_delete"><span class="blind">삭제</span></button>
+                                                                                <button type="reset" class="newbtn_del ico16_delete">
+                                                                                    <span class="blind">삭제</span>
+                                                                                </button>
                                                                             </span>
                                                                         </div>
                                                                         <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
@@ -297,6 +299,22 @@
                                 </div>
 
                                 <script>
+                                    // new_ipt 내에서만 삭제버튼 구현
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        document.querySelectorAll('.ico16_delete').forEach(function (btn) {
+                                            btn.addEventListener('click', function () {
+                                            const container = btn.closest('.new_ipt');
+                                            if (!container) return;
+
+                                            const input = container.querySelector('input');
+                                            if (input) {
+                                                input.value = '';
+                                                input.focus();
+                                            }
+                                            });
+                                        });
+                                    });
+
                                     // 참여자 분류에서 1번 선택시 학적정보 보여주기 
                                     document.addEventListener('DOMContentLoaded', function () {
                                         const ptcpType1 = document.getElementById('ptcpType1');
