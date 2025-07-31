@@ -328,13 +328,13 @@
 .box_list_chk .item {padding:16px 0;border-top:1px solid var(--col_btn)}
 .box_list_chk .item > .cell {display:flex;gap:24px;align-items:flex-start;justify-content:space-between}
 .box_list_chk .txt {flex:1;font-weight:600;line-height:28px; word-break: keep-all}
-.box_list_chk .box_radio-group {justify-content:flex-end}
+.box_list_chk .box_radio_group {justify-content:flex-end}
 .box_list_chk.array_type .item {display:flex;flex-direction:column;justify-content:center;padding:10px 0;min-height:62px}
 .box_list_chk.array_type .cell.type2 {align-items:center}
-.box_list_chk.array_type .box_radio-group {min-width:206px}
-.box_list_chk.array_type .box_radio-group.m_auto {min-width:auto}
-.box_list_chk.array_type .box_radio-group.m_auto .first {width:80px}
-.box_list_chk.array_type .box_radio-group.m_auto .last {width:112px}
+.box_list_chk.array_type .box_radio_group {min-width:206px}
+.box_list_chk.array_type .box_radio_group.m_auto {min-width:auto}
+.box_list_chk.array_type .box_radio_group.m_auto .first {width:80px}
+.box_list_chk.array_type .box_radio_group.m_auto .last {width:112px}
 .box_list_chk.in_txt .txt {display:flex; align-items: flex-start}
 .box_list_chk.in_txt .txt .num {margin-right:4px}
 .box_list_chk .cell + .box_small_wrap {margin-top:8px;padding:0}
@@ -352,12 +352,12 @@
 .box_flex_al .box_chk-group {margin-left:16px}
 .box_flex_al .tit {flex-basis:100px}
 .box_flex_al .box_tooltip {display:inline-block;margin-left:8px;line-height:1.3}
-.box_flex_al .box_radio-group > span{margin-right:10px}
+.box_flex_al .box_radio_group > span{margin-right:10px}
 
-.box_radio-group .box_flex_al {width:100%}
-.box_radio-group .box_flex_al + .box_flex_al {margin-top:4px}
-.box_radio-group .box_flex_al > span {display:flex;align-items:center}
-.box_radio-group .box_flex_al .box_tooltip {flex:1}
+.box_radio_group .box_flex_al {width:100%}
+.box_radio_group .box_flex_al + .box_flex_al {margin-top:4px}
+.box_radio_group .box_flex_al > span {display:flex;align-items:center}
+.box_radio_group .box_flex_al .box_tooltip {flex:1}
 
 .box_message_wrap .box_table_wrap {margin-top:16px}
 .box_message_wrap .btn + .vline_group {margin-left:24px}
@@ -395,10 +395,10 @@
 
 /* 은행찾기 */
 .box_map_area li {display:flex;flex-wrap:wrap}
-.box_map_area li .box_radio-group {width:calc(100% / 4);height:40px}
-.box_map_area .box_radio-group label {position:relative}
-.box_map_area .box_radio-group input[type='radio'] + label {padding-left:28px}
-.box_map_area .box_radio-group label:before {content:'';display:block;position:absolute;left:0;top:2px;width:24px;height:24px}
+.box_map_area li .box_radio_group {width:calc(100% / 4);height:40px}
+.box_map_area .box_radio_group label {position:relative}
+.box_map_area .box_radio_group input[type='radio'] + label {padding-left:28px}
+.box_map_area .box_radio_group label:before {content:'';display:block;position:absolute;left:0;top:2px;width:24px;height:24px}
 .box_map_area .sh label:before {background:url("../images/logo24_bank_SH_JEJU.svg")}
 .box_map_area .jeju label:before {background:url("../images/logo24_bank_SH_JEJU.svg")}
 .box_map_area .citi label:before {background:url("../images/logo24_bank_citi.svg")}
@@ -600,8 +600,8 @@ th[class*='legend_bg'], td[class*='legend_bg'] {color:var(--col_white) !importan
 .box_local_select .txt_select_area {color:var(--col_blue)}
 
 /* 수정요청사항 : 임의로 class추가 후 작업 진행 */
-.list_chk_area .cont_area .box_radio-group.under_border span {position:relative;width:auto}
-.list_chk_area .cont_area .box_radio-group.under_border span:after {content:"";display:block;position:absolute;left:0;bottom:8px;width:100%;height:1px;background:var(--col_p)}
+.list_chk_area .cont_area .box_radio_group.under_border span {position:relative;width:auto}
+.list_chk_area .cont_area .box_radio_group.under_border span:after {content:"";display:block;position:absolute;left:0;bottom:8px;width:100%;height:1px;background:var(--col_p)}
 .vline_group.type2.sm_gap .item + .item {margin-left:6px;padding-left:9px}
 .vline_group.type2.sm_gap .item + .item:before {top:2px;height:14px}
 [class^='btn'].medium.w_sm_type {min-width:60px}
@@ -670,10 +670,10 @@ th[class*='legend_bg'], td[class*='legend_bg'] {color:var(--col_white) !importan
 .list_chk_area.ty2 {border:1px solid var(--col_btn);}
 .list_chk_area .title_area {padding:12px; text-align:center; background-color:var(--col_box_bg); border-bottom:1px solid var(--col_btn); }
 .list_chk_area .cont_area {height:396px; overflow-x:hidden; overflow-y:auto; padding:0 12px}
-.list_chk_area .cont_area .box_radio-group span {width:100%; min-height:40px; margin-left:0; padding: 6px 0; flex-wrap: nowrap; align-items: flex-start;}
-.list_chk_area .cont_area .box_radio-group span input {margin-top: 6px;}
-.list_chk_area .cont_area .box_radio-group span label {flex: 1;}
-.list_chk_area .cont_area .box_list_area .box_radio-group {display:inline-block; vertical-align: middle; margin-left:5px}
+.list_chk_area .cont_area .box_radio_group span {width:100%; min-height:40px; margin-left:0; padding: 6px 0; flex-wrap: nowrap; align-items: flex-start;}
+.list_chk_area .cont_area .box_radio_group span input {margin-top: 6px;}
+.list_chk_area .cont_area .box_radio_group span label {flex: 1;}
+.list_chk_area .cont_area .box_list_area .box_radio_group {display:inline-block; vertical-align: middle; margin-left:5px}
 .list_chk_area .cont_area .box_list_area .txt_list:before {top:17px}
 .list_chk_area.no_scroll .cont_area{height:initial;overflow-x:initial;overflow-y:initial}
 .list_chk_area.type_col {display:flex; justify-content:flex-start; width:100%; border:1px solid var(--col_btn)}
@@ -1417,9 +1417,9 @@ th[class*='legend_bg'], td[class*='legend_bg'] {color:var(--col_white) !importan
 .box_group .caution_box > ul > li:nth-child(5){background:url("../images/ico40_task.svg") no-repeat 50% 0}
 
 /* 공통 정렬 수정 적용 (왼쪽정렬로) */
-.box_list_chk .box_radio-group {justify-content:flex-start}
-.box_list_chk .box_radio-group.type2 {justify-content:flex-start;align-items:start}
-.box_list_chk .box_radio-group.type2 > span + span {margin-left:0}
+.box_list_chk .box_radio_group {justify-content:flex-start}
+.box_list_chk .box_radio_group.type2 {justify-content:flex-start;align-items:start}
+.box_list_chk .box_radio_group.type2 > span + span {margin-left:0}
 
 .sub_txt.type03 {margin-top:8px;line-height:24px}
 
@@ -1455,11 +1455,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {color:var(--col_white) !importan
 .box_help-data .default > li .box_list_area {margin:0 0 0 4px}
 
 /* 여백 */
-.box_radio-group + .box_table_group.box_datepicker {margin-left:16px}
+.box_radio_group + .box_table_group.box_datepicker {margin-left:16px}
 
 /* 체크박스, 라디오 row 정렬 */
-.box_radio-group.row,.box_chk-group.row {flex-direction:column;align-items:flex-start}
-.box_radio-group.row span + span,.box_chk-group.row span + span {margin-left:0}
+.box_radio_group.row,.box_chk-group.row {flex-direction:column;align-items:flex-start}
+.box_radio_group.row span + span,.box_chk-group.row span + span {margin-left:0}
 
 /* 탭 텍스트 긴경우 */
 .tab_wrap.type_auto .tab_title li {flex:auto}
@@ -1852,7 +1852,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {color:var(--col_white) !importan
 .box_list_chk.step_type .txt {font-weight:400}
 .box_list_chk.step_type .item .cell > strong.point_color02.type02 {min-width:70px}
 .box_list_chk.step_type .item .cell .w_large {width:340px !important}
-.box_list_chk.step_type .cell > .box_radio-group {justify-content:flex-end;min-width:140px}
+.box_list_chk.step_type .cell > .box_radio_group {justify-content:flex-end;min-width:140px}
 .box_list_chk.step_type .num_list_area.type_cir li {line-height:28px}
 .box_list_chk.step_type .item .box_message_wrap.view {margin-top:16px}
 .box_list_chk.step_type .item .box_message_wrap.view .b1_sb + .b1_r {margin-top:8px}
@@ -1946,8 +1946,8 @@ select[readonly="readonly"] {background-color:var(--col_bg);color:var(--col_body
 .box_bg_area .btn_txt {font-weight:600; font-size:16px; line-height:28px}
 .t_wrap {position:relative; line-height:inherit; display:inline-flex; justify-content:flex-start; align-items:center; flex-wrap:wrap}
 .t_wrap .ico16_delete {margin-left:4px;background:url("../images/ico16_close.svg") 0 center no-repeat}
-.box_chk-group.flex_al > span + span, .box_radio-group.flex_al > span + span {margin-left:0}
-.box_radio-group.flex_al span:last-child {width:auto !important}
+.box_chk-group.flex_al > span + span, .box_radio_group.flex_al > span + span {margin-left:0}
+.box_radio_group.flex_al span:last-child {width:auto !important}
 .box_chk-group.mt_n3 span:nth-child(n+3) {margin-top:8px}
 .btn_ico.medal_star:before {background:url("../images/ico24_medal_star.svg") 0 0 no-repeat}
 .btn_ico.cal_normal:before {background:url("../images/ico24_cal_normal.svg") 0 0 no-repeat}
@@ -2507,8 +2507,8 @@ select[readonly="readonly"] {background-color:var(--col_bg);color:var(--col_body
 }
 
 /* checkbox, radio label 두줄 이상일때 */
-.box_chk-group .check_wrap, .box_radio-group .radio_wrap {align-items: flex-start; flex-wrap: nowrap;}
-.box_chk-group .check_wrap input[type="checkbox"], .box_radio-group .radio_wrap input[type="radio"] {margin-top: 6px;}
+.box_chk-group .check_wrap, .box_radio_group .radio_wrap {align-items: flex-start; flex-wrap: nowrap;}
+.box_chk-group .check_wrap input[type="checkbox"], .box_radio_group .radio_wrap input[type="radio"] {margin-top: 6px;}
 
 /* list_chk 사전진단 */
 .list_chk_area.list_box .title_area {display: flex; align-items: center; justify-content: space-between;}
@@ -2554,7 +2554,7 @@ span.box_ipt.w530 {
 
 .ml_auto {margin-left: auto;}
 
-.box_list_chk.fs15 .item .box_radio-group label, .box_list_chk.fs15 .item .box_table_group span {font-size: 15px;}
+.box_list_chk.fs15 .item .box_radio_group label, .box_list_chk.fs15 .item .box_table_group span {font-size: 15px;}
 
 .gap04 {gap: 4px;}
 .gap16 {gap: 16px;}
