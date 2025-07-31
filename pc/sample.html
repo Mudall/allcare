@@ -5,32 +5,11 @@
         <title>Sample</title>
         <script src="../pc/include/js/head.js"></script>
 
-        <link rel="stylesheet" href="../pc/css/font.css">
         <link rel="stylesheet" href="../pc/css/contents.css">
     </head>
     <body>
         <input type="hidden" id="currentMenuId">
         <div id="wrap" class="person">
-
-            <script type="text/javascript">
-                function fn_skipNavigator(param) {
-                    if($.find("."+param)) {
-                    } else {
-                        console.log("not find");
-                    }
-                }
-                //웹품질진단팀 제공소스로 변경
-                $(function(){
-                    $("#skipnaviCont").on("click", function(event) {
-                        event.preventDefault();
-                        var scrollTop = $(window).scrollTop();
-                        $(".cont_wrap").attr("tabindex", "-1").focus().removeAttr("tabindex");
-
-                        $("html, body").scrollTop(scrollTop);
-                    });
-                })
-            </script>
-            
             <!-- //skip navigation -->
             <nav id="skipnav">
                 <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
@@ -38,30 +17,6 @@
                 <a href="#quick_menu">퀵메뉴 바로가기</a>
             </nav>
             <!-- //skip navigation -->
-            
-            <script type="text/javascript">
-                function fn_layerPopupClose(layerPopId,signYnId){
-                    var today = DateLib.addDay(7,null,"YYYYMMDD")
-
-                    //기존에 저장된것들
-                    var preList = localStorage.getItem("g24LayerPopup") == null ? null:JsonLib.parse(localStorage.getItem("g24LayerPopup"));
-                    if(preList == null ){
-                        preList = new Array();
-                    }
-                    //오늘하루체크되어 있으면
-                    if($("input:checkbox[id='"+signYnId+"']").is(":checked") == true){//체크박스에 선택이 되면
-                        var o = {};
-                        o[layerPopId] = {"extDay":today};
-                        preList.push(o);
-                        var ret = JsonLib.stringify(preList);
-                        localStorage.setItem("g24LayerPopup", ret );
-                    }
-                    $("#"+layerPopId).remove();
-                    if($('section[id^=layerPop]').length ==0){
-                        ui.dimHide();
-                    }
-                }
-            </script>
 
             <!-- 헤더 영역 -->
             <header id="header"></header>
@@ -71,105 +26,21 @@
                 <!-- location -->
                 <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
                 <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                        $("#btn_favorate").on("click", function() {
-                            var data = {
-                                    "bkmkUrla": window.location.href.substr(window.location.href.indexOf(window.location.host)+window.location.host.length).replaceAll("#none","")
-                                , "bmkn" : $(document).find("title").text()
-                                , "strMenuId" : 'EBG020000000001'
-                                , "bkmkSeq" : $("#bkmkSeq").val()
-                            };
 
-                            if( $("#btn_favorate").attr('flag') == "true" ) {
-                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/deleteBkmkLst.do", data);
-                                request.done(function (responseObj, statusText, xhr) {
-                                    alert("즐겨찾기를 삭제했습니다.");
-                                    $("#btn_favorate").removeClass("active");
-                                    $("#btn_favorate").attr('flag', 'false');
-                                    $("#btn_favorate").attr('title', '즐겨찾기를 추가하시겠습니까?');
-                                    $("#btn_favorate").html("<span class='blind'>미등록</span>")
-                                });
-                            } else {
-                                var request = ComLib.ajaxReqObj("/cm/d/d/0110/insertBkmkLst.do", data);
-                                request.done(function (responseObj, statusText, xhr) {
-                                    alert(responseObj.rtnMsg);
-                                    $("#bkmkSeq").val(responseObj.bkmkSeq);
-                                    $("#btn_favorate").addClass("active");
-                                    $("#btn_favorate").attr('flag', 'true');
-                                    $("#btn_favorate").attr('title', '즐겨찾기가 추가되었습니다.');
-                                    $("#btn_favorate").html("<span class='blind'>등록됨</span>")
-                                });
-                            }
-                        });
-                    });
-                    function fn_goNaviPageUrl(menuId, contextPath, strUrl){
-                        $("#currentMenuId_header").val(menuId);
-                        $("#redirectUrl_header").val(strUrl);
-                        $("#headerMenuVO").attr("action", contextPath+"/cmm/menu/clickMenu.do");
-                        ComLib.submit("headerMenuVO");
-                    }
-                    //메뉴 다운그릴 처리
-                    function fn_locationDiv(param, obj) {
-                        for(var i=1; i < 4; i++) {
-
-                            if(i == param){
-                                continue;
-                            } else {
-                                $("#loc_"+i).hide();
-                            }
-                        }
-                        $("#loc_"+param).toggle();
-                        $("div[id^=loc_]").attr("aria-expanded","false");
-
-                        if( $("#loc_"+param).css("display") == 'block' ){
-                            $("#loc_"+param).attr("aria-expanded","true");
-                            $(obj).attr("aria-expanded","true");
-                        } else {
-                            $("#loc_"+param).attr("aria-expanded","false");
-                            $(obj).attr("aria-expanded","false");
-                        }
-                        return false;
-                    }
-                </script>
                 <input type="hidden" name="bkmkSeq" id="bkmkSeq">
 
                 <!-- // location -->
-                <div class="location"></div>
+                <div class="location_b"></div>
                 <!-- // location -->
 
                 <div id="contents">
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                            //모바일 환경설정 삭제
-                            $("div.lnb > ul > li > a[onclick*='EBG120000000111']").parent().remove();
-                            var targetUrl = 'null';
-                            console.log(targetUrl);
-                            if(targetUrl != 'null'){
-                                $('.menuLevel3LiClassChk li').removeClass('on');
-                                $(".menuLevel3LiClassChk li").each(function (e){
-                                    if($(this).html().indexOf(decodeURIComponent(location.search).split("=")[1]) > -1){
-                                        $(this).addClass("on")
-                                        return;
-                                    }
-                                })
-                            }
-                        });
-                    </script>
                     
                     <!-- #lnb -->
-                    <div class="lnb"></div>
+                    <div class="lnb_b"></div>
                     <!-- #lnb -->
 
                     <div class="cont_wrap">
                         <div class="cont_wrap_area">
-
-
-
-
-
-
-
                             <!-- 콘텐츠 타이틀 -->
                             <div class="sub_tl">
                                 <h2 class="h2_sb">타이틀</h2>
@@ -180,16 +51,6 @@
 
                             </div>
                             <!-- 콘텐츠영역 끝 -->
-
-
-
-
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -206,6 +67,6 @@
         </div>
     </body>
     <script src="../pc/js/include.js"></script>
-    <script src="../pc/js/cotents.js"></script>
+    <script src="../pc/js/contents.js"></script>
 
 </html>

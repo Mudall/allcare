@@ -93,7 +93,7 @@
 /* 참여신청서 - 목록있음 (UI_ADHPAbM02) */
 
 
-/* 참여신청서 - 등록(UI_ADHPAbS03) */
+/* 참여신청서 - 등록 (UI_ADHPAbS03) */
 .mypage .progmg .my_ptcp_from {}
 .mypage .progmg .my_ptcp_from .box_group_wrap {}
 .mypage .progmg .my_ptcp_from .box_group_wrap .box_table_wrap {}
@@ -109,9 +109,12 @@
 .mypage .progmg .my_ptcp_from .ptcp_form_type .radio_ui {margin: auto 0; margin-right: 8px; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%; display: inline-block; position: relative;}
 .mypage .progmg .my_ptcp_from .ptcp_form_type .radio_item input[type="radio"] {position: absolute; opacity: 0; pointer-events: none;}
 .mypage .progmg .my_ptcp_from .ptcp_form_type .radio_item input[type="radio"]:checked + label .radio_ui::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
-
-.mypage .progmg .my_ptcp_from .grade_wrap .tr_grade .box_ipt button[class*='ico'] {margin-top: 0;}
+.mypage .progmg .my_ptcp_from .grade_wrap .tr_grade .input_txt {vertical-align: baseline;}
 .mypage .progmg .my_ptcp_from .grade_wrap .tr_major .box_table_group {display: flex; align-items: center;}
 .mypage .progmg .my_ptcp_from .grade_wrap .tr_major .box_table_group .btnSearch {margin-left: 8px;}
+.mypage .progmg .my_ptcp_from .new_selectbox {position: relative; width: 200px; height: 40px; border: 1px solid #757575; border-radius: 4px;}
+.mypage .progmg .my_ptcp_from .new_selectbox select {padding: 6px 28px 6px 16px; width: 100%; height: 100%; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.mypage .progmg .my_ptcp_from .new_selectbox::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .mypage .progmg .my_ptcp_from .grade_wrap .tr_gradate #gradDate {max-width: 128px;}
-.mypage .progmg .my_ptcp_from .grade_wrap .tr_gradate .btn_calendar {margin: 0; top: 25%;}
+.mypage .progmg .my_ptcp_from .grade_wrap .tr_gradate input#gradDate {padding: 6px 40px 6px 12px;}
+.mypage .progmg .my_ptcp_from .grade_wrap .tr_gradate .btn_calendar {margin: 0; transform: translateY(-25%);} 

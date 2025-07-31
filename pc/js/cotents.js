@@ -12,6 +12,22 @@ document.getElementById('btnClean').addEventListener('click', () => {
     });
 });
 
+// new_ipt 내에서만 삭제버튼 구현
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.ico16_delete').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+        const container = btn.closest('.new_ipt');
+        if (!container) return;
+
+        const input = container.querySelector('input');
+        if (input) {
+            input.value = '';
+            input.focus();
+        }
+        });
+    });
+});
+
 // .box_ipt 내의 .ico16_delete 네이밍의 삭제버튼 클릭시 .box_ipt 내의 input 초기화
 document.querySelectorAll('.box_ipt .ico16_delete').forEach(button => {
     button.addEventListener('click', () => {
@@ -125,11 +141,18 @@ document.querySelectorAll('tr.new_date').forEach(tr => {
 
 // tr.new_reset 내의 td들의 reset버튼 이원화
 document.querySelectorAll('.new_reset .ico16_delete').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const input = btn.previousElementSibling;
-    if (input && input.tagName === 'INPUT') {
-      input.value = '';
-      input.focus(); // 포커스 이동으로 키보드 사용자 편의성 확보
-    }
-  });
+    btn.addEventListener('click', () => {
+        const input = btn.previousElementSibling;
+        if (input && input.tagName === 'INPUT') {
+        input.value = '';
+        input.focus(); // 포커스 이동으로 키보드 사용자 편의성 확보
+        }
+    });
 });
+
+
+
+
+
+
+

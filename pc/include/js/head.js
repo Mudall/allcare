@@ -10,8 +10,11 @@ str += '<meta name="google-site-verification" content="ZR1mYdQpmVo-WRHxN0KAbncDH
 
 str += '<link rel="stylesheet" href="../pc/include/css/common.css">';
 str += '<link rel="stylesheet" href="../pc/include/css/reset.css">';
+str += '<link rel="stylesheet" href="../pc/include/css/font.css">';
 str += '<link rel="stylesheet" href="../pc/include/css/main_person.css">';
+str += '<link rel="stylesheet" href="../pc/include/css/main_company.css">';
 str += '<link rel="stylesheet" href="../pc/include/css/contents.css">';
-str += '<link rel="stylesheet" href="../pc/include/css/swiper-bundle.css">';
+str += '<link rel="stylesheet" href="../pc/include/css/swiper-bundle.min.css">';
+str += '<link rel="stylesheet" href="../pc/include/css/jquery-ui.min.css">';
 
 document.write(str);
