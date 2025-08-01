@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>운영 대학 검색 팝업</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body class="dim">
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                            <!-- D: 활성화시 class[active] add -->
+                                        </ul>
+
+                                        <div class="my_ptcp_from">
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">신청인 정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>성명, 전화번호, 이메일, 주소 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">성명</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">전화번호</th>
+                                                                <td><div class="form_box"><span class="data_txt">010-0000-0000</span></div></td>
+                                                                <th scope="row">이메일</th>
+                                                                <td><div class="form_box"><span class="data_txt">abcd1234@mail.com</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">주소</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</span></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여대학, 참여자 분류</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>참여대학, 참여자 분류 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="ptcp_form_uni">
+                                                                <th scope="row">참여 대학</th>
+                                                                <td colspan="3">AAA 대학교</td>
+                                                            </tr>
+                                                            <tr class="ptcp_form_type">
+                                                                <th scope="row">
+                                                                    <span class="req_mark">참여자 분류</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <td colspan="3">
+                                                                    <fieldset class="box_radio_group" style="pointer-events: none;">
+                                                                        <legend class="sr_only">참여자 분류 선택</legend>
+                                                                        <div class="radio_item">
+                                                                            <input type="radio" id="ptcpType1" name="ptcpType" value="graduate" checked>
+                                                                            <label for="ptcpType1" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 1:</span>
+                                                                                <span class="label_text">&#9312; 졸업생 특화 프로그램을 운영하는 대학(원)의 졸업생, 졸업 유예자 및 예정자</span>
+                                                                            </label>
+                                                                        </div>
+
+                                                                        <div class="radio_item">
+                                                                            <input type="radio" id="ptcpType2" name="ptcpType" value="youth">
+                                                                            <label for="ptcpType2" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 2:</span>
+                                                                                <span class="label_text">&#9313; ①에 해당하지 않는 직업계고 졸업생, 미취업 지역 청년</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap grade_wrap">
+                                                <h3 class="t2_sb">학적정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>학번, 학년, 전공, 상태, 졸업(예정)년월 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="tr_grade">
+                                                                <th scope="row">
+                                                                    <label for="stdId">
+                                                                        <span class="req_mark">학번</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>2025071112352</td>
+                                                                <th scope="row">
+                                                                    <label for="grade">
+                                                                        <span class="req_mark">학년</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>4학년</td>
+                                                            </tr>
+                                                            <tr class="tr_major">
+                                                                <th scope="row">
+                                                                    <label for="major">
+                                                                        <span class="req_mark">전공</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>국어국문학과</td>
+                                                                <th scope="row">
+                                                                    <label for="status">
+                                                                        <span class="req_mark">상태</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>졸업</td>
+                                                            </tr>
+                                                            <tr class="tr_gradate">
+                                                                <th scope="row">
+                                                                    <label for="gradDate">
+                                                                        <span class="req_mark">졸업(예정) 년월</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td colspan="3">2029-02</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                                <div class="btn_box mt40">
+                                                    <button type="button" class="btn big type02" aria-label="신청 목록 페이지로 이동">목록</button>
+                                                    <button type="submit" id="srchBtn" class="btn big fill type01">회수</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- 팝업내용 시작 -->
+                                        <div class="new_popup newpop_uni_search" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+                                            <div class="newpop_tit">   
+                                                <h4>운영 대학 검색</h4>
+                                                <a href="./UI_ADHPAaM01.html" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
+                                            </div>
+                                            <div class="newpop_inner">
+                                                <article class="box_form_content">
+                                                    <form id="searchFrm" name="searchFrm" action="jobPsyExamList.do" method="post" class="reset_area">
+                                                        <input type="hidden" id="pageIndex" name="pageIndex" value="1">
+                                                        <input type="hidden" id="pageUnit" name="pageUnit" value="6">
+                                                        <table class="search_table">
+                                                            <colgroup>
+                                                                <col style="width:18%">
+                                                                <col style="width:82%">
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr class="chk_dual">
+                                                                    <td class="new_th">지역</td>
+                                                                    <td>
+                                                                        <fieldset class="box_chk-group" role="group" aria-labelledby="PopregionLegend">
+                                                                            <legend id="PopregionLegend" class="sr_only">지역 선택</legend>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegionAll" class="PopchkRegion" value="ALL">
+                                                                                <label for="PopchkRegionAll">전체</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion1" class="PopchkRegion" value="1">
+                                                                                <label for="PopchkRegion1">서울</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion2" class="PopchkRegion" value="2">
+                                                                                <label for="PopchkRegion2">부산</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion3" class="PopchkRegion" value="3">
+                                                                                <label for="PopchkRegion3">대구</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion4" class="PopchkRegion" value="4">
+                                                                                <label for="PopchkRegion4">인천</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion5" class="PopchkRegion" value="5">
+                                                                                <label for="PopchkRegion5">광주</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion6" class="PopchkRegion" value="6">
+                                                                                <label for="PopchkRegion6">대전</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion7" class="PopchkRegion" value="7">
+                                                                                <label for="PopchkRegion7">울산</label>
+                                                                            </span>
+                                                                            <span class="mr0">
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion8" class="PopchkRegion" value="8">
+                                                                                <label for="PopchkRegion8">세종</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion9" class="PopchkRegion" value="9">
+                                                                                <label for="PopchkRegion9">경기</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion10" class="PopchkRegion" value="10">
+                                                                                <label for="PopchkRegion10">충북</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion11" class="PopchkRegion" value="11">
+                                                                                <label for="PopchkRegion11">충남</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion12" class="PopchkRegion" value="12">
+                                                                                <label for="PopchkRegion12">전북</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion13" class="PopchkRegion" value="13">
+                                                                                <label for="PopchkRegion13">전남</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion14" class="PopchkRegion" value="14">
+                                                                                <label for="PopchkRegion14">경북</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion15" class="PopchkRegion" value="15">
+                                                                                <label for="PopchkRegion15">경남</label>
+                                                                            </span>
+                                                                            <span>
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion16" class="PopchkRegion" value="16">
+                                                                                <label for="PopchkRegion16">강원</label>
+                                                                            </span>
+                                                                            <span class="mr0">
+                                                                                <input type="checkbox" name="PopchkRegion" id="PopchkRegion17" class="PopchkRegion" value="17">
+                                                                                <label for="PopchkRegion17">제주</label>
+                                                                            </span>
+                                                                        </fieldset>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="new_reset">
+                                                                    <td class="new_th">운영대학</td>
+                                                                    <td>
+                                                                        <span class="box_ipt new_ipt">
+                                                                            <label for="srchKeyword_univ" class="sr_only">운영대학 검색</label>
+                                                                            <input type="text" class="input_txt" id="srchKeyword_univ" name="srchKeyword_univ" placeholder="대학교 명" title="운영대학 키워드 입력">
+                                                                            <button type="button" class="newbtn_del ico16_delete" aria-label="운영대학 검색어 삭제">
+                                                                                <span class="blind">삭제</span>
+                                                                            </button>
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="box_btn_wrap flex_al_c type02">
+                                                            <button type="reset" id="popBtnClean" class="btn medium type01 reset newbtn_reset newbtn_w88">초기화</button>
+                                                            <button type="submit" id="srchBtn" class="btn medium fill type01 pop_srchbtn newbtn_w60">검색</button>
+                                                        </div>
+                                                    </form>
+                                                </article>
+
+                                                <div class="box_table_wrap">
+                                                    <div class="box_table_hd">
+                                                        <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                        <div class="section_right">
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
+                                                                    <option value="10" selected="selected">10 개씩</option>
+                                                                    <option value="30">30 개씩</option>
+                                                                    <option value="50">50 개씩</option>
+                                                                </select>
+                                                            </span>
+                                                            <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- table -->
+                                                    <table class="box_table new_table radio_table">
+                                                        <caption>선택버튼, 대학교명, 소재지, 전화번호 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width: 100px">
+                                                            <col style="width: 160px">
+                                                            <col style="width: auto">
+                                                            <col style="width: 160px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">선택</th>
+                                                            <th scope="col">대학교명</th>
+                                                            <th scope="col">소재지</th>
+                                                            <th scope="col">전화번호</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ1" />
+                                                                        <label for="univ1">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">AAA 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>AAA 대학교</td>
+                                                                <td>대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ2" />
+                                                                        <label for="univ2">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">BBB 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>BBB 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) BBB대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ3" />
+                                                                        <label for="univ3">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">CCC 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>CCC 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) CCC대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ4" />
+                                                                        <label for="univ4">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">DDD 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>DDD 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) DDD대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ5" />
+                                                                        <label for="univ5">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">EEE 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>EEE 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) EEE대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ6" />
+                                                                        <label for="univ6">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">FFF 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>FFF 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) FFF대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ7" />
+                                                                        <label for="univ7">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">GGG 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>GGG 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) GGG대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ8" />
+                                                                        <label for="univ8">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">HHH 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>HHH 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) HHH대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ9" />
+                                                                        <label for="univ9">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">III 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>III 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) III대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="radio_item">
+                                                                        <input type="radio" name="univSelect" id="univ10" />
+                                                                        <label for="univ10">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">JJJ 대학교 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>JJJ 대학교</td>
+                                                                <td>서울특별시 광진구 능동로 209(군자동) JJJ대학교</td>
+                                                                <td>000-0000-0000</td>
+                                                            </tr>
+
+
+                                                            <!-- 등록된 내용이 없을시에 사용 -->
+                                                            <!-- <tr><td colspan="2" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="section_bottom"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="newpop_save btn_box mt40">
+                                                <button type="button" class="btn big type02" onclick="location.href='./UI_ADHPAaM01.html';">닫기</button>
+                                                <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">적용</button>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', () => {
+                                                document.querySelectorAll('.radio_table tbody tr').forEach(tr => {
+                                                    tr.addEventListener('click', e => {
+                                                        if (!e.target.closest('input, label')) {
+                                                            const radio = tr.querySelector('input[type="radio"]');
+                                                            radio?.click();
+                                                        }
+                                                    });
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>
