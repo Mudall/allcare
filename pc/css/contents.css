@@ -139,3 +139,19 @@
 .mypage .progmg .box_end_wrap .submit_date_box p {font-size: 16px; font-weight: 400; color: #333;}
 .mypage .progmg .box_end_wrap .submit_date_box p time {font-size: 20px; font-weight: 600; }
 .mypage .progmg .box_end_wrap .btn_box {display: flex; justify-content: space-between; align-items: center;}
+
+
+
+/* 완료 페이지 UI_ADHPAbS11~15 */
+.mypage .progmg .donepage {margin-top: 120px;}
+.mypage .progmg .donepage .done_notice {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.mypage .progmg .donepage .done_notice p {text-align: center; font-size: 28px; color: #333; font-weight: 600; line-height: 40px;}
+.mypage .progmg .donepage .done_info {padding: 32px 40px; border: 1px solid #ddd; border-radius: 8px;}
+.mypage .progmg .donepage .done_info li {display: flex; align-items: baseline;}
+.mypage .progmg .donepage .done_info li + li {border-top: 1px solid #eee; padding-top: 8px; margin-top: 8px;}
+.mypage .progmg .donepage .done_info li div p {color: #333; font-size: 16px; line-height: 28px;}
+.mypage .progmg .donepage .done_info li .tit {width: 120px;}
+.mypage .progmg .donepage .done_info li .desc {width: calc(100% - 120px); padding-left: 40px;}
+.mypage .progmg .donepage .done_info li .tit p {font-weight: 400;}
+.mypage .progmg .donepage .done_info li .desc p {font-weight: 600;}
+.mypage .progmg .donepage .done_btn {display: flex; justify-content: center;}
