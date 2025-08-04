@@ -511,9 +511,52 @@
                                                     <a href="#none" class="btn big fill type01" onclick="">확인</a>
                                                 </div>
                                             </div>
+                                            <script>
+                                                document.addEventListener('DOMContentLoaded', function () {
+                                                    const agreeAll = document.getElementById('agreeAll');
+                                                    const confirmBtn = document.querySelector('.newpop_pv .btn_wrap .btn');
+                                                    const consentNames = ['pvType', 'identifierType', 'thirdPartyType', 'advType'];
+
+                                                    // 전체 동의 → 모두 value="yes" 선택
+                                                    agreeAll.addEventListener('change', () => {
+                                                        if (agreeAll.checked) {
+                                                            consentNames.forEach(name => {
+                                                                const yes = document.querySelector(`input[name="${name}"][value="yes"]`);
+                                                                if (yes) yes.checked = true;
+                                                            });
+                                                        }
+                                                    });
+
+                                                    // 동의항목 value값에 따라 자동체크
+                                                    consentNames.forEach(name => {
+                                                        document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
+                                                            radio.addEventListener('change', () => {
+                                                                const allYes = consentNames.every(n => {
+                                                                    const checked = document.querySelector(`input[name="${n}"]:checked`);
+                                                                    return checked && checked.value === 'yes';
+                                                                });
+                                                                agreeAll.checked = allYes;
+                                                            });
+                                                        });
+                                                    });
+
+                                                    // 확인 버튼 → 미동의 또는 미선택 시 경고
+                                                    confirmBtn.addEventListener('click', e => {
+                                                        const invalid = consentNames.some(name => {
+                                                            const checked = document.querySelector(`input[name="${name}"]:checked`);
+                                                            return !checked || checked.value === 'no';
+                                                        });
+
+                                                        if (invalid) {
+                                                            alert('동의 여부를 체크해주세요');
+                                                            e.preventDefault();
+                                                        } else {
+                                                            window.location.href = '/index.html';
+                                                        }
+                                                    });
+                                                });
+                                            </script>
                                             <!-- 팝업 종료 -->
-
-
 
 
 
@@ -523,24 +566,6 @@
                                 </div>
 
 
-                                <script>
-                                    // 참여자 분류에서 1번 선택시 학적정보 보여주기 
-                                    document.addEventListener('DOMContentLoaded', function () {
-                                        const ptcpType1 = document.getElementById('ptcpType1');
-                                        const ptcpType2 = document.getElementById('ptcpType2');
-                                        const gradeWrap = document.querySelector('.grade_wrap');
-                                        function toggleGradeWrap() {
-                                            if (ptcpType1.checked) {
-                                                gradeWrap.style.display = 'block';
-                                            } else if (ptcpType2.checked) {
-                                                gradeWrap.style.display = 'none';
-                                            }
-                                        }
-                                        toggleGradeWrap();
-                                        ptcpType1.addEventListener('change', toggleGradeWrap);
-                                        ptcpType2.addEventListener('change', toggleGradeWrap);
-                                    });
-                                </script>
                             </div>
                             <!-- 콘텐츠영역 끝 -->
 

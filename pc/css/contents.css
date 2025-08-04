@@ -41,6 +41,11 @@
 .new_ipt .input_txt {padding-left: 12px;} 
 [class^='btn'].medium.newbtn_w60 {padding: 0 12px; min-width: 60px;}
 [class^='btn'].medium.newbtn_w88 {padding: 0 16px; min-width: 88px;}
+.support .youth input[type="checkbox"], .mypage .progmg input[type="checkbox"] {position: relative; width: 20px; height: 20px; border: 1px solid #757575; border-radius: 4px;}
+.support .youth input[type="checkbox"]:checked::before, .mypage .progmg input[type="checkbox"]:checked::before {content: ''; position: absolute; width: 20px; height: 20px; border: 1px solid var(--col_blue); border-radius: 4px; background-color: var(--col_blue);} 
+.support .youth input[type="checkbox"]:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/support/ico10_chk.svg') no-repeat center / contain;} 
+.mypage .progmg input[type="checkbox"]:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/ico10_chk.svg') no-repeat center / contain;} 
+
 
 /* 운영대학 목록 (UI_ADHPAaM01) */
 .support .youth .gsprog_uni>div+div {margin-top: 40px;}
@@ -99,7 +104,7 @@
 .support .youth .newpop_uni_index tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
 .support .youth .newpop_uni_index tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .support .youth .newpop_uni_index .newpop_inner .box_form_content {padding: 24px 40px;}
-.support .youth .newpop_uni_index .newpop_inner .box_chk-group > span {margin-right: 16px;}
+.support .youth .newpop_uni_index .newpop_inner .box_chk-group > span {margin-right: 18px;}
 .support .youth .newpop_uni_index .newpop_inner th, .support .youth .newpop_uni_index .newpop_inner td {padding-top: 12px; padding-bottom: 12px;}
 .support .youth .newpop_uni_index .newpop_inner .search_table td .box_chk-group {min-height: initial;}
 
@@ -223,7 +228,6 @@
 .mypage .progmg .newpop_pv .consent_area.type_1 {background-color: #f8f8f8; padding: 16px;}
 .mypage .progmg .newpop_pv .consent_area.type_1 .chk_box {margin-bottom: 8px; display: flex; align-items: center;}
 .mypage .progmg .newpop_pv .consent_area.type_1 .chk_box input {cursor: pointer;}
-.mypage .progmg .newpop_pv .consent_area.type_1 .chk_box input[type="checkbox"] {width: 20px; height: 20px; border: 1px solid #757575; border-radius: 4px;}
 .mypage .progmg .newpop_pv .consent_area.type_1 .chk_box label {margin: 2px 0 2px 6px; line-height: 20px; cursor: pointer;}
 .mypage .progmg .newpop_pv .consent_area.type_2 .radio_box {display: flex;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
 .mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_tit {padding: 12px 20px; width: calc(100% - 170px); background-color: #f8f8f8;}
