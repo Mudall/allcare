@@ -19,7 +19,7 @@
 .sel.round.new_sel_span select {padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; letter-spacing: -0.032em; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .sel.round.new_sel_span::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .new_ipt button[class*='ico']{right: 12px;}
-.new_popup {padding: 32px 17px 32px 40px; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 960px; height: calc(100% - 200px); max-height: 680px; z-index: 9999;}
+.new_popup {padding: 32px 17px 32px 40px; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 1040px; height: calc(100% - 200px); max-height: 680px; z-index: 9999;}
 .new_popup .newpop_inner {height: calc(100% - 90px); overflow-y: auto; padding-right: 18px;}
 .new_popup .newpop_inner .search_table tbody tr td {border-bottom: 1px solid #eee;}
 .new_popup .newpop_inner .search_table th,
@@ -63,7 +63,8 @@
 .support .youth .gsprog_uni .statusDesc_cont button {padding: 6px 16px; border-radius: 4px; border: 1px solid #757575; color: #333;}
 
 
-/* 운영대학 목록 - 프로그램 조회 팝업 (UI_ADHPAaM02) */ 
+/* [팝업] 운영대학 목록 - 프로그램 조회 팝업 (UI_ADHPAaM02) */ 
+.support .youth .newpop_uni_index .search_table .new_th {font-size: 16px; font-weight: 600; color: #333; line-height: 28px; letter-spacing: -0.02em;}
 .support .youth .newpop_uni_index .new_table tr th {padding: 12px 20px;}
 .support .youth .newpop_uni_index .new_table tr td {padding: 24px 20px;}
 .support .youth .newpop_uni_index .new_table tr th:first-child, 
@@ -71,33 +72,33 @@
 .support .youth .newpop_uni_index .new_table tr th:last-child, 
 .support .youth .newpop_uni_index .new_table tr td:last-child {padding-right: 24px;}
 .support .youth .newpop_uni_index .new_table td {text-align: left;}
-.support .youth .newpop_uni_index .new_table td span {vertical-align: baseline;}
-.support .youth .newpop_uni_index .new_table td:first-child .prog_tit p {margin: 8px 0; }
-.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc {display: flex; align-items: baseline; gap: 16px;}
-.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag span {display: none; padding: 4px 6px; border-radius: 4px; color: var(--col_blue); background: rgba(77, 101, 225, 0.10);}
+.support .youth .newpop_uni_index .new_table td span {vertical-align: baseline; font-weight: 600;}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_uni p {margin: 8px 0; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_tit p {color: #111;}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc {display: flex; align-items: stretch; gap: 4px;}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag span {display: none; padding: 4px 6px; border-radius: 4px; color: #fff; background-color: #19b3bd; border: 1px solid #19b3bd; font-size: 12px; font-weight: 400; line-height: 1; letter-spacing: -0.02em;}
 .support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag span.on {display: block;}
-.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_cdp {color: #19B3BD; background-color: rgb(25, 179, 189, 0.05);}
-.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_lerc {color: #F0651F; background-color: rgb(240, 101, 31, 0.05);}
-.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_pm {color: #E0024B; background-color: rgb(224, 2, 75, 0.05);}
-.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_etc {color: #555; background-color: rgb(85, 85, 85, 0.10);}
-.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_site span {display: none; color: #39425D; border: 1px solid #39425D; padding: 4px 6px; border-radius: 4px;} 
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_cdp {background-color: #e0024b; border: 1px solid #e0024b;}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_lerc {background-color: var(--col_orange); border: 1px solid var(--col_orange);}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_pm {background-color: #9e00ff; border: 1px solid #9e00ff;}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_tag .tag_etc {background-color: #555; border: 1px solid #555;}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_site span {display: none; font-size: 12px; font-weight: 400; line-height: 1; letter-spacing: -0.02em; padding: 4px 6px; border-radius: 4px;} 
 .support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_site span.on {display: block;}
 .support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_site .onsite {color: var(--col_blue); border: 1px solid var(--col_blue);}
+.support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_site .offsite {color: #333; border: 1px solid #757575;}
 .support .youth .newpop_uni_index .new_table td:first-child .prog_dsc .prog_year p {color: #333;}
-.support .youth .newpop_uni_index .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; }
+.support .youth .newpop_uni_index .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
 .support .youth .newpop_uni_index .new_table td:last-child li+li {margin-top: 4px;}
-.support .youth .newpop_uni_index .new_table td:last-child li span {color: var(--col_blue);}
+.support .youth .newpop_uni_index .new_table td:last-child li span {color: #333;}
 .support .youth .newpop_uni_index .new_table td:last-child li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
 .support .youth .newpop_uni_index .new_table td:last-child .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
 .support .youth .newpop_uni_index .new_table td:last-child .oper_count::before {background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
-.support .youth .newpop_uni_index .new_table td:last-child .oper_year {font-weight: 600;}
 .support .youth .newpop_uni_index .new_table td:last-child .oper_time, 
 .support .youth .newpop_uni_index .new_table td:last-child .oper_count {font-weight: 400;}
 .support .youth .newpop_uni_index tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
-.support .youth .newpop_uni_index tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.support .youth .newpop_uni_index tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
 .support .youth .newpop_uni_index tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .support .youth .newpop_uni_index .newpop_inner .box_form_content {padding: 24px 40px;}
-.support .youth .newpop_uni_index .newpop_inner .box_chk-group input[type="checkbox"] + label {margin-left: 4px;}
 .support .youth .newpop_uni_index .newpop_inner .box_chk-group > span {margin-right: 16px;}
 .support .youth .newpop_uni_index .newpop_inner th, .support .youth .newpop_uni_index .newpop_inner td {padding-top: 12px; padding-bottom: 12px;}
 .support .youth .newpop_uni_index .newpop_inner .search_table td .box_chk-group {min-height: initial;}
@@ -170,14 +171,14 @@
 .mypage .progmg .donepage .done_btn {display: flex; justify-content: flex-end;}
 
 
-/* 운영 대학 검색 팝업 (UI_ADHPAbP06) */
+/* [팝업] 운영 대학 검색 팝업 (UI_ADHPAbP06) */
 .mypage .progmg .newpop_uni_search .newpop_inner {height: calc(100% - 186px);}
 .mypage .progmg .newpop_uni_search .newpop_inner .box_form_content {padding: 24px 40px;}
 .mypage .progmg .newpop_uni_search .newpop_inner tr td {cursor: pointer;}
 .mypage .progmg .newpop_uni_search .newpop_save {display: flex; justify-content: center;}
 .mypage .progmg .newpop_uni_search .newpop_save button + button {margin-left: 16px;}
 
-/* 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP07) */
+/* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP07) */
 .mypage .progmg .newpop_major_search .newpop_inner {height: calc(100% - 186px);}
 .mypage .progmg .newpop_major_search .newpop_save {display: flex; justify-content: center;}
 .mypage .progmg .newpop_major_search .newpop_save button + button {margin-left: 16px;}
@@ -211,4 +212,45 @@
 .mypage .progmg .newpop_major_search .newpop_inner .radio_box .major_list li>label {cursor: pointer; margin-left: 5px;}
 .mypage .progmg .newpop_major_search .newpop_inner .radio_box .major_list li + li {margin-top: 8px;}
 
+
+
+
+
+/* [팝업] 개인정보 수집·이용·제공에 대한 동의서(참여자용) (UI_ADHPAbP10) */
+.mypage .progmg .newpop_pv .consent_wrap h5 {line-height: 48px; position: relative; display: inline-block;}
+.mypage .progmg .newpop_pv .consent_wrap h5.req_mark::after {content: ''; position: absolute; right: -16px; top: 45%; transform: translateY(-50%); border-radius: 50%; background-color: #ee2e62; width: 6px; height: 6px;}
+.mypage .progmg .newpop_pv .consent_area {margin-top: 8px;}
+.mypage .progmg .newpop_pv .consent_area.type_1 {background-color: #f8f8f8; padding: 16px;}
+.mypage .progmg .newpop_pv .consent_area.type_1 .chk_box {margin-bottom: 8px; display: flex; align-items: center;}
+.mypage .progmg .newpop_pv .consent_area.type_1 .chk_box input {cursor: pointer;}
+.mypage .progmg .newpop_pv .consent_area.type_1 .chk_box input[type="checkbox"] {width: 20px; height: 20px; border: 1px solid #757575; border-radius: 4px;}
+.mypage .progmg .newpop_pv .consent_area.type_1 .chk_box label {margin: 2px 0 2px 6px; line-height: 20px; cursor: pointer;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box {display: flex;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_tit {padding: 12px 20px; width: calc(100% - 170px); background-color: #f8f8f8;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group {display: flex; justify-content: center; align-items: center; width: 170px; background-color: #fff;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item {display: flex; justify-content: center; align-items: center; position: relative;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item + .new_radio_item {margin-left: 16px;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item input[type="radio"] {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(100%); border: 0;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item label {height: auto; display: flex; align-items: center; cursor: pointer;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item label .radio_ui {display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%; position: relative;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item input[type="radio"]:checked + label .radio_ui::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item label .label_text {margin-left: 5px; font-size: 16px; font-weight: 400; color: #333; line-height: 22px; letter-spacing: -0.02em;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box {border-bottom: 1px solid #ddd; padding: 21px 20px;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table .table_tit {margin: 8px 0;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table table tr th {padding: 12px 20px; border: 1px solid #ddd; border-bottom: none; background-attachment: #f8f8f8; font-size: 16px; color: #333; font-weight: 600; line-height: 1.75rem;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table table tr td {padding: 12px 20px; border: 1px solid #ddd; font-size: 16px; color: #555; font-weight: 400; line-height: 1.75rem; text-align: center;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table table tr th:first-child,
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table table tr td:first-child {border-left: none;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table table tr th:last-child,
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table table tr td:last-child {border-right: none;}
+.mypage .progmg .newpop_pv .consent_area.type_2 .con_box .radio_table table tr td.txt_al {text-align: left;}
+.mypage .progmg .newpop_pv .notice_wrap {padding: 16px; background-color: #f8f8f8;}
+.mypage .progmg .newpop_pv .notice_wrap p {font-weight: 600;}
+.mypage .progmg .newpop_pv .notice_wrap ul {margin-top: 4px;}
+.mypage .progmg .newpop_pv .notice_wrap ul li {position: relative; padding-left: 16px; font-size: 14px; line-height: 24px; color: #333;}
+.mypage .progmg .newpop_pv .notice_wrap ul li + li {margin-top: 4px;}
+.mypage .progmg .newpop_pv .notice_wrap ul li::before {content: ''; position: absolute; left: 4px; top: 10px; width: 4px; height: 4px; background-color: #333; border-radius: 50%;}
+.mypage .progmg .newpop_pv .btn_wrap {display: flex; flex-direction: column; align-items: stretch}
+.mypage .progmg .newpop_pv .btn_wrap .confirm_desc {text-align: left;}
+.mypage .progmg .newpop_pv .btn_wrap a {width: 112px; margin: auto;}
 
