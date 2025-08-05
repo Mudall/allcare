@@ -206,7 +206,7 @@
                                         <div class="new_popup newpop_major_search" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
                                             <div class="newpop_tit">   
                                                 <h4>전공 찾기      </h4>
-                                                <a href="./UI_ADHPAaM01.html" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
+                                                <a href="" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
                                             </div>
 
                                             <div class="newpop_inner">
@@ -253,22 +253,22 @@
                                                         </div>
                                                     </div>
 
-                                                    <!-- 2차 분류 -->
                                                     <div class="category_lv lv_2">
                                                         <div class="category_tit" id="categoryLv2Tit"><h5>2차 분류</h5></div>
                                                         <div class="category-placeholder" id="lv2Container" aria-labelledby="categoryLv2Tit">
-                                                            <p>← 1차 계열을 선택하세요.</p>
+                                                            <p>&#8592; 1차 계열을 선택하세요.</p>
                                                         </div>
                                                     </div>
 
-                                                    <!-- 3차 분류 -->
                                                     <div class="category_lv lv_3">
                                                         <div class="category_tit" id="categoryLv3Tit"><h5>3차 분류</h5></div>
                                                         <div class="category-placeholder" id="lv3Container" aria-labelledby="categoryLv3Tit">
-                                                            <p>← 2차 계열을 선택하세요.</p>
+                                                            <p>&#8592; 2차 계열을 선택하세요.</p>
                                                         </div>
                                                     </div>
 
+
+                                                    <!-- 계열데이터 임의로 넣었습니다 -->
                                                     <script>
                                                         const lv1Buttons = document.querySelectorAll('#lv1List button');
                                                         const lv2Container = document.getElementById('lv2Container');
@@ -406,197 +406,223 @@
                                                     </script>
                                                 </div>
 
-                                                <div class="radio_box box_table_wrap write mt24 befSearach">
-                                                    <table class="box_table">
-                                                        <caption>예시학과 을(를) 제공하는 표</caption>
-                                                        <colgroup>
-                                                            <col style="width:25%">
-                                                            <col>
-                                                        </colgroup>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">예시학과</th>
-                                                                <td>
-                                                                    <div class="box_table_group">
-                                                                    <div class="cell">
-                                                                        <div class="cell_wrap">
-                                                                        <div class="box_radio-group">
-                                                                            <span>
-                                                                                <input type="radio" name="majorCheckBox" id="selfSel" onclick="isCheckedMajorList(this)">
-                                                                                <label for="selfSel">학과명 직접입력</label>
-                                                                            </span>
-                                                                        </div>
-                                                                        <span class="box_ipt ml0 w_large">
-                                                                            &nbsp;&nbsp;<input type="text" class="input_txt ml10" id="majorSelfSel" title="찾으시는 학과가 없을 시 직접 입력" value="" placeholder="찾으시는 학과가 없을 시 직접 입력하세요.">
-                                                                            <button type="reset" class="ico16_devare"><span class="blind">삭제</span></button>
-                                                                        </span>
-                                                                        </div>
+                                                <div class="radio_box mt16">
+                                                    <div class="tit"><p class="b1_sb">예시학과 선택</p></div>
+                                                    <fieldset>
+                                                        <legend>예시학과 선택</legend>
+
+                                                        <div class="direct_input_option">
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" name="majorSelect" id="majorDirect" aria-controls="major_input_wrap" aria-describedby="major_input_desc">
+                                                                <label for="majorDirect">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="sr_only">학과명 직접 입력 선택</span>
+                                                                    <p class="b1_r">학과명 직접 입력</p>
+                                                                </label>
+                                                            </div>
+
+                                                            <span id="major_input_wrap" class="box_ipt new_ipt">
+                                                                <label for="major_input" class="sr_only">학과명 직접 입력</label>
+                                                                <input type="text" class="input_txt" id="major_input" name="major_input" placeholder="찾으시는 학과가 없을 시 직접 입력하세요.">
+                                                                <p id="major_input_desc" class="sr_only">직접 입력란입니다. 라디오 버튼 선택 시 입력 가능합니다.</p>
+                                                                <button type="button" class="newbtn_del ico16_delete" aria-label="입력한 학과명 삭제">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+
+
+
+                                                        <div style="display: block;" class="major_list_wrapper" role="region" aria-label="예시학과 목록">
+                                                            <ul class="major_list">
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major1" />
+                                                                        <label for="major1">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">국문역사학과군 선택</span>
+                                                                        </label>
                                                                     </div>
+                                                                    <label for="major1">국문역사학과군</label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major2" />
+                                                                        <label for="major2">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">국문일문중문학과군 선택</span>
+                                                                        </label>
                                                                     </div>
-                                                                        
-            <div class="box_radio-group mt08 majorScroll" id="checkBoxArea" style="display: block;">
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100001">선교언어학과</label>
-            </div>
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100002">선교언어학부</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100003">선교언어학전공</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100004">언어과학과</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100005">언어인지과학전공</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100006">언어학과</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100007">언어학전공</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100008">언어정보학과</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100009">국제학부(한국어한국학전공)</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100010">국제한국어교육학과</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100011">인터넷어학부</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100012">언어교육원</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100013">언어인지과학과</label>
-            </div>
-
-            <div>
-            <div class="new_radio_item">
-            <input type="radio" name="majorSelect" id="major5" />
-            <label for="major5">
-            <span class="radio_ui" aria-hidden="true"></span>
-            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
-            </label>
-            </div>
-            <label class="vtal2" for="01010100014">글로벌문화비지니스학부</label>
-            </div>
+                                                                    <label for="major2">국문일문중문학과군</label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major3" />
+                                                                        <label for="major3">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">국문영문학과군 선택</span>
+                                                                        </label>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                                    <label for="major3">국문영문학과군</label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major4" />
+                                                                        <label for="major4">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">국문학과군 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major4">국문학과군</label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major5" />
+                                                                        <label for="major5">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">국어국문문 영어영문학과군 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major5">국어국문문 영어영문학과군</label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major6" />
+                                                                        <label for="major6">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">국어국문영어영문학과 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major6">국어국문영어영문학과</label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major7" />
+                                                                        <label for="major7">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major7">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major8" />
+                                                                        <label for="major8">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major8">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major9" />
+                                                                        <label for="major9">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major9">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major10" />
+                                                                        <label for="major10">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST 선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major10">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST</label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major11" />
+                                                                        <label for="major11">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major11">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major12" />
+                                                                        <label for="major12">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major12">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major13" />
+                                                                        <label for="major13">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major13">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major14" />
+                                                                        <label for="major14">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major14">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major15" />
+                                                                        <label for="major15">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major7">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major16" />
+                                                                        <label for="major16">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major16">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major17" />
+                                                                        <label for="major17">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major17">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" name="majorSelect" id="major18" />
+                                                                        <label for="major18">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label for="major18">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </fieldset>
                                                 </div>
                                             </div>
 
                                             <div class="newpop_save btn_box mt40">
-                                                <button type="button" class="btn big type02" onclick="location.href='./UI_ADHPAaM01.html';">닫기</button>
+                                                <button type="button" class="btn big type02" onclick="location.href='';">닫기</button>
                                                 <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">적용</button>
                                             </div>
                                         </div>

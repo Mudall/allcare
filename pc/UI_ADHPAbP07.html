@@ -206,7 +206,7 @@
                                         <div class="new_popup newpop_major_search" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
                                             <div class="newpop_tit">   
                                                 <h4>전공 찾기      </h4>
-                                                <a href="./UI_ADHPAaM01.html" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
+                                                <a href="" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
                                             </div>
 
                                             <div class="newpop_inner">
@@ -253,22 +253,22 @@
                                                         </div>
                                                     </div>
 
-                                                    <!-- 2차 분류 -->
                                                     <div class="category_lv lv_2">
                                                         <div class="category_tit" id="categoryLv2Tit"><h5>2차 분류</h5></div>
                                                         <div class="category-placeholder" id="lv2Container" aria-labelledby="categoryLv2Tit">
-                                                            <p>← 1차 계열을 선택하세요.</p>
+                                                            <p>&#8592; 1차 계열을 선택하세요.</p>
                                                         </div>
                                                     </div>
 
-                                                    <!-- 3차 분류 -->
                                                     <div class="category_lv lv_3">
                                                         <div class="category_tit" id="categoryLv3Tit"><h5>3차 분류</h5></div>
                                                         <div class="category-placeholder" id="lv3Container" aria-labelledby="categoryLv3Tit">
-                                                            <p>← 2차 계열을 선택하세요.</p>
+                                                            <p>&#8592; 2차 계열을 선택하세요.</p>
                                                         </div>
                                                     </div>
 
+
+                                                    <!-- 계열데이터 임의로 넣었습니다 -->
                                                     <script>
                                                         const lv1Buttons = document.querySelectorAll('#lv1List button');
                                                         const lv2Container = document.getElementById('lv2Container');
@@ -407,24 +407,33 @@
                                                 </div>
 
                                                 <div class="radio_box mt16">
-                                                    <div class="tit"><p>예시학과 선택</p></div>
+                                                    <div class="tit"><p class="b1_sb">예시학과 선택</p></div>
                                                     <fieldset>
                                                         <legend>예시학과 선택</legend>
 
                                                         <div class="direct_input_option">
                                                             <div class="new_radio_item">
-                                                                <input type="radio" name="majorSelect" id="majorDirect" />
+                                                                <input type="radio" name="majorSelect" id="majorDirect" aria-controls="major_input_wrap" aria-describedby="major_input_desc">
                                                                 <label for="majorDirect">
                                                                     <span class="radio_ui" aria-hidden="true"></span>
-                                                                    <span class="sr_only">국문역사학과군 선택</span>
+                                                                    <span class="sr_only">학과명 직접 입력 선택</span>
+                                                                    <p class="b1_r">학과명 직접 입력</p>
                                                                 </label>
                                                             </div>
-                                                            <label for="majorDirect">학과명 직접 입력</label>
 
-                                                            <input type="text" id="major_input" name="major_input" placeholder="찾으시는 학과가 없을 시 직접 입력하세요." aria-labelledby="major_direct">
+                                                            <span id="major_input_wrap" class="box_ipt new_ipt">
+                                                                <label for="major_input" class="sr_only">학과명 직접 입력</label>
+                                                                <input type="text" class="input_txt" id="major_input" name="major_input" placeholder="찾으시는 학과가 없을 시 직접 입력하세요.">
+                                                                <p id="major_input_desc" class="sr_only">직접 입력란입니다. 라디오 버튼 선택 시 입력 가능합니다.</p>
+                                                                <button type="button" class="newbtn_del ico16_delete" aria-label="입력한 학과명 삭제">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </span>
                                                         </div>
 
-                                                        <div class="major_list_wrapper" role="region" aria-label="예시학과 목록">
+
+
+                                                        <div style="display: none;" class="major_list_wrapper" role="region" aria-label="예시학과 목록">
                                                             <ul class="major_list">
                                                                 <li>
                                                                     <div class="new_radio_item">
@@ -613,7 +622,7 @@
                                             </div>
 
                                             <div class="newpop_save btn_box mt40">
-                                                <button type="button" class="btn big type02" onclick="location.href='./UI_ADHPAaM01.html';">닫기</button>
+                                                <button type="button" class="btn big type02" onclick="location.href='';">닫기</button>
                                                 <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">적용</button>
                                             </div>
                                         </div>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 없음</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                        </ul>
+
+                                        <div class="box_notice_wrap mt24">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list">참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</li>
+                                                <li class="txt_list">참여를 희망하는 프로그램을 여러 개 신청할 수 있습니다.</li>
+                                                <li class="txt_list">프로그램 신청 후 대학 담당자의 선발 처리를 거쳐 참여가 확정됩니다.</li>
+                                                <li class="txt_list">프로그램 관련 자세한 내용은 해당 대학의 담당자에게 문의하시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="newtab_progwrap mt16" role="tablist">
+                                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">프로그램 신청</button>
+                                            <button type="button" role="tab" class="tit active" onclick="" aria-selected="true">참여 프로그램 관리</button>
+                                        </div>
+
+                                        <div class="pa_page_empty">
+                                            <figure class="mb24"><img src=""><img src="./include/images/ico60_warning_navy.svg"></figure>
+                                            <p class="t3_sb">프로그램을 신청한 이후 조회할 수 있습니다.</p>
+                                            <div class="box_btn_wrap mt40">
+                                                <a href="" class="btn big type02 btn_s_r">이전</a>
+                                                <a href="" class="btn big type01 fill">신청서 작성</a>
+                                            </div>                                  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>
