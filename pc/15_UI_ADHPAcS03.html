@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 없음</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb --> 
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                        </ul>
+
+                                        <div class="box_notice_wrap mt24">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list">참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</li>
+                                                <li class="txt_list">참여를 희망하는 프로그램을 여러 개 신청할 수 있습니다.</li>
+                                                <li class="txt_list">프로그램 신청 후 대학 담당자의 선발 처리를 거쳐 참여가 확정됩니다.</li>
+                                                <li class="txt_list">프로그램 관련 자세한 내용은 해당 대학의 담당자에게 문의하시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="newtab_progwrap mt16 mb40" role="tablist">
+                                            <button type="button" role="tab" class="tit active" onclick="" aria-selected="true">프로그램 신청</button>
+                                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">참여 프로그램 관리</button>
+                                        </div>
+
+                                        <div class="pa_page_inner uni_prog_tool">
+                                            <article class="box_form_content">
+                                                <form id="searchFrm" name="searchFrm" action="jobPsyExamList.do" method="post" class="reset_area">
+                                                    <input type="hidden" id="pageIndex" name="pageIndex" value="1">
+                                                    <input type="hidden" id="pageUnit" name="pageUnit" value="6">
+                                                    <table class="search_table">
+                                                        <colgroup>
+                                                            <col style="width:18%">
+                                                            <col style="width:32%">
+                                                            <col style="width:18%">
+                                                            <col style="width:32%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="new_reset">
+                                                                <td class="new_th">운영대학</td>
+                                                                <td>
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="srchKeyword_univ" class="sr_only">운영대학 검색</label>
+                                                                        <input type="text" class="input_txt" id="srchKeyword_univ" name="srchKeyword_univ" placeholder="대학교 명" title="운영대학 키워드 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="운영대학 검색어 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </td>
+                                                                <td class="new_th">프로그램명</td>
+                                                                <td>
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="srchKeyword_prog" class="sr_only">프로그램명 검색</label>
+                                                                        <input type="text" class="input_txt" id="srchKeyword_prog" name="srchKeyword_prog" placeholder="프로그램명" title="프로그램명 키워드 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="프로그램명 검색어 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_dual">
+                                                                <td class="new_th">지역</td>
+                                                                <td colspan="3">
+                                                                    <fieldset class="box_chk-group" role="group" aria-labelledby="PopregionLegend">
+                                                                        <legend id="PopregionLegend" class="sr_only">지역 선택</legend>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegionAll" class="PopchkRegion" value="ALL">
+                                                                            <label for="PopchkRegionAll">전체</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion1" class="PopchkRegion" value="1">
+                                                                            <label for="PopchkRegion1">서울</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion2" class="PopchkRegion" value="2">
+                                                                            <label for="PopchkRegion2">부산</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion3" class="PopchkRegion" value="3">
+                                                                            <label for="PopchkRegion3">대구</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion4" class="PopchkRegion" value="4">
+                                                                            <label for="PopchkRegion4">인천</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion5" class="PopchkRegion" value="5">
+                                                                            <label for="PopchkRegion5">광주</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion6" class="PopchkRegion" value="6">
+                                                                            <label for="PopchkRegion6">대전</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion7" class="PopchkRegion" value="7">
+                                                                            <label for="PopchkRegion7">울산</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion8" class="PopchkRegion" value="8">
+                                                                            <label for="PopchkRegion8">세종</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion9" class="PopchkRegion" value="9">
+                                                                            <label for="PopchkRegion9">경기</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion10" class="PopchkRegion" value="10">
+                                                                            <label for="PopchkRegion10">충북</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion11" class="PopchkRegion" value="11">
+                                                                            <label for="PopchkRegion11">충남</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion12" class="PopchkRegion" value="12">
+                                                                            <label for="PopchkRegion12">전북</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion13" class="PopchkRegion" value="13">
+                                                                            <label for="PopchkRegion13">전남</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion14" class="PopchkRegion" value="14">
+                                                                            <label for="PopchkRegion14">경북</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion15" class="PopchkRegion" value="15">
+                                                                            <label for="PopchkRegion15">경남</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion16" class="PopchkRegion" value="16">
+                                                                            <label for="PopchkRegion16">강원</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion17" class="PopchkRegion" value="17">
+                                                                            <label for="PopchkRegion17">제주</label>
+                                                                        </span>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_dual">
+                                                                <td class="new_th">프로그램 유형</td>
+                                                                <td colspan="3">
+                                                                    <fieldset class="box_chk-group">
+                                                                        <legend class="visually-hidden">프로그램 유형 선택</legend>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="programType" id="programTypeAll" class="programType" value="ALL">
+                                                                            <label for="programTypeAll">전체</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="programType" id="programTypeSelfDirected" class="programType" value="SELF">
+                                                                            <label for="programTypeSelfDirected">자기주도형</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="programType" id="programTypeDemand" class="programType" value="DEMAND">
+                                                                            <label for="programTypeDemand">수요맞춤형</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="programType" id="programTypeLocalHire" class="programType" value="LOCAL">
+                                                                            <label for="programTypeLocalHire">지역기업 채용 연계</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="programType" id="programTypeMentoring" class="programType" value="MENTOR">
+                                                                            <label for="programTypeMentoring">현직자 멘토링</label>
+                                                                        </span>
+                                                                        <span class="b1_r">
+                                                                            <input type="checkbox" class="new_chkbox" name="programType" id="programTypeOther" class="programType" value="OTHER">
+                                                                            <label for="programTypeOther">기타</label>
+                                                                        </span>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="new_date">
+                                                                <td class="new_th">운영 기간</td>
+                                                                <td colspan="3">
+                                                                    <fieldset class="form_box">
+                                                                        <legend class="sr_only">조회 기간 선택 및 날짜 입력</legend>
+                                                                        <div class="date_select">
+                                                                            <label for="newDate" class="sr_only">조회 기간 선택</label>
+                                                                            <select id="newDate" name="period">
+                                                                                <option value="" selected>선택</option>
+                                                                                <option value="today">오늘</option>
+                                                                                <option value="1w">1주일</option>
+                                                                                <option value="1m">1개월</option>
+                                                                                <option value="3m">3개월</option>
+                                                                                <option value="6m">6개월</option>
+                                                                                <option value="1y">1년</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
+                                                                            <div class="cell">
+                                                                                <span class="box_ipt w_small">
+                                                                                    <label for="schRcptStdte" class="sr_only">등록 시작일</label>
+                                                                                    <input type="text" onkeyup="fn_selfInput(this)" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
+                                                                                    <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 시작일 달력 선택"></button>
+                                                                                </span>
+                                                                            </div>
+                                                                            <i class="date_line" aria-hidden="true">~</i>
+                                                                            <div class="cell">
+                                                                                <span class="box_ipt w_small">
+                                                                                    <label for="schRcptEndte" class="sr_only">등록 종료일</label>
+                                                                                    <input type="text" onkeyup="fn_selfInput(this)" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
+                                                                                    <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 종료일 달력 선택"></button>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="box_btn_wrap flex_al_c type02">
+                                                        <button type="reset" id="popBtnClean" class="btn medium type01 reset newbtn_reset newbtn_w88">초기화</button>
+                                                        <button type="submit" id="srchBtn" class="btn medium fill type01 newbtn_w60">검색</button>
+                                                    </div>
+                                                </form>
+                                            </article>
+
+                                            <div class="box_table_wrap">
+                                                <div class="box_table_hd">
+                                                    <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                    <div class="section_right">
+                                                        <span class="sel round new_sel_span">
+                                                            <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
+                                                                <option value="10" selected="selected">10 개씩</option>
+                                                                <option value="30">30 개씩</option>
+                                                                <option value="50">50 개씩</option>
+                                                            </select>
+                                                        </span>
+                                                        <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                                    </div>
+                                                </div>
+                                                <!-- table -->
+                                                <table class="box_table auto-count new_table">
+                                                    <caption>프로그램 정보, 운영정보을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width: auto">
+                                                        <col style="width: 290px">
+                                                        <col style="width: 164px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th id="programInfo" scope="col">프로그램 정보</th>
+                                                            <th id="operateInfo" scope="col">운영정보</th>
+                                                            <th id="operateInfo" scope="col">현황</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl on">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>AAA 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1 active">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp on">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite">대면</span>
+                                                                        <span class="offsite on">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>BBB 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 </p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2 active"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc on">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>CCC 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3 active"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm on">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>DDD 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1 active">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc on">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>EEE 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1 active">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl on">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite">대면</span>
+                                                                        <span class="offsite on">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>FFF 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1 active">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp on">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>GGG 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1 active">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc on">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite">대면</span>
+                                                                        <span class="offsite on">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>HHH 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1 active">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm on">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite">대면</span>
+                                                                        <span class="offsite on">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>III 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : 2025</p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div class="status">
+                                                                    <div class="stat type_1 active">
+                                                                        <p>신청</p>
+                                                                        <p class="stat-year">(2025-00-00)</p>
+                                                                    </div>
+                                                                    <div class="stat type_2"><button type="button" class="btn small type01" aria-label="신청하기" onclick="">신청하기</button></div>
+                                                                    <div class="stat type_3"><p>선발</p></div>
+                                                                </div>
+                                                                <div class="detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <!-- 등록된 내용이 없을시에 사용 -->
+                                                        <!-- <tr><td colspan="3" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                    </tbody>
+                                                </table>
+                                                
+                                                <div class="section_bottom"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>
