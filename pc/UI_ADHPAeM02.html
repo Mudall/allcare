@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 없음</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>상담 이력</span></button></li>
+                                        </ul>
+
+                                        <div class="box_table_wrap mt24">
+                                            <div class="box_table_hd">
+                                                <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                <div class="section_right">
+                                                    <div class="new_sel_box">
+                                                        <span class="sel round new_sel_span">
+                                                            <select id="yearCountPerPage" name="yearCountPerPage" class="w100px" title="">
+                                                                <option value="yearall" selected="selected">참여 연도 전체</option>
+                                                            </select>
+                                                        </span>
+                                                        <span class="sel round new_sel_span">
+                                                            <select id="uniCountPerPage" name="uniCountPerPage" class="w100px" title="">
+                                                                <option value="uniall" selected="selected">참여 대학 전체</option>
+                                                            </select>
+                                                        </span>
+                                                        <span class="sel round new_sel_span">
+                                                            <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
+                                                                <option value="10" selected="selected">10 개씩</option>
+                                                                <option value="30">30 개씩</option>
+                                                                <option value="50">50 개씩</option>
+                                                            </select>
+                                                        </span>
+                                                    </div>
+                                                    
+                                                    <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                                </div>
+                                            </div>
+                                            <!-- table -->
+                                            <table class="box_table new_table">
+                                                <caption>번호, 대학교명, 소재지, 전화번호, 운영 프로그램, 신청 버튼 정보을(를) 제공하는 표</caption>
+                                                <colgroup>
+                                                    <col style="width: 100px">
+                                                    <col style="width: auto">
+                                                    <col style="width: 90px">
+                                                    <col style="width: 90px">
+                                                    <col style="width: 90px">
+                                                    <col style="width: 90px">
+                                                    <col style="width: 130px">
+                                                    <col style="width: 110px">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">참여연도</th>
+                                                        <th scope="col">참여대학명</th>
+                                                        <th scope="col">회차</th>
+                                                        <th scope="col">상담방식</th>
+                                                        <th scope="col">상담방법</th>
+                                                        <th scope="col">상담사명</th>
+                                                        <th scope="col">상담일자</th>
+                                                        <th scope="col">상담시간(분)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="td-year">2025</td>
+                                                        <td class="td-uni">AAA 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2025</td>
+                                                        <td class="td-uni">BBB 대학교</td>
+                                                        <td>2회차</td>
+                                                        <td>비대면</td>
+                                                        <td>집단</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>120분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2024</td>
+                                                        <td class="td-uni">CCC 대학교</td>
+                                                        <td>3회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>180분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2023</td>
+                                                        <td class="td-uni">DDD 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>비대면</td>
+                                                        <td>집단</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>9999999분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2021</td>
+                                                        <td class="td-uni">EEE 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2020</td>
+                                                        <td class="td-uni">FFF 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>집단</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2018</td>
+                                                        <td class="td-uni">GGG 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2017</td>
+                                                        <td class="td-uni">HHH 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2013</td>
+                                                        <td class="td-uni">III 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">2012</td>
+                                                        <td class="td-uni">JJJ 대학교</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-year">1999</td>
+                                                        <td class="td-uni">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST</td>
+                                                        <td>1회차</td>
+                                                        <td>대면</td>
+                                                        <td>1:1</td>
+                                                        <td>홍길동</td>
+                                                        <td>2025-00-00</td>
+                                                        <td>20분</td>
+                                                    </tr>
+
+                                                    <!-- 등록된 내용이 없을시에 사용 -->
+                                                    <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                </tbody>
+                                            </table>
+                                            
+                                            <div class="section_bottom"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const yearSet = new Set();
+                                    const uniSet = new Set();
+
+                                    // 년도 
+                                    document.querySelectorAll('.td-year').forEach(td => {
+                                        const year = td.textContent.trim();
+                                        if (year) yearSet.add(year);
+                                    });
+
+                                    // 대학명 
+                                    document.querySelectorAll('.td-uni').forEach(td => {
+                                        const uni = td.textContent.trim();
+                                        if (uni) uniSet.add(uni);
+                                    });
+
+                                    // 최신순, 가나다 정렬
+                                    const sortedYears = Array.from(yearSet).sort((a, b) => b - a); 
+                                    const sortedUnis = Array.from(uniSet).sort((a, b) => a.localeCompare(b, 'ko'));
+
+                                    const yearSelect = document.getElementById('yearCountPerPage');
+                                    const uniSelect = document.getElementById('uniCountPerPage');
+                                    if (yearSelect) yearSelect.title = '참여 연도 선택';
+                                    if (uniSelect) uniSelect.title = '참여 대학 선택';
+
+
+                                    // 옵션 추가
+                                    sortedYears.forEach(year => {
+                                        const opt = document.createElement('option');
+                                        opt.value = year;
+                                        opt.textContent = `${year}년`;
+                                        yearSelect.appendChild(opt);
+                                    });
+
+                                    sortedUnis.forEach(uni => {
+                                        const opt = document.createElement('option');
+                                        opt.value = uni;
+                                        opt.textContent = uni;
+                                        uniSelect.appendChild(opt);
+                                    });
+                                });
+                                </script>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>

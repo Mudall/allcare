@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>전공찾기팝업 - 조회/선택/등록</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body class="dim">
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                            <!-- D: 활성화시 class[active] add -->
+                                        </ul>
+
+                                        <div class="my_ptcp_from">
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">신청인 정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>성명, 전화번호, 이메일, 주소 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">성명</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">전화번호</th>
+                                                                <td><div class="form_box"><span class="data_txt">010-0000-0000</span></div></td>
+                                                                <th scope="row">이메일</th>
+                                                                <td><div class="form_box"><span class="data_txt">abcd1234@mail.com</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">주소</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</span></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여대학, 참여자 분류</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>참여대학, 참여자 분류 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="ptcp_form_uni">
+                                                                <th scope="row">참여 대학</th>
+                                                                <td colspan="3">AAA 대학교</td>
+                                                            </tr>
+                                                            <tr class="ptcp_form_type">
+                                                                <th scope="row">
+                                                                    <span class="req_mark">참여자 분류</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <td colspan="3">
+                                                                    <fieldset class="box_radio_group" style="pointer-events: none;">
+                                                                        <legend class="sr_only">참여자 분류 선택</legend>
+                                                                        <div class="new_radio_item">
+                                                                            <input type="radio" id="ptcpType1" name="ptcpType" value="graduate" checked>
+                                                                            <label for="ptcpType1" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 1:</span>
+                                                                                <span class="label_text">&#9312; 졸업생 특화 프로그램을 운영하는 대학(원)의 졸업생, 졸업 유예자 및 예정자</span>
+                                                                            </label>
+                                                                        </div>
+
+                                                                        <div class="new_radio_item">
+                                                                            <input type="radio" id="ptcpType2" name="ptcpType" value="youth">
+                                                                            <label for="ptcpType2" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 2:</span>
+                                                                                <span class="label_text">&#9313; ①에 해당하지 않는 직업계고 졸업생, 미취업 지역 청년</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap grade_wrap">
+                                                <h3 class="t2_sb">학적정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>학번, 학년, 전공, 상태, 졸업(예정)년월 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="tr_grade">
+                                                                <th scope="row">
+                                                                    <label for="stdId">
+                                                                        <span class="req_mark">학번</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>2025071112352</td>
+                                                                <th scope="row">
+                                                                    <label for="grade">
+                                                                        <span class="req_mark">학년</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>4학년</td>
+                                                            </tr>
+                                                            <tr class="tr_major">
+                                                                <th scope="row">
+                                                                    <label for="major">
+                                                                        <span class="req_mark">전공</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>국어국문학과</td>
+                                                                <th scope="row">
+                                                                    <label for="status">
+                                                                        <span class="req_mark">상태</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>졸업</td>
+                                                            </tr>
+                                                            <tr class="tr_gradate">
+                                                                <th scope="row">
+                                                                    <label for="gradDate">
+                                                                        <span class="req_mark">졸업(예정) 년월</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td colspan="3">2029-02</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                                <div class="btn_box mt40">
+                                                    <button type="button" class="btn big type02" aria-label="신청 목록 페이지로 이동">목록</button>
+                                                    <button type="submit" id="srchBtn" class="btn big fill type01">회수</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- 팝업내용 시작 -->
+                                        <div class="new_popup newpop_major_result" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+                                            <div class="newpop_tit">   
+                                                <h4>전공 찾기</h4>
+                                                <a href="" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
+                                            </div>
+
+                                            <div class="newpop_inner">
+                                                <div class="search_box">
+                                                    <article class="box_form_content">
+                                                        <table class="search_table">
+                                                        <colgroup>
+                                                            <col style="width:88px;">
+                                                            <col>
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="new_th"><span>검색어</span></td>
+                                                                <td>
+                                                                <div class="box_sch_group">
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <input id="keywordSearchBar" type="text" class="input_txt" title="전공 검색어를 입력" value="법학" placeholder="전공 관련 검색어를 입력하세요. 예) 법학, 철학">
+                                                                        <button type="reset" class="ico16_devare newbtn_del"><span class="blind">전공 검색어 삭제</span></button>
+                                                                    </span>
+                                                                    <button type="button" class="btn medium fill btn_search type01" onclick="callSearch()">검색</button>
+                                                                </div>
+                                                            </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    </article>
+                                                </div>
+
+
+                                                <div class="major_result_box mt24">
+                                                    <div class="major_result_tit">
+                                                        <p class="b1_r">전공 및 학과</p>
+                                                        <button type="button" class="btn small type02"  onclick="location.href='./UI_ADHPAbP08.html'"><span class="s1_sb">계열분류 보기</span></button>
+                                                    </div>
+                                                    <fieldset>
+                                                        <legend>학과 검색결과 선택</legend>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="11" value="11">
+                                                            <label for="11">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">공학계열 &gt; 교통·운송 &gt; 항공학 &gt; 항공·교통·물류·우주법학부 선택</span>
+                                                                <p class="b1_r">공학계열 &gt; 교통·운송 &gt; 항공학 &gt; 항공·교통·물류·우주법학부</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="22" value="22">
+                                                            <label for="22">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">공학계열 &gt; 교통·운송 &gt; 항공학 &gt; 항공·교통·물류·우주법학부 선택</span>
+                                                                <p class="b1_r">공학계열 &gt; 교통·운송 &gt; 항공학 &gt; 항공·교통·물류·우주법학부</p>
+                                                            </label>
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="testtest" value="testtest">
+                                                            <label for="testtest">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  &gt; TEST TEST TEST  &gt; TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  &gt; TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  선택</span>
+                                                                <p class="b1_r">TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  &gt; TEST TEST TEST  &gt; TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST  &gt; TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="33" value="33">
+                                                            <label for="33">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 경영·경제 &gt; 경영학 &gt; 법학부 부동산법무전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 경영·경제 &gt; 경영학 &gt; 법학부 부동산법무전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="44" value="44">
+                                                            <label for="44">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 경법학부 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 경법학부</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100002" value="02020100002">
+                                                            <label for="02020100002">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 경찰법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 경찰법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100003" value="02020100003">
+                                                            <label for="02020100003">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 경찰법학부 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 경찰법학부</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100004" value="02020100004">
+                                                            <label for="02020100004">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 경찰법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 경찰법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100096" value="02020100096">
+                                                            <label for="02020100096">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 고위공직·법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 고위공직·법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100099" value="02020100099">
+                                                            <label for="02020100099">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 공무원법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 공무원법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100006" value="02020100006">
+                                                            <label for="02020100006">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 공법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 공법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100007" value="02020100007">
+                                                            <label for="02020100007">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 공법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 공법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100074" value="02020100074">
+                                                            <label for="02020100074">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 과학기술법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 과학기술법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100066" value="02020100066">
+                                                            <label for="02020100066">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부 법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부 법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100091" value="02020100091">
+                                                            <label for="02020100091">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(공공안전법학전공) 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(공공안전법학전공)</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100060" value="02020100060">
+                                                            <label for="02020100060">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(공법학전공) 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(공법학전공)</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100062" value="02020100062">
+                                                            <label for="02020100062">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(법학전공) 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(법학전공)</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100061" value="02020100061">
+                                                            <label for="02020100061">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(사법학전공) 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 법학부(사법학전공)</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100029" value="02020100029">
+                                                            <label for="02020100029">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100030" value="02020100030">
+                                                            <label for="02020100030">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 법학행정계열 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 법학행정계열</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100035" value="02020100035">
+                                                            <label for="02020100035">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 사법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 사법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100036" value="02020100036">
+                                                            <label for="02020100036">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 사법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 사법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100084" value="02020100084">
+                                                            <label for="02020100084">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 일반법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 일반법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100038" value="02020100038">
+                                                            <label for="02020100038">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 정법학부 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 정법학부</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100039" value="02020100039">
+                                                            <label for="02020100039">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 지적재산권법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 지적재산권법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100040" value="02020100040">
+                                                            <label for="02020100040">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 지적재산권법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 지적재산권법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100049" value="02020100049">
+                                                            <label for="02020100049">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 특허법학전공 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 특허법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100041" value="02020100041">
+                                                            <label for="02020100041">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 항공우주법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 항공우주법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100094" value="02020100094">
+                                                            <label for="02020100094">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 법률 &gt; 법학 &gt; 해사법학부 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 법률 &gt; 법학 &gt; 해사법학부</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02030200063" value="02030200063">
+                                                            <label for="02030200063">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 사회과학 &gt; 국제학 &gt; 중국통상법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 사회과학 &gt; 국제학 &gt; 중국통상법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02030300012" value="02030300012">
+                                                            <label for="02030300012">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 사회과학 &gt; 도시·지역학 &gt; 지역개발·법학·자치행정학과군 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 사회과학 &gt; 도시·지역학 &gt; 지역개발·법학·자치행정학과군</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02030600020" value="02030600020">
+                                                            <label for="02030600020">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 사회과학 &gt; 정치외교학 &gt; 정치행정법학과군 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 사회과학 &gt; 정치외교학 &gt; 정치행정법학과군</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02030700187" value="02030700187">
+                                                            <label for="02030700187">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 사회과학 &gt; 행정학 &gt; 경찰행정법학과 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 사회과학 &gt; 행정학 &gt; 경찰행정법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02030700008" value="02030700008">
+                                                            <label for="02030700008">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 사회과학 &gt; 행정학 &gt; 경찰행정법학과군 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 사회과학 &gt; 행정학 &gt; 경찰행정법학과군</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02030700167" value="02030700167">
+                                                            <label for="02030700167">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">사회계열 &gt; 사회과학 &gt; 행정학 &gt; 지역개발·법학·자치행정학과군 선택</span>
+                                                                <p class="b1_r">사회계열 &gt; 사회과학 &gt; 행정학 &gt; 지역개발·법학·자치행정학과군</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="07030200079" value="07030200079">
+                                                            <label for="07030200079">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">예체능계열 &gt; 무용·체육 &gt; 체육 &gt; 전통건강요법학과 선택</span>
+                                                                <p class="b1_r">예체능계열 &gt; 무용·체육 &gt; 체육 &gt; 전통건강요법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="07020300100" value="07020300100">
+                                                            <label for="07020300100">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">예체능계열 &gt; 응용예술 &gt; 영상·예술 &gt; 건강요법학전공 선택</span>
+                                                                <p class="b1_r">예체능계열 &gt; 응용예술 &gt; 영상·예술 &gt; 건강요법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="07020300017" value="07020300017">
+                                                            <label for="07020300017">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">예체능계열 &gt; 응용예술 &gt; 영상·예술 &gt; 미용건강요법학전공 선택</span>
+                                                                <p class="b1_r">예체능계열 &gt; 응용예술 &gt; 영상·예술 &gt; 미용건강요법학전공</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="06040200024" value="06040200024">
+                                                            <label for="06040200024">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">의약계열 &gt; 치료·보건 &gt; 재활학 &gt; 대체요법학과 선택</span>
+                                                                <p class="b1_r">의약계열 &gt; 치료·보건 &gt; 재활학 &gt; 대체요법학과</p>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="06040200019" value="06040200019">
+                                                            <label for="06040200019">
+                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                <span class="sr_only">의약계열 &gt; 치료·보건 &gt; 재활학 &gt; 동양대체요법학과 선택</span>
+                                                                <p class="b1_r">의약계열 &gt; 치료·보건 &gt; 재활학 &gt; 동양대체요법학과</p>
+                                                            </label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+                                            <div class="newpop_save btn_box mt24">
+                                                <button type="button" class="btn big type02" onclick="location.href='';">닫기</button>
+                                                <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">적용</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>
