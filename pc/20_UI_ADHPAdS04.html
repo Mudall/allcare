@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 없음</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                        </ul>
+                                        
+                                        <div class="box_group_wrap">
+                                            <div class="tit_box">
+                                                <h3 class="t2_sb">프로그램 정보</h3>
+                                            </div>
+                                            <div class="box_table_wrap write">
+                                                <table class="box_table">
+                                                    <caption>프로그램명 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:180px;">
+                                                        <col style="width:auto;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="col">프로그램 명</th>
+                                                            <td scope="col">(컴퓨터공학) 현직자 멘토링 프로그램 (1차) TEST TEST TEST TEST TEST TESTTEST TEST TESTTEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap radio_survey_wrap">
+                                            <div class="tit_box">
+                                                <h3 class="t2_sb">만족도 조사</h3>
+                                            </div>
+
+                                            <ol class="que_list">
+                                                <li role="group">
+                                                    <div class="que_tit"><p class="b1_sb" id="que1_label"><span>1.</span> 프로그램 참여가 많은 도움이 되었다.</p></div>
+                                                    <div class="que_desc">
+                                                        <p class="s1_r valid_txt" hidden>답변을 선택해 주세요.</p>
+                                                        <fieldset aria-labelledby="que1_label">
+                                                            <ul class="radio_list">
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_1-1" name="que_1" value="1">
+                                                                        <label for="que_1-1">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">전혀 그렇지 않다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_1-2" name="que_1" value="2">
+                                                                        <label for="que_1-2">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">그렇지 않다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_1-3" name="que_1" value="3">
+                                                                        <label for="que_1-3">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">보통이다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_1-4" name="que_1" value="4">
+                                                                        <label for="que_1-4">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">그렇다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_1-5" name="que_1" value="5">
+                                                                        <label for="que_1-5">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">매우 그렇다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </fieldset>
+                                                    </div>
+                                                </li>
+                                                <li role="group">
+                                                    <div class="que_tit"><p class="b1_sb" id="que2_label"><span>2.</span> 프로그램을 주변 지인에게 추천하실 의향이 있다.</p></div>
+                                                    <div class="que_desc">
+                                                        <p class="s1_r valid_txt" hidden>답변을 선택해 주세요.</p>
+                                                        <fieldset aria-labelledby="que2_label">
+                                                            <ul class="radio_list">
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_2-1" name="que_2" value="1">
+                                                                        <label for="que_2-1">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">전혀 그렇지 않다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_2-2" name="que_2" value="2">
+                                                                        <label for="que_2-2">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">그렇지 않다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_2-3" name="que_2" value="3">
+                                                                        <label for="que_2-3">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">보통이다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_2-4" name="que_2" value="4">
+                                                                        <label for="que_2-4">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">그렇다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_2-5" name="que_2" value="5">
+                                                                        <label for="que_2-5">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">매우 그렇다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </fieldset>
+                                                    </div>
+                                                </li>
+                                                <li role="group">
+                                                    <div class="que_tit"><p class="b1_sb" id="que3_label"><span>3.</span> 프로그램이 직업 선택에 도움이 되었다.</p></div>
+                                                    <div class="que_desc">
+                                                        <p class="s1_r valid_txt" hidden>답변을 선택해 주세요.</p>
+                                                        <fieldset aria-labelledby="que3_label">
+                                                            <ul class="radio_list">
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_3-1" name="que_3" value="1">
+                                                                        <label for="que_3-1">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">전혀 그렇지 않다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_3-2" name="que_3" value="2">
+                                                                        <label for="que_3-2">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">그렇지 않다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_3-3" name="que_3" value="3">
+                                                                        <label for="que_3-3">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">보통이다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_3-4" name="que_3" value="4">
+                                                                        <label for="que_3-4">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">그렇다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="que_3-5" name="que_3" value="5">
+                                                                        <label for="que_3-5">
+                                                                            <span class="radio_ui" aria-hidden="true"></span>
+                                                                            <span class="label_text">매우 그렇다</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </fieldset>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </div>
+
+                                        <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                            <div class="btn_box mt40" id="surveyButtonWrap">
+                                                <button type="button" class="btn big type02" aria-label="목록 페이지로 이동" onclick="goToList()">목록</button>
+                                                <button type="button" class="btn big fill type01" id="submitSurveyBtn" onclick="submitSurvey()">제출</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                // 만족도 조사 alert 메시지 및 radio 유효성
+                                function submitSurvey() {
+                                    const questions = document.querySelectorAll('.que_list > li');
+                                    let allAnswered = true;
+
+                                    questions.forEach(q => {
+                                        const name = q.querySelector('.que_desc input[type="radio"]')?.name;
+                                        const selected = q.querySelector(`.que_desc input[name="${name}"]:checked`);
+                                        const msg = q.querySelector('.valid_txt');
+
+                                        if (!selected) {
+                                            allAnswered = false;
+                                            msg?.removeAttribute('hidden');
+                                        } else {
+                                            msg?.setAttribute('hidden', 'true');
+                                        }
+                                    });
+
+                                    if (!allAnswered) {
+                                        alert('모든 항목에 답변해 주세요.');
+                                        return;
+                                    }
+
+                                    if (!confirm('만족도 조사를 제출하겠습니까?')) return;
+
+                                    alert('제출하였습니다.');
+                                }
+                                </script>
+
+
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>
