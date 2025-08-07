@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 
-/* 공통 */
+/* Allcare 공통 */
 /* new_table : 테이블 padding 값 수정 */
 /* new_sel_span : 라운드형태의 select 버튼 수정 */
 /* new_popup : 공통으로 사용할 팝업 레이아웃 */
@@ -96,9 +96,9 @@
 .allcare .uni_prog_tool .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare .uni_prog_tool .new_table td:last-child li+li {margin-top: 4px;}
 .allcare .uni_prog_tool .new_table td:last-child li span {color: #333;}
-.allcare .uni_prog_tool .new_table td:last-child li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
-.allcare .uni_prog_tool .new_table td:last-child .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
-.allcare .uni_prog_tool .new_table td:last-child .oper_count::before {background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
+.allcare .uni_prog_tool .new_table td:last-child .oper_time::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
+.allcare .uni_prog_tool .new_table td:last-child .oper_year::before {content: '';position: absolute; width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
+.allcare .uni_prog_tool .new_table td:last-child .oper_count::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
 .allcare .uni_prog_tool .new_table .oper_year {font-weight: 600;}
 .allcare .uni_prog_tool .new_table .oper_time, 
 .allcare .uni_prog_tool .new_table .oper_count {font-weight: 400;}
@@ -293,20 +293,7 @@
 /* 프로그램 신청 - 목록 있음 (UI_ADHPAcM02) */
 
 
-
-/* 프로그램 신청 - 신청 (UI_ADHPAcM03) */
-
-
-/* 프로그램 신청 - 조회 (UI_ADHPAcM04) */
-
-
-/* 참여 프로그램 관리 - 목록 없음 (UI_ADHPAdM01) */
-
-
-/* 참여 프로그램 관리 - 목록 있음 (UI_ADHPAdM02) */
-
-
-/* 참여 프로그램 관리 - 조회 (UI_ADHPAc03) */
+/* 프로그램 신청 - 신청 (UI_ADHPAcS03) */
 .mypage .progmg.allcare .ico24_file.mov {background:url("../include/images/ico24_file_movie.svg")}
 .mypage .progmg.allcare .ico24_file.psd {background:url("../include/images/ico24_file_photoshop.svg")}
 .mypage .progmg.allcare .ico24_file.ai {background:url("../include/images/ico24_file_ai.svg")}
@@ -318,14 +305,34 @@
 .mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li + li {margin-top: 8px;}
 .mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li a {display: inline-flex; align-items: center; gap: 8px;}
 .mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li .ico24_file {margin: 0;}
-.mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li a p {max-width: 700px; position: relative; display: inline-block; font-size: 16px; color: #333; font-weight: 400; line-height: 28px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li a p {max-width: 670px; position: relative; display: inline-block; font-size: 16px; color: #333; font-weight: 400; line-height: 28px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .mypage .progmg.allcare .prog_info_wrap tr.new_down span.down {width: 16px; height: 16px; background: url(../include/images/ico16_download2.svg.svg);}
 .mypage .progmg.allcare .prog_info_wrap tr.new_desc .box_board_text {text-align: left;}
 .mypage .progmg.allcare .prog_info_wrap tr.new_desc .box_board_text .b1_r {font-size: 16px;}
 
-
-/* 참여 프로그램 관리 - 만족도 조사 (UI_ADHPAc04) */
+/* 프로그램 신청 - 조회 (UI_ADHPAcS04) */
 .mypage .progmg.allcare .prog_view_result tr td p.data_txt span {color: var(--col_blue);}
+
+
+
+/* 참여 프로그램 관리 - 목록 없음 (UI_ADHPAdM01) */
+
+
+/* 참여 프로그램 관리 - 목록 있음 (UI_ADHPAdM02) */
+.mypage .progmg.allcare .prog_manage_inner .status_info .stat_detail {display: flex; justify-content: center; margin-top: 4px;}
+.mypage .progmg.allcare .prog_manage_inner .status_info .stat_detail button {width: 80px; font-size: 14px; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .prog_manage_inner .status_info .status_ul .stat_item {padding: 0; margin-top: 4px; display: none; text-align: center;}
+.mypage .progmg.allcare .prog_manage_inner .status_info .status_ul .stat_item .btn_survey {width: 80px; padding: 0; font-size: 14px; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .prog_manage_inner .status_info .status_ul .stat_item p.survey_done {font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
+.mypage .progmg.allcare .prog_manage_inner .status_info .status_ul .stat_item .data_txt {font-size: 16px; font-weight: 600; line-height: 28px; color: var(--col_blue);}
+.mypage .progmg.allcare .prog_manage_inner .status_info .status_ul .stat_item.active {display: flex; flex-direction: column; align-items: center; }
+.mypage .progmg.allcare .prog_manage_inner .status_info .status_ul .stat_item.type_1 time {font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
+
+
+/* 참여 프로그램 관리 - 조회 (UI_ADHPAdS03) */
+.mypage .progmg.allcare .prog_mgview tr td p.data_txt span {color: var(--col_blue);}
+
+/* 참여 프로그램 관리 - 만족도 조사 (UI_ADHPAdS04) */
 
 
 
@@ -346,9 +353,9 @@
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_count::before {background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .pa_page_inner .new_table .status .stat {display: none;}
+.mypage .progmg.allcare .pa_page_inner .new_table .status .stat>p {font-size: 16px; font-weight: 600; line-height: 28px; color: var(--col_blue);}
+.mypage .progmg.allcare .pa_page_inner .new_table .status .stat>p.stat_small {font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
 .mypage .progmg.allcare .pa_page_inner .new_table .status .stat.type_1 {text-align: center; flex-direction: column; justify-content: center;}
-.mypage .progmg.allcare .pa_page_inner .new_table .status .stat.type_1 p {font-size: 16px;  font-weight: 600; line-height: 28px; color: var(--col_blue);}
-.mypage .progmg.allcare .pa_page_inner .new_table .status .stat.type_1 p.stat-year {font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
 .mypage .progmg.allcare .pa_page_inner .new_table .status .stat.type_2 {justify-content: center;}
 .mypage .progmg.allcare .pa_page_inner .new_table .status .stat.type_2 button {width: 80px; font-weight: 600;}
 .mypage .progmg.allcare .pa_page_inner .new_table .status .stat.type_3 {text-align: center; justify-content: center;}

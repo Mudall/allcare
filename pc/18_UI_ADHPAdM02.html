@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 없음</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb --> 
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여 프로그램</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
+                                        </ul>
+
+                                        <div class="box_notice_wrap mt24">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list">참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</li>
+                                                <li class="txt_list">참여를 희망하는 프로그램을 여러 개 신청할 수 있습니다.</li>
+                                                <li class="txt_list">프로그램 신청 후 대학 담당자의 선발 처리를 거쳐 참여가 확정됩니다.</li>
+                                                <li class="txt_list">프로그램 관련 자세한 내용은 해당 대학의 담당자에게 문의하시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="newtab_progwrap mt16 mb40" role="tablist">
+                                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">프로그램 신청</button>
+                                            <button type="button" role="tab" class="tit active" onclick=""  aria-selected="true">참여 프로그램 관리</button>
+                                        </div>
+
+                                        <div class="pa_page_inner uni_prog_tool prog_manage_inner">
+                                            <div class="box_table_wrap">
+                                                <div class="box_table_hd">
+                                                    <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                    <div class="section_right">
+                                                        <div class="new_sel_box">
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="yearCountPerPage" name="yearCountPerPage" class="w100px" title="">
+                                                                    <option value="yearall" selected="selected">참여 연도 전체</option>
+                                                                </select>
+                                                            </span>
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="uniCountPerPage" name="uniCountPerPage" class="w100px" title="">
+                                                                    <option value="uniall" selected="selected">참여 대학 전체</option>
+                                                                </select>
+                                                            </span>
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
+                                                                    <option value="10" selected="selected">10 개씩</option>
+                                                                    <option value="30">30 개씩</option>
+                                                                    <option value="50">50 개씩</option>
+                                                                </select>
+                                                            </span>
+                                                        </div>
+                                                        <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- table -->
+                                                <table class="box_table new_table">
+                                                    <caption>프로그램 정보, 운영정보을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width: auto">
+                                                        <col style="width: 290px">
+                                                        <col style="width: 164px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th id="programInfo" scope="col">프로그램 정보</th>
+                                                            <th id="operateInfo" scope="col">운영정보</th>
+                                                            <th id="operateInfo" scope="col">현황</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl on">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>AAA 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2025">2025</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1 active">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp on">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite">대면</span>
+                                                                        <span class="offsite on">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>BBB 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 </p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2024">2024</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2 active">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc on">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>CCC 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2022">2022</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3 active">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm on">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>DDD 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2021">2021</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4 active">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc on">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>EEE 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2020">2020</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5 active">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl on">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>FFF 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2019">2019</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5 ">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6 active">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp on">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite on">대면</span>
+                                                                        <span class="offsite">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>GGG 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2008">2008</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5 ">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7 active">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc on">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite">대면</span>
+                                                                        <span class="offsite on">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>HHH 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2006">2006</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1 active">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="prog_dsc">
+                                                                    <div class="prog_tag">
+                                                                        <span class="tag_sdl">자기주도형</span>
+                                                                        <span class="tag_cdp">수요맞춤형</span>
+                                                                        <span class="tag_lerc">지역기업 채용 연계</span>
+                                                                        <span class="tag_pm on">현직자 멘토링</span>
+                                                                        <span class="tag_etc">기타</span>
+                                                                    </div>
+                                                                    <div class="prog_site">
+                                                                        <span class="onsite">대면</span>
+                                                                        <span class="offsite on">비대면</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prog_uni"><p>III 대학교</p></div>
+                                                                <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                                                <div class="prog_year"><p class="s1_r">참여연도 : <time datetime="2002">2002</time></p></div>
+                                                            </td>
+                                                            <td class="oper_info">
+                                                                <ul>
+                                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td class="status_info">
+                                                                <ul class="status_ul">
+                                                                    <!-- 신청 상태 -->
+                                                                    <li class="stat_item type_1 active">
+                                                                        <p class="data_txt">신청<br><time datetime="2025-01-01">(2025-01-01)</time></p>
+                                                                    </li>
+
+                                                                    <!-- 미선발 상태 -->
+                                                                    <li class="stat_item type_2">
+                                                                        <p class="data_txt">미선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 상태 -->
+                                                                    <li class="stat_item type_3">
+                                                                        <p class="data_txt">선발</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_4">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_5">
+                                                                        <p class="data_txt">선발 / 수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 미제출 -->
+                                                                    <li class="stat_item type_6">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <button type="button" class="btn_survey btn small type01" aria-label="만족도 조사 참여하기">만족도 조사</button>
+                                                                    </li>
+
+                                                                    <!-- 선발 + 미수료 + 만족도 제출 완료 -->
+                                                                    <li class="stat_item type_7">
+                                                                        <p class="data_txt">선발 / 미수료</p>
+                                                                        <p class="survey_done" role="status" aria-label="만족도 응답 완료">(만족도 응답 완료)</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="stat_detail"><button type="button" class="btn small type02 fill" aria-label="상세보기" onclick="">상세보기</button></div>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <!-- 등록된 내용이 없을시에 사용 -->
+                                                        <!-- <tr><td colspan="3" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                    </tbody>
+                                                </table>
+                                                
+                                                <div class="section_bottom"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                // .new_sel_box의 select option요소 자동화
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const yearSet = new Set();
+                                    const uniSet = new Set();
+
+                                    // 년도 
+                                    document.querySelectorAll('.prog_year p time').forEach(td => {
+                                        const year = td.textContent.trim();
+                                        if (year) yearSet.add(year);
+                                    });
+
+                                    // 대학명 
+                                    document.querySelectorAll('.prog_uni p').forEach(td => {
+                                        const uni = td.textContent.trim();
+                                        if (uni) uniSet.add(uni);
+                                    });
+
+                                    // 최신순, 가나다 정렬
+                                    const sortedYears = Array.from(yearSet).sort((a, b) => b - a); 
+                                    const sortedUnis = Array.from(uniSet).sort((a, b) => a.localeCompare(b, 'ko'));
+
+                                    const yearSelect = document.getElementById('yearCountPerPage');
+                                    const uniSelect = document.getElementById('uniCountPerPage');
+                                    if (yearSelect) yearSelect.title = '참여 연도 선택';
+                                    if (uniSelect) uniSelect.title = '참여 대학 선택';
+
+
+                                    // 옵션 추가
+                                    sortedYears.forEach(year => {
+                                        const opt = document.createElement('option');
+                                        opt.value = year;
+                                        opt.textContent = `${year}년`;
+                                        yearSelect.appendChild(opt);
+                                    });
+
+                                    sortedUnis.forEach(uni => {
+                                        const opt = document.createElement('option');
+                                        opt.value = uni;
+                                        opt.textContent = uni;
+                                        uniSelect.appendChild(opt);
+                                    });
+                                });
+                            </script>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사이드바 퀵메뉴 -->
+            <div id="quick_menu" class=""></div>
+            <!-- 사이드바 퀵메뉴 -->
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>
