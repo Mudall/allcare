@@ -775,6 +775,7 @@ button:focus { outline: 2px dashed #888; z-index:0;}
   width: 1rem;
   height: 1rem;
   background: url("../images/ico16_arrow_right.svg") 0 0 no-repeat;
+  background: url("../images/ico16_arrow_right.svg") 0 0 no-repeat;
   content: "";
 }
 .arr_right.active:after,
@@ -5550,16 +5551,16 @@ a + .label_txt, .label_txt + span, .label_txt + strong {
 .sitemap .dir-div .famenu a p { display: flex; justify-content: center; align-items: center; height: calc(100% - 72px - 8px); margin-top: 8px; font-size: 14px; color: #111; letter-spacing: -1px; line-height: 1.3rem;}
 .sitemap .dir-div .famenu a .ico { display: flex; justify-content: center; align-items: center; width: 72px; height: 72px; margin: 0 auto; background-color: #F8F8F8; border-radius: 50%;}
 .sitemap .dir-div .famenu a .ico::after { content: ''; display: block; width: 44px; height: 44px; background-size: 100% auto;}
-.sitemap .dir-div .ico60_sitemap_join_person::after { background: url(../images/sitemap/ico48_person_1_join.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_qna_person::after { background: url(../images/sitemap/ico48_person_2_qna.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_guide_person::after { background: url(../images/sitemap/ico48_person_3_guide.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_setting_person::after { background: url(../images/sitemap/ico48_person_4_setting.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_my_person::after { background: url(../images/sitemap/ico48_person_5_my.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_join_corp::after { background: url(../images/sitemap/ico48_company_1_join.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_qna_corp::after { background: url(../images/sitemap/ico48_company_2_qna.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_guide_corp::after { background: url(../images/sitemap/ico48_company_3_guide.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_setting_corp::after { background: url(../images/sitemap/ico48_company_4_setting.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_my_corp::after { background: url(../images/sitemap/ico48_company_5_my.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_join_person::after { background: url(../images/ico48_person_1_join.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_qna_person::after { background: url(../images/ico48_person_2_qna.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_guide_person::after { background: url(../images/ico48_person_3_guide.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_setting_person::after { background: url(../images/ico48_person_4_setting.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_my_person::after { background: url(../images/ico48_person_5_my.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_join_corp::after { background: url(../images/ico48_company_1_join.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_qna_corp::after { background: url(../images/ico48_company_2_qna.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_guide_corp::after { background: url(../images/ico48_company_3_guide.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_setting_corp::after { background: url(../images/ico48_company_4_setting.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_my_corp::after { background: url(../images/ico48_company_5_my.svg) no-repeat;}
 .sitemap .menu-divider:not(:last-child)::after {
   content: "";
   display: block;

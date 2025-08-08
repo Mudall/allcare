@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 있음</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header"></header>
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <!-- notice start -->
+                        <div class="top_notice">
+                            <i></i>
+                            <p><strong>제출하신 참여신청서가 승인된 후, 해당 대학의 프로그램을 신청하실 수 있습니다.</strong></p>
+                            <button type="button" class="notice_expand ui-layer" data-my-layer="noticeLayer"><span class="blind">공지사항 열기</span></button>
+                        </div>
+                        <div class="bottom_layer type_title" tabindex="0" id="noticeLayer" style="z-index: 140; display: none;">
+                            <strong class="title">안내</strong>
+                            <div class="layer_contents" style="height: 216px;">
+                                <div class="notice_default">
+                                    <ul class="list_style">
+                                        <li><strong>제출하신 참여신청서가 승인된 후, 해당 대학의 프로그램을 신청하실 수 있습니다.</strong></li>
+                                        <li><strong>여러 대학의 프로그램에 참여를 원하실 경우, 대학마다 별도로 참여신청서를 제출해 주셔야 합니다.</strong></li>
+                                        <li><strong>운영 대학의 졸업생이 아니어도 참여신청서를 제출하실 수 있습니다.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="layer_close">
+                                <span class="blind">레이어 닫기</span>
+                            </button>
+                        </div>
+                        <!-- notice end -->
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li class="on"><button type="button" onclick="">참여신청서</button></li>
+                                <li><button type="button" onclick="">참여 프로그램</button></li>
+                                <li><button type="button" onclick="">상담 이력</button></li>
+                            </ul>
+                        </div>
+
+                        <!-- table -->
+                        <div class="board_wrap pa_page_wrap">
+                            <div class="board_header">
+                                <p class="count"><span>전체</span> <strong class="s1_sb semi_bold">121,421</strong><span>건</span></p>
+                                <div class="select_area">
+                                    <div class="flex_box"><button type="button" class="align select_btn">10개씩 보기</button></div>
+                                    <div class="select_layer dsp-none">
+                                        <ul class="select_option">
+                                            <li><input type="hidden" value="10"><button type="button" onclick="setSelectValue(this,'sort')">10개씩 보기</button></li>
+                                            <li><input type="hidden" value="30"><button type="button" onclick="setSelectValue(this,'sort')">30개씩 보기</button></li>
+                                            <li><input type="hidden" value="50"><button type="button" onclick="setSelectValue(this,'sort')">50개씩 보기</button></li>
+                                        </ul>
+                                        <ul class="btn_group"><li><button type="button" class="btn large gray select_close">취소</button></li></ul>
+                                    </div>
+                                </div>
+                                <div class="select_layer dsp-none">
+                                    <ul class="select_option">
+                                        <li>
+                                            <input type="hidden" value="10">
+                                            <button type="button" onclick="setSelectValue(this,'sort')">10개씩 보기</button>
+                                        </li>
+                                        <li>
+                                            <input type="hidden" value="30">
+                                            <button type="button" onclick="setSelectValue(this,'sort')">30개씩 보기</button>
+                                        </li>
+                                        <li>
+                                            <input type="hidden" value="50">
+                                            <button type="button" onclick="setSelectValue(this,'sort')">50개씩 보기</button>
+                                        </li>
+                                    </ul>
+                                    <ul class="btn_group">
+                                        <li><button type="button" class="btn large gray select_close">취소</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="board_list">
+                                <ul>
+                                    <li class="board_li">
+                                        <dl>
+                                            <div class="board_list_row">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>참여대학명</dt>
+                                                <dd>AAA 대학교</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>제출일자</dt>
+                                                <dd>2025-08-01</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>진행상태</dt>
+                                                <dd>신청</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>담당자</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                        </dl>
+                                        <a href="#" class="btn semilarge type01 mb16">상세보기</a>
+                                    </li>
+                                    <li class="board_li">
+                                        <dl>
+                                            <div class="board_list_row">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>참여대학명</dt>
+                                                <dd>BBB 대학교</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>제출일자</dt>
+                                                <dd>2025-08-01</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>진행상태</dt>
+                                                <dd>접수</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>담당자</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                        </dl>
+                                        <a href="#" class="btn semilarge type01 mb16">상세보기</a>
+                                    </li>
+                                    <li class="board_li">
+                                        <dl>
+                                            <div class="board_list_row">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>참여대학명</dt>
+                                                <dd>CCC 대학교</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>제출일자</dt>
+                                                <dd>2025-08-01</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>진행상태</dt>
+                                                <dd>인정</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>담당자</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                        </dl>
+                                        <a href="#" class="btn semilarge type01 mb16">상세보기</a>
+                                    </li>
+                                    <li class="board_li">
+                                        <dl>
+                                            <div class="board_list_row">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>참여대학명</dt>
+                                                <dd>DDD 대학교 DDD 대학교 DDD 대학교 DDD 대학교 DDD 대학교 DDD 대학교</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>제출일자</dt>
+                                                <dd>2025-08-01</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>진행상태</dt>
+                                                <dd>접수</dd>
+                                            </div>
+                                            <div class="board_list_row">
+                                                <dt>담당자</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                        </dl>
+                                        <a href="#" class="btn semilarge type01 mb16">상세보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paging"></div>
+                        </div>
+                        <div class="box_btn_wrap ml_auto mt24">
+                            <a href="./UI_ADHPAbS03.html" class="btn large type01 fill">신청서 작성</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>

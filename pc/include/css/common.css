@@ -1131,7 +1131,7 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.16);content:"";position:fixed;
 .ico24_thumbs {background:url("../images/ico24_thumbs.svg")}
 .ico24_home_guide {background:url("../images/ico24_home_guide.svg")}
 .ico24_movie {background:url("../images/ico24_movie.svg")}
-.ico60_notice {background:url("../images/ico60_!_navy.svg")}
+.ico60_notice {background:url("../images/ico60_warning_navy.svg")}
 .ico60_notice_grn {background:url("../images/join_complete_img.svg"); background-size: 100%;}
 .ico80_email_cancel {background:url("../images/ico80-email-cancel-pc.png")}
 .ico_text_span { display: inline-flex; justify-content: space-between; align-items: center; gap: 4px; line-height: 24px;  }

@@ -104,11 +104,11 @@
                     <td></td>
                     <td>참여신청서 - 목록 없음</td>
                     <td>UI_ADHPAbM01</td>
-                    <td class="status">PC완료</td>
+                    <td class="status">완료</td>
                     <td></td>
                     <td>
                         <a href="./pc/03_UI_ADHPAbM01.html" target="_blank">PC</a>
-                        <a href="./mobile/03_UI_ADHPAbM01.html" target="_blank" class="none">MO</a>
+                        <a href="./mobile/03_UI_ADHPAbM01.html" target="_blank">MO</a>
                     </td>
                 </tr>
                 <tr>
@@ -120,11 +120,11 @@
                     <td></td>
                     <td>참여신청서 - 목록 있음</td>
                     <td>UI_ADHPAbM02</td>
-                    <td class="status">PC완료</td>
+                    <td class="status">완료</td>
                     <td></td>
                     <td>
                         <a href="./pc/04_UI_ADHPAbM02.html" target="_blank">PC</a>
-                        <a href="./mobile/04_UI_ADHPAbM02.html" target="_blank" class="none">MO</a>
+                        <a href="./mobile/04_UI_ADHPAbM02.html" target="_blank">MO</a>
                     </td>
                 </tr>
                 <tr>
@@ -498,4 +498,21 @@
             </tbody>
         </table>
     </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const moLinks = document.querySelectorAll('td a:last-child');
+
+            moLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const url = link.getAttribute('href');
+                    window.open(
+                        url,
+                        '_blank',
+                        'width=373,height=800,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes'
+                    );
+                });
+            });
+        });
+    </script>
 </html>

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/* allcare 공통 */
+
+.allcare * {letter-spacing: -0.02em;}
+.allcare .btn.type01.fill {background-color: var(--col_blue); color: #fff; font-weight: 600;}
+.allcare .btn.semilarge {height: 40px; line-height: 40px;}
+.allcare .btn.type03 {border: 1px solid #757575;}
+.allcare .sr_only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; font-size: 0;}
+.allcare .req_mark {position: relative; display: inline-block;}
+.allcare .req_mark:after {content: ''; position: absolute; right: -14px; top: 40%; transform: translateY(-50%); background-color: #ee2e62; border-radius: 50%; width: 6px; height: 6px;}
+
+
+.allcare .radio_filed {border: none;}
+.allcare .radio_filed .new_radio_item + .new_radio_item {margin-top: 12px;}
+.allcare .radio_filed .new_radio_item input[type="radio"] {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(100%); border: 0;}
+.allcare .radio_filed .new_radio_item label {height: auto; display: flex; align-items: center; cursor: pointer; position: relative;}
+.allcare .radio_filed .new_radio_item label .radio_ui {position: absolute; left: 0; top: 0; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
+.allcare .radio_filed .new_radio_item input[type="radio"]:checked + label .radio_ui::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
+.allcare .radio_filed .new_radio_item label .label_text {margin-left: 27px; font-size: 16px; font-weight: 400; color: #333; line-height: 24px; }
+
+
+.allcare .mt80 {margin-top: 80px;}
+.allcare .mt40 {margin-top: 40px;}
+.allcare .mt24 {margin-top: 24px;}
+.allcare .mt16 {margin-top: 16px;}
+.allcare .mb80 {margin-bottom: 80px;}
+.allcare .mb40 {margin-bottom: 40px;}
+.allcare .mb24 {margin-bottom: 24px;}
+.allcare .mb16 {margin-bottom: 16px;}
+.allcare .pb24 {padding-bottom: 24px;}
+
+
+.allcare .tab_menu.custom_split {padding: 0; width: 100%; margin: 1rem 0;}
+.allcare .tab_menu.custom_split ul {padding: 0;}
+.allcare .tab_menu.custom_split li {width: 50%;}
+.allcare .tab_menu.custom_split li button {padding: .625rem;}
+
+.allcare .select_layer.dsp-none {display: none;}
+.allcare .select_layer {display: block;}
+
+
+/* 운영대학 목록 (UI_ADHPAaM01) */
+
+/* [팝업] 운영대학 목록 - 프로그램 조회 팝업 (UI_ADHPAaM02) */ 
+
+/* 참여신청서 - 목록없음 (UI_ADHPAbM01) */
+.mypage .progmg.allcare .pa_page_empty>.t3_sb {text-align: center;}
+.mypage .progmg.allcare .pa_page_empty figure {display: flex; justify-content: center;}
+
+
+/* 참여신청서 - 목록있음 (UI_ADHPAbM02) */
+.mypage .progmg.allcare .pa_page_wrap {position: relative; padding-bottom: 8px;}
+.mypage .progmg.allcare .pa_page_wrap::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
+.mypage .progmg.allcare .pa_page_wrap .board_header .count span {color: #333;}
+.mypage .progmg.allcare .pa_page_wrap .board_header .select_area .flex_box button.select_btn {padding: 0 0 0 1.5rem; color: #333; border: none;}
+
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li {border-bottom: 1px solid #eee;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl {padding: 16px 0;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row {display: flex; gap: 12px;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row + .board_list_row {margin-top: 4px;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row dt {width: 100px; font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row dd {width: calc(100% - 100px); font-size: 14px; font-weight: 400; line-height: 24px; color: #333;}
+
+
+/* 참여신청서 - 등록 (UI_ADHPAbS03) */
+.mypage .progmg.allcare .my_ptcp_from .box_group_wrap + .box_group_wrap {margin-top: 32px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap {position: relative; padding-bottom: 32px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl {} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl>div {} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl>div + div {border-top: 1px solid #eee;} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl dt {margin-top: 16px; font-size: 14px; color: #555; font-weight: 600; line-height: 24px;} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl dd {margin: 8px 0 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl>div:last-child dd {margin-bottom: 0;}
+.mypage .progmg.allcare .my_ptcp_from .dl_uni dd .box_table_group {display: flex; width: 100%; gap: 8px;}
+.mypage .progmg.allcare .my_ptcp_from .dl_uni dd .box_table_group .cell {width: calc(100% - 60px); line-height: initial;}
+.mypage .progmg.allcare .my_ptcp_from .dl_uni dd .box_table_group .cell .new_ipt {}
+.mypage .progmg.allcare .my_ptcp_from .dl_uni dd .box_table_group .cell .new_ipt input {padding: 10px 170px 10px 16px; width: 100%; height: 48px; border: 1px solid #757575; border-radius: 4px; background-color: #f5f5f5;}
+.mypage .progmg.allcare .my_ptcp_from .dl_uni dd .box_table_group .cell .new_ipt button {}
+.mypage .progmg.allcare .my_ptcp_from .dl_uni dd .box_table_group>button.btnSearch {width: 60px; height: 48px;}
+
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dl_person dd {margin: 12px 0 16px;}
+
+/* 참여신청서 - 조회 (UI_ADHPAbS04) */
+
+
+/* 참여신청서 - 회수(수정) (UI_ADHPAbS05) */
+
+
+/* [팝업] 운영 대학 검색 팝업 (UI_ADHPAbP06) */
+
+/* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP07) */
+
+/* [팝업] 전공찾기팝업 - 조회/선택/등록(계열분류) (UI_ADHPAbP08) */
+
+
+/* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP09) */
+
+/* [팝업] 개인정보 수집·이용·제공에 대한 동의서(참여자용) (UI_ADHPAbP10) */
+
+
+/* 프로그램 신청 - 목록 없음 (UI_ADHPAcM01) */
+
+
+/* 프로그램 신청 - 목록 있음 (UI_ADHPAcM02) */
+
+
+/* 프로그램 신청 - 신청 (UI_ADHPAcS03) */
+
+/* 프로그램 신청 - 조회 (UI_ADHPAcS04) */
+
+
+/* 참여 프로그램 관리 - 목록 없음 (UI_ADHPAdM01) */
+
+
+/* 참여 프로그램 관리 - 목록 있음 (UI_ADHPAdM02) */
+
+
+/* 참여 프로그램 관리 - 조회 (UI_ADHPAdS03) */
+
+
+/* 참여 프로그램 관리 - 만족도 조사 (UI_ADHPAdS04) */
+
+
+/* 상담이력 - 목록 없음 (UI_ADHPAeM01) */
+
+
+/* 상담이력 - 목록 있음 (UI_ADHPAeM02) */
+
+
+/* 완료 페이지 - 신청서 제출 완료 (UI_ADHPAbS11) */
+
+
+/* 완료 페이지 - 회수 완료 (UI_ADHPAbS12) */
+
+
+/* 완료 페이지 - 삭제 완료 (UI_ADHPAbS13) */
+
+
+/* 완료 페이지 - 수정 완료 (UI_ADHPAbS14) */
+
+
+/* 완료 페이지 - 신청 완료 (UI_ADHPAbS15) */

@@ -13,5 +13,16 @@ str += '<link rel="stylesheet" href="/cm/static/css/jquery-ui.min.css?ver=202507
 str += '<link rel="stylesheet" href="../mobile/include/css/reset.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/layout.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/common.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/font.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/main_p.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/rem.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_a.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_b.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_c.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_d.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_e.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_f.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_g.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/contents_h.css">';
 
 document.write(str);

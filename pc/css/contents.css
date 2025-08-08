@@ -166,7 +166,7 @@
 .mypage .progmg.allcare .apply_summary_wrap {background-color: #f8f8f8; padding: 32px 40px;}
 .mypage .progmg.allcare .apply_summary_header {display: flex; flex-direction: column; justify-content: center; text-align: center;}
 .mypage .progmg.allcare .apply_summary_info .apply_summary_tit {position: relative; padding-left: 28px; display: inline-block; font-size: 18px; font-weight: 600; color: #333; line-height: 28px;}
-.mypage .progmg.allcare .apply_summary_info .apply_summary_tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: url('../include/images/ico60_!_navy.svg') no-repeat center / contain; width: 24px; height: 24px;} 
+.mypage .progmg.allcare .apply_summary_info .apply_summary_tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: url('../include/images/ico60_warning_navy.svg') no-repeat center / contain; width: 24px; height: 24px;} 
 .mypage .progmg.allcare .apply_summary_info .apply_summary_tit span {color: var(--col_blue);}
 .mypage .progmg.allcare .apply_summary_action .apply_summary_toggle {position: relative; font-size: 16px; font-weight: 600; color: var(--col_blue); line-height: 28px; padding: 6px 36px 6px 16px; background-color: #fff; border: 1px solid var(--col_blue); border-radius: 4px; }
 .mypage .progmg.allcare .apply_summary_action .apply_summary_toggle::after {content: ''; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: url('../images/mypage/ico16_toggle_off.svg') no-repeat center / contain; width: 16px; height: 16px;}
