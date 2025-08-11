@@ -18,7 +18,7 @@
 .allcare .new_table tr td .btnType_b1 {width: 64px; height: 32px; font-size: 14px; font-weight: 600; line-height: 24px; border-radius: 4px; color: var(--col_blue); border: 1px solid var(--col_blue);}
 .allcare .sel.round.new_sel_span {position: relative;}
 .allcare .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
-.allcare .sel.round.new_sel_span::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+.allcare .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .allcare .new_popup {padding: 32px 17px 40px 40px; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 1040px; height: calc(100% - 200px); max-height: 680px; z-index: 9999;}
 .allcare .new_popup .newpop_inner {height: calc(100% - 90px); overflow-y: auto; padding-right: 18px;}
 .allcare .new_popup .newpop_inner .search_table tbody tr td {border-bottom: 1px solid #eee;}
