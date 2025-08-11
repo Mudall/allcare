@@ -533,7 +533,7 @@
                                                                 <tr class="new_date">
                                                                     <td class="new_th">운영 기간</td>
                                                                     <td colspan="3">
-                                                                        <fieldset class="form_box">
+                                                                        <!-- <fieldset class="form_box">
                                                                             <legend class="sr_only">조회 기간 선택 및 날짜 입력</legend>
                                                                             <div class="date_select">
                                                                                 <label for="newDate" class="sr_only">조회 기간 선택</label>
@@ -543,6 +543,35 @@
                                                                                     <option value="1w">1주일</option>
                                                                                     <option value="1m">1개월</option>
                                                                                     <option value="3m">3개월</option>
+                                                                                    <option value="6m">6개월</option>
+                                                                                    <option value="1y">1년</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
+                                                                                <div class="cell">
+                                                                                    <span class="box_ipt w_small">
+                                                                                        <label for="schRcptStdte" class="sr_only">등록 시작일</label>
+                                                                                        <input type="text" onkeyup="fn_selfInput(this)" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
+                                                                                        <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 시작일 달력 선택"></button>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <i class="date_line" aria-hidden="true">~</i>
+                                                                                <div class="cell">
+                                                                                    <span class="box_ipt w_small">
+                                                                                        <label for="schRcptEndte" class="sr_only">등록 종료일</label>
+                                                                                        <input type="text" onkeyup="fn_selfInput(this)" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
+                                                                                        <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 종료일 달력 선택"></button>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </fieldset> -->
+                                                                        <fieldset class="form_box">
+                                                                            <legend class="sr_only">조회 기간 선택 및 날짜 입력</legend>
+                                                                            <div class="date_select">
+                                                                                <label for="newDate" class="sr_only">조회 기간 선택</label>
+                                                                                <select id="newDate" name="period">
+                                                                                    <option value="" selected>선택</option>
                                                                                     <option value="6m">6개월</option>
                                                                                     <option value="1y">1년</option>
                                                                                 </select>
