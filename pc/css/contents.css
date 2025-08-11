@@ -16,6 +16,7 @@
 .allcare .new_table tr th:last-child, .allcare .new_table tr td:last-child {padding-right: 20px;}
 .allcare .new_table colgroup col {min-width: 70px;}
 .allcare .new_table tr td .btnType_b1 {width: 64px; height: 32px; font-size: 14px; font-weight: 600; line-height: 24px; border-radius: 4px; color: var(--col_blue); border: 1px solid var(--col_blue);}
+.allcare .new_table tr td .btnType_b2 {width: 64px; height: 32px; font-size: 14px; font-weight: 600; line-height: 24px; border-radius: 4px; color: #333; border: 1px solid #757575;}
 .allcare .sel.round.new_sel_span {position: relative;}
 .allcare .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
@@ -372,6 +373,7 @@
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li {position: relative; padding-left: 24px; color: #333; font-size: 16px; line-height: 28px;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li+li {margin-top: 4px;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li span {color: #333;}
+.mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_year {font-weight: 400;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_count::before {background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
