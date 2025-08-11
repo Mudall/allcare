@@ -77,10 +77,10 @@
 .support .youth.allcare .gsprog_uni .statusdesc_cont {display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 24px 40px; background-color: rgb(77, 101, 225, 0.1); border-radius: 12px;}
 .support .youth.allcare .gsprog_uni .statusdesc_cont .statusdesc_info {display: flex; align-items: center; gap: 8px;}
 .support .youth.allcare .gsprog_uni .statusdesc_cont .statusdesc_info i {width: 48px; height: 48px; background: url('../images/support/task-square.svg') no-repeat center / contain;}
-.support .youth.allcare .gsprog_uni .statusdesc_cont .statusdesc_box p+p {margin-top: 4px;}
+.support .youth.allcare .gsprog_uni .statusdesc_cont .statusdesc_box p {color: #333;}
+.support .youth.allcare .gsprog_uni .statusdesc_cont .statusdesc_box p+p {margin-top: 4px; color: #111;}
 .support .youth.allcare .gsprog_uni .statusdesc_cont button {position: relative; border: 1px solid #757575; border-radius: 4px; background-color: #fff; font-size: 16px; line-height: 28px; color: #333; padding: 6px 36px 6px 16px;}
 .support .youth.allcare .gsprog_uni .statusdesc_cont button::after {position: absolute; content: ''; right: 16px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); background: url('../include/images/ico16_arrow_right.svg') no-repeat center / contain; }
-
 
 
 
