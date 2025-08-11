@@ -239,7 +239,7 @@
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box fieldset .direct_input_option {display: flex; justify-content: space-between; width: 100%; gap: 8px;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box fieldset .direct_input_option .radio_ui {margin-right: 6px;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box fieldset .direct_input_option #major_input_wrap {width: calc(100% - 150px);}
-.mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box .major_list_wrapper .major_list {padding-right: 18px; overflow-y: auto; height: 228px; padding: 10px 0;}
+.mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box .major_list_wrapper .major_list {padding-right: 18px; overflow-y: auto; height: 228px; margin: 10px 0;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box .major_list_wrapper .major_list li {position: relative; padding-left: 28px;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box .major_list_wrapper .major_list li + li {margin-top: 14px;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .radio_box .major_list_wrapper .major_list li label {cursor: pointer; font-size: 16px; font-weight: 400; line-height: 28px;}
