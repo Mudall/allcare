@@ -5,11 +5,13 @@
 .allcare * {letter-spacing: -0.02em;}
 .allcare .btn.type01.fill {background-color: var(--col_blue); color: #fff; font-weight: 600;}
 .allcare .btn.semilarge {height: 40px; line-height: 40px;}
-.allcare .btn.type03 {border: 1px solid #757575;}
+.allcare .btn.type03 {border: 1px solid #757575; font-weight: 600;}
 .allcare .sr_only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; font-size: 0;}
 .allcare .req_mark {position: relative; display: inline-block;}
 .allcare .req_mark:after {content: ''; position: absolute; right: -14px; top: 40%; transform: translateY(-50%); background-color: #ee2e62; border-radius: 50%; width: 6px; height: 6px;}
-
+.allcare .box_end_wrap .submit_date_box {text-align: right; font-size: 16px; line-height: 24px; font-weight: 400; color: #333;}
+.allcare .box_end_wrap .submit_date_box time {margin-left: 16px; font-weight: 600;}
+.allcare .box_end_wrap .btn_box {display: flex; gap: 8px;}
 
 .allcare .radio_filed {border: none;}
 .allcare .radio_filed .new_radio_item + .new_radio_item {margin-top: 12px;}
@@ -20,7 +22,6 @@
 .allcare .radio_filed .new_radio_item label .label_text {margin-left: 27px; font-size: 16px; font-weight: 400; color: #333; line-height: 24px; }
 .allcare .radio_filed.radiof_type2 {display: flex;}
 
-
 .allcare .mt80 {margin-top: 80px;}
 .allcare .mt40 {margin-top: 40px;}
 .allcare .mt24 {margin-top: 24px;}
@@ -30,7 +31,7 @@
 .allcare .mb24 {margin-bottom: 24px;}
 .allcare .mb16 {margin-bottom: 16px;}
 .allcare .pb24 {padding-bottom: 24px;}
-
+.allcare .pt24 {padding-top: 24px;}
 
 .allcare .tab_menu.custom_split {padding: 0; width: 100%; margin: 1rem 0;}
 .allcare .tab_menu.custom_split ul {padding: 0;}
@@ -40,14 +41,72 @@
 .allcare .select_layer.dsp-none {display: none;}
 .allcare .select_layer {display: block;}
 
+.allcare .base_border_cont {position: relative; padding-bottom: 24px; margin-bottom: 8px;}
+.allcare .base_border_cont::after {content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
+.allcare fieldset {border: none;}
+
+.allcare input[type="checkbox"].new_chkbox {position: relative; width: 20px; height: 20px; border: 1px solid #757575; border-radius: 4px;}
+.allcare input[type="checkbox"].new_chkbox:checked::before {content: ''; position: absolute; width: 20px; height: 20px; border: 1px solid var(--col_blue); border-radius: 4px; background-color: var(--col_blue);} 
+.support .youth.allcare input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/support/ico10_chk.svg') no-repeat center / contain;} 
+.mypage .progmg.allcare.allcare input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/ico10_chk.svg') no-repeat center / contain;} 
+
+
 
 /* 운영대학 목록 (UI_ADHPAaM01) */
+.support .youth.allcare .gsprog_uni .step_cont_area ol {display: flex; flex-direction: column;  gap: 24px;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li {position: relative; width: 100%;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li+li::after {content: ''; position: absolute; top: -24px; left: 50%; transform: translateX(-50%); background: url('../images/support/ico24_arrow2_down.svg') no-repeat center / contain; width: 24px; height: 24px;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .tit {display: flex; gap: 8px; align-items: center; padding: 12px 16px; border: 1px solid var(--col_blue); border-radius: 8px 8px 0 0; background-color: var(--col_blue);}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .tit p {font-size: 16px; line-height: 28px; color: #fff; font-weight: 600;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .tit i {width: 24px; height: 24px; background: url('../images/support/ico24_monitor.svg') no-repeat center / contain;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li.li_step02 .tit i {background-image: url('../images/support/ico24_memo_edit.svg');}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li.li_step03 .tit i {background-image: url('../images/support/ico24_pick.svg');}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li.li_step04 .tit i {background-image: url('../images/support/ico24_people.svg');}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .desc {padding: 16px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 8px 8px;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .desc p {font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .desc p.note {font-size: 12px; font-weight: 400; line-height: 20px; color: #333;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .desc p.note .note_symbol {color: var(--col_blue);}
+.support .youth.allcare .uniporg_cont_inner .sch_cont_area {background-color: #f5f6f8; border-radius: 12px; padding: 24px 16px;}
+.support .youth.allcare .uniporg_cont_inner .sch_cont_area>div h4 {font-weight: 600; margin-bottom: 8px;}
+.support .youth.allcare .uniporg_cont_inner .uniporg_inner_region fieldset ul {display: grid; gap: 8px 16px; grid-template-columns: repeat(4, 1fr);}
+.support .youth.allcare .uniporg_cont_inner .uniporg_inner_region fieldset ul li {display: flex; align-items: center; gap: 6px; height: 20px; line-height: 20px;}
+.support .youth.allcare .uniporg_cont_inner .uniporg_inner_region fieldset ul li label {font-size: 16px; font-weight: 400; color: #333;}
+.support .youth.allcare .uniporg_cont_inner .uniporg_inner_uni input {padding: 6px 16px; width: 100%; font-size: 16px; line-height: 28px; font-weight: 400; border: 1px solid #757575; border-radius: 4px; background-color: #fff;} 
+.support .youth.allcare .uniporg_cont_inner .uniporg_inner_uni input::placeholder {color: #555;}
+.support .youth.allcare .uniporg_cont_inner .uniporg_inner_btn {display: flex; gap: 8px;}
+.support .youth.allcare .uniporg_cont_inner .uniporg_inner_btn .type01:last-child {background-color: #fff;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_header {padding-bottom: 16px;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_header .select_area .flex_box .select_btn {border: none;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_list ul li {padding: 16px 0;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_list ul li:last-child {border-bottom: 1px solid #ddd;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_list ul li+li {border-top: 1px solid #ddd;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_list ul li .inner_desc .tit {color: #333; font-size: 16px; line-height: 28px; font-weight: 600;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_list ul li .inner_desc .addr,
+.support .youth.allcare .gsprog_uni .list_cont_area .board_list ul li .inner_desc .tel {margin-top: 4px; color: #555; font-size: 14px; line-height: 24px; font-weight: 400;}
+.support .youth.allcare .gsprog_uni .list_cont_area .board_list ul li .btn_box {display: flex; gap: 8px;}
+.support .youth.allcare .gsprog_uni .viewpage_link_area {padding: 24px; position: relative; background-color: #edeffc; display: flex; flex-direction: column; justify-content: center; }
+.support .youth.allcare .gsprog_uni .viewpage_link_area::before {z-index: -1; content: ''; position: absolute; left: 50%; top: 50%; background-color:#edeffc; transform: translate(-50%, -50%); width: calc(100% + 2.5rem); height: 100%; }
+.support .youth.allcare .gsprog_uni .viewpage_link_area p {color: #111; text-align: center;}
+.support .youth.allcare .gsprog_uni .viewpage_link_area p+p {margin: 4px 0 16px;}
+.support .youth.allcare .gsprog_uni .viewpage_link_area button {background-color: #fff;}
+.support .youth.allcare .gsprog_uni .viewpage_link_area button span {position: relative; padding-right: 20px;}
+.support .youth.allcare .gsprog_uni .viewpage_link_area button span::after {content: ''; position: absolute; right: 0; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); background: url('../include/images/ico16_arrow_right.svg') no-repeat center / contain;}
+
+
+
+
+
+
+
+
 
 /* [팝업] 운영대학 목록 - 프로그램 조회 팝업 (UI_ADHPAaM02) */ 
+
 
 /* 참여신청서 - 목록없음 (UI_ADHPAbM01) */
 .mypage .progmg.allcare .pa_page_empty>.t3_sb {text-align: center;}
 .mypage .progmg.allcare .pa_page_empty figure {display: flex; justify-content: center;}
+
 
 
 /* 참여신청서 - 목록있음 (UI_ADHPAbM02) */
@@ -55,7 +114,6 @@
 .mypage .progmg.allcare .pa_page_wrap::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
 .mypage .progmg.allcare .pa_page_wrap .board_header .count span {color: #333;}
 .mypage .progmg.allcare .pa_page_wrap .board_header .select_area .flex_box button.select_btn {padding: 0 0 0 1.5rem; color: #333; border: none;}
-
 .mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li {border-bottom: 1px solid #eee;}
 .mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl {padding: 16px 0;}
 .mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row {display: flex; gap: 12px;}
@@ -68,8 +126,6 @@
 .mypage .progmg.allcare .my_ptcp_from .box_group_wrap + .box_group_wrap {margin-top: 32px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap {position: relative; padding-bottom: 32px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl {} 
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl>div {} 
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap dl>div + div {border-top: 1px solid #eee;} 
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl dt {margin-top: 16px; font-size: 14px; color: #555; font-weight: 600; line-height: 24px;} 
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl dd {margin: 8px 0 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;} 
@@ -84,6 +140,15 @@
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dl_id input {width: 100%; height: 48px; color: #555; font-size: 16px; line-height: 28px; font-weight: 400; padding: 10px 16px; border: 1px solid #757575; border-radius: 4px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap select.new_down {width: 100%; height: 48px; color: #555; font-size: 16px; line-height: 28px; font-weight: 400; padding: 10px 32px 10px 16px; border: 1px solid #757575; border-radius: 4px; appearance: none; -webkit-appearance: none; -moz-appearance: none; background: url('../images/arrow16_down.svg') no-repeat center / contain; background-position:  right 16px center; background-size: 16px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap select.new_down option:disabled {display: none;}
+.mypage .progmg.allcare .my_ptcp_from .agm_area .agm_box {margin-top: 8px;}
+.mypage .progmg.allcare .my_ptcp_from .agm_area .agm_desc {margin-top: 8px;}
+.mypage .progmg.allcare .my_ptcp_from .agm_area .agm_desc strong {font-size: 14px; font-weight: 400; line-height: 24px; color: #e0024b;}
+.mypage .progmg.allcare .my_ptcp_from .agm_area .btn_view_doc {margin-left: 4px; display: inline; width: 64px; height: 32px; border: 1px solid #757575; border-radius: 4px;} 
+.mypage .progmg.allcare .my_ptcp_from .agm_area .btn_view_doc span {vertical-align: baseline; font-size: 14px; line-height: 1; color: #333; font-weight: 600;} 
+.mypage .progmg.allcare .my_ptcp_from .agm_cho .radio_filed.radiof_type2 {margin-top: 12px; gap: 16px; height: 24px; align-items: flex-end;}
+.mypage .progmg.allcare .my_ptcp_from .box_agm_wrap {position: relative; padding-bottom: 38px;}
+.mypage .progmg.allcare .my_ptcp_from .box_agm_wrap::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
+
 
 
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */
@@ -94,12 +159,15 @@
 
 /* [팝업] 운영 대학 검색 팝업 (UI_ADHPAbP06) */
 
+
 /* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP07) */
+
 
 /* [팝업] 전공찾기팝업 - 조회/선택/등록(계열분류) (UI_ADHPAbP08) */
 
 
 /* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP09) */
+
 
 /* [팝업] 개인정보 수집·이용·제공에 대한 동의서(참여자용) (UI_ADHPAbP10) */
 
@@ -111,6 +179,7 @@
 
 
 /* 프로그램 신청 - 신청 (UI_ADHPAcS03) */
+
 
 /* 프로그램 신청 - 조회 (UI_ADHPAcS04) */
 

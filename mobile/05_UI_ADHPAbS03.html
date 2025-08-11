@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>참여신청서 - 등록</title>
+        <title>05. UI_ADHPAbS03</title>
         <script src="../mobile/include/js/head.js"></script>
         <script src="../mobile/include/js/mobile-ui-util.js"></script>
         <script src="../mobile/include/js/mobile-ui.js"></script>
@@ -53,7 +53,7 @@
                                         </div>
                                     </dl>
                                     <div class="box_btn_wrap ml_auto mt24">
-                                        <a href="#" class="btn semilarge type03">신청서 작성</a>
+                                        <a href="#" class="btn semilarge type03">회원정보 수정</a>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,6 @@
                                                     <div class="cell">
                                                         <span class="box_ipt new_ipt">
                                                             <input type="text" id="bassAdrTxt" class="input_txt" title="대학교 명" readonly="" placeholder="AAA 대학교">
-                                                            <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                         </span>
                                                     </div>
                                                     <button type="button" class="btn medium type01 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog">검색</button>
@@ -162,15 +161,15 @@
                                 </div>
                             </div>
 
-                            <div class="box_group_wrap">
+                            <div class="box_group_wrap box_agm_wrap">
                                 <h3 class="t2_sb req_mark">개인정보 이용에 대한 동의</h3>
                                 <div class="agm_area">
                                     <div class="agm_box">
                                         <div class="agm_desc">
-                                            <p>“졸업생 특화 프로그램” 참여 신청과 관련하여 개인정보를 수집·이용·제공하기 위한 동의 절차</p>
-                                            <strong>&#x203B; 전문보기 후 개인정보 수집·이용·제공 동의를 선택할 수 있습니다.</strong>
+                                            <p class="b1_sb">“졸업생 특화 프로그램” 참여 신청과 관련하여 개인정보를 수집·이용·제공하기 위한 동의 절차</p>
+                                            <strong>&#x203B; 전문보기 후 개인정보 수집·이용·제공 동의를 선택할 수 있습니다. <button type="button" class="btn_view_doc btn small type02" aria-label="개인정보 수집·이용·제공 동의서 전문보기" onclick="location.href=''"><span class="s1_r">전문보기</span></button></strong>
                                         </div>
-                                        <button type="button" class="btn_view_doc btn small type02" aria-label="개인정보 수집·이용·제공 동의서 전문보기" onclick="location.href=''"><span class="s1_r">전문보기</span></button>
+                                        
                                     </div>
                                     
                                     <div class="agm_cho">
@@ -194,6 +193,16 @@
                                             </div>
                                         </fieldset>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                <div class="submit_date_box mt16">
+                                    <p class="b1_r">제출일자<time class="t2_sb" datetime="2025-07-31">2025.07.31</time></p>
+                                </div>
+                                <div class="btn_box mt24">
+                                    <button type="button" class="btn large type03" aria-label="신청 목록 페이지로 이동" onclick="window.location.href=''">목록</button>
+                                    <button type="submit" id="srchBtn" class="btn large fill type01" onclick="">제출</button>
                                 </div>
                             </div>
 
