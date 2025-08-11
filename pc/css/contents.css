@@ -8,6 +8,7 @@
 .allcare * {letter-spacing: -0.02em}
 .allcare .sr_only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; font-size: 0;}
 .allcare .mt8 {margin-top: 8px;}
+.allcare .input_txt {padding: 0 26px 0 12px}
 .allcare .box_table_wrap:not(.r_type01,.r_type02) .box_table.new_table th {font-size: 16px; font-weight: 600; line-height: 28px; color: #333;}
 .allcare .box_table_wrap:not(.r_type01,.r_type02) .box_table.new_table td {font-size: 16px; font-weight: 400; line-height: 28px; color: #333;}
 .allcare .new_table tr th {padding: 12px 10px;}
@@ -124,6 +125,12 @@
 .allcare .uni_prog_tool .box_chk-group > span {margin-right: 18px;}
 .allcare .uni_prog_tool th, .allcare .uni_prog_tool td {padding-top: 12px; padding-bottom: 12px;}
 .allcare .uni_prog_tool .search_table td .box_chk-group {min-height: initial;}
+
+.allcare .uni_prog_tool tr.new_date .from_btn_box {margin-top: 8px; display: flex; gap: 8px;}
+.allcare .uni_prog_tool tr.new_date .from_btn_box li {border: 1px solid var(--col_blue); border-radius: 4px; background-color: #fff;}
+.allcare .uni_prog_tool tr.new_date .from_btn_box li button {font-size: 14px; line-height: 24px; font-weight: 600; padding: 4px 12px; color: var(--col_blue);}
+.allcare .uni_prog_tool tr.new_date .from_btn_box li.active {background-color: var(--col_blue);}
+.allcare .uni_prog_tool tr.new_date .from_btn_box li.active button {color: #fff;}
 
 
 /* 참여신청서 - 목록없음 (UI_ADHPAbM01) */

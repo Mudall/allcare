@@ -381,7 +381,7 @@
                                         <div class="new_popup newpop_uni_index" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
                                             <div class="newpop_tit">   
                                                 <h4>운영 프로그램</h4>
-                                                <a href="./UI_ADHPAaM01.html" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
+                                                <a href="#" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
                                             </div>
                                             <div class="newpop_inner uni_prog_tool">
                                                 <article class="box_form_content">
@@ -538,34 +538,39 @@
                                                                             <div class="date_select">
                                                                                 <label for="newDate" class="sr_only">조회 기간 선택</label>
                                                                                 <select id="newDate" name="period">
-                                                                                    <option value="" selected>선택</option>
-                                                                                    <option value="today">오늘</option>
-                                                                                    <option value="1w">1주일</option>
-                                                                                    <option value="1m">1개월</option>
-                                                                                    <option value="3m">3개월</option>
-                                                                                    <option value="6m">6개월</option>
-                                                                                    <option value="1y">1년</option>
+                                                                                    <option value="" selected disabled>선택</option>
+                                                                                    <option value="start">시작일</option>
+                                                                                    <option value="end">종료일</option>
                                                                                 </select>
                                                                             </div>
 
                                                                             <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
                                                                                 <div class="cell">
                                                                                     <span class="box_ipt w_small">
-                                                                                        <label for="schRcptStdte" class="sr_only">등록 시작일</label>
-                                                                                        <input type="text" onkeyup="fn_selfInput(this)" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
-                                                                                        <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 시작일 달력 선택"></button>
+                                                                                        <label for="schRcptStdte" class="sr_only">시작일</label>
+                                                                                        <input type="text" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD">
+                                                                                        <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
                                                                                     </span>
                                                                                 </div>
                                                                                 <i class="date_line" aria-hidden="true">~</i>
                                                                                 <div class="cell">
                                                                                     <span class="box_ipt w_small">
-                                                                                        <label for="schRcptEndte" class="sr_only">등록 종료일</label>
-                                                                                        <input type="text" onkeyup="fn_selfInput(this)" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric">
-                                                                                        <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 종료일 달력 선택"></button>
+                                                                                        <label for="schRcptEndte" class="sr_only">종료일</label>
+                                                                                        <input type="text" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD">
+                                                                                        <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
                                                                                     </span>
                                                                                 </div>
                                                                             </div>
                                                                         </fieldset>
+                                                                        <ul class="from_btn_box">
+                                                                            <li class=""><button type="button" value="clear">초기화</button></li>
+                                                                            <li class=""><button type="button" value="today">오늘</button></li>
+                                                                            <li class=""><button type="button" value="1week">일주일</button></li>
+                                                                            <li class="active"><button type="button" value="1month">1개월</button></li>
+                                                                            <li class=""><button type="button" value="3month">3개월</button></li>
+                                                                            <li class=""><button type="button" value="6month">6개월</button></li>
+                                                                            <li class=""><button type="button" value="1year">1년</button></li>
+                                                                        </ul>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
