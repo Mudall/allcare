@@ -7,7 +7,6 @@
 /* new_popup : 공통으로 사용할 팝업 레이아웃 */
 .allcare * {letter-spacing: -0.02em}
 .allcare .sr_only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; font-size: 0;}
-.allcare .btn_s_r {font-weight: 400 !important;}
 .allcare .mt8 {margin-top: 8px;}
 .allcare .box_table_wrap:not(.r_type01,.r_type02) .box_table.new_table th {font-size: 16px; font-weight: 600; line-height: 28px; color: #333;}
 .allcare .box_table_wrap:not(.r_type01,.r_type02) .box_table.new_table td {font-size: 16px; font-weight: 400; line-height: 28px; color: #333;}
