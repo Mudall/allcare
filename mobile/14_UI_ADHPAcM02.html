@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>14. 프로그램 신청 - 목록 있음</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header"></header>
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <!-- notice start -->
+                        <div class="top_notice">
+                            <i></i>
+                            <p><strong>참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</strong></p>
+                            <button type="button" class="notice_expand ui-layer" data-my-layer="noticeLayer"><span class="blind">공지사항 열기</span></button>
+                        </div>
+                        <div class="bottom_layer type_title" tabindex="0" id="noticeLayer" style="z-index: 140; display: none;">
+                            <strong class="title">안내</strong>
+                            <div class="layer_contents" style="height: 216px;">
+                                <div class="notice_default">
+                                    <ul class="list_style">
+                                        <li><strong>참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</strong></li>
+                                        <li><strong>참여를 희망하는 프로그램을 여러 개 신청할 수 있습니다.</strong></li>
+                                        <li><strong>프로그램 신청 후 대학 담당자의 선발 처리를 거쳐 참여가 확정됩니다.</strong></li>
+                                        <li><strong>프로그램 관련 자세한 내용은 해당 대학의 담당자에게 문의하시기 바랍니다.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="layer_close">
+                                <span class="blind">레이어 닫기</span>
+                            </button>
+                        </div>
+                        <!-- notice end -->
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li ><button type="button" onclick="">참여신청서</button></li>
+                                <li class="on"><button type="button" onclick="">참여 프로그램</button></li>
+                                <li><button type="button" onclick="">상담 이력</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="newtab_progwrap mt16 mb16" role="tablist">
+                            <button type="button" role="tab" class="tit active" onclick="" aria-selected="true">기본정보</button>
+                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">기업소개</button>
+                        </div>
+
+                        <div class="full_box">
+                            <div class="search_area pad_none mag_none">
+                                <input type="text" title="검색어 입력" id="srcSearchModeInput1" name="srcKeywordInputBox" maxlength="50" value="" placeholder="검색어를 입력해주세요.">
+                                <button type="button" class="btn middle white" onclick="">검색</button>
+                                <a href="" class="btn_detail">상세</a>
+                            </div>
+                        </div>
+
+                        <section aria-label="프로그램 목록" class="prog_list_sec pad_none prog_spec_twin">
+                            <div class="board_header">
+                                <p class="count"><span>전체</span> <strong>121,421</strong><span>건</span></p>
+                                <div class="select_area">
+                                    <div class="view_select_box"><button type="button" class="align" aria-label="페이지 당 표시할 항목 수 선택">10개씩 보기</button></div>
+                                    <div class="dimmed_pop dsp-none"></div>
+                                    <div class="select_layer dsp-none">
+                                        <ul class="select_option">
+                                            <li><input type="hidden" value="10"><button type="button" onclick="setSelectValue(this,'sort')">10개씩 보기</button></li>
+                                            <li><input type="hidden" value="30"><button type="button" onclick="setSelectValue(this,'sort')">30개씩 보기</button></li>
+                                            <li><input type="hidden" value="50"><button type="button" onclick="setSelectValue(this,'sort')">50개씩 보기</button></li>
+                                        </ul>
+                                        <ul class="btn_group"><li><button type="button" class="btn large gray select_close">취소</button></li></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                // 페이지당 표시항목 갯수 버튼 활성화 (팝업내부전용)
+                                document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
+                                    btn.addEventListener('click',e=>{
+                                        const area=e.target.closest('.select_area');
+                                        area.querySelectorAll('.dimmed_pop, .select_layer')
+                                            .forEach(el=>el.classList.toggle('dsp-none'));
+                                    });
+                                    });
+
+                                    // 취소 버튼
+                                    document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
+                                    btn.addEventListener('click',e=>{
+                                        e.target.closest('.select_area')
+                                        .querySelectorAll('.dimmed_pop, .select_layer')
+                                        .forEach(el=>el.classList.add('dsp-none'));
+                                    });
+                                });
+                            </script>
+
+                            <div class="board_list">
+                                <ul class="prog_ul">
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl on">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>AAA 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge disabled">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl">자기주도형</span>
+                                                    <span class="tag_cdp on">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite">대면</span>
+                                                    <span class="offsite on ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>BBB 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick disabled">
+                                                <p class="prog_pick_desc">선발</p>
+                                                <p class="prog_pick_day disabled">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc on ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>CCC 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">선발</p>
+                                                <p class="prog_pick_day disabled">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge disabled">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl ">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm on">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>DDD 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge disabled">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc on">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>EEE 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl on">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>FFF 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl on">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>GGG 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl on">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>HHH 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl on">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>III 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="prog_item">
+                                        <article>
+                                            <div class="prog_header">
+                                                <div class="prog_tag">
+                                                    <span class="tag_sdl on">자기주도형</span>
+                                                    <span class="tag_cdp">수요맞춤형</span>
+                                                    <span class="tag_lerc ">지역기업 채용 연계</span>
+                                                    <span class="tag_pm">현직자 멘토링</span>
+                                                    <span class="tag_etc">기타</span>
+                                                </div>
+                                                <div class="prog_site">
+                                                    <span class="onsite on">대면</span>
+                                                    <span class="offsite ">비대면</span>
+                                                </div>
+                                            </div>
+                                            <div class="prog_uni"><p>JJJ 대학교</p></div>
+                                            <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
+                                            <div class="prog_year">참여연도 : 2025</div>
+                                            <div class="prog_pick">
+                                                <p class="prog_pick_desc">신청</p>
+                                                <p class="prog_pick_day">2025-12-31</p>
+                                            </div>
+                                            <div class="prog_details_wrap">
+                                                <ul class="prog_details">
+                                                    <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
+                                                    <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
+                                                    <li class="oper_count"><span>1000000</span>명</li>
+                                                </ul>
+                                                <div class="btn_box">
+                                                    <button type="button" class="btn type03 semilarge">상세보기</button>
+                                                    <button type="button" class="btn type01 semilarge">신청하기</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paging"></div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>
