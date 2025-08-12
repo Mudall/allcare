@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>14. 프로그램 신청 - 목록 있음</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header"></header>
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <!-- notice start -->
+                        <div class="top_notice">
+                            <i></i>
+                            <p><strong>참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</strong></p>
+                            <button type="button" class="notice_expand ui-layer" data-my-layer="noticeLayer"><span class="blind">공지사항 열기</span></button>
+                        </div>
+                        <div class="bottom_layer type_title" tabindex="0" id="noticeLayer" style="z-index: 140; display: none;">
+                            <strong class="title">안내</strong>
+                            <div class="layer_contents" style="height: 216px;">
+                                <div class="notice_default">
+                                    <ul class="list_style">
+                                        <li><strong>참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</strong></li>
+                                        <li><strong>참여를 희망하는 프로그램을 여러 개 신청할 수 있습니다.</strong></li>
+                                        <li><strong>프로그램 신청 후 대학 담당자의 선발 처리를 거쳐 참여가 확정됩니다.</strong></li>
+                                        <li><strong>프로그램 관련 자세한 내용은 해당 대학의 담당자에게 문의하시기 바랍니다.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="layer_close">
+                                <span class="blind">레이어 닫기</span>
+                            </button>
+                        </div>
+                        <!-- notice end -->
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li ><button type="button" onclick="">참여신청서</button></li>
+                                <li class="on"><button type="button" onclick="">참여 프로그램</button></li>
+                                <li><button type="button" onclick="">상담 이력</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="newtab_progwrap mt16" role="tablist">
+                            <button type="button" role="tab" class="tit active" onclick="" aria-selected="true">프로그램 신청</button>
+                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">참여 프로그램 관리</button>
+                        </div>
+
+                        <section class="prog_apply_sec">
+                            <div class="prog_wrap prog_info">
+                                <h4 class="prog_wrap_tit">프로그램 정보</h4>
+                                <dl>
+                                    <div class="prog_group dl_uni">
+                                        <dt>참여 대학</dt>
+                                        <dd>원광대학교</dd>
+                                    </div>
+                                    <div class="prog_group dl_prog">
+                                        <dt>프로그램명</dt>
+                                        <dd>(컴퓨터 공학) 현직자 멘토링 프로그램 (1차)</dd>
+                                    </div>
+                                    <div class="prog_group dl_start">
+                                        <dt>프로그램 시작일</dt>
+                                        <dd>2025-01-01</dd>
+                                    </div>
+                                    <div class="prog_group dl_end">
+                                        <dt>프로그램 종료일</dt>
+                                        <dd>2025-12-31</dd>
+                                    </div>
+                                    <div class="prog_group dl_edu">
+                                        <dt>교육 방식</dt>
+                                        <dd>대면</dd>
+                                    </div>
+                                    <div class="prog_group dl_person">
+                                        <dt>정원</dt>
+                                        <dd>1,000명</dd>
+                                    </div>
+                                    <div class="prog_group dl_desc">
+                                        <dt>내용</dt>
+                                        <dd>
+                                            수료기준 및 입력한 내용을 조회합니다.
+                                            내용 부분의 세로 영역은 내용 분량에 
+                                            따라 동적으로 조절됩니다.
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+
+                            <div class="prog_wrap prog_file">
+                                <h4 class="prog_wrap_tit">첨부파일</h4>
+                                <div class="prog_file_list">
+                                    <ul>
+                                        <li><p>구인신청서_제출서류양식_파견근로양식.docx</p></li>
+                                        <li><p>중소벤처기업진흥공단_2024년_이력서_양식_TEST TEST TEST TEST TEST TEST TEST TEST TEST</p></li>
+                                        <li><p>구인신청서_제출서류양식_파견근로양식_TEST TEST TEST TEST TEST TEST TEST TEST TEST</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="prog_wrap_end mt16">
+                            <div class="apply_day_box">
+                                <p>신청일자 <time datetime="2025-01-01">2025.01.01</time></p>
+                            </div>
+                            <div class="apply_btn_box mt24">
+                                <button type="button" class="btn type03 large">목록</button>
+                                <button type="button" class="btn type01 fill large">신청</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>

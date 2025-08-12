@@ -257,9 +257,27 @@
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_details_wrap .btn_box {margin-top: 16px; display: flex; align-items: center; gap: 8px;}
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_details_wrap .btn_box button {background-color: #fff;}
 .allcare .newpop_page .detail_sch_form {background-color: #fff;}
-.allcare .newpop_page .fixed_form_area { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff; padding: 24px 20px}
+.allcare .newpop_page .fixed_form_area {position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff; padding: 24px 20px}
+
 
 /* 프로그램 신청 - 신청 (UI_ADHPAcS03) */
+.mypage .progmg.allcare .prog_apply_sec .prog_wrap {position: relative; padding: 24px 0 32px;}
+.mypage .progmg.allcare .prog_apply_sec .prog_wrap::before {content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); background-color: #f3f5f6; width: calc(100% + 2.5rem); height: 8px;} 
+.mypage .progmg.allcare .prog_apply_sec  h4.prog_wrap_tit {margin-bottom: 16px; font-size: 18px; color: #111; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .prog_apply_sec .prog_info .prog_group {padding: 16px 0;}
+.mypage .progmg.allcare .prog_apply_sec .prog_info .prog_group:first-child {padding-top: 0;}
+.mypage .progmg.allcare .prog_apply_sec .prog_info .prog_group + .prog_group {border-top: 1px solid #eee;}
+.mypage .progmg.allcare .prog_apply_sec .prog_info .prog_group dt {margin-bottom: 8px; font-size: 14px; color: #555; font-weight: 600; line-height: 24px; }
+.mypage .progmg.allcare .prog_apply_sec .prog_info .prog_group dd {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .prog_apply_sec .prog_file .prog_file_list {padding: 16px 12px; border: 1px solid #ddd; border-radius: 8px;}
+.mypage .progmg.allcare .prog_apply_sec .prog_file .prog_file_list ul li+li {border-top: 1px solid #f5f5f5;}
+.mypage .progmg.allcare .prog_apply_sec .prog_file .prog_file_list ul li p {position: relative; padding-right: 32px; margin: 12px 0; font-size: 14px; color: var(--col_blue); font-weight: 400; line-height: 24px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.mypage .progmg.allcare .prog_apply_sec .prog_file .prog_file_list ul li p::after {content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: url('../images/mypage/ico16_download2.svg') no-repeat center / contain; width: 16px; height: 16px;}
+.mypage .progmg.allcare .prog_apply_sec .prog_file .prog_file_list ul li:first-child p {margin-top: 0;}
+.mypage .progmg.allcare .prog_apply_sec .prog_file .prog_file_list ul li:last-child p {margin-bottom: 0;}
+.mypage .progmg.allcare .prog_wrap_end .apply_day_box p {text-align: right; font-size: 16px; line-height: 24px; font-weight: 400; color: #333;}
+.mypage .progmg.allcare .prog_wrap_end .apply_day_box p time {margin-left: 16px; font-weight: 600;}
+.mypage .progmg.allcare .prog_wrap_end .apply_btn_box {display: flex; gap: 8px;}
 
 
 /* 프로그램 신청 - 조회 (UI_ADHPAcS04) */
