@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>22. 상담이력 - 목록 있음</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header"></header>
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li><button type="button" onclick="">참여신청서</button></li>
+                                <li><button type="button" onclick="">참여 프로그램</button></li>
+                                <li class="on"><button type="button" onclick="">상담 이력</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="full_box">
+                            <form>
+                                <fieldset>
+                                    <legend class="sr_only">검색 조건 설정</legend>
+                                    <div class="form_group">
+                                        <label for="yearCountPerPage" class="sr_only">참여연도</label>
+                                        <select id="yearCountPerPage" name="yearCountPerPage" class="form_select">
+                                            <option value="" disabled selected>참여연도</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form_group">
+                                        <label for="uniCountPerPage" class="sr_only">참여대학</label>
+                                        <select  id="uniCountPerPage"  name="uniCountPerPage"  class="form-select">
+                                            <option value="" disabled selected>참여대학</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <button type="submit"  class="fullbox_search_btn" aria-describedby="searchDescription">검색</button>
+                            </form>
+                        </div>
+                        <script>
+                        // select option요소 자동화
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const yearSet = new Set();
+                                const uniSet = new Set();
+
+                                // 년도 
+                                document.querySelectorAll('.dl_year dd').forEach(td => {
+                                    const year = td.textContent.trim();
+                                    if (year) yearSet.add(year);
+                                });
+
+                                // 대학명 
+                                document.querySelectorAll('.dl_uni dd').forEach(td => {
+                                    const uni = td.textContent.trim();
+                                    if (uni) uniSet.add(uni);
+                                });
+
+                                // 최신순, 가나다 정렬
+                                const sortedYears = Array.from(yearSet).sort((a, b) => b - a); 
+                                const sortedUnis = Array.from(uniSet).sort((a, b) => a.localeCompare(b, 'ko'));
+
+                                const yearSelect = document.getElementById('yearCountPerPage');
+                                const uniSelect = document.getElementById('uniCountPerPage');
+                                if (yearSelect) yearSelect.title = '참여 연도 선택';
+                                if (uniSelect) uniSelect.title = '참여 대학 선택';
+
+
+                                // 옵션 추가
+                                sortedYears.forEach(year => {
+                                    const opt = document.createElement('option');
+                                    opt.value = year;
+                                    opt.textContent = `${year}년`;
+                                    yearSelect.appendChild(opt);
+                                });
+
+                                sortedUnis.forEach(uni => {
+                                    const opt = document.createElement('option');
+                                    opt.value = uni;
+                                    opt.textContent = uni;
+                                    uniSelect.appendChild(opt);
+                                });
+                            });
+                        </script>
+
+
+
+                        <section aria-label="프로그램 목록" class="prog_list_sec prg_spec">
+                            <div class="board_header">
+                                <p class="count"><span>전체</span> <strong>121,421</strong><span>건</span></p>
+                                <div class="select_area">
+                                    <div class="view_select_box"><button type="button" class="align" aria-label="페이지 당 표시할 항목 수 선택">10개씩 보기</button></div>
+                                    <div class="dimmed_pop dsp-none"></div>
+                                    <div class="select_layer dsp-none">
+                                        <ul class="select_option">
+                                            <li><input type="hidden" value="10"><button type="button" onclick="setSelectValue(this,'sort')">10개씩 보기</button></li>
+                                            <li><input type="hidden" value="30"><button type="button" onclick="setSelectValue(this,'sort')">30개씩 보기</button></li>
+                                            <li><input type="hidden" value="50"><button type="button" onclick="setSelectValue(this,'sort')">50개씩 보기</button></li>
+                                        </ul>
+                                        <ul class="btn_group"><li><button type="button" class="btn large gray select_close">취소</button></li></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                // 페이지당 표시항목 갯수 버튼 활성화 (팝업내부전용)
+                                document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
+                                    btn.addEventListener('click',e=>{
+                                        const area=e.target.closest('.select_area');
+                                        area.querySelectorAll('.dimmed_pop, .select_layer')
+                                            .forEach(el=>el.classList.toggle('dsp-none'));
+                                    });
+                                    });
+
+                                    // 취소 버튼
+                                    document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
+                                    btn.addEventListener('click',e=>{
+                                        e.target.closest('.select_area')
+                                        .querySelectorAll('.dimmed_pop, .select_layer')
+                                        .forEach(el=>el.classList.add('dsp-none'));
+                                    });
+                                });
+                            </script>
+
+                            <div class="board_list">
+                                <ul class="prog_ul">
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>AAA 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>BBB 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>2회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>비대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>집단</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2024</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>CCC 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>DDD 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>EEE 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2021</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>FFF 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>GGG 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2011</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>HHH 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2010</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>III 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <li class="prog_item">
+                                        <dl>
+                                            <div class="data_group dl_year">
+                                                <dt>참여연도</dt>
+                                                <dd>2005</dd>
+                                            </div>
+                                            <div class="data_group dl_uni">
+                                                <dt>참여대학명</dt>
+                                                <dd>JJJ 대학교</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>회차</dt>
+                                                <dd>1회차</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방식</dt>
+                                                <dd>대면</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담방법</dt>
+                                                <dd>1:1</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담사명</dt>
+                                                <dd>홍길동</dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담일자</dt>
+                                                <dd><time>2025-01-01</time></dd>
+                                            </div>
+                                            <div class="data_group">
+                                                <dt>상담시간(분)</dt>
+                                                <dd>60분</dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paging"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>

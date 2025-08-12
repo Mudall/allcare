@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>24. 완료 페이지 - 회수 완료</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header"></header>
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li class="on"><button type="button" onclick="">참여신청서</button></li>
+                                <li><button type="button" onclick="">참여 프로그램</button></li>
+                                <li><button type="button" onclick="">상담 이력</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="donepage mt40">
+                            <div class="done_notice">
+                                <figure class="mb16"><img src="./images/mypage/ico48_ok.svg"></figure>
+                                <p class="mb8">참여신청서 제출이 완료되었습니다.</p>
+                                <p>참여신청서 제출을 취소하거나, <br>수정 후에 다시 제출할 수 있습니다.</p>
+                            </div>
+
+                            <ul class="done_info mt40">
+                                <li>
+                                    <div class="tit"><p>성명</p></div>
+                                    <div class="desc"><p>홍길동</p></div>
+                                </li> 
+                                <li>
+                                    <div class="tit"><p>참여 대학</p></div>
+                                    <div class="desc"><p>AAA 대학교</p></div>
+                                </li> 
+                                <li>
+                                    <div class="tit"><p>신청일</p></div>
+                                    <div class="desc"><p>2025-01-01</p></div>
+                                </li>
+                            </ul>
+                            
+                            <div class="done_btn">
+                                <a href="#none" class="btn large type01 fill" onclick="" aria-label="졸업생 특화프로그램 페이지로 이동">확인</a>
+                            </div>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>

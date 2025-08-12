@@ -47,19 +47,19 @@
 .allcare input[type="checkbox"].new_chkbox:checked::before {content: ''; position: absolute; width: 20px; height: 20px; border: 1px solid var(--col_blue); border-radius: 4px; background-color: var(--col_blue);} 
 .support .youth.allcare input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/support/ico10_chk.svg') no-repeat center / contain;} 
 .mypage .progmg.allcare.allcare input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/ico10_chk.svg') no-repeat center / contain;} 
+.sub_tl + *:not(.box_notice_wrap) .allcare .t2_sb {line-height: 48px;}
 
 
 
 /* 운영대학 목록 (UI_ADHPAaM01) */
 .support .youth.allcare .gsprog_uni>div+div {margin-top: 40px;}
-.support .youth.allcare .gsprog_uni .step_cont_area {}
 .support .youth.allcare .gsprog_uni .step_cont_area ol {display: flex; gap: 24px;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li {position: relative; width: 25%;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li>div {padding: 24px;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li+li::after {content: ''; position: absolute; left: -24px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../include/images/ico24_arrow2_right.svg') no-repeat center / contain;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li .tit {height: 160px; border: 1px solid var(--col_blue); background-color: var(--col_blue); border-radius: 12px 12px 0 0 ;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li .tit * {color: #fff; font-size: 18px; font-weight: 600; line-height: 28px;}
-.support .youth.allcare .gsprog_uni .step_cont_area ol li .tit .step_num {position: relative; text-align: right; width: 100%; display: block; margin: 6px 0;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol li .tit .step_num {position: relative; text-align: right; width: 100%; display: block; height: 40px;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li .tit .step_num::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: url('../images/support/ico40_PC.svg') no-repeat center / contain;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li.li_step02 .tit .step_num::after {background-image: url('../images/support/ico40_note.svg');}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li.li_step03 .tit .step_num::after {background-image: url('../images/support/ico40_pick.svg');}
@@ -233,7 +233,7 @@
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .category_box .category_lv .category-placeholder p {margin: 10px 16px; color: #757575;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .category_box .category_lv ul li button {position: relative; text-align: left; width: 100%; height: 100%; padding: 8px 16px; color: #757575; font-weight: 400;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .category_box .category_lv li button[aria-selected="true"] {font-weight: 600; color: var(--col_blue);}
-.mypage .progmg.allcare .newpop_major_search .newpop_inner .category_box .category_lv li button[aria-selected="true"]::after {content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 3px solid var(--col_blue);}
+.mypage .progmg.allcare .newpop_major_search .newpop_inner .category_box .category_lv li button[aria-selected="true"]::after {content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 2px solid var(--col_blue);}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .category_box .category_lv .category-placeholder::-webkit-scrollbar {width: 6px;}
 .mypage .progmg.allcare .newpop_major_search .newpop_inner .category_box .category_lv .category-placeholder::-webkit-scrollbar-thumb {background-clip: padding-box; border-top: 6px solid transparent; border-bottom: 6px solid transparent; background-color: #ddd; border-radius: 9999px; }
 .mypage .progmg.allcare .newpop_major_search .box_form_content {padding: 24px 40px;}
