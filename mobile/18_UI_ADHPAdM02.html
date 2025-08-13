@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>14. 프로그램 신청 - 목록 있음</title>
+        <title>18. 참여 프로그램 관리 - 목록 있음</title>
         <script src="../mobile/include/js/head.js"></script>
         <script src="../mobile/include/js/mobile-ui-util.js"></script>
         <script src="../mobile/include/js/mobile-ui.js"></script>
@@ -56,19 +56,119 @@
                         </div>
 
                         <div class="newtab_progwrap mt16 mb16" role="tablist">
-                            <button type="button" role="tab" class="tit active" onclick="" aria-selected="true">프로그램 신청</button>
-                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">참여 프로그램 관리</button>
+                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">프로그램 신청</button>
+                            <button type="button" role="tab" class="tit active" onclick="" aria-selected="true">참여 프로그램 관리</button>
                         </div>
 
-                        <div class="full_box">
-                            <div class="search_area pad_none mag_none">
-                                <input type="text" title="검색어 입력" id="srcSearchModeInput1" name="srcKeywordInputBox" maxlength="50" value="" placeholder="검색어를 입력해주세요.">
-                                <button type="button" class="btn middle white" onclick="">검색</button>
-                                <a href="" class="btn_detail">상세</a>
-                            </div>
+                        <div class="full_box custon_full_box">
+                            <div class="full_box_dimmed dimmed_pop dsp-none"></div>
+                            <form>
+                                <fieldset>
+                                    <legend class="sr_only">검색 조건 설정</legend>
+                                    
+                                    <!-- 참여연도 선택 -->
+                                    <div class="select_area single form_group">
+                                        <label for="yearSelect" class="sr_only">참여연도</label>
+                                        <button type="button" class="form_select" id="yearSelect" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect yearSelectedValue" data-target="yearSelectLayer"><span>참여 연도 전체</span></button>
+
+                                        <div class="select_layer" id="yearSelectLayer" role="listbox" aria-labelledby="yearSelect" aria-hidden="true" style="display: none;">
+                                            <ul class="select_option">
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button">참여연도 전체</button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="2025">
+                                                    <button type="button"><span>2025년</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="2024">
+                                                    <button type="button"><span>2024년</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="2023">
+                                                    <button type="button"><span>2023년</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="2022">
+                                                    <button type="button"><span>2022년</span></button>
+                                                </li>
+                                            </ul>
+                                            <ul class="btn_group">
+                                                <li>
+                                                    <button type="button" class="btn large gray select_close">취소</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- 운영대학 선택 -->
+                                    <div class="select_area single form_group"> 
+                                        <label for="uniSelect" class="sr_only">운영대학</label>
+                                        <button type="button" class="form_select" id="uniSelect" aria-haspopup="listbox"  aria-expanded="false" aria-labelledby="uniSelect uniSelectedValue" data-target="uniSelectLayer"><span>운영대학 전체</span></button>
+
+                                        <div class="select_layer" id="uniSelectLayer" role="listbox" aria-labelledby="uniSelect" aria-hidden="true" style="display: none;">
+                                            <ul class="select_option">
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button>운영대학 전체</button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>AAA 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>BBB 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>CCC 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>DDD 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>EEE 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>FFF 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>GGG 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>HHH 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>III 대학교</span></button>
+                                                </li>
+                                                <li onclick="" role="option">
+                                                    <input type="hidden" value="">
+                                                    <button type="button"><span>JJJ 대학교</span></button>
+                                                </li>
+                                            </ul>
+                                            <ul class="btn_group">
+                                                <li>
+                                                    <button type="button" class="btn large gray select_close">취소</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <button type="submit"  class="fullbox_search_btn" aria-describedby="searchDescription">검색</button>
+                            </form>
                         </div>
 
-                        <section aria-label="프로그램 목록" class="prog_list_sec pad_none prog_spec_twin">
+
+
+                        <section class="prog_list_sec prog_spec_twin pad_none">
                             <div class="board_header">
                                 <p class="count"><span>전체</span> <strong>121,421</strong><span>건</span></p>
                                 <div class="select_area">
@@ -84,7 +184,85 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <script>
+                                // 참여연도/운영대학 플로팅팝업
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    document.querySelectorAll('.single.form_group .form_select').forEach(button => {
+                                        button.addEventListener('click', function(e) {
+                                            e.stopPropagation();
+                                            const targetId = this.getAttribute('data-target');
+                                            const layer = document.getElementById(targetId);
+                                            
+                                            closeAllLayers();
+                                            
+                                            if (layer) {
+                                                this.setAttribute('aria-expanded', 'true');
+                                                layer.style.display = 'block';
+                                                layer.setAttribute('aria-hidden', 'false');
+                                                
+                                                const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
+                                                if (dimmed) {
+                                                    dimmed.classList.remove('dsp-none');
+                                                }
+                                                
+                                                document.documentElement.classList.add('scroll_off');
+                                                document.body.classList.add('scroll_off');
+                                            }
+                                        });
+                                    });
+
+                                    document.querySelectorAll('.select_option button').forEach(button => {
+                                        button.addEventListener('click', function() {
+                                            const value = this.getAttribute('data-value');
+                                            const text = this.getAttribute('data-text');
+                                            const layer = this.closest('.select_layer');
+                                            const selectButton = document.querySelector(`[data-target="${layer.id}"]`);
+                                            
+                                            selectButton.querySelector('span').textContent = text;
+                                            layer.closest('.form_group').querySelector('input[type="hidden"]').value = value;
+                                            
+                                            closeAllLayers();
+                                        });
+                                    });
+
+                                    document.querySelectorAll('.select_close').forEach(button => {
+                                        button.addEventListener('click', closeAllLayers);
+                                    });
+
+                                    document.addEventListener('click', function(e) {
+                                        if (!e.target.closest('.select_area')) {
+                                            closeAllLayers();
+                                        }
+                                    });
+
+                                    document.addEventListener('keydown', function(e) {
+                                        if (e.key === 'Escape') {
+                                            closeAllLayers();
+                                        }
+                                    });
+
+                                    function closeAllLayers() {
+                                        document.querySelectorAll('.form_select').forEach(btn => {
+                                            btn.setAttribute('aria-expanded', 'false');
+                                        });
+                                        document.querySelectorAll('.select_layer').forEach(layer => {
+                                            layer.style.display = 'none';
+                                            layer.setAttribute('aria-hidden', 'true');
+                                        });
+                                        
+                                        const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
+                                        if (dimmed) {
+                                            dimmed.classList.add('dsp-none');
+                                        }
+                                        
+                                        document.documentElement.classList.remove('scroll_off');
+                                        document.body.classList.remove('scroll_off');
+                                    }
+                                });
+
+
+
                                 // 페이지당 표시항목 갯수 버튼 활성화 (팝업내부전용)
                                 document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
                                     btn.addEventListener('click',e=>{
@@ -94,7 +272,6 @@
                                     });
                                     });
 
-                                    // 취소 버튼
                                     document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
                                     btn.addEventListener('click',e=>{
                                         e.target.closest('.select_area')

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>17. 참여 프로그램 관리 - 목록 없음</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header"></header>
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <!-- notice start -->
+                        <div class="top_notice">
+                            <i></i>
+                            <p><strong>참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</strong></p>
+                            <button type="button" class="notice_expand ui-layer" data-my-layer="noticeLayer"><span class="blind">공지사항 열기</span></button>
+                        </div>
+                        <div class="bottom_layer type_title" tabindex="0" id="noticeLayer" style="z-index: 140; display: none;">
+                            <strong class="title">안내</strong>
+                            <div class="layer_contents" style="height: 216px;">
+                                <div class="notice_default">
+                                    <ul class="list_style">
+                                        <li><strong>참여신청서가 승인된 대학의 프로그램만 조회하실 수 있습니다.</strong></li>
+                                        <li><strong>참여를 희망하는 프로그램을 여러 개 신청할 수 있습니다.</strong></li>
+                                        <li><strong>프로그램 신청 후 대학 담당자의 선발 처리를 거쳐 참여가 확정됩니다.</strong></li>
+                                        <li><strong>프로그램 관련 자세한 내용은 해당 대학의 담당자에게 문의하시기 바랍니다.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="layer_close">
+                                <span class="blind">레이어 닫기</span>
+                            </button>
+                        </div>
+                        <!-- notice end -->
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li ><button type="button" onclick="">참여신청서</button></li>
+                                <li class="on"><button type="button" onclick="">참여 프로그램</button></li>
+                                <li><button type="button" onclick="">상담 이력</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="newtab_progwrap mt16" role="tablist">
+                            <button type="button" role="tab" class="tit" onclick="" aria-selected="false">프로그램 신청</button>
+                            <button type="button" role="tab" class="tit active" onclick="" aria-selected="true">참여 프로그램 관리</button>
+                        </div>
+
+                        <div class="pa_page_empty mt40">
+                            <figure class="mb16"><img src="./include/images/ico60_warning_navy.svg"></figure>
+                            <p class="t3_sb">프로그램을 신청한 이후 조회할 수 있습니다.</p>
+                            <div class="box_btn_wrap mt24">
+                                <a href="" class="btn large type01 fill">프로그램 신청</a>
+                            </div>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>
