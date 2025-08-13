@@ -28,17 +28,17 @@
 .allcare .dimmed_pop {z-index: 299; width: 100%; height: 100%; display: block; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.16);}
 .allcare .dimmed_pop.dsp-none {display: none;}
 
-.allcare .mt80 {margin-top: 80px !important;;}
-.allcare .mt40 {margin-top: 40px !important;;}
-.allcare .mt24 {margin-top: 24px !important;;}
-.allcare .mt16 {margin-top: 16px !important;;}
-.allcare .mb80 {margin-bottom: 80px !important;;}
-.allcare .mb40 {margin-bottom: 40px !important;;}
-.allcare .mb24 {margin-bottom: 24px !important;;}
-.allcare .mb16 {margin-bottom: 16px !important;;}
-.allcare .mb8 {margin-bottom: 8px !important;;}
-.allcare .pb24 {padding-bottom: 24px !important;;}
-.allcare .pt24 {padding-top: 24px !important;;}
+.allcare .mt80 {margin-top: 80px !important;}
+.allcare .mt40 {margin-top: 40px !important;}
+.allcare .mt24 {margin-top: 24px !important;}
+.allcare .mt16 {margin-top: 16px !important;}
+.allcare .mb80 {margin-bottom: 80px !important;}
+.allcare .mb40 {margin-bottom: 40px !important;}
+.allcare .mb24 {margin-bottom: 24px !important;}
+.allcare .mb16 {margin-bottom: 16px !important;}
+.allcare .mb8 {margin-bottom: 8px !important;}
+.allcare .pb24 {padding-bottom: 24px !important;}
+.allcare .pt24 {padding-top: 24px !important;}
 .allcare .pt16 {padding-top: 16px !important;}
 .allcare .pad_none {padding: initial !important;}
 .allcare .mag_none {margin: initial !important;}
