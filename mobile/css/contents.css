@@ -221,7 +221,7 @@
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */
 .mypage .progmg.allcare .prog_applysummary .apply_summary_inner .apply_summary_reason {padding-left: 24px; position: relative; font-size: 14px; font-weight: 400; line-height: 24px; color: #e0024b;}
 .mypage .progmg.allcare .prog_applysummary .apply_summary_inner .apply_summary_reason::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 3px; background: url('../images/mypage/ico16_reply.svg') no-repeat center / contain;}
-
+.mypage .progmg.allcare .radio_view_wrap .box_table_wrap dl label {font-weight: 600; font-size: 14px; line-height: 24px;}
 
 
 /* 참여신청서 - 회수(수정) (UI_ADHPAbS05) */
@@ -239,6 +239,50 @@
 
 
 /* [팝업] 개인정보 수집·이용·제공에 대한 동의서(참여자용) (UI_ADHPAbP10) */
+.mypage .progmg.allcare .newpop_pv .popup_header {height: 80px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner {padding: 0 20px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap {padding: 24px 0; margin-top: 8px; position: relative;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap:first-child {padding-top: 0;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap+.consent_wrap::after {content: ''; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color:#f3f5f6;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap h5 {font-size: 16px; color: #111; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_1 {background-color: #f8f8f8; border-radius: 8px; padding: 16px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_1 .chk_box {display: flex; align-items: center; gap: 10px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_1 .chk_box .new_chkbox {margin: 0;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_1 .chk_box label span {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_1 p {margin-top: 8px; font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 {margin-top: 8px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_desc p {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table {margin-top: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table .table_tit {font-size: 14px; color: #333; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table table {margin-top: 8px; border-bottom: 1px solid #ddd;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table tr th {padding: 8px 16px; font-size: 14px; color: #333; font-weight: 600; line-height: 24px; border: 1px solid #ddd; border-left: none; border-right: none; background-color: #f8f8f8;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table tr td {border: none; padding: 8px 0; font-size: 14px; color: #555; line-height: 24px; font-weight: 400;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table tr td span {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .radio_box .radio_tit {margin-top: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .radio_box .radio_tit p {font-size: 14px; color: #333; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .radio_box .radio_group {margin-top: 8px; display: flex; gap: 16px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .radio_box .radio_group .new_radio_item {margin: 0;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table.twin_table tr td {text-align: center;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .consent_wrap .consent_area.type_2 .con_box .radio_table.twin_table tr td+td {border-left: 1px solid #ddd;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .notice_wrap {background-color: #f8f8f8; border-radius: 8px; padding: 16px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .notice_wrap p {font-size: 14px; color: #333; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .notice_wrap ul {margin-top: 4px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .notice_wrap ul li {position: relative; padding-left: 16px; font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .notice_wrap ul li+li {margin-top: 4px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .notice_wrap ul li::before {content: ''; position: absolute; left: 4px; top: 10px; background-color: #333; width: 4px; height: 4px; border-radius: 50%;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .confirm_desc {margin: 24px 0 176px;}
+.mypage .progmg.allcare .newpop_pv .newpop_inner .confirm_desc p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+
+.mypage .progmg.allcare .newpop_pv .newpop_inner .btn_wrap {width: 100%; padding: 24px 20px; position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); background-color: #fff;}
+
+
+
+
+
+
+
+
+
 
 
 /* 프로그램 신청 - 목록 없음 (UI_ADHPAcM01) */
