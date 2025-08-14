@@ -137,7 +137,6 @@
 .allcare .newpop_page .search_form .write_form_area .box_datepicker .from_btn_box li.active button {color: var(--col_blue); font-weight: 600;}
 .allcare .newpop_page .search_form .write_form_area .btn_group li button {font-weight: 600;}
 
-
 .allcare .prog_list_sec .board_list .prog_item {padding: 16px 0; border-bottom: 1px solid #ddd;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_header {display: flex; align-items: stretch; gap: 4px;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_header>div span {height: 22px;}
@@ -226,6 +225,7 @@
 
 /* 참여신청서 - 회수(수정) (UI_ADHPAbS05) */
 
+
 /* [팝업] 운영 대학 검색 팝업 (UI_ADHPAbP06) */
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area {padding: 0 20px 148px;}
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_header .select_area .flex_box button {border: none; padding: 0 0 0 1.5rem;}
@@ -235,7 +235,6 @@
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_addr {margin: 8px 0 4px;}
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_addr p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_tel p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
-
 .mypage .progmg.allcare .newpop_uni_searchpop form.search_form {background-color: initial; padding-bottom: 200px;}
 .mypage .progmg.allcare .newpop_uni_searchpop .region_veiwpop_dimmed {z-index: 1000; width: 100%; height: 100%; display: block; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.16);}
 .mypage .progmg.allcare .newpop_uni_searchpop .region_veiwpop {padding: 32px 20px 40px; z-index: 1001; position: absolute; width: 100%; left: 50%; transform: translateX(-50%); bottom: 0; background-color: #fff; border-radius: 24px 24px 0 0;}
@@ -246,7 +245,6 @@
 .mypage .progmg.allcare .newpop_uni_searchpop .region_veiwpop .box_chk-group span {display: flex; gap: 6px; align-items: center; }
 .mypage .progmg.allcare .newpop_uni_searchpop .region_veiwpop .box_chk-group span input {margin: 0;}
 .mypage .progmg.allcare .newpop_uni_searchpop .region_veiwpop .box_chk-group span label {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
-
 .mypage .progmg.allcare .newpop_criteria {padding: initial; flex-direction: column;}
 .mypage .progmg.allcare .newpop_criteria .criteria_box {background-color: #f8f8f8; padding: 16px 0 8px 24px;}
 .mypage .progmg.allcare .newpop_criteria .criteria_box p.count_txt {font-size: 14px; color: #333; font-weight: 600; line-height: 24px;}
@@ -257,7 +255,6 @@
 .mypage .progmg.allcare .newpop_criteria .criteria_box .criteria_list li p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .mypage .progmg.allcare .newpop_criteria .criteria_box .criteria_list li p .listitem_closebtn {margin-left: 4px; padding: 3px 0; width: 16px; height: 16px; display: inline-block; background: url('../include/images/ico16_close.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .newpop_criteria .btn_box {background-color: #fff; padding: 24px 20px; display: flex; gap: 8px;}
-
 
 
 /* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP07) */
@@ -315,9 +312,6 @@
 .mypage .progmg.allcare .newpop_pv .newpop_inner .confirm_desc {margin: 24px 0 176px;}
 .mypage .progmg.allcare .newpop_pv .newpop_inner .confirm_desc p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .mypage .progmg.allcare .newpop_pv .newpop_inner .btn_wrap {width: 100%; padding: 24px 20px; position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); background-color: #fff;}
-
-
-
 
 
 

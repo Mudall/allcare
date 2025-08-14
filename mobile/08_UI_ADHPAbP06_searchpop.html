@@ -166,6 +166,7 @@
 
 
             <script>
+                // .criteria_list의 버튼 삭제 기능 구현 & 지역선택 버튼 구현
                 document.addEventListener('DOMContentLoaded', () => {
                     const $ = id => document.getElementById(id);
                     const $$ = sel => document.querySelectorAll(sel);
@@ -199,24 +200,6 @@
                     }));
 
                     initClose();
-
-                    window.RegionUtils = {
-                        getSelected: () => Array.from($$('input[name="PopchkRegion"]:checked:not(#PopchkRegionAll)'))
-                            .map(cb => ({value: cb.value, label: cb.nextElementSibling?.textContent})),
-                        addCriteria: (type, text) => {
-                            const list = document.querySelector('.criteria_list'), count = document.querySelector('.count');
-                            if (list) {
-                                list.insertAdjacentHTML('beforeend', `<li><p>${type} > ${text}<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>`);
-                                count && (count.textContent = +count.textContent + 1);
-                                initClose();
-                            }
-                        },
-                        clearAll: () => {
-                            const list = document.querySelector('.criteria_list'), count = document.querySelector('.count');
-                            list && (list.innerHTML = '');
-                            count && (count.textContent = '0');
-                        }
-                    };
                 });
             </script>
 
