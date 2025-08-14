@@ -277,6 +277,8 @@
 .mypage .progmg.allcare .newpop_major_result .newpop_save {display: flex; justify-content: center; gap: 16px;}
 
 
+
+
 /* [팝업] 개인정보 수집·이용·제공에 대한 동의서(참여자용) (UI_ADHPAbP10) */
 .mypage .progmg.allcare .newpop_pv .consent_wrap h5 {line-height: 48px; position: relative; display: inline-block;}
 .mypage .progmg.allcare .newpop_pv .consent_wrap h5.req_mark::after {content: ''; position: absolute; right: -16px; top: 45%; transform: translateY(-50%); border-radius: 50%; background-color: #ee2e62; width: 6px; height: 6px;}

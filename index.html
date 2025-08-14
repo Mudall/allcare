@@ -501,7 +501,7 @@
     </body>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const moLinks = document.querySelectorAll('td a:last-child');
+            const moLinks = document.querySelectorAll('td a:not(:first-child)');
 
             moLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
