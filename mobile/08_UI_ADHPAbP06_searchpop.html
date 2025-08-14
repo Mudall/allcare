@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko"  class="scroll_off" >
+    <head>
+        <meta charset="UTF-8">
+        <title>08. 운영 대학 검색 팝업 > 상세검색</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body class="scroll_off">
+        <div>
+            <header id="header"></header>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <!-- 팝업 시작 -->
+                        <div class="popup_full in_page newpop_page" role="dialog" aria-modal="true" aria-labelledby="popupTitle" style="display: block;"> 
+                            <div class="popup_header">
+                                <h2 class="popup_title">상세검색</h2>
+                                <button type="button" class="popup_close"><span class="blind">팝업 닫기</span></button>
+                            </div>
+
+                            <div class="newpop_uni_searchpop">
+                                <form class="search_form" role="search" aria-label="운영프로그램 검색">
+                                    <fieldset class="write_form_area">
+                                        <legend>운영대학</legend>
+                                        <div class="input_group">
+                                            <label for="university" class="sr_only">운영대학 입력</label>
+                                            <input type="text" id="university" name="university" placeholder="대학교명을 입력해 주세요.">
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="write_form_area">
+                                        <legend>지역</legend>
+                                        <div class="button_group">
+                                            <button type="button" id="regionSelectBtn" class="btn type01 large" aria-expanded="false" aria-controls="regionPopup">지역 선택</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+
+
+                                <div class="region_veiwpop_dimmed" id="regionDimmed" aria-hidden="true" style="display: none;"></div>
+                                <div class="region_veiwpop" id="regionPopup" role="dialog" aria-modal="true" aria-labelledby="regionPopupTitle" aria-hidden="true" style="display: none;">
+                                    <div class="tit_box">
+                                        <p id="regionPopupTitle">지역선택</p>
+                                        <button type="button" class="pop_close" id="regionCloseBtn" aria-label="지역선택 팝업 닫기"><span class="sr_only">닫기</span></button>
+                                    </div>
+                                    <fieldset class="box_chk-group" role="group" aria-labelledby="PopregionLegend">
+                                        <legend id="PopregionLegend" class="sr_only">지역 선택</legend>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegionAll" class="PopchkRegion" value="ALL">
+                                            <label for="PopchkRegionAll">전체</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion1" class="PopchkRegion" value="1">
+                                            <label for="PopchkRegion1">서울</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion2" class="PopchkRegion" value="2">
+                                            <label for="PopchkRegion2">부산</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion3" class="PopchkRegion" value="3">
+                                            <label for="PopchkRegion3">대구</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion4" class="PopchkRegion" value="4">
+                                            <label for="PopchkRegion4">인천</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion5" class="PopchkRegion" value="5">
+                                            <label for="PopchkRegion5">광주</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion6" class="PopchkRegion" value="6">
+                                            <label for="PopchkRegion6">대전</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion7" class="PopchkRegion" value="7">
+                                            <label for="PopchkRegion7">울산</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion8" class="PopchkRegion" value="8">
+                                            <label for="PopchkRegion8">세종</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion9" class="PopchkRegion" value="9">
+                                            <label for="PopchkRegion9">경기</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion10" class="PopchkRegion" value="10">
+                                            <label for="PopchkRegion10">충북</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion11" class="PopchkRegion" value="11">
+                                            <label for="PopchkRegion11">충남</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion12" class="PopchkRegion" value="12">
+                                            <label for="PopchkRegion12">전북</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion13" class="PopchkRegion" value="13">
+                                            <label for="PopchkRegion13">전남</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion14" class="PopchkRegion" value="14">
+                                            <label for="PopchkRegion14">경북</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion15" class="PopchkRegion" value="15">
+                                            <label for="PopchkRegion15">경남</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion16" class="PopchkRegion" value="16">
+                                            <label for="PopchkRegion16">강원</label>
+                                        </span>
+                                        <span>
+                                            <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion17" class="PopchkRegion" value="17">
+                                            <label for="PopchkRegion17">제주</label>
+                                        </span>
+                                    </fieldset>
+                                    <button type="button" class="applyregion btn type01 fill large" id="applyRegionBtn" aria-describedby="apply-desc">적용</button>
+                                    <div id="apply-desc" class="sr_only">선택한 지역 조건을 검색에 적용합니다</div>
+                                </div>
+                            </div>
+
+                            <div class="newpop_endfixed newpop_criteria">
+                                <div class="criteria_box">
+                                    <p class="count_txt">검색조건 <span class="count" aria-live="polite">13</span></p>
+                                    <ul class="criteria_list" role="list" aria-label="현재 적용된 검색조건">
+                                        <li role="listitem"><p>검색 키워드 > AAA대학교<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>
+                                        <li role="listitem"><p>검색 키워드 > BBB대학교<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>
+                                        <li role="listitem"><p>검색 키워드 > CCC대학교<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>
+                                        <li role="listitem"><p>검색 키워드 > DDD대학교<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>
+                                        <li role="listitem"><p>검색 키워드 > EEEE대학교<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>
+                                        <li role="listitem"><p>지역 > 서울<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                        <li role="listitem"><p>지역 > 경기<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                        <li role="listitem"><p>지역 > 강원<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                        <li role="listitem"><p>지역 > 경북<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                        <li role="listitem"><p>지역 > 인천<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                        <li role="listitem"><p>지역 > 부산<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                        <li role="listitem"><p>지역 > 제주<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                        <li role="listitem"><p>지역 > 전남<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></p></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="btn_box" role="group" aria-label="검색 실행 버튼">
+                                    <button type="button" class="btn large type03" onclick="location.href=''">초기화</button>
+                                    <button type="button" id="" class="btn large fill type01" onclick="">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const $ = id => document.getElementById(id);
+                    const $$ = sel => document.querySelectorAll(sel);
+                    
+                    const [btn, dimmed, popup, closeBtn, applyBtn, allCheck] = 
+                        ['regionSelectBtn', 'regionDimmed', 'regionPopup', 'regionCloseBtn', 'applyRegionBtn', 'PopchkRegionAll'].map($);
+                    
+                    const toggle = show => {
+                        if (!dimmed || !popup) return;
+                        dimmed.style.display = popup.style.display = show ? 'block' : 'none';
+                        btn?.setAttribute('aria-expanded', show);
+                        (show ? popup : btn)?.focus();
+                    };
+
+                    [btn, closeBtn, applyBtn].forEach(el => el?.addEventListener('click', e => toggle(e.target === btn)));
+                    dimmed?.addEventListener('click', () => toggle(false));
+                    document.addEventListener('keydown', e => e.key === 'Escape' && popup?.style.display === 'block' && toggle(false));
+
+                    const regionChecks = $$('input[name="PopchkRegion"]:not(#PopchkRegionAll)');
+                    allCheck?.addEventListener('change', e => regionChecks.forEach(cb => cb.checked = e.target.checked));
+                    regionChecks.forEach(cb => cb.addEventListener('change', () => 
+                        allCheck && (allCheck.checked = $$('input[name="PopchkRegion"]:not(#PopchkRegionAll):checked').length === regionChecks.length)
+                    ));
+
+                    const initClose = () => $$('.listitem_closebtn').forEach(btn => btn.addEventListener('click', () => {
+                        const item = btn.closest('li'), count = document.querySelector('.count');
+                        if (item) {
+                            item.style.cssText = 'opacity:0;transform:translateX(-10px);transition:all 0.3s';
+                            setTimeout(() => (item.remove(), count && (count.textContent = Math.max(0, +count.textContent - 1))), 300);
+                        }
+                    }));
+
+                    initClose();
+
+                    window.RegionUtils = {
+                        getSelected: () => Array.from($$('input[name="PopchkRegion"]:checked:not(#PopchkRegionAll)'))
+                            .map(cb => ({value: cb.value, label: cb.nextElementSibling?.textContent})),
+                        addCriteria: (type, text) => {
+                            const list = document.querySelector('.criteria_list'), count = document.querySelector('.count');
+                            if (list) {
+                                list.insertAdjacentHTML('beforeend', `<li><p>${type} > ${text}<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>`);
+                                count && (count.textContent = +count.textContent + 1);
+                                initClose();
+                            }
+                        },
+                        clearAll: () => {
+                            const list = document.querySelector('.criteria_list'), count = document.querySelector('.count');
+                            list && (list.innerHTML = '');
+                            count && (count.textContent = '0');
+                        }
+                    };
+                });
+            </script>
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>

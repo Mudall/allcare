@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko"  class="scroll_off" >
+    <head>
+        <meta charset="UTF-8">
+        <title>08.운영 대학 검색 팝업</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body class="scroll_off">
+        <div>
+            <header id="header"></header>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <!-- 팝업 시작 -->
+                        <div class="popup_full in_page newpop_page" role="dialog" aria-modal="true" aria-labelledby="popupTitle" style="display: block;"> 
+                            <div class="popup_header">
+                                <h2 class="popup_title">운영 프로그램</h2>
+                                <button type="button" class="popup_close"><span class="blind">팝업 닫기</span></button>
+                            </div>
+
+                            <div class="newpop_inner newpop_uni_search">
+                                <div class="search_area">
+                                    <input type="text" title="검색어 입력" id="srcSearchModeInput1" name="srcKeywordInputBox" maxlength="50"  value="" placeholder="검색어를 입력해주세요.">
+                                    <button type="button" class="btn middle white" onclick="">검색</button>
+                                    <a href="./08_UI_ADHPAbP06_searchpop.html" class="btn_detail">상세</a>
+                                </div>
+
+                                <div class="list_cont_area prog_list_sec">
+                                    <div class="board_header">
+                                        <p class="count"><span>전체</span> <strong>121,421</strong><span>건</span></p>
+                                        <div class="select_area">
+                                            <div class="flex_box"><button type="button" class="align select_btn" aria-haspopup="listbox" aria-expanded="false">10개씩 보기</button></div>
+                                            <div class="select_layer dsp-none" role="listbox" tabindex="-1">
+                                                <ul class="select_option">
+                                                    <li><input type="hidden" value="10"><button type="button" onclick="setSelectValue(this,'sort')">10개씩 보기</button></li>
+                                                    <li><input type="hidden" value="30"><button type="button" onclick="setSelectValue(this,'sort')">30개씩 보기</button></li>
+                                                    <li><input type="hidden" value="50"><button type="button" onclick="setSelectValue(this,'sort')">50개씩 보기</button></li>
+                                                </ul>
+                                                <ul class="btn_group"><li><button type="button" class="btn large gray select_close">취소</button></li></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+                                    <div class="board_list" role="radiogroup">
+                                        <fieldset class="radio_filed">
+                                            <ul>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_aaa" value="aaa">
+                                                        <label for="uni_aaa"><p>AAA 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_bbb" value="bbb">
+                                                        <label for="uni_bbb"><p>BBB 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_ccc" value="ccc">
+                                                        <label for="uni_ccc"><p>CCC 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_ddd" value="ddd">
+                                                        <label for="uni_ddd"><p>DDD 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_eee" value="eee">
+                                                        <label for="uni_eee"><p>EEE 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_fff" value="fff">
+                                                        <label for="uni_fff"><p>FFF 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_ggg" value="ggg">
+                                                        <label for="uni_ggg"><p>GGG 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_hhh" value="hhh">
+                                                        <label for="uni_hhh"><p>HHH 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_iii" value="iii">
+                                                        <label for="uni_iii"><p>III 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                                <li>
+                                                    <div class="new_radio_item radio_list_uni">
+                                                        <input type="radio" name="university" id="uni_jjj" value="jjj">
+                                                        <label for="uni_jjj"><p>JJJ 대학교</p></label>
+                                                    </div>
+                                                    <p class="radio_list_addr" aria-label="주소">대구광역시 달서구 달구벌대로 1095(신당동) 대학일자리플러스센터</p>
+                                                    <p class="radio_list_tel" aria-label="전화번호">010-1234-5678</p>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </div>
+                                    <div class="paging"></div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <div class="newpop_endfixed btn_box">
+                                <button type="button" class="btn large type03" onclick="location.href='';">닫기</button>
+                                <button type="submit" id="submitBtn" class="btn large fill type01" onclick="">적용</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>
