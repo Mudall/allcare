@@ -31,189 +31,11 @@
                                 <button type="button" class="popup_close"><span class="blind">레이어 닫기</span></button>
                             </div>
                             <div class="contents_popup">
-                                <form class="search_form" role="search" aria-label="운영프로그램 검색">
-                                    <fieldset class="write_form_area">
-                                        <legend>운영대학</legend>
-                                        <div class="input_group">
-                                            <label for="university" class="sr_only">운영대학 입력</label>
-                                            <input type="text" id="university" name="university" placeholder="운영대학을 입력해주세요" aria-describedby="university-help">
-                                            <div id="university-help" class="sr_only">운영하는 대학교명을 입력하세요</div>
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="write_form_area">
-                                    <legend>프로그램명</legend>
-                                    <div class="input_group">
-                                        <label for="program" class="sr_only">프로그램명 입력</label>
-                                        <input type="text" id="program" name="program" placeholder="프로그램명을 입력해주세요" aria-describedby="program-help">
-                                        <div id="program-help" class="sr_only">찾고자 하는 프로그램명을 입력하세요</div>
-                                    </div>
-                                    </fieldset>
-
-                                    <fieldset class="write_form_area">
-                                        <legend>지역</legend>
-                                        <div class="region_chk_group">
-                                            <ul role="group" aria-labelledby="region-legend">
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegionAll" value="ALL" checked aria-describedby="region-all-desc">
-                                                    <label for="chkRegionAll">전체</label>
-                                                    <div id="region-all-desc" class="sr_only">모든 지역 선택</div>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion1" value="1">
-                                                    <label for="chkRegion1">서울</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion2" value="2">
-                                                    <label for="chkRegion2">부산</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion3" value="3">
-                                                    <label for="chkRegion3">대구</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion4" value="4">
-                                                    <label for="chkRegion4">인천</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion5" value="5">
-                                                    <label for="chkRegion5">광주</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion6" value="6">
-                                                    <label for="chkRegion6">대전</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion7" value="7">
-                                                    <label for="chkRegion7">울산</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion8" value="8">
-                                                    <label for="chkRegion8">세종</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion9" value="9">
-                                                    <label for="chkRegion9">경기</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion10" value="10">
-                                                    <label for="chkRegion10">충북</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion11" value="11">
-                                                    <label for="chkRegion11">충남</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion12" value="12">
-                                                    <label for="chkRegion12">전북</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion13" value="13">
-                                                    <label for="chkRegion13">전남</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion14" value="14">
-                                                    <label for="chkRegion14">경북</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion15" value="15">
-                                                    <label for="chkRegion15">경남</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion16" value="16">
-                                                    <label for="chkRegion16">강원</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion17" value="17">
-                                                    <label for="chkRegion17">제주</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="write_form_area">
-                                        <legend>프로그램 유형</legend>
-                                        <div class="prog_chk_group">
-                                            <ul role="group" aria-labelledby="prog-type-legend">
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgTypeAll" value="ALL" checked aria-describedby="prog-type-all-desc">
-                                                    <label for="chkProgTypeAll">전체</label>
-                                                    <div id="prog-type-all-desc" class="sr_only">모든 프로그램 유형 선택</div>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType1" value="1">
-                                                    <label for="chkProgType1">자기주도형</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType2" value="2">
-                                                    <label for="chkProgType2">수요맞춤형</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType3" value="3">
-                                                    <label for="chkProgType3">지역기업 채용 연계</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType4" value="4">
-                                                    <label for="chkProgType4">현직자 멘토링</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType5" value="5">
-                                                    <label for="chkProgType5">기타</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="write_form_area">
-                                        <legend>운영 기간</legend>
-                                        <div class="date_select">
-                                            <label for="periodType" class="sr_only">조회 기간 유형</label>
-                                            <div class="period_selectbox">
-                                                <select id="periodType" name="period" aria-describedby="period-help">
-                                                    <option value="" selected>선택</option>
-                                                    <option value="start">시작일</option>
-                                                    <option value="end">종료일</option>
-                                                </select>
-                                                <div id="period-help" class="sr_only">검색할 날짜의 기준을 선택하세요</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="box_datepicker" role="group" aria-label="날짜 입력 영역">
-                                            <div class="period_box">
-                                                <div class="date_area">
-                                                    <input type="text" class="input_txt hasDatepicker" title="등록 시작일 입력" name="regDateStdt_datepicker" id="regDateStdt" placeholder="2025-00-00" inputmode="numeric" autocorrect="off"><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="regDateStdt" type="hidden" data-type="datepicker">
-                                                </div>
-                                                <div class="date_wave">
-                                                    <span class="sr_only">~</span>
-                                                </div>
-                                                <div class="date_area">
-                                                    <input type="text" class="input_txt hasDatepicker" title="등록 종료일 입력" name="regDateEndt_datepicker" id="regDateEndt" placeholder="2025-00-00" inputmode="numeric" autocorrect="off"><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="regDateEndt" type="hidden" data-type="datepicker">
-                                                </div>
-                                            </div>
-                                            <ul class="from_btn_box" role="group" aria-label="기간선택 퀵버튼">
-                                                <li><button type="button" value="clear"><span class="sr_only">모든 날짜를 </span>초기화<span class="sr_only">합니다</span></button></li>
-                                                <li><button type="button" value="today">오늘<span class="sr_only"> 날짜로 설정합니다</span></button></li>
-                                                <li><button type="button" value="1week">일주일<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li class="active"><button type="button" value="1month" aria-pressed="true">1개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li><button type="button" value="3month">3개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li><button type="button" value="6month">6개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li><button type="button" value="1year">1년<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                            </ul>
-                                        </div>
-                                        
-                                    </fieldset>
-
-                                    <div class="write_form_area">
-                                        <ul class="btn_group" role="group" aria-label="초기화 및 검색 버튼">
-                                            <li><button type="reset" class="btn large line_blue" aria-describedby="reset-help">초기화</button></li>
-                                            <li><button type="submit" class="btn large blue" aria-describedby="search-help">검색</button></li>
-                                        </ul>
-                                        <div class="sr_only">
-                                            <div id="reset-help">모든 입력 내용을 초기화합니다</div>
-                                            <div id="search-help">입력한 조건으로 프로그램을 검색합니다</div>
-                                        </div>
-                                    </div>
-                                </form>
+                                <div class="search_area mb0">
+                                    <input type="text" title="검색어 입력" id="srcSearchModeInput1" name="srcKeywordInputBox" maxlength="50" value="" placeholder="검색어를 입력해주세요.">
+                                    <button type="button" class="btn middle white" onclick="">검색</button>
+                                    <a href="./02_UI_ADHPAaM02_pop.html" class="btn_detail">상세</a>
+                                </div>
 
                                 <section aria-label="프로그램 목록" class="prog_list_sec">
                                     <div class="board_header">
@@ -239,10 +61,10 @@
                                                 area.querySelectorAll('.dimmed_pop, .select_layer')
                                                     .forEach(el=>el.classList.toggle('dsp-none'));
                                             });
-                                            });
+                                        });
 
-                                            // 취소 버튼
-                                            document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
+                                        // 취소 버튼
+                                        document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
                                             btn.addEventListener('click',e=>{
                                                 e.target.closest('.select_area')
                                                 .querySelectorAll('.dimmed_pop, .select_layer')

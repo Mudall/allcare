@@ -72,102 +72,12 @@
 
                             <div class="uniporg_cont pt24">
                                 <h3 class="t2_sb mb16">운영 대학</h3>
+                                <div class="search_area uniporg_sch_area">
+                                    <input type="text" title="검색어 입력" id="srcSearchModeInput1" name="srcKeywordInputBox" maxlength="50" value="" placeholder="검색어를 입력해주세요.">
+                                    <button type="button" class="btn middle white" onclick="">검색</button>
+                                    <a href="./08_UI_ADHPAbP06_searchpop.html" class="btn_detail">상세</a>
+                                </div>
                                 <div class="uniporg_cont_inner">
-                                    <div class="sch_cont_area">
-                                        <div class="uniporg_inner_region mb24">
-                                            <h4 class="s1_sb">지역</h4>
-                                            <fieldset>
-                                                <legend class="sr_only">지역 선택</legend>
-                                                <ul>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegionAll" value="ALL" checked="true">
-                                                        <label for="chkRegionAll">전체</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion1" value="1">
-                                                        <label for="chkRegion1">서울</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion2" value="2">
-                                                        <label for="chkRegion2">부산</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion3" value="3">
-                                                        <label for="chkRegion3">대구</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion4" value="4">
-                                                        <label for="chkRegion4">인천</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion5" value="5">
-                                                        <label for="chkRegion5">광주</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion6" value="6">
-                                                        <label for="chkRegion6">대전</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion7" value="7">
-                                                        <label for="chkRegion7">울산</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion8" value="8">
-                                                        <label for="chkRegion8">세종</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion9" value="9">
-                                                        <label for="chkRegion9">경기</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion10" value="10">
-                                                        <label for="chkRegion10">충북</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion11" value="11">
-                                                        <label for="chkRegion11">충남</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion12" value="12">
-                                                        <label for="chkRegion12">전북</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion13" value="13">
-                                                        <label for="chkRegion13">전남</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion14" value="14">
-                                                        <label for="chkRegion14">경북</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion15" value="15">
-                                                        <label for="chkRegion15">경남</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion16" value="16">
-                                                        <label for="chkRegion16">강원</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion17" value="17">
-                                                        <label for="chkRegion17">제주</label>
-                                                    </li>
-                                                </ul>
-                                            </fieldset>
-                                        </div>
-
-                                        <div class="uniporg_inner_uni mt24">
-                                            <h4 class="s1_sb">운영대학</h4>
-                                            <div class="">
-                                                <label for="uniInput" class="sr_only">대학명 입력</label>
-                                                <input type="text" id="uniInput" name="uniInput" placeholder="입력해주세요">
-                                            </div>
-                                        </div>
-
-                                        <div class="uniporg_inner_btn btn_box mt24">
-                                            <button type="button" id="srchBtn" class="btn semilarge fill type01" onclick="">검색</button>
-                                            <button type="button" class="btn semilarge type01" onclick="">초기화</button>
-                                        </div>
-                                    </div>
                                     <div class="list_cont_area mt24">
                                         <div class="board_header">
                                             <p class="count"><span>전체</span> <strong class="s1_sb semi_bold">121,421</strong><span>건</span></p>
