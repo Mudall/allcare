@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko"  class="scroll_off" >
+    <head>
+        <meta charset="UTF-8">
+        <title>09. 전공찾기팝업 - 조회/선택/등록</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body class="scroll_off">
+        <div>
+            <header id="header"></header>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <!-- 팝업 시작 -->
+                        <div class="popup_full in_page newpop_regi newpop_page" role="dialog" aria-modal="true" aria-labelledby="popupTitle" style="display: block;"> 
+                            <div class="popup_header">
+                                <h2 class="popup_title">전공 찾기</h2>
+                                <button type="button" class="popup_close"><span class="blind">팝업 닫기</span></button>
+                            </div>
+
+                            <div class="newpop_inner">
+                                <div class="search_area categroy_search">
+                                    <input type="text" title="검색어 입력" id="srcSearchModeInput1" name="srcKeywordInputBox" maxlength="50" value="" placeholder="검색어를 입력해주세요.">
+                                    <button type="button" class="btn middle white" onclick="">검색</button>
+                                </div>
+
+
+                                <div class="categroy_inner">
+                                    <div class="category_lv lv_1">
+                                        <div class="category_tit" id="categoryLv1Tit"><h5>1차 계열</h5></div>
+                                        <div class="category_placeholder" id="lv1Container" aria-labelledby="categoryLv1Tit">
+                                            <p class="category_placeholder_txt">1차 계열을 선택하세요</p>
+                                            <div class="category_lv_dimmed" style="display: none;"></div>
+                                            <div class="category_list_flot" role="list" aria-labelledby="categoryLv1Tit" id="lv1List" style="display: none;">
+                                                <ul>
+                                                    <li><button type="button" data-value="인문 계열">인문 계열</button></li>
+                                                    <li><button type="button" data-value="사회 계열">사회 계열</button></li>
+                                                    <li><button type="button" data-value="교육 계열">교육 계열</button></li>
+                                                    <li><button type="button" data-value="자연 계열">자연 계열</button></li>
+                                                    <li><button type="button" data-value="공학 계열">공학 계열</button></li>
+                                                    <li><button type="button" data-value="의약 계열">의약 계열</button></li>
+                                                    <li><button type="button" data-value="예체능 계열">예체능 계열</button></li>
+                                                </ul>
+                                                <button class="category_list_flotclose" onclick="closeSection('lv1Section')">취소</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="category_lv lv_2">
+                                        <div class="category_tit" id="categoryLv2Tit"><h5>2차 계열</h5></div>
+                                        <div class="category_placeholder" id="lv2Container" aria-labelledby="categoryLv2Tit">
+                                            <p class="category_placeholder_txt">2차 계열을 선택하세요.</p>
+                                            <div class="category_lv_dimmed" style="display: none;"></div>
+                                            <div class="category_list_flot" role="list" aria-labelledby="categoryLv2Tit" id="lv2List" style="display: none;">
+                                                <ul>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                </ul>
+                                                <button class="category_list_flotclose" onclick="closeSection('lv2Section')">취소</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="category_lv lv_3">
+                                        <div class="category_tit" id="categoryLv3Tit"><h5>3차 계열</h5></div>
+                                        <div class="category_placeholder" id="lv3Container" aria-labelledby="categoryLv3Tit">
+                                            <p class="category_placeholder_txt">3차 계열을 선택하세요.</p>
+                                            <div class="category_lv_dimmed" style="display: none;"></div>
+                                            <div class="category_list_flot" role="list" aria-labelledby="categoryLv3Tit" id="lv3List" style="display: none;">
+                                                <ul>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                    <li><button type="button" data-value="test">test</button></li>
+                                                </ul>
+                                                <button class="category_list_flotclose" onclick="closeSection('lv3Section')">취소</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    document.querySelectorAll('.category_placeholder').forEach(container => {
+                                        const dimmed = container.querySelector('.category_lv_dimmed');
+                                        const list = container.querySelector('.category_list_flot');
+
+                                        container.addEventListener('click', function (e) {
+                                            // 이미 열려 있는 다른 것들 닫기
+                                            document.querySelectorAll('.category_lv_dimmed').forEach(d => d.style.display = 'none');
+                                            document.querySelectorAll('.category_list_flot').forEach(l => l.style.display = 'none');
+
+                                            // 현재 요소 열기
+                                            dimmed.style.display = 'block';
+                                            list.style.display = 'block';
+
+                                            e.stopPropagation(); // 클릭 이벤트 버블링 방지
+                                        });
+
+                                        // dimmed 클릭 시 닫기
+                                        dimmed.addEventListener('click', function () {
+                                            dimmed.style.display = 'none';
+                                            list.style.display = 'none';
+                                        });
+
+                                        // list 내 닫기 버튼 클릭 시 닫기
+                                        const closeBtn = container.querySelector('.category_list_flotclose');
+                                        if (closeBtn) {
+                                            closeBtn.addEventListener('click', function (e) {
+                                                e.stopPropagation();
+                                                dimmed.style.display = 'none';
+                                                list.style.display = 'none';
+                                            });
+                                        }
+                                    });
+
+                                    // 전체 페이지 클릭 시 팝업 닫기 (선택)
+                                    document.addEventListener('click', function () {
+                                        document.querySelectorAll('.category_lv_dimmed').forEach(d => d.style.display = 'none');
+                                        document.querySelectorAll('.category_list_flot').forEach(l => l.style.display = 'none');
+                                    });
+                                    </script>
+
+
+                            </div>
+
+                            <div class="newpop_endfixed btn_box">
+                                <button type="button" class="btn large type03" onclick="location.href='';">닫기</button>
+                                <button type="submit" id="submitBtn" class="btn large fill type01" onclick="">적용</button>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+</html>
