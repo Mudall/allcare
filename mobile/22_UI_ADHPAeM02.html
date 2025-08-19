@@ -30,71 +30,102 @@
                             </ul>
                         </div>
 
-                        <div class="full_box">
+                        <div class="full_box custon_full_box">
+                            <div class="full_box_dimmed dimmed_pop dsp-none"></div>
                             <form>
                                 <fieldset>
                                     <legend class="sr_only">검색 조건 설정</legend>
-                                    <div class="form_group">
-                                        <label for="yearCountPerPage" class="sr_only">참여연도</label>
-                                        <select id="yearCountPerPage" name="yearCountPerPage" class="form_select">
-                                            <option value="" disabled selected>참여연도</option>
-                                        </select>
+                                    
+                                    <!-- 참여연도 선택 -->
+                                    <div class="select_area single_form_group form_group">
+                                        <label for="yearSelect" class="sr_only">참여연도</label>
+                                        <button type="button" class="form_select" id="yearSelect" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect yearSelectedValue" data-target="yearSelectLayer">
+                                            <span>참여 연도 전체</span>
+                                        </button>
+                                        <input type="hidden" name="year" value="">
+
+                                        <div class="select_layer" id="yearSelectLayer" role="listbox" aria-labelledby="yearSelect" aria-hidden="true" style="display: none;">
+                                            <ul class="select_option">
+                                                <li role="option">
+                                                    <button type="button" data-value="" data-text="참여연도 전체">참여연도 전체</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="2025" data-text="2025년">2025년</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="2024" data-text="2024년">2024년</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="2023" data-text="2023년">2023년</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="2022" data-text="2022년">2022년</button>
+                                                </li>
+                                            </ul>
+                                            <ul class="btn_group">
+                                                <li>
+                                                    <button type="button" class="btn large gray select_close">취소</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
 
-                                    <div class="form_group">
-                                        <label for="uniCountPerPage" class="sr_only">참여대학</label>
-                                        <select  id="uniCountPerPage"  name="uniCountPerPage"  class="form-select">
-                                            <option value="" disabled selected>참여대학</option>
-                                        </select>
+                                    <!-- 운영대학 선택 -->
+                                    <div class="select_area single_form_group form_group"> 
+                                        <label for="uniSelect" class="sr_only">운영대학</label>
+                                        <button type="button" class="form_select" id="uniSelect" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="uniSelect uniSelectedValue" data-target="uniSelectLayer">
+                                            <span>운영대학 전체</span>
+                                        </button>
+                                        <input type="hidden" name="university" value="">
+
+                                        <div class="select_layer" id="uniSelectLayer" role="listbox" aria-labelledby="uniSelect" aria-hidden="true" style="display: none;">
+                                            <ul class="select_option">
+                                                <li role="option">
+                                                    <button type="button" data-value="ALL" data-text="운영대학 전체">운영대학 전체</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="AAA" data-text="AAA 대학교">AAA 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="BBB" data-text="BBB 대학교">BBB 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="CCC" data-text="CCC 대학교">CCC 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="DDD" data-text="DDD 대학교">DDD 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="EEE" data-text="EEE 대학교">EEE 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="FFF" data-text="FFF 대학교">FFF 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="GGG" data-text="GGG 대학교">GGG 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="HHH" data-text="HHH 대학교">HHH 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="III" data-text="III 대학교">III 대학교</button>
+                                                </li>
+                                                <li role="option">
+                                                    <button type="button" data-value="JJJ" data-text="JJJ 대학교">JJJ 대학교</button>
+                                                </li>
+                                            </ul>
+                                            <ul class="btn_group">
+                                                <li>
+                                                    <button type="button" class="btn large gray select_close">취소</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <button type="submit"  class="fullbox_search_btn" aria-describedby="searchDescription">검색</button>
                             </form>
                         </div>
-                        <script>
-                        // select option요소 자동화
-                            document.addEventListener('DOMContentLoaded', function () {
-                                const yearSet = new Set();
-                                const uniSet = new Set();
 
-                                // 년도 
-                                document.querySelectorAll('.dl_year dd').forEach(td => {
-                                    const year = td.textContent.trim();
-                                    if (year) yearSet.add(year);
-                                });
-
-                                // 대학명 
-                                document.querySelectorAll('.dl_uni dd').forEach(td => {
-                                    const uni = td.textContent.trim();
-                                    if (uni) uniSet.add(uni);
-                                });
-
-                                // 최신순, 가나다 정렬
-                                const sortedYears = Array.from(yearSet).sort((a, b) => b - a); 
-                                const sortedUnis = Array.from(uniSet).sort((a, b) => a.localeCompare(b, 'ko'));
-
-                                const yearSelect = document.getElementById('yearCountPerPage');
-                                const uniSelect = document.getElementById('uniCountPerPage');
-                                if (yearSelect) yearSelect.title = '참여 연도 선택';
-                                if (uniSelect) uniSelect.title = '참여 대학 선택';
-
-
-                                // 옵션 추가
-                                sortedYears.forEach(year => {
-                                    const opt = document.createElement('option');
-                                    opt.value = year;
-                                    opt.textContent = `${year}년`;
-                                    yearSelect.appendChild(opt);
-                                });
-
-                                sortedUnis.forEach(uni => {
-                                    const opt = document.createElement('option');
-                                    opt.value = uni;
-                                    opt.textContent = uni;
-                                    uniSelect.appendChild(opt);
-                                });
-                            });
-                        </script>
 
 
 
@@ -115,7 +146,7 @@
                                 </div>
                             </div>
                             <script>
-                                // 페이지당 표시항목 갯수 버튼 활성화 (팝업내부전용)
+                                // @@개씩 보기 (팝업내부전용)
                                 document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
                                     btn.addEventListener('click',e=>{
                                         const area=e.target.closest('.select_area');

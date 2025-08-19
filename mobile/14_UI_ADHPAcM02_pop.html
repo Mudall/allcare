@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>14. 프로그램 신청 - 목록 있음 (팝업)</title>
+        <title>14. 프로그램 신청 - 목록 있음 > 상세검색</title>
         <script src="../mobile/include/js/head.js"></script>
         <script src="../mobile/include/js/mobile-ui-util.js"></script>
         <script src="../mobile/include/js/mobile-ui.js"></script>
@@ -25,194 +25,397 @@
 
                         <!-- 팝업 시작 -->
 
-                        <div class="popup_full in_page newpop_page" style="display: block;">
+                        <div class="popup_full in_page newpop_page detailpage_pop" style="display: block;">
                             <div class="popup_header">
                                 <h2 class="popup_title">상세검색</h2>
                                 <button type="button" class="popup_close"><span class="blind">레이어 닫기</span></button>
                             </div>
                             <div class="contents_popup">
-                                <form class="search_form detail_sch_form" role="search" aria-label="운영프로그램 검색">
+                                <form class="search_form" role="search" aria-label="운영프로그램 검색">
                                     <fieldset class="write_form_area">
                                         <legend>운영대학</legend>
                                         <div class="input_group">
                                             <label for="university" class="sr_only">운영대학 입력</label>
-                                            <input type="text" id="university" name="university" placeholder="운영대학을 입력해주세요" aria-describedby="university-help">
-                                            <div id="university-help" class="sr_only">운영하는 대학교명을 입력하세요</div>
+                                            <input type="text" id="university" name="university" placeholder="대학교명을 입력해 주세요." aria-describedby="university-help">
+                                            <div id="university-help" class="sr_only">찾고자 하는 대학교명을 입력해 주세요</div>
                                         </div>
                                     </fieldset>
 
                                     <fieldset class="write_form_area">
-                                    <legend>프로그램명</legend>
-                                    <div class="input_group">
-                                        <label for="program" class="sr_only">프로그램명 입력</label>
-                                        <input type="text" id="program" name="program" placeholder="프로그램명을 입력해주세요" aria-describedby="program-help">
-                                        <div id="program-help" class="sr_only">찾고자 하는 프로그램명을 입력하세요</div>
+                                        <legend>프로그램명</legend>
+                                        <div class="input_group">
+                                            <label for="program" class="sr_only">프로그램명 입력</label>
+                                            <input type="text" id="program" name="program" placeholder="프로그램명을 입력해 주세요." aria-describedby="program-help">
+                                            <div id="program-help" class="sr_only">찾고자 하는 프로그램명을 입력해 주세요</div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="form_area_region">
+                                        <fieldset class="write_form_area">
+                                            <legend>지역</legend>
+                                            <div class="button_group">
+                                                <button type="button" id="regionSelectBtn" class="btn type01 large" aria-expanded="false" aria-controls="regionPopup">지역 선택</button>
+                                            </div>
+                                        </fieldset>
+                                        <div class="region_veiwpop_dimmed" id="regionDimmed" aria-hidden="true" style="display: none;"></div>
+                                        <div class="region_veiwpop" id="regionPopup" role="dialog" aria-modal="true" aria-labelledby="regionPopupTitle" aria-hidden="true" style="display: none;">
+                                            <div class="tit_box">
+                                                <p id="regionPopupTitle">지역선택</p>
+                                                <button type="button" class="pop_close" id="regionCloseBtn" aria-label="지역선택 팝업 닫기"><span class="sr_only">닫기</span></button>
+                                            </div>
+                                            <fieldset class="box_chk-group" role="group" aria-labelledby="PopregionLegend">
+                                                <legend id="PopregionLegend" class="sr_only">지역 선택</legend>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegionAll" class="PopchkRegion" value="ALL">
+                                                    <label for="PopchkRegionAll">전체</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion1" class="PopchkRegion" value="1">
+                                                    <label for="PopchkRegion1">서울</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion2" class="PopchkRegion" value="2">
+                                                    <label for="PopchkRegion2">부산</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion3" class="PopchkRegion" value="3">
+                                                    <label for="PopchkRegion3">대구</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion4" class="PopchkRegion" value="4">
+                                                    <label for="PopchkRegion4">인천</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion5" class="PopchkRegion" value="5">
+                                                    <label for="PopchkRegion5">광주</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion6" class="PopchkRegion" value="6">
+                                                    <label for="PopchkRegion6">대전</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion7" class="PopchkRegion" value="7">
+                                                    <label for="PopchkRegion7">울산</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion8" class="PopchkRegion" value="8">
+                                                    <label for="PopchkRegion8">세종</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion9" class="PopchkRegion" value="9">
+                                                    <label for="PopchkRegion9">경기</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion10" class="PopchkRegion" value="10">
+                                                    <label for="PopchkRegion10">충북</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion11" class="PopchkRegion" value="11">
+                                                    <label for="PopchkRegion11">충남</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion12" class="PopchkRegion" value="12">
+                                                    <label for="PopchkRegion12">전북</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion13" class="PopchkRegion" value="13">
+                                                    <label for="PopchkRegion13">전남</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion14" class="PopchkRegion" value="14">
+                                                    <label for="PopchkRegion14">경북</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion15" class="PopchkRegion" value="15">
+                                                    <label for="PopchkRegion15">경남</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion16" class="PopchkRegion" value="16">
+                                                    <label for="PopchkRegion16">강원</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="PopchkRegion" id="PopchkRegion17" class="PopchkRegion" value="17">
+                                                    <label for="PopchkRegion17">제주</label>
+                                                </span>
+                                            </fieldset>
+                                            <button type="button" class="applyregion btn type01 fill large" id="applyRegionBtn" aria-describedby="apply-desc">적용</button>
+                                            <div id="apply-desc" class="sr_only">선택한 지역 조건을 검색에 적용합니다</div>
+                                        </div>
                                     </div>
-                                    </fieldset>
 
-                                    <fieldset class="write_form_area">
-                                        <legend>지역</legend>
-                                        <div class="region_chk_group">
-                                            <ul role="group" aria-labelledby="region-legend">
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegionAll" value="ALL" checked aria-describedby="region-all-desc">
-                                                    <label for="chkRegionAll">전체</label>
-                                                    <div id="region-all-desc" class="sr_only">모든 지역 선택</div>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion1" value="1">
-                                                    <label for="chkRegion1">서울</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion2" value="2">
-                                                    <label for="chkRegion2">부산</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion3" value="3">
-                                                    <label for="chkRegion3">대구</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion4" value="4">
-                                                    <label for="chkRegion4">인천</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion5" value="5">
-                                                    <label for="chkRegion5">광주</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion6" value="6">
-                                                    <label for="chkRegion6">대전</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion7" value="7">
-                                                    <label for="chkRegion7">울산</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion8" value="8">
-                                                    <label for="chkRegion8">세종</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion9" value="9">
-                                                    <label for="chkRegion9">경기</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion10" value="10">
-                                                    <label for="chkRegion10">충북</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion11" value="11">
-                                                    <label for="chkRegion11">충남</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion12" value="12">
-                                                    <label for="chkRegion12">전북</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion13" value="13">
-                                                    <label for="chkRegion13">전남</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion14" value="14">
-                                                    <label for="chkRegion14">경북</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion15" value="15">
-                                                    <label for="chkRegion15">경남</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion16" value="16">
-                                                    <label for="chkRegion16">강원</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkRegion" id="chkRegion17" value="17">
-                                                    <label for="chkRegion17">제주</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="write_form_area">
-                                        <legend>프로그램 유형</legend>
-                                        <div class="prog_chk_group">
-                                            <ul role="group" aria-labelledby="prog-type-legend">
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgTypeAll" value="ALL" checked aria-describedby="prog-type-all-desc">
-                                                    <label for="chkProgTypeAll">전체</label>
-                                                    <div id="prog-type-all-desc" class="sr_only">모든 프로그램 유형 선택</div>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType1" value="1">
-                                                    <label for="chkProgType1">자기주도형</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType2" value="2">
-                                                    <label for="chkProgType2">수요맞춤형</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType3" value="3">
-                                                    <label for="chkProgType3">지역기업 채용 연계</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType4" value="4">
-                                                    <label for="chkProgType4">현직자 멘토링</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" class="new_chkbox" name="chkProgType" id="chkProgType5" value="5">
-                                                    <label for="chkProgType5">기타</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="write_form_area">
-                                        <legend>운영 기간</legend>
-                                        <div class="date_select">
-                                            <label for="periodType" class="sr_only">조회 기간 유형</label>
-                                            <div class="period_selectbox">
-                                                <select id="periodType" name="period" aria-describedby="period-help">
-                                                    <option value="" selected>운영 기간을 선택해 주세요.</option>
-                                                    <option value="start">시작일</option>
-                                                    <option value="end">종료일</option>
-                                                </select>
-                                                <div id="period-help" class="sr_only">검색할 날짜의 기준을 선택하세요</div>
+                                    <div class="form_area_progtype">
+                                        <fieldset class="write_form_area">
+                                            <legend>프로그램 유형</legend>
+                                            <div class="button_group">
+                                                <button type="button" id="progtypeSelectBtn" class="btn type01 large" aria-expanded="false" aria-controls="progtypePopup">프로그램 유형 선택</button>
                                             </div>
+                                        </fieldset>
+                                        <div class="progtype_veiwpop_dimmed" id="progtypeDimmed" aria-hidden="true" style="display: none;"></div>
+                                        <div class="progtype_veiwpop" id="progtypePopup" role="dialog" aria-modal="true" aria-labelledby="progtypePopupTitle" aria-hidden="true" style="display: none;">
+                                            <div class="tit_box">
+                                                <p id="progtypePopupTitle">프로그램 유형 선택</p>
+                                                <button type="button" class="pop_close" id="progtypeCloseBtn" aria-label="프로그램 유형 선택 팝업 닫기"><span class="sr_only">닫기</span></button>
+                                            </div>
+                                            <fieldset class="box_chk-group" role="group" aria-labelledby="PopprogtypeLegend">
+                                                <legend id="PopprogtypeLegend" class="sr_only">프로그램 유형 선택</legend>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="Popchkprogtype" id="PopchkprogtypeAll" class="Popchkprogtype" value="ALL">
+                                                    <label for="PopchkprogtypeAll">전체</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="Popchkprogtype" id="Popchkprogtype2" class="Popchkprogtype" value="2">
+                                                    <label for="Popchkprogtype2">자기주도형</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="Popchkprogtype" id="Popchkprogtype3" class="Popchkprogtype" value="3">
+                                                    <label for="Popchkprogtype3">수요맞춤형</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="Popchkprogtype" id="Popchkprogtype4" class="Popchkprogtype" value="4">
+                                                    <label for="Popchkprogtype4">지역기업 채용 연계</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="Popchkprogtype" id="Popchkprogtype5" class="Popchkprogtype" value="5">
+                                                    <label for="Popchkprogtype5">현직자 멘토링</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" class="new_chkbox" name="Popchkprogtype" id="Popchkprogtype6" class="Popchkprogtype" value="6">
+                                                    <label for="Popchkprogtype6">기타</label>
+                                                </span>
+                                            </fieldset>
+                                            <button type="button" class="applyprogtype btn type01 fill large" id="applyprogtypeBtn" aria-describedby="apply-desc">적용</button>
+                                            <div id="apply-desc" class="sr_only">선택한 지역 조건을 검색에 적용합니다</div>
+                                        </div>
+                                    </div>
+
+
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', () => {
+                                            const $ = id => document.getElementById(id);
+                                            const $$ = sel => document.querySelectorAll(sel);
+                                            
+                                            // 팝업 컨트롤 함수
+                                            function createPopupController(config) {
+                                                const { btnId, dimmedId, popupId, closeBtnId, applyBtnId, allCheckId, checkboxName, selectedId, selectedListId } = config;
+                                                
+                                                const btn = $(btnId);
+                                                const dimmed = $(dimmedId);
+                                                const popup = $(popupId);
+                                                const closeBtn = $(closeBtnId);
+                                                const applyBtn = $(applyBtnId);
+                                                const allCheck = $(allCheckId);
+                                                const selectedDiv = $(selectedId);
+                                                const selectedList = $(selectedListId);
+                                                
+                                                const toggle = show => {
+                                                    if (!dimmed || !popup) return;
+                                                    dimmed.style.display = popup.style.display = show ? 'block' : 'none';
+                                                    btn?.setAttribute('aria-expanded', show);
+                                                    popup?.setAttribute('aria-hidden', !show);
+                                                    dimmed?.setAttribute('aria-hidden', !show);
+                                                    
+                                                    if (show) {
+                                                        popup?.focus();
+                                                        document.body.style.overflow = 'hidden';
+                                                    } else {
+                                                        btn?.focus();
+                                                        document.body.style.overflow = '';
+                                                    }
+                                                };
+
+                                                // 버튼 이벤트
+                                                btn?.addEventListener('click', () => toggle(true));
+                                                closeBtn?.addEventListener('click', () => toggle(false));
+                                                applyBtn?.addEventListener('click', () => {
+                                                    updateSelectedItems();
+                                                    toggle(false);
+                                                });
+                                                dimmed?.addEventListener('click', () => toggle(false));
+
+                                                // ESC 키로 팝업 닫기
+                                                document.addEventListener('keydown', e => {
+                                                    if (e.key === 'Escape' && popup?.style.display === 'block') {
+                                                        toggle(false);
+                                                    }
+                                                });
+
+                                                // 체크박스 기능
+                                                const checkboxes = $$(`input[name="${checkboxName}"]:not(#${allCheckId})`);
+                                                
+                                                // 전체 선택 기능
+                                                allCheck?.addEventListener('change', e => {
+                                                    checkboxes.forEach(cb => cb.checked = e.target.checked);
+                                                });
+
+                                                // 개별 체크박스 변경시 전체 선택 체크박스 상태 업데이트
+                                                checkboxes.forEach(cb => cb.addEventListener('change', () => {
+                                                    if (allCheck) {
+                                                        const checkedCount = $$(`input[name="${checkboxName}"]:not(#${allCheckId}):checked`).length;
+                                                        allCheck.checked = checkedCount === checkboxes.length;
+                                                    }
+                                                }));
+                                                
+
+                                                // 선택된 항목 표시 업데이트
+                                                function updateSelectedItems() {
+                                                    const checkedBoxes = $$(`input[name="${checkboxName}"]:checked:not(#${allCheckId})`);
+                                                    
+                                                    if (checkedBoxes.length === 0) {
+                                                        selectedDiv.style.display = 'none';
+                                                        return;
+                                                    }
+                                                    
+                                                    selectedDiv.style.display = 'block';
+                                                    selectedList.innerHTML = '';
+                                                    
+                                                    checkedBoxes.forEach(cb => {
+                                                        const label = cb.nextElementSibling.textContent;
+                                                        const tag = document.createElement('span');
+                                                        tag.className = 'selected-tag';
+                                                        tag.textContent = label;
+                                                        selectedList.appendChild(tag);
+                                                    });
+                                                    
+                                                    // 버튼 텍스트 업데이트
+                                                    const count = checkedBoxes.length;
+                                                    if (count > 0) {
+                                                        const firstLabel = checkedBoxes[0].nextElementSibling.textContent;
+                                                        btn.textContent = count === 1 ? firstLabel : `${firstLabel} 외 ${count - 1}개`;
+                                                    }
+                                                }
+                                                
+                                                return { toggle, updateSelectedItems };
+                                            }
+
+                                            // 지역 선택 팝업 초기화
+                                            const regionController = createPopupController({
+                                                btnId: 'regionSelectBtn',
+                                                dimmedId: 'regionDimmed',
+                                                popupId: 'regionPopup',
+                                                closeBtnId: 'regionCloseBtn',
+                                                applyBtnId: 'applyRegionBtn',
+                                                allCheckId: 'PopchkRegionAll',
+                                                checkboxName: 'PopchkRegion',
+                                                selectedId: 'regionSelected',
+                                                selectedListId: 'regionSelectedList'
+                                            });
+
+                                            // 프로그램 유형 선택 팝업 초기화
+                                            const progtypeController = createPopupController({
+                                                btnId: 'progtypeSelectBtn',
+                                                dimmedId: 'progtypeDimmed',
+                                                popupId: 'progtypePopup',
+                                                closeBtnId: 'progtypeCloseBtn',
+                                                applyBtnId: 'applyprogtypeBtn',
+                                                allCheckId: 'PopchkprogtypeAll',
+                                                checkboxName: 'Popchkprogtype',
+                                                selectedId: 'progtypeSelected',
+                                                selectedListId: 'progtypeSelectedList'
+                                            });
+
+                                            // 리스트 아이템 삭제 기능 (기존 코드 유지)
+                                            const initClose = () => $$('.listitem_closebtn').forEach(btn => btn.addEventListener('click', () => {
+                                                const item = btn.closest('li'), count = document.querySelector('.count');
+                                                if (item) {
+                                                    item.style.cssText = 'opacity:0;transform:translateX(-10px);transition:all 0.3s';
+                                                    setTimeout(() => {
+                                                        item.remove();
+                                                        if (count) count.textContent = Math.max(0, +count.textContent - 1);
+                                                    }, 300);
+                                                }
+                                            }));
+
+                                            initClose();
+                                        });
+                                    </script>
+
+                                    
+
+
+                                    <div class="search_hide_wrap">
+                                        <button class="view_btn view_toggle mt8" type="button"><span>추가 검색조건 열기</span></button>
+                                        <div class="view_content view_off">
+                                            <fieldset class="write_form_area">
+                                                <legend class="mb0">운영 기간</legend>
+                                                <div class="date_select">
+                                                    <label for="periodType" class="sr_only">조회 기간 유형</label>
+                                                    <div class="period_selectbox">
+                                                        <select id="periodType" name="period" aria-describedby="period-help">
+                                                            <option value="" selected>선택</option>
+                                                            <option value="start">시작일</option>
+                                                            <option value="end">종료일</option>
+                                                        </select>
+                                                        <div id="period-help" class="sr_only">검색할 날짜의 기준을 선택하세요</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="box_datepicker" role="group" aria-label="날짜 입력 영역">
+                                                    <div class="period_box">
+                                                        <div class="date_area">
+                                                            <input type="text" class="input_txt hasDatepicker" title="등록 시작일 입력" name="regDateStdt_datepicker" id="regDateStdt" placeholder="2025-00-00" inputmode="numeric" autocorrect="off"><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="regDateStdt" type="hidden" data-type="datepicker">
+                                                        </div>
+                                                        <div class="date_wave">
+                                                            <span class="sr_only">~</span>
+                                                        </div>
+                                                        <div class="date_area">
+                                                            <input type="text" class="input_txt hasDatepicker" title="등록 종료일 입력" name="regDateEndt_datepicker" id="regDateEndt" placeholder="2025-00-00" inputmode="numeric" autocorrect="off"><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="regDateEndt" type="hidden" data-type="datepicker">
+                                                        </div>
+                                                    </div>
+                                                    <ul class="from_btn_box" role="group" aria-label="기간선택 퀵버튼">
+                                                        <li><button type="button" value="clear"><span class="sr_only">모든 날짜를 </span>초기화<span class="sr_only">합니다</span></button></li>
+                                                        <li><button type="button" value="today">오늘<span class="sr_only"> 날짜로 설정합니다</span></button></li>
+                                                        <li><button type="button" value="1week">일주일<span class="sr_only"> 기간으로 설정합니다</span></button></li>
+                                                        <li class="active"><button type="button" value="1month" aria-pressed="true">1개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
+                                                        <li><button type="button" value="3month">3개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
+                                                        <li><button type="button" value="6month">6개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
+                                                        <li><button type="button" value="1year">1년<span class="sr_only"> 기간으로 설정합니다</span></button></li>
+                                                    </ul>
+                                                </div>
+                                            </fieldset>
+
+                                            <button class="view_btn view_btn_close mt24"><span>추가 검색조건 닫기</span></button>
                                         </div>
 
-                                        <div class="box_datepicker" role="group" aria-label="날짜 입력 영역">
-                                            <div class="period_box">
-                                                <div class="date_area">
-                                                    <input type="text" class="input_txt hasDatepicker" title="등록 시작일 입력" name="regDateStdt_datepicker" id="regDateStdt" placeholder="2025-00-00" inputmode="numeric" autocorrect="off"><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="regDateStdt" type="hidden" data-type="datepicker">
-                                                </div>
-                                                <div class="date_wave">
-                                                    <span class="sr_only">~</span>
-                                                </div>
-                                                <div class="date_area">
-                                                    <input type="text" class="input_txt hasDatepicker" title="등록 종료일 입력" name="regDateEndt_datepicker" id="regDateEndt" placeholder="2025-00-00" inputmode="numeric" autocorrect="off"><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="regDateEndt" type="hidden" data-type="datepicker">
-                                                </div>
-                                            </div>
-                                            <ul class="from_btn_box" role="group" aria-label="기간선택 퀵버튼">
-                                                <li><button type="button" value="clear"><span class="sr_only">모든 날짜를 </span>초기화<span class="sr_only">합니다</span></button></li>
-                                                <li><button type="button" value="today">오늘<span class="sr_only"> 날짜로 설정합니다</span></button></li>
-                                                <li><button type="button" value="1week">일주일<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li class="active"><button type="button" value="1month" aria-pressed="true">1개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li><button type="button" value="3month">3개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li><button type="button" value="6month">6개월<span class="sr_only"> 기간으로 설정합니다</span></button></li>
-                                                <li><button type="button" value="1year">1년<span class="sr_only"> 기간으로 설정합니다</span></button></li>
+                                    </div>
+
+                                    <script>
+                                        document.querySelector('.view_toggle').onclick = function() {
+                                            const content = document.querySelector('.view_content');
+                                            const btn = this;
+                                            
+                                            if (content.style.display === 'none') {
+                                                btn.style.display = 'block';
+                                            } else {
+                                                content.style.display = 'block';
+                                                btn.style.display = 'none';
+                                            }
+                                        };
+                                    </script>
+
+
+
+                                    <div class="newpop_endfixed newpop_criteria">
+                                        <div class="criteria_box">
+                                            <p class="count_txt">검색조건 <span class="count" aria-live="polite">13</span></p>
+                                            <ul class="criteria_list" role="list" aria-label="현재 적용된 검색조건">
+                                                <li role="listitem"><p>검색 키워드 &gt; AAA대학교<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span></button></p></li>
+                                                <li role="listitem"><p>지역 &gt; 서울<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span><p></p></button></p></li>
+                                                <li role="listitem"><p>지역 &gt; 경기<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span><p></p></button></p></li>
+                                                <li role="listitem"><p>프로그램 유형 &gt; 자기주도형<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span><p></p></button></p></li>
+                                                <li role="listitem"><p>프로그램 유형 &gt; 수요맞춤형<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span><p></p></button></p></li>
+                                                <li role="listitem"><p>프로그램 유형 &gt; 현직자 멘토링<button class="listitem_closebtn"><span class="sr_only">키워드 닫기</span><p></p></button></p></li>
                                             </ul>
                                         </div>
                                         
-                                    </fieldset>
-                                </form>
-                                <div class="write_form_area fixed_form_area">
-                                    <ul class="btn_group" role="group" aria-label="초기화 및 검색 버튼">
-                                        <li><button type="reset" class="btn large line_blue" aria-describedby="reset-help">초기화</button></li>
-                                        <li><button type="submit" class="btn large blue" aria-describedby="search-help">검색</button></li>
-                                    </ul>
-                                    <div class="sr_only">
-                                        <div id="reset-help">모든 입력 내용을 초기화합니다</div>
-                                        <div id="search-help">입력한 조건으로 프로그램을 검색합니다</div>
+                                        <div class="btn_box" role="group" aria-label="검색 실행 버튼">
+                                            <button type="button" class="btn large type03" onclick="location.href=''">초기화</button>
+                                            <button type="button" id="" class="btn large fill type01" onclick="">검색</button>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
+
+                                
+
                             </div>
                         </div>
                     </div>

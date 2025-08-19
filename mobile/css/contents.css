@@ -229,6 +229,7 @@
 /* 참여신청서 - 회수(수정) (UI_ADHPAbS05) */
 
 
+
 /* [팝업] 운영 대학 검색 팝업 (UI_ADHPAbP06) */
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area {padding: 0 20px 148px;}
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_header .select_area .flex_box button {border: none; padding: 0 0 0 1.5rem;}
@@ -367,9 +368,13 @@
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_uni {margin-top: 4px;}
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_tit {margin: 4px 0;}
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_year {margin-bottom: 16px; font-size: 14px; line-height: 24px; color: #333; font-weight: 400;}
-.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick {margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;}
-.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick_desc {font-size: 14px; line-height: 24px; color: var(--col_blue); font-weight: 600;}
-.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick_day {font-size: 14px; line-height: 24px; color: #333; font-weight: 400;}
+.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick {margin-bottom: 8px; display: flex; align-items: center; justify-content: flex-start; gap: 17px;}
+.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick>p {position: relative;}
+.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick>p+p::after {content: ''; position: absolute; width: 1px; height: 12px; background-color: #ddd; left: -8px; top: 50%; transform: translateY(-50%);}
+.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick_desc {font-size: 14px; line-height: 24px; color: #ff0000; font-weight: 600;}
+.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick_desc time {margin-left: 4px; font-size: 14px; line-height: 24px; color: #555; font-weight: 400;}
+.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick_return, 
+.mypage .progmg.allcare .prog_spec_twin .board_list .prog_pick_year {font-size: 14px; line-height: 24px; color: #555; font-weight: 400;}
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_details_wrap {background-color: #f8f8f8; border-radius: 12px; padding: 16px;}
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_details_wrap .btn_box {margin-top: 16px; display: flex; align-items: center; gap: 8px;}
 .mypage .progmg.allcare .prog_spec_twin .board_list .prog_details_wrap .btn_box button {background-color: #fff;}
@@ -408,7 +413,7 @@
 .mypage .progmg.allcare .full_box.custon_full_box .form_group {background-color: #fff;}
 .mypage .progmg.allcare .full_box.custon_full_box .form_group .form_select {width: 100%; height: 100%; display: flex; align-items: center; padding: 6px 0 6px 14px; letter-spacing: -0.06em;}
 .mypage .progmg.allcare .full_box.custon_full_box .form_group .form_select span {max-width: 88px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 16px; line-height: 26px; color: #555; font-weight: 400; letter-spacing: -0.06em;}
-
+.mypage .progmg.allcare .full_box.custon_full_box .form_group.single_form_group .select_close {font-weight: 600;}
 
 /* 참여 프로그램 관리 - 조회 (UI_ADHPAdS03) */
 .mypage .progmg.allcare .prog_view_sec dd span {color: var(--col_blue); font-weight: 600;}

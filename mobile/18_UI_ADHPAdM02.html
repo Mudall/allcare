@@ -67,31 +67,29 @@
                                     <legend class="sr_only">검색 조건 설정</legend>
                                     
                                     <!-- 참여연도 선택 -->
-                                    <div class="select_area single form_group">
+                                    <div class="select_area single_form_group form_group">
                                         <label for="yearSelect" class="sr_only">참여연도</label>
-                                        <button type="button" class="form_select" id="yearSelect" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect yearSelectedValue" data-target="yearSelectLayer"><span>참여 연도 전체</span></button>
+                                        <button type="button" class="form_select" id="yearSelect" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect yearSelectedValue" data-target="yearSelectLayer">
+                                            <span>참여 연도 전체</span>
+                                        </button>
+                                        <input type="hidden" name="year" value="">
 
                                         <div class="select_layer" id="yearSelectLayer" role="listbox" aria-labelledby="yearSelect" aria-hidden="true" style="display: none;">
                                             <ul class="select_option">
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button">참여연도 전체</button>
+                                                <li role="option">
+                                                    <button type="button" data-value="" data-text="참여연도 전체">참여연도 전체</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="2025">
-                                                    <button type="button"><span>2025년</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="2025" data-text="2025년">2025년</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="2024">
-                                                    <button type="button"><span>2024년</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="2024" data-text="2024년">2024년</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="2023">
-                                                    <button type="button"><span>2023년</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="2023" data-text="2023년">2023년</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="2022">
-                                                    <button type="button"><span>2022년</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="2022" data-text="2022년">2022년</button>
                                                 </li>
                                             </ul>
                                             <ul class="btn_group">
@@ -103,55 +101,47 @@
                                     </div>
 
                                     <!-- 운영대학 선택 -->
-                                    <div class="select_area single form_group"> 
+                                    <div class="select_area single_form_group form_group"> 
                                         <label for="uniSelect" class="sr_only">운영대학</label>
-                                        <button type="button" class="form_select" id="uniSelect" aria-haspopup="listbox"  aria-expanded="false" aria-labelledby="uniSelect uniSelectedValue" data-target="uniSelectLayer"><span>운영대학 전체</span></button>
+                                        <button type="button" class="form_select" id="uniSelect" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="uniSelect uniSelectedValue" data-target="uniSelectLayer">
+                                            <span>운영대학 전체</span>
+                                        </button>
+                                        <input type="hidden" name="university" value="">
 
                                         <div class="select_layer" id="uniSelectLayer" role="listbox" aria-labelledby="uniSelect" aria-hidden="true" style="display: none;">
                                             <ul class="select_option">
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button>운영대학 전체</button>
+                                                <li role="option">
+                                                    <button type="button" data-value="ALL" data-text="운영대학 전체">운영대학 전체</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>AAA 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="AAA" data-text="AAA 대학교">AAA 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>BBB 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="BBB" data-text="BBB 대학교">BBB 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>CCC 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="CCC" data-text="CCC 대학교">CCC 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>DDD 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="DDD" data-text="DDD 대학교">DDD 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>EEE 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="EEE" data-text="EEE 대학교">EEE 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>FFF 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="FFF" data-text="FFF 대학교">FFF 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>GGG 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="GGG" data-text="GGG 대학교">GGG 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>HHH 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="HHH" data-text="HHH 대학교">HHH 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>III 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="III" data-text="III 대학교">III 대학교</button>
                                                 </li>
-                                                <li onclick="" role="option">
-                                                    <input type="hidden" value="">
-                                                    <button type="button"><span>JJJ 대학교</span></button>
+                                                <li role="option">
+                                                    <button type="button" data-value="JJJ" data-text="JJJ 대학교">JJJ 대학교</button>
                                                 </li>
                                             </ul>
                                             <ul class="btn_group">
@@ -185,101 +175,102 @@
                                 </div>
                             </div>
                             
-                            <script>
-                                // 참여연도/운영대학 플로팅팝업
-                                document.addEventListener('DOMContentLoaded', function() {
-                                    document.querySelectorAll('.single.form_group .form_select').forEach(button => {
-                                        button.addEventListener('click', function(e) {
-                                            e.stopPropagation();
-                                            const targetId = this.getAttribute('data-target');
-                                            const layer = document.getElementById(targetId);
-                                            
-                                            closeAllLayers();
-                                            
-                                            if (layer) {
-                                                this.setAttribute('aria-expanded', 'true');
-                                                layer.style.display = 'block';
-                                                layer.setAttribute('aria-hidden', 'false');
+                                <script>
+                                    // 참여연도/운영대학 선택
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        document.querySelectorAll('.single_form_group.form_group .form_select').forEach(button => {
+                                            button.addEventListener('click', function(e) {
+                                                e.stopPropagation();
+                                                const targetId = this.getAttribute('data-target');
+                                                const layer = document.getElementById(targetId);
                                                 
-                                                const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
-                                                if (dimmed) {
-                                                    dimmed.classList.remove('dsp-none');
+                                                closeAllLayers();
+                                                
+                                                if (layer) {
+                                                    this.setAttribute('aria-expanded', 'true');
+                                                    layer.style.display = 'block';
+                                                    layer.setAttribute('aria-hidden', 'false');
+                                                    
+                                                    const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
+                                                    if (dimmed) {
+                                                        dimmed.classList.remove('dsp-none');
+                                                    }
+                                                    
+                                                    document.body.classList.add('scroll_off');
+                                                }
+                                            });
+                                        });
+
+                                        // 옵션 선택 시 텍스트 업데이트
+                                        document.querySelectorAll('.select_option button[data-value]').forEach(button => {
+                                            button.addEventListener('click', function(e) {
+                                                e.preventDefault();
+                                                const value = this.getAttribute('data-value');
+                                                const text = this.getAttribute('data-text');
+                                                const layer = this.closest('.select_layer');
+                                                const selectButton = document.querySelector(`[data-target="${layer.id}"]`);
+                                                const hiddenInput = layer.closest('.form_group').querySelector('input[type="hidden"]');
+                                                selectButton.querySelector('span').textContent = text;
+                                                if (hiddenInput) {
+                                                    hiddenInput.value = value;
                                                 }
                                                 
-                                                document.documentElement.classList.add('scroll_off');
-                                                document.body.classList.add('scroll_off');
+                                                closeAllLayers();
+                                            });
+                                        });
+
+                                        document.querySelectorAll('.select_close').forEach(button => {
+                                            button.addEventListener('click', closeAllLayers);
+                                        });
+
+                                        document.addEventListener('click', function(e) {
+                                            if (!e.target.closest('.select_area')) {
+                                                closeAllLayers();
                                             }
                                         });
-                                    });
 
-                                    document.querySelectorAll('.select_option button').forEach(button => {
-                                        button.addEventListener('click', function() {
-                                            const value = this.getAttribute('data-value');
-                                            const text = this.getAttribute('data-text');
-                                            const layer = this.closest('.select_layer');
-                                            const selectButton = document.querySelector(`[data-target="${layer.id}"]`);
+                                        document.addEventListener('keydown', function(e) {
+                                            if (e.key === 'Escape') {
+                                                closeAllLayers();
+                                            }
+                                        });
+
+                                        // 모든 레이어 닫기 함수
+                                        function closeAllLayers() {
+                                            document.querySelectorAll('.form_select').forEach(btn => {
+                                                btn.setAttribute('aria-expanded', 'false');
+                                            });
+                                            document.querySelectorAll('.select_layer').forEach(layer => {
+                                                layer.style.display = 'none';
+                                                layer.setAttribute('aria-hidden', 'true');
+                                            });
                                             
-                                            selectButton.querySelector('span').textContent = text;
-                                            layer.closest('.form_group').querySelector('input[type="hidden"]').value = value;
+                                            const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
+                                            if (dimmed) {
+                                                dimmed.classList.add('dsp-none');
+                                            }
                                             
-                                            closeAllLayers();
+                                            document.body.classList.remove('scroll_off');
+                                        }
+
+                                        // @@개씩 보기 
+                                        document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
+                                            btn.addEventListener('click',e=>{
+                                                const area=e.target.closest('.select_area');
+                                                area.querySelectorAll('.dimmed_pop, .select_layer')
+                                                    .forEach(el=>el.classList.toggle('dsp-none'));
+                                            });
+                                        });
+
+                                        document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
+                                            btn.addEventListener('click',e=>{
+                                                e.target.closest('.select_area')
+                                                .querySelectorAll('.dimmed_pop, .select_layer')
+                                                .forEach(el=>el.classList.add('dsp-none'));
+                                            });
                                         });
                                     });
-
-                                    document.querySelectorAll('.select_close').forEach(button => {
-                                        button.addEventListener('click', closeAllLayers);
-                                    });
-
-                                    document.addEventListener('click', function(e) {
-                                        if (!e.target.closest('.select_area')) {
-                                            closeAllLayers();
-                                        }
-                                    });
-
-                                    document.addEventListener('keydown', function(e) {
-                                        if (e.key === 'Escape') {
-                                            closeAllLayers();
-                                        }
-                                    });
-
-                                    function closeAllLayers() {
-                                        document.querySelectorAll('.form_select').forEach(btn => {
-                                            btn.setAttribute('aria-expanded', 'false');
-                                        });
-                                        document.querySelectorAll('.select_layer').forEach(layer => {
-                                            layer.style.display = 'none';
-                                            layer.setAttribute('aria-hidden', 'true');
-                                        });
-                                        
-                                        const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
-                                        if (dimmed) {
-                                            dimmed.classList.add('dsp-none');
-                                        }
-                                        
-                                        document.documentElement.classList.remove('scroll_off');
-                                        document.body.classList.remove('scroll_off');
-                                    }
-                                });
-
-
-
-                                // 페이지당 표시항목 갯수 버튼 활성화 (팝업내부전용)
-                                document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
-                                    btn.addEventListener('click',e=>{
-                                        const area=e.target.closest('.select_area');
-                                        area.querySelectorAll('.dimmed_pop, .select_layer')
-                                            .forEach(el=>el.classList.toggle('dsp-none'));
-                                    });
-                                    });
-
-                                    document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
-                                    btn.addEventListener('click',e=>{
-                                        e.target.closest('.select_area')
-                                        .querySelectorAll('.dimmed_pop, .select_layer')
-                                        .forEach(el=>el.classList.add('dsp-none'));
-                                    });
-                                });
-                            </script>
+                                </script>
 
                             <div class="board_list">
                                 <ul class="prog_ul">
@@ -300,10 +291,9 @@
                                             </div>
                                             <div class="prog_uni"><p>AAA 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">신청 <time datetime="2025-01-01">2025-01-01</time></p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -335,10 +325,9 @@
                                             </div>
                                             <div class="prog_uni"><p>BBB 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
-                                            <div class="prog_pick disabled">
+                                            <div class="prog_pick">
                                                 <p class="prog_pick_desc">선발</p>
-                                                <p class="prog_pick_day disabled">2025-12-31</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -370,10 +359,9 @@
                                             </div>
                                             <div class="prog_uni"><p>CCC 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">선발</p>
-                                                <p class="prog_pick_day disabled">2025-12-31</p>
+                                                <p class="prog_pick_desc">미선발</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -405,10 +393,9 @@
                                             </div>
                                             <div class="prog_uni"><p>DDD 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">선발/수료</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -440,10 +427,10 @@
                                             </div>
                                             <div class="prog_uni"><p>EEE 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">선발</p>
+                                                <p class="prog_pick_return">만족도 응답 완료</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -475,10 +462,9 @@
                                             </div>
                                             <div class="prog_uni"><p>FFF 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">미선발</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -510,10 +496,9 @@
                                             </div>
                                             <div class="prog_uni"><p>GGG 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">미선발</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -545,10 +530,9 @@
                                             </div>
                                             <div class="prog_uni"><p>HHH 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">미선발</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -580,10 +564,9 @@
                                             </div>
                                             <div class="prog_uni"><p>III 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">미선발</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
@@ -615,10 +598,9 @@
                                             </div>
                                             <div class="prog_uni"><p>JJJ 대학교</p></div>
                                             <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
-                                            <div class="prog_year">참여연도 : 2025</div>
                                             <div class="prog_pick">
-                                                <p class="prog_pick_desc">신청</p>
-                                                <p class="prog_pick_day">2025-12-31</p>
+                                                <p class="prog_pick_desc">미선발</p>
+                                                <p class="prog_pick_year">참여연도 : 2025</p>
                                             </div>
                                             <div class="prog_details_wrap">
                                                 <ul class="prog_details">
