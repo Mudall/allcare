@@ -66,7 +66,7 @@
 .allcare .disabled {display: none;}
 
 /* 운영대학 목록 (UI_ADHPAaM01) */
-.support .youth.allcare .gsprog_uni .step_cont_area ol {display: flex; flex-direction: column;  gap: 24px;}
+.support .youth.allcare .gsprog_uni .step_cont_area ol {display: flex; flex-direction: column; gap: 24px;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li {position: relative; width: 100%;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li+li::after {content: ''; position: absolute; top: -24px; left: 50%; transform: translateX(-50%); background: url('../images/support/ico24_arrow2_down.svg') no-repeat center / contain; width: 24px; height: 24px;}
 .support .youth.allcare .gsprog_uni .step_cont_area ol li .tit {display: flex; gap: 8px; align-items: center; padding: 12px 16px; border: 1px solid var(--col_blue); border-radius: 8px 8px 0 0; background-color: var(--col_blue);}
