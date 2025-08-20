@@ -269,11 +269,11 @@
                         let allAnswered = true;
 
                         questions.forEach(q => {
-                            const name = q.querySelector('input[type="radio"]')?.name;
-                            const selected = q.querySelector(`input[name="${name}"]:checked`);
+                            const radios = q.querySelectorAll('input[type="radio"]');
+                            const selected = q.querySelector('input[type="radio"]:checked');
                             const msg = q.querySelector('.req_txt');
 
-                            if (!selected) {
+                            if (radios.length > 0 && !selected) {
                                 allAnswered = false;
                                 msg?.removeAttribute('hidden');
                             } else {
@@ -300,7 +300,7 @@
                             });
                         });
                     });
-                    </script>
+                </script>
             </div>
             <!-- 본문 내용 -->
 
