@@ -36,7 +36,9 @@
 .allcare .new_ipt .input_txt {padding-left: 12px;} 
 .allcare [class^='btn'].medium.newbtn_w60 {padding: 0 12px; min-width: 60px;}
 .allcare [class^='btn'].medium.newbtn_w88 {padding: 0 16px; min-width: 88px;}
-.allcare .new_radio_item {display: flex; justify-content: center; align-items: center; position: relative;}
+/* 250820 수정 */
+.allcare .new_radio_item {display: flex; align-items: center; position: relative;}
+/* 250820 수정 */
 .allcare .new_radio_item + .new_radio_item {margin-left: 16px;}
 .allcare .new_radio_item input[type="radio"] {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(100%); border: 0;}
 .allcare .new_radio_item label {height: auto; display: flex; align-items: center; cursor: pointer;}
