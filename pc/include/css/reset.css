@@ -10,18 +10,20 @@ b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,the
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
-	font:16px 'Pretendard',sans-serif;
+	font-family: 'Pretendard','sans-serif';
+	font-size: 16px;
 }
 *, *:before, *:after {box-sizing:border-box; word-break: break-all;}
 button, textarea {
 	-webkit-text-size-adjust:none;
-	-webkit-appearance: none;
+	-webkit-appearance:none;
 	-webkit-border-radius:0;
 	border:none;
 	border-radius:0;
 	margin:0;
 	padding:0;
-	font:16px 'Pretendard',sans-serif;
+	font-family: 'Pretendard','sans-serif';
+	font-size: 16px;
 }
 button, a {
 	background:none;
@@ -45,7 +47,8 @@ select {
 	-webkit-font-smoothing:antialiased;
 	margin:0;
 	padding:0;
-	font:16px 'Pretendard',sans-serif;
+	font-family: 'Pretendard','sans-serif';
+	font-size: 16px;
 }
 address,caption,cite,code,dfn,em,strong,th,var {
 	font-style:normal;
@@ -67,6 +70,7 @@ legend,caption, .blind {
 a,a:active,input:active,button:active,select:active,label:active,
 a:focus,input:focus,button:focus,select:focus,label:focus {
 	text-decoration:none;
+	/* outline:none; */
 }
 a,span,em,strong {
 	color:inherit;
