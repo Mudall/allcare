@@ -775,7 +775,6 @@ button:focus { outline: 2px dashed #888; z-index:0;}
   width: 1rem;
   height: 1rem;
   background: url("../images/ico16_arrow_right.svg") 0 0 no-repeat;
-  background: url("../images/ico16_arrow_right.svg") 0 0 no-repeat;
   content: "";
 }
 .arr_right.active:after,
@@ -3859,6 +3858,12 @@ button.box_line.active .ontit, button.box_line:active .ontit {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+.tit_group3 {
+  display: flex;
+  align-items: center;
+  gap: 0 0.25rem;
+  position: relative;
+}
 .tit_group .t3_sb.required::after {
   display: inline-block;
   content: "";
@@ -5421,12 +5426,12 @@ a + .label_txt, .label_txt + span, .label_txt + strong {
 .contents .swiper-button-disabled { opacity: 0 !important;}
 
 /* 로그인 CSS 수정 */
-.login--style .ico24_finance_finance { background: url(../images/login_new/ico24_join1.svg) no-repeat;}
-.login--style .ico24_finance_joint { background: url(../images/login_new/ico24_join2.svg) no-repeat;}
-.login--style .ico24_finance_certification { background: url(../images/login_new/ico24_certifi.svg) no-repeat;}
-.login--style .ico24_finance_ipin { background: url(../images/login_new/ico24_join4.svg) no-repeat;}
-.login--style .ico24_finance_lock { background: url(../images/login_new/ico24_join5.svg) no-repeat;}
-.login--style .ico24_finance_mobile { background: url(../images/login_new/ico24_mobileID.svg) no-repeat;}
+.login--style .ico24_finance_finance { background: url(../images/ico24_join1.svg) no-repeat;}
+.login--style .ico24_finance_joint { background: url(../images/ico24_join2.svg) no-repeat;}
+.login--style .ico24_finance_certification { background: url(../images/ico24_certifi.svg) no-repeat;}
+.login--style .ico24_finance_ipin { background: url(../images/ico24_join4.svg) no-repeat;}
+.login--style .ico24_finance_lock { background: url(../images/ico24_join5.svg) no-repeat;}
+.login--style .ico24_finance_mobile { background: url(../images/ico24_mobileID.svg) no-repeat;}
 .login--style .tab_menu { margin-top: 1.5rem;}
 .login--style .tab_menu > ul { padding-right: 0;}
 .login--style .tab_menu > ul > li button { padding: 0.6875rem 1.5rem;}
@@ -5436,19 +5441,19 @@ a + .label_txt, .label_txt + span, .label_txt + strong {
 .login--style .certification_type li a.link-easy .txt { width: 6.4375rem;}
 .login--style .certification_type li .ico_logo { display: flex; flex-wrap: wrap; flex: 1; margin: -0.25rem 0 0 -0.25rem;}
 .login--style .certification_type li .ico_logo i { display: block; width: 1.25rem; height: 1.25rem; margin: 0.25rem 0 0 0.25rem;}
-.login--style .certification_type li .ico_logo i.ico_kakao { background: url(../images/login_new/logo80_80_kakao.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_kb { background: url(../images/login_new/logo80_80_kb.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_payco { background: url(../images/login_new/logo80_80_payco.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_pass { background: url(../images/login_new/logo80_80_pass.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_samsungpass { background: url(../images/login_new/logo80_80_samsungpass.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_naver { background: url(../images/login_new/logo80_80_naver.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_shinhan { background: url(../images/login_new/logo80_80_shinhan.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_toss { background: url(../images/login_new/logo80_80_toss.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_banksalad { background: url(../images/login_new/logo80_80_banksalad.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_hana { background: url(../images/login_new/logo80_80_hana.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_nh { background: url(../images/login_new/logo80_80_nh.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_kakaobank { background: url(../images/login_new/logo80_80_kakaobank.png) no-repeat; background-size: 1.25rem;}
-.login--style .certification_type li .ico_logo i.ico_woori { background: url(../images/login_new/logo80_80_woori.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_kakao { background: url(../images/logo80_80_kakao.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_kb { background: url(../images/logo80_80_kb.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_payco { background: url(../images/logo80_80_payco.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_pass { background: url(../images/logo80_80_pass.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_samsungpass { background: url(../images/logo80_80_samsungpass.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_naver { background: url(../images/logo80_80_naver.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_shinhan { background: url(../images/logo80_80_shinhan.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_toss { background: url(../images/logo80_80_toss.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_banksalad { background: url(../images/logo80_80_banksalad.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_hana { background: url(../images/logo80_80_hana.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_nh { background: url(../images/logo80_80_nh.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_kakaobank { background: url(../images/logo80_80_kakaobank.png) no-repeat; background-size: 1.25rem;}
+.login--style .certification_type li .ico_logo i.ico_woori { background: url(../images/logo80_80_woori.png) no-repeat; background-size: 1.25rem;}
 .login--style .certification_type.h70 li { height: initial;}
 .login--style .certification_type.h70 li a { height: initial;}
 .login--style .certification_type li { margin-top: 0;}
@@ -5472,8 +5477,8 @@ a + .label_txt, .label_txt + span, .label_txt + strong {
 .login--style .divider { margin-bottom: 0.75rem;}
 .login--style .divider:not(:last-child)::after { display: none;}
 .login--style .box_bot_txt { position: relative; padding: 1.625rem 1rem 1.25rem; border-radius: 0.5rem;}
-.login--style .box_bot_txt.green { background-color: #E8FCF0;}
-.login--style .box_bot_txt.blue { background-color: #F3F8FF;}
+.login--style .box_bot_txt.green { background-color: #F3FDF7;} /* 250713 수정 */
+.login--style .box_bot_txt.blue { background-color: #F2F4FC;} /* 250713 수정 */
 .login--style .box_bot_txt .box_bot_desc { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.5rem;}
 .login--style .box_bot_txt .join_info { margin-top: 1rem;}
 .login--style .box_bot_txt .s1_sb { font-size: 0.875rem; font-weight: 600; line-height: 1.5rem;}
@@ -5536,13 +5541,11 @@ a + .label_txt, .label_txt + span, .label_txt + strong {
   font-weight: 600;
   border-radius: 1.875rem;
 }
-.header_subMain_area .header_title_area .header_division > li:first-child.active a {
-  background: #29c78e;
-}
-.header_subMain_area .header_title_area .header_division > li:last-child.active a {
-  background: #4d65e1;
-  color: #fff;
-}
+/* 20250625 전체메뉴 모바일 (김무현) start */
+.header_subMain_area .header_title_area .header_division > li:first-child.active a {color: #fff; background: #3F58D4;}
+.header_subMain_area .header_title_area .header_division > li:last-child.active a { color: #fff; background: #24A960;}
+/* 20250625 전체메뉴 모바일 (김무현) end */
+
 
 .sitemap .icon {display:flex;  width:32px; height:32px; margin-right: 4px; background: url("../images/ico32_arrow_circle_right.png") no-repeat;}
 .sitemap .dir-div { display: flex; flex-wrap: wrap; justify-content: center;}
@@ -5551,16 +5554,18 @@ a + .label_txt, .label_txt + span, .label_txt + strong {
 .sitemap .dir-div .famenu a p { display: flex; justify-content: center; align-items: center; height: calc(100% - 72px - 8px); margin-top: 8px; font-size: 14px; color: #111; letter-spacing: -1px; line-height: 1.3rem;}
 .sitemap .dir-div .famenu a .ico { display: flex; justify-content: center; align-items: center; width: 72px; height: 72px; margin: 0 auto; background-color: #F8F8F8; border-radius: 50%;}
 .sitemap .dir-div .famenu a .ico::after { content: ''; display: block; width: 44px; height: 44px; background-size: 100% auto;}
-.sitemap .dir-div .ico60_sitemap_join_person::after { background: url(../images/ico48_person_1_join.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_qna_person::after { background: url(../images/ico48_person_2_qna.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_guide_person::after { background: url(../images/ico48_person_3_guide.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_setting_person::after { background: url(../images/ico48_person_4_setting.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_my_person::after { background: url(../images/ico48_person_5_my.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_join_corp::after { background: url(../images/ico48_company_1_join.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_qna_corp::after { background: url(../images/ico48_company_2_qna.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_guide_corp::after { background: url(../images/ico48_company_3_guide.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_setting_corp::after { background: url(../images/ico48_company_4_setting.svg) no-repeat;}
-.sitemap .dir-div .ico60_sitemap_my_corp::after { background: url(../images/ico48_company_5_my.svg) no-repeat;}
+/* 20250625 전체메뉴 모바일 (김무현) start */
+.sitemap .dir-div .ico60_sitemap_join_person::after { background: url(../images/allmenu_top_user.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_qna_person::after { background: url(../images/allmenu_top_faq.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_guide_person::after { background: url(../images/allmenu_top_question.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_setting_person::after { background: url(../images/allmenu_top_setting.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_my_person::after { background: url(../images/allmenu_top_mypage.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_join_corp::after { background: url(../images/allmenu_top_corp_user.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_qna_corp::after { background: url(../images/allmenu_top_corp_qna.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_guide_corp::after { background: url(../images/allmenu_top_corp_question.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_setting_corp::after { background: url(../images/allmenu_top_corp_setting.svg) no-repeat;}
+.sitemap .dir-div .ico60_sitemap_my_corp::after { background: url(../images/allmenu_top_corp_mypage.svg) no-repeat;}
+/* 20250625 전체메뉴 모바일 (김무현) end */
 .sitemap .menu-divider:not(:last-child)::after {
   content: "";
   display: block;
@@ -5945,3 +5950,106 @@ a + .label_txt, .label_txt + span, .label_txt + strong {
 .tab_menu_anyId > ul > li.on button span {
   color: inherit;
 }
+
+
+
+
+
+
+
+
+/* 250619 즐겨찾기 목록 (임정규)2 */
+.radio_group {display: flex;align-items: center;}
+.radio_group input[type="checkbox"] { appearance: none; width: 1.25rem; height: 1.25rem; margin-top: 0; border: 1px solid #757575; background-color: #fff; border-radius: 0.25rem; transition: background-color .2s ease;}
+.radio_group input[type="checkbox"]:checked { border-color: #3F58D4; background: #3F58D4 url(../images/ico16_check_dark.svg) no-repeat center;}
+.radio_group input[type="checkbox"]:disabled { border-color: #bbb; background-color:#ddd;}
+
+.HideForcibly {border: 0 !important;clip: rect(0 0 0 0);clip-path: inset(50%); width: 1px !important;height: 1px !important;margin: -1px; font-size: 1px !important; min-width: 1px !important; min-height: 1px !important; margin: 0 !important; padding: 0 !important; overflow: hidden; position: absolute;white-space: nowrap;}
+
+.improve .all_box { display: flex; align-items: center; height: 3rem; padding: 0 0.5rem; border-top: 1px solid #eee; border-bottom: 1px solid #eee; background-color: #F5F5F5;}
+.improve .all_box label { margin-left: 0.5rem; font-size: 1rem; font-weight: 600;}
+
+.improve .board_list_item { display: flex; padding: 1.25rem 0.5rem;}
+.improve .board_list_item ~ .board_list_item { border-top: 1px solid #eee;}
+.improve .board_list .check_area { display: block; flex: 1; max-width: calc(100% - 3.75rem);}
+.improve .board_list .check_area .btn_txt {overflow: hidden;display: flex;align-items: center;margin-left: 0.5rem; flex: 1;}
+.improve .board_list .check_area .tag { flex-shrink: 0; display: flex; align-items: center; justify-content: center; height: 1.375rem; margin: 0 8px 0 0; padding: 0 0.375rem; font-size: 0.75rem; color: #fff; background-color: #3F58D4; border-radius: 0.25rem;} /* 250812 수정 */
+.improve .board_list .check_area .title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; flex: 1; min-width: 0; font-size: 0.875rem; line-height: 1;}
+.improve .board_list .check_area .sub { display: block; margin-top: 0.25rem; padding-left: 1.875rem; font-size: 0.875rem; color: #3F58D4; text-decoration: underline; line-height: 1.25rem;}
+.improve .board_list_item_title { flex: 1; gap: initial;}
+
+.improve .board_list .check_btn { display: flex; align-items: center; gap: 0.25rem; width: 3.25rem; margin-left: 0.5rem;}
+.improve .board_list .check_btn .btn_s { display: flex; justify-content: center; align-items: center;width: 1.5rem; height: 1.5rem; border: 1px solid #757575; border-radius: 0.25rem;}
+.improve .board_list .check_btn .btn_s i { display: block; width: 1rem; height: 1rem;}
+.improve .board_list .check_btn .btn_up i { background: url(../images/ico16_line_up.svg) no-repeat;}
+.improve .board_list .check_btn .btn_down i { background: url(../images/ico16_line_down.svg) no-repeat;}
+
+.improve .btn_group { width: calc(100% + 2.5rem); margin: 0.25rem -1.25rem 0 !important; padding: 1.5rem 1.25rem 0; border-top: 0.5rem solid #F3F5F6;}
+.improve .btn_group .btn { flex: 1;}
+
+.pop_favorite.popup_full .popup_header { border-bottom: none;}
+.pop_favorite .sitemap_menu { margin-top: 1rem; padding-bottom: 16.625rem; border-top: none;}
+.pop_favorite .menu-accordion .menu-accordion_btn { display: flex; align-items: center; width: 100%; height: 3.5rem;}
+.pop_favorite .menu-accordion .menu-accordion_btn img { width: 1rem; height: 1rem;}
+.pop_favorite .menu-accordion .menu-accordion_btn strong { flex: 1; display: block; margin-left: 0.5rem; padding-right: 1.25rem; font-size: 1rem; color: #111; text-align: left;}
+.pop_favorite .menu-accordion .menu-accordion_btn .blind { display: block; right: 1.25rem; width: 1rem; height: 1rem; background: url(../images/ico16_line_down_gray.svg) no-repeat;}
+.pop_favorite .menu-accordion >ul >li { padding: 0 1.25rem; border-bottom: 0.5rem solid #F3F5F6;}
+.pop_favorite .menu-accordion >ul >li.on .blind { transform: rotate(-180deg);}
+.pop_favorite .accordion_contents h4 { padding: 1.25rem 0 0.625rem; font-size: 1rem; font-weight: 600; border-top: 1px solid #eee;}
+.pop_favorite .accordion_contents ul li { padding: 0.625rem 0;}
+.pop_favorite .accordion_contents .radio_group { display: flex; align-items: center;}
+.pop_favorite .accordion_contents .radio_group label { margin-left: 0.375rem;}
+.pop_favorite .accordion_contents .dot_input { display: none; margin-top: 0.5rem;}
+.pop_favorite .accordion_contents .dot_input input { width: 100%; height: 3rem; padding: 0 1rem; border: 1px solid #757575; border-radius: 0.25rem;}
+.pop_favorite .accordion_contents .dot_input.active { display: block;}
+.pop_favorite .fixed_bottom_hasy { width: 100%;}
+.pop_favorite .fixed_bottom_hasy .hash_group .hash ~ .hash { margin-left: 0.1875rem;}
+.pop_favorite .fixed_bottom_hasy .hash_group .hash span { white-space: nowrap;}
+
+
+/* 20250625 전체메뉴 모바일 (김무현) start */
+.menu-divider {display: none;}
+.sitemap .dir-div {height: initial; padding: 0 1.25rem 2rem; flex-wrap: initial; gap: 0 8px;}
+.sitemap .dir-div .famenu {margin-bottom: initial;}
+.sitemap .dir-div .famenu a .ico {width: 48px; height: 48px;}
+.sitemap .dir-div .famenu a .ico::after {width: 24px; height: 24px;}
+.sitemap .dir-div .famenu a p {height: initial;}
+.popup_allmenu .sitemap .sitemap_menu {width: 100%;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub { border-top: 8px solid #f3f5f6;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion {border-bottom: 8px solid #f3f5f6; border-top: initial;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li {padding: 0 20px;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li > .menu-accordion_btn {display: flex; align-items: center;  height: 3.5rem;  margin-bottom: initial; padding: 16px 32px 16px 0; border-bottom: initial; text-indent: initial;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li > .menu-accordion_btn.accordion {border-top: initial;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li > .menu-accordion_btn img {margin-right: 8px !important;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li > .menu-accordion_btn strong {color: #111; vertical-align: middle;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li > .menu-accordion_btn::after {margin-top: initial; top: 50%; right: 0; transform: translateY(-50%); background: url(../images/allmenu_down.svg) no-repeat center; background-size: 100%; }
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li.on > .menu-accordion_btn {font-size: 16px;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li.on > .menu-accordion_btn::after {transform: rotate(-180deg) translateY(50%);}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li.on > .menu-accordion_btn strong {font-size: 16px;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents {padding: 0;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents a {padding: 10px 0;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents>a {padding: 20px 0; border-top: 1px solid #eee;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents ul li:first-child a {padding-top: 0;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents .dot_style li:first-child::after {top: 10px;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents ul li:last-child {margin-bottom: 10px;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents .dot_style li::after {background-color: #ddd;}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents .menu_link_img::after {width: 16px; height: 16px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background-image: url('../images/allmenu_link.svg');}
+.popup_allmenu .sitemap .sitemap_menu .sitemap_sub .menu-accordion > ul > li .accordion_contents .dot_style li u {text-underline-offset: 3px !important;}
+.popup_allmenu .sitemap .sitemap_top {padding: 24px 20px;}
+.popup_allmenu .sitemap .sitemap_top.on .welcome {font-size: 20px; color: #111;}
+.popup_allmenu .sitemap .sitemap_top.on .welcome>div {margin-left: 8px !important;}
+.popup_allmenu .sitemap .sitemap_top.on .btn_logout {font-size: 14px; font-weight: 600; color: #757575; background-color: initial; text-decoration-line: underline; text-underline-offset: 3px;}
+.acc-btn {border: 1px solid #3f58d4; border-radius: 4px;  display: block; width: 100%; padding: 10px 0; margin-bottom: 20px;}
+.acc-btn span {font-size: 16px; font-weight: 400; color: #3f58d4; text-align: center; line-height: 28px;}
+/* 20250625 전체메뉴 모바일 (김무현) end */
+
+
+
+
+
+
+
+
+
+
+

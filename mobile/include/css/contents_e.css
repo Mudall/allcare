@@ -77,31 +77,31 @@ i[class^=ico_] {
 }
 
 i.ico_pdf {
-  background-image: url(../images/file_pdf.png);
+  background-image: url(/cm/static/mobile/images/file_pdf.png);
 }
 
 i.ico_loc {
-  background-image: url(../images/ico24_location_blue.svg);
+  background-image: url(/cm/static/images/ico24_location_blue.svg);
 }
 
 i.ico_tel {
-  background-image: url(../images/ico16_call_filled_blue.svg);
+  background-image: url(/cm/static/images/ico16_call_filled_blue.svg);
 }
 
 i.ico_email {
-  background-image: url(../images/ico16_email_filled_blue.svg);
+  background-image: url(/cm/static/images/ico16_email_filled_blue.svg);
 }
 
 i.ico_file {
-  background-image: url(../images/ico24_ui_fileattachments_filled.svg);
+  background-image: url(/cm/static/images/ico24_ui_fileattachments_filled.svg);
 }
 
 i.ico_hwp {
-  background-image: url(../images/file_hwp.png);
+  background-image: url(/cm/static/mobile/images/file_hwp.png);
 }
 
 i.ico_user {
-  background-image: url(../images/ico24_user_tag.svg);
+  background-image: url(/cm/static/images/ico24_user_tag.svg);
 }
 
 i.ico_user {
@@ -581,7 +581,7 @@ i.ico_callcall {
   overflow: hidden;
 }
 .board_list_card .board_list_item .thumb {
-  background: url("../images/card_noimg.png") no-repeat center;
+  background: url("/cm/static/mobile/images/card_noimg.png") no-repeat center;
   background-size: cover;
   aspect-ratio: 320/160;
   overflow: hidden;

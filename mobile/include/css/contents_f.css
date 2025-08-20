@@ -726,13 +726,13 @@ label + .inp_wrap, .laebl + .inp_wrap {
 }
 
 .bg_rocket {
-  background-image: url(../images/rocket_departure.png);
+  background-image: url(./../images/rocket_departure.png);
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
 .bg_robot{
-  background-image: url(../images/AIrobot.png);
+  background-image: url(./../images/AIrobot.png);
   background-repeat: no-repeat;
   background-position: bottom;
 }

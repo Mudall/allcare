@@ -1,326 +1,403 @@
 <script type="text/javascript">
-    //개인/기업 메뉴 선택 시
-    function fn_click_header_top_area(gbn) {
-        if ("EBM00" == gbn) {
-            $("#wrap").addClass('company');
-        } else {
-            $("#wrap").removeClass('company');
-        } $("#topArea_header").val(gbn);
-        $("#headerMenuVO").submit();
-    };
-    $(document).ready(function () {
-        $("#top-topQuery").autocomplete({
-            source: function (req, res) {
-                // 			req.term = StrLib.trimSpecialChar(req.term);
-                $("#top-topQuery").val(req.term);
-                if (req.term == null || req.term == '') { return };
-                var request = ComLib.ajaxReqObj("/cm/f/c/0110/autoComplete.do", { "query": encodeURIComponent(req.term) });
-                request.done(function (responseObj, statusText, xhr) {
-                    $("#top-keyword").empty();
-                    $("#top-policyList").empty(); $("#serviceShortcutText").css("display", "none"); var retList;
-                    let mergeAry = new Array();
-                    if (null != responseObj.ret) { //2025-03 자동완성 결과 없을 경우 처리 추가
-                        retList = responseObj.ret.result; $.each(retList, function (i, key) {//배열 합치고
-                            //if(retList[i].totalcount > 0){
-                            if (retList[i].totalCount > 0) { //2025-03 v7 자동완성 totalcount -> totalCount로 변경
-                                mergeAry = $.merge(mergeAry, retList[i].items);
-                            }
-                        });
-                        $.each(mergeAry, function (i, key) {//label 추가 한다.
-                            mergeAry[i].label = mergeAry[i].hkeyword;
-                        });
-                    }
-                    var retList2 = []; if (null != responseObj.retList2) { //2025-03 자동완성 결과 없을 경우 처리 추가
-                        if (responseObj.retList2.result != null) {
-                            retList2 = responseObj.retList2.result[0].items;//정책
-                        }
-                    } if (mergeAry != null && mergeAry.length > 0) {
-                        if (retList2 != null && retList2.length > 0) {
-                            $("#serviceShortcutText").css("display", "block");
-                            $.each(retList2, function (i, key) {
-                                var hkeyword = retList2[i].hkeyword.replace("@stag@", "<em class='em_blue'>").replace("@etag@", "</span>");
-                                var sp = retList2[i].linkUrl.split('?wn?');
-                                if (retList2[i].linkName == "menu") {
-                                    //contextPath, menuId, strUrl, menuPurpSecd, pwdCfrmYn, netFunnel
-                                    var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPageUrl(\'' + sp[0] + '\', \'' + sp[2] + '\', \'' + sp[1] + '\', \'' + sp[3] + '\');">' + hkeyword + '</a></li>';
-                                } else {
-                                    var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPolicyIntro(\'' + sp[1] + '\', \'' + sp[0] + '\');">' + hkeyword + '</a></li>';
-                                }
-                                $("#top-policyList").append(ret);
-                            });
-                            // 						$.each(retList2,function(i,key){
-                            // 							var hkeyword = retList2[i].hkeyword.replace("@stag@","<em class='em_blue'>").replace("@etag@","</em>");
-                            // 							//var ret = '<li><a href="javascript:void(0)" class="keyword_item arrow" onclick="topQueryClick2(\''+retList2[i].keyword+'\')">'+hkeyword+'</a></li>';
-                            // 							var ret = '<li class="txt_list"><a href="javascript:void(0)" onclick="fn_goPolicyIntro(\''+retList2[i].linkUrl+'\', \''+retList2[i].linkName+'\');">'+hkeyword+'</a></li>';
-                            // 							$("#top-policyList").append(ret);
-                            // 						});
-                        }
-                    } else if (retList2 != null && retList2.length > 0) {
-                        $("#serviceShortcutText").css("display", "block");
-                        $.each(retList2, function (i, key) {
-                            var hkeyword = retList2[i].hkeyword.replace("@stag@", "<em class='em_blue'>").replace("@etag@", "</span>");
-                            var sp = retList2[i].linkUrl.split('?wn?');
-                            if (retList2[i].linkName == "menu") {
-                                //contextPath, menuId, strUrl, menuPurpSecd, pwdCfrmYn, netFunnel
-                                var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPageUrl(\'' + sp[0] + '\', \'' + sp[2] + '\', \'' + sp[1] + '\', \'' + sp[3] + '\');">' + hkeyword + '</a></li>';
-                            } else {
-                                var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPolicyIntro(\'' + sp[1] + '\', \'' + sp[0] + '\');">' + hkeyword + '</a></li>';
-                            }
-                            $("#top-policyList").append(ret);
-                        });
-                        // 					$.each(retList2,function(i,key){
-                        // 						var hkeyword = retList2[i].hkeyword.replace("@stag@","<em class='em_blue'>").replace("@etag@","</em>");
-                        // 						//var ret = '<li><a href="javascript:void(0)" class="keyword_item arrow" onclick="topQueryClick2(\''+retList2[i].keyword+'\')">'+hkeyword+'</a></li>';
-                        // 						var ret = '<li class="txt_list"><a href="javascript:void(0)" onclick="fn_goPolicyIntro(\''+retList2[i].linkUrl+'\', \''+retList2[i].linkName+'\');">'+hkeyword+'</a></li>';
-                        // 						$("#top-policyList").append(ret);
-                        // 					});
-                    }
-                    res(mergeAry);//autocomplete에 추가 한다.
-                });
-            },
-            focus: function (event, item) {
-                return false;
-            },
-            delay: 600,
-            minLength: 2,
-            autofocus: true
-        });//검색창 입력값 특수문자 제거 로직
-        // 	$("#top-topQuery").keypress(function(e){ $(this).val(StrLib.trimSpecialChar($(this).val())) });
-        // 	$("#top-topQuery").keyup(	function(e){ $(this).val(StrLib.trimSpecialChar($(this).val())) });$("#top-findSearchData").on('click', function() {
-        $("#top-topQueryData").val($("#top-topQuery").val());
-        var ret = $("#top-topQueryData").val();
-        if (ret != "" && ret != null) {
-            ComLib.submit("top-searchDataForm");
-        }
-    }); $("#top-topQuery").keyup(function () {
-        var ret = $(this).val();
-        if (ret == "") {
-            $("#top-keyword").empty();
-            $("#top-policyList").empty();
-        }
-    });
-    //css변경 및 제어등
-    $("#top-topQuery").autocomplete("instance")._renderItem = function (ul, item) {
-        var hkeyword = item.hkeyword.replace("@stag@", "<span class='em_blue'>").replace("@etag@", "</span>");
-        var ret = '<li><a href="#" class="keyword_item" title="검색" onclick="topQuerySet2(\'' + item.keyword + '\')">' + hkeyword + '</a></li>';
-        return $(ret).appendTo($("#top-keyword"));
-    };
-}); function fn_popWordClick(w) {
-        $("#top-topQuery").val(w);
-        topQueryClick(v);
-    } function topQuerySet2(v) {
-        $("#top-topQuery").val(v);
-        topQueryClick(v);
-    } function topQueryClick(v) {
-        $("#top-topQueryData").val(v);
-        //검색어 인코딩 --S
-        $("#top-topQueryData").val(encodeURIComponent($("#top-topQueryData").val()));
-        //검색어 인코딩 --E
-        dimmed.css('z-index', '290').show();
-        ComLib.submit("top-searchDataForm");
-        spin.spin($("#spinMain")[0]);
-    }
-    //서비스 검색
-    function topQueryClick2(v) {
-        $("#top-topQueryData").val(v);
-        //검색어 인코딩 --S
-        $("#top-topQueryData").val(encodeURIComponent($("#top-topQueryData").val()));
-        //검색어 인코딩 --E
-        $("#top-topQuerySearchArea").val("policy_emp");//정책
-        ComLib.submit("top-searchDataForm");
-    }//정책바로가기 이동
-    function fn_goPolicyIntro(systClId, systId) {
-        $("#topSystClId").val(systClId);
-        $("#topSystId").val(systId); if (ComLib.isEmpty(systId))	//정책분류인 경우
-            $("#searchDataForm").attr("action", '/wk/c/f/1100/selecPolicyInfoPost.do');
-        else	//제도인 경우
-            $("#searchDataForm").attr("action", '/wk/c/f/1100/selecSystInfoPost.do');
-        ComLib.submit("searchDataForm");
-    }//모바일환경설정 바로가기
-    function fn_setMobile() {
-        $("#top-searchDataForm").attr("action", '/cm/z/z/1000/selectMobileSetByPersonPost.do');
-        ComLib.submit("top-searchDataForm");
-    }//2024.12.10 통합검색 엔터키 미동작 현상 수정
-    function f_keyCheck() {
-        if (event.keyCode == 13) {
-            $("#top-findSearchData").click();
-        }
-    }
+//개인/기업 메뉴 선택 시
+function fn_click_header_top_area(gbn){
+
+	if("EBM00" == gbn) {
+		$("#wrap").addClass('company');
+	} else {
+		$("#wrap").removeClass('company');
+	}
+
+	$("#topArea_header").val(gbn);
+	$("#headerMenuVO").submit();
+};
+$(document).ready(function() {
+	$("#top-topQuery").autocomplete({
+		source: function(req,res){
+// 			req.term = StrLib.trimSpecialChar(req.term);
+			$("#top-topQuery").val(req.term);
+			if( req.term == null || req.term == '') { return };
+			var request = ComLib.ajaxReqObj("/cm/f/c/0110/autoComplete.do", {"query": encodeURIComponent(req.term)});
+			request.done(function (responseObj, statusText, xhr) {
+				$("#top-keyword").empty();
+				$("#top-policyList").empty();
+
+				$("#serviceShortcutText").css("display", "none");
+
+				var retList;
+				let mergeAry = new Array();
+				if(null != responseObj.ret){ //2025-03 자동완성 결과 없을 경우 처리 추가
+					retList = responseObj.ret.result;
+
+					$.each(retList,function(i,key){//배열 합치고
+						//if(retList[i].totalcount > 0){
+						if(retList[i].totalCount > 0){ //2025-03 v7 자동완성 totalcount -> totalCount로 변경
+							mergeAry = $.merge(mergeAry, retList[i].items);
+						}
+					});
+					$.each(mergeAry,function(i,key){//label 추가 한다.
+						mergeAry[i].label = mergeAry[i].hkeyword;
+					});
+				}
+				var retList2 = [];
+
+				if(null != responseObj.retList2){ //2025-03 자동완성 결과 없을 경우 처리 추가
+					if(responseObj.retList2.result != null){
+						retList2 = responseObj.retList2.result[0].items;//정책
+					}
+				}
+
+				if(mergeAry != null && mergeAry.length > 0){
+					if(retList2 != null && retList2.length > 0){
+						$("#serviceShortcutText").css("display", "block");
+						$.each(retList2,function(i,key){
+							var hkeyword = retList2[i].hkeyword.replace("@stag@","<em class='em_blue'>").replace("@etag@","</span>");
+							var sp = retList2[i].linkUrl.split('?wn?');
+							if(retList2[i].linkName=="menu"){
+								//contextPath, menuId, strUrl, menuPurpSecd, pwdCfrmYn, netFunnel
+								var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPageUrl(\''+ sp[0] +'\', \''+sp[2]+'\', \''+sp[1]+'\', \''+sp[3]+'\');">'+hkeyword+'</a></li>';
+							}else{
+								var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPolicyIntro(\''+ sp[1] +'\', \''+sp[0]+'\');">'+hkeyword+'</a></li>';
+							}
+							$("#top-policyList").append(ret);
+						});
+// 						$.each(retList2,function(i,key){
+// 							var hkeyword = retList2[i].hkeyword.replace("@stag@","<em class='em_blue'>").replace("@etag@","</em>");
+// 							//var ret = '<li><a href="javascript:void(0)" class="keyword_item arrow" onclick="topQueryClick2(\''+retList2[i].keyword+'\')">'+hkeyword+'</a></li>';
+// 							var ret = '<li class="txt_list"><a href="javascript:void(0)" onclick="fn_goPolicyIntro(\''+retList2[i].linkUrl+'\', \''+retList2[i].linkName+'\');">'+hkeyword+'</a></li>';
+// 							$("#top-policyList").append(ret);
+// 						});
+					}
+				}else if(retList2 != null && retList2.length > 0){
+					$("#serviceShortcutText").css("display", "block");
+					$.each(retList2,function(i,key){
+						var hkeyword = retList2[i].hkeyword.replace("@stag@","<em class='em_blue'>").replace("@etag@","</span>");
+						var sp = retList2[i].linkUrl.split('?wn?');
+						if(retList2[i].linkName=="menu"){
+							//contextPath, menuId, strUrl, menuPurpSecd, pwdCfrmYn, netFunnel
+							var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPageUrl(\''+ sp[0] +'\', \''+sp[2]+'\', \''+sp[1]+'\', \''+sp[3]+'\');">'+hkeyword+'</a></li>';
+						}else{
+							var ret = '<li class="txt_list"><a href="javascript:void(0)" title="페이지이동" onclick="fn_goPolicyIntro(\''+ sp[1] +'\', \''+sp[0]+'\');">'+hkeyword+'</a></li>';
+						}
+						$("#top-policyList").append(ret);
+					});
+// 					$.each(retList2,function(i,key){
+// 						var hkeyword = retList2[i].hkeyword.replace("@stag@","<em class='em_blue'>").replace("@etag@","</em>");
+// 						//var ret = '<li><a href="javascript:void(0)" class="keyword_item arrow" onclick="topQueryClick2(\''+retList2[i].keyword+'\')">'+hkeyword+'</a></li>';
+// 						var ret = '<li class="txt_list"><a href="javascript:void(0)" onclick="fn_goPolicyIntro(\''+retList2[i].linkUrl+'\', \''+retList2[i].linkName+'\');">'+hkeyword+'</a></li>';
+// 						$("#top-policyList").append(ret);
+// 					});
+				}
+				res(mergeAry);//autocomplete에 추가 한다.
+		    });
+		},
+		focus: function(event, item){
+			return false;
+		},
+		delay: 600,
+		minLength: 2,
+		autofocus: true
+	});
+
+	//검색창 입력값 특수문자 제거 로직
+// 	$("#top-topQuery").keypress(function(e){ $(this).val(StrLib.trimSpecialChar($(this).val())) });
+// 	$("#top-topQuery").keyup(	function(e){ $(this).val(StrLib.trimSpecialChar($(this).val())) });
+
+	 $("#top-findSearchData").on('click', function() {
+			$("#top-topQueryData").val($("#top-topQuery").val());
+			var ret = $("#top-topQueryData").val();
+			if(ret != "" && ret != null){
+				ComLib.submit("top-searchDataForm");
+			}
+		});
+
+	$("#top-topQuery").keyup(function(){
+		var ret = $(this).val();
+		if(ret == ""){
+			$("#top-keyword").empty();
+			$("#top-policyList").empty();
+		}
+	});
+	//css변경 및 제어등
+	$("#top-topQuery").autocomplete("instance")._renderItem = function(ul, item){
+		var hkeyword = item.hkeyword.replace("@stag@","<span class='em_blue'>").replace("@etag@","</span>");
+		var ret = '<li><a href="#" class="keyword_item" title="검색" onclick="topQuerySet2(\''+item.keyword+'\')">'+hkeyword+'</a></li>';
+		return $( ret ).appendTo( $("#top-keyword") );
+	};
+	
+
+});
+
+function fn_popWordClick(w){
+	$("#top-topQuery").val(w);
+	topQueryClick(v);
+}
+
+function topQuerySet2(v){
+	$("#top-topQuery").val(v);
+	topQueryClick(v);
+}
+
+function topQueryClick(v){
+	$("#top-topQueryData").val(v);
+	//검색어 인코딩 --S
+	$("#top-topQueryData").val(encodeURIComponent($("#top-topQueryData").val()));
+	//검색어 인코딩 --E
+	dimmed.css('z-index', '290').show();
+	ComLib.submit("top-searchDataForm");
+	spin.spin($("#spinMain")[0]);
+}
+//서비스 검색
+function topQueryClick2(v){
+	$("#top-topQueryData").val(v);
+	//검색어 인코딩 --S
+	$("#top-topQueryData").val(encodeURIComponent($("#top-topQueryData").val()));
+	//검색어 인코딩 --E
+	$("#top-topQuerySearchArea").val("policy_emp");//정책
+	ComLib.submit("top-searchDataForm");
+}
+
+//정책바로가기 이동
+function fn_goPolicyIntro(systClId, systId){
+	$("#topSystClId").val(systClId);
+	$("#topSystId").val(systId);
+
+	if(ComLib.isEmpty(systId))	//정책분류인 경우
+		$("#searchDataForm").attr("action", '/wk/c/f/1100/selecPolicyInfoPost.do');
+	else	//제도인 경우
+		$("#searchDataForm").attr("action", '/wk/c/f/1100/selecSystInfoPost.do');
+	ComLib.submit("searchDataForm");
+}
+
+//모바일환경설정 바로가기
+function fn_setMobile() {
+	$("#top-searchDataForm").attr("action", '/cm/z/z/1000/selectMobileSetByPersonPost.do');
+	ComLib.submit("top-searchDataForm");
+}
+
+//2024.12.10 통합검색 엔터키 미동작 현상 수정
+function f_keyCheck() {
+	if(event.keyCode == 13){
+		$("#top-findSearchData").click();
+	}
+}
 </script>
+
 <form id="top-searchDataForm" action="/cm/f/c/0100/selectUnifySearchPost.do" method="POST">
-    <input type="hidden" id="top-topQuerySearchArea" name="topQuerySearchArea" value="all">
-    <input type="hidden" id="top-topQueryData" name="topQueryData">
-    <input type="hidden" id="top-startCount" name="startCount" value="1">
-    <input type="hidden" id="top-listCount" name="listCount" value="5">
-    <input type="hidden" name="topSystClId" id="topSystClId">
-    <input type="hidden" name="topSystId" id="topSystId">
+<input type="hidden" id="top-topQuerySearchArea" name="topQuerySearchArea" value="all">
+<input type="hidden" id="top-topQueryData" name="topQueryData">
+<input type="hidden" id="top-startCount" name="startCount" value="1">
+<input type="hidden" id="top-listCount" name="listCount" value="5">
+<input type="hidden" name="topSystClId" id="topSystClId">
+<input type="hidden" name="topSystId" id="topSystId">
 </form>
+
 <form id="headerMenuVO" action="/wk/cmm/menu/topArea.do" method="POST">
-    <input type="hidden" name="topArea" id="topArea_header">
-    <input type="hidden" name="currentMenuId" id="currentMenuId_header">
-    <input type="hidden" name="redirectUrl" id="redirectUrl_header">
-    <input type="hidden" name="dtlMenuId" id="dtlMenuId">
-    <input type="hidden" name="dtlForwardPolyUrl" id="dtlForwardPolyUrl">
-    <input type="hidden" name="dtlMenuPurpSecd" id="dtlMenuPurpSecd">
-    <input type="hidden" name="dtlExnwMenuConcSecd" id="dtlExnwMenuConcSecd">
-    <input type="hidden" name="dtlPwdCfrmYn" id="dtlPwdCfrmYn">
-    <input type="hidden" name="dtlSmtmConcCtrlId" id="dtlSmtmConcCtrlId">
-    <input type="hidden" name="serverToday" id="serverToday" value="20250728">
+<input type="hidden" name="topArea" id="topArea_header">
+<input type="hidden" name="currentMenuId" id="currentMenuId_header">
+<input type="hidden" name="redirectUrl" id="redirectUrl_header">
+<input type="hidden" name="dtlMenuId" id="dtlMenuId">
+<input type="hidden" name="dtlForwardPolyUrl" id="dtlForwardPolyUrl">
+<input type="hidden" name="dtlMenuPurpSecd" id="dtlMenuPurpSecd">
+<input type="hidden" name="dtlExnwMenuConcSecd" id="dtlExnwMenuConcSecd">
+<input type="hidden" name="dtlPwdCfrmYn" id="dtlPwdCfrmYn">
+<input type="hidden" name="dtlSmtmConcCtrlId" id="dtlSmtmConcCtrlId">
+<input type="hidden" name="serverToday" id="serverToday" value="20250820">
 </form>
 <!-- header main area -->
 <div class="header_main_area">
-    <div class="header_info">
-        <i class="icon"></i>
-        <span class="text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
-    </div>
-    <div class="header_area">
-        <div class="header_title_area">
-            <a href="/cm" title="메인화면 이동">
-                <h1><img src="../mobile/include/images/logo_main_work24.svg" alt="고용24"></h1>
-            </a><!-- 23/12/04 퍼블: (시범운영) 추가 -->
-            <ul class="header_division"><!-- 활성화 할 li에 active 클래스네임 추가 -->
-                <li class="active">
-                    <a href="javascript:void(0);" onclick="fn_click_header_top_area('EBM01')" title="개인 선택됨">개인</a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" onclick="fn_click_header_top_area('EBM00')">기업</a>
-                </li>
-            </ul>
-        </div>
-        <div class="header_util_area">
-            <ul>
-                <li class="header_btn_search">
-                    <button type="button" class="search_open"><span class="blind">검색창 열기</span></button>
-                    <div class="search_layer" style="display: none; z-index:190;">
-                        <strong>통합검색</strong>
-                        <button type="button" class="search_close">
-                            <span class="blind">검색창 닫기</span>
-                        </button>
-                        <div class="search_bar">
-                            <input type="text" placeholder="검색어를 입력하세요" id="top-topQuery" maxlength="150"
-                                title="검색어 입력" onkeydown="f_keyCheck()" class="ui-autocomplete-input"
-                                autocomplete="off">
-                            <button type="button" class="search_submit" id="top-findSearchData">
-                                <span class="blind">검색</span>
-                            </button>
-                        </div>
-                        <div class="scroll_wrap">
-                            <div class="keyword_area">
-                                <div class="keyword_list">
-                                    <ul id="top-keyword">
-                                    </ul>
-                                </div>
-                                <div class="keyword_list">
-                                    <strong id="serviceShortcutText" style="display:none;">정책/서비스 바로가기</strong>
-                                    <ul id="top-policyList">
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="header_btn_all_menu">
-                    <button type="button" onclick="ui.call_layer_all_menu('#layer_all_menu')"><span
-                            class="blind">전체메뉴</span></button>
-                </li>
-            </ul>
-        </div>
-    </div>
+	<div class="header_info">
+		<i class="icon"></i>
+		<span class="text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+	</div>
+	<div class="header_area">
+	    <div class="header_title_area">
+	        <a href="/cm" title="메인화면 이동"><h1><img src="../mobile/include/images/logo_main_work24.svg" alt="고용24"></h1></a><!-- 23/12/04 퍼블: (시범운영) 추가 -->
+	        <ul class="header_division"><!-- 활성화 할 li에 active 클래스네임 추가 -->
+	            <li class="active">
+	                <a href="javascript:void(0);" onclick="fn_click_header_top_area('EBM01')" title="개인 선택됨">개인</a>
+	            </li>
+	            <li>
+	                <a href="javascript:void(0);" onclick="fn_click_header_top_area('EBM00')">기업</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="header_util_area">
+	        <ul>
+	        	
+	            <li class="header_btn_search">
+	                <button type="button" class="search_open"><span class="blind">검색창 열기</span></button>
+	                <div class="search_layer" style="display: none; z-index:190;">
+	                    <strong>통합검색</strong>
+	                    <button type="button" class="search_close">
+	                        <span class="blind">검색창 닫기</span>
+	                    </button>
+	                    <div class="search_bar">
+	                        <input type="text" placeholder="검색어를 입력하세요" id="top-topQuery" maxlength="150" title="검색어 입력" onkeydown="f_keyCheck()" class="ui-autocomplete-input" autocomplete="off">
+	                        <button type="button" class="search_submit" id="top-findSearchData">
+	                            <span class="blind">검색</span>
+	                        </button>
+	                    </div>
+	                    <div class="scroll_wrap">
+	                        <div class="keyword_area">
+	                            <div class="keyword_list">
+	                                <ul id="top-keyword">
+	                                </ul>
+	                            </div>
+	                            <div class="keyword_list">
+	                                <strong id="serviceShortcutText" style="display:none;">정책/서비스 바로가기</strong>
+	                                <ul id="top-policyList">
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li class="header_btn_all_menu">
+	            	<button type="button" onclick="ui.call_layer_all_menu('#layer_all_menu')"><span class="blind">전체메뉴</span></button>
+	            </li>
+	        </ul>
+	    </div>
+	</div>
 </div>
 <div id="spinMain"></div>
-<script type="text/javascript">$(document).ready(function () {//결함등록
-        $("#btn_openTestTeg").click(function () {
-            var regUrl = encodeURIComponent(location.href);
-            var menuId = _menuId;
-            var menuNm = $(".cont_wrap_area .sub_tl .h2_sb").text();
-            var url = "/cm/test/testRegPopup.do?regUrl=" + regUrl + "&menuId=" + menuId + "&menuNm=" + menuNm;
-            var name = "getPup";
-            var height = 800;
-            var width = 600;
-            var scroll = true;
-            PopLib.openPup(url, name, height, width, scroll);
-        });
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	//결함등록
+	$("#btn_openTestTeg").click(function() {
+		var regUrl = encodeURIComponent(location.href);
+		var menuId = _menuId;
+		var menuNm = $(".cont_wrap_area .sub_tl .h2_sb").text();
+		var url = "/cm/test/testRegPopup.do?regUrl=" + regUrl + "&menuId=" + menuId+ "&menuNm=" + menuNm;
+		var name = "getPup";
+		var height = 800;
+		var width = 600;
+		var scroll = true;
+		PopLib.openPup(url, name, height, width, scroll);
     });
+});
 </script>
 <script type="text/javascript">
-    function fn_goHistoryBack() {
-        dimmed.css('z-index', '290').show();// history.back(-1);//24.10.30 SYJ 추민경대리 뒤로가기 수정
-        if (history.state && (history.state.memberOut == "memberOut")) {
-            history.go(-2);
-        } else {
-            history.back(-1);
-        } spin.spin($("#spinMain")[0]);
-    } $(document).ready(function () {
-        $("#btn_favorate").on("click", function () {
-            var data = {
-                //"bkmkUrla": window.location.href
-                "bkmkUrla": window.location.href.substr(window.location.href.indexOf(window.location.host) + window.location.host.length).replaceAll("#none", "")
-                , "bmkn": $(document).find("title").text()
-                , "strMenuId": 'EBG020000000001'
-                , "bkmkSeq": $("#bkmkSeq").val()
-            }; if ($("#btn_favorate").attr('flag') == "true") {
-                var request = ComLib.ajaxReqObj("/cm/d/d/0110/deleteBkmkLst.do", data);
-                request.done(function (responseObj, statusText, xhr) {
-                    alert("즐겨찾기를 삭제했습니다.");
-                    $("#btn_favorate").removeClass("on");
-                    $("#btn_favorate").attr('flag', 'false');
-                    $("#btn_favorate").attr('title', '즐겨찾기를 추가하시겠습니까?');
-                    $("#btn_favorate").html("<span class='blind'>미등록</span>")
-                });
-            } else {
-                var request = ComLib.ajaxReqObj("/cm/d/d/0110/insertBkmkLst.do", data);
-                request.done(function (responseObj, statusText, xhr) {
-                    alert(responseObj.rtnMsg);
-                    $("#btn_favorate").addClass("on");
-                    $("#btn_favorate").attr('flag', 'true');
-                    $("#btn_favorate").attr('title', '즐겨찾기가 추가되었습니다.');
-                    $("#btn_favorate").html("<span class='blind'>등록됨</span>")
-                    $("#bkmkSeq").val(responseObj.bkmkSeq);
-                });
-            }
-        });
-    });
+function fn_goHistoryBack() {
+	dimmed.css('z-index', '290').show();
+
+	// history.back(-1);
+
+	//24.10.30 SYJ 추민경대리 뒤로가기 수정
+	if(history.state && (history.state.memberOut == "memberOut")){
+		history.go(-2);
+	}else{
+		history.back(-1);
+	}
+
+	spin.spin($("#spinMain")[0]);
+}
+
+$(document).ready(function() {
+	$("#btn_favorate").on("click", function() {
+
+		var data = {
+				//"bkmkUrla": window.location.href
+	            "bkmkUrla": window.location.href.substr(window.location.href.indexOf(window.location.host)+window.location.host.length).replaceAll("#none","")
+	           , "bmkn" : $(document).find("title").text()
+	           , "strMenuId" : 'EBG020000000053'
+	           , "bkmkSeq" : $("#bkmkSeq").val()
+	     };
+
+		if( $("#btn_favorate").attr('flag') == "true" ) {
+			var request = ComLib.ajaxReqObj("/cm/d/d/0110/deleteBkmkLst.do", data);
+			request.done(function (responseObj, statusText, xhr) {
+				alert("즐겨찾기를 삭제했습니다.");
+				$("#btn_favorate").removeClass("on");
+				$("#btn_favorate").attr('flag', 'false');
+				$("#btn_favorate").attr('title', '즐겨찾기를 추가하시겠습니까?');
+				$("#btn_favorate").html("<span class='blind'>미등록</span>")
+
+		    });
+
+		} else {
+			var request = ComLib.ajaxReqObj("/cm/d/d/0110/insertBkmkLst.do", data);
+			request.done(function (responseObj, statusText, xhr) {
+				alert(responseObj.rtnMsg);
+				$("#btn_favorate").addClass("on");
+				$("#btn_favorate").attr('flag', 'true');
+				$("#btn_favorate").attr('title', '즐겨찾기가 추가되었습니다.');
+				$("#btn_favorate").html("<span class='blind'>등록됨</span>")
+				$("#bkmkSeq").val(responseObj.bkmkSeq);
+		    });
+		}
+	});
+});
 </script>
 <input type="hidden" name="bkmkSeq" id="bkmkSeq">
 <!-- header sub area -->
-<div class="header_sub_area" style="">
+<div class="header_sub_area">
     <ul class="header_sub_btn" style="display: flex;">
         <li style="display: none;">
             <button type="button" class="sub_all_menu">
                 <span class="blind">서브메뉴</span>
             </button>
         </li>
-        <li style="">
+        <li>
             <button type="button" class="history_back" onclick="fn_goHistoryBack();">
                 <span class="blind">이전 페이지로 이동</span>
             </button>
         </li>
     </ul>
     <h2 class="sub_title">
-        <strong>일자리 찾기</strong>
-        <button type="button" class="submenu_open_icon btn_submenu" style="">
+        <strong>졸업생 특화프로그램</strong>
+        <button type="button" class="submenu_open_icon btn_submenu">
             <span class="blind">서브메뉴 열기</span>
         </button>
+
     </h2>
-    <div class="btn_favorite_area"></div>
+    <div class="btn_favorite_area">
+		
+    </div>
     <div class="sub_menu_list" style="display: none;">
         <ul>
-            <li>
-                <a href="javascript:void(0);" title="페이지 이동"
-                    onclick="fn_goPageUrl('/wk', 'EBG020000000002', '/a/b/1200/retriveDtlEmpSrchListPost.do')">일자리
-                    찾기</a>
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020000000057', '/b/a/1110/retriveIntroPost.do')">졸업생 특화프로그램</a>
             </li>
-            <li>
-                <a href="javascript:void(0);" title="페이지 이동"
-                    onclick="fn_goPageUrl('/wk', 'EBG020000000016', '/a/b/2100/resumeMngMainPost.do')">구직신청</a>
+        
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020000000077', '/u/b/1000/seniorChgJobSptSvcPost.do')">중장년내일센터</a>
             </li>
-            <li>
-                <a href="javascript:void(0);" title="페이지 이동"
-                    onclick="fn_goPageUrl('/wk', 'EBG020000001836', '/a/f/1100/retrieveEmpEventListPost.do')">채용행사</a>
+        
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020020105030', '/g/b/1100/busiIntroPost.do')">청년도전지원사업</a>
             </li>
+        
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020020105001', '/v/a/1000/youngGrowIntroPost.do')">청년성장프로젝트</a>
+            </li>
+        
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020020105031', '/v/a/1000/workPlaceIntroPost.do')">직장적응지원</a>
+            </li>
+        
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020000000081', '/a/i/1110/weSchEmpConsltRoomSvcInvitePost.do')">우리학교 취업지원실</a>
+            </li>
+        
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020020106001', '/w/a/1000/centerListPost.do')">재학생 맞춤형 고용서비스</a>
+            </li>
+        
+        	<li>
+                <a href="javascript:void(0);" title="페이지 이동" onclick="fn_goPageUrl('/wk', 'EBG020020107001', '/m/m/0200/retrieveMasBusiIntroPost.do')">중장년 경력지원제</a>
+            </li>
+        
         </ul>
     </div>
 </div>
+
 <!-- header banner area -->
-<div class="header_banner"></div><!-- header sub search area -->
+<div class="header_banner"></div>
+
+<!-- header sub search area -->
 <div class="header_sub_search"></div>

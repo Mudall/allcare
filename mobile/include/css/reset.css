@@ -47,7 +47,7 @@ body {
 *, *:before, *:after {
   color: #333;
   box-sizing: border-box;
-  font: 1rem "Pretendard", sans-serif;
+  font: 1rem "Pretendard", 'sans-serif';
   margin: 0;
   padding: 0;
 }

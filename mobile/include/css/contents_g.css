@@ -712,7 +712,7 @@
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.25rem;
-  background: url(../images/logo24_bank_sh_jeju.png) no-repeat 0 0;
+  background: url(/cm/static/mobile/images/logo24_bank_sh_jeju.png) no-repeat 0 0;
 }
 
 .js_u {
@@ -816,7 +816,7 @@
 }
 
 .register_self_introduction.ico39_work02 {
-  background: url(../images/ico39_work02.png) no-repeat right 0.625rem top 0;
+  background: url(/cm/static/mobile/images/ico39_work02.png) no-repeat right 0.625rem top 0;
   background-size: 3rem;
 }
 
@@ -1490,13 +1490,13 @@ span.icon_next_black::before {
   background: #5A97F3;
 }
 .main_banner_wrap .main_swiper01 .swiper-wrapper .swiper-slide.bg_blue .slide_item {
-  background: url(../images/main_banner_01.svg) no-repeat 100% 100%;
+  background: url(/cm/static/mobile/images/main_banner_01.svg) no-repeat 100% 100%;
 }
 .main_banner_wrap .main_swiper01 .swiper-wrapper .swiper-slide.bg_green {
   background: #62D491;
 }
 .main_banner_wrap .main_swiper01 .swiper-wrapper .swiper-slide.bg_green .slide_item {
-  background: url(../images/main_banner_01.svg) no-repeat 100% 100%;
+  background: url(/cm/static/mobile/images/main_banner_01.svg) no-repeat 100% 100%;
 }
 .main_banner_wrap .main_swiper01 .swiper-wrapper .swiper-slide .slide_item {
   position: relative;
@@ -1689,7 +1689,7 @@ span.icon_next_black::before {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: url(../images/main_person_img.svg) no-repeat 0 0;
+  background: url(/cm/static/mobile/images/main_person_img.svg) no-repeat 0 0;
   margin: 0 auto;
 }
 .main_person_wrap .swiper-slide .board_list_card .board_list_item .cont .txt .list ul li strong {

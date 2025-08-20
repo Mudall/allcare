@@ -809,7 +809,7 @@ const includes = {
                                                         <li>
                                                     <a href="javascript:void(0);" title="취업역량강화"><span>취업역량강화</span></a>
                                                     <ul class="gnb3depth"> <li class="txt_list">
-                                                    <a href="javascript:void(0);" title="구직자취업역량 강화프로그램 소개" onclick="fn_goPageUrl('/wk', 'EBG020000000057', '/b/a/1110/retriveIntroPost.do', 'EBM01', 'N', '')"><span>구직자취업역량 강화프로그램</span></a>
+                                                    <a href="javascript:void(0);" title="졸업생 특화프로그램 소개" onclick="fn_goPageUrl('/wk', 'EBG020000000057', '/b/a/1110/retriveIntroPost.do', 'EBM01', 'N', '')"><span>졸업생 특화프로그램</span></a>
                                             </li>      
                                                     <li class="txt_list">
                                                     <a href="javascript:void(0);" title="중장년내일센터" onclick="fn_goPageUrl('/wk', 'EBG020000000077', '/u/b/1000/seniorChgJobSptSvcPost.do', 'EBM01', 'N', '')"><span>중장년내일센터</span></a>

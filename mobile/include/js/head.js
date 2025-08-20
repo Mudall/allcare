@@ -24,5 +24,6 @@ str += '<link rel="stylesheet" href="../mobile/include/css/contents_e.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/contents_f.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/contents_g.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/contents_h.css">';
+str += '<link rel="stylesheet" href="../mobile/include/css/layout_scss.css">';
 
 document.write(str);
