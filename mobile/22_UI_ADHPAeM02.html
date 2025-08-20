@@ -146,21 +146,98 @@
                                 </div>
                             </div>
                             <script>
-                                // @@개씩 보기 (팝업내부전용)
-                                document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
-                                    btn.addEventListener('click',e=>{
-                                        const area=e.target.closest('.select_area');
-                                        area.querySelectorAll('.dimmed_pop, .select_layer')
-                                            .forEach(el=>el.classList.toggle('dsp-none'));
-                                    });
+                                // 참여연도/운영대학 선택
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    document.querySelectorAll('.single_form_group.form_group .form_select').forEach(button => {
+                                        button.addEventListener('click', function(e) {
+                                            e.stopPropagation();
+                                            const targetId = this.getAttribute('data-target');
+                                            const layer = document.getElementById(targetId);
+                                            
+                                            closeAllLayers();
+                                            
+                                            if (layer) {
+                                                this.setAttribute('aria-expanded', 'true');
+                                                layer.style.display = 'block';
+                                                layer.setAttribute('aria-hidden', 'false');
+                                                
+                                                const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
+                                                if (dimmed) {
+                                                    dimmed.classList.remove('dsp-none');
+                                                }
+                                                
+                                                document.body.classList.add('scroll_off');
+                                            }
+                                        });
                                     });
 
-                                    // 취소 버튼
+                                    // 옵션 선택 시 텍스트 업데이트
+                                    document.querySelectorAll('.select_option button[data-value]').forEach(button => {
+                                        button.addEventListener('click', function(e) {
+                                            e.preventDefault();
+                                            const value = this.getAttribute('data-value');
+                                            const text = this.getAttribute('data-text');
+                                            const layer = this.closest('.select_layer');
+                                            const selectButton = document.querySelector(`[data-target="${layer.id}"]`);
+                                            const hiddenInput = layer.closest('.form_group').querySelector('input[type="hidden"]');
+                                            selectButton.querySelector('span').textContent = text;
+                                            if (hiddenInput) {
+                                                hiddenInput.value = value;
+                                            }
+                                            
+                                            closeAllLayers();
+                                        });
+                                    });
+
+                                    document.querySelectorAll('.select_close').forEach(button => {
+                                        button.addEventListener('click', closeAllLayers);
+                                    });
+
+                                    document.addEventListener('click', function(e) {
+                                        if (!e.target.closest('.select_area')) {
+                                            closeAllLayers();
+                                        }
+                                    });
+
+                                    document.addEventListener('keydown', function(e) {
+                                        if (e.key === 'Escape') {
+                                            closeAllLayers();
+                                        }
+                                    });
+
+                                    // 모든 레이어 닫기 함수
+                                    function closeAllLayers() {
+                                        document.querySelectorAll('.form_select').forEach(btn => {
+                                            btn.setAttribute('aria-expanded', 'false');
+                                        });
+                                        document.querySelectorAll('.select_layer').forEach(layer => {
+                                            layer.style.display = 'none';
+                                            layer.setAttribute('aria-hidden', 'true');
+                                        });
+                                        
+                                        const dimmed = document.querySelector('.full_box_dimmed.dimmed_pop');
+                                        if (dimmed) {
+                                            dimmed.classList.add('dsp-none');
+                                        }
+                                        
+                                        document.body.classList.remove('scroll_off');
+                                    }
+
+                                    // @@개씩 보기 
+                                    document.querySelectorAll('.prog_list_sec .view_select_box button').forEach(btn=>{
+                                        btn.addEventListener('click',e=>{
+                                            const area=e.target.closest('.select_area');
+                                            area.querySelectorAll('.dimmed_pop, .select_layer')
+                                                .forEach(el=>el.classList.toggle('dsp-none'));
+                                        });
+                                    });
+
                                     document.querySelectorAll('.prog_list_sec .select_close').forEach(btn=>{
-                                    btn.addEventListener('click',e=>{
-                                        e.target.closest('.select_area')
-                                        .querySelectorAll('.dimmed_pop, .select_layer')
-                                        .forEach(el=>el.classList.add('dsp-none'));
+                                        btn.addEventListener('click',e=>{
+                                            e.target.closest('.select_area')
+                                            .querySelectorAll('.dimmed_pop, .select_layer')
+                                            .forEach(el=>el.classList.add('dsp-none'));
+                                        });
                                     });
                                 });
                             </script>

@@ -263,7 +263,6 @@
                 </div>
 
                 <script>
-                    // 만족도 조사 alert 메시지 및 radio 유효성
                     function submitSurvey() {
                         const questions = document.querySelectorAll('.prog_group');
                         let allAnswered = true;
@@ -287,14 +286,20 @@
                         }
 
                         if (!confirm('만족도 조사를 제출하겠습니까?')) return;
-
                         alert('제출하였습니다.');
-                        }
+                    }
 
-                        document.addEventListener('DOMContentLoaded', () => {
+                    document.addEventListener('DOMContentLoaded', () => {
                         document.getElementById('submitSurveyBtn')?.addEventListener('click', submitSurvey);
+                        
+                        // 라디오 선택 시 오류 메시지 숨기기
+                        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                            radio.addEventListener('change', () => {
+                                radio.closest('.prog_group').querySelector('.req_txt')?.setAttribute('hidden', 'true');
+                            });
+                        });
                     });
-                </script>
+                    </script>
             </div>
             <!-- 본문 내용 -->
 

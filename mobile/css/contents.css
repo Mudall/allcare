@@ -258,12 +258,11 @@
 .allcare .region_veiwpop .box_chk-group span label,
 .allcare .progtype_veiwpop .box_chk-group span label {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .allcare .newpop_endfixed.newpop_criteria {padding: initial; flex-direction: column;}
-.allcare .newpop_endfixed.newpop_criteria .criteria_box {background-color: #f8f8f8; padding: 16px 0 8px 24px;}
+.allcare .newpop_endfixed.newpop_criteria .criteria_box {background-color: #f8f8f8; padding: 16px 24px 8px;}
 .allcare .newpop_endfixed.newpop_criteria .criteria_box p.count_txt {font-size: 14px; color: #333; font-weight: 600; line-height: 24px;}
 .allcare .newpop_endfixed.newpop_criteria .criteria_box p.count_txt .count {font-size: 14px; color: var(--col_blue); font-weight: 600; line-height: 24px;}
 .allcare .newpop_endfixed.newpop_criteria .criteria_box .criteria_list {margin-top: 8px; width: 100%;  display: flex; gap: 8px; white-space: nowrap; overflow-x: auto;}
 .allcare .newpop_endfixed.newpop_criteria .criteria_box .criteria_list li {margin-bottom: 8px; background-color: #fff; border: 1px solid #757575; border-radius: 9999px; padding: 6px 12px;}
-.allcare .newpop_endfixed.newpop_criteria .criteria_box .criteria_list li:last-child {margin-right: 24px;}
 .allcare .newpop_endfixed.newpop_criteria .criteria_box .criteria_list li p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .allcare .newpop_endfixed.newpop_criteria .criteria_box .criteria_list li p .listitem_closebtn {margin-left: 4px; padding: 3px 0; width: 16px; height: 16px; display: inline-block; background: url('../include/images/ico16_close.svg') no-repeat center / contain;}
 .allcare .newpop_endfixed.newpop_criteria .btn_box {background-color: #fff; padding: 24px 20px; display: flex; gap: 8px;}
