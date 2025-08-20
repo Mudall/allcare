@@ -24,11 +24,9 @@
             td:nth-child(1), td:nth-child(n+8):nth-child(-n+11) {text-align: center;}
             .top_wrap {display: flex; justify-content: space-between; align-items: center;}
             h1 {margin: 1rem 0 0.5rem;}
-            .btn_box {display: flex; justify-content: flex-end; align-items: center;}
-            .btn_box a {background-color: #ff002f; text-align: center; color: #fff; font-weight: 600; border-radius: 9999px; text-decoration: none; padding: 8px 12px;}
-            .btn_box a+a {margin-left: 4px; background-color: #006722;}
-            .btn_box a:hover {background-color: #000;}
-            tr td:last-child a+a {margin-left: 8px;}
+            .btn_box {display: flex; justify-content: flex-end; align-items: center; background-color: #e9e9e9; border-radius: 9999px;}
+            .btn_box a {text-align: center; color: #222; font-weight: 600; border-radius: 9999px; text-decoration: none; padding: 8px 12px;}
+            .btn_box a.active {background-color: blue; color: #fff;}
             a.none {color: #555;}
         </style>
         <script>
@@ -40,10 +38,11 @@
             });
         </script>
         <div class="top_wrap">
-            <h1>청년 고용 올케어 플랫폼 구축 사업</h1>
+            <h1>청년 고용 올케어 플랫폼 구축 사업 - 졸업생 특화프로그램</h1>
             <div class="btn_box">
-                <a href="./pc/00_sample.html" target="_blank">PC 샘플 페이지</a>
-                <a href="./mobile/00_mo_sample.html" target="_blank">Mobile 샘플 페이지</a>
+                <a href="./index.html" class="active">졸업생 특화프로그램</a>
+                <a href="./index_univ.html">대학 재학생 맞춤형 고용서비스</a>
+                <a>고교생 맞춤형 고용서비스</a>
             </div>
         </div>
         <table>
