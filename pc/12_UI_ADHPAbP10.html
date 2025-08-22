@@ -302,11 +302,16 @@
 
                                         
                                         <!-- 팝업내용 시작 -->
-                                        <div class="new_popup allcare_popup newpop_pv" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-                                            <div class="newpop_tit">   
-                                                <h4>개인정보 수집·이용·제공에 대한 동의서(참여자용)</h4>
-                                                <a href="#" id="interClosed" class="closed"><span class="blind">팝업 닫기</span></a>
-                                            </div>
+                                        <section id="operPrgmPopup" class="new_popup allcare_popup newpop_pv" role="dialog" aria-modal="true" aria-labelledby="operPrgmPopupTitle">
+                                            <header class="head type2 newpop_tit">
+                                                <h1 id="operPrgmPopupTitle" class="h2_sb">개인정보 수집·이용·제공에 대한 동의서(참여자용)</h1>
+                                                <!-- 닫기 -->
+                                                <button type="button" id="btnClose_operPrgmPopup" class="btn-close closed" aria-label="팝업 닫기">
+                                                    <span class="blind">팝업 닫기</span>
+                                                </button>
+                                            </header>
+
+                                            <form:form id="operPrgmForm" name="operPrgmForm" method="POST" modelAttribute="HPFSAA0101VO">
 
                                             <div class="newpop_inner">
                                                 <div class="consent_wrap mb24" role="region" aria-label="취업지원 서비스 제공”을 위한 「개인정보 수집·이용 및 제3자 활용 동의서」">
@@ -556,12 +561,10 @@
                                                     });
                                                 });
                                             </script>
-                                            <!-- 팝업 종료 -->
+                                            </form:form>
+                                        </section>
+                                        <!-- 팝업 종료 -->
 
-
-
-                                            
-                                        </div>
                                     </div>
                                 </div>
 
