@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 있음</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_a"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_a"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <div class="box_notice_wrap mt8">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list">목록 내 <span class="fw600">상세조회버튼</span>을 선택하시면 참여신청서를 조회하실 수 있습니다.</li>
+                                                <li class="txt_list"><span class="fw600">진행상태가 인정, 종료인 참여신청서의 상세조회버튼</span>을 선택하시면 참여유형별로 아래 내용을 추가로 확인하실 수 있습니다.
+                                                    <div>
+                                                        - 빌드업 프로젝트 : 상담 이력조회, 경력개발 로드맵 작성 및 조회<br>
+                                                        - 점프업 프로젝트 : 상담 이력 조회, 취업준비도검사ㆍIAPㆍ포인트신청서 작성 및 조회<br>
+                                                        ※ 단, 진행상태가 중단, 종료인 경우 조회만 가능합니다.
+                                                    </div>
+                                                </li>
+                                                <li class="txt_list">포트폴리오의 명칭이 경력개발 로드맵으로 변경되었습니다.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box_group_wrap">
+                                            <h3 class="t1_sb icon_add"><i class="icon num01"></i><span>나의 신청 내역</span></h3>
+                                            <div class="box_table_wrap mt16">
+                                                <div class="box_table_wrap">
+                                                    <div class="box_table_hd">
+                                                        <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                        <div class="section_right">
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
+                                                                    <option value="10" selected="selected">10개씩 보기</option>
+                                                                    <option value="30">30개씩 보기</option>
+                                                                    <option value="50">50개씩 보기</option>
+                                                                </select>
+                                                            </span>
+                                                            <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- table -->
+                                                    
+                                                    <table class="box_table auto-count new_table">
+                                                        <caption>번호, 참여년도, 참여대학명, 신청일자, 진행상태, 담당자 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width: 70px">
+                                                            <col style="width: 130px">
+                                                            <col style="width: auto">
+                                                            <col style="width: 160px">
+                                                            <col style="width: 100px">
+                                                            <col style="width: 100px">
+                                                            <col style="width: 110px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">번호</th>
+                                                                <th scope="col">참여년도</th>
+                                                                <th scope="col">참여대학명</th>
+                                                                <th scope="col">신청일자</th>
+                                                                <th scope="col">진행상태</th>
+                                                                <th scope="col">담당자</th>
+                                                                <th scope="col">조회</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>2025</td>
+                                                                <td>AAA 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>신청</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="AAA 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>2025</td>
+                                                                <td>BBB 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>접수</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="BBB 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>2025</td>
+                                                                <td>CCC 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>인정</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="CCC 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>2025</td>
+                                                                <td>DDD 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>불인정</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="DDD 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5</td>
+                                                                <td>2025</td>
+                                                                <td>EEE 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>신청</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="EEE 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>6</td>
+                                                                <td>2025</td>
+                                                                <td>FFF 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>신청</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="FFF 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7</td>
+                                                                <td>2025</td>
+                                                                <td>GGG 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>신청</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="GGG 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>8</td>
+                                                                <td>2025</td>
+                                                                <td>HHH 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>신청</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="HHH 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>9</td>
+                                                                <td>2025</td>
+                                                                <td>III 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>신청</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="III 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>10</td>
+                                                                <td>2025</td>
+                                                                <td>JJJ 대학교</td>
+                                                                <td>2025-07-30</td>
+                                                                <td>신청</td>
+                                                                <td>홍길동</td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="JJJ 대학교 조회내용 상세보기">상세보기</button></td>
+                                                            </tr>
+
+                                                            <!-- 등록된 내용이 없을시에 사용 -->
+                                                            <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="section_bottom"></div>
+                                                </div> 
+                                            
+                                                <div class="box_btn_wrap ml_auto mt40 flex_js_r">
+                                                    <a href="#" class="btn big type01 fill">신청서 작성</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                               
+
+                                
+
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

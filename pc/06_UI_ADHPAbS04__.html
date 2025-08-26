@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 조회</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <div class="my_ptcp_from">
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여자 정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>성명, 전화번호, 이메일, 주소 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">성명</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">전화번호</th>
+                                                                <td><div class="form_box"><span class="data_txt">010-0000-0000</span></div></td>
+                                                                <th scope="row">이메일</th>
+                                                                <td><div class="form_box"><span class="data_txt">abcd1234@mail.com</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">주소</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</span></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여대학, 참여자 분류</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>참여대학, 참여자 분류 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="ptcp_form_uni">
+                                                                <th scope="row">참여 대학</th>
+                                                                <td colspan="3">AAA 대학교</td>
+                                                            </tr>
+                                                            <tr class="ptcp_form_type">
+                                                                <th scope="row">
+                                                                    <span class="req_mark">참여자 분류</span>
+                                                                </th>
+                                                                <td colspan="3">
+                                                                    <fieldset class="box_radio_group">
+                                                                        <legend class="sr_only">참여자 분류 선택</legend>
+                                                                        <div class="new_radio_item">
+                                                                            <input type="radio" id="ptcpType1" name="ptcpType" value="graduate" checked disabled>
+                                                                            <label for="ptcpType1" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 1:</span>
+                                                                                <span class="label_text">① 2025년 재학생 맞춤형 고용서비스 사업 운영 대학(원)의 재학·휴학·수료 청년</span>
+                                                                            </label>
+                                                                        </div>
+
+                                                                        <div class="new_radio_item">
+                                                                            <input type="radio" id="ptcpType2" name="ptcpType" value="youth" disabled>
+                                                                            <label for="ptcpType2" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 2:</span>
+                                                                                <span class="label_text">② ①에 해당하지 않는 만 18~34세의 최종학력 고등학교 졸업 이하인 미취업(고용보험 기준) 청년</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap grade_wrap">
+                                                <h3 class="t2_sb">학적정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>학번, 학년, 전공/학과, 상태, 졸업(예정)년월 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="tr_grade">
+                                                                <th scope="row">
+                                                                    <label for="stdId">
+                                                                        <span class="req_mark">학번</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>2025071112352</td>
+                                                                <th scope="row">
+                                                                    <label for="grade">
+                                                                        <span class="req_mark">학년</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>4학년</td>
+                                                            </tr>
+                                                            <tr class="tr_major">
+                                                                <th scope="row">
+                                                                    <label for="major">
+                                                                        <span class="req_mark">전공/학과</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>국어국문학과</td>
+                                                                <th scope="row">
+                                                                    <label for="status">
+                                                                        <span class="req_mark">상태</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>졸업</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여 유형 선택</h3>
+                                                <div class="type_area">
+                                                    <ul class="item_type">
+                                                        <li>
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="빌드업프로젝트" name="참여유형선택" checked disabled>
+                                                                <label for="빌드업프로젝트">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="w">
+                                                                        <span class="t">빌드업 프로젝트</span>
+                                                                        <span class="s">※ 저학년 청년을 중심으로 심층상담 기반 개인별 중·장기 희망 직업 경력개발 로드맵 설계 및 진로탐색 및 기초역량 강화 지원</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="점프업프로젝트" name="참여유형선택" disabled>
+                                                                <label for="점프업프로젝트">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="w">
+                                                                        <span class="t">점프업 프로젝트</span>
+                                                                        <span class="s">※ 고학년 청년을 중심으로 심층상담 기반 개인별 취업활동계획 설계 및 맞춤형 직업훈련·일경험 참여 지원</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">개인정보 수집·이용·제공에 대한 동의서</h3>
+                                                <div class="agm_area">
+                                                    <div class="agm_box">
+                                                        <div class="agm_desc">
+                                                            <p>“대학 재학생 맞춤형 고용서비스” 참여 신청과 관련하여 개인정보를 수집·이용·제공하기 위한 동의 절차</p>
+                                                            <strong>※ 전문보기 후 개인정보 수집·이용·제공 동의를 선택할 수 있습니다.</strong>
+                                                        </div>
+                                                        <button type="button" class="btn_view_doc btn small type02" aria-label="개인정보 수집·이용·제공 동의서 전문보기" onclick="location.href='./UI_ADHPAbP10.html'"><span class="s1_r">전문보기</span></button>
+                                                    </div>
+                                                    
+                                                    <div class="agm_cho">
+                                                        <fieldset class="box_radio_group" role="radiogroup" aria-labelledby="agmLabel">
+                                                            <legend id="agmLabel" class="sr_only">개인정보 수집·이용·제공 동의</legend>                                                            
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="agmType1" name="agmType" value="yes" checked disabled>
+                                                                <label for="agmType1" class="ptcp_radiocustom">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="label_text">동의</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="agmType2" name="agmType" value="no" disabled>
+                                                                <label for="agmType2" class="ptcp_radiocustom">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="label_text">비동의</span>
+                                                                </label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <p class="s1_r apply_summary_pv">개인정보 수집·이용·제공에 대한 동의 일자 : <time datetime="2025-08-06">2025-08-06</time></p>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <div class="tit_box">
+                                                    <h3 class="t2_sb">신청 및 처리현황</h3>
+                                                </div>
+                                                
+                                                <div class="apply_summary_wrap" role="region">
+                                                    <div class="apply_summary_header">
+                                                        <div class="apply_summary_info">
+                                                            <p class="apply_summary_tit">현재 참여신청서 <span>회수</span> 상태입니다.</p>
+                                                            <p class="apply_summary_tel b1_r">담당자 : 김담당 (010-0000-0000)</p>
+                                                        </div>
+                                                        <div class="apply_summary_action mt16"><button type="button" class="apply_summary_toggle off" aria-expanded="false" aria-controls="applySummaryDetail">신청 및 처리현황 이력</button></div>
+                                                    </div>
+
+                                                    <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                                    <div class="apply_summary_inner mt32" id="applySummaryDetail" hidden>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">회수</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">제출</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">접수</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">인정</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">불인정</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                                <p class="apply_summary_reason">불인정사유 : 대플 담당자가 등록한 불인정 사유 조회</p>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">회수</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">제출</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">접수</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">인정</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">불인정</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                                <p class="apply_summary_reason">불인정사유 : TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST</p>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">회수</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">제출</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">접수</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">인정</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">불인정</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                                <p class="apply_summary_reason">불인정사유 : TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                                <div class="btn_box mt40">
+                                                    <button type="button" class="btn big type02" aria-label="신청 목록 페이지로 이동">목록</button>
+                                                    <button type="submit" id="srchBtn" class="btn big fill type01">회수</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    // 신청 및 처리현황 on/off 토글
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        const toggleBtn = document.querySelector('.apply_summary_action .apply_summary_toggle');
+                                        const detailArea = document.getElementById('applySummaryDetail');
+
+                                        toggleBtn.addEventListener('click', function () {
+                                            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                                            toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+                                            toggleBtn.classList.toggle('on', !isExpanded);
+                                            toggleBtn.classList.toggle('off', isExpanded);
+                                            if (!isExpanded) {
+                                                detailArea.removeAttribute('hidden');
+                                            } else {
+                                                detailArea.setAttribute('hidden', '');
+                                            }
+                                        });
+                                    });
+
+
+                                    // 참여자 분류에서 1번 선택시 학적정보 보여주기 
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        const ptcpType1 = document.getElementById('ptcpType1');
+                                        const ptcpType2 = document.getElementById('ptcpType2');
+                                        const gradeWrap = document.querySelector('.grade_wrap');
+                                        function toggleGradeWrap() {
+                                            if (ptcpType1.checked) {
+                                                gradeWrap.style.display = 'block';
+                                            } else if (ptcpType2.checked) {
+                                                gradeWrap.style.display = 'none';
+                                            }
+                                        }
+                                        toggleGradeWrap();
+                                        ptcpType1.addEventListener('change', toggleGradeWrap);
+                                        ptcpType2.addEventListener('change', toggleGradeWrap);
+                                    });
+                                </script>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>

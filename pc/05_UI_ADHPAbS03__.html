@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 등록</title>
+        <script src="../pc/include/js/head.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_a"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_a"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <div class="my_ptcp_from">
+                                            <div class="box_group_wrap mt16">
+                                                <h3 class="t1_sb icon_add"><i class="icon num02"></i><span>참여신청서 작성</span></h3>
+                                                <div class="box_table_wrap write type01 mt16">
+                                                    <table class="box_table">
+                                                        <caption>잡케어 보고서 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:auto;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">잡케어 보고서</th>
+                                                                <td>
+                                                                    <div>
+                                                                        <div class="form_box">
+                                                                            <span class="data_txt"><span class="fw600">잡케어 보고서를 먼저 생성</span>해 주세요.</span>
+                                                                            <button type="button" class="btn medium type02 btnSearch fw600">잡케어 서비스 바로가기</button>
+                                                                        </div>
+                                                                        <div class="form_box"><span class="data_txt">재학생 맞춤형 고용서비스 참여를 위해서는 반드시 잡케어 시스템을 이용한 프로필 등록 및 직무역량 & 연관직종 분석 후 참여가 가능합니다.</span></div>
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <div class="form_box">
+                                                                            <span class="data_txt">YYYY-MM-DD</span>
+                                                                            <button type="button" class="btn medium type02 btnSearch fw600">잡케어 서비스 바로가기</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여자 정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>성명, 전화번호, 이메일, 주소 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">성명</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">전화번호</th>
+                                                                <td><div class="form_box"><span class="data_txt">010-0000-0000</span></div></td>
+                                                                <th scope="row">이메일</th>
+                                                                <td><div class="form_box"><span class="data_txt">abcd1234@mail.com</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">주소</th>
+                                                                <td colspan="3"><div class="form_box"><span class="data_txt">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</span></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">참여대학, 참여자 분류</h3>
+                                                <div class="box_notice_wrap mt8">
+                                                    <p class="tit">안내</p>
+                                                    <ul class="box_list_area">
+                                                        <li class="txt_list">졸업 수료생은 대학 자체 기준에 따라 졸업생으로 분류될 경우 <span class="fw600 clr_red">참여 불가</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box_table_wrap write type01 mt16">
+                                                    <table class="box_table"><caption>참여대학, 참여자 분류 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="ptcp_form_uni">
+                                                                <th scope="row">참여 대학</th>
+                                                                <td colspan="3">
+                                                                    <div class="box_table_group zipcode_area">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt new_ipt">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="대학교 명" readonly="" placeholder="AAA 대학교">
+                                                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="ptcp_form_type">
+                                                                <th scope="row">
+                                                                    <span class="req_mark">참여자 분류</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <td colspan="3">
+                                                                    <fieldset class="box_radio_group">
+                                                                        <legend class="sr_only">참여자 분류 선택</legend>
+                                                                        <div class="new_radio_item">
+                                                                            <input type="radio" id="ptcpType1" name="ptcpType" value="graduate" checked>
+                                                                            <label for="ptcpType1" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 1:</span>
+                                                                                <span class="label_text">&#9312; 졸업생 특화 프로그램을 운영하는 대학(원)의 졸업생, 졸업 유예자 및 예정자</span>
+                                                                            </label>
+                                                                        </div>
+
+                                                                        <div class="new_radio_item">
+                                                                            <input type="radio" id="ptcpType2" name="ptcpType" value="youth">
+                                                                            <label for="ptcpType2" class="ptcp_radiocustom">
+                                                                                <span class="radio_ui" aria-hidden="true"></span>
+                                                                                <span class="sr_only">선택지 2:</span>
+                                                                                <span class="label_text">&#9313; ①에 해당하지 않는 직업계고 졸업생, 미취업 지역 청년</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap grade_wrap">
+                                                <h3 class="t2_sb">학적정보</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>학번, 학년, /학과, 상태 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr class="tr_grade">
+                                                                <th scope="row">
+                                                                    <label for="stdId">
+                                                                        <span class="req_mark">학번</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="stdId" class="sr_only">학번</label>
+                                                                        <input type="text" class="input_txt" id="stdId" name="stdId" placeholder="학번을 입력하세요." title="학번 입력" pattern="[0-9a-zA-Z가-힣]+" value="">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="학번 입력내용 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </td>
+                                                                
+                                                                <th scope="row">
+                                                                    <label for="grade">
+                                                                        <span class="req_mark">학년</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="grade" class="sr_only">학년 선택</label>
+                                                                        <select id="grade" name="grade" title="학년 선택">
+                                                                            <option disabled selected>선택</option>
+                                                                            <option value="1">1학년</option>
+                                                                            <option value="2">2학년</option>
+                                                                            <option value="3">3학년</option>
+                                                                            <option value="4">4학년</option>
+                                                                            <option value="5">5학년</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="tr_major">
+                                                                <th scope="row">
+                                                                    <label for="major">
+                                                                        <span class="req_mark">전공/학과</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>
+                                                                    <div class="box_table_group">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt new_ipt">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="전공/학과명" readonly="" placeholder="전공명/학과명">
+                                                                                <button type="button" class="newbtn_del ico16_delete">
+                                                                                    <span class="blind">삭제</span>
+                                                                                </button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
+                                                                    </div>
+                                                                </td>
+                                                                <th scope="row">
+                                                                    <label for="status">
+                                                                        <span class="req_mark">상태</span>
+                                                                        <span class="sr_only">필수 입력</span>
+                                                                    </label>
+                                                                </th>
+                                                                <td>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="status" class="sr_only">상태 선택</label>
+                                                                        <select id="status" name="status" title="상태 선택">
+                                                                            <option disabled selected>선택</option>
+                                                                            <option value="graduated">졸업</option>
+                                                                            <option value="expected">졸업예정</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb hreq_mark">참여 유형 선택</h3>
+                                                <div class="type_area">
+                                                    <ul class="item_type">
+                                                        <li>
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="빌드업프로젝트" name="참여유형선택" checked>
+                                                                <label for="빌드업프로젝트">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="w">
+                                                                        <span class="t">빌드업 프로젝트</span>
+                                                                        <span class="s">※ 저학년 청년을 중심으로 심층상담 기반 개인별 중·장기 희망 직업 경력개발 로드맵 설계 및 진로탐색 및 기초역량 강화 지원</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="점프업프로젝트" name="참여유형선택">
+                                                                <label for="점프업프로젝트">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="w">
+                                                                        <span class="t">점프업 프로젝트</span>
+                                                                        <span class="s">※ 고학년 청년을 중심으로 심층상담 기반 개인별 취업활동계획 설계 및 맞춤형 직업훈련·일경험 참여 지원</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb hreq_mark">개인정보 수집·이용·제공에 대한 동의서</h3>
+                                                <div class="agm_area">
+                                                    <div class="agm_box">
+                                                        <div class="agm_desc">
+                                                            <p>“대학 재학생 맞춤형 고용서비스” 참여 신청과 관련하여 개인정보를 수집·이용·제공하기 위한 동의 절차</p>
+                                                            <strong>&#x203B; 전문보기 후 개인정보 수집·이용·제공 동의를 선택할 수 있습니다.</strong>
+                                                        </div>
+                                                        <button type="button" class="btn_view_doc btn small type02" aria-label="개인정보 수집·이용·제공 동의서 전문보기" onclick="location.href='./UI_ADHPAbP10.html'"><span class="s1_r">전문보기</span></button>
+                                                    </div>
+                                                    
+                                                    <div class="agm_cho">
+                                                        <fieldset class="box_radio_group" role="radiogroup" aria-labelledby="agmLabel">
+                                                            <legend id="agmLabel" class="sr_only">개인정보 수집·이용·제공 동의</legend>                                                            
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="agmType1" name="agmType" value="yes">
+                                                                <label for="agmType1" class="ptcp_radiocustom">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="label_text">동의</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="agmType2" name="agmType" value="no">
+                                                                <label for="agmType2" class="ptcp_radiocustom">
+                                                                    <span class="radio_ui" aria-hidden="true"></span>
+                                                                    <span class="label_text">비동의</span>
+                                                                </label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                                <div class="submit_date_box mt40">
+                                                    <p class="b1_r">제출일자<time class="t2_sb" datetime="2025-07-31">2025.07.31</time></p>
+                                                </div>
+
+                                                <div class="btn_box mt40">
+                                                    <button type="button" class="btn big type02 btn_s_r" aria-label="신청 목록 페이지로 이동" onclick="window.location.href=''">목록</button>
+                                                    <button type="submit" id="srchBtn" class="btn big fill type01" onclick="">제출</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <script>
+                                    // 참여자 분류에서 1번 선택시 학적정보 보여주기 
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        const ptcpType1 = document.getElementById('ptcpType1');
+                                        const ptcpType2 = document.getElementById('ptcpType2');
+                                        const gradeWrap = document.querySelector('.grade_wrap');
+                                        function toggleGradeWrap() {
+                                            if (ptcpType1.checked) {
+                                                gradeWrap.style.display = 'block';
+                                            } else if (ptcpType2.checked) {
+                                                gradeWrap.style.display = 'none';
+                                            }
+                                        }
+                                        toggleGradeWrap();
+                                        ptcpType1.addEventListener('change', toggleGradeWrap);
+                                        ptcpType2.addEventListener('change', toggleGradeWrap);
+                                    });
+                                </script>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

@@ -22,6 +22,11 @@
 .allcare .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 
+.allcare .icon_add { display: flex; align-items: center;}
+.allcare .icon_add .icon { display: block; width: 24px; height: 24px; margin-right: 8px;}
+.allcare .icon_add .num01 { background: url('../images/mypage/ico24_receipt_item.svg') no-repeat;}
+.allcare .icon_add .num02 { background: url('../images/mypage/ico24_member_register.svg') no-repeat;}
+
 /* 250820 수정 */
 .allcare_popup.new_popup * {letter-spacing: -0.02em}
 
@@ -181,6 +186,7 @@
 .mypage .progmg.allcare .my_ptcp_from .radio_ui {margin: auto 8px auto 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%; display: inline-block; position: relative;}
 .mypage .progmg.allcare .my_ptcp_from .new_radio_item input[type="radio"] {position: absolute; opacity: 0; pointer-events: none;}
 .mypage .progmg.allcare .my_ptcp_from .new_radio_item input[type="radio"]:checked + label .radio_ui::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
+.mypage .progmg.allcare .my_ptcp_from .new_radio_item input[type="radio"]:checked:disabled + label .radio_ui::after { width: 12px; height: 12px; border:none; background-color: #444;}
 .mypage .progmg.allcare .my_ptcp_from .box_radio_group input[type='radio'] + label {margin-left: 0;}
 .mypage .progmg.allcare .my_ptcp_from .ptcp_radiocustom {cursor: pointer;}
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_uni td .box_table_group {display: flex;}
@@ -210,7 +216,10 @@
 .mypage .progmg.allcare .box_end_wrap .submit_date_box p {color: #333;}
 .mypage .progmg.allcare .box_end_wrap .submit_date_box p time {margin-left: 8px;}
 .mypage .progmg.allcare .box_end_wrap .btn_box {display: flex; justify-content: space-between; align-items: center;}
-
+.mypage .progmg.allcare .type_area .item_type { border-top: 1px solid var(--col_btn);}
+.mypage .progmg.allcare .type_area .item_type li { padding: 12px 20px; border-bottom: 1px solid var(--col_btn);}
+.mypage .progmg.allcare .type_area .item_type li .t { display: block; line-height: 24px;}
+.mypage .progmg.allcare .type_area .item_type li .s { display: block; font-size: 14px; line-height: 28px;}
 
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */
 .mypage .progmg.allcare .apply_summary_wrap {background-color: #f8f8f8; padding: 32px 40px;}
@@ -441,6 +450,7 @@
 .mypage .progmg.allcare .donepage .done_info li .tit p {font-size: 16px; font-weight: 400; line-height: 28px; color: #333; }
 .mypage .progmg.allcare .donepage .done_info li .desc p {font-size: 16px; font-weight: 600; line-height: 28px; color: #333;}
 .mypage .progmg.allcare .donepage .done_btn {display: flex; justify-content: flex-end;}
+.mypage .progmg.allcare .stacon { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border: 1px solid var(--col_btn); border-radius: 8x;}
 
 
 /* 완료 페이지 - 회수 완료 (UI_ADHPAbS12) */
