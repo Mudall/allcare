@@ -22,13 +22,8 @@
 .allcare .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 
-.allcare .icon_add { display: flex; align-items: center;}
-.allcare .icon_add .icon { display: block; width: 24px; height: 24px; margin-right: 8px;}
-.allcare .icon_add .num01 { background: url('../images/mypage/ico24_receipt_item.svg') no-repeat;}
-.allcare .icon_add .num02 { background: url('../images/mypage/ico24_member_register.svg') no-repeat;}
-
 /* 250820 수정 */
-.allcare_popup.new_popup * {letter-spacing: -0.02em}
+.allcare_popup.new_popup * { letter-spacing: -0.02em;}
 
 .allcare_popup.new_popup {padding: 32px 17px 40px 40px; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 1040px; height: calc(100% - 200px); max-height: 680px; z-index: 9999;}
 .allcare_popup.new_popup .newpop_tit { width: initial; background-color: initial; position: relative; top: initial; z-index: initial;  padding-bottom: 24px; margin: 0 17px 24px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;}
@@ -42,43 +37,56 @@
 .allcare_popup.new_popup .cont{height: 100%; display: block;}
 .allcare_popup.new_popup .newpop_inner {height: calc(100% - 90px);overflow: auto; padding-right: 18px;}
 
-.allcare_popup.new_popup fieldset, .uni_prog_tool fieldset {border: none;} 
+.allcare_popup.new_popup fieldset, .uni_prog_tool fieldset {border: none;}
 
 .allcare_popup.new_popup .new_radio_item {display: flex; align-items: center; position: relative;}
 .allcare_popup.new_popup .new_radio_item + .new_radio_item {margin-left: 16px;}
-.allcare_popup.new_popup .new_radio_item input[type="radio"] {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(100%); border: 0;}
 .allcare_popup.new_popup .new_radio_item label {height: auto; display: flex; align-items: center; cursor: pointer;}
 .allcare_popup.new_popup .new_radio_item label .radio_ui {display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%; position: relative;}
-.allcare_popup.new_popup .new_radio_item input[type="radio"]:checked + label .radio_ui::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
 .allcare_popup.new_popup .new_radio_item label .label_text {margin-left: 5px; font-size: 16px; font-weight: 400; color: #333; line-height: 22px; }
 .allcare_popup.new_popup input[type="checkbox"].new_chkbox {position: relative; width: 20px; height: 20px; border: 1px solid #757575; border-radius: 4px;}
 .allcare_popup.new_popup input[type="checkbox"].new_chkbox:checked::before {content: ''; position: absolute; width: 20px; height: 20px; border: 1px solid var(--col_blue); border-radius: 4px; background-color: var(--col_blue);} 
 .allcare_popup.new_popup input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/support/ico10_chk.svg') no-repeat center / contain;} 
 
-.allcare_popup.new_popup .sr_only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; font-size: 0;}
+.allcare_popup.new_popup  .new_ipt button[class*='ico']{right: 12px;}
+.allcare_popup.new_popup  .new_ipt .input_txt {padding-left: 12px;} 
+.allcare_popup.new_popup  [class^='btn'].medium.newbtn_w60 {padding: 0 12px; min-width: 60px;}
+.allcare_popup.new_popup  [class^='btn'].medium.newbtn_w88 {padding: 0 16px; min-width: 88px;}
 
+.allcare_popup.new_popup .sr_only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+.allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box {margin-top: 8px; display: flex; gap: 8px;}
+.allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li {border: 1px solid var(--col_blue); border-radius: 4px; background-color: #fff;}
+.allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li button {font-size: 14px; line-height: 24px; font-weight: 600; padding: 4px 12px; color: var(--col_blue);}
+.allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li.active {background-color: var(--col_blue);}
+.allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li.active button {color: #fff;}
+.allcare_popup.new_popup .search_table td .box_chk-group { min-height: initial;}
 
-.allcare_popup.new_popup .new_ipt button[class*='ico']{right: 12px;}
-.allcare_popup.new_popup .new_ipt .input_txt {padding-left: 12px;} 
-.allcare_popup.new_popup [class^='btn'].medium.newbtn_w60 {padding: 0 12px; min-width: 60px;}
-.allcare_popup.new_popup [class^='btn'].medium.newbtn_w88 {padding: 0 16px; min-width: 88px;}
-
+.allcare .new_ipt button[class*='ico']{right: 12px;}
+.allcare .new_ipt .input_txt {padding-left: 12px;} 
+.allcare [class^='btn'].medium.newbtn_w60 {padding: 0 12px; min-width: 60px;}
+.allcare [class^='btn'].medium.newbtn_w88 {padding: 0 16px; min-width: 88px;}
 
 .allcare .new_radio_item {display: flex; align-items: center; position: relative;}
 .allcare .new_radio_item + .new_radio_item {margin-left: 16px;}
-.allcare .new_radio_item input[type="radio"] {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(100%); border: 0;}
 .allcare .new_radio_item label {height: auto; display: flex; align-items: center; cursor: pointer;}
-.allcare .new_radio_item label .radio_ui {display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%; position: relative;}
-.allcare .new_radio_item input[type="radio"]:checked + label .radio_ui::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
-.allcare .new_radio_item label .label_text {margin-left: 5px; font-size: 16px; font-weight: 400; color: #333; line-height: 22px; }
+.allcare .new_radio_item label .label_text {font-size: 16px; font-weight: 400; color: #333; line-height: 22px; }
 .allcare input[type="checkbox"].new_chkbox {position: relative; width: 20px; height: 20px; border: 1px solid #757575; border-radius: 4px;}
 .allcare input[type="checkbox"].new_chkbox:checked::before {content: ''; position: absolute; width: 20px; height: 20px; border: 1px solid var(--col_blue); border-radius: 4px; background-color: var(--col_blue);} 
 .support .youth.allcare input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/support/ico10_chk.svg') no-repeat center / contain;} 
 .mypage .progmg.allcare.allcare input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/ico10_chk.svg') no-repeat center / contain;} 
 .sub_tl + *:not(.box_notice_wrap) .allcare .t2_sb {line-height: 48px;}
+
+.allcare .box_radio_group, .allcare_popup.new_popup .box_radio_group {border: none;}
+.allcare .box_radio_group .new_radio_item, .allcare_popup.new_popup .box_radio_group .new_radio_item {display: flex; gap: 8px;}
+.allcare .box_radio_group .new_radio_item input[type="radio"],
+.allcare_popup.new_popup .box_radio_group .new_radio_item input[type='radio'] {cursor: pointer; background-color: #fff; appearance: none; -webkit-appearance: none; -moz-appearance: none; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
+.allcare .box_radio_group .new_radio_item input[type="radio"]:checked,
+.allcare_popup.new_popup .box_radio_group .new_radio_item input[type='radio']:checked {border: 5px solid var(--col_blue);}
+.allcare .box_radio_group .new_radio_item label,
+.allcare_popup.new_popup .box_radio_group .new_radio_item label {flex: 1;}
 
 
 
@@ -150,11 +158,12 @@
 .allcare_popup.new_popup .uni_prog_tool .new_table .oper_time, 
 .allcare_popup.new_popup .uni_prog_tool .new_table .oper_count {font-weight: 400;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
-.allcare_popup.new_popup .uni_prog_tool tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
+.allcare_popup.new_popup .uni_prog_tool tr.new_date .date_select .newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .allcare_popup.new_popup .uni_prog_tool .box_form_content {padding: 24px 40px;}
 .allcare_popup.new_popup .uni_prog_tool .box_chk-group > span {margin-right: 18px;}
-.allcare_popup.new_popup .uni_prog_tool th, .allcare .uni_prog_tool td {padding-top: 12px; padding-bottom: 12px;}
+.allcare_popup.new_popup .uni_prog_tool th, 
+.allcare_popup.new_popup .uni_prog_tool td {padding-top: 12px; padding-bottom: 12px;}
 .allcare_popup.new_popup .uni_prog_tool .search_table td .box_chk-group {min-height: initial;}
 
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box {margin-top: 8px; display: flex; gap: 8px;}
@@ -181,10 +190,6 @@
 .mypage .progmg.allcare .my_ptcp_from .btnSearch span {font-weight: 600;}
 .mypage .progmg.allcare .my_ptcp_from .req_mark {position: relative; padding-right: 12px; font-size: 16px; font-weight: 600; line-height: 28px;  color: #333;}
 .mypage .progmg.allcare .my_ptcp_from .req_mark::after {content: ''; position: absolute; right: 0; top: 25%; transform: translateY(-50%); width: 5px; height: 5px; background-color: #ee2e62; border-radius: 50%;}
-.mypage .progmg.allcare .my_ptcp_from .radio_ui {margin: auto 8px auto 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%; display: inline-block; position: relative;}
-.mypage .progmg.allcare .my_ptcp_from .new_radio_item input[type="radio"] {position: absolute; opacity: 0; pointer-events: none;}
-.mypage .progmg.allcare .my_ptcp_from .new_radio_item input[type="radio"]:checked + label .radio_ui::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
-.mypage .progmg.allcare .my_ptcp_from .new_radio_item input[type="radio"]:checked:disabled + label .radio_ui::after { width: 12px; height: 12px; border:none; background-color: #444;}
 .mypage .progmg.allcare .my_ptcp_from .box_radio_group input[type='radio'] + label {margin-left: 0;}
 .mypage .progmg.allcare .my_ptcp_from .ptcp_radiocustom {cursor: pointer;}
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_uni td .box_table_group {display: flex;}
@@ -213,10 +218,7 @@
 .mypage .progmg.allcare .box_end_wrap .submit_date_box p {color: #333;}
 .mypage .progmg.allcare .box_end_wrap .submit_date_box p time {margin-left: 8px;}
 .mypage .progmg.allcare .box_end_wrap .btn_box {display: flex; justify-content: space-between; align-items: center;}
-.mypage .progmg.allcare .type_area .item_type { border-top: 1px solid var(--col_btn);}
-.mypage .progmg.allcare .type_area .item_type li { padding: 12px 20px; border-bottom: 1px solid var(--col_btn);}
-.mypage .progmg.allcare .type_area .item_type li .t { display: block; line-height: 24px;}
-.mypage .progmg.allcare .type_area .item_type li .s { display: block; font-size: 14px; line-height: 28px;}
+
 
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */
 .mypage .progmg.allcare .apply_summary_wrap {background-color: #f8f8f8; padding: 32px 40px;}
@@ -251,7 +253,7 @@
 .allcare_popup.new_popup .newpop_uni_search.newpop_inner tr td {cursor: pointer;}
 .allcare_popup.new_popup .newpop_uni_search.newpop_inner .new_radio_item {display: flex; justify-content: center; align-items: center; position: relative;}
 .allcare_popup.new_popup .newpop_uni_search.newpop_inner .new_table.radio_table .single_radio_item {display: flex; justify-content: center; align-items: center;}
-.allcare_popup.new_popup .newpop_uni_search.newpop_inner .new_table.radio_table .single_radio_item input[type="radio"] {display: block; margin: 0; width: 22px; height: 22px; background-color: #fff; border: 1px solid #757575; border-radius: 50%; position: relative; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.allcare_popup.new_popup .newpop_uni_search.newpop_inner .new_table.radio_table .single_radio_item input[type="radio"] {cursor: pointer; display: block; margin: 0; width: 22px; height: 22px; background-color: #fff; border: 1px solid #757575; border-radius: 50%; position: relative; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare_popup.new_popup .newpop_uni_search.newpop_inner .new_table.radio_table .single_radio_item input[type="radio"]:checked::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
 .allcare_popup.new_popup .newpop_save.uni_save {display: flex; justify-content: center; align-items: center;}
 .allcare_popup.new_popup .newpop_save.uni_save button + button {margin-left: 16px;}
@@ -300,11 +302,11 @@
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_tit {border-bottom: 1px solid #ddd; padding: 8px 16px; background-color: #f8f8f8; display: flex; justify-content: space-between; align-items: center;}
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box {border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box fieldset {height: 276px; overflow-y: auto;}
-.allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item {justify-content: flex-start; padding: 10px 16px;}
+.allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item {justify-content: flex-start; align-items: stretch; padding: 10px 16px;}
+.allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item input {margin-top: 2px;}
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item label {align-items: initial;}
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item label p {flex: 1;}
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item + .new_radio_item {margin-left: 0;}
-.allcare_popup.new_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item .radio_ui {margin-right: 8px; margin-top: 2px;}
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .search_box .search_table tbody tr td {border-bottom: none; padding-top: 0 !important; padding-bottom: 0 !important;}
 .allcare_popup.new_popup .newpop_major_result.newpop_inner .search_box .box_form_content {padding: 24px 40px;}
 
@@ -350,6 +352,32 @@
 
 
 /* 프로그램 신청 - 목록 있음 (UI_ADHPAcM02) */
+
+.allcare .uni_prog_tool .new_table tr th:first-child, 
+.allcare .uni_prog_tool .new_table tr td:first-child {padding-left: 24px;}
+.allcare .uni_prog_tool .new_table tr th:last-child, 
+.allcare .uni_prog_tool .new_table tr td:last-child {padding-right: 24px;}
+.allcare .uni_prog_tool .new_table td {text-align: left;}
+.allcare .uni_prog_tool .new_table td span {vertical-align: baseline; font-weight: 600;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_uni p {margin: 8px 0; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_tit p {color: #111;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc {display: flex; align-items: stretch; gap: 4px;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span {display: none; padding: 4px 6px; border-radius: 4px; color: #fff; background-color: #19b3bd; border: 1px solid #19b3bd; font-size: 12px; font-weight: 400; line-height: 1; }
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span.on {display: block;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_cdp {background-color: #e0024b; border: 1px solid #e0024b;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_lerc {background-color: var(--col_orange); border: 1px solid var(--col_orange);}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_pm {background-color: #9e00ff; border: 1px solid #9e00ff;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_etc {background-color: #555; border: 1px solid #555;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span {display: none; font-size: 12px; font-weight: 400; line-height: 1;  padding: 4px 6px; border-radius: 4px;} 
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span.on {display: block;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site .onsite {color: var(--col_blue); border: 1px solid var(--col_blue);}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site .offsite {color: #333; border: 1px solid #757575;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_year p {color: #333;}
+.allcare .uni_prog_tool .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
+.allcare .uni_prog_tool .new_table td:last-child li+li {margin-top: 4px;}
+.allcare .uni_prog_tool .new_table td:last-child li span {color: #333;}
+
+
 
 
 /* 프로그램 신청 - 신청 (UI_ADHPAcS03) */
@@ -414,7 +442,7 @@
 .mypage .progmg.allcare .pa_page_inner .oper_count {line-height: 28px;}
 .mypage .progmg.allcare .pa_page_inner .oper_time {margin: 4px 0;}
 .mypage .progmg.allcare .pa_page_inner .prog_tit { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; line-clamp: 2; max-height: 56px;}
-.mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li {position: relative; padding-left: 24px; color: #333; font-size: 16px; line-height: 28px;}
+.mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li {position: relative; padding-left: 24px; color: #333; font-size: 16px; line-height: 28px; text-align: left;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li+li {margin-top: 4px;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li span {color: #333;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_year {font-weight: 400;}
@@ -447,7 +475,6 @@
 .mypage .progmg.allcare .donepage .done_info li .tit p {font-size: 16px; font-weight: 400; line-height: 28px; color: #333; }
 .mypage .progmg.allcare .donepage .done_info li .desc p {font-size: 16px; font-weight: 600; line-height: 28px; color: #333;}
 .mypage .progmg.allcare .donepage .done_btn {display: flex; justify-content: flex-end;}
-.mypage .progmg.allcare .stacon { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border: 1px solid var(--col_btn); border-radius: 8x;}
 
 
 /* 완료 페이지 - 회수 완료 (UI_ADHPAbS12) */
