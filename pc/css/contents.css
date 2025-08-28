@@ -557,9 +557,17 @@
 
 /* 빌드업 - 참여신청서 조회 */
 
-/* 빌드업 - 경력개발로드맵_목록없음 */
+/* 빌드업 - 상담이력_목록없음 */
 
 /* 빌드업 - 상담이력_목록있음 */
 .mypage .progmg.allcare .box_table_hd.hd_space {display:flex; justify-content: space-between;}
 .mypage .progmg.allcare .box_table_hd.hd_space .sec_year span {color: var(--col_blue); font-weight: 600;}
+
+
+/* 빌드업 - 경력개발로드맵_목록없음 */
+.mypage .progmg.allcare .notlist_inner {width: 100%; background-color: #f5f6f8; padding: 40px 24px; display: flex; flex-direction: column; align-items: center;}
+.mypage .progmg.allcare .notlist_inner figure {margin-bottom: 16px;}
+.mypage .progmg.allcare .notlist_inner figure .icon {display: block; width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .notlist_inner p {text-align: center; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .roadmap_btn_wrap {display: flex; justify-content: flex-end;}
 
