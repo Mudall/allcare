@@ -10,7 +10,7 @@
 .allcare .mt8 {margin-top: 8px;}
 .allcare .input_txt {padding: 0 26px 0 12px}
 .allcare .box_table_wrap:not(.r_type01,.r_type02) .box_table.new_table th {font-size: 16px; font-weight: 600; line-height: 28px; color: #333;}
-.allcare .box_table_wrap:not(.r_type01,.r_type02) .box_table.new_table td {font-size: 16px; font-weight: 400; line-height: 28px; color: #333;}
+.allcare .box_table_wrap:not(.r_type01,.r_type02) .box_table.new_table td {font-size: 16px; font-weight: 400; line-height: 28px; color: #333; word-break: keep-all;}
 .allcare .new_table tr th {padding: 12px 10px;}
 .allcare .new_table tr td {padding: 14px 10px;}
 .allcare .new_table tr th:first-child, .allcare .new_table tr td:first-child {padding-left: 20px;}
@@ -236,7 +236,7 @@
 .mypage .progmg.allcare .apply_summary_action .apply_summary_toggle::after {content: ''; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: url('../images/mypage/ico16_toggle_off.svg') no-repeat center / contain; width: 16px; height: 16px;}
 .mypage .progmg.allcare .apply_summary_action .apply_summary_toggle.on::after {background-image: url('../images/mypage/ico16_toggle_on.svg');}
 .mypage .progmg.allcare .apply_summary_inner {padding: 32px 0 32px 40px; background-color: #fff; border-radius: 8px; border: 1px solid #ddd}
-.mypage .progmg.allcare .apply_summary_inner ul {height: 272px; overflow-y: auto; padding-right: 25px; margin-right: 15px;}
+.mypage .progmg.allcare .apply_summary_inner ul {height: auto; max-height: 272px; overflow-y: auto; padding-right: 25px; margin-right: 15px;}
 .mypage .progmg.allcare .apply_summary_inner ul li + li {margin-top: 8px;}
 .mypage .progmg.allcare .apply_summary_inner ul li .apply_summary_status {display: flex; justify-content: space-between;}
 .mypage .progmg.allcare .apply_summary_inner ul li p {font-size: 16px; font-weight: 400; line-height: 28px; color: #333;}
@@ -543,11 +543,23 @@
 /* 참여 신청서 - 등록 제출완료 */
 .mypage .progmg.allcare .partici_box {border: 1px solid #ddd; border-radius: 8px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;}
 
+/* 참여신청서 - 조회_제출 */
 
-.box_radio_group.type_unselect {}
-.box_radio_group.type_unselect .new_radio_item {}
+/* 참여신청서 - 조회_불인정 */
 .allcare .box_radio_group.type_unselect .new_radio_item label,
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .box_radio_group.type_unselect label,
 .mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"] {cursor: initial;}
 .mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"]:checked {position: relative; border: 1px solid #757575;}
 .mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"]:checked::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+/* 참여신청서 - 회수_수정 */
+
+/* 빌드업 - 참여신청서 조회 */
+
+/* 빌드업 - 경력개발로드맵_목록없음 */
+
+/* 빌드업 - 상담이력_목록있음 */
+.mypage .progmg.allcare .box_table_hd.hd_space {display:flex; justify-content: space-between;}
+.mypage .progmg.allcare .box_table_hd.hd_space .sec_year span {color: var(--col_blue); font-weight: 600;}
+

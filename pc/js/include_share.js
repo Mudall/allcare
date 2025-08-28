@@ -1182,7 +1182,77 @@ const includes = {
 </ul>
     `,
     "lnb.type_b": `
-<h2 class="h2_sb">마이페이지(개인)</h2>
+    <h2 class="h2_sb">마이페이지(개인)</h2>
+    <ul>
+        
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">마이페이지(개인)</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">회원정보관리</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">맞춤정보</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">잡케어</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">민원신청 현황</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">서비스이력</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">구직관리</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">훈련관리</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" title="선택됨" aria-expanded="true" class="on">참여 프로그램 관리</a>
+            <ul class="menuLevel3LiClassChk" style="display: block;">
+                <li><a href="javascript:void(0);" onclick="">구직자취업역량강화프로그램</a></li>
+                <li><a href="javascript:void(0);" onclick="" >청년도전지원사업</a></li>
+                <li class="on"><a href="javascript:void(0);" onclick="" class="right blue" title="새창 열림">졸업생 특화프로그램</a></li>
+                <li><a href="javascript:void(0);" onclick="">고교 맞춤형 고용서비스</a></li>
+                <li><a href="javascript:void(0);" onclick="">대학생 맞춤형 고용서비스</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">상담내역</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">외국인고용사업주</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+        <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">내 전자지갑</a>
+            <ul class="menuLevel3LiClassChk">
+                <li><a href="javascript:void(0);" onclick="">LNB Depth3</a></li>
+            </ul>
+        </li>
+    </ul>
+    `,
+    "lnb.type_c": `
+    <h2 class="h2_sb">마이페이지(개인)</h2>
 <ul>
     
     <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">마이페이지(개인)</a>
@@ -1229,9 +1299,9 @@ const includes = {
         <ul class="menuLevel3LiClassChk" style="display: block;">
             <li><a href="javascript:void(0);" onclick="">구직자취업역량강화프로그램</a></li>
             <li><a href="javascript:void(0);" onclick="" >청년도전지원사업</a></li>
-            <li class="on"><a href="javascript:void(0);" onclick="" class="right blue" title="새창 열림">졸업생 특화프로그램</a></li>
+            <li><a href="javascript:void(0);" onclick="" >졸업생 특화프로그램</a></li>
             <li><a href="javascript:void(0);" onclick="">고교 맞춤형 고용서비스</a></li>
-            <li><a href="javascript:void(0);" onclick="">대학생 맞춤형 고용서비스</a></li>
+            <li class="on"><a href="javascript:void(0);" onclick="" class="right blue" title="새창 열림">대학생 맞춤형 고용서비스</a></li>
         </ul>
     </li>
     <li class="depth"><a href="javascript:void(0);" onclick="" aria-expanded="false">상담내역</a>
@@ -1250,6 +1320,47 @@ const includes = {
         </ul>
     </li>
 </ul>
+    `,
+    "location.type_c": `
+    <ul class="location_cont form_search_wrap">
+    <li class="home"><a href="/cm/main.do" title="홈으로 이동">홈</a></li>
+    <li><button type="button" class="btn_downgrill" title="1번째 카테고리 선택하기" onclick=""><span>마이페이지(개인)</span></button>
+        <!-- 카테고리 목록 -->
+        <div class="layer_search layer_cate_search" style="display:none" id="loc_1">
+            <ul class="location_list">
+                <li><a href="#none" onclick="" class="active" title="선택됨"><span>Depth1</span></a></li>
+            </ul>
+        </div>
+        <!--// 카테고리 목록 -->
+    </li>
+    <li>
+        <button type="button" class="btn_downgrill" title="2번째 카테고리 선택하기" onclick=""><span>참여 프로그램 관리</span></button>
+        <!-- 카테고리 목록 -->
+        <div class="layer_search layer_cate_search" style="display:none" id="loc_2">
+            <ul class="location_list">
+                <li><a href="#none" onclick="" class="active" title="선택됨"><span>Depth1</span></a></li>
+            </ul>
+        </div>
+        <!--// 카테고리 목록 -->
+    </li>
+    <li class="on">
+        <button type="button" class="btn_downgrill" title="3번째 카테고리 선택하기" onclick=""><span>대학생 맞춤형 고용서비스</span></button>
+        <!-- 카테고리 목록 -->
+        <div class="layer_search layer_cate_search" style="display:none" id="loc_3">
+            <ul class="location_list">
+                <li><a href="#none" onclick=""><span>Depth3-4</span></a></li>
+            </ul>
+        </div>
+        <!--// 카테고리 목록 -->
+    </li>
+</ul>
+<div class="lct_area">
+    <a href="#none" class="quickshare_icon facebook" onclick="" title="새창 열림"><span class="blind">페이스북</span></a>
+    <a href="#none" class="quickshare_icon twitter" onclick="" title="새창 열림"><span class="blind">트위터</span></a>
+    <a href="#none" class="quickshare_icon kakao" onclick="" title="새창 열림"><span class="blind">카카오</span></a>
+    <input type="hidden" id="kakaoShareInitYn" value="N">
+    <a href="#none" class="lct_btn_print" title="출력"><span class="blind">프린트하기</span></a>
+</div>
     `
 };
 

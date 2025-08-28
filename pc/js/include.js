@@ -23,6 +23,8 @@ async function loadSection(id, file) {
     ['section_bottom', '../pc/include/section_bottom.html'],
     ['location.type_a', '../pc/include/location_a.html'],
     ['location.type_b', '../pc/include/location_b.html'],
+    ['location.type_c', '../pc/include/location_c.html'],
     ['lnb.type_a', '../pc/include/lnb_a.html'],
     ['lnb.type_b', '../pc/include/lnb_b.html']
+    ['lnb.type_c', '../pc/include/lnb_c.html']
 ].forEach(([id, file]) => loadSection(id, file));
