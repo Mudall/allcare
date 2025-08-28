@@ -22,6 +22,12 @@
 .allcare .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 
+.allcare .icon_add { display: flex; align-items: center;}
+.allcare .icon_add .icon { display: block; width: 24px; height: 24px; margin-right: 8px;}
+.allcare .icon_add .num01 { background: url('../images/mypage/ico24_receipt_item.svg') no-repeat;}
+.allcare .icon_add .num02 { background: url('../images/mypage/ico24_member_register.svg') no-repeat;}
+
+
 /* 250820 수정 */
 .allcare_popup.new_popup * { letter-spacing: -0.02em;}
 
@@ -487,3 +493,61 @@
 
 
 /* 완료 페이지 - 신청 완료 (UI_ADHPAbS15) */
+
+
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>> 대학 재학생 맞춤형 고용서비스 시작 <<<<<<<<<<<<<<<<<<<< */
+.allcare_popup.h-auto {height: initial; padding: 32px 40px 40px;}
+
+/* 참여 신청서 - 목록없음 */
+
+/* 참여 신청서 - 목록있음 */
+
+/* 참여 신청서 - 이전정보팝업 */
+.allcare_popup .newpop_inner_paf .inner_contents {width: 100%; background-color: #f5f6f8; padding: 40px 24px; border-radius: 8px;}
+.allcare_popup .newpop_inner_paf .inner_contents figure {display: flex; justify-content: center;}
+.allcare_popup .newpop_inner_paf .inner_contents figure .icon {display: block; width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
+.allcare_popup .newpop_inner_paf .inner_contents_txt {text-align: center;}
+.allcare_popup .newpop_inner_paf .inner_contents_txt .desc {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.allcare_popup .newpop_inner_paf .inner_contents_txt .desc time {color: var(--col_blue);}
+.allcare_popup .newpop_inner_paf .inner_contents_txt .reconfirm {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.allcare_popup .newpop_inner_paf .inner_btn {display: flex; justify-content: center; gap: 16px;}
+
+
+/* 참여 신청서 - 등록 */
+.mypage .progmg.allcare .prof_tit_twin {display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;}
+.mypage .progmg.allcare .btn_prof_edit {margin: auto 0}
+.mypage .progmg.allcare .btn_prof_edit span {position: relative; padding-right: 20px;}
+.mypage .progmg.allcare .btn_prof_edit span::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url('../images/mypage/ico16_line_right_filled.svg') no-repeat center / contain;}
+
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group {margin-top: 8px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li {padding: 12px 20px; border-top: 1px solid #ddd;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li+li {border-bottom: 1px solid #ddd;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.w {display: flex; flex-direction: column;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.t {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.s {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+
+
+/* 참여 신청서 - 등록(이전 등록/제출 신청정보가 있는 경우) */
+.mypage .progmg.allcare .ela_box {margin-top: 8px;}
+.mypage .progmg.allcare .ela_box .ela_txt {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .ela_box .ela_txt time {font-weight: 600;}
+
+
+/* 참여 신청서 - 등록 제출완료 */
+.mypage .progmg.allcare .partici_box {border: 1px solid #ddd; border-radius: 8px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;}
+
+
+.box_radio_group.type_unselect {}
+.box_radio_group.type_unselect .new_radio_item {}
+.allcare .box_radio_group.type_unselect .new_radio_item label,
+.mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .box_radio_group.type_unselect label,
+.mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"] {cursor: initial;}
+.mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"]:checked {position: relative; border: 1px solid #757575;}
+.mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"]:checked::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}

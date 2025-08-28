@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>05. 참여신청서 - 등록</title>
+        <title>참여신청서 - 등록</title>
         <script src="../pc/include/js/head.js"></script>
         <script src="../pc/js/jquery-3.7.1.min.js"></script>
 
@@ -45,22 +45,43 @@
                         <div class="cont_wrap_area">
                             <!-- 콘텐츠 타이틀 -->
                             <div class="sub_tl">
-                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
                             </div>
                             <!-- 콘텐츠영역 시작 -->
                             <div class="tab_wrap bg_type" data-role="tab">
                                 <div class="mypage">
                                     <div class="progmg allcare">
-                                        <ul class="tab_title topTab" role="tablist">
-                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>참여신청서</span></button></li>
-                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여 프로그램</span></button></li>
-                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담 이력</span></button></li>
-                                            <!-- D: 활성화시 class[active] add -->
-                                        </ul>
-
                                         <div class="my_ptcp_from">
+                                            <div class="box_group_wrap mt16">
+                                                <h3 class="t1_sb icon_add"><i class="icon num02"></i><span>참여신청서 작성</span></h3>
+                                                <div class="box_table_wrap write type01 mt16">
+                                                    <table class="box_table">
+                                                        <caption>잡케어 보고서 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:auto;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">잡케어 보고서</th>
+                                                                <td>
+                                                                    <div class="form_box">
+                                                                        <span class="data_txt"><span class="fw600">잡케어 보고서를 먼저 생성</span>해 주세요.</span>
+                                                                        <button type="button" class="btn medium type02 btnSearch fw600 ml16">잡케어 서비스 바로가기</button>
+                                                                    </div>
+                                                                    <div class="form_box"><span class="data_txt">재학생 맞춤형 고용서비스 참여를 위해서는 반드시 잡케어 시스템을 이용한 프로필 등록 및 직무역량 & 연관직종 분석 후 참여가 가능합니다.</span></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
                                             <div class="box_group_wrap">
-                                                <h3 class="t2_sb">신청인 정보</h3>
+                                                <div class="prof_tit_twin">
+                                                    <h3 class="t2_sb">참여자 정보</h3>
+                                                    <button class="btn medium type02 btn_prof_edit" type="button"><span>회원정보 수정</span></button>
+                                                </div>
                                                 <div class="box_table_wrap write type01">
                                                     <table class="box_table">
                                                         <caption>성명, 전화번호, 이메일, 주소 을(를) 제공하는 표</caption>
@@ -92,7 +113,8 @@
 
                                             <div class="box_group_wrap">
                                                 <h3 class="t2_sb">참여대학, 참여자 분류</h3>
-                                                <div class="box_table_wrap write type01">
+                                            
+                                                <div class="box_table_wrap write type01 mt16">
                                                     <table class="box_table"><caption>참여대학, 참여자 분류 을(를) 제공하는 표</caption>
                                                         <colgroup>
                                                             <col style="width:20%">
@@ -124,18 +146,18 @@
                                                                     <fieldset class="box_radio_group">
                                                                         <legend class="sr_only">참여자 분류 선택</legend>
                                                                         <div class="new_radio_item">
-                                                                            <input type="radio" id="ptcpType1" name="ptcpType" value="graduate" checked>
+                                                                            <input type="radio" class="ptcpType1" id="ptcpType1" name="ptcpType" value="graduate" checked>
                                                                             <label for="ptcpType1" class="ptcp_radiocustom">
                                                                                 <span class="sr_only">선택지 1:</span>
-                                                                                <span class="label_text">&#9312; 졸업생 특화 프로그램을 운영하는 대학(원)의 졸업생, 졸업 유예자 및 예정자</span>
+                                                                                <span class="label_text">&#9312; 2025년 재학생 맞춤형 고용서비스 사업 운영 대학(원)의 재학·휴학·수료 청년</span>
                                                                             </label>
                                                                         </div>
 
                                                                         <div class="new_radio_item">
-                                                                            <input type="radio" id="ptcpType2" name="ptcpType" value="youth">
+                                                                            <input type="radio" class="ptcpType2" id="ptcpType2" name="ptcpType" value="youth">
                                                                             <label for="ptcpType2" class="ptcp_radiocustom">
                                                                                 <span class="sr_only">선택지 2:</span>
-                                                                                <span class="label_text">&#9313; ①에 해당하지 않는 직업계고 졸업생, 미취업 지역 청년</span>
+                                                                                <span class="label_text">&#9313; ①에 해당하지 않는 만 18~34세의 최종학력 고등학교 졸업 이하인 미취업(고용보험 기준) 청년</span>
                                                                             </label>
                                                                         </div>
                                                                     </fieldset>
@@ -148,9 +170,15 @@
 
                                             <div class="box_group_wrap grade_wrap">
                                                 <h3 class="t2_sb">학적정보</h3>
-                                                <div class="box_table_wrap write type01">
+                                                <div class="box_notice_wrap mt8">
+                                                    <p class="tit">안내</p>
+                                                    <ul class="box_list_area">
+                                                        <li class="txt_list">졸업 수료생은 대학 자체 기준에 따라 졸업생으로 분류될 경우 <span class="fw600 clr_red">참여 불가</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box_table_wrap write type01 mt16">
                                                     <table class="box_table">
-                                                        <caption>학번, 학년, 전공, 상태, 졸업(예정)년월 을(를) 제공하는 표</caption>
+                                                        <caption>학번, 학년, /학과, 상태 을(를) 제공하는 표</caption>
                                                         <colgroup>
                                                             <col style="width:20%">
                                                             <col style="width:30%">
@@ -198,7 +226,7 @@
                                                             <tr class="tr_major">
                                                                 <th scope="row">
                                                                     <label for="major">
-                                                                        <span class="req_mark">전공</span>
+                                                                        <span class="req_mark">전공/학과</span>
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
@@ -206,7 +234,7 @@
                                                                     <div class="box_table_group">
                                                                         <div class="cell">
                                                                             <span class="box_ipt new_ipt">
-                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="전공명" readonly="" placeholder="전공">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="전공/학과명" readonly="" placeholder="전공명 / 학과명">
                                                                                 <button type="button" class="newbtn_del ico16_delete">
                                                                                     <span class="blind">삭제</span>
                                                                                 </button>
@@ -226,29 +254,45 @@
                                                                         <label for="status" class="sr_only">상태 선택</label>
                                                                         <select id="status" name="status" title="상태 선택">
                                                                             <option disabled selected>선택</option>
+                                                                            <option value="enrolled">재학</option>
                                                                             <option value="graduated">졸업</option>
                                                                             <option value="expected">졸업예정</option>
                                                                         </select>
                                                                     </div>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="tr_gradate">
-                                                                <th scope="row">
-                                                                    <label for="gradDate">
-                                                                        <span class="req_mark">졸업(예정) 년월</span>
-                                                                        <span class="sr_only">필수 입력</span>
-                                                                    </label>
-                                                                </th>
-                                                                <td colspan="3">
-                                                                    <span class="box_ipt new_ipt">
-                                                                        <label for="gradDate" class="sr_only">졸업(예정) 년월</label>
-                                                                        <input type="text" onkeyup="" id="gradDate" name="gradDate" class="btnCalendar input_txt" title="졸업(예정) 년월 입력" placeholder="YYYY-MM">
-                                                                        <button type="button" class="btn_calendar" aria-label="달력 선택"></button>
-                                                                    </span>
-                                                                </td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap prof_radio_wrap">
+                                                <h3 class="t2_sb hreq_mark">참여 유형 선택</h3>
+                                                <div class="type_area box_radio_group">
+                                                    <ul class="item_type">
+                                                        <li>
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="빌드업프로젝트" name="참여유형선택" checked>
+                                                                <label for="빌드업프로젝트">
+                                                                    <span class="w">
+                                                                        <span class="t">빌드업 프로젝트</span>
+                                                                        <span class="s">※ 저학년 청년을 중심으로 심층상담 기반 개인별 중·장기 희망 직업 경력개발 로드맵 설계 및 진로탐색 및 기초역량 강화 지원</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="new_radio_item">
+                                                                <input type="radio" id="점프업프로젝트" name="참여유형선택">
+                                                                <label for="점프업프로젝트">
+                                                                    <span class="w">
+                                                                        <span class="t">점프업 프로젝트</span>
+                                                                        <span class="s">※ 고학년 청년을 중심으로 심층상담 기반 개인별 취업활동계획 설계 및 맞춤형 직업훈련·일경험 참여 지원</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
 
@@ -257,7 +301,7 @@
                                                 <div class="agm_area">
                                                     <div class="agm_box">
                                                         <div class="agm_desc">
-                                                            <p>“졸업생 특화 프로그램” 참여 신청과 관련하여 개인정보를 수집·이용·제공하기 위한 동의 절차</p>
+                                                            <p>“대학 재학생 맞춤형 고용서비스” 참여 신청과 관련하여 개인정보를 수집·이용·제공하기 위한 동의 절차</p>
                                                             <strong>&#x203B; 전문보기 후 개인정보 수집·이용·제공 동의를 선택할 수 있습니다.</strong>
                                                         </div>
                                                         <button type="button" class="btn_view_doc btn small type02" aria-label="개인정보 수집·이용·제공 동의서 전문보기" onclick="location.href='./UI_ADHPAbP10.html'"><span class="s1_r">전문보기</span></button>
@@ -276,7 +320,7 @@
                                                             <div class="new_radio_item">
                                                                 <input type="radio" id="agmType2" name="agmType" value="no">
                                                                 <label for="agmType2" class="ptcp_radiocustom">
-                                                                    <span class="label_text">비동의</span>
+                                                                    <span class="label_text">동의안함</span>
                                                                 </label>
                                                             </div>
                                                         </fieldset>
@@ -300,21 +344,24 @@
 
 
                                 <script>
-                                    // 참여자 분류에서 1번 선택시 학적정보 보여주기 
-                                    document.addEventListener('DOMContentLoaded', function () {
-                                        const ptcpType1 = document.getElementById('ptcpType1');
-                                        const ptcpType2 = document.getElementById('ptcpType2');
-                                        const gradeWrap = document.querySelector('.grade_wrap');
+                                    $(function () {
+                                        // 참여자 분류에서 1번 선택 시 학적정보 보여주기
+                                        const $ptcpType1 = $('.ptcpType1');
+                                        const $ptcpType2 = $('.ptcpType2');
+                                        const $gradeWrap = $('.grade_wrap');
+
                                         function toggleGradeWrap() {
-                                            if (ptcpType1.checked) {
-                                                gradeWrap.style.display = 'block';
-                                            } else if (ptcpType2.checked) {
-                                                gradeWrap.style.display = 'none';
+                                            if ($ptcpType1.is(':checked')) {
+                                                $gradeWrap.show();
+                                            } else if ($ptcpType2.is(':checked')) {
+                                                $gradeWrap.hide();
                                             }
                                         }
+
                                         toggleGradeWrap();
-                                        ptcpType1.addEventListener('change', toggleGradeWrap);
-                                        ptcpType2.addEventListener('change', toggleGradeWrap);
+
+                                        $ptcpType1.on('change', toggleGradeWrap);
+                                        $ptcpType2.on('change', toggleGradeWrap);
                                     });
                                 </script>
                             </div>
