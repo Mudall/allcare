@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>빌드업 - 경력개발로드맵_목록있음</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>경력개발 로드맵</span></button></li>
+                                        </ul>
+
+                                        <div class="box_table_wrap mt40">
+                                            <!-- table -->
+                                            <table class="box_table auto-count new_table">
+                                                <caption>번호, 참여년도, 참여대학명, 신청일자, 진행상태, 담당자 을(를) 제공하는 표</caption>
+                                                <colgroup>
+                                                    <col style="width: 110px">
+                                                    <col style="width: auto">
+                                                    <col style="width: 140px">
+                                                    <col style="width: 140px">
+                                                    <col style="width: 140px">
+                                                    <col style="width: 130px">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">참여년도</th>
+                                                        <th scope="col">희망직업</th>
+                                                        <th scope="col">제출일자</th>
+                                                        <th scope="col">승인일자</th>
+                                                        <th scope="col">담당자</th>
+                                                        <th scope="col">처리상태</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td><button type="button" class="btn type01 small">변경신청</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025</td>
+                                                        <td class="link_job"><a href="">프로그래머</a></td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td>인정</td>
+                                                    </tr>
+
+                                                    <!-- 등록된 내용이 없을시에 사용 -->
+                                                    <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                </tbody>
+                                            </table>
+                                            <div class="section_bottom"></div>
+                                        </div>
+
+                                        <div class="roadmap_btn_wrap mt40">
+                                            <button type="button" class="btn medium type01 fill"><span>경력개발로드맵 작성하기</span></button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

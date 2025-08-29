@@ -59,7 +59,10 @@
 
                                         <div class="my_ptcp_from">
                                             <div class="box_group_wrap">
-                                                <h3 class="t2_sb">신청인 정보</h3>
+                                                <div class="prof_tit_twin">
+                                                    <h3 class="t2_sb">신청인 정보</h3>
+                                                    <button class="btn medium type02 btn_prof_edit" type="button"><span>회원정보 수정</span></button>
+                                                </div>
                                                 <div class="box_table_wrap write type01">
                                                     <table class="box_table"><caption>성명, 전화번호, 이메일, 주소 을(를) 제공하는 표</caption>
                                                         <colgroup>
@@ -101,7 +104,17 @@
                                                         <tbody>
                                                             <tr class="ptcp_form_uni">
                                                                 <th scope="row">참여 대학</th>
-                                                                <td colspan="3">AAA 대학교</td>
+                                                                <td colspan="3">
+                                                                    <div class="box_table_group zipcode_area">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt new_ipt">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="대학교 명" readonly="" placeholder="AAA 대학교">
+                                                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
+                                                                    </div>
+                                                                </td>
                                                             </tr>
                                                             <tr class="ptcp_form_type">
                                                                 <th scope="row">
@@ -109,12 +122,12 @@
                                                                     <span class="sr_only">필수 입력</span>
                                                                 </th>
                                                                 <td colspan="3">
-                                                                    <fieldset class="box_radio_group" style="pointer-events: none;">
+                                                                    <fieldset class="box_radio_group">
                                                                         <legend class="sr_only">참여자 분류 선택</legend>
                                                                         <div class="new_radio_item">
                                                                             <input type="radio" id="ptcpType1" name="ptcpType" value="graduate" checked>
                                                                             <label for="ptcpType1" class="ptcp_radiocustom">
-                                                                                                <span class="sr_only">선택지 1:</span>
+                                                                                <span class="sr_only">선택지 1:</span>
                                                                                 <span class="label_text">&#9312; 졸업생 특화 프로그램을 운영하는 대학(원)의 졸업생, 졸업 유예자 및 예정자</span>
                                                                             </label>
                                                                         </div>
@@ -122,7 +135,7 @@
                                                                         <div class="new_radio_item">
                                                                             <input type="radio" id="ptcpType2" name="ptcpType" value="youth">
                                                                             <label for="ptcpType2" class="ptcp_radiocustom">
-                                                                                                <span class="sr_only">선택지 2:</span>
+                                                                                <span class="sr_only">선택지 2:</span>
                                                                                 <span class="label_text">&#9313; ①에 해당하지 않는 직업계고 졸업생, 미취업 지역 청년</span>
                                                                             </label>
                                                                         </div>
@@ -138,7 +151,7 @@
                                                 <h3 class="t2_sb">학적정보</h3>
                                                 <div class="box_table_wrap write type01">
                                                     <table class="box_table">
-                                                        <caption>학번, 학년, 전공, 상태, 졸업(예정)년월 을(를) 제공하는 표</caption>
+                                                        <caption>학번, 학년, 전공, 학과, 상태, 졸업(예정)년월 을(를) 제공하는 표</caption>
                                                         <colgroup>
                                                             <col style="width:20%">
                                                             <col style="width:30%">
@@ -153,14 +166,35 @@
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
-                                                                <td>2025071112352</td>
+                                                                <td>
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="stdId" class="sr_only">학번</label>
+                                                                        <input type="text" class="input_txt" id="stdId" name="stdId" placeholder="학번을 입력하세요." title="학번 입력" pattern="[0-9a-zA-Z가-힣]+" value="">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="학번 입력내용 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </td>
+                                                                
                                                                 <th scope="row">
                                                                     <label for="grade">
                                                                         <span class="req_mark">학년</span>
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
-                                                                <td>4학년</td>
+                                                                <td>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="grade" class="sr_only">학년 선택</label>
+                                                                        <select id="grade" name="grade" title="학년 선택">
+                                                                            <option disabled selected>선택</option>
+                                                                            <option value="1">1학년</option>
+                                                                            <option value="2">2학년</option>
+                                                                            <option value="3">3학년</option>
+                                                                            <option value="4">4학년</option>
+                                                                            <option value="5">5학년</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
                                                             </tr>
                                                             <tr class="tr_major">
                                                                 <th scope="row">
@@ -169,23 +203,56 @@
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
-                                                                <td>국어국문학과</td>
+                                                                <td colspan="3">
+                                                                    <div class="box_table_group">
+                                                                        <div class="cell_twin">
+                                                                            <span class="box_ipt new_ipt">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="전공명" readonly="" placeholder="전공">
+                                                                                <button type="button" class="newbtn_del ico16_delete">
+                                                                                    <span class="blind">삭제</span>
+                                                                                </button>
+                                                                            </span>
+                                                                            <span class="box_ipt new_ipt">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="학과명" readonly="" placeholder="학과">
+                                                                                <button type="button" class="newbtn_del ico16_delete">
+                                                                                    <span class="blind">삭제</span>
+                                                                                </button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="tr_gradate">
                                                                 <th scope="row">
                                                                     <label for="status">
                                                                         <span class="req_mark">상태</span>
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
-                                                                <td>졸업</td>
-                                                            </tr>
-                                                            <tr class="tr_gradate">
+                                                                <td>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="status" class="sr_only">상태 선택</label>
+                                                                        <select id="status" name="status" title="상태 선택">
+                                                                            <option disabled selected>선택</option>
+                                                                            <option value="graduated">졸업</option>
+                                                                            <option value="expected">졸업예정</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
                                                                 <th scope="row">
                                                                     <label for="gradDate">
                                                                         <span class="req_mark">졸업(예정) 년월</span>
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
-                                                                <td colspan="3">2029-02</td>
+                                                                <td colspan="3">
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="gradDate" class="sr_only">졸업(예정) 년월</label>
+                                                                        <input type="text" onkeyup="" id="gradDate" name="gradDate" class="btnCalendar input_txt" title="졸업(예정) 년월 입력" placeholder="YYYY-MM">
+                                                                        <button type="button" class="btn_calendar" aria-label="달력 선택"></button>
+                                                                    </span>
+                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
