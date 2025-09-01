@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>빌드업 - 경력개발로드맵_조회(제출후)</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>경력개발 로드맵</span></button></li>
+                                        </ul>
+
+                                        <div class="box_notice_wrap mt16">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list"><span class="fw600">제출완료</span> : 경력개발로드맵이 확정되지 않은 상태로 ‘회수’ 후 수정이 가능합니다.</li>
+                                                <li class="txt_list"><span class="fw600">승인완료</span> : 승인된 경력개발로드맵은 수정이 불가능합니다.</li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="my_ptcp_from">
+                                            <div class="box_group_wrap mt40">
+                                                <div class="prof_tit_twin">
+                                                    <h3 class="t2_sb">참여자 정보</h3>
+                                                    <button class="btn medium type02 btn_prof_edit" type="button"><span>회원정보 수정</span></button>
+                                                </div>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>성명, 전공/학과, 학번, 학적 상태, 학년, 학기 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">성명</th>
+                                                                <td><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+                                                                
+                                                                <th scope="row">전공/학과</th>
+                                                                <td><div class="form_box"><span class="data_txt">선택전공 / 선택학과</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">학번</th>
+                                                                <td><div class="form_box"><span class="data_txt">202500010001</span></div></td>
+                                                                
+                                                                <th scope="row">학적 상태</th>
+                                                                <td><div class="form_box"><span class="data_txt">재학</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">학년</th>
+                                                                <td><div class="form_box"><span class="data_txt">1학년</span></div></td>
+
+                                                                <th scope="row">학기</th>
+                                                                <td><div class="form_box"><span class="data_txt">1학기</span></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap box_txtarea_wrap">
+                                                <h3 class="t2_sb">자기 이해</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>성명, 전공/학과, 학번, 학적 상태, 학년, 학기 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:auto">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">나의 관심분야 및 활동</th>
+                                                                <td>입력한 내용</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">나의 강점(장점)</th>
+                                                                <td>입력한 내용 test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">나의 희망 직업</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>희망 직업1, 희망 직업2, 희망 신직업 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:120px">
+                                                            <col style="width:calc(50% - 120px);">
+                                                            <col style="width:120px">
+                                                            <col style="width:calc(50% - 120px);">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row"><span>희망 직업 1</span></th>
+                                                                <td class="td_hopejob">입력값 1</td>
+
+                                                                <th scope="row"><span>희망 직업 2</span></th>
+                                                                <td class="td_hopejob">입력값 2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row"><span>희망 신직업</span></th>
+                                                                <td colspan="3" class="td_hopejob">입력값 3</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap box_check_wrap">
+                                                <h3 class="t2_sb"><span class="txt_blue">입력값 1</span> 단기계획 및 중장기 계획</h3>
+                                                <div class="box_table_wrap mt8">
+                                                    <table class="box_table">
+                                                        <caption>구분 / 활동시기 / 목표활동 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:100%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>구분 / 활동시기 / 목표활동</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tit_box">
+                                                                        <div class="inner_tit">
+                                                                            <span class="trait trait_short">단기 계획</span>
+                                                                            <p>자기주도형 진로역량강화프로그램</p>
+                                                                        </div>
+                                                                        <p class="inner_txt">2024년 4월</p>
+                                                                        <p class="inner_txt">교외</p>
+                                                                    </div>
+                                                                    <div class="desc_box"><p>관련 자격증 취득, 최신 기술 동향 연구, 현업 전문가와의 네트워킹, 프로젝트 참여 경험을 쌓았습니다.</p></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tit_box">
+                                                                        <div class="inner_tit">
+                                                                            <span class="trait trait_long">장기 계획</span>
+                                                                            <p>동아리, 공모전, 대외활동, 일경험, 인턴 등의 목표</p>
+                                                                        </div>
+                                                                        <p class="inner_txt">1학년 2학기</p>
+                                                                    </div>
+                                                                    <div class="desc_box"><p>클라이언트 요구 분석, 시스템 설계 및 구현 과정에 참여했으며 프로젝트 관리 툴을 활용해 일정 조율과 팀원 간 소통을 원활히 하였고, 이를 통해 실무 경험과 문제 해결 능력을 키웠습니다.</p></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tit_box">
+                                                                        <div class="inner_tit">
+                                                                            <span class="trait trait_long">장기 계획</span>
+                                                                            <p>중장기직업체험 (기초직무체험)</p>
+                                                                        </div>
+                                                                        <p class="inner_txt">1학년 2학기</p>
+                                                                    </div>
+                                                                    <div class="desc_box"><p>클라이언트 요구 분석, 시스템 설계 및 구현 과정에 참여했으며 프로젝트 관리 툴을 활용해 일정 조율과 팀원 간 소통을 원활히 하였고, 이를 통해 실무 경험과 문제 해결 능력을 키웠습니다.</p></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap box_check_wrap">
+                                                <h3 class="t2_sb"><span class="txt_blue">입력값 2</span> 단기계획 및 중장기 계획</h3>
+                                                <div class="box_table_wrap mt8">
+                                                    <table class="box_table">
+                                                        <caption>구분 / 활동시기 / 목표활동 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:100%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>구분 / 활동시기 / 목표활동</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tit_box">
+                                                                        <div class="inner_tit">
+                                                                            <span class="trait trait_short">단기 계획</span>
+                                                                            <p>자기주도형 진로역량강화프로그램</p>
+                                                                        </div>
+                                                                        <p class="inner_txt">2024년 4월</p>
+                                                                        <p class="inner_txt">교외</p>
+                                                                    </div>
+                                                                    <div class="desc_box"><p>관련 자격증 취득, 최신 기술 동향 연구, 현업 전문가와의 네트워킹, 프로젝트 참여 경험을 쌓았습니다.</p></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tit_box">
+                                                                        <div class="inner_tit">
+                                                                            <span class="trait trait_long">장기 계획</span>
+                                                                            <p>동아리, 공모전, 대외활동, 일경험, 인턴 등의 목표</p>
+                                                                        </div>
+                                                                        <p class="inner_txt">1학년 2학기</p>
+                                                                    </div>
+                                                                    <div class="desc_box"><p>클라이언트 요구 분석, 시스템 설계 및 구현 과정에 참여했으며 프로젝트 관리 툴을 활용해 일정 조율과 팀원 간 소통을 원활히 하였고, 이를 통해 실무 경험과 문제 해결 능력을 키웠습니다.</p></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap box_check_wrap">
+                                                <h3 class="t2_sb"><span class="txt_blue">입력값 3</span> 단기계획 및 중장기 계획</h3>
+                                                <div class="box_table_wrap mt8">
+                                                    <table class="box_table">
+                                                        <caption>구분 / 활동시기 / 목표활동 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:100%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>구분 / 활동시기 / 목표활동</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tit_box">
+                                                                        <div class="inner_tit">
+                                                                            <span class="trait trait_short">단기 계획</span>
+                                                                            <p>자기주도형 진로역량강화프로그램</p>
+                                                                        </div>
+                                                                        <p class="inner_txt">2024년 4월</p>
+                                                                        <p class="inner_txt">교외</p>
+                                                                    </div>
+                                                                    <div class="desc_box"><p>관련 자격증 취득, 최신 기술 동향 연구, 현업 전문가와의 네트워킹, 프로젝트 참여 경험을 쌓았습니다.</p></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tit_box">
+                                                                        <div class="inner_tit">
+                                                                            <span class="trait trait_long">장기 계획</span>
+                                                                            <p>중장기직업체험 (기초직무체험)</p>
+                                                                        </div>
+                                                                        <p class="inner_txt">1학년 2학기</p>
+                                                                    </div>
+                                                                    <div class="desc_box"><p>클라이언트 요구 분석, 시스템 설계 및 구현 과정에 참여했으며 프로젝트 관리 툴을 활용해 일정 조율과 팀원 간 소통을 원활히 하였고, 이를 통해 실무 경험과 문제 해결 능력을 키웠습니다.</p></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="box_group_wrap">
+                                                <div class="tit_box">
+                                                    <h3 class="t2_sb">신청 및 처리현황</h3>
+                                                </div>
+                                                
+                                                <div class="apply_summary_wrap" role="region">
+                                                    <div class="apply_summary_header">
+                                                        <div class="apply_summary_info">
+                                                            <p class="apply_summary_tit">현재 참여신청서 <span>제출</span> 상태입니다.</p>
+                                                            <p class="apply_summary_tel b1_r">담당자 : 김담당 (010-0000-0000)</p>
+                                                        </div>
+                                                        <div class="apply_summary_action mt16"><button type="button" class="apply_summary_toggle on" aria-expanded="true" aria-controls="applySummaryDetail">신청 및 처리현황 이력</button></div>
+                                                    </div>
+
+                                                    <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                                    <div class="apply_summary_inner mt32" id="applySummaryDetail">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">제출</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                                <div class="btn_box mt40">
+                                                    <button type="button" class="btn big type02 btn_s_r" aria-label="목록" onclick="">목록</button>
+                                                    <button type="submit" id="srchBtn" class="btn big fill type01" onclick="">회수</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+
+                                    // 나의 희망직업 input 내의 특수문자 금지
+                                    $(function () {
+                                        // 허용: 한글, 영문, 숫자, 공백, 줄바꿈
+                                        var regex = /^[ㄱ-ㅎ가-힣a-zA-Z0-9\s]*$/;
+
+                                        $('#jobId1, #jobId2, #jobId3').on('input', function () {
+                                            var currentValue = $(this).val();
+                                            if (!regex.test(currentValue)) {
+                                            $(this).val(currentValue.replace(/[^ㄱ-ㅎ가-힣a-zA-Z0-9\s]/g, ''));
+                                            }
+                                        });
+                                    });
+
+
+                                    // 단기계획 및 중장기 계획 위아래 이동버튼 구현
+                                    $(document).ready(function() {
+                                        // 위로 이동 버튼 클릭
+                                        $(document).on('click', '.move_up:not(.disabled)', function() {
+                                            const currentRow = $(this).closest('tr');
+                                            const prevRow = currentRow.prev('tr');
+                                            
+                                            if (prevRow.length > 0) {
+                                                currentRow.addClass('moving');
+                                                setTimeout(function() {
+                                                    currentRow.insertBefore(prevRow);
+                                                    currentRow.removeClass('moving');
+                                                    updateMoveButtons();
+                                                }, 150);
+                                            }
+                                        });
+
+                                        // 아래로 이동 버튼 클릭
+                                        $(document).on('click', '.move_down:not(.disabled)', function() {
+                                            const currentRow = $(this).closest('tr');
+                                            const nextRow = currentRow.next('tr');
+                                            
+                                            if (nextRow.length > 0) {
+                                                currentRow.addClass('moving');
+                                                setTimeout(function() {
+                                                    currentRow.insertAfter(nextRow);
+                                                    currentRow.removeClass('moving');
+                                                    updateMoveButtons();
+                                                }, 150);
+                                            }
+                                        });
+                                    });
+
+                                     // 신청 및 처리현황 on/off 토글
+                                    $(document).ready(function() {
+                                        var $toggleBtn = $('.apply_summary_action .apply_summary_toggle');
+                                        var $detailArea = $('#applySummaryDetail');
+
+                                        $toggleBtn.on('click', function() {
+                                            var isExpanded = $toggleBtn.attr('aria-expanded') === 'true';
+                                            $toggleBtn.attr('aria-expanded', String(!isExpanded));
+                                            $toggleBtn.toggleClass('on', !isExpanded);
+                                            $toggleBtn.toggleClass('off', isExpanded);
+
+                                            if (!isExpanded) {
+                                                $detailArea.removeAttr('hidden');
+                                            } else {
+                                                $detailArea.attr('hidden', '');
+                                            }
+                                        });
+                                    });
+
+                                </script>
+
+
+
+
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>        
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

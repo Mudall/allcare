@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>빌드업 - 경력개발로드맵_등록</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>경력개발 로드맵</span></button></li>
+                                        </ul>
+
+                                        <div class="my_ptcp_from">
+                                            <div class="box_group_wrap mt40">
+                                                <h3 class="t1_sb icon_add"><i class="icon num02"></i><span>경력개발로드맵 등록</span></h3>
+                                                <div class="prof_tit_twin mt16">
+                                                    <h3 class="t2_sb">참여자 정보</h3>
+                                                    <button class="btn medium type02 btn_prof_edit" type="button"><span>회원정보 수정</span></button>
+                                                </div>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>성명, 전공/학과, 학번, 학적 상태, 학년, 학기 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                            <col style="width:20%">
+                                                            <col style="width:30%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">성명</th>
+                                                                <td><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+                                                                
+                                                                <th scope="row">전공/학과</th>
+                                                                <td><div class="form_box"><span class="data_txt">선택전공 / 선택학과</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">학번</th>
+                                                                <td><div class="form_box"><span class="data_txt">202500010001</span></div></td>
+                                                                
+                                                                <th scope="row">학적 상태</th>
+                                                                <td><div class="form_box"><span class="data_txt">재학</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">학년</th>
+                                                                <td><div class="form_box"><span class="data_txt">1학년</span></div></td>
+
+                                                                <th scope="row">학기</th>
+                                                                <td>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="semester" class="sr_only">학기 선택</label>
+                                                                        <select id="semester" name="semester" title="학기 선택">
+                                                                            <option disabled="" selected="">선택</option>
+                                                                            <option value="1">1학기</option>
+                                                                            <option value="2">2학기</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap box_txtarea_wrap">
+                                                <h3 class="t2_sb hreq_mark">자기 이해</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table">
+                                                        <caption>성명, 전공/학과, 학번, 학적 상태, 학년, 학기 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:20%">
+                                                            <col style="width:auto">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">나의 관심분야 및 활동</th>
+                                                                <td>
+                                                                    <div class="text_form_box">
+                                                                        <div class="text_form_inner">
+                                                                            <textarea id="" name="interestArea" maxlength="1000" aria-describedby="interestHelp interestCount" placeholder="관심 분야 및 활동을 입력해 주세요."></textarea>
+                                                                        </div>
+                                                                        <div class="text_info">
+                                                                            <p class="sr_only" id="interestHelp">최대 1,000 Byte까지 입력 가능합니다.</p>
+                                                                            <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">1,000</span> Byte</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">나의 강점(장점)</th>
+                                                                <td>
+                                                                    <div class="text_form_box">
+                                                                        <div class="text_form_inner">
+                                                                            <textarea id="" name="meritArea" maxlength="1000" aria-describedby="meritHelp meritCount" placeholder="나의 강점(장점)을 입력해 주세요."></textarea>
+                                                                        </div>
+                                                                        <div class="text_info">
+                                                                            <p class="sr_only" id="meritHelp">최대 1,000 Byte까지 입력 가능합니다.</p>
+                                                                            <p class="count_info" id="meritCount"><span class="result_byte">0</span> / <span class="max_byte">1,000</span> Byte</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <h3 class="t2_sb">나의 희망 직업</h3>
+                                                <div class="box_table_wrap write type01">
+                                                    <table class="box_table"><caption>희망 직업1, 희망 직업2, 희망 신직업 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:120px">
+                                                            <col style="width:calc(50% - 120px);">
+                                                            <col style="width:120px">
+                                                            <col style="width:calc(50% - 120px);">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    <span class="req_mark type_b">희망 직업 1</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <td class="td_hopejob">
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="jobId1" class="sr_only">희망 직업 1</label>
+                                                                        <input type="text" class="input_txt" id="jobId1" name="jobId1" placeholder="직업명을 입력해 주세요." title="직업명 입력" value="">
+                                                                        <button type="reset" class="newbtn_del btn medium type02 type_gray"><span>삭제</span></button>
+                                                                        <button type="button" class="btn medium type01"><span>적용</span></button>
+                                                                    </span>
+                                                                </td>
+
+                                                                <th scope="row">
+                                                                    <span>희망 직업 2</span>
+                                                                </th>
+                                                                <td class="td_hopejob">
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="jobId2" class="sr_only">희망 직업 2</label>
+                                                                        <input type="text" class="input_txt" id="jobId2" name="jobId2" placeholder="직업명을 입력해 주세요." title="직업명 입력" value="">
+                                                                        <button type="reset" class="newbtn_del btn medium type02 type_gray"><span>삭제</span></button>
+                                                                        <button type="button" class="btn medium type01"><span>적용</span></button>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    <span>희망 신직업</span>
+                                                                </th>
+                                                                <td colspan="3" class="td_hopejob">
+                                                                    <span class="box_ipt new_ipt">
+                                                                        <label for="jobId3" class="sr_only">희망 신직업</label>
+                                                                        <input type="text" class="input_txt" id="jobId3" name="jobId3" placeholder="직업명을 입력해 주세요." title="직업명 입력" value="">
+                                                                        <button type="reset" class="newbtn_del btn medium type02 type_gray"><span>삭제</span></button>
+                                                                        <button type="button" class="btn medium type01"><span>적용</span></button>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <ul class="notice_hopejob">
+                                                    <li>최소 1개 이상의 ‘희망 직업’을 등록해야 하며, ‘희망 직업 2’, ‘희망 신직업’은 선택 등록 사항입니다.</li>
+                                                    <li>희망 직업 입력 후 적용버튼을 클릭하면 하단 단기계획 및 중장기 계획에 입력한 직업명이 반영됩니다.</li>
+                                                    <li>희망 직업업을 적용하고 ‘삭제’버튼을 클릭하면 하단의 단기계획 및 중장기 계획에 입력한 내용도 함께 삭제됩니다.</li>
+                                                    <li>특수문자는 사용할 수 없습니다.</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="box_group_wrap box_jobplan_wrap">
+                                                <h3 class="t2_sb"><span class="txt_blue">{희망 직업 1}</span> 단기계획 및 중장기 계획</h3>
+                                                <div class="box_table_wrap mt8">
+                                                    <table class="box_table">
+                                                        <caption>단기 계획의 구분, 활동시기, 목표활동, 시행기관, 관리 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:152px">
+                                                            <col style="width:auto">
+                                                            <col style="width:164px">
+                                                            <col style="width:92px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_tit">1. 단기계획</th>
+                                                                <th>
+                                                                    <span class="req_mark">구분 / 활동시기 / 목표활동</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <th>
+                                                                    <span class="req_mark">시행 기관</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <th>관리</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <div class="flex_colum_box">
+                                                                        <div class="twin_box">
+                                                                            <div class="new_selectbox">
+                                                                                <label for="division" class="sr_only">구분</label>
+                                                                                <select id="division" name="division" title="구분">
+                                                                                    <option disabled="" selected="">구분을 선택해 주세요.</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="year" class="sr_only">년도</label>
+                                                                                <select id="year" name="year" title="년도">
+                                                                                    <option disabled="" selected="">년도</option>
+                                                                                    <option value="2025">2025년</option>
+                                                                                    <option value="2024">2024년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="month" class="sr_only">월</label>
+                                                                                <select id="month" name="month" title="월">
+                                                                                    <option disabled="" selected="">월</option>
+                                                                                    <option value="1">1월</option>
+                                                                                    <option value="2">2월</option>
+                                                                                    <option value="3">3월</option>
+                                                                                    <option value="4">4월</option>
+                                                                                    <option value="5">5월</option>
+                                                                                    <option value="6">6월</option>
+                                                                                    <option value="7">7월</option>
+                                                                                    <option value="8">8월</option>
+                                                                                    <option value="9">9월</option>
+                                                                                    <option value="10">10월</option>
+                                                                                    <option value="11">11월</option>
+                                                                                    <option value="12">12월</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text_form_box">
+                                                                            <div class="text_form_inner">
+                                                                                <textarea name="shortPlanArea" maxlength="1000" aria-describedby="shortPlanHelp1 shortPlanCount1" placeholder="목표 활동을 입력해 주세요."></textarea>
+                                                                            </div>
+                                                                            <div class="text_info">
+                                                                                <p class="sr_only" id="shortPlanHelp1">최대 200 Byte까지 입력 가능합니다.</p>
+                                                                                <p class="count_info" id="shortPlanCount1"><span class="result_byte">0</span> / <span class="max_byte">200</span> Byte</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="type_area box_radio_group">
+                                                                        <ul class="item_type radio_box_twin">
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="onCampus1" name="institution">
+                                                                                    <label for="onCampus1"><span>교내</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="outCampus1" name="institution">
+                                                                                    <label for="outCampus1"><span>교외</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td CL>
+                                                                    <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                                    <button type="button" class="btn small type01 btn_w52"><span>추가</span></button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="box_table_wrap mt8">
+                                                    <table class="box_table">
+                                                        <caption>중장기 계획의 구분, 목표일정, 목표내용, 관리 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:152px">
+                                                            <col style="width:auto">
+                                                            <col style="width:164px">
+                                                            <col style="width:92px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_tit">2. 중장기 계획</th>
+                                                                <th colspan="2">
+                                                                    <span class="req_mark">구분/목표일정/목표내용</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <th>관리</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    <div class="flex_colum_box">
+                                                                        <div class="twin_box">
+                                                                            <div class="new_selectbox">
+                                                                                <label for="division" class="sr_only">구분</label>
+                                                                                <select id="division" name="division" title="구분">
+                                                                                    <option disabled="" selected="">구분을 선택해 주세요.</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="grade" class="sr_only">학년</label>
+                                                                                <select id="grade" name="grade" title="학년">
+                                                                                    <option disabled="" selected="">학년</option>
+                                                                                    <option value="1">1학년</option>
+                                                                                    <option value="2">2학년</option>
+                                                                                    <option value="3">3학년</option>
+                                                                                    <option value="4">4학년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="semester" class="sr_only">학기</label>
+                                                                                <select id="semester" name="semester" title="학기">
+                                                                                    <option disabled="" selected="">학기</option>
+                                                                                    <option value="1">1학기</option>
+                                                                                    <option value="2">2학기</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text_form_box">
+                                                                            <div class="text_form_inner">
+                                                                                <textarea name="longPlanArea" maxlength="1000" aria-describedby="longPlanHelp1 longPlanCount1" placeholder="목표 활동을 입력해 주세요."></textarea>
+                                                                            </div>
+                                                                            <div class="text_info">
+                                                                                <p class="sr_only" id="longPlanHelp1">최대 200 Byte까지 입력 가능합니다.</p>
+                                                                                <p class="count_info" id="longPlanCount1"><span class="result_byte">0</span> / <span class="max_byte">200</span> Byte</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td CL>
+                                                                    <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                                    <button type="button" class="btn small type01 btn_w52"><span>추가</span></button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="box_group_wrap box_jobplan_wrap">
+                                                <h3 class="t2_sb"><span class="txt_blue">{희망 직업 2}</span> 단기계획 및 중장기 계획</h3>
+                                                <div class="box_table_wrap mt8">
+                                                    <table class="box_table">
+                                                        <caption>단기 계획의 구분, 활동시기, 목표활동, 시행기관, 관리 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:152px">
+                                                            <col style="width:auto">
+                                                            <col style="width:164px">
+                                                            <col style="width:92px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_tit">1. 단기계획</th>
+                                                                <th>
+                                                                    <span class="req_mark">구분 / 활동시기 / 목표활동</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <th>
+                                                                    <span class="req_mark">시행 기관</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <th>관리</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <div class="flex_colum_box">
+                                                                        <div class="twin_box">
+                                                                            <div class="new_selectbox">
+                                                                                <label for="division" class="sr_only">구분</label>
+                                                                                <select id="division" name="division" title="구분">
+                                                                                    <option disabled="" selected="">구분을 선택해 주세요.</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="year" class="sr_only">년도</label>
+                                                                                <select id="year" name="year" title="년도">
+                                                                                    <option disabled="" selected="">년도</option>
+                                                                                    <option value="2025">2025년</option>
+                                                                                    <option value="2024">2024년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="month" class="sr_only">월</label>
+                                                                                <select id="month" name="month" title="월">
+                                                                                    <option disabled="" selected="">월</option>
+                                                                                    <option value="1">1월</option>
+                                                                                    <option value="2">2월</option>
+                                                                                    <option value="3">3월</option>
+                                                                                    <option value="4">4월</option>
+                                                                                    <option value="5">5월</option>
+                                                                                    <option value="6">6월</option>
+                                                                                    <option value="7">7월</option>
+                                                                                    <option value="8">8월</option>
+                                                                                    <option value="9">9월</option>
+                                                                                    <option value="10">10월</option>
+                                                                                    <option value="11">11월</option>
+                                                                                    <option value="12">12월</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text_form_box">
+                                                                            <div class="text_form_inner">
+                                                                                <textarea name="shortPlanArea" maxlength="1000" aria-describedby="shortPlanHelp2 shortPlanCount2" placeholder="목표 활동을 입력해 주세요."></textarea>
+                                                                            </div>
+                                                                            <div class="text_info">
+                                                                                <p class="sr_only" id="shortPlanHelp2">최대 200 Byte까지 입력 가능합니다.</p>
+                                                                                <p class="count_info" id="shortPlanCount2"><span class="result_byte">0</span> / <span class="max_byte">200</span> Byte</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="type_area box_radio_group">
+                                                                        <ul class="item_type radio_box_twin">
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="on2" name="institution">
+                                                                                    <label for="onCampus2"><span>교내</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="outCampus2" name="institution">
+                                                                                    <label for="outCampus2"><span>교외</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td CL>
+                                                                    <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                                    <ul class="td_move_btn">
+                                                                        <li><button type="button" class="move_up"><span class="sr_only">위로 이동</span></button></li>
+                                                                        <li><button type="button" class="move_down"><span class="sr_only">아래로 이동</span></button></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <div class="flex_colum_box">
+                                                                        <div class="twin_box">
+                                                                            <div class="new_selectbox">
+                                                                                <label for="division" class="sr_only">구분</label>
+                                                                                <select id="division" name="division" title="구분">
+                                                                                    <option disabled="" selected="">구분을 선택해 주세요.</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="year" class="sr_only">년도</label>
+                                                                                <select id="year" name="year" title="년도">
+                                                                                    <option disabled="" selected="">년도</option>
+                                                                                    <option value="2025">2025년</option>
+                                                                                    <option value="2024">2024년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="month" class="sr_only">월</label>
+                                                                                <select id="month" name="month" title="월">
+                                                                                    <option disabled="" selected="">월</option>
+                                                                                    <option value="1">1월</option>
+                                                                                    <option value="2">2월</option>
+                                                                                    <option value="3">3월</option>
+                                                                                    <option value="4">4월</option>
+                                                                                    <option value="5">5월</option>
+                                                                                    <option value="6">6월</option>
+                                                                                    <option value="7">7월</option>
+                                                                                    <option value="8">8월</option>
+                                                                                    <option value="9">9월</option>
+                                                                                    <option value="10">10월</option>
+                                                                                    <option value="11">11월</option>
+                                                                                    <option value="12">12월</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text_form_box">
+                                                                            <div class="text_form_inner">
+                                                                                <textarea name="shortPlanArea" maxlength="1000" aria-describedby="shortPlanHelp3 shortPlanCount3" placeholder="목표 활동을 입력해 주세요."></textarea>
+                                                                            </div>
+                                                                            <div class="text_info">
+                                                                                <p class="sr_only" id="shortPlanHelp3">최대 200 Byte까지 입력 가능합니다.</p>
+                                                                                <p class="count_info" id="shortPlanCount3"><span class="result_byte">0</span> / <span class="max_byte">200</span> Byte</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="type_area box_radio_group">
+                                                                        <ul class="item_type radio_box_twin">
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="onCampus3" name="institution">
+                                                                                    <label for="onCampus3"><span>교내</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="outCampus3" name="institution">
+                                                                                    <label for="outCampus3"><span>교외</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td CL>
+                                                                    <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                                    <ul class="td_move_btn">
+                                                                        <li><button type="button" class="move_up"><span class="sr_only">위로 이동</span></button></li>
+                                                                        <li><button type="button" class="move_down"><span class="sr_only">아래로 이동</span></button></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <div class="flex_colum_box">
+                                                                        <div class="twin_box">
+                                                                            <div class="new_selectbox">
+                                                                                <label for="division" class="sr_only">구분</label>
+                                                                                <select id="division" name="division" title="구분">
+                                                                                    <option disabled="" selected="">구분을 선택해 주세요.</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="year" class="sr_only">년도</label>
+                                                                                <select id="year" name="year" title="년도">
+                                                                                    <option disabled="" selected="">년도</option>
+                                                                                    <option value="2025">2025년</option>
+                                                                                    <option value="2024">2024년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="month" class="sr_only">월</label>
+                                                                                <select id="month" name="month" title="월">
+                                                                                    <option disabled="" selected="">월</option>
+                                                                                    <option value="1">1월</option>
+                                                                                    <option value="2">2월</option>
+                                                                                    <option value="3">3월</option>
+                                                                                    <option value="4">4월</option>
+                                                                                    <option value="5">5월</option>
+                                                                                    <option value="6">6월</option>
+                                                                                    <option value="7">7월</option>
+                                                                                    <option value="8">8월</option>
+                                                                                    <option value="9">9월</option>
+                                                                                    <option value="10">10월</option>
+                                                                                    <option value="11">11월</option>
+                                                                                    <option value="12">12월</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text_form_box">
+                                                                            <div class="text_form_inner">
+                                                                                <textarea name="shortPlanArea" maxlength="1000" aria-describedby="shortPlanHelp4 shortPlanCount4" placeholder="목표 활동을 입력해 주세요."></textarea>
+                                                                            </div>
+                                                                            <div class="text_info">
+                                                                                <p class="sr_only" id="shortPlanHelp4">최대 200 Byte까지 입력 가능합니다.</p>
+                                                                                <p class="count_info" id="shortPlanCount4"><span class="result_byte">0</span> / <span class="max_byte">200</span> Byte</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="type_area box_radio_group">
+                                                                        <ul class="item_type radio_box_twin">
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="onCampus4" name="institution">
+                                                                                    <label for="onCampus4"><span>교내</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="new_radio_item">
+                                                                                    <input type="radio" id="outCampus4" name="institution">
+                                                                                    <label for="outCampus4"><span>교외</span></label>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                                <td CL>
+                                                                    <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                                    <button type="button" class="btn small type01 btn_w52"><span>추가</span></button>
+                                                                    <ul class="td_move_btn">
+                                                                        <li><button type="button" class="move_up"><span class="sr_only">위로 이동</span></button></li>
+                                                                        <li><button type="button" class="move_down"><span class="sr_only">아래로 이동</span></button></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                </div>
+                                                <div class="box_table_wrap mt8">
+                                                    <table class="box_table">
+                                                        <caption>중장기 계획의 구분, 목표일정, 목표내용, 관리 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:152px">
+                                                            <col style="width:auto">
+                                                            <col style="width:164px">
+                                                            <col style="width:92px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_tit">2. 중장기 계획</th>
+                                                                <th colspan="2">
+                                                                    <span class="req_mark">구분/목표일정/목표내용</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
+                                                                <th>관리</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    <div class="flex_colum_box">
+                                                                        <div class="twin_box">
+                                                                            <div class="new_selectbox">
+                                                                                <label for="division" class="sr_only">구분</label>
+                                                                                <select id="division" name="division" title="구분">
+                                                                                    <option disabled="" selected="">구분을 선택해 주세요.</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                    <option value="TEST">TEST</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="grade" class="sr_only">학년</label>
+                                                                                <select id="grade" name="grade" title="학년">
+                                                                                    <option disabled="" selected="">학년</option>
+                                                                                    <option value="1">1학년</option>
+                                                                                    <option value="2">2학년</option>
+                                                                                    <option value="3">3학년</option>
+                                                                                    <option value="4">4학년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="new_selectbox box_w120">
+                                                                                <label for="semester" class="sr_only">학기</label>
+                                                                                <select id="semester" name="semester" title="학기">
+                                                                                    <option disabled="" selected="">학기</option>
+                                                                                    <option value="1">1학기</option>
+                                                                                    <option value="2">2학기</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text_form_box">
+                                                                            <div class="text_form_inner">
+                                                                                <textarea name="longPlanArea" maxlength="1000" aria-describedby="longPlanHelp2 longPlanCount2" placeholder="목표 활동을 입력해 주세요."></textarea>
+                                                                            </div>
+                                                                            <div class="text_info">
+                                                                                <p class="sr_only" id="longPlanHelp2">최대 200 Byte까지 입력 가능합니다.</p>
+                                                                                <p class="count_info" id="longPlanCount2"><span class="result_byte">0</span> / <span class="max_byte">200</span> Byte</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td CL>
+                                                                    <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                                    <button type="button" class="btn small type01 btn_w52"><span>추가</span></button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="box_jobplan_wrap mt24">
+                                                <h3 class="t2_sb"><span class="txt_blue">{희망 신직업}</span> 단기 계획 및 중장기 계획</h3>
+
+                                                <div class="box_group_wrap box_promise_wrap">
+                                                    <h4 class="t2_sb">
+                                                        <span class="req_mark">나의 다짐</span>
+                                                        <span class="sr_only">필수 입력</span>
+                                                    </h4>
+                                                    <div class="box_table_wrap write type01">
+                                                        <table class="box_table"><caption>나의 다짐 내용 을(를) 제공하는 표</caption>
+                                                            <colgroup>
+                                                                <col style="width:192px">
+                                                                <col style="width:calc(100% - 192px);">
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>내용</th>
+                                                                    <td>
+                                                                        <div class="text_form_box">
+                                                                            <div class="text_form_inner">
+                                                                                <textarea name="promiseArea" maxlength="1000" aria-describedby="promiseHelp2 promiseCount2" placeholder="나의 다짐을 입력해 주세요."></textarea>
+                                                                            </div>
+                                                                            <div class="text_info">
+                                                                                <p class="sr_only" id="promiseHelp2">최대 1,000 Byte까지 입력 가능합니다.</p>
+                                                                                <p class="count_info" id="promiseCount2"><span class="result_byte">0</span> / <span class="max_byte">1,000</span> Byte</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                                <div class="btn_box mt40">
+                                                    <button type="button" class="btn big type02 btn_s_r" aria-label="초기화" onclick="">초기화</button>
+                                                    <div class="btn_right flex_gap16">
+                                                        <button type="button" id="saveBtn" class="btn big type01" onclick="">저장</button>
+                                                        <button type="submit" id="srchBtn" class="btn big fill type01" onclick="">제출</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+
+                                    // 나의 희망직업 input 내의 특수문자 금지
+                                    $(function () {
+                                        // 허용: 한글, 영문, 숫자, 공백, 줄바꿈
+                                        var regex = /^[ㄱ-ㅎ가-힣a-zA-Z0-9\s]*$/;
+
+                                        $('#jobId1, #jobId2, #jobId3').on('input', function () {
+                                            var currentValue = $(this).val();
+                                            if (!regex.test(currentValue)) {
+                                            $(this).val(currentValue.replace(/[^ㄱ-ㅎ가-힣a-zA-Z0-9\s]/g, ''));
+                                            }
+                                        });
+                                    });
+
+
+                                    // 단기계획 및 중장기 계획 위아래 이동버튼 구현
+                                    $(document).ready(function() {
+                                        // 위로 이동 버튼 클릭
+                                        $(document).on('click', '.move_up:not(.disabled)', function() {
+                                            const currentRow = $(this).closest('tr');
+                                            const prevRow = currentRow.prev('tr');
+                                            
+                                            if (prevRow.length > 0) {
+                                                currentRow.addClass('moving');
+                                                setTimeout(function() {
+                                                    currentRow.insertBefore(prevRow);
+                                                    currentRow.removeClass('moving');
+                                                    updateMoveButtons();
+                                                }, 150);
+                                            }
+                                        });
+
+                                        // 아래로 이동 버튼 클릭
+                                        $(document).on('click', '.move_down:not(.disabled)', function() {
+                                            const currentRow = $(this).closest('tr');
+                                            const nextRow = currentRow.next('tr');
+                                            
+                                            if (nextRow.length > 0) {
+                                                currentRow.addClass('moving');
+                                                setTimeout(function() {
+                                                    currentRow.insertAfter(nextRow);
+                                                    currentRow.removeClass('moving');
+                                                    updateMoveButtons();
+                                                }, 150);
+                                            }
+                                        });
+                                    });
+                                </script>
+
+
+
+
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>        
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>
