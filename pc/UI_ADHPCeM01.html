@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업-취업준비도검사_목록</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>취업준비도검사</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP계획관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <div class="box_table_wrap job_readiness_wrap mt40 ">
+                                            <div class="notice_banner_area mb40">
+                                                <i class="icon_jumpup" aria-hidden="true"></i>
+                                                <div class="txt_box">
+                                                    <p class="tit t3_sb">취업준비도 검사란?</p>
+                                                    <p class="desc b1_r">본 검사는 여러분이 취업준비 과정에서 겪는 어려움을 파악하여 적절한 도움을 주기 위한 검사입니다. 따라서 각 문항에 정답과 오답이 있는 것이 아닙니다. 여러분의 어려움을 정확하게 진단할 수 있도록 성실하고 정직하게 각 문항에 응답해 주시기 바랍니다.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="box_table_wrap">
+                                                <table class="box_table new_table">
+                                                    <caption>번호, 차수, 작성가능여부, 작성여부, 작성일, 작성 및 결과조회 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width: 70px">
+                                                        <col style="width: auto">
+                                                        <col style="width: 120px">
+                                                        <col style="width: 120px">
+                                                        <col style="width: 180px">
+                                                        <col style="width: 180px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">번호</th>
+                                                            <th scope="col">차수</th>
+                                                            <th scope="col">작성가능여부</th>
+                                                            <th scope="col">작성여부</th>
+                                                            <th scope="col">작성일</th>
+                                                            <th scope="col">작성 및 결과 조회</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>취업준비도검사 1차</td>
+                                                            <td>예</td>
+                                                            <td>예</td>
+                                                            <td>2025-01-01</td>
+                                                            <td><button type="button" class="inner_btn"><span>취업준비 진단 결과조회</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>취업준비도검사 2차</td>
+                                                            <td>예</td>
+                                                            <td>아니오</td>
+                                                            <td>2025-01-01</td>
+                                                            <td><button type="button" class="inner_btn fill"><span>취업준비 진단 진행하기</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>취업준비도검사 3차</td>
+                                                            <td>예</td>
+                                                            <td>아니오</td>
+                                                            <td>2025-01-01</td>
+                                                            <td><button type="button" class="inner_btn"><span>취업준비 진단 결과조회</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>취업준비도검사 4차</td>
+                                                            <td>예</td>
+                                                            <td>아니오</td>
+                                                            <td>2025-01-01</td>
+                                                            <td><button type="button" class="inner_btn"><span>취업준비 진단 결과조회</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>취업준비도검사 5차</td>
+                                                            <td>예</td>
+                                                            <td>아니오</td>
+                                                            <td>2025-01-01</td>
+                                                            <td><button type="button" class="inner_btn"><span>취업준비 진단 결과조회</span></button></td>
+                                                        </tr>
+
+                                                        
+
+                                                        <!-- 등록된 내용이 없을시에 사용 -->
+                                                        <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                    </tbody>
+                                                </table>
+                                                <p class="info_txt s1_r">※ 취업준비도 검사 2차는 ① 취업준비도검사 1차 작성 ② IAP 70% 달성 후 작성하실 수 있습니다.</p>
+                                                <div class="section_bottom"></div>
+                                            </div> 
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

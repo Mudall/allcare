@@ -21,6 +21,9 @@
 .allcare .sel.round.new_sel_span {position: relative;}
 .allcare .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+.allcare_popup.new_popup .sel.round.new_sel_span {position: relative;}
+.allcare_popup.new_popup .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.allcare_popup.new_popup .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 
 .allcare .icon_add { display: flex; align-items: center;}
 .allcare .icon_add .icon { display: block; width: 24px; height: 24px; margin-right: 8px;}
@@ -30,7 +33,6 @@
 
 /* 250820 수정 */
 .allcare_popup.new_popup * { letter-spacing: -0.02em;}
-
 .allcare_popup.new_popup {padding: 32px 17px 40px 40px; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 1040px; height: calc(100% - 200px); max-height: 680px; z-index: 9999;}
 .allcare_popup.new_popup .newpop_tit { width: initial; background-color: initial; position: relative; top: initial; z-index: initial;  padding-bottom: 24px; margin: 0 17px 24px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;}
 .allcare_popup.new_popup .newpop_tit h1 {font-size: 28px; color: #111; font-weight: 600; line-height: 40px;}
@@ -61,10 +63,9 @@
 .allcare_popup.new_popup  [class^='btn'].medium.newbtn_w88 {padding: 0 16px; min-width: 88px;}
 
 .allcare_popup.new_popup .sr_only {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;}
-.allcare tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
-.allcare tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
-.allcare tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
-.allcare tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+.allcare_popup.new_popup tr.new_date .date_select, .allcare tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
+.allcare_popup.new_popup tr.new_date .date_select select#newDate, .allcare tr.new_date .date_select select#newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
+.allcare_popup.new_popup tr.new_date .date_select::after, .allcare tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box {margin-top: 8px; display: flex; gap: 8px;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li {border: 1px solid var(--col_blue); border-radius: 4px; background-color: #fff;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li button {font-size: 14px; line-height: 24px; font-weight: 600; padding: 4px 12px; color: var(--col_blue);}
@@ -350,7 +351,7 @@
 .allcare_popup.newpop_pv .notice_wrap ul li {position: relative; padding-left: 16px; font-size: 14px; line-height: 24px; color: #333;}
 .allcare_popup.newpop_pv .notice_wrap ul li + li {margin-top: 4px;}
 .allcare_popup.newpop_pv .notice_wrap ul li::before {content: ''; position: absolute; left: 4px; top: 10px; width: 4px; height: 4px; background-color: #333; border-radius: 50%;}
-.allcare_popup.newpop_pv .btn_wrap {display: flex; flex-direction: column; align-items: stretch}
+.allcare_popup.newpop_pv .btn_wrap {display: flex; flex-direction: column; align-items: stretch;}
 .allcare_popup.newpop_pv .btn_wrap .confirm_desc {text-align: left;}
 .allcare_popup.newpop_pv .btn_wrap a {width: 112px; margin: auto;}
 
@@ -638,4 +639,58 @@
 
 /* 빌드업 - 경력개발로드맵_수정(제출후_보완요청) */
 
-/* 빌드업-경력개발로드맵_수정(제출승인후-변경신청) */
+/* 빌드업 - 경력개발로드맵_수정(제출승인후-변경신청) */
+
+/* 점프업 - 참여신청서조회 */
+
+/* 점프업 - 상담이력_목록있음 */
+
+/* 점프업 - 취업준비도검사_목록 */
+.mypage .progmg.allcare .job_readiness_wrap .notice_banner_area {display: flex; gap: 24px; align-items: center; background-color: #f3f8ff; padding: 24px; border-radius: 8px;}
+.mypage .progmg.allcare .job_readiness_wrap .notice_banner_area .icon_jumpup {display: block; width: 80px; height: 80px; background: url('../images/mypage/ico80_Jump-up.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .job_readiness_wrap .notice_banner_area .txt_box {flex: 1;}
+.mypage .progmg.allcare .job_readiness_wrap .notice_banner_area .txt_box .tit {margin-bottom: 8px;}
+.mypage .progmg.allcare .job_readiness_wrap table .inner_btn {border: 1px solid var(--col_blue); padding: 4px 8px; text-align: center; border-radius: 4px;}
+.mypage .progmg.allcare .job_readiness_wrap table .inner_btn span {font-size: 14px; color: var(--col_blue); font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .job_readiness_wrap table .inner_btn.fill {background-color: var(--col_blue);}
+.mypage .progmg.allcare .job_readiness_wrap table .inner_btn.fill span {color: #fff;}
+.mypage .progmg.allcare .job_readiness_wrap .info_txt {margin-top: 8px;}
+
+
+/* 점프업 - 취업준비도검사_ST1 */
+.mypage .progmg.allcare .job_step_wrap {display: flex; border-radius: 4px; overflow: hidden;}
+.mypage .progmg.allcare .job_step_wrap li {box-sizing: border-box; display: flex; justify-content: center; align-items: center; margin-left: 26px; position: relative; width: 20%; background-color: #f5f5f5; height: 44px;} 
+.mypage .progmg.allcare .job_step_wrap li span {text-align: center; font-size: 16px; color: #555; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .job_step_wrap li.active {background-color: var(--col_blue);}
+.mypage .progmg.allcare .job_step_wrap li.active span {font-weight: 600; color: #fff;}
+.mypage .progmg.allcare .job_step_wrap li::before {z-index: 1; content: ''; position: absolute; left: -15px; top: 50%; transform: translateY(-50%); width: 15px; height: 44px; background: url('../images/mypage/step-bg_type03_b.svg') no-repeat;}
+.mypage .progmg.allcare .job_step_wrap li.connect + li.connect {margin-left: 0;}
+.mypage .progmg.allcare .job_step_wrap li.active::before {background-image: url('../images/mypage/step-bg_type02_b.svg');}
+.mypage .progmg.allcare .job_step_wrap li.active::after {z-index: 1; content: ''; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); width: 22px; height: 44px; background: url('../images/mypage/step-bg_type02_a.svg') no-repeat;}
+.mypage .progmg.allcare .job_step_wrap li:first-child {margin-left: 0;}
+.mypage .progmg.allcare .job_step_wrap li:first-child.active::before {content: none;}
+.mypage .progmg.allcare .job_step_wrap li.complete {background-color: #e3eeff;}
+.mypage .progmg.allcare .job_step_wrap li.complete span {position: relative; font-weight: 600; padding: 0 20px 0 10px;}
+.mypage .progmg.allcare .job_step_wrap li.complete span::after {content: ''; position: absolute; right: 0px; top: 50%; transform: translateY(-50%); background: url('../images/mypage/ico16_jobstep_chk.svg') no-repeat; width: 16px; height: 16px;}
+.mypage .progmg.allcare .job_step_wrap li.complete:before {content: none;}
+.mypage .progmg.allcare .job_step_wrap li.complete:after {z-index: 1; content: ''; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); width: 22px; height: 44px; background: url('../images/mypage/step-bg_type01_a.svg') no-repeat;}
+
+.mypage .progmg.allcare .jobstep_radio_wrap .tit_box .subtit {margin-top: 8px; font-size: 18px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .jobstep_radio_wrap .tit_box .desc {margin-top: 4px; font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .jobstep_radio_wrap .que_inner {margin-top: 8px;}
+.mypage .progmg.allcare .jobstep_radio_wrap .que_inner>li+li {margin-top: 40px;}
+.mypage .progmg.allcare .jobstep_radio_wrap .que_inner>li .rep_tit {background-color: #f8f8f8; padding: 8px 12px;}
+.mypage .progmg.allcare .jobstep_radio_wrap .que_inner>li .rep_tit p {font-size: 18px; color: #333; font-weight: 600; line-height: 28px;}
+
+/* 점프업 - 취업준비도검사_ST2 */
+
+/* 점프업 - 취업준비도검사_ST3 */
+
+/* 점프업 - 취업준비도검사_ST4 */
+
+/* 점프업 - 취업준비도검사_ST5 */
+.mypage .progmg.allcare .donepage .done_info_tit {padding-left: 32px; font-size: 24px; color: #111; font-weight: 600; line-height: 34px; position: relative;} 
+.mypage .progmg.allcare .donepage .done_info_tit:before {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_jopstep_done.svg') no-repeat center / contain;} 
+.mypage .progmg.allcare .earn_score {color: #EE2E62; font-weight: 600;}
+.mypage .progmg.allcare .cont_donechk_wrap {border: 1px solid #ddd; border-radius: 8px; padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;}
+.mypage .progmg.allcare .cont_donechk_wrap p {font-size: 16px; color: #555; font-weight: 400; line-height: 28px;}

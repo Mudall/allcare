@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업_취업준비도검사_ST4</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_b"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_b"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>취업준비도검사</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP계획관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <ul class="job_step_wrap mt24">
+                                            <li class="complete connect"><span>1. 취업목표설정 검사</span></li>
+                                            <li class="complete connect"><span>2. 취업정보 탐색 검사</span></li>
+                                            <li class="complete connect"><span>3. 취업기술 습득 검사</span></li>
+                                            <li class="complete connect"><span>4. 취업경력 준비 검사</span></li>
+                                            <li class="active"><span>5. 검사결과</span></li>
+                                        </ul>
+
+                                        <div class="donepage">
+                                            <div class="done_notice">
+                                                <figure class="mb24"><img src="./images/mypage/ico80_chk_green.svg"></figure>
+                                                <p class="h2_sb">취업준비도 검사(1차)를 제출하였습니다.</p>
+                                            </div>
+
+                                            <p class="done_info_tit mt40">취업준비도 1차검사 결과</p>
+                                            <ul class="done_info mt16">
+                                                <li>
+                                                    <div class="tit"><p>검사내용</p></div>
+                                                    <div class="desc"><p>취업준비도 검사 1차</p></div>
+                                                </li> 
+                                                <li>
+                                                    <div class="tit"><p>총점</p></div>
+                                                    <div class="desc"><p><span class="earn_score">40</span>점 / 100점</p></div>
+                                                </li> 
+                                                <li>
+                                                    <div class="tit"><p>제출일시</p></div>
+                                                    <div class="desc"><p>2025-01-01 11:11</p></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                            <div class="btn_box mt40" >
+                                                <button type="button" class="btn big type02" aria-label="목록 페이지로 이동" onclick="">목록</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="cont_donechk_wrap mt40">
+                                            <p>나의 취업준비도 검사 내용을 확인하실 수 있습니다.</p>
+                                            <button type="button" class="btn small type02" id="" onclick="">나의 검사 결과 내용 조회</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                // 만족도 조사 alert 메시지 및 radio 유효성
+                                $(document).ready(function() {
+                                    function submitSurvey() {
+                                        let nextPage = true;
+
+                                        $('.que_list > li').each(function() {
+                                            const $q = $(this);
+                                            const $radio = $q.find('.que_desc input[type="radio"]').first();
+                                            const name = $radio.attr('name');
+                                            const $selected = $q.find('.que_desc input[name="' + name + '"]:checked');
+                                            const $msg = $q.find('.valid_txt');
+
+                                            if ($selected.length === 0) {
+                                                nextPage = false;
+                                                $msg.removeAttr('hidden');
+                                            } else {
+                                                $msg.attr('hidden', 'true');
+                                            }
+                                        });
+
+                                        if (!nextPage) {
+                                            alert('모든 항목에 답변해 주세요.');
+                                            return;
+                                        }
+
+                                        if (!confirm('만족도 조사를 제출하겠습니까?')) return;
+
+                                        alert('제출하였습니다.');
+                                    }
+
+                                    // "다음" 버튼 클릭 시 함수 실행
+                                    $('#nextPage').on('click', function() {
+                                        submitSurvey();
+                                    });
+                                });
+                            </script>
+
+
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>        <script src="../pc/js/contents.js"></script>
+</body>
+
+</html>
