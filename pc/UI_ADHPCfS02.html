@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업_IAP관리_등록</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>IAP관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <div class="box_notice_wrap mt16">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list"><span class="fw600">제출완료</span> : 취업활동계획서가 확정되지 않은 상태로 ‘회수’ 후 수정이 가능합니다.</li>
+                                                <li class="txt_list"><span class="fw600">승인완료</span> : 승인된 취업활동계획서는 수정이 불가합니다.</li>
+                                                <li class="txt_list">승인 이후 IAP 수정이 필요한 경우 <span class="fw600">담당자</span>에게 <span class="fw600">문의</span>하세요.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box_group_wrap box_person_wraptypea mt40">
+                                            <h3 class="t2_sb">참여자 정보</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>성명, 전공/학과, 학번, 학적 상태, 학년/학기, 취업지원유형 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">성명</th>
+                                                            <td><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+
+                                                            <th scope="row">전공/학과</th>
+                                                            <td><div class="form_box"><span class="data_txt">경영학과/국제경영 전공</span></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">학번</th>
+                                                            <td><div class="form_box"><span class="data_txt">202500010001</span></div></td>
+                                                            
+                                                            <th scope="row">학적 상태</th>
+                                                            <td><div class="form_box"><span class="data_txt">재학</span></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <label for="semesterId">
+                                                                    <span class="req_mark">학년/학기</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td>
+                                                                <div class="grad_depart_box">
+                                                                    <span>1학년</span>
+                                                                    <div class="new_selectbox">
+                                                                        <label for="semester" class="sr_only">학기</label>
+                                                                        <select id="semester" name="semester" title="학기 선택">
+                                                                            <option disabled="" selected="">학기 선택</option>
+                                                                            <option value="1">1학기</option>
+                                                                            <option value="2">2학기</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <th scope="row">
+                                                                <label for="participationId">
+                                                                    <span class="req_mark">취업지원유형</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group flex_box" role="radiogroup" aria-labelledby="participationLabel">
+                                                                    <legend id="participationLabel" class="sr_only">취업지원유형 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="participationType1" name="participationType" value="">
+                                                                        <label for="participationType1">
+                                                                            <span class="label_text">자기주도형</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="participationType2" name="participationType" value="">
+                                                                        <label for="participationType2">
+                                                                            <span class="label_text">서비스참여형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap box_hoperoad_wrap mt40">
+                                            <h3 class="t2_sb">희망진로</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>희망진로, 시험명/활동명 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <label for="hopeId">
+                                                                    <span class="req_mark">희망진로</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group flex_box" role="radiogroup" aria-labelledby="hopeLabel">
+                                                                    <legend id="hopeLabel" class="sr_only">희망진로 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="hopeType1" name="hopeType" value="">
+                                                                        <label for="hopeType1">
+                                                                            <span class="label_text">일반취업(일반기업, 공공기관)</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="hopeType2" name="hopeType" value="">
+                                                                        <label for="hopeType2">
+                                                                            <span class="label_text">창업</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="hopeType3" name="hopeType" value="">
+                                                                        <label for="hopeType3">
+                                                                            <span class="label_text">진학</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="hopeType4" name="hopeType" value="">
+                                                                        <label for="hopeType4">
+                                                                            <span class="label_text">시험준비</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="hopeType5" name="hopeType" value="">
+                                                                        <label for="hopeType5">
+                                                                            <span class="label_text">기타</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>시험명/활동명</th>
+                                                            <td>
+                                                                <div class="box_table_group">
+                                                                    <div class="cell">
+                                                                        <span class="box_ipt new_ipt">
+                                                                            <input type="text" id="" class="input_txt" title="대학교 명" readonly="" placeholder="">
+                                                                            <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap box_jobtarget_wrap mt40">
+                                            <h3 class="t2_sb">취업목표</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>희망직업(직종/직무), 희망급여(월급), 목표근무지역, 목표기업군, 목표 취업예상 시기 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <label for="hopejobId">
+                                                                    <span class="req_mark">희망직업(직종/직무)</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td class="td_hopejob">
+                                                                <span class="box_ipt new_ipt">
+                                                                    <label for="hopejob" class="sr_only">운영대학 검색</label>
+                                                                    <input type="text" class="input_txt" id="hopejob" name="hopejob" placeholder="희망직업(직종/직무)을 입력하세요." title="희망직업 입력">
+                                                                    <button type="button" class="newbtn_del ico16_delete" aria-label="희망직업 입력 삭제">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <label for="tgcompanyId">
+                                                                    <span class="req_mark">목표기업군</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group flex_box" role="radiogroup" aria-labelledby="tgcompanyLabel">
+                                                                    <legend id="tgcompanyLabel" class="sr_only">목표기업군 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="tgcompanyType1" name="tgcompanyType" value="">
+                                                                        <label for="tgcompanyType1">
+                                                                            <span class="label_text">중소기업</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="tgcompanyType2" name="tgcompanyType" value="">
+                                                                        <label for="tgcompanyType2">
+                                                                            <span class="label_text">중견기업</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="tgcompanyType3" name="tgcompanyType" value="">
+                                                                        <label for="tgcompanyType3">
+                                                                            <span class="label_text">대기업</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="tgcompanyType4" name="tgcompanyType" value="">
+                                                                        <label for="tgcompanyType4">
+                                                                            <span class="label_text">공공기관</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="tgcompanyType5" name="tgcompanyType" value="">
+                                                                        <label for="tgcompanyType5">
+                                                                            <span class="label_text">외국계</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="tgcompanyType6" name="tgcompanyType" value="">
+                                                                        <label for="tgcompanyType6">
+                                                                            <span class="label_text">기타</span>
+                                                                            <div class="box_table_group">
+                                                                                <div class="cell">
+                                                                                    <span class="box_ipt new_ipt">
+                                                                                        <input type="text" id="" class="input_txt" title="대학교 명" readonly="" placeholder="">
+                                                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업_IAP관리_목록(승인완료)-모든 취업지원 유형의 계획을 등록했을 경우</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>IAP관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <div class="box_group_wrap">
+                                            <div class="box_table_wrap mt16">
+                                                <div class="box_table_wrap">
+                                                    <div class="box_table_hd">
+                                                        <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                    </div>
+                                                    <!-- table -->
+                                                    
+                                                    <table class="box_table new_table iap_table">
+                                                        <caption>번호, 참여년도, 취업지원유형, 제출일자, 승인일자, 담당자, 신청서 현황, 변경신청현황 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width: 70px">
+                                                            <col style="width: 100px">
+                                                            <col style="width: 120px">
+                                                            <col style="width: 120px">
+                                                            <col style="width: 120px">
+                                                            <col style="width: auto">
+                                                            <col style="width: 120px">
+                                                            <col style="width: 120px">
+                                                            <col style="width: 46px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">번호</th>
+                                                                <th scope="col">참여년도</th>
+                                                                <th scope="col">취업지원유형</th>
+                                                                <th scope="col">제출일자</th>
+                                                                <th scope="col">승인일자</th>
+                                                                <th scope="col">담당자</th>
+                                                                <th scope="col">신청서 현황</th>
+                                                                <th scope="col">변경신청 현황</th>
+                                                                <th scope="col">&nbsp;</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr data-row="1">
+                                                                <td>1</td>
+                                                                <td>2025</td>
+                                                                <td>서비스참여형</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>홍길동</td>
+                                                                <td>
+                                                                    <span>승인</span>
+                                                                    <button type="button" class="btn small type01">상세보기</button>
+                                                                </td>
+                                                                <td>
+                                                                    <span>변경신청 승인</span>
+                                                                    <button type="button" class="btn small type01">변경신청</button>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="arrow_btn arr_btn_open" onclick="toggleDetail(1)"><span class="sr_only">열기</span></button>
+                                                                    <button type="button" class="arrow_btn arr_btn_close" onclick="toggleDetail(1)"><span class="sr_only">닫기</span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="detail_row_container">
+                                                                <td colspan="9" class="arrow_open_page" id="detail-1" role="region">
+                                                                    <div class="apply_summary_inner iap_inner_page" id="">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완요청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">보완 내용 : 대플 담당자가 등록한 보완 내용</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완제출</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <!--  -->
+
+                                                            <tr data-row="2">
+                                                                <td>2</td>
+                                                                <td>2025</td>
+                                                                <td>서비스참여형</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>홍길동</td>
+                                                                <td>
+                                                                    <span>승인</span>
+                                                                    <button type="button" class="btn small type01">상세보기</button>
+                                                                </td>
+                                                                <td>
+                                                                    <span>변경신청 승인</span>
+                                                                    <button type="button" class="btn small type01">변경신청</button>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="arrow_btn arr_btn_open" onclick="toggleDetail(2)"><span class="sr_only">열기</span></button>
+                                                                    <button type="button" class="arrow_btn arr_btn_close" onclick="toggleDetail(2)"><span class="sr_only">닫기</span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="detail_row_container">
+                                                                <td colspan="9" class="arrow_open_page" id="detail-2" role="region">
+                                                                    <div class="apply_summary_inner iap_inner_page" id="">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완요청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">보완 내용 : 대플 담당자가 등록한 보완 내용</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완제출</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <!--  -->
+
+                                                            <tr data-row="3">
+                                                                <td>3</td>
+                                                                <td>2025</td>
+                                                                <td>서비스참여형</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>홍길동</td>
+                                                                <td>
+                                                                    <span>승인</span>
+                                                                    <button type="button" class="btn small type01">상세보기</button>
+                                                                </td>
+                                                                <td>
+                                                                    <span>변경신청 승인</span>
+                                                                    <button type="button" class="btn small type01">변경신청</button>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="arrow_btn arr_btn_open" onclick="toggleDetail(3)"><span class="sr_only">열기</span></button>
+                                                                    <button type="button" class="arrow_btn arr_btn_close" onclick="toggleDetail(3)"><span class="sr_only">닫기</span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="detail_row_container">
+                                                                <td colspan="9" class="arrow_open_page" id="detail-3" role="region">
+                                                                    <div class="apply_summary_inner iap_inner_page" id="">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완요청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">보완 내용 : 대플 담당자가 등록한 보완 내용</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완제출</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <!--  -->
+
+                                                            <tr data-row="4">
+                                                                <td>4</td>
+                                                                <td>2025</td>
+                                                                <td>서비스참여형</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>2025-01-01</td>
+                                                                <td>홍길동</td>
+                                                                <td>
+                                                                    <span>승인</span>
+                                                                    <button type="button" class="btn small type01">상세보기</button>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="btn small type01">변경신청</button>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="arrow_btn arr_btn_open" onclick="toggleDetail(4)"><span class="sr_only">열기</span></button>
+                                                                    <button type="button" class="arrow_btn arr_btn_close" onclick="toggleDetail(4)"><span class="sr_only">닫기</span></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="detail_row_container">
+                                                                <td colspan="9" class="arrow_open_page" id="detail-4" role="region">
+                                                                    <div class="apply_summary_inner iap_inner_page" id="">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완요청</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                                <p class="apply_summary_reason txt_al_l">보완 내용 : 대플 담당자가 등록한 보완 내용</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">보완제출</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="apply_summary_status">
+                                                                                    <p class="status_label">변경신청승인</p>
+                                                                                    <p class="status_date">2025-00-00</p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            
+
+                                                            <!-- 등록된 내용이 없을시에 사용 -->
+                                                            <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="section_bottom"></div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    // 페이지 열기/닫기 기능 구현
+                                    $(function(){
+                                        $(".arrow_btn").on("click", function(){
+                                            var $btn = $(this);
+                                            var $row = $btn.closest("tr[data-row]");
+                                            var rowNumber = $row.data("row");
+                                            var $detail = $("#detail-" + rowNumber);
+
+                                            var isOpen = $detail.is(":visible");
+
+                                            // 모든 detail 닫기
+                                            $(".detail_row_container td").hide();
+                                            $(".arr_btn_open").show().attr("aria-expanded","false");
+                                            $(".arr_btn_close").hide().attr("aria-expanded","false");
+
+                                            if(!isOpen){
+                                                // 선택된 행만 열기
+                                                $detail.show();
+                                                $row.find(".arr_btn_open").hide().attr("aria-expanded","true");
+                                                $row.find(".arr_btn_close").show().attr("aria-expanded","true");
+                                            }
+                                        });
+
+                                        // 초기 상태 세팅
+                                        $(".detail_row_container td").hide();
+                                        $(".arr_btn_close").hide().attr("aria-expanded","false");
+                                        $(".arr_btn_open").attr("aria-expanded","false");
+                                    });
+                                </script>
+
+                                
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

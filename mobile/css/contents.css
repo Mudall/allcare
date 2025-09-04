@@ -219,10 +219,7 @@
 .mypage .progmg.allcare .my_ptcp_from .box_agm_wrap {position: relative; padding-bottom: 38px;}
 .mypage .progmg.allcare .my_ptcp_from .box_agm_wrap::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
 .mypage .progmg.allcare .my_ptcp_from .dd_twincell {display: flex; flex-direction: column; gap: 8px;}
-.mypage .progmg.allcare .my_ptcp_from .dd_twincell .box_table_group {}
 .mypage .progmg.allcare .my_ptcp_from .dd_twincell .box_table_group:first-child .cell {width: 100%;}
-.mypage .progmg.allcare .my_ptcp_from .dd_twincell .box_table_group .cell .new_ipt {}
-.mypage .progmg.allcare .my_ptcp_from .dd_twincell .box_table_group .cell .new_ipt input {}
 
 
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */

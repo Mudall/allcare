@@ -197,8 +197,8 @@
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap:not(.r_type01,.r_type02) .box_table th {font-size: 16px; font-weight: 600; line-height: 28px;  color: #333;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap:not(.r_type01,.r_type02) .box_table td {font-size: 16px; font-weight: 400; line-height: 28px;  color: #333;}
 .mypage .progmg.allcare .my_ptcp_from .btnSearch span {font-weight: 600;}
-.mypage .progmg.allcare .my_ptcp_from .req_mark {position: relative; padding-right: 12px; font-size: 16px; font-weight: 600; line-height: 28px;  color: #333;}
-.mypage .progmg.allcare .my_ptcp_from .req_mark::after {content: ''; position: absolute; right: 0; top: 25%; transform: translateY(-50%); width: 5px; height: 5px; background-color: #ee2e62; border-radius: 50%;}
+.mypage .progmg.allcare .req_mark {position: relative; padding-right: 12px; font-size: 16px; font-weight: 600; line-height: 28px;  color: #333;}
+.mypage .progmg.allcare .req_mark::after {content: ''; position: absolute; right: 0; top: 25%; transform: translateY(-50%); width: 5px; height: 5px; background-color: #ee2e62; border-radius: 50%;}
 .mypage .progmg.allcare .my_ptcp_from .box_radio_group input[type='radio'] + label {margin-left: 0;}
 .mypage .progmg.allcare .my_ptcp_from .ptcp_radiocustom {cursor: pointer;}
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_uni td .box_table_group {display: flex;}
@@ -211,9 +211,9 @@
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_major .box_table_group .btnSearch {margin-left: 8px;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_major .cell_twin {flex-direction: row; gap: 8px;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_major .cell_twin .new_ipt {max-width: 200px;}
-.mypage .progmg.allcare .my_ptcp_from .new_selectbox {position: relative; width: 200px; height: 40px; border: 1px solid #757575; border-radius: 4px;}
-.mypage .progmg.allcare .my_ptcp_from .new_selectbox select {padding: 6px 28px 6px 16px; width: 100%; height: 100%; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
-.mypage .progmg.allcare .my_ptcp_from .new_selectbox::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .new_selectbox {position: relative; width: 200px; height: 40px; border: 1px solid #757575; border-radius: 4px;}
+.mypage .progmg.allcare .new_selectbox select {padding: 6px 28px 6px 16px; width: 100%; height: 100%; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.mypage .progmg.allcare .new_selectbox::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_gradate .input_txt {max-width: 128px; padding: 6px 40px 6px 12px;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_gradate .btn_calendar {margin: 0; right: 10px; transform: translateY(-25%);} 
 .mypage .progmg.allcare .agm_area {display: flex; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
@@ -694,3 +694,23 @@
 .mypage .progmg.allcare .earn_score {color: #EE2E62; font-weight: 600;}
 .mypage .progmg.allcare .cont_donechk_wrap {border: 1px solid #ddd; border-radius: 8px; padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;}
 .mypage .progmg.allcare .cont_donechk_wrap p {font-size: 16px; color: #555; font-weight: 400; line-height: 28px;}
+
+
+
+/* 점프업 - IAP관리 목록 (UI_ADHPCfM01)  */
+.mypage .progmg.allcare .iap_table .arrow_btn {width: 24px; height: 24px; display: block; position: relative;}
+.mypage .progmg.allcare .iap_table .arrow_btn.arr_btn_open {background: url('../images/mypage/arrorw24_down.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .iap_table .arrow_btn.arr_btn_close {background: url('../images/mypage/arrorw24_up_blue.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .detail_row_container {background-color: #f8f8f8;}
+
+.allcare .new_table tr td:first-child.arrow_open_page {padding-left: 40px;}
+.allcare .new_table tr td:last-child.arrow_open_page {padding-right: 40px;}
+.allcare .txt_al_l {text-align: left;}
+
+
+/* 점프업_IAP관리_등록 (UI_ADHPCfS02) */
+.mypage .progmg.allcare .box_person_wraptypea .grad_depart_box {display: flex; align-items: baseline; gap: 24px;}
+.mypage .progmg.allcare .box_person_wraptypea .grad_depart_box .new_selectbox {max-width: 160px;}
+.mypage .progmg.allcare .box_person_wraptypea .grad_depart_box .new_selectbox select {color: #757575;}
+
+.mypage .progmg.allcare .td_hopejob {}
