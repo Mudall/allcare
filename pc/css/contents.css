@@ -622,7 +622,7 @@
 .mypage .progmg.allcare tr:last-child .td_move_btn li .move_down::after {background-image: url('../images/mypage/ico16_move_down_disable.svg');}
 .mypage .progmg.allcare .my_ptcp_from h4 .req_mark {font-size: 20px; line-height: 48px;}
 .mypage .progmg.allcare .box_promise_wrap {border-top: 1px solid #ddd; margin-top: 0; padding-top: 40px;}
-.mypage .progmg.allcare .box_end_wrap .flex_gap16 {gap: 16px;}
+.mypage .progmg.allcare .flex_gap16 {display: flex; gap: 16px;}
 
 
 /* 빌드업 - 경력개발로드맵_조회(제출후) */
@@ -713,4 +713,59 @@
 .mypage .progmg.allcare .box_person_wraptypea .grad_depart_box .new_selectbox {max-width: 160px;}
 .mypage .progmg.allcare .box_person_wraptypea .grad_depart_box .new_selectbox select {color: #757575;}
 
-.mypage .progmg.allcare .td_hopejob {}
+.mypage .progmg.allcare .td_hopejob .new_ipt {width: 240px;}
+.mypage .progmg.allcare .td_hopepay {display: flex; align-items: center; gap: 8px}
+.mypage .progmg.allcare .td_hopepay .new_ipt {width: 240px;}
+.mypage .progmg.allcare .td_hopepay .paytxt {font-size: 16px;}
+.mypage .progmg.allcare .td_tgregion .cell {width: 313px;}
+.mypage .progmg.allcare .td_tgcompany .cell {width: 192px;}
+.mypage .progmg.allcare .td_hopeday .box_ipt input {width: 132px;}
+.mypage .progmg.allcare .td_hopeday .box_ipt .btn_calendar {right: 36px;}
+.mypage .progmg.allcare .td_tgregion .box_table_group {margin-left: 4px;}
+.mypage .progmg.allcare .td_tgcompany .box_table_group {margin-left: 4px;}
+
+
+/* 점프업_IAP관리_조회/수정(저장) (UI_ADHPCfS03) */
+.mypage .progmg.allcare .employ_plan_wrap .box_table_hd {margin-bottom: 8px;}
+.mypage .progmg.allcare .employ_plan_wrap .plan_hd {display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area {display: flex; flex-direction: column; align-items: center; border: 1px solid #ddd; border-radius: 8px; padding: 32px 24px;} 
+.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .notice_item {margin-bottom: 16px; text-align: center; display: flex; flex-direction: column; align-items: center;}
+.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .notice_item .tit {padding-left: 26px; position: relative; margin-bottom: 8px;}
+.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .notice_item .tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_employ_item.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .btn.semi_big {text-align: center; padding: 10px 16px;}
+.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .btn.semi_big span {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_th_area {display: flex; align-items: center; gap: 8px; justify-content: flex-end}
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_th_area .btn_top, 
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_th_area .btn_bottom {min-width: 32px; position: relative;}
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_th_area .btn_top:after {content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/ico16_move_up.svg') no-repeat center / contain; width: 16px; height: 16px;} 
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_th_area .btn_bottom:after {content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/ico16_move_down.svg') no-repeat center / contain; width: 16px; height: 16px;} 
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_tablelist_box .box_table:first-child .iapplan_th_area .btn_top:after {background-image: url('../images/mypage/ico16_move_up_disable.svg');}
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_tablelist_box .box_table:last-child .iapplan_th_area .btn_bottom:after {background-image: url('../images/mypage/ico16_move_down_disable.svg');}
+.mypage .progmg.allcare .new_selectbox.newsel_w120 {width: 120px;}
+.mypage .progmg.allcare .new_selectbox.newsel_w240 {width: 240px;}
+.mypage .progmg.allcare .newipt_w120 {width: 120px;}
+.mypage .progmg.allcare .newipt_w132 {width: 132px;}
+.mypage .progmg.allcare .newipt_w240 {width: 240px;}
+.mypage .progmg.allcare .employ_plan_wrap .td_jointime {display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .employ_plan_wrap .td_jointime .jointime_txt {font-size: 16px;}
+.mypage .progmg.allcare .td_join_org .box_ipt button[class*='ico'] {margin-top: -2px;}
+.mypage .progmg.allcare .employ_plan_wrap .iapplan_tablelist_box .box_table + .box_table {margin-top: 24px;}
+.mypage .progmg.allcare .iapplan_ebdbtn_wrap .btn.type_full {display: flex; justify-content: center; align-items: center; border: 1px solid #555; width: 100%; height: 48px; border-radius: 4px; text-align: center;}
+.mypage .progmg.allcare .iapplan_ebdbtn_wrap .btn.type_full span {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+
+/* 점프업_IAP관리_조회(제출) (UI_ADHPCfS04) */
+
+/* 점프업_IAP관리_수정(보완요청_제출후) (UI_ADHPCfS05)*/
+.allcare .iapplan_tablelist_box .toggle_nbsp {line-height: 0; height: 8px;}
+.mypage .progmg.allcare .jobplan_td_targetarea .txt_blue {font-weight: 600;}
+.mypage .progmg.allcare .jobplan_td_targetarea span + span {position: relative; margin-left: 16px;}
+.mypage .progmg.allcare .jobplan_td_targetarea span + span::after {content: ''; position: absolute; left: -7px; top:50%; transform: translateY(-50%); background-color: #ddd; width: 1px; height: 12px;}
+.mypage .progmg.allcare .iapplan_th_toggle {display: flex; justify-content: flex-end;}
+.mypage .progmg.allcare .iapplan_th_toggle button {width:24px; height: 24px; display: none;}
+.mypage .progmg.allcare .iapplan_th_toggle button.active {display: block;}
+.mypage .progmg.allcare .iapplan_th_toggle .close_btn {background: url('../images/mypage/arrorw24_up_blue.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .iapplan_th_toggle .open_btn {background: url('../images/mypage/arrorw24_down.svg') no-repeat center / contain;}
+
+/* 점프업_IAP관리_수정(변경신청_승인후)	(UI_ADHPCfS06) */
+.mypage .progmg.allcare .box_table_unable .txt_red {color: #e0024b;}
+.mypage .progmg.allcare .box_table_unable select, .box_table_unable input, .box_table_unable .text_form_inner, .box_table_unable textarea  {background-color: #f5f5f5;}

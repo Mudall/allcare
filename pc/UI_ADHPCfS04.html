@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - IAP관리_조회(제출)</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>IAP관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <div class="box_notice_wrap mt16">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list"><span class="fw600">제출완료</span> : 취업활동계획서가 확정되지 않은 상태로 ‘회수’ 후 수정이 가능합니다.</li>
+                                                <li class="txt_list"><span class="fw600">승인완료</span> : 승인된 취업활동계획서는 수정이 불가합니다.</li>
+                                                <li class="txt_list">승인 이후 IAP 수정이 필요한 경우 <span class="fw600">담당자</span>에게 <span class="fw600">문의</span>하세요.</li>
+                                            </ul>
+                                        </div>
+ 
+                                        <div class="box_group_wrap box_person_wraptypea mt40">
+                                            <h3 class="t2_sb">참여자 정보</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>성명, 전공/학과, 학번, 학적 상태, 학년/학기, 취업지원유형 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">성명</th>
+                                                            <td><div class="form_box"><span class="data_txt">홍길동</span></div></td>
+
+                                                            <th scope="row">전공/학과</th>
+                                                            <td><div class="form_box"><span class="data_txt">경영학과/국제경영 전공</span></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">학번</th>
+                                                            <td><div class="form_box"><span class="data_txt">202500010001</span></div></td>
+                                                            
+                                                            <th scope="row">학적 상태</th>
+                                                            <td><div class="form_box"><span class="data_txt">재학</span></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <label for="semesterId">
+                                                                    <span class="req_mark">학년/학기</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td>1학년 / 2학기</td>
+                                                            
+                                                            <th scope="row">
+                                                                <label for="participationId">
+                                                                    <span class="req_mark">취업지원유형</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="participationLabel">
+                                                                    <legend id="participationLabel" class="sr_only">취업지원유형 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="participationType1" name="participationType" value="">
+                                                                        <label for="participationType1">
+                                                                            <span class="label_text">자기주도형</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="participationType2" name="participationType" value="" checked>
+                                                                        <label for="participationType2">
+                                                                            <span class="label_text">서비스참여형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap box_hoperoad_wrap mt40">
+                                            <h3 class="t2_sb">희망진로</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>희망진로, 시험명/활동명 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">희망진로</th>
+                                                            <td>일반취업(일반기업, 공공기관)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>시험명/활동명</th>
+                                                            <td>입력한 내용</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap box_jobtarget_wrap mt40">
+                                            <h3 class="t2_sb">취업목표</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>희망직업(직종/직무), 희망급여(월급), 목표근무지역, 목표기업군, 목표 취업예상 시기 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">희망직업(직종/직무)</th>
+                                                            <td>AI 엔지니어</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">희망직업(직종/직무)</th>
+                                                            <td>1,000만 원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">목표근무지역</th>
+                                                            <td>수도권(서울, 경기)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">목표기업군</th>
+                                                            <td>중소기업</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">목표 취업예상 시기</th>
+                                                            <td>2025년 3월</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap employ_plan_wrap mt40">
+                                            <div class="box_table_hd">
+                                                <div class="plan_hd">
+                                                    <h3 class="t2_sb">취업활동계획</h3>
+                                                    <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                </div>
+                                                <div class="section_right">
+                                                    <button type="button" class="btn medium type02 all_open_btn"><span>전체 펼치기 +</span></button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="box_table_wrap write type01 mt8">
+                                                <div class="iapplan_tablelist_box">
+                                                    <table class="box_table">
+                                                        <caption>중점영역, 참여방법, 참여기간, 참여시간, 참여기관(교내), 참여기관(외부), 목표달성시기, 활동내용(세부내용) 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:194px">
+                                                            <col style="width:calc(50% - 194px)">
+                                                            <col style="width:194px">
+                                                            <col style="width:calc(50% - 194px)">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="4">
+                                                                    <div class="iapplan_th_toggle">
+                                                                        <button type="button" class="close_btn active"><span class="blind">페이지 접기</span></button>
+                                                                        <button type="button" class="open_btn"><span class="blind">페이지 펼치기</span></button>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">중점영역</th>
+                                                                <td class="jobplan_td_targetarea"><span class="txt_blue">서비스 참여형</span><span>직업훈련</span></td>
+
+                                                                <th scope="row">참여방법</th>
+                                                                <td>온라인</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">참여기간</th>
+                                                                <td>2025-01-01 ~ 2025-12-01 (5시간)</td>
+                                                                
+                                                                <th scope="row">참여시간</th>
+                                                                <td>1학기</td>
+                                                            </tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">참여기관(교내)</th>
+                                                                <td>교내</td>
+                                                                
+                                                                <th scope="row">참여기관(외부)</th>
+                                                                <td>외부</td>
+                                                            </tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">활동내용<br>(세부내용)</th>
+                                                                <td colspan="3">취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. </td>
+                                                            </tr>
+                                                            <tr class="toggle_page"><td colspan="4" class="toggle_nbsp" style="padding: 0;">&nbsp;</td></tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">IAP 결과 제출 여부</th>
+                                                                <td>예</td>
+
+                                                                <th scope="row">포인트 신청서 제출 여부</th>
+                                                                <td>예</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!--  -->
+
+                                                    <table class="box_table">
+                                                        <caption>중점영역, 참여방법, 참여기간, 참여시간, 참여기관(교내), 참여기관(외부), 목표달성시기, 활동내용(세부내용) 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:194px">
+                                                            <col style="width:calc(50% - 194px)">
+                                                            <col style="width:194px">
+                                                            <col style="width:calc(50% - 194px)">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="4">
+                                                                    <div class="iapplan_th_toggle">
+                                                                        <button type="button" class="close_btn active"><span class="blind">페이지 접기</span></button>
+                                                                        <button type="button" class="open_btn"><span class="blind">페이지 펼치기</span></button>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">중점영역</th>
+                                                                <td class="jobplan_td_targetarea"><span class="txt_blue">서비스 참여형</span><span>직업훈련</span></td>
+
+                                                                <th scope="row">참여방법</th>
+                                                                <td>온라인</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">참여기간</th>
+                                                                <td>2025-01-01 ~ 2025-12-01 (5시간)</td>
+                                                                
+                                                                <th scope="row">참여시간</th>
+                                                                <td>1학기</td>
+                                                            </tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">참여기관(교내)</th>
+                                                                <td>교내</td>
+                                                                
+                                                                <th scope="row">참여기관(외부)</th>
+                                                                <td>외부</td>
+                                                            </tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">활동내용<br>(세부내용)</th>
+                                                                <td colspan="3">취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. </td>
+                                                            </tr>
+                                                            <tr class="toggle_page"><td colspan="4" class="toggle_nbsp" style="padding: 0;">&nbsp;</td></tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">IAP 결과 제출 여부</th>
+                                                                <td>예</td>
+
+                                                                <th scope="row">포인트 신청서 제출 여부</th>
+                                                                <td>예</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!--  -->
+
+                                                    <table class="box_table">
+                                                        <caption>중점영역, 참여방법, 참여기간, 참여시간, 참여기관(교내), 참여기관(외부), 목표달성시기, 활동내용(세부내용) 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width:194px">
+                                                            <col style="width:calc(50% - 194px)">
+                                                            <col style="width:194px">
+                                                            <col style="width:calc(50% - 194px)">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="4">
+                                                                    <div class="iapplan_th_toggle">
+                                                                        <button type="button" class="close_btn active"><span class="blind">페이지 접기</span></button>
+                                                                        <button type="button" class="open_btn"><span class="blind">페이지 펼치기</span></button>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">중점영역</th>
+                                                                <td class="jobplan_td_targetarea"><span class="txt_blue">서비스 참여형</span><span>직업훈련</span></td>
+
+                                                                <th scope="row">참여방법</th>
+                                                                <td>온라인</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">참여기간</th>
+                                                                <td>2025-01-01 ~ 2025-12-01 (5시간)</td>
+                                                                
+                                                                <th scope="row">참여시간</th>
+                                                                <td>1학기</td>
+                                                            </tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">참여기관(교내)</th>
+                                                                <td>교내</td>
+                                                                
+                                                                <th scope="row">참여기관(외부)</th>
+                                                                <td>외부</td>
+                                                            </tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">활동내용<br>(세부내용)</th>
+                                                                <td colspan="3">취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. </td>
+                                                            </tr>
+                                                            <tr class="toggle_page"><td colspan="4" class="toggle_nbsp" style="padding: 0;">&nbsp;</td></tr>
+                                                            <tr class="toggle_page">
+                                                                <th scope="row">IAP 결과 제출 여부</th>
+                                                                <td>예</td>
+
+                                                                <th scope="row">포인트 신청서 제출 여부</th>
+                                                                <td>예</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                
+                                            </div>
+
+                                            <div class="box_group_wrap">
+                                                <div class="tit_box">
+                                                    <h3 class="t2_sb">신청 및 처리현황</h3>
+                                                </div>
+                                                
+                                                <div class="apply_summary_wrap" role="region">
+                                                    <div class="apply_summary_header">
+                                                        <div class="apply_summary_info">
+                                                            <p class="apply_summary_tit">현재 참여신청서 <span>제출</span> 상태입니다.</p>
+                                                            <p class="apply_summary_tel b1_r">담당자 : 김담당 (010-0000-0000)</p>
+                                                        </div>
+                                                        <div class="apply_summary_action mt16"><button type="button" class="apply_summary_toggle on" aria-expanded="true" aria-controls="applySummaryDetail">신청 및 처리현황 이력</button></div>
+                                                    </div>
+
+                                                    <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                                    <div class="apply_summary_inner mt32" id="applySummaryDetail">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">제출</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="iapplan_submit_wrap">
+                                                <div class="flex_box mt40 js_s">
+                                                    <button type="button" class="btn big type02 btn_s_r" aria-label="목록" onclick="">목록</button>
+                                                    <button type="button" id="returnBtn" class="btn big fill type01" onclick="">회수</button>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <script>
+                                            $(function(){
+                                                // 초기 세팅
+                                                $("table").each(function(index){
+                                                    var $table = $(this);
+                                                    if(index === 0){
+                                                        // 첫 번째 테이블은 펼침 상태
+                                                        $table.find(".toggle_page").show();
+                                                        $table.find(".close_btn").addClass("active").attr("aria-expanded","true");
+                                                        $table.find(".open_btn").removeClass("active").attr("aria-expanded","false");
+                                                    } else {
+                                                        // 나머지는 접힘 상태
+                                                        $table.find(".toggle_page").hide();
+                                                        $table.find(".close_btn").removeClass("active").attr("aria-expanded","false");
+                                                        $table.find(".open_btn").addClass("active").attr("aria-expanded","true");
+                                                    }
+                                                });
+
+                                                // 개별 접기
+                                                $(".close_btn").on("click", function(){
+                                                    var $table = $(this).closest("table");
+                                                    $table.find(".toggle_page").hide();
+
+                                                    $(this).removeClass("active").attr("aria-expanded","false");
+                                                    $table.find(".open_btn").addClass("active").attr("aria-expanded","true");
+                                                });
+
+                                                // 개별 펼치기
+                                                $(".open_btn").on("click", function(){
+                                                    var $table = $(this).closest("table");
+                                                    $table.find(".toggle_page").show();
+
+                                                    $(this).removeClass("active").attr("aria-expanded","false");
+                                                    $table.find(".close_btn").addClass("active").attr("aria-expanded","true");
+                                                });
+
+                                                // 전체 펼치기
+                                                $(".all_open_btn").on("click", function(){
+                                                    $("table").each(function(){
+                                                        var $table = $(this);
+                                                        $table.find(".toggle_page").show();
+                                                        $table.find(".open_btn").removeClass("active").attr("aria-expanded","false");
+                                                        $table.find(".close_btn").addClass("active").attr("aria-expanded","true");
+                                                    });
+                                                });
+                                            });
+
+                                            // 신청 및 처리현황 on/off 토글
+                                            $(document).ready(function() {
+                                                var $toggleBtn = $('.apply_summary_action .apply_summary_toggle');
+                                                var $detailArea = $('#applySummaryDetail');
+
+                                                $toggleBtn.on('click', function() {
+                                                    var isExpanded = $toggleBtn.attr('aria-expanded') === 'true';
+                                                    $toggleBtn.attr('aria-expanded', String(!isExpanded));
+                                                    $toggleBtn.toggleClass('on', !isExpanded);
+                                                    $toggleBtn.toggleClass('off', isExpanded);
+
+                                                    if (!isExpanded) {
+                                                        $detailArea.removeAttr('hidden');
+                                                    } else {
+                                                        $detailArea.attr('hidden', '');
+                                                    }
+                                                });
+                                            });
+                                        </script>
+
+
+                                    </div>
+                                </div>
+                                
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

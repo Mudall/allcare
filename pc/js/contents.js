@@ -205,3 +205,12 @@ $(document).ready(function() {
         updateByteCount();
     });
 });
+
+
+// unselect 일때 radio 비활성화
+$(function(){
+    $('.box_radio_group.type_unselect input[type="radio"]').on('click', function(e){
+        e.preventDefault();          
+        $(this).prop('checked', false); 
+    });
+});

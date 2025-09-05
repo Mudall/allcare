@@ -323,13 +323,7 @@
                                         $ptcpType2.on('change', toggleGradeWrap);
                                     });
 
-                                    // unselect 일때 radio 비활성화
-                                    $(function(){
-                                        $('.box_radio_group.type_unselect input[type="radio"]').on('click', function(e){
-                                            e.preventDefault();          
-                                            $(this).prop('checked', false); 
-                                        });
-                                    });
+                                    
 
                                     // 신청 및 처리현황 토글 on/off
                                     $(document).ready(function() {
