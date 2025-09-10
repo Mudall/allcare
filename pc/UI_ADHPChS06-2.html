@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>포인트관리_수정(저장후제출전)</title>
+        <title>포인트관리_조회(제출후)- 자가진단표2023,2024</title>
         <script src="../pc/include/js/head.js"></script>
         <script src="../pc/js/jquery-3.7.1.min.js"></script>
 
@@ -130,7 +130,7 @@
                                                         <tr>
                                                             <th scope="row">취업지원유형</th>
                                                             <td>
-                                                                <fieldset class="box_radio_group flex_box" role="radiogroup" aria-labelledby="participationLabel">
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="participationLabel">
                                                                     <legend id="participationLabel" class="sr_only">취업지원유형 선택</legend>                                                            
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="participationType1" name="participationType" value="" checked>
@@ -158,21 +158,14 @@
                                         </div>
 
                                         <div class="box_group_wrap mt40">
-                                            <div class="hd_twin_box">
-                                                <h3 class="t2_sb">구직활동(이행내용)</h3>
-                                                <div class="hd_btn_box">
-                                                    <button type="button" class="btn type02 medium"><span>삭제 -</span></button>
-                                                    <button type="button" class="btn type02 medium"><span>추가 +</span></button>
-                                                </div>
-                                            </div>
+                                            <h3 class="t2_sb">구직활동(이행내용)</h3>
 
                                             <div class="plantog_area mb16">
                                                 <ul>
                                                     <li class="plantog_wrap">
                                                         <div class="plantog_chk">
                                                             <div class="chk_box">
-                                                                <input type="checkbox" class="new_chkbox" id="plantog" name="plantog" value="1">
-                                                                <label for="plantog"><span class="b1_r">1</span></label>
+                                                                <span class="b1_r">1</span></label>
                                                             </div>
                                                             <p class="plantog_chk_tit">직업훈련 서비스참여형</p>
                                                         </div>
@@ -241,76 +234,20 @@
                                                                     </colgroup>
                                                                     <tbody>
                                                                         <tr>
-                                                                            <th scope="row">
-                                                                                <span class="req_mark">이행기간</span>
-                                                                                <span class="sr_only">필수 입력</span>
-                                                                            </th>
-                                                                            <td>
-                                                                                <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
-                                                                                    <div class="cell">
-                                                                                        <span class="box_ipt w_small">
-                                                                                            <label for="schRcptStdte" class="sr_only">등록 시작일</label>
-                                                                                            <input type="text" onkeyup="fn_selfInput(this)" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric" title="시작일 입력">
-                                                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 시작일 달력 선택"></button>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <i class="date_line" aria-hidden="true">~</i>
-                                                                                    <div class="cell">
-                                                                                        <span class="box_ipt w_small">
-                                                                                            <label for="schRcptEndte" class="sr_only">등록 종료일</label>
-                                                                                            <input type="text" onkeyup="fn_selfInput(this)" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric" title="종료일 입력">
-                                                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 종료일 달력 선택"></button>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
+                                                                            <th scope="row">이행기간</th>
+                                                                            <td>2025-01 ~ 2025-01</td>
                                                                         </tr>
                                                                         <tr class="tr_toggle">
-                                                                            <th scope="row">
-                                                                                <span class="req_mark">활동요청시간</span>
-                                                                                <span class="sr_only">필수 입력</span>
-                                                                            </th>
-                                                                            <td class="td_activ_time">
-                                                                                <span class="box_ipt new_ipt">
-                                                                                    <label for="actTimeId" class="sr_only">활동요청시간</label>
-                                                                                    <input type="text" class="input_txt" id="actTimeId" name="actTimeId" placeholder="" title="활동요청시간 입력" value="">
-                                                                                    <button type="button" class="newbtn_del ico16_delete" aria-label="활동요청시간 입력내용 삭제">
-                                                                                        <span class="blind">삭제</span>
-                                                                                    </button>
-                                                                                </span>
-                                                                                <span>시간</span>
-                                                                            </td>
+                                                                            <th scope="row">활동요청시간</th>
+                                                                            <td class="td_activ_time"><span class="txt_bold">10</span> 시간</td>
                                                                         </tr>
                                                                         <tr class="tr_toggle">
-                                                                            <th scope="row">
-                                                                                <span class="req_mark">프로그램 <br>이행내용</span>
-                                                                                <span class="sr_only">필수 입력</span>
-                                                                            </th>
-                                                                            <td>
-                                                                                <div class="text_form_box">
-                                                                                    <div class="text_form_inner">
-                                                                                        <textarea id="" name="interestArea" maxlength="1000" aria-describedby="interestHelp interestCount" placeholder="프로그램 이행 내용을 입력해주세요."></textarea>
-                                                                                    </div>
-                                                                                    <div class="text_info">
-                                                                                        <p class="sr_only" id="interestHelp">최대 300 Byte까지 입력 가능합니다.</p>
-                                                                                        <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">300</span> Byte</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
+                                                                            <th scope="row">프로그램 <br>이행내용</th>
+                                                                            <td>프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다. 프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.</td>
                                                                         </tr>
                                                                         <tr class="tr_toggle">
                                                                             <th scope="row">비고 <br>(IAP 수립일 등)</th>
-                                                                            <td>
-                                                                                <div class="text_form_box">
-                                                                                    <div class="text_form_inner">
-                                                                                        <textarea id="" name="interestArea" maxlength="1000" aria-describedby="interestHelp interestCount" placeholder="비고 내용을 작성해 주세요."></textarea>
-                                                                                    </div>
-                                                                                    <div class="text_info">
-                                                                                        <p class="sr_only" id="interestHelp">최대 150 Byte까지 입력 가능합니다.</p>
-                                                                                        <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">150</span> Byte</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
+                                                                            <td>입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.</td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
@@ -321,8 +258,7 @@
                                                     <li class="plantog_wrap">
                                                         <div class="plantog_chk">
                                                             <div class="chk_box">
-                                                                <input type="checkbox" class="new_chkbox" id="plantog" name="plantog" value="1">
-                                                                <label for="plantog"><span class="b1_r">2</span></label>
+                                                                <span class="b1_r">2</span></label>
                                                             </div>
                                                             <p class="plantog_chk_tit">일경험(인턴) 서비스참여형</p>
                                                         </div>
@@ -391,76 +327,20 @@
                                                                     </colgroup>
                                                                     <tbody>
                                                                         <tr>
-                                                                            <th scope="row">
-                                                                                <span class="req_mark">이행기간</span>
-                                                                                <span class="sr_only">필수 입력</span>
-                                                                            </th>
-                                                                            <td>
-                                                                                <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
-                                                                                    <div class="cell">
-                                                                                        <span class="box_ipt w_small">
-                                                                                            <label for="schRcptStdte" class="sr_only">등록 시작일</label>
-                                                                                            <input type="text" onkeyup="fn_selfInput(this)" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric" title="시작일 입력">
-                                                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 시작일 달력 선택"></button>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <i class="date_line" aria-hidden="true">~</i>
-                                                                                    <div class="cell">
-                                                                                        <span class="box_ipt w_small">
-                                                                                            <label for="schRcptEndte" class="sr_only">등록 종료일</label>
-                                                                                            <input type="text" onkeyup="fn_selfInput(this)" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" placeholder="YYYY-MM-DD" inputmode="numeric" title="종료일 입력">
-                                                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="등록 종료일 달력 선택"></button>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
+                                                                            <th scope="row">이행기간</th>
+                                                                            <td>2025-01 ~ 2025-01</td>
                                                                         </tr>
                                                                         <tr class="tr_toggle">
-                                                                            <th scope="row">
-                                                                                <span class="req_mark">활동요청시간</span>
-                                                                                <span class="sr_only">필수 입력</span>
-                                                                            </th>
-                                                                            <td class="td_activ_time">
-                                                                                <span class="box_ipt new_ipt">
-                                                                                    <label for="actTimeId" class="sr_only">활동요청시간</label>
-                                                                                    <input type="text" class="input_txt" id="actTimeId" name="actTimeId" placeholder="" title="활동요청시간 입력" value="">
-                                                                                    <button type="button" class="newbtn_del ico16_delete" aria-label="활동요청시간 입력내용 삭제">
-                                                                                        <span class="blind">삭제</span>
-                                                                                    </button>
-                                                                                </span>
-                                                                                <span>시간</span>
-                                                                            </td>
+                                                                            <th scope="row">활동요청시간</th>
+                                                                            <td class="td_activ_time"><span class="txt_bold">10</span> 시간</td>
                                                                         </tr>
                                                                         <tr class="tr_toggle">
-                                                                            <th scope="row">
-                                                                                <span class="req_mark">프로그램 <br>이행내용</span>
-                                                                                <span class="sr_only">필수 입력</span>
-                                                                            </th>
-                                                                            <td>
-                                                                                <div class="text_form_box">
-                                                                                    <div class="text_form_inner">
-                                                                                        <textarea id="" name="interestArea" maxlength="1000" aria-describedby="interestHelp interestCount" placeholder="프로그램 이행 내용을 입력해주세요."></textarea>
-                                                                                    </div>
-                                                                                    <div class="text_info">
-                                                                                        <p class="sr_only" id="interestHelp">최대 300 Byte까지 입력 가능합니다.</p>
-                                                                                        <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">300</span> Byte</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
+                                                                            <th scope="row">프로그램 <br>이행내용</th>
+                                                                            <td>프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다. 프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.</td>
                                                                         </tr>
                                                                         <tr class="tr_toggle">
                                                                             <th scope="row">비고 <br>(IAP 수립일 등)</th>
-                                                                            <td>
-                                                                                <div class="text_form_box">
-                                                                                    <div class="text_form_inner">
-                                                                                        <textarea id="" name="interestArea" maxlength="1000" aria-describedby="interestHelp interestCount" placeholder="비고 내용을 작성해 주세요."></textarea>
-                                                                                    </div>
-                                                                                    <div class="text_info">
-                                                                                        <p class="sr_only" id="interestHelp">최대 150 Byte까지 입력 가능합니다.</p>
-                                                                                        <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">150</span> Byte</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
+                                                                            <td>입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.</td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
@@ -500,44 +380,35 @@
                                         <div class="iap_attfile_wrap mt40">
                                             <div class="iap_attfile_tit">
                                                 <div class="att_tit"><p class="t2_sb">첨부파일</p></div>
-                                                <ul class="att_desc mt24">
-                                                    <li><p>파일용량은 3MB 이하이며, 3개 파일 업로드 가능합니다.</p></li>
-                                                    <li><p>등록 가능 파일 : jpg, jpeg, png, pdf, hwp, dosc, xlsx, docx, doc, txt</p></li>
-                                                </ul>
                                             </div>
                                             <div class="iap_attfile_cont">
                                                 <div class="register_txt_box">
                                                     <p class="tit b1_sb">1. IAP결과증빙자료</p>
                                                     <p class="desc b1_r">재학생맞춤형고용서비스-IAP결과증빙자료</p>
                                                 </div>
-                                                <div class="register_att_box">
-                                                    <div class="att_add_box">
-                                                        <button type="button" class="att_file_btn" onclick="addFiles()"><span class="b1_sb">첨부파일 등록</span></button>
-                                                        <input type="file" id="files" style="display: none;">
-                                                    </div>
-                                                    <p class="b1_r">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, <br>원하는 파일을 마우스로 끌어오세요.</p>
-                                                </div>
                                             </div>
 
                                             <ul class="ul_iap_addlist mt24" id="fileList">
                                                 <li class="att_li">
                                                     <p>파일명.pdf</p>
+                                                    <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                                    <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                                </li>
+                                                <li class="att_li">
+                                                    <p>파일명 파일명 파일명 파일명2222222222222.pdf</p>
+                                                    <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
                                                     <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
                                                 </li>
                                                 <li class="att_li">
                                                     <p>파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명.pdf</p>
+                                                    <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
                                                     <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
                                                 </li>
                                             </ul>
                                         </div>
 
                                         <div class="box_group_wrap mt40">
-                                            <div class="hd_twin_box">
-                                                <h3 class="t2_sb">수당수급 계좌번호</h3>
-                                                <div class="hd_btn_box">
-                                                    <button type="button" class="btn type02 medium"><span>이전 등록 정보 불러오기</span></button>
-                                                </div>
-                                            </div>
+                                            <h3 class="t2_sb">수당수급 계좌번호</h3>
                                             <div class="box_table_wrap write type01">
                                                 <table class="box_table">
                                                     <caption>예금주, 금융기관, 계좌번호 을(를) 제공하는 표</caption>
@@ -550,43 +421,14 @@
                                                     <tbody>
                                                         <tr>
                                                             <th scope="row">예금주</th>
-                                                            <td class="td_newipt" colspan="3">
-                                                                <span class="box_ipt new_ipt newipt_w180">
-                                                                    <label for="amountOwner" class="sr_only">예금주 입력</label>
-                                                                    <input type="text" class="input_txt" id="amountOwner" name="amountOwner" placeholder="" title="예금주 입력" value="홍길동">
-                                                                    <button type="button" class="newbtn_del ico16_delete" aria-label="예금주 입력 삭제">
-                                                                        <span class="blind">삭제</span>
-                                                                    </button>
-                                                                </span>
-                                                            </td>
+                                                            <td class="td_newipt" colspan="3">홍길동</td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">금융기관</th>
-                                                            <td>
-                                                                <div class="new_selectbox newsel_w180" >
-                                                                    <label for="bankName" class="sr_only">금융기관 은행명 선택</label>
-                                                                    <select id="bankName" name="bankName" title="금융기관 은행명 선택">
-                                                                        <option disabled >선택</option>
-                                                                        <option value="kb" selected>국민은행</option>
-                                                                        <option value="nh">농협은행</option>
-                                                                        <option value="shinhan">신한은행</option>
-                                                                        <option value="woori">우리은행</option>
-                                                                        <option value="hana">하나은행</option>
-                                                                        <option value="ibk">기업은행</option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
+                                                            <td>국민은행</td>
 
-                                                            <th scope="row">계좌번호 <span class="txt_red">(-제외, 숫자만 기입)</span></th>
-                                                            <td class="td_newipt">
-                                                                <span class="box_ipt new_ipt newipt_block">
-                                                                    <label for="amountOwner" class="sr_only">계좌번호 입력</label>
-                                                                    <input type="text" class="input_txt" id="amountOwner" name="amountOwner" placeholder="" title="계좌번호 입력" value="1000011121321213213">
-                                                                    <button type="button" class="newbtn_del ico16_delete" aria-label="계좌번호 입력 삭제">
-                                                                        <span class="blind">삭제</span>
-                                                                    </button>
-                                                                </span>
-                                                            </td>
+                                                            <th scope="row">계좌번호 </th>
+                                                            <td class="td_newipt">1000011121321213213</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -596,7 +438,7 @@
                                         <div class="box_group_wrap preapply_selfchk_wrap mt40">
                                             <h3 class="t2_sb">신청 전 자가진단</h3>
                                             <div class="box_table_wrap write type01">
-                                                <table class="box_table">
+                                                <table class="box_table table_unselect">
                                                     <caption>미래내일 일경험사업 지원금 수령여부 을(를) 제공하는 표</caption>
                                                     <colgroup>
                                                         <col style="width:560px">
@@ -604,9 +446,57 @@
                                                     </colgroup>
                                                     <tbody>
                                                         <tr>
+                                                            <th scope="row">국민취업지원제도 구직촉진수당 수령여부</th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group radio_focus_group type_unselect" role="radiogroup" aria-labelledby="jobseekLabel1">
+                                                                    <legend id="jobseekLabel1" class="sr_only">국민취업지원제도 구직촉진수당 수령여부 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="jobseek_yes" name="jobseek" value="yes" checked>
+                                                                        <label for="jobseek_yes">
+                                                                            <span class="label_text">예</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio_input_item">
+                                                                        <input class="focus_on money_amount" type="text" class="yes_input" id="yesInput1" name="yesInput1" disabled aria-disabled="true" inputmode="numeric" value="1,000,000">
+                                                                        <span>원</span>
+                                                                    </div>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="jobseek_no" name="jobseek" value="no">
+                                                                        <label for="jobseek_no">
+                                                                            <span class="label_text">아니오</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">국민취업지원제도 일경험프로그램 수당 수령여부</th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group radio_focus_group type_unselect" role="radiogroup" aria-labelledby="allowanceLabel1">
+                                                                    <legend id="allowanceLabel1" class="sr_only">국민취업지원제도 일경험프로그램 수당 수령여부 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="allowance_yes" name="allowance" value="yes" checked>
+                                                                        <label for="allowance_yes">
+                                                                            <span class="label_text">예</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio_input_item">
+                                                                        <input class="focus_on money_amount" type="text" class="yes_input" id="yesInput1" name="yesInput1" disabled aria-disabled="true" inputmode="numeric" value="1,000,000">
+                                                                        <span>원</span>
+                                                                    </div>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="allowance_no" name="allowance" value="no">
+                                                                        <label for="allowance_no">
+                                                                            <span class="label_text">아니오</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
                                                             <th scope="row">미래내일 일경험사업 지원금 수령여부</th>
                                                             <td>
-                                                                <fieldset class="box_radio_group radio_focus_group" role="radiogroup" aria-labelledby="subsidyLabel1">
+                                                                <fieldset class="box_radio_group radio_focus_group type_unselect" role="radiogroup" aria-labelledby="subsidyLabel1">
                                                                     <legend id="subsidyLabel1" class="sr_only">미래내일 일경험사업 지원금 수령여부 선택</legend>                                                            
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="subsidy1_yes" name="subsidy1" value="yes" checked>
@@ -630,7 +520,7 @@
                                                         <tr>
                                                             <th scope="row">내일배움카드 훈련장려금 <span class="txt_regular">(K-디지털 트레이닝 포함)</span> 수령여부</th>
                                                             <td>
-                                                                <fieldset class="box_radio_group radio_focus_group" role="radiogroup" aria-labelledby="subsidyLabel2">
+                                                                <fieldset class="box_radio_group radio_focus_group type_unselect" role="radiogroup" aria-labelledby="subsidyLabel2">
                                                                     <legend id="subsidyLabel2" class="sr_only">내일배움카드 훈련장려금 수령여부 선택</legend>                                                            
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="subsidy2_yes" name="subsidy2" value="yes" checked>
@@ -670,7 +560,7 @@
                                                         <tr>
                                                             <th scope="row">개인별 월(1일~말일) 20만원 초과여부</th>
                                                             <td>
-                                                                <fieldset class="box_radio_group flex_box" role="radiogroup" aria-labelledby="existLabel">
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="existLabel">
                                                                     <legend id="existLabel" class="sr_only">개인별 월(1일~말일) 20만원 초과여부 선택</legend>                                                            
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="existType1" name="existType" value="" checked>
@@ -691,7 +581,7 @@
                                                         <tr>
                                                             <th scope="row">수당 누적 총액 100만원 초과여부</th>
                                                             <td>
-                                                                <fieldset class="box_radio_group flex_box" role="radiogroup" aria-labelledby="accrueLabel">
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="accrueLabel">
                                                                     <legend id="accrueLabel" class="sr_only">수당 누적 총액 100만원 초과여부 선택</legend>                                                            
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="accrueType1" name="accrueType" value=""checked>
@@ -717,7 +607,7 @@
                                                                 </div>
                                                             </th>
                                                             <td>
-                                                                <fieldset class="box_radio_group flex_box" role="radiogroup" aria-labelledby="agreeChkLabel">
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="agreeChkLabel">
                                                                     <legend id="agreeChkLabel" class="sr_only">참여수당 관련 부정수급 방지 확약서 동의 여부 선택</legend>                                                            
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="agreeChkType1" name="agreeChkType" value=""checked>
@@ -740,12 +630,37 @@
                                             </div>
                                         </div>
 
+                                        <div class="box_group_wrap">
+                                            <div class="tit_box">
+                                                <h3 class="t2_sb">신청 및 처리현황</h3>
+                                            </div>
+                                            
+                                            <div class="apply_summary_wrap" role="region">
+                                                <div class="apply_summary_header">
+                                                    <div class="apply_summary_info">
+                                                        <p class="apply_summary_tit">현재 참여신청서 <span>제출</span> 상태입니다.</p>
+                                                        <p class="apply_summary_tel b1_r">담당자 : 김담당 (010-0000-0000)</p>
+                                                    </div>
+                                                    <div class="apply_summary_action mt16"><button type="button" class="apply_summary_toggle on" aria-expanded="true" aria-controls="applySummaryDetail">신청 및 처리현황 이력</button></div>
+                                                </div>
+
+                                                <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                                <div class="apply_summary_inner mt32" id="applySummaryDetail">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="apply_summary_status">
+                                                                <p class="status_label">제출</p>
+                                                                <p class="status_date">2025-00-00</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="flex_box mt40 js_s">
                                             <button type="button" class="btn big type02 btn_s_r" aria-label="목록" onclick="">목록</button>
-                                            <div class="flex_gap16">
-                                                <button type="button" id="saveBtn" class="btn big type01" onclick="">저장</button>
-                                                <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">제출</button>
-                                            </div>
+                                            <button type="button" id="returnBtn" class="btn big fill type01" onclick="">회수</button>
                                         </div>
                                     </div>
                                 </div>
@@ -782,6 +697,8 @@
                                             }
                                         });
                                     });
+
+                                    
                                 </script>
                                 
                             </div>

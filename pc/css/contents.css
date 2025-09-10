@@ -898,6 +898,8 @@
 .mypage .progmg.allcare .nth_round_wrap .row_space td {line-height: 0; height: 16px; padding: 0;}
 .mypage .progmg.allcare .table_unselect input[type='text'],
 .mypage .progmg.allcare .preapply_selfchk_wrap .table_unselect .radio_input_item input[type='text'].focus_on {background-color: #f5f5f5;}
+.mypage .progmg.allcare input.money_amount {text-align: right;}
+
 
 /* [팝업] 부정수급 방지 확인서 (UI_ADHPChP04) */
 .allcare_popup.new_popup .commitment_htit {font-size: 20px; color: #333; font-weight: 600; line-height: 30px;}
