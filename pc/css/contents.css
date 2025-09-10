@@ -786,7 +786,7 @@
 .mypage .progmg.allcare .iap_status_dashboard li p {font-size: 16px; color: #333; font-weight: 400; line-height: 30px;}
 .mypage .progmg.allcare .iap_status_dashboard li .tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
 .mypage .progmg.allcare .iap_status_dashboard li .txt_blue {font-weight: 600; font-size: 20px; line-height: 30px;}
-.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan {display: flex; flex-direction: column; gap: 4px; align-items: center;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan {display: flex; flex-direction: column; gap: 4px; align-items: flex-start;}
 .mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_tit {display: flex; align-items: center; gap: 16px;}
 .mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_tit p {position: relative; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
 .mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_tit p.txt_blue {color: var(--col_blue);}

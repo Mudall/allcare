@@ -129,7 +129,7 @@
                                                                 </label>
                                                             </th>
                                                             <td>
-                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="participationLabel">
+                                                                <fieldset class="box_radio_group flex_box" disabled role="radiogroup" aria-labelledby="participationLabel">
                                                                     <legend id="participationLabel" class="sr_only">취업지원유형 선택</legend>                                                            
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="participationType1" name="participationType" value="">
@@ -395,7 +395,7 @@
                                             </div>
 
                                             <div class="box_group_wrap box_hoperoad_wrap mt40">
-                                                <h3 class="t2_sb hreq_mark">변경신청 사유</h3>
+                                                <h3 class="t2_sb">변경신청 사유</h3>
                                                 <div class="box_table_wrap write type01">
                                                     <table class="box_table">
                                                         <caption>변경신청 사유 내용 을(를) 제공하는 표</caption>
@@ -435,6 +435,19 @@
                                                                     <p class="status_label">제출</p>
                                                                     <p class="status_date">2025-00-00</p>
                                                                 </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">승인</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="apply_summary_status">
+                                                                    <p class="status_label">변경신청</p>
+                                                                    <p class="status_date">2025-00-00</p>
+                                                                </div>
+                                                                <p class="apply_summary_reason">신청 사유 : 입력한 변경신청 사유</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -499,24 +512,7 @@
                                                 });
                                             });
 
-                                            // 신청 및 처리현황 on/off 토글
-                                            $(document).ready(function() {
-                                                var $toggleBtn = $('.apply_summary_action .apply_summary_toggle');
-                                                var $detailArea = $('#applySummaryDetail');
-
-                                                $toggleBtn.on('click', function() {
-                                                    var isExpanded = $toggleBtn.attr('aria-expanded') === 'true';
-                                                    $toggleBtn.attr('aria-expanded', String(!isExpanded));
-                                                    $toggleBtn.toggleClass('on', !isExpanded);
-                                                    $toggleBtn.toggleClass('off', isExpanded);
-
-                                                    if (!isExpanded) {
-                                                        $detailArea.removeAttr('hidden');
-                                                    } else {
-                                                        $detailArea.attr('hidden', '');
-                                                    }
-                                                });
-                                            });
+                                            
                                         </script>
 
 
