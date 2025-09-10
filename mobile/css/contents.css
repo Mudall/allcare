@@ -18,7 +18,11 @@
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list .new_radio_item + .new_radio_item {margin-top: 20px;}
 .allcare .radio_filed .new_radio_item input[type="radio"] {appearance: none; -webkit-appearance: none; -moz-appearance: none; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
 .allcare .radio_filed .new_radio_item input[type="radio"]:checked {border: 5px solid var(--col_blue);}
+.allcare .radio_filed .new_radio_item input[type="radio"]:disabled:checked {position: relative; border: 1px solid #757575;}
+.allcare .radio_filed .new_radio_item input[type="radio"]:disabled:checked::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
 .allcare .radio_filed .new_radio_item label {flex: 1;}
+.allcare .radio_filed .new_radio_item label .label_title { display: block; font-size: 16px; font-weight: 500; color: #333; line-height: 24px; }
 .allcare .radio_filed .new_radio_item label .label_text {font-size: 16px; font-weight: 400; color: #333; line-height: 24px; }
 .allcare .radio_filed.radiof_type2 {display: flex;}
 .allcare .dimmed_pop {z-index: 299; width: 100%; height: 100%; display: block; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.16);}
@@ -65,6 +69,16 @@
 .allcare .prog_list_sec .board_header .count span {font-size: 16px; line-height: 28px; color: #333; font-weight: 400;}
 .allcare .prog_list_sec .board_header > p strong {font-size: 16px; line-height: 28px; color: var(--col_blue); font-weight: 600}
 .allcare .disabled {display: none;}
+
+.allcare .t1_sb { display: flex; align-items: center; height: 44px;}
+.allcare .t1_sb span { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; color: #111;}
+
+.allcare .t2_sb { display: inline-flex; align-items: center; height: 44px;}
+
+.allcare .icon_add .icon { display: block; width: 24px; height: 24px; margin-right: 8px;}
+.allcare .icon_add .num01 { background: url('../images/mypage/ico24_receipt_item.svg') no-repeat;}
+.allcare .icon_add .num02 { background: url('../images/mypage/ico24_member_register.svg') no-repeat;}
+
 
 /* 운영대학 목록 (UI_ADHPAaM01) */
 .support .youth.allcare .gsprog_uni .step_cont_area ol {display: flex; flex-direction: column; gap: 24px;}
@@ -184,28 +198,28 @@
 .mypage .progmg.allcare .pa_page_wrap::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
 .mypage .progmg.allcare .pa_page_wrap .board_header .count span {color: #333;}
 .mypage .progmg.allcare .pa_page_wrap .board_header .select_area .flex_box button.select_btn {padding: 0 0 0 1.5rem; color: #333; border: none;}
-.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li {border-bottom: 1px solid #eee;}
-.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl {padding: 16px 0;}
-.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row {display: flex; gap: 12px;}
-.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row + .board_list_row {margin-top: 4px;}
-.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row dt {width: 100px; font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
-.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li dl .board_list_row dd {width: calc(100% - 100px); font-size: 14px; font-weight: 400; line-height: 24px; color: #333;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li { padding: 16px 0; border-bottom: 1px solid #eee;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li .board_list_row {display: flex; gap: 12px;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li .board_list_row + .board_list_row {margin-top: 4px;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li .board_list_row .dt {width: 100px; font-size: 14px; font-weight: 400; line-height: 24px; color: #555;}
+.mypage .progmg.allcare .pa_page_wrap .board_list ul .board_li .board_list_row .dd {width: calc(100% - 100px); font-size: 14px; font-weight: 400; line-height: 24px; color: #333;}
 
 
 /* 참여신청서 - 등록 (UI_ADHPAbS03) */
-.mypage .progmg.allcare .my_ptcp_from .box_group_wrap + .box_group_wrap {margin-top: 32px;}
+.mypage .progmg.allcare .my_ptcp_from .box_group_wrap + .box_group_wrap {margin-top: 24px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap {position: relative; padding-bottom: 32px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap dl>div + div {border-top: 1px solid #eee;} 
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl dt {margin-top: 16px; font-size: 14px; color: #555; font-weight: 600; line-height: 24px;} 
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl dd {margin: 8px 0 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;} 
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap dl>div:last-child dd {margin-bottom: 0;}
-.mypage .progmg.allcare .my_ptcp_from  dd .box_table_group {display: flex; width: 100%; gap: 8px;}
-.mypage .progmg.allcare .my_ptcp_from  dd .box_table_group .cell {width: calc(100% - 60px); line-height: initial;}
-.mypage .progmg.allcare .my_ptcp_from  dd .box_table_group .cell .new_ipt {position: relative;}
-.mypage .progmg.allcare .my_ptcp_from  dd .box_table_group .cell .new_ipt input {padding: 10px 48px 10px 16px; width: 100%; height: 48px; border: 1px solid #757575; border-radius: 4px; background-color: #f5f5f5;}
-.mypage .progmg.allcare .my_ptcp_from  dd .box_table_group .cell .new_ipt button {background: url('../include/images/ico16_close.svg') no-repeat center / contain; width: 16px; height: 16px; position: absolute; right: 16px; top: 50%; transform: translateY(-50%);}
-.mypage .progmg.allcare .my_ptcp_from  dd .box_table_group>button.btnSearch {width: 60px; height: 48px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap >div + div {border-top: 1px solid #eee;} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dt { margin-top: 16px; font-size: 14px; color: #555; font-weight: 600; line-height: 24px;} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dd { margin: 8px 0 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;} 
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap >div:first-child .dt { margin-top: 8px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap >div:last-child .dd {margin-bottom: 0;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_group {display: flex; width: 100%; gap: 8px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_group .cell {width: calc(100% - 60px); line-height: initial;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_group .cell .new_ipt {position: relative;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_group .cell .new_ipt input {padding: 10px 48px 10px 16px; width: 100%; height: 48px; border: 1px solid #757575; border-radius: 4px; background-color: #f5f5f5;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_group .cell .new_ipt button {background: url('../include/images/ico16_close.svg') no-repeat center / contain; width: 16px; height: 16px; position: absolute; right: 16px; top: 50%; transform: translateY(-50%);}
+.mypage .progmg.allcare .my_ptcp_from .box_table_group>button.btnSearch {width: 60px; height: 48px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dl_person dd {margin: 12px 0 16px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dl_id input {width: 100%; height: 48px; color: #555; font-size: 16px; line-height: 28px; font-weight: 400; padding: 10px 16px; border: 1px solid #757575; border-radius: 4px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap select.new_down {width: 100%; height: 48px; color: #555; font-size: 16px; line-height: 28px; font-weight: 400; padding: 10px 32px 10px 16px; border: 1px solid #757575; border-radius: 4px; appearance: none; -webkit-appearance: none; -moz-appearance: none; background: url('../include/images/arrow16_down.svg') no-repeat center / contain; background-position:  right 12px center; background-size: 16px;}
@@ -223,7 +237,7 @@
 
 
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */
-.mypage .progmg.allcare .prog_applysummary .apply_summary_inner .apply_summary_reason {padding-left: 24px; position: relative; font-size: 14px; font-weight: 400; line-height: 24px; color: #e0024b;}
+.mypage .progmg.allcare .prog_applysummary .apply_summary_inner .apply_summary_reason { margin-top: 8px; padding-left: 24px; position: relative; font-size: 14px; font-weight: 400; line-height: 24px; color: #e0024b;}
 .mypage .progmg.allcare .prog_applysummary .apply_summary_inner .apply_summary_reason::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 3px; background: url('../images/mypage/ico16_reply.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .radio_view_wrap .box_table_wrap dl label {font-weight: 600; font-size: 14px; line-height: 24px;}
 
@@ -355,6 +369,14 @@
 .mypage .progmg.allcare .newpop_pv .newpop_inner .confirm_desc p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .mypage .progmg.allcare .newpop_pv .newpop_inner .btn_wrap {width: 100%; padding: 24px 20px; position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); background-color: #fff;}
 
+/* [팝업] 참여신청서 - 이전정보팝업 (UI_ADHPCbP03) */
+.mypage .progmg.allcare .popup_full .newpop_inner_paf { padding: 16px 20px 200px;}
+.mypage .progmg.allcare .popup_full .newpop_inner_paf .inner_contents {width: 100%; background-color: #f5f6f8; padding: 40px 16px; border-radius: 8px;}
+.mypage .progmg.allcare .popup_full .newpop_inner_paf .inner_contents .icon {display: block; width: 56.65px; height: 60px; margin: 0 auto; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .popup_full .newpop_inner_paf .inner_contents_txt {text-align: center;}
+.mypage .progmg.allcare .popup_full .newpop_inner_paf .inner_contents_txt .desc {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .popup_full .newpop_inner_paf .inner_contents_txt .desc time { font-size: 16px; font-weight: 600; color: var(--col_blue);}
+.mypage .progmg.allcare .popup_full .newpop_inner_paf .inner_contents_txt .reconfirm {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 
 
 /* 프로그램 신청 - 목록 없음 (UI_ADHPAcM01) */
@@ -488,6 +510,8 @@
 .mypage .progmg.allcare .donepage .done_info li .tit p {font-size: 14px; line-height: 24px; color: #555; font-weight: 600;}
 .mypage .progmg.allcare .donepage .done_info li .desc {margin-bottom: 16px;}
 .mypage .progmg.allcare .donepage .done_info li .desc p {font-size: 16px; line-height: 24px; color: #333; font-weight: 400;}
+.mypage .progmg.allcare .donepage .done_info li:last-child .desc { margin-bottom: 0;}
+.mypage .progmg.allcare .donepage .done_info.partici_box { padding: 16px;}
 .mypage .progmg.allcare .done_btn {margin-bottom: 40px;}
 
 
@@ -501,3 +525,13 @@
 
 
 /* 완료 페이지 - 신청 완료 (UI_ADHPAbS15) */
+
+
+
+/* 참여신청서 - 등록 (UI_ADHPCbS04) */
+.mypage .progmg.allcare .formbox { margin-top: 24px; padding: 16px; border: 1px solid var(--col_btn); border-radius: 8px;}
+.mypage .progmg.allcare .formbox .data_txt { font-size: 16px; line-height: 28px;}
+.mypage .progmg.allcare .formbox .date { display: block;}
+.mypage .progmg.allcare .formbox .btn { margin: 12px 0;} 
+
+

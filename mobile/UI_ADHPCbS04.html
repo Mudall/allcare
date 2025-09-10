@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 등록</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <div class="my_ptcp_from">
+                            <div class="box_table_wrap">
+                                <div class="formbox">
+                                    <div class="form_box">
+                                        <span class="data_txt"><span class="bold_600">잡케어 보고서를 먼저 생성</span>해 주세요.</span>
+                                        <button type="button" class="btn semilarge line_blue">잡케어 서비스 바로가기</button>
+                                    </div>
+                                    <div class="form_box">
+                                        <span class="data_txt">재학생 맞춤형 고용서비스 참여를 위해서는 반드시 잡케어 시스템을 이용한 프로필 등록 및 직무역량 &amp; 연관직종 분석 후 참여가 가능합니다.</span>
+                                    </div>
+                                </div>
+
+                                <div class="formbox">
+                                    <div class="form_box">
+                                        <span class="data_txt"><span class="bold_600">잡케어 보고서</span></span>
+                                        <span class="date">2021-02-02</span>
+                                        <button type="button" class="btn semilarge line_blue">잡케어 서비스 바로가기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="t1_sb icon_add mt24"><i class="icon num02"></i><span>참여신청서 작성</span></h3>
+                            <div class="box_group_wrap mt16">
+                                <h3 class="t2_sb">참여자 정보</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div class="dl_name">
+                                        <div class="dt">성명</div>
+                                        <div class="dd">홍길동</div>
+                                    </div>
+                                    <div class="dl_tel">
+                                        <div class="dt">전화번호</div>
+                                        <div class="dd">010-0000-0000</div>
+                                    </div>
+                                    <div class="dl_mail">
+                                        <div class="dt">이메일</div>
+                                        <div class="dd">email@mail.com</div>
+                                    </div>
+                                    <div class="dl_addr">
+                                        <div class="dt">주소</div>
+                                        <div class="dd">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</div>
+                                    </div>
+                                    <div class="box_btn_wrap ml_auto mt24">
+                                        <a href="#" class="btn semilarge type03">회원정보 수정</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">참여대학, 참여자 분류</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div class="dl_uni">
+                                        <div class="dt">참여대학</div>
+                                        <div class="dd">
+                                            <div class="box_table_group">
+                                                <div class="cell">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" id="bassAdrTxt" class="input_txt" title="대학교 명" readonly="" placeholder="AAA 대학교">
+                                                    </span>
+                                                </div>
+                                                <button type="button" class="btn medium type01 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dl_person">
+                                        <div class="dt req_mark">참여자 분류</div>
+                                        <div class="dd">
+                                            <fieldset class="radio_filed">
+                                                <legend class="sr_only">참여자 분류 선택</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="customType1" name="customType" value="graduate" checked>
+                                                    <label for="customType1" class="custom_radio">
+                                                        <span class="sr_only">선택지 1:</span>
+                                                        <span class="label_text">&#9312; 2024년 재학생 맞춤형 고용서비스 사업 운영 대학(원)의 재학·휴학·수료 청년</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="customType2" name="customType" value="youth">
+                                                    <label for="customType2" class="custom_radio">
+                                                        <span class="sr_only">선택지 2:</span>
+                                                        <span class="label_text">&#9313; &#9312;에 해당하지 않는 만 18~34세의 최종학력 고등학교 졸업 이하인 미취업(고용보험 기준) 청년</span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_group_wrap radio_view_wrap">
+                                <h3 class="t2_sb">학적 정보</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div class="dl_id">
+                                        <div class="dt req_mark"><label for="studentId">학번<span class="blind"> 필수입력</span></label></div>
+                                        <div class="dd"><input type="text" id="studentId" name="studentId" placeholder="학번을 입력해 주세요." title="학번 입력" required></div>
+                                    </div>
+                                    <div class="dl_grade">
+                                        <div class="dt req_mark"><label for="grade">학년<span class="blind"> 필수선택</span></label></div>
+                                        <div class="dd">
+                                            <select class="new_down" id="grade" name="grade" title="학년 선택" required>
+                                                <option value="" selected disabled>학년을 선택해 주세요.</option>
+                                                <option value="1">1학년</option>
+                                                <option value="2">2학년</option>
+                                                <option value="3">3학년</option>
+                                                <option value="4">4학년</option>
+                                                <option value="5">5학년</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="dl_major">
+                                        <div class="dt req_mark"><label for="major">전공/학과<span class="blind"> 필수입력</span></label></div>
+                                        <div class="dd dd_twincell">
+                                            <div class="box_table_group">
+                                                <div class="cell">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" id="major" class="input_txt" title="전공명" readonly placeholder="전공" required>
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="box_table_group">
+                                                <div class="cell">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" id="department" class="input_txt" title="학과명" readonly placeholder="학과" required>
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                </div>
+                                                <button type="button" class="btn medium type01 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dl_status">
+                                        <div class="dt req_mark"><label for="status">상태<span class="blind"> 필수입력</span></label></div>
+                                        <div class="dd">
+                                            <select class="new_down" id="status" name="status" title="학적 상태 선택" required>
+                                                <option value="" selected disabled>학적 상태를 선택해 주세요.</option>
+                                                <option value="graduated">졸업</option>
+                                                <option value="expected">졸업예정</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="mt16">※ 졸업 수료생은 대학 자체 기준에 따라 졸업생으로 분류될 경우 <strong class="em_red">참여 불가</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_group_wrap radio_view_wrap">
+                                <h3 class="t2_sb req_mark">참여 유형 선택</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div class="dl_person">
+                                        <div class="dd">
+                                            <fieldset class="radio_filed">
+                                                <legend class="sr_only">참여자 유형 선택</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="빌드업프로젝트1" name="빌드업프로젝트" checked>
+                                                    <label for="빌드업프로젝트1" class="custom_radio">
+                                                        <span class="sr_only">선택지 1:</span>
+                                                        <span class="label_title">빌드업 프로젝트</span>
+                                                        <span class="label_text">※ 저학년 청년을 중심으로 심층상담 기반 개인별 중·장기 희망 직업 포트폴리오 설계 및 진로탐색, 기초역량 강화 지원</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="빌드업프로젝트2" name="빌드업프로젝트">
+                                                    <label for="빌드업프로젝트2" class="custom_radio">
+                                                        <span class="sr_only">선택지 2:</span>
+                                                        <span class="label_title">점프업 프로젝트</span>
+                                                        <span class="label_text">※ 고학년 청년을 중심으로 심층상담 기반 개인별 취업활동계획 설계 및 맞춤형 직업훈련·일경험 참여 지원</span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_group_wrap box_agm_wrap">
+                                <h3 class="t2_sb req_mark">개인정보 이용에 대한 동의서</h3>
+                                <div class="agm_area">
+                                    <div class="agm_box">
+                                        <div class="agm_desc">
+                                            <p class="b1_sb">“대학 재학생 맞춤형 고용서비스“ 참여 신청과 관련하여 개인정보를 수집·이용·제공하기 위한 동의절차</p>
+                                            <strong>&#x203B; 전문보기 후 개인정보 수집·이용·제공 동의를 선택 할 수 있습니다. <button type="button" class="btn_view_doc btn small type02" aria-label="개인정보 수집·이용·제공 동의서 전문보기" onclick="location.href=''"><span class="s1_r">전문보기</span></button></strong>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="agm_cho">
+                                        <fieldset class="radio_filed radiof_type2">
+                                            <legend class="sr_only">개인정보 이용에 대한 동의여부</legend>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="customyes" name="custom_pv" value="yes" checked>
+                                                <label for="customyes" class="custom_radio">
+                                                    <span class="label_text">동의</span>
+                                                </label>
+                                            </div>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="customno" name="custom_pv" value="no">
+                                                <label for="customno" class="custom_radio">
+                                                    <span class="label_text">동의안함</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                <div class="submit_date_box mt16">
+                                    <p class="b1_r">제출일자<time class="t2_sb" datetime="2025-07-31">2025.07.31</time></p>
+                                </div>
+                                <div class="btn_box mt24">
+                                    <button type="button" class="btn large type03" aria-label="신청 목록 페이지로 이동" onclick="window.location.href=''">목록</button>
+                                    <button type="submit" id="srchBtn" class="btn large fill type01" onclick="">제출</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // 참여자분류 형태에 따라 학적정보 영역 보이기/숨기기
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const radio1 = document.getElementById("customType1");
+                        const radio2 = document.getElementById("customType2");
+                        const viewWrap = document.querySelector(".radio_view_wrap");
+
+                        function toggleView() {
+                            if (radio1.checked) {
+                                viewWrap.hidden = false;
+                            } else {
+                                viewWrap.hidden = true;
+                            }
+                        }
+
+                        toggleView();
+
+                        radio1.addEventListener("change", toggleView);
+                        radio2.addEventListener("change", toggleView);
+                    });
+                </script>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>

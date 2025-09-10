@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>참여신청서 - 목록 없음</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <!-- notice start -->
+                        <div class="top_notice">
+                            <i></i>
+                            <p><strong>목록 내 상세조회버튼을 선택하시면 참여신청서를 조회하실 수 있습니다.</strong></p>
+                            <button type="button" class="notice_expand ui-layer" data-my-layer="noticeLayer"><span class="blind">공지사항 열기</span></button>
+                        </div>
+                        <div class="bottom_layer type_title" tabindex="0" id="noticeLayer" style="z-index: 140; display: none;">
+                            <strong class="title">안내</strong>
+                            <div class="layer_contents" style="height: 216px;">
+                                <div class="notice_default">
+                                    <ul class="list_style">
+                                        <li><strong>목록 내 상세조회버튼을 선택하시면 참여신청서를 조회하실 수 있습니다.</strong></li>
+                                        <li><strong>진행상태가 인정, 종료인 참여신청서의 상세조회버튼을 선택하시면 참여유형별로 아래 내용을 추가로 확인하실 수 있습니다.</strong>
+                                            <div>
+                                                <strong>- 빌드업 프로젝트 : 상담 이력조회, 경력개발 로드맵 작성 및 조회</strong><br>
+                                                <strong>- 점프업 프로젝트 : 상담 이력 조회, 취업준비도검사ㆍIAPㆍ포인트신청서 작성 및 조회</strong><br>
+                                                <strong>※ 단, 진행상태가 중단, 종료인 경우 조회만 가능합니다.</strong>
+                                            </div>
+                                        </li>
+                                        <li><strong>포트폴리오의 명칭이 경력개발 로드맵으로 변경되었습니다.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="layer_close">
+                                <span class="blind">레이어 닫기</span>
+                            </button>
+                        </div>
+                        <!-- notice end -->
+
+                        <div class="pa_page_empty mt40">
+                            <figure class="mb16"><img src="./include/images/ico60_warning_navy.svg"></figure>
+                            <p class="t3_sb">작성하신 대학 재학생 맞춤형 고용서비스<br> 참여신청서가 없습니다.</p>
+                            <div class="box_btn_wrap mt24">
+                                <a href="" class="btn large type01 fill">신청서 작성</a>
+                            </div>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>
