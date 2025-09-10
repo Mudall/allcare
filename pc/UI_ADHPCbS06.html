@@ -53,7 +53,7 @@
                                     <div class="progmg allcare">
                                         <div class="my_ptcp_from">
 
-                                            <div class="box_group_wrap mt16">
+                                            <div class="box_group_wrap mt40">
                                                 <h3 class="t2_sb">참여자 정보</h3>
                                                 <div class="box_table_wrap write type01">
                                                     <table class="box_table">
@@ -234,7 +234,7 @@
                                                 <div class="apply_summary_wrap" role="region">
                                                     <div class="apply_summary_header">
                                                         <div class="apply_summary_info">
-                                                            <p class="apply_summary_tit">현재 참여신청서 <span>불인정</span> 상태입니다.</p>
+                                                            <p class="apply_summary_tit">현재 참여신청서 <span>제출</span> 상태입니다.</p>
                                                             <p class="apply_summary_tel b1_r">담당자 : 김담당 (010-0000-0000)</p>
                                                         </div>
                                                         <div class="apply_summary_action mt16"><button type="button" class="apply_summary_toggle on" aria-expanded="true" aria-controls="applySummaryDetail">신청 및 처리현황 이력</button></div>
@@ -257,6 +257,7 @@
                                             <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
                                                 <div class="btn_box mt40">
                                                     <button type="button" class="btn big type02 btn_s_r" aria-label="신청 목록 페이지로 이동" onclick="window.location.href=''">목록</button>
+                                                    <button type="button" id="retrunBtn" class="btn big fill type01" onclick="">회수</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -293,25 +294,7 @@
                                         });
                                     });
 
-                                    // 신청 및 처리현황 토글 on/off
-                                    $(document).ready(function() {
-                                        var $toggleBtn = $('.apply_summary_action .apply_summary_toggle');
-                                        var $detailArea = $('#applySummaryDetail');
-
-                                        $toggleBtn.on('click', function() {
-                                            var isExpanded = $toggleBtn.attr('aria-expanded') === 'true';
-                                            
-                                            $toggleBtn.attr('aria-expanded', String(!isExpanded));
-                                            $toggleBtn.toggleClass('on', !isExpanded);
-                                            $toggleBtn.toggleClass('off', isExpanded);
-                                            
-                                            if (!isExpanded) {
-                                                $detailArea.removeAttr('hidden');
-                                            } else {
-                                                $detailArea.attr('hidden', '');
-                                            }
-                                        });
-                                    });
+                                    
                                 </script>
                             </div>
                             <!-- 콘텐츠영역 끝 -->

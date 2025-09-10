@@ -217,7 +217,7 @@
 .mypage .progmg.allcare .new_selectbox::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_gradate .input_txt {max-width: 128px; padding: 6px 40px 6px 12px;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_gradate .btn_calendar {margin: 0; right: 10px; transform: translateY(-25%);} 
-.mypage .progmg.allcare .agm_area {display: flex; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.mypage .progmg.allcare .agm_area {display: flex; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 8px;}
 .mypage .progmg.allcare .agm_box {padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: calc(100% - 195px); background-color: #f8f8f8;}
 .mypage .progmg.allcare .agm_box .agm_desc p {color: #333; font-size: 16px; font-weight: 600; line-height: 24px;}
 .mypage .progmg.allcare .agm_box .agm_desc strong {color: #ee2e62; font-size: 14px; font-weight: 600; line-height: 24px;}
@@ -233,7 +233,7 @@
 
 
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */
-.mypage .progmg.allcare .apply_summary_wrap {background-color: #f8f8f8; padding: 32px 40px;}
+.mypage .progmg.allcare .apply_summary_wrap {margin-top: 8px; background-color: #f8f8f8; padding: 32px 40px;}
 .mypage .progmg.allcare .apply_summary_header {display: flex; flex-direction: column; justify-content: center; text-align: center;}
 .mypage .progmg.allcare .apply_summary_info .apply_summary_tit {position: relative; padding-left: 28px; display: inline-block; font-size: 18px; font-weight: 600; color: #333; line-height: 28px;}
 .mypage .progmg.allcare .apply_summary_info .apply_summary_tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: url('../include/images/ico60_warning_navy.svg') no-repeat center / contain; width: 24px; height: 24px;} 
@@ -539,6 +539,9 @@
 .mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.t {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.s {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
 
+.mypage .progmg.allcare .newinput_w200 {width: 200px;}
+.mypage .progmg.allcare .box_notice_wrap.box_custom_wrap {padding: 8px 24px;}
+
 
 /* 참여 신청서 - 등록(이전 등록/제출 신청정보가 있는 경우) */
 .mypage .progmg.allcare .ela_box {margin-top: 8px;}
@@ -599,6 +602,7 @@
 .mypage .progmg.allcare .notice_hopejob li+li {margin-top: 4px;}
 .mypage .progmg.allcare .notice_hopejob li::before {content: ''; position: absolute; left: 4px; top: 50%; transform: translateY(-50%); background-color: #555; border-radius: 50%; width: 4px; height: 4px;}
 
+.mypage .progmg.allcare .box_table_wrap {margin-top: 8px;}
 .mypage .progmg.allcare .txt_blue {color: var(--col_blue);}
 .mypage .progmg.allcare .box_jobplan_wrap table thead tr th {text-align: center;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap:not(.r_type01,.r_type02) .box_table th.th_tit {font-size: 18px;}

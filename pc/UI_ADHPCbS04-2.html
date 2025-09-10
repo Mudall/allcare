@@ -169,7 +169,7 @@
 
                                             <div class="box_group_wrap grade_wrap">
                                                 <h3 class="t2_sb">학적정보</h3>
-                                                <div class="box_notice_wrap mt8">
+                                                <div class="box_notice_wrap box_custom_wrap mt8">
                                                     <p class="tit">안내</p>
                                                     <ul class="box_list_area">
                                                         <li class="txt_list">졸업 수료생은 대학 자체 기준에 따라 졸업생으로 분류될 경우 <span class="fw600 clr_red">참여 불가</span></li>
@@ -195,7 +195,7 @@
                                                                 <td>
                                                                     <span class="box_ipt new_ipt">
                                                                         <label for="stdId" class="sr_only">학번</label>
-                                                                        <input type="text" class="input_txt" id="stdId" name="stdId" placeholder="학번을 입력하세요." title="학번 입력" pattern="[0-9a-zA-Z가-힣]+" value="202500010001">
+                                                                        <input type="text" class="input_txt newinput_w200" id="stdId" name="stdId" placeholder="학번을 입력하세요." title="학번 입력" pattern="[0-9a-zA-Z가-힣]+" value="202500010001">
                                                                         <button type="button" class="newbtn_del ico16_delete" aria-label="학번 입력내용 삭제">
                                                                             <span class="blind">삭제</span>
                                                                         </button>
@@ -229,11 +229,12 @@
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
-                                                                <td>
+                                                                <td colspan="3">
                                                                     <div class="box_table_group">
                                                                         <div class="cell">
-                                                                            <span class="box_ipt new_ipt">
-                                                                                <input type="text" id="bassAdrTxt" class="input_txt" title="전공/학과명" readonly="" placeholder="전공명 / 학과명">
+                                                                            <span class="box_ipt new_ipt gap_box08">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt newinput_w200" title="전공명" readonly="" placeholder="전공명">
+                                                                                <input type="text" id="bassAdrTxt" class="input_txt newinput_w200" title="학과명" readonly="" placeholder="학과명">
                                                                                 <button type="button" class="newbtn_del ico16_delete">
                                                                                     <span class="blind">삭제</span>
                                                                                 </button>
@@ -242,13 +243,15 @@
                                                                         <button type="button" class="btn medium type02 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog"><span>검색</span></button>
                                                                     </div>
                                                                 </td>
+                                                            </tr>
+                                                            <tr>
                                                                 <th scope="row">
                                                                     <label for="status">
                                                                         <span class="req_mark">상태</span>
                                                                         <span class="sr_only">필수 입력</span>
                                                                     </label>
                                                                 </th>
-                                                                <td>
+                                                                <td colspan="3">
                                                                     <div class="new_selectbox">
                                                                         <label for="status" class="sr_only">상태 선택</label>
                                                                         <select id="status" name="status" title="상태 선택">

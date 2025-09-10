@@ -89,16 +89,6 @@
                                                 <div class="box_table_wrap">
                                                     <div class="box_table_hd">
                                                         <p class="tit">전체 <span class="txt_total">1111</span>건</p>
-                                                        <div class="section_right">
-                                                            <span class="sel round new_sel_span">
-                                                                <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
-                                                                    <option value="10" selected="selected">10개씩 보기</option>
-                                                                    <option value="30">30개씩 보기</option>
-                                                                    <option value="50">50개씩 보기</option>
-                                                                </select>
-                                                            </span>
-                                                            <button type="button" class="btn btn_round type02" onclick="">적용</button>
-                                                        </div>
                                                     </div>
                                                     <!-- table -->
                                                     
@@ -106,7 +96,8 @@
                                                         <caption>번호, 참여년도, 참여대학명, 신청일자, 진행상태, 담당자 을(를) 제공하는 표</caption>
                                                         <colgroup>
                                                             <col style="width: 70px">
-                                                            <col style="width: 130px">
+                                                            <col style="width: 100px">
+                                                            <col style="width: 200px">
                                                             <col style="width: auto">
                                                             <col style="width: 160px">
                                                             <col style="width: 100px">
@@ -118,6 +109,7 @@
                                                                 <th scope="col">번호</th>
                                                                 <th scope="col">참여년도</th>
                                                                 <th scope="col">참여대학명</th>
+                                                                <th scope="col">참여유형</th>
                                                                 <th scope="col">신청일자</th>
                                                                 <th scope="col">진행상태</th>
                                                                 <th scope="col">담당자</th>
@@ -129,91 +121,101 @@
                                                                 <td>1</td>
                                                                 <td>2025</td>
                                                                 <td>AAA 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>신청</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="AAA 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="AAA 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>2</td>
                                                                 <td>2025</td>
                                                                 <td>BBB 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>접수</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="BBB 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="BBB 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>3</td>
                                                                 <td>2025</td>
                                                                 <td>CCC 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>인정</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="CCC 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="CCC 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>4</td>
                                                                 <td>2025</td>
                                                                 <td>DDD 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>불인정</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="DDD 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="DDD 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>5</td>
                                                                 <td>2025</td>
                                                                 <td>EEE 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>신청</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="EEE 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="EEE 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>6</td>
                                                                 <td>2025</td>
                                                                 <td>FFF 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>신청</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="FFF 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="FFF 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>7</td>
                                                                 <td>2025</td>
                                                                 <td>GGG 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>신청</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="GGG 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="GGG 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>8</td>
                                                                 <td>2025</td>
                                                                 <td>HHH 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>신청</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="HHH 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="HHH 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>9</td>
                                                                 <td>2025</td>
                                                                 <td>III 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>신청</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="III 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="III 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>10</td>
                                                                 <td>2025</td>
                                                                 <td>JJJ 대학교</td>
+                                                                <td>점프업프로젝트</td>
                                                                 <td>2025-07-30</td>
                                                                 <td>신청</td>
                                                                 <td>홍길동</td>
-                                                                <td><button type="button" class="btnType_b1" aria-label="JJJ 대학교 조회내용 상세보기">상세보기</button></td>
+                                                                <td><button type="button" class="btnType_b1" aria-label="JJJ 대학교 조회내용 상세조회">상세조회</button></td>
                                                             </tr>
 
                                                             <!-- 등록된 내용이 없을시에 사용 -->
@@ -224,7 +226,7 @@
                                                 </div> 
                                             
                                                 <div class="box_btn_wrap ml_auto mt40 flex_js_r">
-                                                    <a href="#" class="btn big type01 fill">신청서 작성</a>
+                                                    <button type="button" class="btn big type01 fill"><span>참여신청서 작성</span></button>
                                                 </div>
                                             </div>
                                         </div>
