@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - IAP결과관리_수정(저장후제출전) </title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP관리</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <div class="box_notice_wrap mt16">
+                                            <p class="tit">안내</p>
+                                            <ul class="box_list_area">
+                                                <li class="txt_list"><span class="fw600">제출완료</span> : IAP결과 제출건이 승인되지 않은 상태로 <span class="fw600">‘회수’</span> 후 수정이 가능합니다.</li>
+                                                <li class="txt_list"><span class="fw600">승인완료</span> : 승인된 IAP결과는 수정이 불가합니다.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box_group_wrap mt16">
+                                            <h3 class="t2_sb">참여자 정보</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>성명, 학적상태, 전공/학과, 학년/학기 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">성명</th>
+                                                            <td>홍길동</td>
+                                                            
+                                                            <th scope="row">학적상태</th>
+                                                            <td>재학</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">전공/학과</th>
+                                                            <td>경영학과 / 국제경영전공</td>
+                                                            
+                                                            <th scope="row">학년/학기</th>
+                                                            <td>1학년 / 2학기</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap mt40">
+                                            <h3 class="t2_sb">취업활동계획</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>취업지원유형, 중점영역, 참여일정, 참여방법, 참여기관(교내), 참여기관(외부), 목표달성시기, 포인트신청여부, 활동내역 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">취업지원 유형</th>
+                                                            <td>서비스 참여형</td>
+                                                            
+                                                            <th scope="row">중점영역</th>
+                                                            <td>직업훈련</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">참여일정</th>
+                                                            <td>2025년 07월 ~ 2025년 10월 / 5시간</td>
+                                                            
+                                                            <th scope="row">참여방법</th>
+                                                            <td>온라인</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">참여기관(교내)</th>
+                                                            <td>교내</td>
+                                                            
+                                                            <th scope="row">참여기관(외부)</th>
+                                                            <td>외부</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">목표달성시기</th>
+                                                            <td>2학기</td>
+                                                            
+                                                            <th scope="row">포인트 신청 여부</th>
+                                                            <td>신청</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">활동내용</th>
+                                                            <td colspan="3">입력한 내용 TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap mt40">
+                                            <h3 class="t2_sb">결과 등록</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>참여일자, 참여시간 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <label for="join_day">
+                                                                    <span class="req_mark">참여일자</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td>
+                                                                <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
+                                                                    <div class="cell">
+                                                                        <span class="box_ipt w_small">
+                                                                            <label for="schRcptStdte" class="sr_only">시작일</label>
+                                                                            <input type="text" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" title="시작일 입력" placeholder="YYYY-MM-DD" value="2025-01-01">
+                                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
+                                                                        </span>
+                                                                    </div>
+                                                                    <i class="date_line" aria-hidden="true">~</i>
+                                                                    <div class="cell">
+                                                                        <span class="box_ipt w_small">
+                                                                            <label for="schRcptEndte" class="sr_only">종료일</label>
+                                                                            <input type="text" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" title="종료일 입력" placeholder="YYYY-MM-DD" value="2025-01-01">
+                                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <label for="join_day">
+                                                                    <span class="req_mark">참여시간</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </label>
+                                                            </th>
+                                                            <td class="td_jointime">
+                                                                <span class="box_ipt new_ipt newipt_w120">
+                                                                    <label for="jointime" class="sr_only">참여시간</label>
+                                                                    <input type="text" class="input_txt" id="jointime" name="jointime" placeholder="" title="참여시간 입력" value="100">
+                                                                    <button type="button" class="newbtn_del ico16_delete" aria-label="참여시간 입력 삭제">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </span>
+                                                                <span class="jointime_txt">시간</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="iap_attfile_wrap mt16">
+                                            <div class="iap_attfile_tit">
+                                                <div class="att_tit"><p class="t2_sb">첨부파일</p></div>
+                                                <ul class="att_desc mt24">
+                                                    <li><p>파일용량은 3MB 이하이며, 3개 파일 업로드 가능합니다.</p></li>
+                                                    <li><p>등록 가능 파일 : jpg, jpeg, png, pdf, hwp, dosc, xlsx, docx, doc, txt</p></li>
+                                                </ul>
+                                            </div>
+                                            <div class="iap_attfile_cont">
+                                                <div class="register_txt_box">
+                                                    <p class="tit b1_sb">1. IAP결과증빙자료</p>
+                                                    <p class="desc b1_r">재학생맞춤형고용서비스-IAP결과증빙자료</p>
+                                                </div>
+                                                <div class="register_att_box">
+                                                    <div class="att_add_box">
+                                                        <button type="button" class="att_file_btn" onclick="addFiles()"><span class="b1_sb">첨부파일 등록</span></button>
+                                                        <input type="file" id="files" multiple style="display: none;" onchange="handleFiles(this.files)">
+                                                    </div>
+                                                    <p class="b1_r">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, <br>원하는 파일을 마우스로 끌어오세요.</p>
+                                                </div>
+                                            </div>
+
+                                            <ul class="ul_iap_addlist mt24" id="fileList">
+                                                <li class="att_li">
+                                                    <p>파일명.pdf</p>
+                                                    <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                                    <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                                </li>
+                                                <li class="att_li">
+                                                    <p>파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명.pdf</p>
+                                                    <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                                    <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box_group_wrap">
+                                            <div class="tit_box">
+                                                <h3 class="t2_sb">신청 및 처리현황</h3>
+                                            </div>
+                                            
+                                            <div class="apply_summary_wrap" role="region">
+                                                <div class="apply_summary_header">
+                                                    <div class="apply_summary_info">
+                                                        <p class="apply_summary_tit">현재 참여신청서 <span>보완제출</span> 상태입니다.</p>
+                                                        <p class="apply_summary_tel b1_r">담당자 : 김담당 (010-0000-0000)</p>
+                                                    </div>
+                                                    <div class="apply_summary_action mt16"><button type="button" class="apply_summary_toggle on" aria-expanded="true" aria-controls="applySummaryDetail">신청 및 처리현황 이력</button></div>
+                                                </div>
+
+                                                <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                                <div class="apply_summary_inner mt32" id="applySummaryDetail">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="apply_summary_status">
+                                                                <p class="status_label">제출</p>
+                                                                <p class="status_date">2025-00-00</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="apply_summary_status">
+                                                                <p class="status_label">보완제출</p>
+                                                                <p class="status_date">2025-00-00</p>
+                                                            </div>
+                                                            <p class="apply_summary_reason">보완 내용 : 대플 담당자가 등록한 보완 내용</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex_box mt40 js_s">
+                                            <button type="button" class="btn big type02 btn_s_r" aria-label="목록" onclick="">목록</button>
+                                            <div class="flex_gap16">
+                                                <button type="button" id="saveBtn" class="btn big type01" onclick="">저장</button>
+                                                <button type="submit" id="submithBtn" class="btn big fill type01" onclick="">제출</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+                            <script>
+                                function addFiles() {
+                                    document.getElementById('files').click();
+                                }
+
+                                function handleFiles(files) {
+                                    const fileList = document.getElementById('fileList');
+
+                                    for (let i = 0; i < files.length; i++) {
+                                        const fileName = files[i].name;
+
+                                        const li = document.createElement('li');
+                                        li.className = 'att_li';
+
+                                        const p = document.createElement('p');
+                                        p.textContent = fileName;
+
+                                        const button = document.createElement('button');
+                                        button.type = 'button';
+                                        button.className = 'att_del_btn';
+                                        button.innerHTML = '<span class="sr_only">첨부파일 삭제</span>';
+
+                                        button.addEventListener('click', function () {
+                                            li.remove();
+                                        });
+
+                                        li.appendChild(p);
+                                        li.appendChild(button);
+                                        fileList.appendChild(li);
+                                    }
+
+                                    // 선택한 파일 초기화 (같은 파일을 연속으로 선택해도 onchange가 작동하게 함)
+                                    document.getElementById('files').value = '';
+                                }
+                            </script>
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

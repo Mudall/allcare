@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>포인트관리_조회(승인, 미지급, 환급)</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <div class="point_banner_wrap mt40">
+                                            <i class="ico_jump_point"></i>
+                                            <div class="txt_box">
+                                                <p class="s1_r">점프업 프로젝트 포인트 관리</p>
+                                                <p class="desc t3_r">지금까지 <span class="count">00</span><span class="txt_bold">건</span>에 대해서 <span class="txt_bold">총 <span class="amount">100,000</span>원</span>을 지급 받으셨습니다.</p>
+                                            </div>    
+                                        </div>
+
+                                        <div class="box_group_wrap nth_round_wrap mt40">
+                                            <h3 class="t2_sb">점프업 포인트 지급내역 (비용신청 <span class="nth_round">N</span>회차)</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>지급상태, 지급일자, 총 활동 요청시간, 총 활동 인정시간, 신청금액, 인정금액, 의견내용 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">지급상태</th>
+                                                            <td>지급</td>
+                                                            
+                                                            <th scope="row">지급일자</th>
+                                                            <td>2025-01-01</td>
+                                                        </tr>
+                                                        <tr class="row_space" aria-hidden="true"><td colspan="4">&nbsp;</td></tr>
+                                                        <tr>
+                                                            <th scope="row">총 활동 요청시간</th>
+                                                            <td><span class="txt_blue">10</span> 시간</td>
+                                                            
+                                                            <th scope="row">총 활동 인정시간</th>
+                                                            <td><span class="txt_blue">10</span> 시간</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">신청금액</th>
+                                                            <td><span class="txt_blue">100,000</span> 원</td>
+                                                            
+                                                            <th scope="row">인정금액</th>
+                                                            <td><span class="txt_blue">100,000</span> 원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">의견 내용</th>
+                                                            <td colspan="3">대플 담당자가 입력한 지급 사유 조회</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap nth_round_wrap mt40">
+                                            <h3 class="t2_sb">점프업 포인트 지급내역 (비용신청 <span class="nth_round">N</span>회차)</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>지급상태, 미지급 사유 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">지급상태</th>
+                                                            <td colspan="3">미지급</td>
+                                                        </tr>
+                                                        <tr class="row_space" aria-hidden="true"><td colspan="4">&nbsp;</td></tr>
+                                                        <tr>
+                                                            <th scope="row">미지급 사유</th>
+                                                            <td colspan="3">대플 담당자가 입력한 지급 사유 조회</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap nth_round_wrap mt40">
+                                            <h3 class="t2_sb">점프업 포인트 지급내역 (비용신청 <span class="nth_round">N</span>회차)</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>지급상태, 지급일자, 환수금액, 환수일자, 환수 사유, 총활동 요청시간, 총 활동 인정시간, 신청금액, 인정금액, 의견 내용 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">지급상태</th>
+                                                            <td>환수</td>
+
+                                                            <th scope="row">지급일자</th>
+                                                            <td>2025-01-01</td>
+                                                        </tr>
+                                                        <tr class="row_space" aria-hidden="true"><td colspan="4">&nbsp;</td></tr>
+                                                        <tr>
+                                                            <th scope="row">환수금액</th>
+                                                            <td><span class="txt_blue">100,000</span> 원</td>
+
+                                                            <th scope="row">환수일자</th>
+                                                            <td>2025-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">환수사유</th>
+                                                            <td colspan="3">대플 담당자가 입력한 지급 사유 조회</td>
+                                                        </tr>
+                                                        <tr class="row_space" aria-hidden="true"><td colspan="4">&nbsp;</td></tr>
+                                                        <tr>
+                                                            <th scope="row">총활동 요청시간</th>
+                                                            <td><span class="txt_blue">10</span> 시간</td>
+
+                                                            <th scope="row">총활동 인정시간</th>
+                                                            <td><span class="txt_blue">10</span> 시간</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">신청금액</th>
+                                                            <td><span class="txt_blue">100,000</span> 원</td>
+
+                                                            <th scope="row">인정금액</th>
+                                                            <td><span class="txt_blue">100,000</span> 원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">의견내용</th>
+                                                            <td colspan="3">대플 담당자가 입력한 지급 사유 조회</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>                                       
+
+                                        <div class="box_group_wrap mt40">
+                                            <h3 class="t2_sb">참여자 정보</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>성명, 학적상태, 전공/학과, 학년/학기 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">성명</th>
+                                                            <td>홍길동</td>
+                                                            
+                                                            <th scope="row">학적상태</th>
+                                                            <td>재학</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">전공/학과</th>
+                                                            <td>경영학과 / 국제경영전공</td>
+                                                            
+                                                            <th scope="row">학번</th>
+                                                            <td>202500010001</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap mt40">
+                                            <h3 class="t2_sb">신청내용</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>취업지원유형, IAP 승인일자 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                        <col style="width:20%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">취업지원유형</th>
+                                                            <td colspan="3"> 
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="participationLabel">
+                                                                    <legend id="participationLabel" class="sr_only">취업지원유형 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="participationType1" name="participationType" value="">
+                                                                        <label for="participationType1">
+                                                                            <span class="label_text">자기주도형</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="participationType2" name="participationType" value="" checked>
+                                                                        <label for="participationType2">
+                                                                            <span class="label_text">서비스참여형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">IAP 승인일자</th>
+                                                            <td>2025-01-01</td>
+
+                                                            <th scope="row">제출일자</th>
+                                                            <td>2025-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">활동이행기간<br>(수당지급주기)</th>
+                                                            <td colspan="3">2025-10-10 ~ 2024-10-15</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap mt40">
+                                            <h3 class="t2_sb">구직활동(이행내용)</h3>
+                                            <div class="plantog_area mb16">
+                                                <ul>
+                                                    <li class="plantog_wrap">
+                                                        <div class="plantog_chk">
+                                                            <div class="chk_box">
+                                                                <span class="b1_r">1</span>
+                                                            </div>
+                                                            <p class="plantog_chk_tit">직업훈련 서비스참여형</p>
+                                                        </div>
+                                                        <div class="plantog_table">
+                                                            <div class="employ_table_box box_table_wrap write type01">
+                                                                <div class="table_hd">
+                                                                    <p class="table_hd_tit">취업활동계획</p>
+                                                                    <div class="table_hd_toggle">
+                                                                        <button type="button" class="close_btn" aria-expanded="false"><span class="blind">페이지 접기</span></button>
+                                                                        <button type="button" class="open_btn active" aria-expanded="true"><span class="blind">페이지 펼치기</span></button>
+                                                                    </div>
+                                                                </div>
+                                                                <table class="box_table employ_table">
+                                                                    <caption>참여기간, 참여시간, 참여기관(교내/외부), 목표달성시기, 참여방법, 활동내용 을(를) 제공하는 표</caption>
+                                                                    <colgroup>
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th scope="row">참여기간</th>
+                                                                            <td>2025-01 ~ 2025-01</td>
+                                                                            
+                                                                            <th scope="row">참여시간(지급기간)</th>  
+                                                                            <td>000시간 (00시간)</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">참여기관(교내)</th>
+                                                                            <td>교내</td>
+                                                                            
+                                                                            <th scope="row">참여기관(외부)</th>
+                                                                            <td>외부</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">목표달성시기</th>
+                                                                            <td>2학기</td>
+                                                                            
+                                                                            <th scope="row">참여방법</th>
+                                                                            <td>온라인</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">활동내용</th>
+                                                                            <td colspan="3">입력한 내용 TEST TEST TEST TEST</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <!--  -->
+                                                            
+                                                            <div class="execut_table_box box_table_wrap write type01">
+                                                                <div class="table_hd">
+                                                                    <p class="table_hd_tit">이행내용</p>
+                                                                    <div class="table_hd_toggle">
+                                                                        <button type="button" class="close_btn" aria-expanded="false"><span class="blind">페이지 접기</span></button>
+                                                                        <button type="button" class="open_btn active" aria-expanded="true"><span class="blind">페이지 펼치기</span></button>
+                                                                    </div>
+                                                                </div>
+                                                                <table class="box_table execut_table">
+                                                                    <caption>이행기간, 활동요청시간, 프로그램 이행내용, 비고 을(를) 제공하는 표</caption>
+                                                                    <colgroup>
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th scope="row">이행기간</th>
+                                                                            <td colspan="3">2025-01-01 ~ 2025-01-01</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">활동요청시간</th>
+                                                                            <td class="td_activ_time"><span class="txt_bold">10</span> 시간</td>
+
+                                                                            <th scope="row">활동인정시간</th>
+                                                                            <td class="td_activ_time"><span class="txt_bold">10</span> 시간</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">프로그램 <br>이행내용</th>
+                                                                            <td colspan="3">프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다. 프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">비고 <br>(IAP 수립일 등)</th>
+                                                                            <td colspan="3">입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="plantog_wrap">
+                                                        <div class="plantog_chk">
+                                                            <div class="chk_box">
+                                                                <span class="b1_r">2</span>
+                                                            </div>
+                                                            <p class="plantog_chk_tit">일경험(인턴) 서비스참여형</p>
+                                                        </div>
+                                                        <div class="plantog_table">
+                                                            <div class="employ_table_box box_table_wrap write type01">
+                                                                <div class="table_hd">
+                                                                    <p class="table_hd_tit">취업활동계획</p>
+                                                                    <div class="table_hd_toggle">
+                                                                        <button type="button" class="close_btn" aria-expanded="false"><span class="blind">페이지 접기</span></button>
+                                                                        <button type="button" class="open_btn active" aria-expanded="true"><span class="blind">페이지 펼치기</span></button>
+                                                                    </div>
+                                                                </div>
+                                                                <table class="box_table employ_table">
+                                                                    <caption>참여기간, 참여시간, 참여기관(교내/외부), 목표달성시기, 참여방법, 활동내용 을(를) 제공하는 표</caption>
+                                                                    <colgroup>
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th scope="row">참여기간</th>
+                                                                            <td>2025-01 ~ 2025-01</td>
+                                                                            
+                                                                            <th scope="row">참여시간(지급기간)</th>  
+                                                                            <td>000시간 (00시간)</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">참여기관(교내)</th>
+                                                                            <td>교내</td>
+                                                                            
+                                                                            <th scope="row">참여기관(외부)</th>
+                                                                            <td>외부</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">목표달성시기</th>
+                                                                            <td>2학기</td>
+                                                                            
+                                                                            <th scope="row">참여방법</th>
+                                                                            <td>온라인</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">활동내용</th>
+                                                                            <td colspan="3">입력한 내용 TEST TEST TEST TEST</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <!--  -->
+                                                            
+                                                            <div class="execut_table_box box_table_wrap write type01">
+                                                                <div class="table_hd">
+                                                                    <p class="table_hd_tit">이행내용</p>
+                                                                    <div class="table_hd_toggle">
+                                                                        <button type="button" class="close_btn" aria-expanded="false"><span class="blind">페이지 접기</span></button>
+                                                                        <button type="button" class="open_btn active" aria-expanded="true"><span class="blind">페이지 펼치기</span></button>
+                                                                    </div>
+                                                                </div>
+                                                                <table class="box_table execut_table">
+                                                                    <caption>이행기간, 활동요청시간, 프로그램 이행내용, 비고 을(를) 제공하는 표</caption>
+                                                                    <colgroup>
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                        <col style="width:192px">
+                                                                        <col style="width:auto">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th scope="row">이행기간</th>
+                                                                            <td colspan="3">2025-01-01 ~ 2025-01-01</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">활동요청시간</th>
+                                                                            <td class="td_activ_time"><span class="txt_bold">10</span> 시간</td>
+
+                                                                            <th scope="row">활동인정시간</th>
+                                                                            <td class="td_activ_time"><span class="txt_bold">10</span> 시간</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">프로그램 <br>이행내용</th>
+                                                                            <td colspan="3">프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다. 프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.프로그램 이행내용작성 이행내용 이행내용을 기술하였습니다.</td>
+                                                                        </tr>
+                                                                        <tr class="tr_toggle">
+                                                                            <th scope="row">비고 <br>(IAP 수립일 등)</th>
+                                                                            <td colspan="3">입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.입력한 내용. 입력한 내용. 입력한 내용.</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>비용신청 회차, 총 활동요청시간, 신청금액 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:180px">
+                                                        <col style="width:auto">
+                                                        <col style="width:160px">
+                                                        <col style="width:auto">
+                                                        <col style="width:160px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">비용신청 회차</th>
+                                                            <td><span class="txt_bold">11</span> 회차</td>
+
+                                                            <th scope="row">총 활동요청시간</th>
+                                                            <td><span class="txt_bold">100</span> 시간</td>
+
+                                                            <th scope="row">신청금액</th>
+                                                            <td><span class="txt_bold">1,000,000</span> 만원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="iap_attfile_wrap mt40">
+                                            <div class="iap_attfile_tit">
+                                                <div class="att_tit"><p class="t2_sb">첨부파일</p></div>
+                                            </div>
+                                            <div class="iap_attfile_cont">
+                                                <div class="register_txt_box">
+                                                    <p class="tit b1_sb">1. IAP결과증빙자료</p>
+                                                    <p class="desc b1_r">재학생맞춤형고용서비스-IAP결과증빙자료</p>
+                                                </div>
+                                            </div>
+
+                                            <ul class="ul_iap_addlist mt24" id="fileList">
+                                                <li class="att_li">
+                                                    <p>파일명.pdf</p>
+                                                    <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                                </li>
+                                                <li class="att_li">
+                                                    <p>파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명.pdf</p>
+                                                    <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box_group_wrap mt40">
+                                            <h3 class="t2_sb">수당수급 계좌번호</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table">
+                                                    <caption>예금주, 금융기관, 계좌번호 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:20%">
+                                                        <col style="width:25%">
+                                                        <col style="width:23%">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">예금주</th>
+                                                            <td class="td_newipt" colspan="3">홍길동</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">금융기관</th>
+                                                            <td>국민은행</td>
+
+                                                            <th scope="row">계좌번호</th>
+                                                            <td class="td_newipt">000000-00-0000000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_group_wrap preapply_selfchk_wrap mt40">
+                                            <h3 class="t2_sb">신청 전 자가진단</h3>
+                                            <div class="box_table_wrap write type01">
+                                                <table class="box_table table_unselect">
+                                                    <caption>미래내일 일경험사업 지원금 수령여부 을(를) 제공하는 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:560px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">미래내일 일경험사업 지원금 수령여부</th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group radio_focus_group type_unselect" role="radiogroup" aria-labelledby="subsidyLabel1">
+                                                                    <legend id="subsidyLabel1" class="sr_only">미래내일 일경험사업 지원금 수령여부 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="subsidy1_yes" name="subsidy1" value="yes" checked>
+                                                                        <label for="subsidy1_yes">
+                                                                            <span class="label_text">예</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio_input_item">
+                                                                        <input class="focus_on" type="text" class="yes_input" id="yesInput1" name="yesInput1" disabled aria-disabled="true" inputmode="numeric" value="1,000,000">
+                                                                        <span>원</span>
+                                                                    </div>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="subsidy1_no" name="subsidy1" value="no">
+                                                                        <label for="subsidy1_no">
+                                                                            <span class="label_text">아니오</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">내일배움카드 훈련장려금 <span class="txt_regular">(K-디지털 트레이닝 포함)</span> 수령여부</th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group radio_focus_group type_unselect" role="radiogroup" aria-labelledby="subsidyLabel2">
+                                                                    <legend id="subsidyLabel2" class="sr_only">내일배움카드 훈련장려금 수령여부 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="subsidy2_yes" name="subsidy2" value="yes" checked>
+                                                                        <label for="subsidy2_yes">
+                                                                            <span class="label_text">예</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio_input_item">
+                                                                        <input class="focus_on" type="text" class="yes_input" id="yesInput2" name="yesInput2" disabled aria-disabled="true" inputmode="numeric" value="1,000,000">
+                                                                        <span>원</span>
+                                                                    </div>
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="subsidy2_no" name="subsidy2" value="no">
+                                                                        <label for="subsidy2_no">
+                                                                            <span class="label_text">아니오</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">기타 유사한 성격의 지원금 수령 여부<br><span class="txt_regular">(취업활동지원, 실비보전 등 참여독려 등을 위한 지원금)</span></th>
+                                                            <td class="td_support">
+                                                                <ul>
+                                                                    <li>
+                                                                        <label for="support_name">지원금명</label>
+                                                                        <input type="text" id="support_name" name="support_name" aria-required="false" value="TEST TEST TEST">
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="support_amount">지원금액</label>
+                                                                        <input type="text" id="support_amount" name="support_amount" aria-required="false" value="1,000,000">
+                                                                        <span aria-hidden="true">원</span>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">개인별 월(1일~말일) 20만원 초과여부</th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="existLabel">
+                                                                    <legend id="existLabel" class="sr_only">개인별 월(1일~말일) 20만원 초과여부 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="existType1" name="existType" value="" checked>
+                                                                        <label for="existType1">
+                                                                            <span class="label_text">있음</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="existType2" name="existType" value="">
+                                                                        <label for="existType2">
+                                                                            <span class="label_text">없음</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">수당 누적 총액 100만원 초과여부</th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="accrueLabel">
+                                                                    <legend id="accrueLabel" class="sr_only">수당 누적 총액 100만원 초과여부 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="accrueType1" name="accrueType" value=""checked>
+                                                                        <label for="accrueType1">
+                                                                            <span class="label_text">있음</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="accrueType2" name="accrueType" value="">
+                                                                        <label for="accrueType2">
+                                                                            <span class="label_text">없음</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <div class="div_twin_box">
+                                                                    <p class="b1_sb">참여수당 관련 부정수급 방지 확약서 동의 여부 <br><span class="s1_r txt_red">※ 반드시 전문보기 후 개인정보 수집 동의를 선택 할 수 있습니다.</span></p>
+                                                                    <button type="button" class="btn type02 small type_gray"><span>전문보기</span></button>
+                                                                </div>
+                                                            </th>
+                                                            <td>
+                                                                <fieldset class="box_radio_group flex_box type_unselect" role="radiogroup" aria-labelledby="agreeChkLabel">
+                                                                    <legend id="agreeChkLabel" class="sr_only">참여수당 관련 부정수급 방지 확약서 동의 여부 선택</legend>                                                            
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="agreeChkType1" name="agreeChkType" value=""checked>
+                                                                        <label for="agreeChkType1">
+                                                                            <span class="label_text">동의</span>
+                                                                        </label>
+                                                                    </div>
+
+                                                                    <div class="new_radio_item">
+                                                                        <input type="radio" id="agreeChkType2" name="agreeChkType" value="">
+                                                                        <label for="agreeChkType2">
+                                                                            <span class="label_text">동의안함</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="box_group_wrap">
+                                            <div class="tit_box">
+                                                <h3 class="t2_sb">신청 및 처리현황</h3>
+                                            </div>
+                                            
+                                            <div class="apply_summary_wrap" role="region">
+                                                <div class="apply_summary_header">
+                                                    <div class="apply_summary_info">
+                                                        <p class="apply_summary_tit">현재 참여신청서 <span>지급</span> 상태입니다.</p>
+                                                        <p class="apply_summary_tel b1_r">담당자 : 김담당 (010-0000-0000)</p>
+                                                    </div>
+                                                    <div class="apply_summary_action mt16"><button type="button" class="apply_summary_toggle on" aria-expanded="true" aria-controls="applySummaryDetail">신청 및 처리현황 이력</button></div>
+                                                </div>
+
+                                                <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                                <div class="apply_summary_inner mt32" id="applySummaryDetail">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="apply_summary_status">
+                                                                <p class="status_label">제출</p>
+                                                                <p class="status_date">2025-00-00</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="apply_summary_status">
+                                                                <p class="status_label">미지급</p>
+                                                                <p class="status_date">2025-00-00</p>
+                                                            </div>
+                                                            <p class="apply_summary_reason">사유 : 대플 담당자가 등록한 보완 내용</p>
+                                                        </li>
+                                                        <li>
+                                                            <div class="apply_summary_status">
+                                                                <p class="status_label">지급</p>
+                                                                <p class="status_date">2025-00-00</p>
+                                                            </div>
+                                                            <p class="apply_summary_reason">사유 : 대플 담당자가 등록한 보완 내용</p>
+                                                        </li>
+                                                        <li>
+                                                            <div class="apply_summary_status">
+                                                                <p class="status_label">환급</p>
+                                                                <p class="status_date">2025-00-00</p>
+                                                            </div>
+                                                            <p class="apply_summary_reason">사유 : 대플 담당자가 등록한 보완 내용</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex_box mt40">
+                                            <button type="button" class="btn big type02 btn_s_r" aria-label="목록" onclick="">목록</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                    // 파일등록 버튼 - 커스텀 버튼 연결
+                                    function addFiles() {
+                                        document.getElementById('files').click();
+                                    }
+
+                                    // .table_hd_toggle 
+                                    $(function(){
+                                        $(".table_hd_toggle button").on("click", function(){
+                                            var $btn = $(this);
+                                            var $wrap = $btn.closest(".plantog_table .box_table_wrap");
+                                            var $table = $wrap.find("table");
+
+                                            $table.find(".tr_toggle").toggle();
+
+                                            $btn.removeClass("active").attr("aria-expanded", false);
+
+                                            $btn.siblings("button").addClass("active").attr("aria-expanded", true);
+                                        });
+
+                                        $(".plantog_table .box_table_wrap").each(function(){
+                                            var $wrap = $(this);
+                                            var $activeBtn = $wrap.find(".table_hd_toggle button.active");
+
+                                            if($activeBtn.length){
+                                                $wrap.find("table .tr_toggle").show();
+                                                $activeBtn.siblings("button").removeClass("active").attr("aria-expanded", false);
+                                            } else {
+                                                $wrap.find("table .tr_toggle").hide();
+                                            }
+                                        });
+                                    });
+                                </script>
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

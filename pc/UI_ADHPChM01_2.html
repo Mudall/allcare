@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>PC_점프업_포인트관리_목록 없음</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+                                        <ul class="point_request_dashboard mt40">
+                                            <li class="li_apply">
+                                                <p class="tit">신청내역</p>
+                                                <ul class="inner_box">
+                                                    <li>
+                                                        <p class="inner_tit">총 신청건수</p>
+                                                        <p class="inner_desc"><span class="count">3</span> 건</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="inner_tit">총 신청시간</p>
+                                                        <p class="inner_desc"><span class="count">10</span> 시간</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="inner_tit">총 신청금액</p>
+                                                        <p class="inner_desc"><span class="count">100,000</span> 원</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="li_approve">
+                                                <p class="tit">승인내역</p>
+                                                <ul class="inner_box">
+                                                    <li>
+                                                        <p class="inner_tit">총 승인건수</p>
+                                                        <p class="inner_desc"><span class="count">3</span> 건</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="inner_tit">총 인정시간</p>
+                                                        <p class="inner_desc"><span class="count">10</span> 시간</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="inner_tit">총 지급금액</p>
+                                                        <p class="inner_desc"><span class="count">100,000</span> 원</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="li_refund">
+                                                <p class="tit">환수내역</p>
+                                                <ul class="inner_box">
+                                                    <li>
+                                                        <p class="inner_tit">총 환수건수</p>
+                                                        <p class="inner_desc"><span class="count">1</span> 건</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="inner_tit">총 환수금액</p>
+                                                        <p class="inner_desc"><span class="count">10,000</span> 원</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <div class="box_table_wrap mt40">
+                                            <div class="box_table_hd">
+                                                <p class="total">전체 <span class="txt_total">1111</span>건</p>
+                                                <p class="join_year">참여년도 : <span class="txt_year">2025</span>년</p>
+                                            </div>
+                                            <!-- table -->
+                                            
+                                            <div class="notlist_inner mt40">
+                                                <figure><div class="icon"></div></figure>
+                                                <p>등록된 포인트 신청 내역이 없습니다.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="box_btn_wrap mt40 flex_js_r">
+                                            <a href="" class="btn big type01 fill">포인트 신청서 작성</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>

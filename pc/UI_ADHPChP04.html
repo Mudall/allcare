@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>부정수급 방지 확인서</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body class="dim">
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>       
+        <script src="../pc/js/contents.js"></script>
+
+
+
+        <!-- 팝업내용 시작 -->
+        <section id="operPrgmPopup" class="new_popup allcare_popup" role="dialog" aria-modal="true" aria-labelledby="operPrgmPopupTitle">
+            <header class="head type2 newpop_tit">
+                <h1 id="operPrgmPopupTitle" class="h2_sb">선택한 유형명</h1>
+                <!-- 닫기 -->
+                <button type="button" id="btnClose_operPrgmPopup" class="btn-close closed" aria-label="팝업 닫기">
+                    <span class="blind">팝업 닫기</span>
+                </button> 
+            </header>                                                                                               
+            <form:form id="operPrgmForm" name="operPrgmForm" method="POST" modelAttribute="HPFSAA0101VO">
+                <div class="newpop_inner">
+                    <h5 class="commitment_htit">재학생 맞춤형 고용서비스 점프업 프로젝트(Jump-Up) 참여 수당 관련 부정수급 방지 확약서</h5>
+
+                    <div class="commitment_list_wrap mt24">
+                        <p class="commitment_list_tit">개요</p>
+                        <ul>
+                            <li>
+                                개인별 월(매월 1일 ~ 말일) 20만원 이하 지급되는 수당에 대해서 연간 개인별 점프업 프로젝트 수당 누적 총액<span class="txt_red">(*)</span> 100만원을 초과하여 지급불가.<br>
+                                <span class="txt_red">(*)</span> 자기주도형, 서비스참여형 누적 합계
+                            </li>
+                            <li>
+                                중앙정부 및 지방자치단체로부터 유사한 성격의 지원금<span class="txt_red">(*)</span>을 수령하는 경우, 해당 월(수령일 기준) 지급 불가.
+                                <span class="txt_red">(*)</span> 국민취업지원제도의 구직활동수당 등 취업활동 지원을 위한 지원금을 의미
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="commitment_list_wrap mt40">
+                        <p class="commitment_list_tit">부정(중복)수급 제외요건</p>
+                        <ul>
+                            <li>생계지원금</li>
+                            <li>근속수당(청년내일채움공제, 국민취업지원제도 취업성공수당 등)</li>
+                            <li>자산형성지원수당</li>
+                        </ul>
+                    </div>
+
+                    <div class="commitment_notice_wrap mt24" role="region" aria-label="부정수급에 대한 내용 확인">
+                        <p>위와 같이 부정수급에 대한 내용을 이해하였으며, 점프업(Jump-Up) 프로젝트에 성실하게 참여할 것을 약속합니다. 또한 부정수급 발생시 상기 민·형사상 책임(수당반환 및 추가징수, 형사처벌 등)을 감수할 것임을 <span class="txt_blue">확인</span>합니다.</p>
+                    </div>
+
+                    <div class="confirm_wrap mt24"><button type="button" class="btn big fill type01" onclick="">확인</button></div>
+                </div>
+            </form:form>
+        </section>
+        <!-- 팝업 종료 -->
+</body>
+</html>

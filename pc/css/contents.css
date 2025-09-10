@@ -24,12 +24,13 @@
 .allcare_popup.new_popup .sel.round.new_sel_span {position: relative;}
 .allcare_popup.new_popup .sel.round.new_sel_span select {max-width: 150px; padding: 6px 40px 6px 16px; border-radius: 9999px; font-size: 16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare_popup.new_popup .sel.round.new_sel_span::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
-
+.allcare_popup.new_popup .txt_blue {color: var(--col_blue);}
 .allcare .icon_add { display: flex; align-items: center;}
 .allcare .icon_add .icon { display: block; width: 24px; height: 24px; margin-right: 8px;}
 .allcare .icon_add .num01 { background: url('../images/mypage/ico24_receipt_item.svg') no-repeat;}
 .allcare .icon_add .num02 { background: url('../images/mypage/ico24_member_register.svg') no-repeat;}
-
+.allcare .txt_red {color: #ee2e62;}
+.allcare .txt_regular {font-weight: 400;}
 
 /* 250820 수정 */
 .allcare_popup.new_popup * { letter-spacing: -0.02em;}
@@ -746,8 +747,8 @@
 .mypage .progmg.allcare .newipt_w120 {width: 120px;}
 .mypage .progmg.allcare .newipt_w132 {width: 132px;}
 .mypage .progmg.allcare .newipt_w240 {width: 240px;}
-.mypage .progmg.allcare .employ_plan_wrap .td_jointime {display: flex; align-items: center; gap: 8px;}
-.mypage .progmg.allcare .employ_plan_wrap .td_jointime .jointime_txt {font-size: 16px;}
+.mypage .progmg.allcare .td_jointime {display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .td_jointime .jointime_txt {font-size: 16px;}
 .mypage .progmg.allcare .td_join_org .box_ipt button[class*='ico'] {margin-top: -2px;}
 .mypage .progmg.allcare .employ_plan_wrap .iapplan_tablelist_box .box_table + .box_table {margin-top: 24px;}
 .mypage .progmg.allcare .iapplan_ebdbtn_wrap .btn.type_full {display: flex; justify-content: center; align-items: center; border: 1px solid #555; width: 100%; height: 48px; border-radius: 4px; text-align: center;}
@@ -769,3 +770,144 @@
 /* 점프업_IAP관리_수정(변경신청_승인후)	(UI_ADHPCfS06) */
 .mypage .progmg.allcare .box_table_unable .txt_red {color: #e0024b;}
 .mypage .progmg.allcare .box_table_unable select, .box_table_unable input, .box_table_unable .text_form_inner, .box_table_unable textarea  {background-color: #f5f5f5;}
+
+/* 점프업_IAP결과관리_목록 (UI_ADHPCgM01) */
+.mypage .progmg.allcare .iap_status_dashboard {background-color: #f5f6fa; padding: 24px 32px; border-radius: 8px; display: flex; gap: 16px;}
+.mypage .progmg.allcare .iap_status_dashboard li {text-align: center; padding: 24px 16px; border: 1px solid #ddd; background-color: #fff; width: 20%;  border-radius: 8px; display: flex; gap: 8px; flex-direction: column; align-items: center;} 
+.mypage .progmg.allcare .iap_status_dashboard li p {font-size: 16px; color: #333; font-weight: 400; line-height: 30px;}
+.mypage .progmg.allcare .iap_status_dashboard li .tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .iap_status_dashboard li .txt_blue {font-weight: 600; font-size: 20px; line-height: 30px;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan {display: flex; flex-direction: column; gap: 4px; align-items: center;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_tit {display: flex; align-items: center; gap: 16px;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_tit p {position: relative; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_tit p.txt_blue {color: var(--col_blue);}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_tit p+p::after {content: ''; position: absolute; left: -7px; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; background-color: #ddd; }
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_trait {display: flex; align-items: center; gap: 16px;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_trait span {position: relative;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_plan_trait span+span:after {content: ''; position: absolute; left: -7px; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; background-color: #eee; }
+.mypage .progmg.allcare .ipa_resultmanage_wrap .ipa_resultbtn_wrap {border: 1px solid #ddd; border-radius: 8px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_result {display: flex; flex-direction: column; align-items: center; gap: 4px;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .job_result b {font-weight: 600;}
+.mypage .progmg.allcare .ipa_resultmanage_wrap .new_table .status_box {display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px;}
+
+
+/* 점프업_IAP결과관리_등록(제출 및 저장전) (UI_ADHPCgM02) */
+.mypage .progmg.allcare .iap_attfile_wrap {padding: 32px 40px; border: 1px solid #ddd; border-radius: 8px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit {padding-bottom: 16px; border-bottom: 1px solid #eee;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit p {position: relative; padding-left: 32px; line-height: 30px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit p::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_attfile.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li {padding-left: 20px; position: relative;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li:after {content: ''; position: absolute; left: 10px; top: 10px; width: 3px; height: 3px; display: block; background-color: #555; border-radius: 50%;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont {margin-top: 24px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_txt_box p.desc {padding-left: 16px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box {margin-top: 8px; display: flex; gap: 10px; justify-content: center; align-items: center; background-color: #f6f6f6; border-radius: 8px; padding: 24px;} 
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box .att_file_btn {padding: 6px 16px; border: 1px solid var(--col_blue); border-radius: 4px; background-color: #fff;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box .att_file_btn span {color: var(--col_blue);}
+
+/* 점프업_IAP결과관리_수정(저장후 제출전) (UI_ADHPCgM03) */
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist {border: 1px solid #ddd; border-radius: 8px; padding: 24px;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li {display: flex; gap: 12px; align-items: center; justify-content: space-between;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li + li {margin-top: 8px;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li p {flex: 1; font-size: 14px; color: var(--col_blue); font-weight: 400; line-height: 24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; }
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li button.att_del_btn { width: 16px; height: 16px; display: block; background: url('../images/mypage/ico16_delete.svg') no-repeat center / contain;}
+
+/* 점프업 - IAP결과관리_조회(제출후) (UI_ADHPCgM04) */
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li a.att_down_btn { width: 16px; height: 16px; display: block; background: url('../images/mypage/ico16_down.svg') no-repeat center / contain;}
+
+
+/* PC_점프업_포인트관리_목록 (UI_ADHPChM01) */
+.mypage .progmg.allcare .point_request_dashboard {padding: 24px 32px; border-radius: 8px; background-color: #f5f6fa; display: flex; gap: 16px;}
+.mypage .progmg.allcare .point_request_dashboard>li {width: 33.3%;}
+.mypage .progmg.allcare .point_request_dashboard>li .tit {font-size: 18px; color: #111; font-weight: 600; line-height: 28px; position: relative; padding-left: 28px;}
+.mypage .progmg.allcare .point_request_dashboard>li .tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_dash_apply.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .point_request_dashboard .li_approve .tit::after  {background-image: url('../images/mypage/ico24_dash_approve.svg');}
+.mypage .progmg.allcare .point_request_dashboard .li_refund .tit::after  {background-image: url('../images/mypage/ico24_dash_refund.svg');}
+.mypage .progmg.allcare .point_request_dashboard .inner_box {min-height: 174px; margin-top: 8px; background-color: #fff; border-radius: 8px; border: 1px solid #ddd; padding: 24px 20px;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li {padding: 8px 0; display: flex; justify-content: space-between; align-items: baseline;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li:first-child {padding-top: 0;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li:last-child {padding-bottom: 0;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li + li {border-top: 1px dashed #ddd;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li .inner_tit {padding-left: 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 28px; position: relative; }
+.mypage .progmg.allcare .point_request_dashboard .inner_box li .inner_tit::after {content: ''; position: absolute; left: 4px; top: 50%; transform: translateY(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #555;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li .inner_desc {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li .inner_desc .count {font-size: 20px; font-weight: 600;}
+
+.mypage .progmg.allcare .dbheader_table .group_start th:first-child,
+.mypage .progmg.allcare .dbheader_table .group_start td:first-child,
+.mypage .progmg.allcare .dbheader_table .group_start th:last-child,
+.mypage .progmg.allcare .dbheader_table .group_start td:last-child {padding: 14px 20px;}
+.mypage .progmg.allcare .dbheader_table.new_table .group_end th:first-child,
+.mypage .progmg.allcare .dbheader_table.new_table .group_end td:first-child {padding-left: 12px;}
+.mypage .progmg.allcare .dbheader_table.new_table .group_end th:last-child,
+.mypage .progmg.allcare .dbheader_table.new_table .group_end td:last-child {padding-right: 12px;}
+.mypage .progmg.allcare .join_year .txt_year {color: var(--col_blue); font-weight: 600;}
+
+
+/* 점프업_포인트신청관리_신청(등록) (UI_ADHPChM02) */
+.mypage .progmg.allcare .point_banner_wrap {display: flex; align-items: center; gap: 8px; background-color: rgba(25, 179, 189, 0.16); border-radius: 12px; padding: 24px 40px;}
+.mypage .progmg.allcare .point_banner_wrap .ico_jump_point {width: 48px; height: 48px; background: url('../images/mypage/ico48_jump_point.svg');}
+.mypage .progmg.allcare .point_banner_wrap .txt_box .desc {margin-top: 4px;}
+.mypage .progmg.allcare .txt_bold {font-weight: 600;}
+.mypage .progmg.allcare .point_banner_wrap .txt_box .desc .count,
+.mypage .progmg.allcare .point_banner_wrap .txt_box .desc .amount {color: var(--col_blue); font-weight: 600;}
+.mypage .progmg.allcare .hd_twin_box {margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;}
+.mypage .progmg.allcare .hd_btn_box {display: flex; gap: 8px;}
+.mypage .progmg.allcare .hd_btn_box button {min-width: 76px;}
+
+.mypage .progmg.allcare .td_newipt .newipt_w180 {width: 180px; display: block;}
+.mypage .progmg.allcare .td_newipt .newipt_block {display: block;}
+.mypage .progmg.allcare .newsel_w180 {width: 180px;}
+
+.mypage .progmg.allcare .preapply_selfchk_wrap .div_twin_box {display: flex; gap: 16px; align-items: center;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .td_support ul li {display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .td_support ul li + li {margin-top: 8px;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .td_support ul li input[type="text"] { height: 40px; border: 1px solid #757575; border-radius: 4px; font-size: 16px; padding: 0 10px;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .td_support ul li:first-child input[type="text"] {width: 260px;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .td_support ul li label {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .td_support ul li span {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+
+.mypage .progmg.allcare .preapply_selfchk_wrap .radio_focus_group {display: flex; gap: 16px; align-items: center;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .radio_input_item {display: flex; gap: 8px; align-items: center;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .radio_input_item input {width: 180px; height: 40px; background-color: #f5f5f5; border: 1px solid #757575; border-radius: 4px; padding: 0 10px;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .radio_input_item input.focus_on {background-color: #fff; color: #333;}
+.mypage .progmg.allcare .preapply_selfchk_wrap .radio_input_item span {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+
+
+/* 포인트관리_수정(저장후제출전) (UI_ADHPChS05) */
+.mypage .progmg.allcare .plantog_area ul .plantog_wrap {display: flex; gap: 40px;  border: 1px solid #ddd; padding: 32px 40px; border-radius: 8px;}
+.mypage .progmg.allcare ul .plantog_wrap + .plantog_wrap {margin-top: 16px;}
+.mypage .progmg.allcare .plantog_wrap .plantog_chk {width: 96px; } 
+.mypage .progmg.allcare .plantog_wrap .plantog_chk .chk_box {display: flex; gap: 8px; align-items: center;}
+.mypage .progmg.allcare .plantog_wrap .plantog_chk .chk_box label {cursor: pointer; min-width: 20px;}
+.mypage .progmg.allcare .plantog_wrap .plantog_chk .chk_box input {cursor: pointer; }
+.mypage .progmg.allcare .plantog_wrap .plantog_chk p {word-break: keep-all; margin-top: 8px; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .plantog_wrap .plantog_table {flex: 1;}
+.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd {margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;}
+.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_toggle button {width: 24px; height: 24px; display: none; background: url('../images/mypage/arrorw24_up_blue.svg') no-repeat center / contain;} 
+.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_toggle button.close_btn {background-image: url('../images/mypage/arrorw24_down.svg');}
+.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_toggle button.active {display: block;}
+.mypage .progmg.allcare .plantog_wrap .execut_table .td_activ_time {display: flex; gap: 8px; align-items: center;}
+.mypage .progmg.allcare .plantog_wrap .execut_table .td_activ_time .new_ipt input {width: 240px; display: block;}
+
+
+/* 포인트관리_조회(승인, 미지급, 환급) (UI_ADHPChS08) */
+.mypage .progmg.allcare .nth_round_wrap .nth_round {color: var(--col_blue);}
+.mypage .progmg.allcare .nth_round_wrap .txt_blue {font-weight: 600;}
+.mypage .progmg.allcare .nth_round_wrap .row_space td {line-height: 0; height: 16px; padding: 0;}
+.mypage .progmg.allcare .table_unselect input[type='text'],
+.mypage .progmg.allcare .preapply_selfchk_wrap .table_unselect .radio_input_item input[type='text'].focus_on {background-color: #f5f5f5;}
+
+/* [팝업] 부정수급 방지 확인서 (UI_ADHPChP04) */
+.allcare_popup.new_popup .commitment_htit {font-size: 20px; color: #333; font-weight: 600; line-height: 30px;}
+.allcare_popup.new_popup .commitment_list_wrap {border: 1px solid #ddd; border-radius: 8px; padding: 16px;}
+.allcare_popup.new_popup .commitment_list_wrap .txt_red {color: #ee2e62; font-weight: 600;}
+.allcare_popup.new_popup .commitment_list_wrap .commitment_list_tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.allcare_popup.new_popup .commitment_list_wrap ul {margin-top: 8px; }
+.allcare_popup.new_popup .commitment_list_wrap ul li {padding-left: 24px; position: relative; font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.allcare_popup.new_popup .commitment_list_wrap ul li::before {content: ''; position: absolute; left: 10px; top: 12px; width: 3px; height: 3px; border-radius: 50%; background-color: #333;}
+.allcare_popup.new_popup .commitment_notice_wrap {padding: 16px; background-color: #f8f8f8;}
+.allcare_popup.new_popup .commitment_notice_wrap p {font-size: 14px; color: #111; font-weight: 400; line-height: 24px;}
+.allcare_popup.new_popup .commitment_notice_wrap p span {font-weight: 600;}
+.allcare_popup.new_popup .confirm_wrap {display: flex; justify-content: center;}

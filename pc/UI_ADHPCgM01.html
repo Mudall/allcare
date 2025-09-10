@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - IAP결과관리_목록</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body>
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">대학 재학생 맞춤형 고용서비스</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+
+                                
+                                <div class="mypage">
+                                    <div class="progmg allcare">
+
+                                        <ul class="tab_title topTab" role="tablist">
+                                            <!-- D: 활성화시 class[active] add -->
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP관리</span></button></li>
+                                            <li aria-controls="" class="active"><button type="button" role="tab" aria-selected="true"><span>IAP결과관리</span></button></li>
+                                            <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>포인트신청관리</span></button></li>
+                                        </ul>
+
+
+                                        <ul class="iap_status_dashboard mt40">
+                                            <li>
+                                                <p class="tit">참여연도</p>
+                                                <p><span class="txt_blue">2025</span>년</p>
+                                            </li>
+                                            <li>
+                                                <p class="tit">취업활동계획</p>
+                                                <p><span class="txt_blue">3</span>건</p>
+                                            </li>
+                                            <li>
+                                                <p class="tit">제출</p>
+                                                <p><span class="txt_blue">3</span>건</p>
+                                            </li>
+                                            <li>
+                                                <p class="tit">미제출</p>
+                                                <p><span class="txt_blue">0</span>건</p>
+                                            </li>
+                                            <li>
+                                                <p class="tit">승인</p>
+                                                <p><span class="txt_blue">3</span>건</p>
+                                            </li>
+                                        </ul>
+
+
+                                        <div class="box_group_wrap ipa_resultmanage_wrap">
+                                            <div class="box_table_wrap mt16">
+                                                <div class="box_table_wrap">
+                                                    <div class="box_table_hd">
+                                                        <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                        <div class="section_right">
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="제출여부 선택">
+                                                                    <option value="" selected="selected" disabled>제출여부 전체</option>
+                                                                    <option value="">TEST</option>
+                                                                    <option value="">TEST</option>
+                                                                </select>
+                                                            </span>
+                                                            <span class="sel round new_sel_span">
+                                                                <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="승인여부 선택">
+                                                                    <option value="" selected="selected" disabled>승인여부 전체</option>
+                                                                    <option value="">TEST</option>
+                                                                    <option value="">TEST</option>
+                                                                </select>
+                                                            </span>
+                                                            <button type="button" class="btn btn_round type02" onclick="">적용</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- table -->
+                                                    
+                                                    <table class="box_table new_table ">
+                                                        <caption>번호, 참여년도, 참여대학명, 신청일자, 진행상태, 담당자 을(를) 제공하는 표</caption>
+                                                        <colgroup>
+                                                            <col style="width: 74px">
+                                                            <col style="width: auto">
+                                                            <col style="width: 220px">
+                                                            <col style="width: 140px">
+                                                            <col style="width: 140px">
+                                                            <col style="width: 154px">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">번호</th>
+                                                                <th scope="col">취업활동 계획</th>
+                                                                <th scope="col">취업활동 결과</th>
+                                                                <th scope="col">제출일자</th>
+                                                                <th scope="col">승인일자</th>
+                                                                <th scope="col">현황</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <div class="job_plan">
+                                                                        <div class="job_plan_tit">
+                                                                            <p class="txt_blue">서비스 참여형</p>
+                                                                            <p>직업훈련</p>
+                                                                        </div>
+                                                                        <div class="job_plan_day">
+                                                                            <p>2025-01-01 ~ 2025-12-31</p>
+                                                                        </div>
+                                                                        <div class="job_plan_trait">
+                                                                            <span>오프라인</span>
+                                                                            <span>교내</span>
+                                                                            <span>교외</span>
+                                                                            <span>2학기</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="job_result">
+                                                                        <p>2025-01-01 ~ 2025-12-31</p>
+                                                                        <p><b>000</b>시간</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>
+                                                                    <div class="status_box">
+                                                                        <span>미제출</span>
+                                                                        <button type="button" class="btnType_b1"><span>상세보기</span></button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    <div class="job_plan">
+                                                                        <div class="job_plan_tit">
+                                                                            <p class="txt_blue">서비스 참여형</p>
+                                                                            <p>직업훈련</p>
+                                                                        </div>
+                                                                        <div class="job_plan_day">
+                                                                            <p>2025-01-01 ~ 2025-12-31</p>
+                                                                        </div>
+                                                                        <div class="job_plan_trait">
+                                                                            <span>오프라인</span>
+                                                                            <span>교내</span>
+                                                                            <span>교외</span>
+                                                                            <span>여름방학</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="job_result">
+                                                                        <p>2025-01-01 ~ 2025-12-31</p>
+                                                                        <p><b>000</b>시간</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>2025-01-01</td>
+                                                                <td></td>
+                                                                <td>
+                                                                    <div class="status_box">
+                                                                        <span>제출</span>
+                                                                        <button type="button" class="btnType_b1"><span>상세보기</span></button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>
+                                                                    <div class="job_plan">
+                                                                        <div class="job_plan_tit">
+                                                                            <p class="txt_blue">서비스 참여형</p>
+                                                                            <p>직업훈련</p>
+                                                                        </div>
+                                                                        <div class="job_plan_day">
+                                                                            <p>2025-01-01 ~ 2025-12-31</p>
+                                                                        </div>
+                                                                        <div class="job_plan_trait">
+                                                                            <span>오프라인</span>
+                                                                            <span>교내</span>
+                                                                            <span>교외</span>
+                                                                            <span>겨울방학</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="job_result">
+                                                                        <p>2025-01-01 ~ 2025-12-31</p>
+                                                                        <p><b>000</b>시간</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>2025-01-01</td>
+                                                                <td>2025-12-31</td>
+                                                                <td>
+                                                                    <div class="status_box">
+                                                                        <span>승인</span>
+                                                                        <button type="button" class="btnType_b1"><span>상세보기</span></button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            
+
+                                                            <!-- 등록된 내용이 없을시에 사용 -->
+                                                            <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="section_bottom"></div>
+                                                </div> 
+                                            </div>
+
+                                            <div class="ipa_resultbtn_wrap mt40">
+                                                <p class="b1_r">취업활동계획(IAP) 70% 이상을 달성했습니다. 취업준비도검사 2차를 작성해주세요.</p>
+                                                <button type="button" class="btn medium type02"><span>취업준비도 검사 2차 작성</span></button>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+
+                                
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+
+
+
+
+                        
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>
+        <script src="../pc/js/contents.js"></script>
+</body>
+</html>
