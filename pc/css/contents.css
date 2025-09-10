@@ -556,12 +556,14 @@
 /* 참여신청서 - 조회_제출 */
 
 /* 참여신청서 - 조회_불인정 */
-.allcare .box_radio_group.type_unselect .new_radio_item label,
-.mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .box_radio_group.type_unselect label,
-.mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"] {cursor: initial;}
-.mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"]:checked {position: relative; border: 1px solid #757575;}
-.mypage .progmg.allcare .box_radio_group.type_unselect .new_radio_item input[type="radio"]:checked::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-
+.allcare .box_radio_group:disabled .new_radio_item label,
+.mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .box_radio_group:disabled label,
+.mypage .progmg.allcare .box_radio_group:disabled .new_radio_item input[type="radio"],
+.box_radio_group .new_radio_item input[type="radio"]:checked:disabled {cursor: initial;}
+.mypage .progmg.allcare .box_radio_group:disabled .new_radio_item input[type="radio"]:checked,
+.mypage .progmg.allcare .box_radio_group .new_radio_item input[type="radio"]:checked:disabled {position: relative; border: 1px solid #757575;}
+.mypage .progmg.allcare .box_radio_group:disabled .new_radio_item input[type="radio"]:checked::after,
+.mypage .progmg.allcare .box_radio_group .new_radio_item input[type="radio"]:checked:disabled::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
 /* 참여신청서 - 회수_수정 */
 
@@ -574,19 +576,20 @@
 .mypage .progmg.allcare .box_table_hd.hd_space .sec_year span {color: var(--col_blue); font-weight: 600;}
 
 
-/* 빌드업 - 경력개발로드맵_목록없음 */
+/* 빌드업 - 경력개발로드맵_목록 (UI_ADHPCdM01)*/
 .mypage .progmg.allcare .notlist_inner {width: 100%; background-color: #f5f6f8; padding: 40px 24px; display: flex; flex-direction: column; align-items: center;}
-.mypage .progmg.allcare .notlist_inner figure {margin-bottom: 16px;}
-.mypage .progmg.allcare .notlist_inner figure .icon {display: block; width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .notlist_inner .icon {margin-bottom: 16px; display: block; width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .notlist_inner p {text-align: center; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
 .mypage .progmg.allcare .roadmap_btn_wrap {display: flex; justify-content: flex-end;}
-
-/* 빌드업 - 경력개발로드맵_목록있음 */
 .mypage .progmg.allcare td.link_job a {color: var(--col_blue); text-decoration: underline; text-underline-offset: 2px;}
+.mypage .progmg.allcare .td_stauts_btnbox div {display: flex; gap: 4px; flex-direction: column; align-items: center;}
+.mypage .progmg.allcare .td_toggle .arrow_btn {width: 24px; height: 24px; background: url('../images/mypage/arrorw24_up_blue.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .td_toggle .arr_btn_open {background-image: url('../images/mypage/arrorw24_down.svg')}
+
 
 /* 빌드업 - 경력개발로드맵_수정 */
 
-/* 빌드업 - 경력개발로드맵_등록 */
+/* 빌드업 - 경력개발로드맵_등록 (UI_ADHPCdS02)*/
 .mypage .progmg.allcare .text_form_box .text_form_inner {height: 100px; overflow: hidden; border: 1px solid #757575; border-radius: 4px; padding: 12px 16px;}
 .mypage .progmg.allcare .text_form_box .text_form_inner textarea {width: 100%; height: 100%; line-height: 1.5rem;}
 .mypage .progmg.allcare .text_form_box .text_info {text-align: right; margin-top: 4px;}
@@ -629,7 +632,8 @@
 .mypage .progmg.allcare .my_ptcp_from h4 .req_mark {font-size: 20px; line-height: 48px;}
 .mypage .progmg.allcare .box_promise_wrap {border-top: 1px solid #ddd; margin-top: 0; padding-top: 40px;}
 .mypage .progmg.allcare .flex_gap16 {display: flex; gap: 16px;}
-
+.mypage .progmg.allcare .newipt_w192 {width: 192px;}
+.mypage .progmg.allcare .td_hopejob .new_ipt.newipt_full {width: 100%;}
 
 /* 빌드업 - 경력개발로드맵_조회(제출후) */
 .mypage .progmg.allcare .box_check_wrap td .tit_box {display: flex; gap: 17px; text-align: left;}

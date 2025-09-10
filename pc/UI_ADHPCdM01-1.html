@@ -78,14 +78,15 @@
                                         <div class="box_table_wrap mt40">
                                             <!-- table -->
                                             <table class="box_table auto-count new_table">
-                                                <caption>번호, 참여년도, 참여대학명, 신청일자, 진행상태, 담당자 을(를) 제공하는 표</caption>
+                                                <caption>참여연도, 제출일자, 승인일자, 담당자, 신청서 현황, 변경신청 현황 을(를) 제공하는 표</caption>
                                                 <colgroup>
                                                     <col style="width: 110px">
+                                                    <col style="width: 188px">
+                                                    <col style="width: 188px">
+                                                    <col style="width: 140px">
+                                                    <col style="width: 140px">
+                                                    <col style="width: 140px">
                                                     <col style="width: auto">
-                                                    <col style="width: 140px">
-                                                    <col style="width: 140px">
-                                                    <col style="width: 140px">
-                                                    <col style="width: 130px">
                                                 </colgroup>
                                                 <thead>
                                                     <tr>
@@ -95,90 +96,195 @@
                                                         <th scope="col">승인일자</th>
                                                         <th scope="col">담당자</th>
                                                         <th scope="col">처리상태</th>
+                                                        <th scope="col"><span class="sr_only">토글 버튼</span></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
                                                         <td>2025-01-01</td>
                                                         <td>2025-12-31</td>
                                                         <td>홍길동</td>
-                                                        <td>인정</td>
+                                                        <td><button type="button" class="btn xsmall type01">상세보기</button></td>
+                                                        <td></td>
+                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
                                                         <td>2025-01-01</td>
                                                         <td>2025-12-31</td>
                                                         <td>홍길동</td>
-                                                        <td><button type="button" class="btn type01 small">변경신청</button></td>
+                                                        <td class="td_stauts_btnbox">
+                                                            <div>
+                                                                <span>신청</span>
+                                                                <button type="button" class="btn xsmall type01">상세보기</button>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn xsmall type01">변경신청</button>
+                                                        </td>
+                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
                                                         <td>2025-01-01</td>
                                                         <td>2025-12-31</td>
                                                         <td>홍길동</td>
-                                                        <td>인정</td>
+                                                        <td class="td_stauts_btnbox">
+                                                            <div>
+                                                                <span>승인</span>
+                                                                <button type="button" class="btn xsmall type01">상세보기</button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="td_stauts_btnbox">
+                                                            <div>
+                                                                <span>변경신청</span>
+                                                                <button type="button" class="btn xsmall type01">변경신청</button>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr data-row="4">
                                                         <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
                                                         <td>2025-01-01</td>
                                                         <td>2025-12-31</td>
                                                         <td>홍길동</td>
-                                                        <td>인정</td>
+                                                        <td class="td_stauts_btnbox">
+                                                            <div>
+                                                                <span>승인</span>
+                                                                <button type="button" class="btn xsmall type01">상세보기</button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="td_stauts_btnbox">
+                                                            <div>
+                                                                <span>변경신청 승인</span>
+                                                                <button type="button" class="btn xsmall type01">변경신청</button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="td_toggle">
+                                                            <button type="button" class="arrow_btn arr_btn_open" onclick="toggleDetail(4)"><span class="sr_only">페이지 펼치기</span></button>
+                                                            <button type="button" class="arrow_btn arr_btn_close" onclick="toggleDetail(4)"><span class="sr_only">페이지 접기</span></button>
+                                                        </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
-                                                        <td>2025-01-01</td>
-                                                        <td>2025-12-31</td>
-                                                        <td>홍길동</td>
-                                                        <td>인정</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
-                                                        <td>2025-01-01</td>
-                                                        <td>2025-12-31</td>
-                                                        <td>홍길동</td>
-                                                        <td>인정</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
-                                                        <td>2025-01-01</td>
-                                                        <td>2025-12-31</td>
-                                                        <td>홍길동</td>
-                                                        <td>인정</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
-                                                        <td>2025-01-01</td>
-                                                        <td>2025-12-31</td>
-                                                        <td>홍길동</td>
-                                                        <td>인정</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
-                                                        <td>2025-01-01</td>
-                                                        <td>2025-12-31</td>
-                                                        <td>홍길동</td>
-                                                        <td>인정</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2025</td>
-                                                        <td class="link_job"><a href="">프로그래머</a></td>
-                                                        <td>2025-01-01</td>
-                                                        <td>2025-12-31</td>
-                                                        <td>홍길동</td>
-                                                        <td>인정</td>
+                                                    <tr class="detail_row_container">
+                                                        <td colspan="7" class="arrow_open_page" id="detail-4" role="region">
+                                                            <div class="apply_summary_inner iap_inner_page" id="">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                        <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청승인</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                        <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">보완요청</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                        <p class="apply_summary_reason txt_al_l">보완 내용 : 대플 담당자가 등록한 보완 내용</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">보완제출</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청승인</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
                                                     </tr>
 
+                                                    
+                                                    <tr data-row="5">
+                                                        <td>2025</td>
+                                                        <td>2025-01-01</td>
+                                                        <td>2025-12-31</td>
+                                                        <td>홍길동</td>
+                                                        <td class="td_stauts_btnbox">
+                                                            <div>
+                                                                <span>승인</span>
+                                                                <button type="button" class="btn xsmall type01">상세보기</button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="td_stauts_btnbox">
+                                                            <div>
+                                                                <span>변경신청 승인</span>
+                                                                <button type="button" class="btn xsmall type01">변경신청</button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="td_toggle">
+                                                            <button type="button" class="arrow_btn arr_btn_open" onclick="toggleDetail(4)"><span class="sr_only">페이지 펼치기</span></button>
+                                                            <button type="button" class="arrow_btn arr_btn_close" onclick="toggleDetail(4)"><span class="sr_only">페이지 접기</span></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="detail_row_container">
+                                                        <td colspan="7" class="arrow_open_page" id="detail-5" role="region">
+                                                            <div class="apply_summary_inner iap_inner_page" id="">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                        <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청승인</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                        <p class="apply_summary_reason txt_al_l">신청 사유 : 사용자가 등록한 변경 신청 사유</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">보완요청</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                        <p class="apply_summary_reason txt_al_l">보완 내용 : 대플 담당자가 등록한 보완 내용</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">보완제출</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="apply_summary_status">
+                                                                            <p class="status_label">변경신청승인</p>
+                                                                            <p class="status_date">2025-00-00</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    
                                                     <!-- 등록된 내용이 없을시에 사용 -->
                                                     <!-- <tr><td colspan="6" class="empty">등록된 내용이 없습니다.</td></tr> -->
                                                 </tbody>
@@ -193,6 +299,36 @@
                                     </div>
                                 </div>
                                 
+                                <script>
+                                    // 페이지 열기/닫기 기능 구현
+                                    $(function(){
+                                        $(".arrow_btn").on("click", function(){
+                                            var $btn = $(this);
+                                            var $row = $btn.closest("tr[data-row]");
+                                            var rowNumber = $row.data("row");
+                                            var $detail = $("#detail-" + rowNumber);
+
+                                            var isOpen = $detail.is(":visible");
+
+                                            // 모든 detail 닫기
+                                            $(".detail_row_container td").hide();
+                                            $(".arr_btn_open").show().attr("aria-expanded","false");
+                                            $(".arr_btn_close").hide().attr("aria-expanded","false");
+
+                                            if(!isOpen){
+                                                // 선택된 행만 열기
+                                                $detail.show();
+                                                $row.find(".arr_btn_open").hide().attr("aria-expanded","true");
+                                                $row.find(".arr_btn_close").show().attr("aria-expanded","true");
+                                            }
+                                        });
+
+                                        // 초기 상태 세팅
+                                        $(".detail_row_container td").hide();
+                                        $(".arr_btn_close").hide().attr("aria-expanded","false");
+                                        $(".arr_btn_open").attr("aria-expanded","false");
+                                    });
+                                </script>
 
                                 
                             </div>
