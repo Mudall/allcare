@@ -123,7 +123,10 @@
                                                         </colgroup>
                                                         <tbody>
                                                             <tr class="ptcp_form_uni">
-                                                                <th scope="row">참여 대학</th>
+                                                                <th scope="row">
+                                                                    <span class="req_mark">참여 대학</span>
+                                                                    <span class="sr_only">필수 입력</span>
+                                                                </th>
                                                                 <td colspan="3">
                                                                     <div class="box_table_group zipcode_area">
                                                                         <div class="cell">
@@ -195,7 +198,7 @@
                                                                 <td>
                                                                     <span class="box_ipt new_ipt">
                                                                         <label for="stdId" class="sr_only">학번</label>
-                                                                        <input type="text" class="input_txt newinput_w200" id="stdId" name="stdId" placeholder="학번을 입력하세요." title="학번 입력" pattern="[0-9a-zA-Z가-힣]+" value="202500010001">
+                                                                        <input type="text" class="input_txt newinput_w200" id="stdId" name="stdId" placeholder="학번을 입력하세요." title="학번 입력" pattern="[0-9a-zA-Z가-힣]+" value="">
                                                                         <button type="button" class="newbtn_del ico16_delete" aria-label="학번 입력내용 삭제">
                                                                             <span class="blind">삭제</span>
                                                                         </button>
@@ -212,8 +215,8 @@
                                                                     <div class="new_selectbox">
                                                                         <label for="grade" class="sr_only">학년 선택</label>
                                                                         <select id="grade" name="grade" title="학년 선택">
-                                                                            <option disabled>선택</option>
-                                                                            <option value="1" selected>1학년</option>
+                                                                            <option disabled selected>선택</option>
+                                                                            <option value="1">1학년</option>
                                                                             <option value="2">2학년</option>
                                                                             <option value="3">3학년</option>
                                                                             <option value="4">4학년</option>
@@ -256,7 +259,7 @@
                                                                         <label for="status" class="sr_only">상태 선택</label>
                                                                         <select id="status" name="status" title="상태 선택">
                                                                             <option disabled selected>선택</option>
-                                                                            <option value="enrolled" selected>재학</option>
+                                                                            <option value="enrolled">재학</option>
                                                                             <option value="graduated">졸업</option>
                                                                             <option value="expected">졸업예정</option>
                                                                         </select>
