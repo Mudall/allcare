@@ -310,12 +310,12 @@
 
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="tgregionType3" name="tgregionType" value="">
-                                                                        <label for="tgcompanyType6">
+                                                                        <label for="tgregionType3">
                                                                             <span class="label_text">기타지역</span>
                                                                             <div class="box_table_group">
                                                                                 <div class="cell">
                                                                                     <span class="box_ipt new_ipt">
-                                                                                        <input type="text" id="tgregion" class="input_txt" title="기타지역명" readonly="" placeholder="" disabled>
+                                                                                        <input type="text" id="tgregionEtc" class="input_txt" title="기타지역명" readonly="" placeholder="" disabled>
                                                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                                                     </span>
                                                                                 </div>
@@ -372,12 +372,12 @@
 
                                                                     <div class="new_radio_item">
                                                                         <input type="radio" id="tgcompanyType6" name="tgcompanyType" value="" checked>
-                                                                        <label for="tgcompanyType gap_box046">
+                                                                        <label for="tgcompanyType6">
                                                                             <span class="label_text">기타</span>
                                                                             <div class="box_table_group">
                                                                                 <div class="cell">
                                                                                     <span class="box_ipt new_ipt">
-                                                                                        <input type="text" id="tgcomapny" class="input_txt" title="목표기업군명" placeholder="" value="강소기업">
+                                                                                        <input type="text" id="tgcompanyTypeEtc" class="input_txt" title="목표기업군명" placeholder="" value="강소기업">
                                                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                                                     </span>
                                                                                 </div>
@@ -561,7 +561,7 @@
                                                                 <td colspan="3">
                                                                     <div class="text_form_box">
                                                                         <div class="text_form_inner">
-                                                                            <textarea id="" name="interestArea" maxlength="1000" aria-describedby="interestHelp interestCount" placeholder="세부활동 내용을 작성해 주세요." >입력한 내용 TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST</textarea>
+                                                                            <textarea placeholder="세부활동 내용을 작성해 주세요." >입력한 내용 TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST</textarea>
                                                                         </div>
                                                                         <div class="text_info">
                                                                             <p class="sr_only" id="interestHelp">최대 1,000 Byte까지 입력 가능합니다.</p>
@@ -646,6 +646,20 @@
                                                     $wrapper.append($clone);
                                                 });
                                             });
+
+                                            // 기타지역 input 입력 활성화
+                                            $(function(){
+                                                $("input[name='tgregionType']").on("change", function(){
+                                                    var $etcInput = $("#tgregionEtc");
+
+                                                    if($("#tgregionType3").is(":checked")) {
+                                                        $etcInput.prop("disabled", false).removeAttr("readonly").focus();
+                                                    } else {
+                                                        $etcInput.prop("disabled", true).attr("readonly", true).val("");
+                                                    }
+                                                });
+                                            });
+
                                         </script>
 
 
