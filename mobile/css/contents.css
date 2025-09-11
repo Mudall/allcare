@@ -568,7 +568,6 @@
 
 /* 빌드업 - 경력개발로드맵_목록 (UI_ADHPCdM01)*/
 
-
 /* 빌드업 - 경력개발로드맵_등록 (UI_ADHPCdS02)*/
 
 /* 빌드업 - 경력개발로드맵_수정 (UI_ADHPCdS03) */
@@ -613,8 +612,6 @@
 
 /* 점프업 - IAP관리_조회(변경제출)(UI_ADHPCfS07) */
 
-/* 점프업 - IAP결과관리_목록 (UI_ADHPCgM01) */
-
 /* 점프업 - IAP결과관리_목록(UI_ADHPCgM01) */
 
 /* 점프업 - IAP결과관리_등록(제출 및 저장전) (UI_ADHPCgM02) */
@@ -632,6 +629,19 @@
 /* [팝업] 구직활동팝업 (UI_ADHPChP03) */
 
 /* [팝업] 부정수급 방지 확인서 (UI_ADHPChP04) */
+.allcare .newpop_page .commitment_inner {padding: 24px 20px;}
+.allcare .newpop_page .commitment_inner .commitment_htit {font-size: 18px; color: #333; font-weight: 600; line-height: 28px;}
+.allcare .newpop_page .commitment_list_wrap {border: 1px solid #ddd; border-radius: 4px; padding: 16px 12px;}
+.allcare .newpop_page .commitment_list_wrap+.commitment_list_wrap {margin-top: 24px;}
+.allcare .newpop_page .commitment_list_tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.allcare .newpop_page .commitment_list_wrap ul {margin-top: 8px;}
+.allcare .newpop_page .commitment_list_wrap ul li {padding-left: 24px; position: relative; font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.allcare .newpop_page .commitment_list_wrap ul li::after {content: ''; position: absolute; left: 10px; top: 12px; width: 3px; height: 3px; border-radius: 50%; background-color: #333; display: block;}
+.allcare .newpop_page .commitment_list_wrap ul li .txt_red {color: #e0024b;}
+.allcare .newpop_page .commitment_notice_wrap {background-color: #f8f8f8; padding: 16px 12px;}
+.allcare .newpop_page .commitment_notice_wrap p {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.allcare .newpop_page .commitment_notice_wrap .txt_blue {color: var(--col_blue); font-weight: 600;}
+
 
 /* 포인트관리_수정(저장후제출전) (UI_ADHPChS05) */
 
