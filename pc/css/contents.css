@@ -29,8 +29,7 @@
 .allcare .txt_red {color: #ee2e62;}
 .allcare .txt_regular {font-weight: 400;}
 .allcare table div, .allcare table label, .allcare table ul li, .allcare table p {font-size: 15px;}
-.allcare button span {font-size: 14px;}
-
+.allcare table button span {font-size: 14px;}
 
 /* 250820 수정 */
 .allcare_popup.new_popup * { letter-spacing: -0.02em;}
