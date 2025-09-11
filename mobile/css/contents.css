@@ -662,7 +662,80 @@
 .mypage .progmg.allcare .box_group_wrap .paragraph .toggle .icon { display: block; width: 16px; height: 16px; background: url('../images/mypage/ico16_line_right_filled.svg') no-repeat center / contain;}
 
 
+/* 빌드업 - 경력개발로드맵_수정(제출후_보완요청) (UI_ADHPCdS05) */
+
+/* 빌드업 - 경력개발로드맵_수정(제출승인후-변경신청) (UI_ADHPCdS06) */
+
+/* 빌드업 - 경력개발로드맵_조회(변경신청후-회수) (UI_ADHPCdS07) */
+
+/* 점프업 - 참여신청서조회 (UI_ADHPCbM10) */
+
+/* 점프업 - 상담이력_목록 (UI_ADHPCcM02) */
+
+/* 점프업 - 취업준비도검사_목록 (UI_ADHPCeM01) */
+
+/* 점프업 - 취업준비도검사_ST1 (UI_ADHPCeS02)*/
+
+/* 점프업 - 취업준비도검사_ST2 (UI_ADHPCeS03) */
+
+/* 점프업 - 취업준비도검사_ST3 (UI_ADHPCeS04) */
+
+/* 점프업 - 취업준비도검사_ST4 (UI_ADHPCeS05) */
+
+/* 점프업 - 취업준비도검사_ST5 (UI_ADHPCeS06) */
+
+/* 점프업 - 취업준비도검사_조회	(UI_ADHPCeS07) */
+
+/* 점프업 - IAP관리 목록 (UI_ADHPCfM01)  */
+
+/* 점프업 - IAP관리_등록 (UI_ADHPCfS02) */
+
+/* 점프업 - IAP관리_조회/수정(저장) (UI_ADHPCfS03) */
+
+/* 점프업 - IAP관리_조회(제출) (UI_ADHPCfS04) */
+
+/* 점프업 - IAP관리_수정(보완요청_제출후) (UI_ADHPCfS05)*/
+
+/* 점프업 - IAP관리_수정(변경신청_승인후)	(UI_ADHPCfS06) */
+
+/* 점프업 - IAP관리_조회(변경제출)(UI_ADHPCfS07) */
+
+/* 점프업 - IAP결과관리_목록(UI_ADHPCgM01) */
+
+/* 점프업 - IAP결과관리_등록(제출 및 저장전) (UI_ADHPCgM02) */
+
+/* 점프업 - IAP결과관리_수정(저장후 제출전) (UI_ADHPCgM03) */
+
+/* 점프업 - IAP결과관리_조회(제출후) (UI_ADHPCgM04) */
+
+/* 점프업_IAP결과관리_수정(보완요청_제출후)	(UI_ADHPCgM05) */
+
+/* 점프업 - 포인트관리_목록 (UI_ADHPChM01) */
+
+/* 점프업 - 포인트신청관리_신청(등록) (UI_ADHPChM02) */
+
+/* [팝업] 구직활동팝업 (UI_ADHPChP03) */
+
+/* [팝업] 부정수급 방지 확인서 (UI_ADHPChP04) */
+.allcare .newpop_page .commitment_inner {padding: 24px 20px 40px;}
+.allcare .newpop_page .commitment_inner .commitment_htit {font-size: 18px; color: #333; font-weight: 600; line-height: 28px;}
+.allcare .newpop_page .commitment_list_wrap {border: 1px solid #ddd; border-radius: 4px; padding: 16px 12px;}
+.allcare .newpop_page .commitment_list_wrap+.commitment_list_wrap {margin-top: 24px;}
+.allcare .newpop_page .commitment_list_tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.allcare .newpop_page .commitment_list_wrap ul {margin-top: 8px;}
+.allcare .newpop_page .commitment_list_wrap ul li {padding-left: 24px; position: relative; font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.allcare .newpop_page .commitment_list_wrap ul li::after {content: ''; position: absolute; left: 10px; top: 12px; width: 3px; height: 3px; border-radius: 50%; background-color: #333; display: block;}
+.allcare .newpop_page .commitment_list_wrap ul li .txt_red {color: #e0024b;}
+.allcare .newpop_page .commitment_notice_wrap {background-color: #f8f8f8; padding: 16px 12px;}
+.allcare .newpop_page .commitment_notice_wrap p {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.allcare .newpop_page .commitment_notice_wrap .txt_blue {color: var(--col_blue); font-weight: 600;}
 
 
+/* 포인트관리_수정(저장후제출전) (UI_ADHPChS05) */
 
+/* 포인트관리_조회(제출후) (UI_ADHPChS08)	 */
+
+/* 포인트관리_조회(보완요청) (UI_ADHPChS07)	*/
+
+/* 포인트관리_조회(승인, 미지급, 환급) (UI_ADHPChS08) */
 
