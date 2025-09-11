@@ -28,6 +28,9 @@
 .allcare .icon_add .num02 { background: url('../images/mypage/ico24_member_register.svg') no-repeat;}
 .allcare .txt_red {color: #ee2e62;}
 .allcare .txt_regular {font-weight: 400;}
+.allcare table div, .allcare table label, .allcare table ul li, .allcare table p {font-size: 15px;}
+.allcare button span {font-size: 14px;}
+
 
 /* 250820 수정 */
 .allcare_popup.new_popup * { letter-spacing: -0.02em;}
@@ -134,7 +137,7 @@
 
 
 /* [팝업] 운영대학 목록 - 프로그램 조회 팝업 (UI_ADHPAaM02) */ 
-.allcare_popup.new_popup .uni_prog_tool .search_table .new_th {font-size: 16px; font-weight: 600; color: #333; line-height: 28px; }
+.allcare_popup.new_popup .uni_prog_tool .search_table .new_th {font-size: 15px; font-weight: 600; color: #333; line-height: 28px; }
 .allcare_popup.new_popup .uni_prog_tool .new_table tr th {padding: 12px 20px;}
 .allcare_popup.new_popup .uni_prog_tool .new_table tr td {padding: 24px 20px;}
 .allcare_popup.new_popup .uni_prog_tool .new_table tr th:first-child, 
@@ -915,5 +918,4 @@
 .mypage .progmg.allcare .table_unselect input[type='text'],
 .mypage .progmg.allcare .preapply_selfchk_wrap .table_unselect .radio_input_item input[type='text'].focus_on {background-color: #f5f5f5;}
 .mypage .progmg.allcare input.money_amount {text-align: right;}
-.allcare table div, .allcare table label, .allcare table ul li, .allcare table p {font-size: 15px;}
-.allcare button span {font-size: 14px;}
+
