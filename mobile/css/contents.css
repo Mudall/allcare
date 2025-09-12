@@ -498,12 +498,13 @@
 .mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group:first-child {padding-top: 0;} 
 .mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group:last-child {padding-bottom: 0;} 
 .mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group + .prog_group {border-top: 1px solid #eee;}
-.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group dt {display: flex; gap: 4px; margin-bottom: 12px;} 
-.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group dt span {width: 24px; text-align: center; font-size: 16px; color: var(--col_blue); line-height: 24px; font-weight: 600;} 
-.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group dt p {font-size: 16px; color: #333; line-height: 24px; font-weight: 600;} 
-.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group dt .req_box p.req_txt {color: #ee2e62; font-weight: 400; font-size: 14px;} 
-.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group dd .label_text {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
-.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group dd li+li {margin-top: 12px;}
+.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dt {display: flex; gap: 4px; margin-bottom: 12px;} 
+.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dt span {min-width: 24px; text-align: center; white-space: nowrap; font-size: 16px; color: var(--col_blue); line-height: 24px; font-weight: 600;}
+.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dt .req_box { flex: 1;}
+.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dt p {font-size: 16px; color: #333; line-height: 24px; font-weight: 600;} 
+.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dt .req_box p.req_txt {color: #ee2e62; font-weight: 400; font-size: 14px;} 
+.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dd .label_text {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dd li+li {margin-top: 12px;}
 
 
 /* 상담이력 - 목록 없음 (UI_ADHPAeM01) */
@@ -663,6 +664,17 @@
 .mypage .progmg.allcare .info_txt { margin-top: 4px; font-size: 14px;}
 
 /* 점프업 - 취업준비도검사_ST1 (UI_ADHPCeS02)*/
+.mypage .progmg.allcare .job_step_body { text-align: center;}
+.mypage .progmg.allcare .job_step_wrap { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; margin: 0 auto; padding: 0 20px; background-color: #f5f5f5; border-radius: 20px;}
+.mypage .progmg.allcare .job_step_wrap li { display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .job_step_wrap li .round { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; font-size: 12px; color:var(--col_p); border: 1px solid #eee; background-color: var(--col_white); border-radius: 50%;}
+.mypage .progmg.allcare .job_step_wrap li .text { display: none; padding-right: 8px; font-weight: 600; white-space: nowrap;}
+.mypage .progmg.allcare .job_step_wrap li[aria-current="step"] .round { color: var(--col_white); background-color: var(--col_blue);}
+.mypage .progmg.allcare .job_step_wrap li[aria-current="step"] .text { display: flex;}
+.mypage .progmg.allcare .rep_tit { display: flex; align-items: center; padding: 12px; background-color: var(--col_box_bg); border-radius: 8px;}
+.mypage .progmg.allcare .rep_tit p { font-weight: 600; color: var(--col_p);}
+.mypage .progmg.allcare .prog_wrap .rep_list >li { padding-bottom: 16px; border-bottom: 1px solid var(--col_border);}
+.mypage .progmg.allcare .prog_wrap .rep_list >li:last-child { border-bottom: none;}
 
 /* 점프업 - 취업준비도검사_ST2 (UI_ADHPCeS03) */
 
