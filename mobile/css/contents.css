@@ -522,10 +522,10 @@
 .mypage .progmg.allcare .prog_list_sec.prg_spec .board_header .count { font-size: 14px;;}
 .mypage .progmg.allcare .prog_list_sec.prg_spec .board_header .year { font-size: 14px;}
 .mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item {padding: 16px 0; border-bottom: 1px solid #eee;}
-.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item dl .data_group {display: flex; gap: 12px;}
-.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item dl .data_group + .data_group {margin-top: 4px;}
-.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item dl .data_group dt {width: 100px; font-size: 14px; line-height: 24px; color: #555; font-weight: 400;}
-.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item dl .data_group dd {font-size: 14px; line-height: 24px; color: #333; font-weight: 400;}
+.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item .data_group {display: flex; gap: 12px;}
+.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item .data_group + .data_group {margin-top: 4px;}
+.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item .data_group .dt {width: 100px; font-size: 14px; line-height: 24px; color: #555; font-weight: 400;}
+.mypage .progmg.allcare .prog_list_sec.prg_spec .prog_item .data_group .dd {font-size: 14px; line-height: 24px; color: #333; font-weight: 400;}
 
 
 
@@ -564,21 +564,6 @@
 .mypage .progmg.allcare .formbox .btn { margin: 12px 0;} 
 
 /* 빌드업 - 상담이력_목록 (UI_ADHPCcM01) */
-.mypage .progmg.allcare .robd_list .item { margin-top: -1px; padding: 20px 16px; border: 1px solid var(--col_btn); border-radius: 4px;}
-.mypage .progmg.allcare .robd_list .item ~ .item { margin-top: 8px;}
-.mypage .progmg.allcare .robd_list .item_ul li { display: flex; align-items: center; height: 24px;}
-.mypage .progmg.allcare .robd_list .item_ul li ~ li { margin-top: 4px;}
-.mypage .progmg.allcare .robd_list .item_ul li .dt { width: 100px; font-size: 14px; color: var(--col_p);}
-.mypage .progmg.allcare .robd_list .item_ul li .dd { flex: 1; margin-left: 12px; font-size: 14px;}
-.mypage .progmg.allcare .robd_list .item_btn { display: flex; align-items: center; justify-content: space-between; width: 100%; margin-top: 16px;}
-.mypage .progmg.allcare .robd_list .item_btn span { display: block; font-size: 16px; font-weight: 600;}
-.mypage .progmg.allcare .robd_list .item_btn .icon { display: block; width: 16px; height: 16px; background: url('../images/mypage/ico16_line_right_filled.svg') no-repeat center / contain;}
-.mypage .progmg.allcare .robd_list .item_btn[aria-expanded="true"] .icon { transform: rotate(180deg);}
-.mypage .progmg.allcare .robd_list .item_consult { margin-top: 16px; padding: 16px; background-color: #f8f8f8; border-radius: 8px;}
-.mypage .progmg.allcare .robd_list .item_consult li { display: flex; align-items: center; height: 24px;}
-.mypage .progmg.allcare .robd_list .item_consult li ~ li { margin-top: 4px;}
-.mypage .progmg.allcare .robd_list .item_consult li .dt { width: 80px; font-size: 14px; color: var(--col_p);}
-.mypage .progmg.allcare .robd_list .item_consult li .dd { flex: 1; margin-left: 12px; font-size: 14px;}
 
 
 /* 빌드업 - 경력개발로드맵_목록있음 (UI_ADHPCdM01) */
@@ -673,6 +658,9 @@
 /* 점프업 - 상담이력_목록 (UI_ADHPCcM02) */
 
 /* 점프업 - 취업준비도검사_목록 (UI_ADHPCeM01) */
+.mypage .progmg.allcare .notice_banner_area { padding: 16px; background-color: #f3f8ff; border-radius: 8px;}
+.mypage .progmg.allcare .notice_banner_area .desc { margin-top: 8px;} 
+.mypage .progmg.allcare .info_txt { margin-top: 4px; font-size: 14px;}
 
 /* 점프업 - 취업준비도검사_ST1 (UI_ADHPCeS02)*/
 

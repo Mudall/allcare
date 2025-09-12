@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - 취업준비도검사_ST1</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <!-- notice start -->
+                        <div class="top_notice">
+                            <i></i>
+                            <p><strong>각 문항은 하나의 답변만 가능합니다.</strong></p>
+                            <button type="button" class="notice_expand ui-layer" data-my-layer="noticeLayer"><span class="blind">공지사항 열기</span></button>
+                        </div>
+                        <div class="bottom_layer type_title" tabindex="0" id="noticeLayer" style="z-index: 140; display: none;">
+                            <strong class="title">안내</strong>
+                            <div class="layer_contents" style="height: 216px;">
+                                <div class="notice_default">
+                                    <ul class="list_style">
+                                        <li><strong>각 문항은 하나의 답변만 가능합니다.</strong></li>
+                                        <li><strong>각 문항별 점수는 다음과 같습니다.<br>: 전혀 그렇지 않다(1점), 그렇지 않은 편이다(2점), 보통이다(3점), 그렇다(4점), 매우 그렇다(5점)</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="layer_close">
+                                <span class="blind">레이어 닫기</span>
+                            </button>
+                        </div>
+                        <!-- notice end -->
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li><button type="button" aria-selected="false">참여신청서</button></li>
+                                <li><button type="button" aria-selected="false">상담이력</button></li>
+                                <li class="on"><button type="button" aria-selected="true">취업준비도검사</button></li>
+                                <li><button type="button" aria-selected="false">IAP관리</button></li>
+                                <li><button type="button" aria-selected="false">IAP결과관리</button></li>
+                                <li><button type="button" aria-selected="false">포인트신청관리</button></li>
+                            </ul>
+                        </div>
+
+                        <ul class="job_step_wrap mt24">
+                            <li class="active" aria-current="step"><span class="round">1</span> <span class="text">취업목표설정 검사</span></li>
+                            <li class="connect"><span class="round">2</span> <span class="text">취업정보 탐색 검사</span></li>
+                            <li class="connect"><span class="round">3</span> <span class="text">취업기술 습득 검사</span></li>
+                            <li class="connect"><span class="round">4</span> <span class="text">취업경력 준비 검사</span></li>
+                            <li class="connect"><span class="round">5</span> <span class="text">검사결과</span></li>
+                        </ul>
+
+                        <section class="prog_apply_sec prog_qna_sec" >
+                            <h3 class="t2_sb">검사문항</h3>
+                            <div>
+                                <h4 class="prog_wrap_tit">A. 취업목표 설정</h4>
+                                <p>자신의 취업목표를 합리적인 의사결정과정을 통해 구체적으로 설정하고있는 정도</p>
+                            </div>
+
+                            <div class="prog_wrap prog_qna">
+                                <h4 class="prog_wrap_tit">만족도 조사</h4>
+                                <dl>
+                                    <div class="prog_group">
+                                        <dt id="que1_label">
+                                            <span>1.</span>
+                                            <div class="req_box">
+                                                <p>프로그램이 직업 선택에 도움이 되었다.</p>
+                                                <p class="req_txt" hidden>답변을 선택해 주세요.</p>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <fieldset aria-labelledby="que3_label" class="radio_filed ">
+                                                <ul class="radio_list">
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_1-1" name="que_1" value="1">
+                                                            <label for="que_1-1">
+                                                                <span class="label_text">전혀 그렇지 않다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_1-2" name="que_1" value="2">
+                                                            <label for="que_1-2">
+                                                                <span class="label_text">그렇지 않다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_1-3" name="que_1" value="3">
+                                                            <label for="que_1-3">
+                                                                <span class="label_text">보통이다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_1-4" name="que_1" value="4">
+                                                            <label for="que_1-4">
+                                                                <span class="label_text">그렇다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_1-5" name="que_1" value="5">
+                                                            <label for="que_1-5">
+                                                                <span class="label_text">매우 그렇다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </fieldset>
+                                        </dd>
+                                    </div>
+                                    <div class="prog_group">
+                                        <dt id="que2_label">
+                                            <span>2.</span>
+                                            <div class="req_box">
+                                                <p>프로그램을 주변 지인에게 추천하실 <br>의향이 있다.</p>
+                                                <p class="req_txt" hidden>답변을 선택해 주세요.</p>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <fieldset aria-labelledby="que2_label" class="radio_filed ">
+                                                <ul class="radio_list">
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_2-1" name="que_2" value="1">
+                                                            <label for="que_2-1">
+                                                                <span class="label_text">전혀 그렇지 않다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_2-2" name="que_2" value="2">
+                                                            <label for="que_2-2">
+                                                                <span class="label_text">그렇지 않다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_2-3" name="que_2" value="3">
+                                                            <label for="que_2-3">
+                                                                <span class="label_text">보통이다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_2-4" name="que_2" value="4">
+                                                            <label for="que_2-4">
+                                                                <span class="label_text">그렇다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_2-5" name="que_2" value="5">
+                                                            <label for="que_2-5">
+                                                                <span class="label_text">매우 그렇다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </fieldset>
+                                        </dd>
+                                    </div>
+                                    <div class="prog_group">
+                                        <dt id="que3_label">
+                                            <span>3.</span>
+                                            <div class="req_box">
+                                                <p>프로그램이 직업 선택에 도움이 되었다.</p>
+                                                <p class="req_txt" hidden>답변을 선택해 주세요.</p>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <fieldset aria-labelledby="que3_label" class="radio_filed ">
+                                                <ul class="radio_list">
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_3-1" name="que_3" value="1">
+                                                            <label for="que_3-1">
+                                                                <span class="label_text">전혀 그렇지 않다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_3-2" name="que_3" value="2">
+                                                            <label for="que_3-2">
+                                                                <span class="label_text">그렇지 않다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_3-3" name="que_3" value="3">
+                                                            <label for="que_3-3">
+                                                                <span class="label_text">보통이다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_3-4" name="que_3" value="4">
+                                                            <label for="que_3-4">
+                                                                <span class="label_text">그렇다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="new_radio_item">
+                                                            <input type="radio" id="que_3-5" name="que_3" value="5">
+                                                            <label for="que_3-5">
+                                                                <span class="label_text">매우 그렇다</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </fieldset>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </section>
+
+                        <div class="prog_wrap_end mt16">
+                            <div class="apply_btn_box mt24" id="surveyButtonWrap">
+                                <button type="button" class="btn type03 large">목록</button>
+                                <button type="button" class="btn type01 fill large" id="submitSurveyBtn">제출</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function submitSurvey() {
+                        const questions = document.querySelectorAll('.prog_group');
+                        let allAnswered = true;
+
+                        questions.forEach(q => {
+                            const radios = q.querySelectorAll('input[type="radio"]');
+                            const selected = q.querySelector('input[type="radio"]:checked');
+                            const msg = q.querySelector('.req_txt');
+
+                            if (radios.length > 0 && !selected) {
+                                allAnswered = false;
+                                msg?.removeAttribute('hidden');
+                            } else {
+                                msg?.setAttribute('hidden', 'true');
+                            }
+                        });
+
+                        if (!allAnswered) {
+                            alert('모든 항목에 답변해 주세요.');
+                            return;
+                        }
+
+                        if (!confirm('만족도 조사를 제출하겠습니까?')) return;
+                        alert('제출하였습니다.');
+                    }
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        document.getElementById('submitSurveyBtn')?.addEventListener('click', submitSurvey);
+                        
+                        // 라디오 선택 시 오류 메시지 숨기기
+                        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                            radio.addEventListener('change', () => {
+                                radio.closest('.prog_group').querySelector('.req_txt')?.setAttribute('hidden', 'true');
+                            });
+                        });
+                    });
+                </script>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>

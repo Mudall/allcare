@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>빌드업 - 상담이력_목록</title>
+        <title>점프업 - 상담이력_목록있음</title>
         <script src="../mobile/include/js/head.js"></script>
         <script src="../mobile/include/js/mobile-ui-util.js"></script>
         <script src="../mobile/include/js/mobile-ui.js"></script>
@@ -27,7 +27,7 @@
                             <ul role="tablist">
                                 <li class="on"><button type="button" role="tab" aria-selected="true">참여신청서</button></li>
                                 <li><button type="button" role="tab" aria-selected="false">상담이력</button></li>
-                                <li><button type="button" role="tab" aria-selected="false">경력개발로드맵</button></li>
+                                <li><button type="button" role="tab" aria-selected="false">취업준비도 검사</button></li>
                             </ul>
                         </div>
 
@@ -39,7 +39,6 @@
                                 </div>
                             </div>
 
-                            <!-- table -->
                             <div class="career_list">
                                 <ul>
                                     <!-- 반복 -->
@@ -78,6 +77,12 @@
                                             <div class="head">
                                                 <div class="dt">상담일시</div>
                                                 <div class="dd"><time>2025-01-01 00:00</time></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="head">
+                                                <div class="dt">차기상담유형</div>
+                                                <div class="dd">AI기반 직업정보 탐색</div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -133,6 +138,12 @@
                                         </div>
                                         <div class="row">
                                             <div class="head">
+                                                <div class="dt">차기상담유형</div>
+                                                <div class="dd">AI기반 직업정보 탐색</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="head">
                                                 <div class="dt">차기상담일시</div>
                                                 <div class="dd"><time>2025-01-01 00:00</time></div>
                                             </div>
@@ -183,6 +194,12 @@
                                         </div>
                                         <div class="row">
                                             <div class="head">
+                                                <div class="dt">차기상담유형</div>
+                                                <div class="dd">AI기반 직업정보 탐색</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="head">
                                                 <div class="dt">차기상담일시</div>
                                                 <div class="dd"><time>2025-01-01 00:00</time></div>
                                             </div>
@@ -195,167 +212,6 @@
                                         </div>
                                     </li>
                                 </ul>
-
-                                <!-- 등록 된 상담이력이 없을경우 -->
-                                <div class="item_no">
-                                    <div class="icon"></div>
-                                    <div class="inner_contents_txt mt24">
-                                        <p class="desc">등록된 상담이력이 없습니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="paging"></div>
-
-                            <div class="robd_list">
-                                <!-- 반복 -->
-                                <div class="item">
-                                    <h3 class="t4_sb">기본정보</h3>
-                                    <ul class="item_ul">
-                                        <li>
-                                            <div class="dt">상담회차</div>
-                                            <div class="dd">1회차</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">참여유형</div>
-                                            <div class="dd">빌디업 프로젝트</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담방법</div>
-                                            <div class="dd">대면</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담시간</div>
-                                            <div class="dd">120시간</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담유형</div>
-                                            <div class="dd">AI기반 직업정보 탐색</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담일시</div>
-                                            <div class="dd"><time>2025-01-01 00:00</time></div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담사명</div>
-                                            <div class="dd">김상담</div>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="item_btn" aria-expanded="false" aria-controls="consultList1"> <!-- 활성화시 aria-expanded="true" 로 변경해주세요 -->
-                                        <span>차기상담</span>
-                                        <i class="icon"></i>
-                                    </button>
-                                    <div id="consultList1" class="item_consult" hidden>
-                                        <ul>
-                                            <li>
-                                                <div class="dt">상담유형</div>
-                                                <div class="dd">AI기반 직업정보 탐색</div>
-                                            </li>
-                                            <li>
-                                                <div class="dt">상담일시</div>
-                                                <div class="dd">2025-01-02 00:00</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <h3 class="t4_sb">기본정보</h3>
-                                    <ul class="item_ul">
-                                        <li>
-                                            <div class="dt">상담회차</div>
-                                            <div class="dd">1회차</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">참여유형</div>
-                                            <div class="dd">빌디업 프로젝트</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담방법</div>
-                                            <div class="dd">대면</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담시간</div>
-                                            <div class="dd">120시간</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담유형</div>
-                                            <div class="dd">AI기반 직업정보 탐색</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담일시</div>
-                                            <div class="dd"><time>2025-01-01 00:00</time></div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담사명</div>
-                                            <div class="dd">김상담</div>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="item_btn" aria-expanded="true" aria-controls="consultList1">
-                                        <span>차기상담</span>
-                                        <i class="icon"></i>
-                                    </button>
-                                    <div id="consultList1" class="item_consult">
-                                        <ul>
-                                            <li>
-                                                <div class="dt">상담유형</div>
-                                                <div class="dd">AI기반 직업정보 탐색</div>
-                                            </li>
-                                            <li>
-                                                <div class="dt">상담일시</div>
-                                                <div class="dd">2025-01-02 00:00</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <h3 class="t4_sb">기본정보</h3>
-                                    <ul class="item_ul">
-                                        <li>
-                                            <div class="dt">상담회차</div>
-                                            <div class="dd">1회차</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">참여유형</div>
-                                            <div class="dd">빌디업 프로젝트</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담방법</div>
-                                            <div class="dd">대면</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담시간</div>
-                                            <div class="dd">120시간</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담유형</div>
-                                            <div class="dd">AI기반 직업정보 탐색</div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담일시</div>
-                                            <div class="dd"><time>2025-01-01 00:00</time></div>
-                                        </li>
-                                        <li>
-                                            <div class="dt">상담사명</div>
-                                            <div class="dd">김상담</div>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="item_btn" aria-expanded="false" aria-controls="consultList1">
-                                        <span>차기상담</span>
-                                        <i class="icon"></i>
-                                    </button>
-                                    <div id="consultList1" class="item_consult" hidden>
-                                        <ul>
-                                            <li>
-                                                <div class="dt">상담유형</div>
-                                                <div class="dd">AI기반 직업정보 탐색</div>
-                                            </li>
-                                            <li>
-                                                <div class="dt">상담일시</div>
-                                                <div class="dd">2025-01-02 00:00</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
 
                                 <!-- 등록 된 상담이력이 없을경우 -->
                                 <div class="item_no">

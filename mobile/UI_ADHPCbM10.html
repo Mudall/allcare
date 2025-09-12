@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>참여신청서 - 회수_수정</title>
+        <title>점프업 - 참여신청서 조회</title>
         <script src="../mobile/include/js/head.js"></script>
         <script src="../mobile/include/js/mobile-ui-util.js"></script>
         <script src="../mobile/include/js/mobile-ui.js"></script>
@@ -23,20 +23,10 @@
             <div class="contents">
                 <div class="mypage">
                     <div class="progmg allcare">
-                        <div class="my_ptcp_from">
-                            <div class="box_table_wrap">
-                                <div class="formbox">
-                                    <div class="form_box">
-                                        <span class="data_txt"><span class="bold_600">잡케어 보고서</span></span>
-                                        <span class="date">2021-02-02</span>
-                                        <button type="button" class="btn semilarge line_blue">잡케어 서비스 바로가기</button>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <h3 class="t1_sb icon_add mt24"><i class="icon num02"></i><span>참여신청서 작성</span></h3>
-                            <div class="box_group_wrap mt16">
-                                <h3 class="t2_sb">참여자 정보</h3>
+                        <div class="my_ptcp_from">
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb mt24">참여자 정보</h3>
                                 <div class="box_table_wrap top_linewrap">
                                     <div>
                                         <div class="dt">성명</div>
@@ -54,9 +44,6 @@
                                         <div class="dt">주소</div>
                                         <div class="dd">(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</div>
                                     </div>
-                                    <div class="box_btn_wrap ml_auto mt24">
-                                        <a href="#" class="btn semilarge type03">회원정보 수정</a>
-                                    </div>
                                 </div>
                             </div>
 
@@ -64,33 +51,28 @@
                                 <h3 class="t2_sb">참여대학, 참여자 분류</h3>
                                 <div class="box_table_wrap top_linewrap">
                                     <div>
-                                        <div class="dt req_mark">참여 대학</div>
+                                        <div class="dt"> 참여대학</div>
                                         <div class="dd">
-                                            <div class="box_table_group">
-                                                <div class="cell">
-                                                    <span class="box_ipt new_ipt">
-                                                        <input type="text" id="bassAdrTxt" class="input_txt" title="대학교 명" readonly="" placeholder="AAA 대학교">
-                                                    </span>
-                                                </div>
-                                                <button type="button" class="btn medium type01 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog">검색</button>
-                                            </div>
+                                            한국대학교
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="dt req_mark">참여자 분류</div>
+                                        <div class="dt">참여자 분류</div>
                                         <div class="dd">
                                             <fieldset class="radio_filed">
                                                 <legend class="sr_only">참여자 분류 선택</legend>
                                                 <div class="new_radio_item">
-                                                    <input type="radio" id="customType1" name="customType" value="graduate" checked>
+                                                    <input type="radio" id="customType1" name="customType" value="graduate" checked disabled>
                                                     <label for="customType1" class="custom_radio">
+                                                        <span class="radio_ui" aria-hidden="true"></span>
                                                         <span class="sr_only">선택지 1:</span>
                                                         <span class="label_text">&#9312; 2024년 재학생 맞춤형 고용서비스 사업 운영 대학(원)의 재학·휴학·수료 청년</span>
                                                     </label>
                                                 </div>
                                                 <div class="new_radio_item">
-                                                    <input type="radio" id="customType2" name="customType" value="youth">
+                                                    <input type="radio" id="customType2" name="customType" value="youth" disabled>
                                                     <label for="customType2" class="custom_radio">
+                                                        <span class="radio_ui" aria-hidden="true"></span>
                                                         <span class="sr_only">선택지 2:</span>
                                                         <span class="label_text">&#9313; &#9312;에 해당하지 않는 만 18~34세의 최종학력 고등학교 졸업 이하인 미취업(고용보험 기준) 청년</span>
                                                     </label>
@@ -105,74 +87,39 @@
                                 <h3 class="t2_sb">학적 정보</h3>
                                 <div class="box_table_wrap top_linewrap">
                                     <div>
-                                        <div class="dt req_mark"><label for="studentId">학번<span class="blind"> 필수입력</span></label></div>
+                                        <div class="dt">학번</div>
+                                        <div class="dd">20250000</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학년</div>
                                         <div class="dd">
-                                            <span class="box_ipt new_ipt">
-                                                <input type="text" id="studentId" name="studentId" placeholder="학번을 입력해 주세요." title="학번 입력" required>
-                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
-                                            </span>
+                                            1학년
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="dt req_mark"><label for="grade">학년<span class="blind"> 필수선택</span></label></div>
-                                        <div class="dd">
-                                            <select class="new_down" id="grade" name="grade" title="학년 선택" required>
-                                                <option value="" selected disabled>학년을 선택해 주세요.</option>
-                                                <option value="1">1학년</option>
-                                                <option value="2">2학년</option>
-                                                <option value="3">3학년</option>
-                                                <option value="4">4학년</option>
-                                                <option value="5">5학년</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="dt req_mark"><label for="major">전공/학과<span class="blind"> 필수입력</span></label></div>
+                                        <div class="dt">전공/학과</div>
                                         <div class="dd dd_twincell">
-                                            <div class="box_table_group">
-                                                <div class="cell">
-                                                    <span class="box_ipt new_ipt">
-                                                        <input type="text" id="major" class="input_txt" title="전공명" readonly placeholder="전공" required>
-                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="box_table_group">
-                                                <div class="cell">
-                                                    <span class="box_ipt new_ipt">
-                                                        <input type="text" id="department" class="input_txt" title="학과명" readonly placeholder="학과" required>
-                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
-                                                    </span>
-                                                </div>
-                                                <button type="button" class="btn medium type01 btnSearch" id="btnSearch" name="btnSearch" aria-haspopup="dialog">검색</button>
-                                            </div>
+                                            선택전공 / 선택학과
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="dt req_mark"><label for="status">상태<span class="blind"> 필수입력</span></label></div>
+                                        <div class="dt">상태</div>
                                         <div class="dd">
-                                            <select class="new_down" id="status" name="status" title="학적 상태 선택" required>
-                                                <option value="" selected disabled>학적 상태를 선택해 주세요.</option>
-                                                <option value="graduated">졸업</option>
-                                                <option value="expected">졸업예정</option>
-                                            </select>
+                                            재학
                                         </div>
-                                    </div>
-                                    <div>
-                                        <p class="mt16">※ 졸업 수료생은 대학 자체 기준에 따라 졸업생으로 분류될 경우 <strong class="em_red">참여 불가</strong></p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="box_group_wrap radio_view_wrap">
-                                <h3 class="t2_sb req_mark">참여 유형 선택</h3>
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">참여 유형 선택</h3>
                                 <div class="box_table_wrap top_linewrap">
                                     <div>
                                         <div class="dd">
                                             <fieldset class="radio_filed">
                                                 <legend class="sr_only">참여자 유형 선택</legend>
                                                 <div class="new_radio_item">
-                                                    <input type="radio" id="빌드업프로젝트" name="참여자유형선택" checked>
+                                                    <input type="radio" id="빌드업프로젝트" name="참여자유형선택" disabled>
                                                     <label for="빌드업프로젝트" class="custom_radio">
                                                         <span class="sr_only">선택지 1:</span>
                                                         <span class="label_title">빌드업 프로젝트</span>
@@ -180,7 +127,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="new_radio_item">
-                                                    <input type="radio" id="점프업프로젝트" name="참여자유형선택">
+                                                    <input type="radio" id="점프업프로젝트" name="참여자유형선택" checked disabled>
                                                     <label for="점프업프로젝트" class="custom_radio">
                                                         <span class="sr_only">선택지 2:</span>
                                                         <span class="label_title">점프업 프로젝트</span>
@@ -193,8 +140,8 @@
                                 </div>
                             </div>
 
-                            <div class="box_group_wrap box_agm_wrap">
-                                <h3 class="t2_sb req_mark">개인정보 이용에 대한 동의서</h3>
+                            <div class="prog_wrap prog_applysummary box_group_wrap box_agm_wrap">
+                                <h3 class="t2_sb req_mark">개인정보 수집·이용·제공에 대한 동의서</h3>
                                 <div class="agm_area">
                                     <div class="agm_box">
                                         <div class="agm_desc">
@@ -208,27 +155,110 @@
                                         <fieldset class="radio_filed radiof_type2">
                                             <legend class="sr_only">개인정보 이용에 대한 동의여부</legend>
                                             <div class="new_radio_item">
-                                                <input type="radio" id="customyes" name="custom_pv" value="yes" checked>
+                                                <input type="radio" id="customyes" name="custom_pv" value="yes" checked disabled>
                                                 <label for="customyes" class="custom_radio">
                                                     <span class="label_text">동의</span>
                                                 </label>
                                             </div>
                                             <div class="new_radio_item">
-                                                <input type="radio" id="customno" name="custom_pv" value="no">
+                                                <input type="radio" id="customno" name="custom_pv" value="no" disabled>
                                                 <label for="customno" class="custom_radio">
                                                     <span class="label_text">동의안함</span>
                                                 </label>
                                             </div>
                                         </fieldset>
                                     </div>
+
+                                    <div class="apply_summary_pv mt24">
+                                        <p>
+                                            개인정보 수집·이용·제공에 대한 동의 일자 : <br>
+                                            <time datetime="2025-08-06">2025-01-01</time>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="box_group_wrap radio_view_wrap">
+                                <h3 class="t2_sb">사업참여기간</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt">참여기간 시작일</div>
+                                        <div class="dd">2025-01-01</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">참여기간 종료일</div>
+                                        <div class="dd">2025-02-01</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prog_wrap prog_applysummary box_group_wrap box_table_wrap">
+                                <h3 class="t2_sb mb16">신청 및 처리현황</h3>
+                                <div class="apply_summary_wrap" role="region">
+                                    <div class="apply_summary_header">
+                                        <div class="apply_summary_info  mb24">
+                                            <i></i>
+                                            <p class="apply_summary_tit">현재 참여신청서 <span>인정</span> 상태 입니다.</p>
+                                            <p class="apply_summary_tel s1_r ">담당자 : 김담당 (010-0000-0000)</p>
+                                        </div>
+                                        <div class="apply_summary_action off">
+                                            <button type="button" class="apply_summary_toggle" aria-expanded="false" aria-controls="applySummaryDetail"><span>신청 및 처리현황 이력 조회</span></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                    <div class="apply_summary_inner" id="applySummaryDetail" hidden>
+                                        <ul>
+                                            <li>
+                                                <div class="apply_summary_status">
+                                                    <p class="status_label">제출</p>
+                                                    <p class="status_date">2025-00-00</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="apply_summary_status">
+                                                    <p class="status_label">인정</p>
+                                                    <p class="status_date">2025-00-00</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="apply_summary_action secon_action">
+                                            <button type="button" class="apply_summary_toggle" aria-expanded="tru" aria-controls="applySummaryDetail"><span>접기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const toggleBtns = document.querySelectorAll('.apply_summary_toggle'); 
+                                    const detailArea = document.getElementById('applySummaryDetail');
+
+                                    toggleBtns.forEach(btn => {
+                                        btn.addEventListener('click', function () {
+                                            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                                            const newState = !isExpanded;
+
+                                            toggleBtns.forEach(b => b.setAttribute('aria-expanded', String(newState)));
+
+                                            const firstBtnWrap = toggleBtns[0].closest('.apply_summary_action');
+                                            if (firstBtnWrap) {
+                                                firstBtnWrap.classList.toggle('on', newState);
+                                                firstBtnWrap.classList.toggle('off', !newState);
+                                            }
+
+                                            if (newState) {
+                                                detailArea.removeAttribute('hidden');
+                                            } else {
+                                                detailArea.setAttribute('hidden', '');
+                                            }
+                                        });
+                                    });
+                                });
+                            </script>
 
                             <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
                                 <div class="btn_box mt24">
                                     <button type="button" class="btn large type03" aria-label="신청 목록 페이지로 이동">목록</button>
-                                    <button type="button" class="btn large type03">삭제</button>
-                                    <button type="submit" class="btn large fill type01" onclick="">제출</button>
                                 </div>
                             </div>
 
