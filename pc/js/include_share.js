@@ -3,7 +3,6 @@
 
 const includes = {
     header: `
-    <header>
         <!-- #header_top -->
         <div id="header_top">
             <div class="header_lt">
@@ -491,7 +490,6 @@ const includes = {
         </div>
         <!-- //#header_bottom -->
 
-    </header>
 
     `,
     footer: `

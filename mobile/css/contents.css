@@ -699,6 +699,41 @@
 /* 점프업_IAP결과관리_수정(보완요청_제출후)	(UI_ADHPCgM05) */
 
 /* 점프업 - 포인트관리_목록 (UI_ADHPChM01) */
+.mypage .progmg.allcare .point_request_dashboard {position: relative; background-color: #f5f6fa; padding: 16px 0;}
+.mypage .progmg.allcare .point_request_dashboard::after {z-index: -1; content: ''; width: calc(100% + 2.5rem); height: 100%; background-color: #f5f6fa; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+.mypage .progmg.allcare .point_request_dashboard>li+li {margin-top: 24px;}
+.mypage .progmg.allcare .point_request_dashboard>li .count {color: var(--col_blue); font-weight: 600;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box {margin-top: 8px; background-color: #fff; border: 1px solid #eee; border-radius: 4px; padding: 16px;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li {padding: 8px 0; display: flex; align-items: center; justify-content: space-between;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li+li {border-top: 1px solid transparent; background-image: repeating-linear-gradient( to right, #eee 0, #eee 4px, transparent 4px, transparent 8px); background-position: top; background-size: auto 1px; background-repeat: repeat-x;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li:first-child {padding-top: 0;}
+.mypage .progmg.allcare .point_request_dashboard .inner_box li:last-child {padding-bottom: 0;}
+.mypage .progmg.allcare .point_request_dashboard .inner_tit {font-size: 14px; color: #555; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .point_request_dashboard .inner_desc {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .point_request_dashboard .inner_desc .count {color: #333; font-weight: 600;}
+.mypage .progmg.allcare .twin_total_hd {margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;}
+.mypage .progmg.allcare .twin_total_hd p span {color: var(--col_blue); font-weight: 600;}
+.mypage .progmg.allcare .point_request_list {border: 1px solid #eee; border-radius: 4px; padding: 20px 16px;}
+.mypage .progmg.allcare .point_request_list+.point_request_list {margin-top: 16px;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item+.prcont_list_item {margin-top: 16px;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_tit {display: flex; justify-content: space-between; align-items: center;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_tit p {font-size: 16px; color: #333; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_inner_ul {margin-top: 8px;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_inner_li {display: flex; align-items: center;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_inner_li+.prcont_inner_li {margin-top: 4px;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_inner_tit {width: 100px;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_inner_tit p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_inner_desc {width: calc(100% - 100px);}
+.mypage .progmg.allcare .point_request_list .prcont_list_item .prcont_inner_desc p {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .point_request_wrap .prcont_list_item .toggle_btn_box button {width: 16px; height: 16px; display: none; background: url('../images/mypage/arrow16_down.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .point_request_wrap .prcont_list_item .toggle_btn_box button.toggle_btn_close {background-image: url('../images/mypage/arrow16_top_active.svg');}
+.mypage .progmg.allcare .point_request_wrap .prcont_list_item .toggle_btn_box button.active {display: block;}
+.mypage .progmg.allcare .point_request_list .toggle_item .prcont_inner_ul {margin-top: 16px; background-color: #f8f8f8; border-radius: 8px; padding: 16px;}
+.mypage .progmg.allcare .point_request_wrap .point_request_btn {margin-top: 16px; }
+.mypage .progmg.allcare .point_request_wrap .point_request_btn button {height: 40px;}
+.mypage .progmg.allcare .point_request_wrap .point_request_btn button span {color: var(--col_blue)}
+.mypage .progmg.allcare .bot_8x {position: relative; margin-top: 24px; padding-top: 24px; border-top: 8px solid #f3f5f6;}
+.mypage .progmg.allcare .bot_8x::after {content: ''; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background-color: #f3f5f6; width: calc(100% + 2.5rem); height: 8px;}
 
 /* 점프업 - 포인트신청관리_신청(등록) (UI_ADHPChM02) */
 

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 포인트관리_목록</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+        <script src="../mobile/include/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP관리</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                <li aria-controls="" class="on"><button type="button" role="tab" aria-selected="true"><span>포인트신청관리</span></button></li>
+                            </ul>
+                        </div>
+
+                        <ul class="point_request_dashboard mt40">
+                            <li class="li_apply">
+                                <p class="tit t3_sb">신청내역 <span class="count">5건</span></p>
+                                <ul class="inner_box">
+                                    <li>
+                                        <p class="inner_tit">총 신청시간</p>
+                                        <p class="inner_desc"><span class="count">100</span> 시간</p>
+                                    </li>
+                                    <li>
+                                        <p class="inner_tit">총 신청금액</p>
+                                        <p class="inner_desc"><span class="count">1,000,000</span> 원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li_approve">
+                                <p class="tit t3_sb">승인내역 <span class="count">5건</span></p>
+                                <ul class="inner_box">
+                                    <li>
+                                        <p class="inner_tit">총 인정시간</p>
+                                        <p class="inner_desc"><span class="count">10</span> 시간</p>
+                                    </li>
+                                    <li>
+                                        <p class="inner_tit">총 지급금액</p>
+                                        <p class="inner_desc"><span class="count">1,000,000</span> 원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li_refund">
+                                <p class="tit t3_sb">환수내역 <span class="count">5건</span></p>
+                                <ul class="inner_box">
+                                    <li>
+                                        <p class="inner_tit">총 환수금액</p>
+                                        <p class="inner_desc"><span class="count">1,000,000</span> 원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="point_request_wrap bot_8x">
+                            <div class="twin_total_hd">
+                                <p class="total s1_r">전체 <span class="txt_total">1111</span>건</p>
+                                <p class="join_year s1_r">참여년도 : <span class="txt_year">2025</span>년</p>
+                            </div>
+                            <!-- table -->
+                            <ul class="point_request_ul">
+                                <li class="point_request_list">
+                                    <div class="prcont_list_item">
+                                        <div class="prcont_tit"><p>기본정보</p></div>
+                                        <ul class="prcont_inner_ul">
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>취업지원유형</p></div>
+                                                <div class="prcont_inner_desc"><p>서비스참여형</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>비용 신청회차</p></div>
+                                                <div class="prcont_inner_desc"><p>4회</p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prcont_list_item toggle_item">
+                                        <div class="prcont_tit">
+                                            <p>신청내역</p>
+                                            <div class="toggle_btn_box">
+                                                <button type="button" class="toggle_btn_open" aria-expanded="false"><span class="blind">페이지 열기</span></button>
+                                                <button type="button" class="toggle_btn_close active" aria-expanded="true"><span class="blind">페이지 접기</span></button>
+                                            </div>
+                                        </div>
+                                        <ul class="prcont_inner_ul">
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>신청시간</p></div>
+                                                <div class="prcont_inner_desc"><p>80시간</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>신청금액</p></div>
+                                                <div class="prcont_inner_desc"><p>1,000,000</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>처리상태</p></div>
+                                                <div class="prcont_inner_desc"><p>처리중</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>신청일자</p></div>
+                                                <div class="prcont_inner_desc"><p>2025-01-01</p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="point_request_btn">
+                                        <button type="button" class="btn line_blue"><span class="b1_r">상세보기</span></button>
+                                    </div>
+                                </li>
+                                <li class="point_request_list">
+                                    <div class="prcont_list_item">
+                                        <div class="prcont_tit"><p>기본정보</p></div>
+                                        <ul class="prcont_inner_ul">
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>취업지원유형</p></div>
+                                                <div class="prcont_inner_desc"><p>서비스참여형</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>비용 신청회차</p></div>
+                                                <div class="prcont_inner_desc"><p>4회</p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prcont_list_item toggle_item">
+                                        <div class="prcont_tit">
+                                            <p>신청내역</p>
+                                            <div class="toggle_btn_box">
+                                                <button type="button" class="toggle_btn_open" aria-expanded="false"><span class="blind">페이지 열기</span></button>
+                                                <button type="button" class="toggle_btn_close active" aria-expanded="true"><span class="blind">페이지 접기</span></button>
+                                            </div>
+                                        </div>
+                                        <ul class="prcont_inner_ul">
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>신청시간</p></div>
+                                                <div class="prcont_inner_desc"><p>80시간</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>신청금액</p></div>
+                                                <div class="prcont_inner_desc"><p>1,000,000</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>처리상태</p></div>
+                                                <div class="prcont_inner_desc"><p>처리중</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>신청일자</p></div>
+                                                <div class="prcont_inner_desc"><p>2025-01-01</p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="prcont_list_item toggle_item">
+                                        <div class="prcont_tit">
+                                            <p>처리내역</p>
+                                            <div class="toggle_btn_box">
+                                                <button type="button" class="toggle_btn_open" aria-expanded="false"><span class="blind">페이지 접기</span></button>
+                                                <button type="button" class="toggle_btn_close active" aria-expanded="true"><span class="blind">페이지 열기</span></button>
+                                            </div>
+                                        </div>
+                                        <ul class="prcont_inner_ul">
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>인정시간</p></div>
+                                                <div class="prcont_inner_desc"><p>80시간</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>지급금액</p></div>
+                                                <div class="prcont_inner_desc"><p>800,000</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>지급상태</p></div>
+                                                <div class="prcont_inner_desc"><p>지급</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>지급일자</p></div>
+                                                <div class="prcont_inner_desc"><p>2025-01-01</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>환수일자</p></div>
+                                                <div class="prcont_inner_desc"><p>2025-01-01</p></div>
+                                            </li>
+                                            <li class="prcont_inner_li">
+                                                <div class="prcont_inner_tit"><p>환수금액</p></div>
+                                                <div class="prcont_inner_desc"><p>800,000원</p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="point_request_btn">
+                                        <button type="button" class="btn line_blue"><span class="b1_r">상세보기</span></button>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            
+                        </div>
+
+                        <div class="box_btn_wrap flex_js_r bot_8x">
+                            <a href="" class="btn large type01 fill">포인트 신청서 작성</a>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // 페이지 열고 닫기 토글 구현
+                    $(function(){
+                        $(document).on("click", ".toggle_item .toggle_btn_close", function(e){
+                            e.preventDefault();
+                            var $item = $(this).closest(".toggle_item");
+                            $item.find(".prcont_inner_ul").hide().attr("aria-hidden","true");
+                            $item.find(".toggle_btn_close").hide().attr("aria-expanded","false");
+                            $item.find(".toggle_btn_open").show().attr("aria-expanded","true").focus();
+                        });
+
+                        $(document).on("click", ".toggle_item .toggle_btn_open", function(e){
+                            e.preventDefault();
+                            var $item = $(this).closest(".toggle_item");
+                            $item.find(".prcont_inner_ul").show().attr("aria-hidden","false");
+                            $item.find(".toggle_btn_open").hide().attr("aria-expanded","false");
+                            $item.find(".toggle_btn_close").show().attr("aria-expanded","true").focus();
+                        });
+                    });
+                </script>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>
