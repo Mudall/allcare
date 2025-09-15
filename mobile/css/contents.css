@@ -53,6 +53,7 @@
 .allcare .mb24 {margin-bottom: 24px !important;}
 .allcare .mb16 {margin-bottom: 16px !important;}
 .allcare .mb8 {margin-bottom: 8px !important;}
+.allcare .mb4 {margin-bottom: 4px !important;}
 .allcare .mb0 {margin-bottom: 0 !important;}
 .allcare .pb24 {padding-bottom: 24px !important;}
 .allcare .pt24 {padding-top: 24px !important;}
@@ -683,6 +684,20 @@
 /* 점프업 - 취업준비도검사_ST4 (UI_ADHPCeS05) */
 
 /* 점프업 - 취업준비도검사_ST5 (UI_ADHPCeS06) */
+.mypage .progmg.allcare .step_donpage {}
+.mypage .progmg.allcare .step_donpage .done_info_tit {padding-left: 32px; position: relative; font-size: 20px; color: #111; font-weight: 600; line-height: 44px;}
+.mypage .progmg.allcare .step_donpage .done_info_tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_receipt.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .step_donpage .done_info {margin-bottom: 24px;}
+.mypage .progmg.allcare .step_donpage .done_info::after {content: none;}
+.mypage .progmg.allcare .step_donpage .done_info li {}
+.mypage .progmg.allcare .step_donpage .done_info li .tit {}
+.mypage .progmg.allcare .step_donpage .done_info li .tit p {}
+.mypage .progmg.allcare .step_donpage .done_info li .desc {}
+.mypage .progmg.allcare .step_donpage .done_info li .desc p {}
+.mypage .progmg.allcare .step_donpage .done_info li .desc p .earn_score {color: #e0024b; font-weight: 600;}
+.mypage .progmg.allcare .step_donpage .step_done_notice {border: 1px solid #eee; border-radius: 4px; padding: 16px;}
+.mypage .progmg.allcare .step_donpage .step_done_notice p {font-size: 16px; color: #333; font-weight: 400; line-height: 24px; margin-bottom: 16px;} 
+.mypage .progmg.allcare .step_donpage .step_done_notice button {padding: 6px; max-height: 32px;}
 
 /* 점프업 - 취업준비도검사_조회	(UI_ADHPCeS07) */
 

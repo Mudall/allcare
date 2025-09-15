@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - 취업준비도검사_ST5</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <!-- notice start -->
+                        <div class="top_notice">
+                            <i></i>
+                            <p><strong>각 문항은 하나의 답변만 가능합니다.</strong></p>
+                            <button type="button" class="notice_expand ui-layer" data-my-layer="noticeLayer"><span class="blind">공지사항 열기</span></button>
+                        </div>
+                        <div class="bottom_layer type_title" tabindex="0" id="noticeLayer" style="z-index: 140; display: none;">
+                            <strong class="title">안내</strong>
+                            <div class="layer_contents" style="height: 216px;">
+                                <div class="notice_default">
+                                    <ul class="list_style">
+                                        <li><strong>각 문항은 하나의 답변만 가능합니다.</strong></li>
+                                        <li><strong>각 문항별 점수는 다음과 같습니다.<br>: 전혀 그렇지 않다(1점), 그렇지 않은 편이다(2점), 보통이다(3점), 그렇다(4점), 매우 그렇다(5점)</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="layer_close">
+                                <span class="blind">레이어 닫기</span>
+                            </button>
+                        </div>
+                        <!-- notice end -->
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li><button type="button" aria-selected="false">참여신청서</button></li>
+                                <li><button type="button" aria-selected="false">상담이력</button></li>
+                                <li class="on"><button type="button" aria-selected="true">취업준비도검사</button></li>
+                                <li><button type="button" aria-selected="false">IAP관리</button></li>
+                                <li><button type="button" aria-selected="false">IAP결과관리</button></li>
+                                <li><button type="button" aria-selected="false">포인트신청관리</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="job_step_body"> 
+                            <ul class="job_step_wrap">
+                                <li><span class="round">1</span> <span class="text">취업목표설정 검사</span></li>
+                                <li><span class="round">2</span> <span class="text">취업정보 탐색 검사</span></li>
+                                <li><span class="round">3</span> <span class="text">취업기술 습득 검사</span></li>
+                                <li><span class="round">4</span> <span class="text">취업경력 준비 검사</span></li>
+                                <li aria-current="step"><span class="round">5</span> <span class="text">검사결과</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="donepage step_donpage mt40">
+                            <div class="done_notice">
+                                <figure class="mb16"><img src="./images/mypage/ico48_ok.svg"></figure>
+                                <p class="h2_sb">취업준비도 검사(1차)를 제출하였습니다.</p>
+                            </div>
+
+                            <div class="done_result mt40"> 
+                                <p class="done_info_tit">취업준비도 1차검사 결과</p>
+                                <ul class="done_info">
+                                    <li>
+                                        <div class="tit"><p>검사내용</p></div>
+                                        <div class="desc"><p>취업준비도 검사 1차</p></div>
+                                    </li> 
+                                    <li>
+                                        <div class="tit"><p>총점</p></div>
+                                        <div class="desc"><p><span class="earn_score">40</span>점 / 100점</p></div>
+                                    </li> 
+                                    <li>
+                                        <div class="tit"><p>제출일시</p></div>
+                                        <div class="desc"><p>2025-01-01</p></div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="step_done_notice">
+                                <p>나의 취업준비도 검사 내용을 확인하실 수 있습니다.</p>
+                                <button type="button" class="btn type03">나의 검사 결과 내용 조회</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function submitSurvey() {
+                        const questions = document.querySelectorAll('.prog_group');
+                        let allAnswered = true;
+
+                        questions.forEach(q => {
+                            const radios = q.querySelectorAll('input[type="radio"]');
+                            const selected = q.querySelector('input[type="radio"]:checked');
+                            const msg = q.querySelector('.req_txt');
+
+                            if (radios.length > 0 && !selected) {
+                                allAnswered = false;
+                                msg?.removeAttribute('hidden');
+                            } else {
+                                msg?.setAttribute('hidden', 'true');
+                            }
+                        });
+
+                        if (!allAnswered) {
+                            alert('모든 항목에 답변해 주세요.');
+                            return;
+                        }
+
+                        if (!confirm('만족도 조사를 제출하겠습니까?')) return;
+                        alert('제출하였습니다.');
+                    }
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        document.getElementById('submitSurveyBtn')?.addEventListener('click', submitSurvey);
+                        
+                        // 라디오 선택 시 오류 메시지 숨기기
+                        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                            radio.addEventListener('change', () => {
+                                radio.closest('.prog_group').querySelector('.req_txt')?.setAttribute('hidden', 'true');
+                            });
+                        });
+                    });
+                </script>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>
