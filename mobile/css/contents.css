@@ -684,26 +684,59 @@
 /* 점프업 - 취업준비도검사_ST4 (UI_ADHPCeS05) */
 
 /* 점프업 - 취업준비도검사_ST5 (UI_ADHPCeS06) */
-.mypage .progmg.allcare .step_donpage {}
-.mypage .progmg.allcare .step_donpage .done_info_tit {padding-left: 32px; position: relative; font-size: 20px; color: #111; font-weight: 600; line-height: 44px;}
-.mypage .progmg.allcare .step_donpage .done_info_tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_receipt.svg') no-repeat center / contain;}
-.mypage .progmg.allcare .step_donpage .done_info {margin-bottom: 24px;}
-.mypage .progmg.allcare .step_donpage .done_info::after {content: none;}
-.mypage .progmg.allcare .step_donpage .done_info li {}
-.mypage .progmg.allcare .step_donpage .done_info li .tit {}
-.mypage .progmg.allcare .step_donpage .done_info li .tit p {}
-.mypage .progmg.allcare .step_donpage .done_info li .desc {}
-.mypage .progmg.allcare .step_donpage .done_info li .desc p {}
-.mypage .progmg.allcare .step_donpage .done_info li .desc p .earn_score {color: #e0024b; font-weight: 600;}
-.mypage .progmg.allcare .step_donpage .step_done_notice {border: 1px solid #eee; border-radius: 4px; padding: 16px;}
-.mypage .progmg.allcare .step_donpage .step_done_notice p {font-size: 16px; color: #333; font-weight: 400; line-height: 24px; margin-bottom: 16px;} 
-.mypage .progmg.allcare .step_donpage .step_done_notice button {padding: 6px; max-height: 32px;}
+.mypage .progmg.allcare .done_result .done_info_tit {padding-left: 32px; position: relative; font-size: 20px; color: #111; font-weight: 600; line-height: 44px;}
+.mypage .progmg.allcare .done_result .done_info_tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_receipt.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .done_result .done_info {margin-bottom: 24px;}
+.mypage .progmg.allcare .done_result .done_info::after {content: none;}
+.mypage .progmg.allcare .done_result .done_info li .desc p .earn_score {color: #e0024b; font-weight: 600;}
+.mypage .progmg.allcare .step_done_notice {border: 1px solid #eee; border-radius: 4px; padding: 16px;}
+.mypage .progmg.allcare .step_done_notice p {font-size: 16px; color: #333; font-weight: 400; line-height: 24px; margin-bottom: 16px;} 
+.mypage .progmg.allcare .step_done_notice button {padding: 6px; max-height: 32px;}
 
 /* 점프업 - 취업준비도검사_조회	(UI_ADHPCeS07) */
+.mypage .progmg.allcare .done_step_wrap .done_result {position: relative; margin-bottom: 56px;}
+.mypage .progmg.allcare .done_step_wrap .done_result::after {content: ''; position: absolute; left: 50%; bottom: -32px; transform: translateX(-50%); background-color: #f3f5f6; width: calc(100% + 2.5rem); height: 8px;}
+.mypage .progmg.allcare .done_step_wrap .done_result li {padding: 16px 0;}
+.mypage .progmg.allcare .done_step_wrap .done_result li+li {border-top: 1px solid #eee;}
+.mypage .progmg.allcare .done_step_wrap .done_result li:first-child {padding-top: 0;}
+.mypage .progmg.allcare .done_step_wrap .done_result li:last-child {padding-bottom: 0;}
+.mypage .progmg.allcare .done_step_wrap .done_result li .tit p {font-size: 14px; color: #555; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .done_step_wrap .done_result li .desc {margin-top: 8px;}
+.mypage .progmg.allcare .done_step_wrap .done_result li .desc p {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .donestep_sec .prog_qna_hd {margin-top: 24px;}
+.mypage .progmg.allcare .donestep_sec .prog_wrap .rep_list >li:last-child {padding-bottom: 8px;}
 
 /* 점프업 - IAP관리 목록 (UI_ADHPCfM01)  */
+.mypage .progmg.allcare .total_hd_wrap .count {color: var(--col_blue); font-weight: 600;}
+.mypage .progmg.allcare .list_none_form .list_none_inner {background-color: #f5f6f8; border-radius: 8px; padding: 40px 16px; display: flex; flex-direction: column; align-items: center;}
+.mypage .progmg.allcare .list_none_form .list_none_inner .icon {width: 56px; height: 60px; display: block; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .list_none_form .list_none_inner .list_none_txt p {text-align: center;}
+.mypage .progmg.allcare .iap_list_form .iap_list_li {padding: 20px 16px; border: 1px solid #ddd; border-radius: 4px;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li {display: flex; gap: 12px; align-items: center;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li+.iap_inner_li {margin-top: 8px;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li .tit {width: 84px;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li .tit p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li .desc p {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li button {padding: 0 8px; flex: 1;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li .twin_desc {display: flex; gap: 20px; align-items: center;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li .twin_desc .desc_trait {position: relative; font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .iap_list_form .iap_inner_li .twin_desc .desc_trait:after {content:''; position: absolute; right: -10px; top:50%; transform: translateY(-50%); width: 1px; height: 12px; display: block; background-color: #eee;} 
+.mypage .progmg.allcare .after_border {position: relative; margin-bottom: 24px; padding-bottom: 32px;}
+.mypage .progmg.allcare .after_border::after {content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); background-color: #f3f5f6; width: calc(100% + 2.5rem); height: 8px;}
+
+.mypage .progmg.allcare .toggle_inner_ul {max-height: 256px; overflow: auto; border: 1px solid #ddd; border-radius: 8px; background-color: #fff; padding: 24px;} 
+.mypage .progmg.allcare .toggle_inner_ul li + li {margin-top: 8px;}
+.mypage .progmg.allcare .toggle_inner_ul li .apply_summary_status {display: flex;  justify-content: space-between; font-size: 14px;}
+.mypage .progmg.allcare .toggle_inner_ul li .apply_summary_status p {font-size: 14px; line-height: 24px; color: #555; font-weight: 400;}
+.mypage .progmg.allcare .toggle_inner_ul li .apply_summary_status p.status_date {color: #333;}
+.mypage .progmg.allcare .toggle_inner_ul li .apply_summary_reason { margin-top: 8px; padding-left: 24px; position: relative; font-size: 14px; font-weight: 400; line-height: 24px; color: #e0024b;}
+.mypage .progmg.allcare .toggle_inner_ul li .apply_summary_reason::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 3px; background: url('../images/mypage/ico16_reply.svg') no-repeat center / contain;}
+
+
+
 
 /* 점프업 - IAP관리_등록 (UI_ADHPCfS02) */
+
 
 /* 점프업 - IAP관리_조회/수정(저장) (UI_ADHPCfS03) */
 
@@ -766,20 +799,16 @@
 
 /* [팝업] 구직활동팝업 (UI_ADHPChP03) */
 .allcare .newpop_page .jobact_inner {padding: 0 20px;}
-.allcare .newpop_page .jobact_wrap {}
 .allcare .newpop_page .jobact_chk_tit {font-size: 16px; color: #333; font-weight: 600; line-height: 24px;}
 .allcare .newpop_page .jobact_chk_tit span {color: var(--col_blue); position: relative; margin-left: 8px; padding-left: 8px; font-weight: 600;}
 .allcare .newpop_page .jobact_chk_box .jobact_chk_tit span:after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; background-color: #ddd;}
 .allcare .newpop_page .jobact_chk_box {display: flex; align-items: center; gap: 6px;}
 .allcare .newpop_page .jobact_chk_box input {margin: 0;}
-.allcare .newpop_page .jobact_chk_box label {}
 .allcare .newpop_page .jobact_list+.jobact_list {margin-top: 24px;}
 .allcare .newpop_page .jobact_inner_ul {margin-top: 12px; border: 1px solid #eee; border-radius: 4px; padding: 20px 16px;}
 .allcare .newpop_page .jobact_inner_list {display: flex; align-items: center; justify-content: space-between; gap: 16px;}
 .allcare .newpop_page .jobact_inner_list+.jobact_inner_list {margin-top: 8px;}
-.allcare .newpop_page .jobact_inner_tit {}
 .allcare .newpop_page .jobact_inner_tit p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
-.allcare .newpop_page .jobact_inner_desc {}
 .allcare .newpop_page .jobact_inner_desc p {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;} 
 .allcare .newpop_page .jobact_dropbox {flex-direction: column; align-items: flex-start; gap: 4px;}
 

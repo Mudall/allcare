@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - IAP관리_목록(있음)</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li><button type="button" aria-selected="false">참여신청서</button></li>
+                                <li><button type="button" aria-selected="false">상담이력</button></li>
+                                <li><button type="button" aria-selected="false">취업준비도검사</button></li>
+                                <li class="on"><button type="button" aria-selected="true">IAP관리</button></li>
+                                <li><button type="button" aria-selected="false">IAP결과관리</button></li>
+                                <li><button type="button" aria-selected="false">포인트신청관리</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="iap_list_form">
+                            <div class="total_hd_wrap mb8"><p>전체 <span class="count">0</span>건</p></div>
+                            <ul class="iap_list_ul">
+                                <li class="iap_list_li">
+                                    <ul class="iap_inner_ul">
+                                        <li class="iap_inner_li">
+                                            <div class="tit"><p>참여연도</p></div>
+                                            <div class="desc"><p>2025</p></div>
+                                        </li>
+                                        <li class="iap_inner_li">
+                                            <div class="tit"><p>취업지원유형</p></div>
+                                            <div class="desc"><p>서비스참여형</p></div>
+                                        </li>
+                                        <li class="iap_inner_li">
+                                            <div class="tit"><p>제출일자</p></div>
+                                            <div class="desc"><p>2025-01-01</p></div>
+                                        </li>
+                                        <li class="iap_inner_li">
+                                            <div class="tit"><p>승인일자</p></div>
+                                            <div class="desc"><p>2025-01-01</p></div>
+                                        </li>
+                                        <li class="iap_inner_li">
+                                            <div class="tit"><p>담당자</p></div>
+                                            <div class="desc"><p>김담당</p></div>
+                                        </li>
+                                        <li class="iap_inner_li">
+                                            <div class="tit"><p>참여연도</p></div>
+                                            <div class="desc"><button type="button" class="btn small type01 ">상세보기</button></div>
+                                        </li>
+                                        <li class="iap_inner_li">
+                                            <div class="tit"><p>변경신청 현황</p></div>
+                                            <div class="desc"><p></p></div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>
