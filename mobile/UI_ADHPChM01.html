@@ -35,6 +35,21 @@
                             </ul>
                         </div>
 
+                        <script>
+                            // 탭스크롤이 맨 오른쪽부터 시작하도록 임의로 구현함
+                            $(function() {
+                                var $tabWrap = $(".tab_menu.custom_split");
+
+                                if ($tabWrap.length) {
+                                    var scrollWidth = $tabWrap.get(0).scrollWidth; 
+                                    var clientWidth = $tabWrap.width(); 
+                                    var scrollLeft = scrollWidth - clientWidth;
+
+                                    $tabWrap.scrollLeft(scrollLeft);
+                                }
+                            });
+                        </script>
+
                         <ul class="point_request_dashboard mt40">
                             <li class="li_apply">
                                 <p class="tit t3_sb">신청내역 <span class="count">5건</span></p>

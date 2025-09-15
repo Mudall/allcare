@@ -873,7 +873,19 @@
 
 
 /* [팝업] 구직활동팝업 (UI_ADHPChP03) */
-.allcare_popup.new_popup .newpop_inner .plantog_wrap + .plantog_wrap {margin-top: 24px;}
+.allcare_popup.new_popup .newpop_inner.jobact_area {height: calc(100% - 185px);}
+.new_popup.allcare_popup .jobact_wrap {overflow-y: auto;}
+.new_popup.allcare_popup .jobact_list+.jobact_list {margin-top: 24px;}
+.new_popup.allcare_popup .jobact_list .jobact_chk_box {display: flex; align-items: center; gap: 8px;}
+.new_popup.allcare_popup .jobact_list .jobact_chk_box .jobact_chk_tit {font-size: 18px; color: #333; font-weight: 600; line-height: 28px;}
+.new_popup.allcare_popup .jobact_list .jobact_chk_box .jobact_chk_tit span {color: var(--col_blue); position: relative; margin-left: 8px; padding-left: 8px;}
+.new_popup.allcare_popup .jobact_list .jobact_chk_box .jobact_chk_tit span:after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; background-color: #ddd;}
+.new_popup.allcare_popup .jobact_list .jobact_inner_ul {display: grid; grid-template-columns: repeat(2,1fr); gap: 6px 60px; margin-top: 8px; padding: 24px 32px; border: 1px solid #ddd; border-radius: 8px;}
+.new_popup.allcare_popup .jobact_list .jobact_inner_list {display: flex; align-items: center;}
+.new_popup.allcare_popup .jobact_list .jobact_inner_tit {width: 160px;}
+.new_popup.allcare_popup .jobact_list .jobact_inner_tit p {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.new_popup.allcare_popup .jobact_list .jobact_inner_desc {width: calc(100% - 160px);}
+.new_popup.allcare_popup .jobact_list .jobact_inner_desc p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 
 /* [팝업] 부정수급 방지 확인서 (UI_ADHPChP04) */
 .allcare_popup.new_popup .commitment_htit {font-size: 20px; color: #333; font-weight: 600; line-height: 30px;}

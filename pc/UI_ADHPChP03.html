@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>구직활동팝업</title>
+        <script src="../pc/include/js/head.js"></script>
+        <script src="../pc/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../pc/css/contents.css">
+    </head>
+    <body class="dim">
+        <input type="hidden" id="currentMenuId">
+        <div id="wrap" class="person">
+            <!-- //skip navigation -->
+            <nav id="skipnav">
+                <a href="javascript:void(0)" id="skipnaviCont">본문 바로가기</a>
+                <a href="#gnb">주메뉴 바로가기</a>
+                <a href="#quick_menu">퀵메뉴 바로가기</a>
+            </nav>
+            <!-- //skip navigation -->
+
+            <!-- 헤더 영역 -->
+            <header id="header" class="new"></header>
+            <!-- 헤더 영역 -->
+
+            <section id="container">
+                <!-- location -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script type="text/javascript" src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
+
+                <input type="hidden" name="bkmkSeq" id="bkmkSeq">
+
+                <!-- // location -->
+                <div class="location type_c"></div>
+                <!-- // location -->
+
+                <div id="contents">
+                    
+                    
+                    <!-- #lnb -->
+                    <div class="lnb type_c"></div>
+                    <!-- #lnb -->
+
+                    <div class="cont_wrap">
+                        <div class="cont_wrap_area">
+                            <!-- 콘텐츠 타이틀 -->
+                            <div class="sub_tl">
+                                <h2 class="h2_sb">졸업생 특화프로그램</h2>
+                            </div>
+                            <!-- 콘텐츠영역 시작 -->
+                            <div class="tab_wrap bg_type" data-role="tab">
+                                <div class="mypage">
+                                </div>
+                            </div>
+                            <!-- 콘텐츠영역 끝 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 푸터 영역 -->
+            <footer id="footer"></footer>
+            <!-- 푸터 영역 -->
+
+        </div>
+        <script src="../pc/js/include.js"></script>
+        <script src="../pc/js/include_share.js"></script>       
+        <script src="../pc/js/contents.js"></script>
+
+
+
+        <!-- 팝업내용 시작 -->
+        <section id="operPrgmPopup" class="new_popup allcare_popup" role="dialog" aria-modal="true" aria-labelledby="operPrgmPopupTitle">
+            <header class="head type2 newpop_tit">
+                <h1 id="operPrgmPopupTitle" class="h2_sb">선택한 유형명</h1>
+                <!-- 닫기 -->
+                <button type="button" id="btnClose_operPrgmPopup" class="btn-close closed" aria-label="팝업 닫기">
+                    <span class="blind">팝업 닫기</span>
+                </button> 
+            </header>                                                                                               
+            <form:form id="operPrgmForm" name="operPrgmForm" method="POST" modelAttribute="HPFSAA0101VO">
+                <div class="cont" id="divOperPrgmCont">
+                    <div class="newpop_inner jobact_area">
+                        <ul class="jobact_wrap">
+                            <li class="jobact_list">
+                                <div class="chk_box jobact_chk_box">
+                                    <input type="checkbox" class="new_chkbox" id="jobact1" name="jobact" value="1">
+                                    <label for="jobact1"><p class="jobact_chk_tit">1. 직업훈련<span class="txt_blue">서비스참여형</span></p></label>
+                                </div>
+                                <ul class="jobact_inner_ul">
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여기간</p></div>
+                                        <div class="jobact_inner_desc"><p>2025-01 ~ 2025-02</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여시간(지급기간)</p></div>
+                                        <div class="jobact_inner_desc"><p>000시간 (00시간)</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여기관(교내)</p></div>
+                                        <div class="jobact_inner_desc"><p>교내</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여기관(외부)</p></div>
+                                        <div class="jobact_inner_desc"><p>외부</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>목표달성시기</p></div>
+                                        <div class="jobact_inner_desc"><p>여름방학</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여방법</p></div>
+                                        <div class="jobact_inner_desc"><p>온라인 </p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>활동내용(세부내용)</p></div>
+                                        <div class="jobact_inner_desc"><p>입력한 내용</p></div>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <!--  -->
+    
+                            <li class="jobact_list">
+                                <div class="chk_box jobact_chk_box">
+                                    <input type="checkbox" class="new_chkbox" id="jobact2" name="jobact" value="1">
+                                    <label for="jobact2"><p class="jobact_chk_tit">2. 일경험(인턴)<span class="txt_blue">서비스참여형</span></p></label>
+                                </div>
+                                <ul class="jobact_inner_ul">
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여기간</p></div>
+                                        <div class="jobact_inner_desc"><p>2025-01 ~ 2025-02</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여시간(지급기간)</p></div>
+                                        <div class="jobact_inner_desc"><p>000시간 (00시간)</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여기관(교내)</p></div>
+                                        <div class="jobact_inner_desc"><p>교내</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여기관(외부)</p></div>
+                                        <div class="jobact_inner_desc"><p>외부</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>목표달성시기</p></div>
+                                        <div class="jobact_inner_desc"><p>2학기</p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>참여방법</p></div>
+                                        <div class="jobact_inner_desc"><p>온라인 </p></div>
+                                    </li>
+                                    <li class="jobact_inner_list">
+                                        <div class="jobact_inner_tit"><p>활동내용(세부내용)</p></div>
+                                        <div class="jobact_inner_desc"><p>입력한 내용</p></div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+    
+                    </div>
+                    <div class="newpop_save uni_save btn_box mt40">
+                        <button type="button" class="btn big type02" onclick="">닫기</button>
+                        <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">적용</button>
+                    </div>
+                </div>
+            </form:form>
+        </section>
+        <!-- 팝업 종료 -->
+</body>
+</html>
