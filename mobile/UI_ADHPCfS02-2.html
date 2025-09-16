@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - IAP관리_등록</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li><button type="button" aria-selected="false">참여신청서</button></li>
+                                <li><button type="button" aria-selected="false">상담이력</button></li>
+                                <li><button type="button" aria-selected="false">취업준비도검사</button></li>
+                                <li class="on"><button type="button" aria-selected="true">IAP관리</button></li>
+                                <li><button type="button" aria-selected="false">IAP결과관리</button></li>
+                                <li><button type="button" aria-selected="false">포인트신청관리</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="my_ptcp_from iap_manag_wrap">
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">참여자 정보</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt">성명</div>
+                                        <div class="dd">홍길동</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">전공/학과</div>
+                                        <div class="dd">선택한 전공 / 선택한 학과</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학번</div>
+                                        <div class="dd">202500010001</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학적 상태</div>
+                                        <div class="dd">재학</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학년/학기</div>
+                                        <div class="dd dd_rowcell">
+                                            <span>1학년</span>
+                                            <select class="new_down" title="학기 선택">
+                                                <option selected>학기 선택</option>
+                                                <option>TEST</option>
+                                                <option>TEST</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">취업지원유형</span></div>
+                                        <div class="dd">
+                                            <fieldset class="radio_filed filed_row">
+                                                <legend class="sr_only">취업지원유형</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="자기주도형" name="취업지원유형" value="" role="radio">
+                                                    <label for="자기주도형" class="custom_radio">
+                                                        <span class="label_text">자기주도형</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="서비스참여형" name="취업지원유형" value=""role="radio">
+                                                    <label for="서비스참여형" class="custom_radio">
+                                                        <span class="label_text">서비스참여형</span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">희망진로</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt"><span class="req_mark">희망진로</span></div>
+                                        <div class="dd">
+                                            <fieldset class="radio_filed">
+                                                <legend class="sr_only">희망진로</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="일반취업" name="희망진로" value="" role="radio">
+                                                    <label for="일반취업" class="custom_radio">
+                                                        <span class="label_text">일반취업(일반기업, 공공기관)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="창업" name="희망진로" value=""role="radio">
+                                                    <label for="창업" class="custom_radio">
+                                                        <span class="label_text">창업</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="진학" name="희망진로" value=""role="radio">
+                                                    <label for="진학" class="custom_radio">
+                                                        <span class="label_text">진학</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="시험준비" name="희망진로" value=""role="radio">
+                                                    <label for="시험준비" class="custom_radio">
+                                                        <span class="label_text">시험준비</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="기타" name="희망진로" value=""role="radio">
+                                                    <label for="기타" class="custom_radio">
+                                                        <span class="label_text">기타</span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">시험명/활동명</div>
+                                        <div class="dd">
+                                            <span class="box_ipt new_ipt">
+                                                <input type="text" class="input_txt" title="시험명" placeholder="" disabled>
+                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  -->
+
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">취업목표</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt"><span class="req_mark">희망직업(직종/직무)</span></div>
+                                        <div class="dd">
+                                            <span class="box_ipt new_ipt">
+                                                <input type="text" class="input_txt" title="희망직업" placeholder="">
+                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">희망급여(월급)</span></div>
+                                        <div class="dd dd_row_ipt">
+                                            <span class="box_ipt new_ipt">
+                                                <input type="text" class="input_txt" title="희망급여" placeholder="">
+                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                            </span>
+                                            <span class="s1_b row_ipt_txt">만원</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">목표근무지역</span></div>
+                                        <div class="dd">
+                                            <fieldset class="radio_filed">
+                                                <legend class="sr_only">목표근무지역</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="수도권" name="목표근무지역" value="" role="radio">
+                                                    <label for="수도권" class="custom_radio">
+                                                        <span class="label_text">수도권(서울, 경기)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="광역시" name="목표근무지역" value=""role="radio">
+                                                    <label for="광역시" class="custom_radio">
+                                                        <span class="label_text">광역시(지방 대도시)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item nri_center">
+                                                    <input type="radio" id="기타지역" name="목표근무지역" value=""role="radio">
+                                                    <label for="기타지역" class="custom_radio label_row">
+                                                        <span class="label_text">기타지역</span>
+                                                        <span class="box_ipt new_ipt">
+                                                            <input type="text" class="input_txt" title="기타지역 입력" placeholder="" disabled>
+                                                            <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">목표기업군</span></div>
+                                        <div class="dd">
+                                            <fieldset class="radio_filed">
+                                                <legend class="sr_only">목표기업군</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="중소기업" name="목표기업군" value="" role="radio">
+                                                    <label for="중소기업" class="custom_radio">
+                                                        <span class="label_text">중소기업</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="중견기업" name="목표기업군" value=""role="radio">
+                                                    <label for="중견기업" class="custom_radio">
+                                                        <span class="label_text">중견기업</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="대기업" name="목표기업군" value=""role="radio">
+                                                    <label for="대기업" class="custom_radio">
+                                                        <span class="label_text">대기업</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="공공기관" name="목표기업군" value=""role="radio">
+                                                    <label for="공공기관" class="custom_radio">
+                                                        <span class="label_text">공공기관</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="외국계" name="목표기업군" value=""role="radio">
+                                                    <label for="외국계" class="custom_radio">
+                                                        <span class="label_text">외국계</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item nri_center">
+                                                    <input type="radio" id="기타" name="목표기업군" value=""role="radio">
+                                                    <label for="기타" class="custom_radio label_row">
+                                                        <span class="label_text">기타</span>
+                                                        <span class="box_ipt new_ipt">
+                                                            <input type="text" class="input_txt" title="기타 입력" placeholder="" disabled>
+                                                            <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">목표 취업예상 시기</span></div>
+                                        <div class="dd">
+                                            <div class="date_area">
+                                                <input type="text" title="목표 취업예상 시기 입력" id="목표 취업예상 시기" name="목표 취업예상 시기" value="" placeholder="2025-01" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                <button type="button" class="calendar"><span>달력</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  -->
+
+                            <div class="box_group_wrap after_border">
+                                <div class="tit_row_hd mb8">
+                                    <div class="txt_box">
+                                        <h3 class="t2_sb">취업활동계획</h3>
+                                        <p class="s1_r">총 <span class="count">2</span>건</p>
+                                    </div>
+                                    <div class="select_area">
+                                        <div class="view_select_box button_box"><button type="button" class="btn type03"><span class="s1_r">행 추가</span></button></div>
+                                        <div class="dimmed_pop"></div>
+                                        <div class="select_layer">
+                                            <ul class="select_option">
+                                                <li><input type="hidden" value="10"><button type="button" onclick="setSelectValue(this,'sort')">행 추가 10개</button></li>
+                                                <li><input type="hidden" value="20"><button type="button" onclick="setSelectValue(this,'sort')">행 추가 20개</button></li>
+                                                <li><input type="hidden" value="30"><button type="button" onclick="setSelectValue(this,'sort')">행 추가 30개</button></li>
+                                                <li><input type="hidden" value="40"><button type="button" onclick="setSelectValue(this,'sort')">행 추가 40개</button></li>
+                                                <li><input type="hidden" value="50"><button type="button" onclick="setSelectValue(this,'sort')">행 추가 50개</button></li>
+                                            </ul>
+                                            <ul class="btn_group"><li><button type="button" class="btn large gray select_close">적용</button></li></ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="line_inner_wrap">
+                                    <div class="line_inner_box">
+                                        <ul>
+                                            <li>
+                                                <div class="dt">중점영역</div>
+                                                <div class="dd">
+                                                    <select class="new_down" title="중점영역 선택">
+                                                        <option disabled selected>중점영역 선택</option>
+                                                        <option>TEST</option>
+                                                        <option>TEST</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여방법</div>
+                                                <div class="dd">
+                                                    <select class="new_down" title="참여방법 선택">
+                                                        <option disabled selected>선택</option>
+                                                        <option>TEST</option>
+                                                        <option>TEST</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여기간</div>
+                                                <div class="dd dd_date_row">
+                                                    <div class="date_area">
+                                                        <input type="text" title="참여기간 시작" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <button type="button" class="calendar"><span>달력</span></button>
+                                                    </div>
+                                                    <span class="b1_sb">~</span>
+                                                    <div class="date_area">
+                                                        <input type="text" title="참여기간 종료" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <button type="button" class="calendar"><span>달력</span></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여시간</div>
+                                                <div class="dd dd_row_ipt">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" class="input_txt" title="참여시간" placeholder="">
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                    <span class="s1_b row_ipt_txt">시간</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여기관(교내)</div>
+                                                <div class="dd">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" class="input_txt" title="교내참여기관" placeholder="">
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여기관(외부)</div>
+                                                <div class="dd">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" class="input_txt" title="외부참여기관" placeholder="">
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">목표달성시기</div>
+                                                <div class="dd">
+                                                    <select class="new_down" title="목표달성시기">
+                                                        <option disabled selected>선택</option>
+                                                        <option>TEST</option>
+                                                        <option>TEST</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">활동내용(세부내용)</div> 
+                                                <div class="dd">
+                                                    <div class="text_form_box">
+                                                        <div class="text_form_inner">
+                                                            <textarea title="활동내용" placeholder="세부활동 내용을 작성해 주세요." required></textarea>
+                                                        </div>
+                                                        <div class="text_info">
+                                                            <p class="count_info"><span class="result_byte">0</span> / <span class="max_byte">400</span> Byte</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="inner_btn_wrap mt16">
+                                            <div class="gap_button_box move_type">
+                                                <button type="button" class="move_up"><span class="blind">위로</span></button>
+                                                <button type="button" class="move_down"><span class="blind">아래로</span></button>
+                                            </div>
+                                            <div class="gap_button_box">
+                                                <button type="button" class="delete_btn"><span class="b1_r">삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line_inner_box">
+                                        <ul>
+                                            <li>
+                                                <div class="dt">중점영역</div>
+                                                <div class="dd">
+                                                    <select class="new_down" title="중점영역 선택">
+                                                        <option disabled selected>중점영역 선택</option>
+                                                        <option>TEST</option>
+                                                        <option>TEST</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여방법</div>
+                                                <div class="dd">
+                                                    <select class="new_down" title="참여방법 선택">
+                                                        <option disabled selected>선택</option>
+                                                        <option>TEST</option>
+                                                        <option>TEST</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여기간</div>
+                                                <div class="dd dd_date_row">
+                                                    <div class="date_area">
+                                                        <input type="text" title="참여기간 시작" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <button type="button" class="calendar"><span>달력</span></button>
+                                                    </div>
+                                                    <span class="b1_sb">~</span>
+                                                    <div class="date_area">
+                                                        <input type="text" title="참여기간 종료" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <button type="button" class="calendar"><span>달력</span></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여시간</div>
+                                                <div class="dd dd_row_ipt">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" class="input_txt" title="참여시간" placeholder="">
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                    <span class="s1_b row_ipt_txt">시간</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여기관(교내)</div>
+                                                <div class="dd">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" class="input_txt" title="교내참여기관" placeholder="">
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">참여기관(외부)</div>
+                                                <div class="dd">
+                                                    <span class="box_ipt new_ipt">
+                                                        <input type="text" class="input_txt" title="외부참여기관" placeholder="">
+                                                        <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">목표달성시기</div>
+                                                <div class="dd">
+                                                    <select class="new_down" title="목표달성시기">
+                                                        <option disabled selected>선택</option>
+                                                        <option>TEST</option>
+                                                        <option>TEST</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dt">활동내용(세부내용)</div> 
+                                                <div class="dd">
+                                                    <div class="text_form_box">
+                                                        <div class="text_form_inner">
+                                                            <textarea title="활동내용" placeholder="세부활동 내용을 작성해 주세요." required></textarea>
+                                                        </div>
+                                                        <div class="text_info">
+                                                            <p class="count_info"><span class="result_byte">0</span> / <span class="max_byte">400</span> Byte</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="inner_btn_wrap mt16">
+                                            <div class="gap_button_box move_type">
+                                                <button type="button" class="move_up"><span class="blind">위로</span></button>
+                                                <button type="button" class="move_down"><span class="blind">아래로</span></button>
+                                            </div>
+                                            <div class="gap_button_box">
+                                                <button type="button" class="delete_btn"><span class="b1_r">삭제</span></button>
+                                                <button type="button" class="add_btn"><span class="b1_r">추가</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- 내용없을때 사용 -->
+                                    <div class="line_inner_box cont_none_box">
+                                        <p class="none_tit b1_sb">작성된 취업활동계획(IAP)이 없습니다.</p>
+                                        <p class="s1_r mt8">계획서를 작성해야 상담에 더욱 효과적인 도움을<br> 받을 수 있습니다.</p>
+                                        <button type="button" class="write_btn mt16"><span class="b1_r">취업활동계획서 작성</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                                <div class="btn_box flex_wrap mt24">
+                                    <button type="button" class="btn large type03 fw400">목록</button>
+                                    <button type="button" class="btn large type03 fw400">초기화</button>
+                                    <button type="button" class="btn large line_blue">저장</button>
+                                    <button type="button" class="btn large fill type01">제출</button>
+                                </div>
+                            </div>  
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>
