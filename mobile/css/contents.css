@@ -849,8 +849,56 @@
 .mypage .progmg.allcare .chg_reason_wrap .act_fullbox button span::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url('../images/mypage/arrow16_top_active.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .chg_reason_wrap .act_fullbox button.open_btn span::after {background-image: url('../images/mypage/arrow16_down.svg');} 
 
-
 /* 점프업 - IAP결과관리_목록(UI_ADHPCgM01) */
+.mypage .progmg.allcare .iap_status_dashboard {border: 1px solid #ddd; border-radius: 8px; padding: 0 16px;} 
+.mypage .progmg.allcare .iap_status_dashboard li {padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px;}
+.mypage .progmg.allcare .iap_status_dashboard li+li {border-top: 1px solid #eee;}
+.mypage .progmg.allcare .iap_status_dashboard li .tit {width: 128px;}
+.mypage .progmg.allcare .iap_status_dashboard li .desc {font-weight: 600;}
+.mypage .progmg.allcare .iap_status_dashboard li .desc .txt_blue {font-weight: 600; color: var(--col_blue);}
+
+
+.mypage .progmg.allcare .apply_fullbox {display: flex; gap: 4px; background-color: #f8f8f8; padding: 16px 0; position: relative;}
+.mypage .progmg.allcare .apply_fullbox::after {z-index: -99; content: ''; position: absolute; top:0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 100%; background-color: #f8f8f8; }
+.mypage .progmg.allcare .apply_fullbox .field_fullapply {width: calc(100% - 60px); display: flex; align-items: center; gap: 4px; }
+.mypage .progmg.allcare .field_fullapply .select_area {width: 50%; position: relative; background-color: #fff; border: 1px solid #757575; border-radius: 4px;}
+.mypage .progmg.allcare .field_fullapply .select_area:after {pointer-events: none; content: ''; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: url(../include/images/arrow16_down.svg) no-repeat center / contain; width: 16px; height: 16px;}
+.mypage .progmg.allcare .field_fullapply .select_area .form_select {width: 100%; height: 100%; display: flex; align-items: center; padding: 6px 28px 6px 16px; letter-spacing: -0.06em;}
+.mypage .progmg.allcare .field_fullapply .select_area .form_select span { max-width: 90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 16px; line-height: 26px; color: #555; font-weight: 400; letter-spacing: -0.06em;}
+.mypage .progmg.allcare .apply_fullbox .apply_btn {width: 52px; border: 1px solid #757575; background-color: #fff; border-radius: 4px; display: flex; justify-content: center; align-items: center;} 
+
+.mypage .progmg.allcare .iap_mng_wrap .total_hd {margin: 16px 0 8px;}
+.mypage .progmg.allcare .iap_mng_wrap .total_hd p {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .iap_mng_wrap .total_hd p .count {color: var(--col_blue); font-weight: 600;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box {border: 1px solid #ddd; border-radius: 4px; padding: 20px 16px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box+.line_box {margin-top: 16px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_trait {display: inline-block; padding: 4px 6px; font-size: 12px; color: var(--col_blue); font-weight: 400; line-height: 14px; border: 1px solid var(--col_blue); border-radius: 4px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tit {margin-top: 4px; display: flex;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tit .tit_category {color: var(--col_blue); font-size: 14px; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tit .tit_name {margin-left: 8px; padding-left: 9px; position: relative; color: #333; font-size: 14px; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tit .tit_name:after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; background-color: #ddd;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_period {margin-top: 4px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tags {display: flex; margin-top: 4px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tags .tag {position: relative; font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tags .tag+.tag {margin-left: 8px; padding-left: 9px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_tags .tag+.tag::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; background-color: #ddd;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail {background-color: #f8f8f8; padding: 16px; border-radius: 8px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail li {display: flex; justify-content: space-between; gap: 12px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail li+li {margin-top: 4px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail .detail_label {width: 80px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail .detail_label p {color: #555;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail .detail_value {text-align: right;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail .detail_value p {color: #333;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail .detail_value span {color: #333;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .btn_detail {width: 100%; border: 1px solid var(--col_blue); border-radius: 4px; padding: 6px;}
+.mypage .progmg.allcare .iap_mng_wrap .line_box .btn_detail span {color: var(--col_blue);}
+
+.mypage .progmg.allcare .notlist_inner {margin-top: 16px; width: 100%; background-color: #f5f6f8; border-radius: 8px; padding: 40px 16px; display: flex; flex-direction: column; align-items: center;}
+.mypage .progmg.allcare .notlist_inner .icon {display: block; width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .notlist_inner p {font-weight: 600;}
+
+
+
 
 /* 점프업 - IAP결과관리_등록(제출 및 저장전) (UI_ADHPCgM02) */
 
@@ -861,7 +909,7 @@
 /* 점프업_IAP결과관리_수정(보완요청_제출후)	(UI_ADHPCgM05) */
 
 /* 점프업 - 포인트관리_목록 (UI_ADHPChM01) */
-.mypage .progmg.allcare .point_request_dashboard {position: relative; background-color: #f5f6fa; padding: 16px 0;}
+.mypage .progmg.allcare .point_request_dashboard {position: relative; background-color: #f5f6fa; padding: 16px 0}
 .mypage .progmg.allcare .point_request_dashboard::after {z-index: -1; content: ''; width: calc(100% + 2.5rem); height: 100%; background-color: #f5f6fa; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
 .mypage .progmg.allcare .point_request_dashboard>li+li {margin-top: 24px;}
 .mypage .progmg.allcare .point_request_dashboard>li .count {color: var(--col_blue); font-weight: 600;}
@@ -896,6 +944,11 @@
 .mypage .progmg.allcare .point_request_wrap .point_request_btn button span {color: var(--col_blue)}
 .mypage .progmg.allcare .bot_8x {position: relative; margin-top: 24px; padding-top: 24px; border-top: 8px solid #f3f5f6;}
 .mypage .progmg.allcare .bot_8x::after {content: ''; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background-color: #f3f5f6; width: calc(100% + 2.5rem); height: 8px;}
+
+
+.mypage .progmg.allcare .ipa_resultbtn_wrap .rslt_btn {width: 100%; padding: 10px; border: 1px solid #757575; border-radius: 4px;}
+
+
 
 /* 점프업 - 포인트신청관리_신청(등록) (UI_ADHPChM02) */
 

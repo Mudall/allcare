@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - IAP결과관리_목록</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li><button type="button" aria-selected="false">참여신청서</button></li>
+                                <li><button type="button" aria-selected="false">상담이력</button></li>
+                                <li><button type="button" aria-selected="false">취업준비도검사</button></li>
+                                <li><button type="button" aria-selected="false">IAP관리</button></li>
+                                <li class="on"><button type="button" aria-selected="true">IAP결과관리</button></li>
+                                <li><button type="button" aria-selected="false">포인트신청관리</button></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="after_border mt24">
+                            <ul class="iap_status_dashboard">
+                                <li>
+                                    <div class="tit b1_r">참여연도</div>
+                                    <div class="desc b1_sb"><span class="txt_blue">2025</span>년</div>
+                                </li>
+                                <li>
+                                    <div class="tit b1_r">취업활동계획</div>
+                                    <div class="desc b1_sb"><span class="txt_blue">3</span>건</div>
+                                </li>
+                                <li>
+                                    <div class="tit b1_r">제출</div>
+                                    <div class="desc b1_sb"><span class="txt_blue">3</span>건</div>
+                                </li>
+                                <li>
+                                    <div class="tit b1_r">미제출</div>
+                                    <div class="desc b1_sb"><span class="txt_blue">0</span>건</div>
+                                </li>
+                                <li>
+                                    <div class="tit b1_r">승인</div>
+                                    <div class="desc b1_sb"><span class="txt_blue">3</span>건</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="apply_fullbox">
+                            <div class="dimmed_pop dsp-none"></div>
+                            <fieldset class="field_fullapply">
+                                <legend class="sr_only">적용 조건 설정</legend>
+                                
+                                <!-- 제출여부 선택 -->
+                                <div class="select_area">
+                                    <label for="제출여부" class="sr_only">제출여부</label>
+                                    <button type="button" class="form_select" id="제출여부" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="제출여부 제출여부edValue" data-target="제출여부Layer">
+                                        <span>제출여부 전체</span>
+                                    </button>
+                                    <input type="hidden" name="year" value="">
+
+                                    <div class="select_layer" id="제출여부 레이어" role="listbox" aria-labelledby="제출여부" aria-hidden="true" style="display: none;">
+                                        <ul class="select_option">
+                                            <li role="option">
+                                                <button type="button" data-value="" data-text="제출여부 전체">제출여부 전체</button>
+                                            </li>
+                                            <li role="option">
+                                                <button type="button" data-value="미제출" data-text="미제출">미제출</button>
+                                            </li>
+                                            <li role="option">
+                                                <button type="button" data-value="제출" data-text="제출">제출</button>
+                                            </li>
+                                        </ul>
+                                        <ul class="btn_group">
+                                            <li>
+                                                <button type="button" class="btn large gray select_close">취소</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 승인여부 선택 -->
+                                <div class="select_area"> 
+                                    <label for="승인여부" class="sr_only">승인여부</label>
+                                    <button type="button" class="form_select" id="승인여부" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="승인여부 승인여부edValue" data-target="승인여부Layer">
+                                        <span>승인여부 전체</span>
+                                    </button>
+                                    <input type="hidden" name="university" value="">
+
+                                    <div class="select_layer" id="승인여부 레이어" role="listbox" aria-labelledby="승인여부" aria-hidden="true" style="display: none;">
+                                        <ul class="select_option">
+                                            <li role="option">
+                                                <button type="button" data-value="ALL" data-text="승인여부 전체">승인여부 전체</button>
+                                            </li>
+                                            <li role="option">
+                                                <button type="button" data-value="미승인" data-text="미승인">미승인</button>
+                                            </li>
+                                            <li role="option">
+                                                <button type="button" data-value="승인" data-text="승인">승인</button>
+                                            </li>
+                                        </ul>
+                                        <ul class="btn_group">
+                                            <li>
+                                                <button type="button" class="btn large gray select_close">취소</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="apply_btn"><span class="b1_r">적용</span></button>
+                        </div>
+
+                        <div class="iap_mng_wrap after_border">
+                            <div class="total_hd"><p>전체 <span class="count">3</span>건</p></div>
+                            <ul>
+                                <li class="line_box">
+                                    <div class="item_trait">미제출</div>
+
+                                    <div class="item_tit">
+                                        <span class="tit_category">서비스참여형</span>
+                                        <span class="tit_name">직업훈련</span>
+                                    </div>
+
+                                    <div class="s1_r">
+                                        2025-00-00 ~ 2025-00-00
+                                    </div>
+
+                                    <div class="item_tags">
+                                        <span class="tag">오프라인</span>
+                                        <span class="tag">교내</span>
+                                        <span class="tag">교외</span>
+                                        <span class="tag">2학기</span>
+                                    </div>
+
+                                    <div class="item_detail mt16">
+                                        <ul>
+                                            <li>
+                                                <div class="detail_label"><p class="s1_r">취업활동결과</p></div>
+                                                <div class="detail_value">
+                                                    <p class="s1_r">2025-00-00 ~ 2025-00-00</p>
+                                                    <span class="detail_time s1_sb">(00시간)</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn_detail mt16"><span class="b1_r">상세보기</span></button>
+                                </li>
+                                <li class="line_box">
+                                    <div class="item_trait">제출</div>
+
+                                    <div class="item_tit">
+                                        <span class="tit_category">서비스참여형</span>
+                                        <span class="tit_name">직업훈련</span>
+                                    </div>
+
+                                    <div class="s1_r">
+                                        2025-00-00 ~ 2025-00-00
+                                    </div>
+
+                                    <div class="item_tags">
+                                        <span class="tag">오프라인</span>
+                                        <span class="tag">교내</span>
+                                        <span class="tag">교외</span>
+                                        <span class="tag">2학기</span>
+                                    </div>
+
+                                    <div class="item_detail mt16">
+                                        <ul>
+                                            <li>
+                                                <div class="detail_label"><p class="s1_r">취업활동결과</p></div>
+                                                <div class="detail_value">
+                                                    <p class="s1_r">2025-00-00 ~ 2025-00-00</p>
+                                                    <span class="detail_time s1_sb">(00시간)</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="detail_label"><p class="s1_r">제출일자</p></div>
+                                                <div class="detail_value">
+                                                    <p class="s1_r">2025-00-00 ~ 2025-00-00</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+
+                                    <button type="button" class="btn_detail mt16"><span class="b1_r">상세보기</span></button>
+                                </li>
+                                <li class="line_box">
+                                    <div class="item_trait">제출</div>
+
+                                    <div class="item_tit">
+                                        <span class="tit_category">서비스참여형</span>
+                                        <span class="tit_name">직업훈련</span>
+                                    </div>
+
+                                    <div class="s1_r">
+                                        2025-00-00 ~ 2025-00-00
+                                    </div>
+
+                                    <div class="item_tags">
+                                        <span class="tag">오프라인</span>
+                                        <span class="tag">교내</span>
+                                        <span class="tag">교외</span>
+                                        <span class="tag">2학기</span>
+                                    </div>
+
+                                    <div class="item_detail mt16">
+                                        <ul>
+                                            <li>
+                                                <div class="detail_label"><p class="s1_r">취업활동결과</p></div>
+                                                <div class="detail_value">
+                                                    <p class="s1_r">2025-00-00 ~ 2025-00-00</p>
+                                                    <span class="detail_time s1_sb">(00시간)</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="detail_label"><p class="s1_r">제출일자</p></div>
+                                                <div class="detail_value">
+                                                    <p class="s1_r">2025-00-00 ~ 2025-00-00</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="detail_label"><p class="s1_r">승인일자</p></div>
+                                                <div class="detail_value">
+                                                    <p class="s1_r">2025-00-00 ~ 2025-00-00</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn_detail mt16"><span class="b1_r">상세보기</span></button>
+                                </li>
+                            </ul>
+
+                            <!-- 내용 없을시 -->
+                            <div class="notlist_inner">
+                                <div class="icon mb16"></div>
+                                <p class="b1_sb">등록된 IAP 활동결과내역이 없습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="ipa_resultbtn_wrap">
+                            <p class="b1_r">취업활동계획(IAP) 70% 이상을 달성했습니다. </p>
+                            <p class="b1_r">취업준비도검사 2차를 작성해주세요.</p>
+                            <button type="button" class="rslt_btn mt24"><span class="b1_r">취업준비도 검사 2차 작성</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>
