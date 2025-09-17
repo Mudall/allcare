@@ -230,10 +230,12 @@
 .mypage .progmg.allcare .my_ptcp_from .box_group_wrap + .box_group_wrap {margin-top: 24px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap {position: relative; padding-bottom: 32px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap {margin-top: 8px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap dt {border-top: 1px solid #eee; padding-top: 16px;} 
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap dt:first-child {border-top: none; padding-top: 0;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap >div + div {border-top: 1px solid #eee;}
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dt { margin-top: 16px; font-size: 14px; color: #555; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dt {  font-size: 14px; color: #555; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap>div+div .dt {margin-top: 16px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dd { margin: 8px 0 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap dt {font-size: 14px; color: #555; font-weight: 600; line-height: 24px;} 
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap dd { margin: 8px 0 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
@@ -784,10 +786,10 @@
 .mypage .progmg.allcare .line_inner_box+.line_inner_box {margin-top: 16px;}
 .mypage .progmg.allcare .line_inner_box ul li .dt {margin-bottom: 8px; font-size: 14px; color: #555; font-weight: 600; line-height: 24px;}
 .mypage .progmg.allcare .line_inner_box ul li+li {margin-top: 16px;}
-.mypage .progmg.allcare .line_inner_box .dd_date_row {display: flex; align-items: center; gap: 4px;}
-.mypage .progmg.allcare .line_inner_box .dd_date_row>span {width: 24px; text-align: center; flex: 1;} 
-.mypage .progmg.allcare .line_inner_box .dd_date_row .date_area {width: calc(50% - 16px);}
-.mypage .progmg.allcare .line_inner_box .dd_date_row .date_area input[type=text] {padding: 0.625rem 2.625rem 0.625rem 0.625rem;}
+.mypage .progmg.allcare .dd_date_row {display: flex; align-items: center; gap: 4px;}
+.mypage .progmg.allcare .dd_date_row>span {width: 24px; text-align: center; flex: 1;} 
+.mypage .progmg.allcare .dd_date_row .date_area {width: calc(50% - 16px);}
+.mypage .progmg.allcare .dd_date_row .date_area input[type=text] {padding: 0.625rem 2.625rem 0.625rem 0.625rem;}
 .mypage .progmg.allcare .line_inner_box .inner_btn_wrap {display: flex; justify-content: space-between; align-items: center;}
 .mypage .progmg.allcare .line_inner_box .inner_btn_wrap .gap_button_box {display: flex; align-items: center; gap: 8px;}
 .mypage .progmg.allcare .line_inner_box .inner_btn_wrap .gap_button_box.move_type button {width: 40px; height: 40px; border: 1px solid #757575; border-radius: 4px; position: relative;}
@@ -804,6 +806,7 @@
 .mypage .progmg.allcare .btn.wper33 {width: calc((100% - 16px)/3);}
 
 /* 점프업 - IAP관리_조회/수정(저장) (UI_ADHPCfS03) */
+
 
 /* 점프업 - IAP관리_조회(제출) (UI_ADHPCfS04) */
 .mypage .progmg.allcare .box_group_wrap .tit_row_hd .openbtn_box button {width: 80px; height: 32px;}
@@ -827,7 +830,7 @@
 .mypage .progmg.allcare .line_inner_result .toggle_act_box button span {padding-right: 20px; position: relative; font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
 .mypage .progmg.allcare .line_inner_result .toggle_act_box button span::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url('../images/mypage/arrow16_top_active.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .line_inner_result .toggle_act_box button.open_btn span::after {background-image: url('../images/mypage/arrow16_down.svg');} 
-.mypage .progmg.allcare .my_ptcp_from.iap_manag_wrap .box_group_wrap .top_linewrap>div:last-child>.dd {margin-bottom: 0;}
+.mypage .progmg.allcare .my_ptcp_from .box_group_wrap .top_linewrap>div:last-child>.dd {margin-bottom: 0;}
 
 /* 점프업 - IAP관리_수정(보완요청_제출후) (UI_ADHPCfS05)*/
 
@@ -892,15 +895,21 @@
 .mypage .progmg.allcare .iap_mng_wrap .line_box .item_detail .detail_value span {color: #333;}
 .mypage .progmg.allcare .iap_mng_wrap .line_box .btn_detail {width: 100%; border: 1px solid var(--col_blue); border-radius: 4px; padding: 6px;}
 .mypage .progmg.allcare .iap_mng_wrap .line_box .btn_detail span {color: var(--col_blue);}
-
 .mypage .progmg.allcare .notlist_inner {margin-top: 16px; width: 100%; background-color: #f5f6f8; border-radius: 8px; padding: 40px 16px; display: flex; flex-direction: column; align-items: center;}
 .mypage .progmg.allcare .notlist_inner .icon {display: block; width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .notlist_inner p {font-weight: 600;}
 
 
-
-
 /* 점프업 - IAP결과관리_등록(제출 및 저장전) (UI_ADHPCgM02) */
+.mypage .progmg.allcare .iap_attfile_wrap {padding: 24px 16px; background-color: #f5f6f8;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit p {padding-left: 28px; position:relative;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit p:after {content:''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_file_att.svg') no-repeat center / contain; }
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li {padding-left: 16px; position: relative;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li:after {content:''; position: absolute; left: 3px; top: 10px; width:4px; height: 4px; border-radius: 50%; background-color: #555;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li+li {margin-top: 4px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_txt_box .desc {padding-left: 16px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box {margin-top: 8px;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box .att_file_btn {width: 100%; background-color: #fff; border: 1px solid #757575; border-radius: 4px; padding: 8px 16px; }
 
 /* 점프업 - IAP결과관리_수정(저장후 제출전) (UI_ADHPCgM03) */
 
