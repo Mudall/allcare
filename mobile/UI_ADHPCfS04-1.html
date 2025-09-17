@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - IAP관리_조회(제출)</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li><button type="button" aria-selected="false">참여신청서</button></li>
+                                <li><button type="button" aria-selected="false">상담이력</button></li>
+                                <li><button type="button" aria-selected="false">취업준비도검사</button></li>
+                                <li class="on"><button type="button" aria-selected="true">IAP관리</button></li>
+                                <li><button type="button" aria-selected="false">IAP결과관리</button></li>
+                                <li><button type="button" aria-selected="false">포인트신청관리</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="my_ptcp_from iap_manag_wrap">
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">참여자 정보</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt">성명</div>
+                                        <div class="dd">홍길동</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">전공/학과</div>
+                                        <div class="dd">선택한 전공 / 선택한 학과</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학번</div>
+                                        <div class="dd">202500010001</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학적 상태</div>
+                                        <div class="dd">재학</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학년/학기</div>
+                                        <div class="dd dd_rowcell">1학년 / 2학기</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">취업지원유형</span></div>
+                                        <div class="dd">
+                                            <fieldset class="radio_filed filed_row" disabled>
+                                                <legend class="sr_only">취업지원유형</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="자기주도형" name="취업지원유형" value="" role="radio">
+                                                    <label for="자기주도형" class="custom_radio">
+                                                        <span class="label_text">자기주도형</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="서비스참여형" name="취업지원유형" value=""role="radio" checked>
+                                                    <label for="서비스참여형" class="custom_radio">
+                                                        <span class="label_text">서비스참여형</span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">희망진로</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt"><span class="req_mark">희망진로</span></div>
+                                        <div class="dd">일반취업(일반기업, 공공기관)</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">시험명/활동명</div>
+                                        <div class="dd">입력한 내용 TEST TEST TEST TEST</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  -->
+
+                            <div class="box_group_wrap">
+                                <h3 class="t2_sb">취업목표</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt"><span class="req_mark">희망직업(직종/직무)</span></div>
+                                        <div class="dd">AI 엔지니어</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">희망급여(월급)</span></div>
+                                        <div class="dd dd_row_ipt">1,000 만원</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">목표근무지역</span></div>
+                                        <div class="dd">수도권(서울, 경기)</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">목표기업군</span></div>
+                                        <div class="dd">중소기업</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt"><span class="req_mark">목표 취업예상 시기</span></div>
+                                        <div class="dd">2025년 12월</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  -->
+
+                            <div class="box_group_wrap after_border">
+                                <div class="tit_row_hd mb8">
+                                    <div class="txt_box">
+                                        <h3 class="t2_sb">취업활동계획</h3>
+                                        <p class="b1_r">총 <span class="count">2</span>건</p>
+                                    </div>
+                                    <div class="openbtn_box">
+                                        <button type="button" class="btn type03"><span class="s1_r">전체 펼치기</span></button>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="line_inner_wrap line_inner_result">
+                                    <div class="line_inner_box">
+                                        <div class="line_inner_cont">
+                                            <ul class="result_list">
+                                                <li>
+                                                    <div class="dt">중점영역</div>
+                                                    <div class="dd"><span class="txt_spe">서비스참여형</span>직업훈련</div>
+                                                </li>
+                                                <li>
+                                                    <div class="dt">참여방법</div>
+                                                    <div class="dd">온라인강의</div>
+                                                </li>
+                                                <li>
+                                                    <div class="dt">참여일정</div>
+                                                    <div class="dd dd_twin">
+                                                        <span>2025-01 ~ 2025-02</span>
+                                                        <span>(5시간)</span>
+                                                    </div>
+                                                </li>
+                                                <li class="toggle_item">
+                                                    <div class="dt">목표달성시기</div>
+                                                    <div class="dd">1학기</div>
+                                                </li>
+                                                <li class="toggle_item">
+                                                    <div class="dt">참여기관(교내)</div>
+                                                    <div class="dd">교내</div>
+                                                </li>
+                                                <li class="toggle_item">
+                                                    <div class="dt">참여기관(외부)</div>
+                                                    <div class="dd">외부</div>
+                                                </li>
+                                                <li class="toggle_item li_fullbox">
+                                                    <div class="dt">활동내용</div> 
+                                                    <div class="dd">
+                                                        취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="is_submitted_box toggle_item">
+                                                <ul>
+                                                    <li>
+                                                        <div class="dt">IAP 결과 제출 여부</div>
+                                                        <div class="dd">예</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="dt">포인트 신청서 제출 여부</div>
+                                                        <div class="dd">예</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="toggle_act_box">
+                                            <button type="button" class="close_btn active" aria-expanded="true"><span>접기</span></button>
+                                            <button type="button" class="open_btn" aria-expanded="false"><span>더보기</span></button>
+                                        </div>
+                                    </div>
+
+                                    <!--  -->
+
+                                    <div class="line_inner_box">
+                                        <div class="line_inner_cont">
+                                            <ul class="result_list">
+                                                <li>
+                                                    <div class="dt">중점영역</div>
+                                                    <div class="dd"><span class="txt_spe">서비스참여형</span>직업훈련</div>
+                                                </li>
+                                                <li>
+                                                    <div class="dt">참여방법</div>
+                                                    <div class="dd">온라인강의</div>
+                                                </li>
+                                                <li>
+                                                    <div class="dt">참여일정</div>
+                                                    <div class="dd dd_twin">
+                                                        <span>2025-01 ~ 2025-02</span>
+                                                        <span>(5시간)</span>
+                                                    </div>
+                                                </li>
+                                                <li class="toggle_item">
+                                                    <div class="dt">목표달성시기</div>
+                                                    <div class="dd">1학기</div>
+                                                </li>
+                                                <li class="toggle_item">
+                                                    <div class="dt">참여기관(교내)</div>
+                                                    <div class="dd">교내</div>
+                                                </li>
+                                                <li class="toggle_item">
+                                                    <div class="dt">참여기관(외부)</div>
+                                                    <div class="dd">외부</div>
+                                                </li>
+                                                <li class="toggle_item li_fullbox">
+                                                    <div class="dt">활동내용</div> 
+                                                    <div class="dd">
+                                                        취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 취업지원 유형 중 자기주도형의 취업역량과 관련된 활동 세부내용 작성합니다. 
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="is_submitted_box toggle_item">
+                                                <ul>
+                                                    <li>
+                                                        <div class="dt">IAP 결과 제출 여부</div>
+                                                        <div class="dd">예</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="dt">포인트 신청서 제출 여부</div>
+                                                        <div class="dd">예</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="toggle_act_box">
+                                            <button type="button" class="close_btn active" aria-expanded="true"><span>접기</span></button>
+                                            <button type="button" class="open_btn" aria-expanded="false"><span>더보기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="paging pb0"></div>
+                            </div>
+                        </div>
+
+                        <div class="prog_wrap prog_applysummary box_group_wrap box_table_wrap after_border">
+                            <h3 class="t2_sb">신청 및 처리현황</h3>
+                            <div class="apply_summary_wrap mt8" role="region">
+                                <div class="apply_summary_header">
+                                    <div class="apply_summary_info  mb24">
+                                        <i></i>
+                                        <p class="apply_summary_tit">현재 참여신청서 <span>제출</span> 상태 입니다.</p>
+                                        <p class="apply_summary_tel s1_r ">담당자 : 김담당 (010-0000-0000)</p>
+                                    </div>
+
+                                </div>
+
+                                <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                <div class="apply_summary_inner" id="applySummaryDetail" hidden="">
+                                    <ul>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">제출</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">제출</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="apply_summary_action secon_action">
+                                    <button type="button" class="apply_summary_toggle" aria-expanded="false" aria-controls="applySummaryDetail"><span class="open_bt">열기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                            <div class="btn_box flex_wrap mt24">
+                                <button type="button" class="btn large type03 fw400">목록</button>
+                                <button type="button" class="btn large fill type01">회수</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script>
+                // 접기-열기 버튼 구현
+                $(function(){
+                    $(".line_inner_box").each(function(){
+                        var $box = $(this);
+
+                        // 닫기 버튼
+                        $box.on("click", ".close_btn", function(){
+                            $box.find(".toggle_item").hide();
+
+                            $box.find(".close_btn").removeClass("active").attr("aria-expanded", "false");
+                            $box.find(".open_btn").addClass("active").attr("aria-expanded", "true");
+                        });
+
+                        // 열기 버튼
+                        $box.on("click", ".open_btn", function(){
+                            $box.find(".toggle_item").show();
+
+                            $box.find(".open_btn").removeClass("active").attr("aria-expanded", "false");
+                            $box.find(".close_btn").addClass("active").attr("aria-expanded", "true");
+                        });
+                    });
+                });
+            </script>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>

@@ -57,6 +57,7 @@
 .allcare .mb4 {margin-bottom: 4px !important;}
 .allcare .mb0 {margin-bottom: 0 !important;}
 .allcare .pb24 {padding-bottom: 24px !important;}
+.allcare .pb0 {padding-bottom: 0 !important;}
 .allcare .pt24 {padding-top: 24px !important;}
 .allcare .pt16 {padding-top: 16px !important;}
 .allcare .pad_none {padding: initial !important;}
@@ -501,6 +502,7 @@
 .mypage .progmg.allcare .prog_wrap.prog_applysummary .apply_summary_action.secon_action button {padding: 10px 0; width: 100%;}
 .mypage .progmg.allcare .prog_wrap.prog_applysummary .apply_summary_action.secon_action button span {position: relative; padding-right: 20px; font-size: 14px; color: #333; line-height: 24px; font-weight: 400;}
 .mypage .progmg.allcare .prog_wrap.prog_applysummary .apply_summary_action.secon_action button span::after {content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%) rotate(180deg); width: 16px; height: 16px; background: url('../images/mypage/ico16_line_right_filled.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .prog_wrap.prog_applysummary .apply_summary_action.secon_action button span.open_bt::after {transform: translateY(-50%);}
 .mypage .progmg.allcare .prog_wrap.prog_applysummary .apply_summary_pv {padding: 16px 12px; border: 1px solid #ddd; border-radius: 8px;}
 .mypage .progmg.allcare .prog_wrap.prog_applysummary .apply_summary_pv p {position: relative; padding-left: 16px; font-size: 14px; line-height: 24px; font-weight: 400; color: #555;}
 .mypage .progmg.allcare .prog_wrap.prog_applysummary .apply_summary_pv p::before {content: ''; position: absolute; left: 4px; top: 10px; background-color: #555; border-radius: 50%; display: block; width: 4px; height: 4px;}
@@ -777,7 +779,7 @@
 .mypage .progmg.allcare .box_group_wrap .label_row .new_ipt {flex: 1;}
 
 .mypage .progmg.allcare .box_group_wrap .tit_row_hd {display: flex; justify-content: space-between; align-items: center;}
-.mypage .progmg.allcare .box_group_wrap .tit_row_hd .txt_box {display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .box_group_wrap .tit_row_hd .txt_box {display: flex; align-items: baseline; gap: 8px;}
 .mypage .progmg.allcare .box_group_wrap .tit_row_hd .txt_box p .count {color: var(--col_blue); font-weight: 600;}
 .mypage .progmg.allcare .box_group_wrap .tit_row_hd .button_box button {padding: 4px 10px;}
 .mypage .progmg.allcare .box_group_wrap .tit_row_hd .button_box button span {padding-left: 20px; position: relative;}
@@ -790,6 +792,7 @@
 .mypage .progmg.allcare .line_inner_box .dd_date_row {display: flex; align-items: center; gap: 4px;}
 .mypage .progmg.allcare .line_inner_box .dd_date_row>span {width: 24px; text-align: center; flex: 1;} 
 .mypage .progmg.allcare .line_inner_box .dd_date_row .date_area {width: calc(50% - 16px);}
+.mypage .progmg.allcare .line_inner_box .dd_date_row .date_area input[type=text] {padding: 0.625rem 2.625rem 0.625rem 0.625rem;}
 .mypage .progmg.allcare .line_inner_box .text_form_box textarea { width: 100%; height: 200px; padding: 16px; vertical-align: top; border: 1px solid var(--col_button); border-radius: 8px;}
 .mypage .progmg.allcare .line_inner_box .text_form_box .count_info { margin-top: 8px; font-size: 14px; color: var(--col_button); text-align: right; line-height: 24px;}
 .mypage .progmg.allcare .line_inner_box .text_form_box .result_byte { color:var(--col_body);}
@@ -807,14 +810,38 @@
 .mypage .progmg.allcare .cont_none_box .none_tit {position: relative; padding-left: 28px;}
 .mypage .progmg.allcare .cont_none_box .none_tit::after {content: ''; width: 24px; height: 24px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: url('../images/mypage/ico24_memo_edit.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .cont_none_box .write_btn {padding: 6px 16px; border: 1px solid #757575; border-radius: 4px;}
-
-
-
+.mypage .progmg.allcare .btn.wper33 {width: calc((100% - 16px)/3);}
 
 
 /* 점프업 - IAP관리_조회/수정(저장) (UI_ADHPCfS03) */
 
 /* 점프업 - IAP관리_조회(제출) (UI_ADHPCfS04) */
+.mypage .progmg.allcare .box_group_wrap .tit_row_hd .openbtn_box button {width: 80px; height: 32px;}
+.mypage .progmg.allcare .line_inner_result {}
+.mypage .progmg.allcare .line_inner_result .line_inner_box {padding: 0; overflow: hidden;}
+.mypage .progmg.allcare .line_inner_result .line_inner_cont {padding: 16px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list {}
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list li {display: flex; justify-content: space-between; gap: 12px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list li+li {margin-top: 12px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list li .dt {margin: 0; font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list li .dd {flex: 1; text-align: right; margin: 0; font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list li .dd.dd_twin {display: flex; flex-direction: column;} 
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list li.li_fullbox {flex-direction: column; gap: 8px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box ul.result_list li.li_fullbox .dd {text-align: left;}
+
+.mypage .progmg.allcare .line_inner_result .line_inner_box .is_submitted_box {background-color: #f8f8f8; padding: 16px; border-radius: 8px; margin-top: 12px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box .is_submitted_box ul {}
+.mypage .progmg.allcare .line_inner_result .line_inner_box .is_submitted_box ul li {display: flex; justify-content: space-between;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box .is_submitted_box ul li+li {margin-top: 4px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box .is_submitted_box ul li .dt {margin: 0; font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .line_inner_result .line_inner_box .is_submitted_box ul li .dd {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+
+.mypage .progmg.allcare .line_inner_result .toggle_act_box {border-top: 1px solid #ddd; display: flex; justify-content: center; align-items: center;}
+.mypage .progmg.allcare .line_inner_result .toggle_act_box button {display: none; width: 100%; height: 100%; padding: 10px; }
+.mypage .progmg.allcare .line_inner_result .toggle_act_box button.active {display: block;}
+.mypage .progmg.allcare .line_inner_result .toggle_act_box button span {padding-right: 20px; position: relative; font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .line_inner_result .toggle_act_box button span::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url('../images/mypage/arrow16_top_active.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .line_inner_result .toggle_act_box button.open_btn span::after {background-image: url('../images/mypage/arrow16_down.svg');} 
 
 /* 점프업 - IAP관리_수정(보완요청_제출후) (UI_ADHPCfS05)*/
 

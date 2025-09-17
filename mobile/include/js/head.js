@@ -25,6 +25,8 @@ str += '<link rel="stylesheet" href="../mobile/include/css/contents_f.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/contents_g.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/contents_h.css">';
 str += '<link rel="stylesheet" href="../mobile/include/css/layout_scss.css">';
-str += '<script src="../mobile/include/js/jquery-3.7.1.min.js">';
+str += '<script src="../mobile/include/js/jquery-3.7.1.min.js"></script>';
+str += '<script src="../mobile/js/contents.js"></script>';
+        
 
 document.write(str);

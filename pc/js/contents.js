@@ -207,13 +207,6 @@ $(document).ready(function() {
 });
 
 
-// unselect 일때 radio 비활성화
-$(function(){
-    $('.box_radio_group.type_unselect input[type="radio"]').on('click', function(e){
-        e.preventDefault();          
-        $(this).prop('checked', false); 
-    });
-});
 
 // 신청 및 처리현황 on/off 토글
 $(document).ready(function() {
