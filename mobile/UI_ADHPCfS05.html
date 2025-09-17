@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>점프업 - IAP관리_등록</title>
+        <title>점프업 - IAP관리_수정(보완요청_제출후)</title>
         <script src="../mobile/include/js/head.js"></script>
         <script src="../mobile/include/js/mobile-ui-util.js"></script>
         <script src="../mobile/include/js/mobile-ui.js"></script>
@@ -69,7 +69,7 @@
                                     <div>
                                         <div class="dt"><span class="req_mark">취업지원유형</span></div>
                                         <div class="dd">
-                                            <fieldset class="radio_filed filed_row">
+                                            <fieldset class="radio_filed filed_row" disabled>
                                                 <legend class="sr_only">취업지원유형</legend>
                                                 <div class="new_radio_item">
                                                     <input type="radio" id="자기주도형" name="취업지원유형" value="" role="radio">
@@ -78,7 +78,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="new_radio_item">
-                                                    <input type="radio" id="서비스참여형" name="취업지원유형" value=""role="radio">
+                                                    <input type="radio" id="서비스참여형" name="취업지원유형" value=""role="radio" checked>
                                                     <label for="서비스참여형" class="custom_radio">
                                                         <span class="label_text">서비스참여형</span>
                                                     </label>
@@ -98,7 +98,7 @@
                                             <fieldset class="radio_filed">
                                                 <legend class="sr_only">희망진로</legend>
                                                 <div class="new_radio_item">
-                                                    <input type="radio" id="일반취업" name="희망진로" value="" role="radio">
+                                                    <input type="radio" id="일반취업" name="희망진로" value="" role="radio" checked>
                                                     <label for="일반취업" class="custom_radio">
                                                         <span class="label_text">일반취업(일반기업, 공공기관)</span>
                                                     </label>
@@ -151,7 +151,7 @@
                                         <div class="dt"><span class="req_mark">희망직업(직종/직무)</span></div>
                                         <div class="dd">
                                             <span class="box_ipt new_ipt">
-                                                <input type="text" class="input_txt" title="희망직업" placeholder="">
+                                                <input type="text" class="input_txt" title="희망직업" placeholder="" value="입력한 직업 TEST TEST">
                                                 <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                             </span>
                                         </div>
@@ -160,7 +160,7 @@
                                         <div class="dt"><span class="req_mark">희망급여(월급)</span></div>
                                         <div class="dd dd_row_ipt">
                                             <span class="box_ipt new_ipt">
-                                                <input type="text" class="input_txt" title="희망급여" placeholder="">
+                                                <input type="text" class="input_txt" title="희망급여" placeholder="" value="1,000">
                                                 <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                             </span>
                                             <span class="s1_b row_ipt_txt">만원</span>
@@ -172,7 +172,7 @@
                                             <fieldset class="radio_filed">
                                                 <legend class="sr_only">목표근무지역</legend>
                                                 <div class="new_radio_item">
-                                                    <input type="radio" id="수도권" name="목표근무지역" value="" role="radio">
+                                                    <input type="radio" id="수도권" name="목표근무지역" value="" role="radio" checked>
                                                     <label for="수도권" class="custom_radio">
                                                         <span class="label_text">수도권(서울, 경기)</span>
                                                     </label>
@@ -232,11 +232,11 @@
                                                     </label>
                                                 </div>
                                                 <div class="new_radio_item nri_center">
-                                                    <input type="radio" id="기타" name="목표기업군" value=""role="radio">
+                                                    <input type="radio" id="기타" name="목표기업군" value=""role="radio" checked>
                                                     <label for="기타" class="custom_radio label_row">
                                                         <span class="label_text">기타</span>
                                                         <span class="box_ipt new_ipt">
-                                                            <input type="text" class="input_txt" title="기타 입력" placeholder="" disabled>
+                                                            <input type="text" class="input_txt" title="기타 입력" placeholder="" value="강소기업">
                                                             <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                         </span>
                                                     </label>
@@ -266,8 +266,8 @@
                                     </div>
                                     <div class="select_area">
                                         <div class="view_select_box button_box"><button type="button" class="btn type03"><span class="s1_r">행 추가</span></button></div>
-                                        <div class="dimmed_pop"></div>
-                                        <div class="select_layer">
+                                        <div class="dimmed_pop dsp-none"></div>
+                                        <div class="select_layer dsp-none">
                                             <ul class="select_option">
                                                 <li><input type="hidden" value="10"><button type="button" onclick="setSelectValue(this,'sort')">행 추가 10개</button></li>
                                                 <li><input type="hidden" value="20"><button type="button" onclick="setSelectValue(this,'sort')">행 추가 20개</button></li>
@@ -290,8 +290,8 @@
                                                 <div class="dt">중점영역</div>
                                                 <div class="dd">
                                                     <select class="new_down" title="중점영역 선택">
-                                                        <option disabled selected>중점영역 선택</option>
-                                                        <option>TEST</option>
+                                                        <option disabled>중점영역 선택</option>
+                                                        <option selected>자격취득</option>
                                                         <option>TEST</option>
                                                     </select>
                                                 </div>
@@ -300,8 +300,8 @@
                                                 <div class="dt">참여방법</div>
                                                 <div class="dd">
                                                     <select class="new_down" title="참여방법 선택">
-                                                        <option disabled selected>선택</option>
-                                                        <option>TEST</option>
+                                                        <option disabled>선택</option>
+                                                        <option selected>온라인</option>
                                                         <option>TEST</option>
                                                     </select>
                                                 </div>
@@ -310,12 +310,12 @@
                                                 <div class="dt">참여기간</div>
                                                 <div class="dd dd_date_row">
                                                     <div class="date_area">
-                                                        <input type="text" title="참여기간 시작" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <input type="text" title="참여기간 시작" id="참여기간" name="참여기간" value="2025-01" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
                                                         <button type="button" class="calendar"><span>달력</span></button>
                                                     </div>
                                                     <span class="b1_sb">~</span>
                                                     <div class="date_area">
-                                                        <input type="text" title="참여기간 종료" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <input type="text" title="참여기간 종료" id="참여기간" name="참여기간" value="2025-12" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
                                                         <button type="button" class="calendar"><span>달력</span></button>
                                                     </div>
                                                 </div>
@@ -324,7 +324,7 @@
                                                 <div class="dt">참여시간</div>
                                                 <div class="dd dd_row_ipt">
                                                     <span class="box_ipt new_ipt">
-                                                        <input type="text" class="input_txt" title="참여시간" placeholder="">
+                                                        <input type="text" class="input_txt" title="참여시간" placeholder="" value="10">
                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                     </span>
                                                     <span class="s1_b row_ipt_txt">시간</span>
@@ -334,7 +334,7 @@
                                                 <div class="dt">참여기관(교내)</div>
                                                 <div class="dd">
                                                     <span class="box_ipt new_ipt">
-                                                        <input type="text" class="input_txt" title="교내참여기관" placeholder="">
+                                                        <input type="text" class="input_txt" title="교내참여기관" placeholder="" value="교내">
                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                     </span>
                                                 </div>
@@ -343,7 +343,7 @@
                                                 <div class="dt">참여기관(외부)</div>
                                                 <div class="dd">
                                                     <span class="box_ipt new_ipt">
-                                                        <input type="text" class="input_txt" title="외부참여기관" placeholder="">
+                                                        <input type="text" class="input_txt" title="외부참여기관" placeholder="" value="교외">
                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                     </span>
                                                 </div>
@@ -352,9 +352,9 @@
                                                 <div class="dt">목표달성시기</div>
                                                 <div class="dd">
                                                     <select class="new_down" title="목표달성시기">
-                                                        <option disabled selected>선택</option>
-                                                        <option>TEST</option>
-                                                        <option>TEST</option>
+                                                        <option disabled>선택</option>
+                                                        <option selected>1학기</option>
+                                                        <option>2학기</option>
                                                     </select>
                                                 </div>
                                             </li>
@@ -363,7 +363,7 @@
                                                 <div class="dd">
                                                     <div class="text_form_box">
                                                         <div class="text_form_inner">
-                                                            <textarea title="활동내용" placeholder="세부활동 내용을 작성해 주세요." required></textarea>
+                                                            <textarea title="활동내용" placeholder="세부활동 내용을 작성해 주세요." required>입력한 내용 TEST TEST TEST TEST TEST TEST</textarea>
                                                         </div>
                                                         <div class="text_info">
                                                             <p class="count_info"><span class="result_byte">0</span> / <span class="max_byte">400</span> Byte</p>
@@ -388,8 +388,8 @@
                                                 <div class="dt">중점영역</div>
                                                 <div class="dd">
                                                     <select class="new_down" title="중점영역 선택">
-                                                        <option disabled selected>중점영역 선택</option>
-                                                        <option>TEST</option>
+                                                        <option disabled>중점영역 선택</option>
+                                                        <option selected>자격취득</option>
                                                         <option>TEST</option>
                                                     </select>
                                                 </div>
@@ -398,8 +398,8 @@
                                                 <div class="dt">참여방법</div>
                                                 <div class="dd">
                                                     <select class="new_down" title="참여방법 선택">
-                                                        <option disabled selected>선택</option>
-                                                        <option>TEST</option>
+                                                        <option disabled>선택</option>
+                                                        <option selected>온라인</option>
                                                         <option>TEST</option>
                                                     </select>
                                                 </div>
@@ -408,12 +408,12 @@
                                                 <div class="dt">참여기간</div>
                                                 <div class="dd dd_date_row">
                                                     <div class="date_area">
-                                                        <input type="text" title="참여기간 시작" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <input type="text" title="참여기간 시작" id="참여기간" name="참여기간" value="2025-01" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
                                                         <button type="button" class="calendar"><span>달력</span></button>
                                                     </div>
                                                     <span class="b1_sb">~</span>
                                                     <div class="date_area">
-                                                        <input type="text" title="참여기간 종료" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
+                                                        <input type="text" title="참여기간 종료" id="참여기간" name="참여기간" value="2025-12" placeholder="YYYY-MM" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
                                                         <button type="button" class="calendar"><span>달력</span></button>
                                                     </div>
                                                 </div>
@@ -422,7 +422,7 @@
                                                 <div class="dt">참여시간</div>
                                                 <div class="dd dd_row_ipt">
                                                     <span class="box_ipt new_ipt">
-                                                        <input type="text" class="input_txt" title="참여시간" placeholder="">
+                                                        <input type="text" class="input_txt" title="참여시간" placeholder="" value="10">
                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                     </span>
                                                     <span class="s1_b row_ipt_txt">시간</span>
@@ -432,7 +432,7 @@
                                                 <div class="dt">참여기관(교내)</div>
                                                 <div class="dd">
                                                     <span class="box_ipt new_ipt">
-                                                        <input type="text" class="input_txt" title="교내참여기관" placeholder="">
+                                                        <input type="text" class="input_txt" title="교내참여기관" placeholder="" value="교내">
                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                     </span>
                                                 </div>
@@ -441,7 +441,7 @@
                                                 <div class="dt">참여기관(외부)</div>
                                                 <div class="dd">
                                                     <span class="box_ipt new_ipt">
-                                                        <input type="text" class="input_txt" title="외부참여기관" placeholder="">
+                                                        <input type="text" class="input_txt" title="외부참여기관" placeholder="" value="교외">
                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
                                                     </span>
                                                 </div>
@@ -450,9 +450,9 @@
                                                 <div class="dt">목표달성시기</div>
                                                 <div class="dd">
                                                     <select class="new_down" title="목표달성시기">
-                                                        <option disabled selected>선택</option>
-                                                        <option>TEST</option>
-                                                        <option>TEST</option>
+                                                        <option disabled>선택</option>
+                                                        <option selected>1학기</option>
+                                                        <option>2학기</option>
                                                     </select>
                                                 </div>
                                             </li>
@@ -461,7 +461,7 @@
                                                 <div class="dd">
                                                     <div class="text_form_box">
                                                         <div class="text_form_inner">
-                                                            <textarea title="활동내용" placeholder="세부활동 내용을 작성해 주세요." required></textarea>
+                                                            <textarea title="활동내용" placeholder="세부활동 내용을 작성해 주세요." required>입력한 내용 TEST TEST TEST TEST TEST TEST</textarea>
                                                         </div>
                                                         <div class="text_info">
                                                             <p class="count_info"><span class="result_byte">0</span> / <span class="max_byte">400</span> Byte</p>
@@ -492,12 +492,44 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="prog_wrap prog_applysummary box_group_wrap box_table_wrap after_border">
+                            <h3 class="t2_sb">신청 및 처리현황</h3>
+                            <div class="apply_summary_wrap mt8" role="region">
+                                <div class="apply_summary_header">
+                                    <div class="apply_summary_info  mb24">
+                                        <i></i>
+                                        <p class="apply_summary_tit">현재 참여신청서 <span>보완제출</span> 상태 입니다.</p>
+                                        <p class="apply_summary_tel s1_r ">담당자 : 김담당 (010-0000-0000)</p>
+                                    </div>
+                                </div>
+
+                                <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                <div class="apply_summary_inner" id="applySummaryDetail" hidden="">
+                                    <ul>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">제출</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">보완제출</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                            <p class="apply_summary_reason">보완내용 : 대플 담당자가 등록한 보완 내용</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="apply_summary_action secon_action">
+                                    <button type="button" class="apply_summary_toggle" aria-expanded="false" aria-controls="applySummaryDetail"><span class="open_bt">열기</span></button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
                             <div class="btn_box flex_wrap mt24">
                                 <button type="button" class="btn large type03 fw400">목록</button>
-                                <button type="button" class="btn large type03 fw400">초기화</button>
-                                <button type="button" class="btn large line_blue">저장</button>
-                                <button type="button" class="btn large fill type01">제출</button>
+                                <button type="button" class="btn large fill type01">보완제출</button>
                             </div>
                         </div>  
                         
