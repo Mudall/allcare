@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>점프업 - IAP결과관리_등록(제출및저장전)</title>
+        <title>점프업 - 점프업_IAP결과관리_조회(제출후)</title>
         <script src="../mobile/include/js/head.js"></script>
         <script src="../mobile/include/js/mobile-ui-util.js"></script>
         <script src="../mobile/include/js/mobile-ui.js"></script>
@@ -104,59 +104,99 @@
                                 <div class="box_table_wrap top_linewrap">
                                     <div>
                                         <div class="dt"><span class="req_mark">참여일자</span></div>
-                                        <div class="dd dd_date_row">
-                                            <div class="date_area">
-                                                <input type="text" title="참여기간 시작" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM-DD" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
-                                                <button type="button" class="calendar"><span>달력</span></button>
-                                            </div>
-                                            <span class="b1_sb">~</span>
-                                            <div class="date_area">
-                                                <input type="text" title="참여기간 종료" id="참여기간" name="참여기간" value="" placeholder="YYYY-MM-DD" class="hasDatepicker valid" required=""><button type="button" class="btn_calendar ui-datepicker-trigger" title="달력선택"></button><input name="startDate" type="hidden" data-type="datepicker" value="">
-                                                <button type="button" class="calendar"><span>달력</span></button>
-                                            </div>
-                                        </div>
+                                        <div class="dd">2025년 01월 ~ 2025년 12월</div>
                                     </div>
                                     <div>
                                         <div class="dt"><span class="req_mark">참여시간</span></div>
-                                        <div class="dd dd_row_ipt">
-                                            <span class="box_ipt new_ipt">
-                                                <input type="text" class="input_txt" title="참여시간" placeholder="">
-                                                <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
-                                            </span>
-                                            <span class="s1_b row_ipt_txt">시간</span>
-                                        </div>                        
+                                        <div class="dd">5시간</div>                        
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="after_border">
                             <div class="iap_attfile_wrap mt16">
                                 <div class="iap_attfile_tit">
                                     <div class="att_tit"><p class="b1_sb">첨부파일</p></div>
-                                    <ul class="att_desc mt16">
-                                        <li><p class="s1_r">파일용량은 3MB 이하이며, 3개 파일 업로드 가능합니다.</p></li>
-                                        <li><p class="s1_r">등록 가능 파일 : jpg, jpeg, png, pdf, hwp, dosc, xlsx, docx, doc, txt</p></li>
-                                    </ul>
                                 </div>
                                 <div class="iap_attfile_cont mt16">
                                     <div class="register_txt_box">
                                         <p class="tit s1_sb">1. IAP결과증빙자료</p>
                                         <p class="desc s1_r">재학생맞춤형고용서비스-IAP결과증빙자료</p>
                                     </div>
-                                    <div class="register_att_box">
-                                        <button type="button" class="att_file_btn" onclick="addFiles()"><span class="s1_sb">파일찾기</span></button>
-                                        <input type="file" id="files" style="display: none;">
+                                </div>
+                                <ul class="ul_iap_addlist mt16" id="fileList">
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p>파일명.pdf</p></div>
+                                        <div class="att_li_btn">
+                                            <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                            <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p>파일명.pdf</p></div>
+                                        <div class="att_li_btn">
+                                            <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                            <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p>파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명.pdf</p></div>
+                                        <div class="att_li_btn">
+                                            <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                            <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p>파일명 파일명 파일명 파일명 파일명.pdf</p></div>
+                                        <div class="att_li_btn">
+                                            <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                            <button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="prog_wrap prog_applysummary box_group_wrap box_table_wrap after_border">
+                            <h3 class="t2_sb">신청 및 처리현황</h3>
+                            <div class="apply_summary_wrap mt8" role="region">
+                                <div class="apply_summary_header">
+                                    <div class="apply_summary_info  mb24">
+                                        <i></i>
+                                        <p class="apply_summary_tit">현재 참여신청서 <span>제출</span> 상태 입니다.</p>
+                                        <p class="apply_summary_tel s1_r ">담당자 : 김담당 (010-0000-0000)</p>
                                     </div>
+                                </div>
+
+                                <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                <div class="apply_summary_inner" id="applySummaryDetail" hidden="">
+                                    <ul>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">제출</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">제출</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="apply_summary_action secon_action">
+                                    <button type="button" class="apply_summary_toggle" aria-expanded="false" aria-controls="applySummaryDetail"><span class="open_bt">열기</span></button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
                             <div class="btn_box flex_wrap mt24">
-                                <button type="button" class="btn large type03 fw400 wper33">목록</button>
-                                <button type="button" class="btn large line_blue wper33">저장</button>
-                                <button type="button" class="btn large fill type01 wper33">제출</button>
+                                <button type="button" class="btn large type03 fw400">목록</button>
+                                <button type="button" class="btn large fill type01">회수</button>
                             </div>
                         </div>
                     </div>

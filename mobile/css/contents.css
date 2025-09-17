@@ -789,7 +789,7 @@
 .mypage .progmg.allcare .dd_date_row {display: flex; align-items: center; gap: 4px;}
 .mypage .progmg.allcare .dd_date_row>span {width: 24px; text-align: center; flex: 1;} 
 .mypage .progmg.allcare .dd_date_row .date_area {width: calc(50% - 16px);}
-.mypage .progmg.allcare .dd_date_row .date_area input[type=text] {padding: 0.625rem 2.625rem 0.625rem 0.625rem;}
+.mypage .progmg.allcare .dd_date_row .date_area input[type=text] {padding: 0.625rem 2.625rem 0.625rem 0.625rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .mypage .progmg.allcare .line_inner_box .inner_btn_wrap {display: flex; justify-content: space-between; align-items: center;}
 .mypage .progmg.allcare .line_inner_box .inner_btn_wrap .gap_button_box {display: flex; align-items: center; gap: 8px;}
 .mypage .progmg.allcare .line_inner_box .inner_btn_wrap .gap_button_box.move_type button {width: 40px; height: 40px; border: 1px solid #757575; border-radius: 4px; position: relative;}
@@ -909,11 +909,23 @@
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li+li {margin-top: 4px;}
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_txt_box .desc {padding-left: 16px;}
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box {margin-top: 8px;}
-.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box .att_file_btn {width: 100%; background-color: #fff; border: 1px solid #757575; border-radius: 4px; padding: 8px 16px; }
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_cont .register_att_box .att_file_btn {width: 100%; background-color: #fff; border: 1px solid #757575; border-radius: 4px; padding: 8px 16px;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist {background-color: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 16px 12px;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li {display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; padding: 12px 0;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li+.att_li {border-top: 1px solid #f5f5f5;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li:first-child {padding-top: 0;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li:last-child {padding-bottom: 0;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li .att_li_txt {margin-right: auto;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li .att_li_btn {display:flex; align-items: center; gap:4px; margin-left: 16px;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li p {color: var(--col_blue); text-align: left;}
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li .att_del_btn {width: 16px; height: 16px; background: url('../images/mypage/ico16_del.svg') no-repeat center / contain; display: block;}
+
 
 /* 점프업 - IAP결과관리_수정(저장후 제출전) (UI_ADHPCgM03) */
 
+
 /* 점프업 - IAP결과관리_조회(제출후) (UI_ADHPCgM04) */
+.mypage .progmg.allcare .iap_attfile_wrap .ul_iap_addlist .att_li .att_down_btn {width: 16px; height: 16px; background: url('../images/mypage/ico16_download2.svg') no-repeat center / contain; display: block;}
 
 /* 점프업_IAP결과관리_수정(보완요청_제출후)	(UI_ADHPCgM05) */
 
@@ -953,7 +965,6 @@
 .mypage .progmg.allcare .point_request_wrap .point_request_btn button span {color: var(--col_blue)}
 .mypage .progmg.allcare .bot_8x {position: relative; margin-top: 24px; padding-top: 24px; border-top: 8px solid #f3f5f6;}
 .mypage .progmg.allcare .bot_8x::after {content: ''; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background-color: #f3f5f6; width: calc(100% + 2.5rem); height: 8px;}
-
 
 .mypage .progmg.allcare .ipa_resultbtn_wrap .rslt_btn {width: 100%; padding: 10px; border: 1px solid #757575; border-radius: 4px;}
 
