@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>점프업 - 포인트관리_조회(승인, 미지급, 환급)</title>
+        <script src="../mobile/include/js/head.js"></script>
+        <script src="../mobile/include/js/mobile-ui-util.js"></script>
+        <script src="../mobile/include/js/mobile-ui.js"></script>
+        <script src="../mobile/include/js/add.js"></script>
+        <script src="../mobile/include/js/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="../mobile/css/contents.css">
+    </head>
+    <body>
+        <div>
+            <header id="header" data-include="header" data-type="person" data-sub-btn="back" data-title="대학 재학생 맞춤형 고용서비스" data-title-btn="y"></header>
+
+            <div class="dimmed" style="z-index: 130; display: none;"></div>
+
+
+
+
+            <!-- 본문 내용 -->
+            <div class="contents">
+                <div class="mypage">
+                    <div class="progmg allcare">
+                        <div class="tab_menu custom_split" data-target="tabContentsId1">
+                            <ul>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>참여신청서</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>상담이력</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>취업준비도 검사</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP관리</span></button></li>
+                                <li aria-controls=""><button type="button" role="tab" aria-selected="false"><span>IAP결과관리</span></button></li>
+                                <li aria-controls="" class="on"><button type="button" role="tab" aria-selected="true"><span>포인트신청관리</span></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="point_banner_wrap mt24">
+                            <p class="s1_r">점프업 프로젝트 포인트 관리</p>
+                            <p class="desc t3_r">지금까지 <span class="count">00</span><span class="txt_bold">건</span>에 대해서<br aria-hidden="true"> <span class="txt_bold">총 <span class="amount">100,000</span>원</span>을 지급 받으셨습니다.</p>
+                        </div>
+
+                        <div class="my_ptcp_from">
+                            <div class="box_group_wrap mt24">
+                                <h3 class="t3_sb">참여자 정보</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt">성명</div>
+                                        <div class="dd">홍길동</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학적 상태</div>
+                                        <div class="dd">재학</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">전공/학과</div>
+                                        <div class="dd">선택전공 / 선택학과</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">학번</div>
+                                        <div class="dd">202500010001</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="box_group_wrap mt24">
+                                <h3 class="t3_sb">신청내용</h3>
+                                <div class="box_table_wrap top_linewrap">
+                                    <div>
+                                        <div class="dt">유형구분</div>
+                                        <div class="dd">
+                                            <fieldset class="radio_group" disabled>
+                                                <legend class="sr_only">유형구분</legend>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="자기주도형" name="유형구분" value="" role="radio">
+                                                    <label for="자기주도형">
+                                                        <span class="label_text">자기주도형</span>
+                                                    </label>
+                                                </div>
+                                                <div class="new_radio_item">
+                                                    <input type="radio" id="서비스참여형" name="유형구분" value="" role="radio" checked>
+                                                    <label for="서비스참여형">
+                                                        <span class="label_text">서비스참여형</span>
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">IAP 승인일자</div>
+                                        <div class="dd">2025-01-01</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">제출일자</div>
+                                        <div class="dd">2025-01-01</div>
+                                    </div>
+                                    <div>
+                                        <div class="dt">활동이행기간(수당지급주기)</div>
+                                        <div class="dd">2025-01-01</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="jobact_listup_section mt24">
+                            <div class="jobact_log_hd">
+                                <h3 class="t3_sb">구직활동(이행내용)</h3>
+                                <div class="hd_btn_box">
+                                    <button type="button" class="btn_all"><span>전체 펼치기</span></button>
+                                </div>
+                            </div>
+                            <ul class="jobact_wrap mt16">
+                                <li class="jobact_list">
+                                    <div class="chk_box jobact_chk_box">
+                                        <p class="jobact_chk_tit">1. 직업훈련<span class="txt_blue">서비스참여형</span></p>
+                                    </div>
+                                    <div class="jobact_cont">
+                                        <div class="jobact_inner_cont">
+                                            <div class="jobact_hd">
+                                                <p>취업활동계획</p>
+                                                <div class="toggle_box">
+                                                    <button type="button" class="close_btn active" aria-expanded="true"><span class="blind">접기</span></button>
+                                                    <button type="button" class="open_btn" aria-expanded="false"><span class="blind">열기</span></button>
+                                                </div>
+                                            </div>
+                                            <ul class="jobact_inner_ul">
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여기간</p></div>
+                                                    <div class="jobact_inner_desc"><p>2025-01 ~ 2025-02</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여시간(지급기간)</p></div>
+                                                    <div class="jobact_inner_desc"><p>000시간 (00시간)</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여기관(교내)</p></div>
+                                                    <div class="jobact_inner_desc"><p>교내</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여기관(외부)</p></div>
+                                                    <div class="jobact_inner_desc"><p>외부</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>목표달성시기</p></div>
+                                                    <div class="jobact_inner_desc"><p>여름방학</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여방법</p></div>
+                                                    <div class="jobact_inner_desc"><p>온라인 </p></div>
+                                                </li>
+                                                <li class="jobact_inner_list jobact_dropbox">
+                                                    <div class="jobact_inner_tit"><p>활동내용(세부내용)</p></div>
+                                                    <div class="jobact_inner_desc"><p>하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여</p></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--  -->
+                                        <div class="jobact_inner_cont">
+                                            <div class="jobact_hd">
+                                                <p>이행내용</p>
+                                                <div class="toggle_box">
+                                                    <button type="button" class="close_btn active" aria-expanded="true"><span class="blind">접기</span></button>
+                                                    <button type="button" class="open_btn" aria-expanded="false"><span class="blind">열기</span></button>
+                                                </div>
+                                            </div>
+                                            <ul class="jobact_inner_ul">
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>이행기간</p></div>
+                                                    <div class="jobact_inner_desc"><p>2025-01 ~ 2025-12</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>인정요청시간</p></div>
+                                                    <div class="jobact_inner_desc"><p>00시간</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list type_twin">
+                                                    <div class="jobact_inner_tit"><p>프로그램 이행내용</p></div>
+                                                    <div class="jobact_inner_desc"><p>입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list type_twin">
+                                                    <div class="jobact_inner_tit"><p>비고 (IAP수립일 등)</p></div>
+                                                    <div class="jobact_inner_desc"><p>하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여</p></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+        
+                                <!--  -->
+
+                                <li class="jobact_list">
+                                    <div class="chk_box jobact_chk_box">
+                                        <p class="jobact_chk_tit">2. 일경험(인턴)<span class="txt_blue">서비스참여형</span></p>
+                                    </div>
+                                    <div class="jobact_cont">
+                                        <div class="jobact_inner_cont">
+                                            <div class="jobact_hd">
+                                                <p>취업활동계획</p>
+                                                <div class="toggle_box">
+                                                    <button type="button" class="close_btn active" aria-expanded="true"><span class="blind">접기</span></button>
+                                                    <button type="button" class="open_btn" aria-expanded="false"><span class="blind">열기</span></button>
+                                                </div>
+                                            </div>
+                                            <ul class="jobact_inner_ul">
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여기간</p></div>
+                                                    <div class="jobact_inner_desc"><p>2025-01 ~ 2025-02</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여시간(지급기간)</p></div>
+                                                    <div class="jobact_inner_desc"><p>000시간 (00시간)</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여기관(교내)</p></div>
+                                                    <div class="jobact_inner_desc"><p>교내</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여기관(외부)</p></div>
+                                                    <div class="jobact_inner_desc"><p>외부</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>목표달성시기</p></div>
+                                                    <div class="jobact_inner_desc"><p>여름방학</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>참여방법</p></div>
+                                                    <div class="jobact_inner_desc"><p>온라인 </p></div>
+                                                </li>
+                                                <li class="jobact_inner_list jobact_dropbox">
+                                                    <div class="jobact_inner_tit"><p>활동내용(세부내용)</p></div>
+                                                    <div class="jobact_inner_desc"><p>하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여</p></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--  -->
+                                        <div class="jobact_inner_cont">
+                                            <div class="jobact_hd">
+                                                <p>이행내용</p>
+                                                <div class="toggle_box">
+                                                    <button type="button" class="close_btn active" aria-expanded="true"><span class="blind">접기</span></button>
+                                                    <button type="button" class="open_btn" aria-expanded="false"><span class="blind">열기</span></button>
+                                                </div>
+                                            </div>
+                                            <ul class="jobact_inner_ul">
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>이행기간</p></div>
+                                                    <div class="jobact_inner_desc"><p>2025-01 ~ 2025-12</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list">
+                                                    <div class="jobact_inner_tit"><p>인정요청시간</p></div>
+                                                    <div class="jobact_inner_desc"><p>00시간</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list type_twin">
+                                                    <div class="jobact_inner_tit"><p>프로그램 이행내용</p></div>
+                                                    <div class="jobact_inner_desc"><p>입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용 입력된 프로그램 이행내용</p></div>
+                                                </li>
+                                                <li class="jobact_inner_list type_twin">
+                                                    <div class="jobact_inner_tit"><p>비고 (IAP수립일 등)</p></div>
+                                                    <div class="jobact_inner_desc"><p>하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 하계 의무현장실습 참여 계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여계 의무현장실습 참여</p></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="jobact_log_wrap after_border mt24">
+                            <div class="jobact_loginner_box mt16">
+                                <ul>
+                                    <li>
+                                        <div class="td">비용신청 회차</div>
+                                        <div class="dd">1 회차</div>
+                                    </li>
+                                    <li>
+                                        <div class="td">총 활동요청시간</div>
+                                        <div class="dd">00 시간</div>
+                                    </li>
+                                    <li>
+                                        <div class="td">신청금액</div>
+                                        <div class="dd">1,000,000 만원</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="after_border">
+                            <div class="iap_attfile_wrap mt16">
+                                <div class="iap_attfile_tit">
+                                    <div class="att_tit"><p class="b1_sb">첨부파일</p></div>
+                                </div>
+                                <div class="iap_attfile_cont mt16">
+                                    <div class="register_txt_box">
+                                        <p class="tit s1_sb">1. IAP결과증빙자료</p>
+                                        <p class="desc s1_r">재학생맞춤형고용서비스-IAP결과증빙자료</p>
+                                    </div>
+                                </div>
+                                <ul class="ul_iap_addlist mt16" id="fileList">
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p class="s1_r">파일명.pdf</p></div>
+                                        <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                        <div class="att_li_btn"><button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button></div>
+                                    </li>
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p class="s1_r">파일명.pdf</p></div>
+                                        <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                        <div class="att_li_btn"><button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button></div>
+                                    </li>
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p class="s1_r">파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명 파일명.pdf</p></div>
+                                        <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                        <div class="att_li_btn"><button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button></div>
+                                    </li>
+                                    <li class="att_li">
+                                        <div class="att_li_txt"><p class="s1_r">파일명 파일명 파일명 파일명 파일명.pdf</p></div>
+                                        <a href="#" download="" class="att_down_btn"><span class="sr_only">첨부파일 다운</span></a>
+                                        <div class="att_li_btn"><button type="button" class="att_del_btn"><span class="sr_only">첨부파일 삭제</span></button></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="my_ptcp_from">
+                            <div class="allowance_nb_hd">
+                                <h3 class="t3_sb">수당수급 계좌번호</h3>
+                                <div class="hd_btn_box">
+                                    <button type="button" class="btn"><span>이전 등록 정보 불러오기</span></button>
+                                </div>
+                            </div>
+
+                            <div class="box_table_wrap mt8">
+                                <div>
+                                    <div class="dt">예금주</div>
+                                    <div class="dd">홍길동</div>
+                                </div>
+                                <div>
+                                    <div class="dt">금융기관</div>
+                                    <div class="dd">한국은행</div>
+                                </div>
+                                <div>
+                                    <div class="dt">계좌번호 <span class="txt_req">(-제외, 숫자만 기입)</span></div>
+                                    <div class="dd mb0">0000-000-00000000000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prechk_wrap after_border mt24">
+                            <h3 class="t3_sb">신청 전 자가진단</h3>
+                            <ul class="mt16">
+                                <li>
+                                    <div class="td">미래내일 일경험사업 지원금 수령여부</div>
+                                    <div class="dd">
+                                        <fieldset class="radio_group radio_group_twin" disabled>
+                                            <legend class="sr_only">미래내일 일경험사업 지원금 수령여부</legend>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="지원금_예" name="미래내일 일경험사업 지원금 수령여부" checked>
+                                                <label for="지원금_예">예</label>
+                                                <div class="radio_input_item box_ipt new_ipt ml8">
+                                                    <input type="text" class="pay_input input_txt" id="훈련장려금액" name="훈련장려금액" value="1,000,000">
+                                                    <span>원</span>
+                                                </div>
+                                            </div>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="지원금_아니오" name="미래내일 일경험사업 지원금 수령여부" value="" role="radio">
+                                                <label for="지원금_아니오">
+                                                    <span class="label_text">아니오</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="td">내일배움카드 훈련장려금 (K-디지털 트레이닝 포함)</div>
+                                    <div class="dd">
+                                        <fieldset class="radio_group radio_group_twin" disabled>
+                                            <legend class="sr_only">내일배움카드 훈련장려금</legend>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="훈련장려금_예" name="내일배움카드" checked>
+                                                <label for="훈련장려금_예">예</label>
+                                                <div class="radio_input_item box_ipt new_ipt ml8">
+                                                    <input type="text" class="pay_input input_txt" id="훈련장려금액" name="훈련장려금액" value="1,000,000">
+                                                    <span>원</span>
+                                                </div>
+                                            </div>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="훈련장려금_아니오" name="내일배움카드" value="" role="radio">
+                                                <label for="훈련장려금_아니오">
+                                                    <span class="label_text">아니오</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="td">기타 유사한 성격의 지원금 수령 여부 (취업활동지원, 실비보전 등 참여독려 등을 위한 지원금)</div>
+                                    <div class="dd">
+                                        <div class="radio_etc">
+                                            <div class="radio_input_item box_ipt new_ipt">
+                                                <p class="s1_r">지원금명</p>
+                                                <input type="text" class="input_txt" id="지원금명" name="지원금명" value="지원금명" disabled>
+                                            </div>
+                                            <div class="radio_input_item box_ipt new_ipt">
+                                                <p class="s1_r">지원금액</p>
+                                                <input type="text" class="pay_input input_txt" id="지원금액" name="지원금액" value="1,000,000" disabled>
+                                                <span>원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="td">개인별 월(1일~말일) 20만원 초과여부</div>
+                                    <div class="dd">
+                                        <fieldset class="radio_group radio_group_twin" disabled>
+                                            <legend class="sr_only">개인별 월(1일~말일) 20만원 초과여부</legend>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="있음_1" name="개인별 월 20만원 초과여부" value="" role="radio" checked>
+                                                <label for="있음_1">
+                                                    <span class="label_text">있음</span>
+                                                </label>
+                                            </div>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="없음_1" name="개인별 월 20만원 초과여부" value="" role="radio">
+                                                <label for="없음_1">
+                                                    <span class="label_text">없음</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="td">수당 누적 총액 100만원 초과여부</div>
+                                    <div class="dd">
+                                        <fieldset class="radio_group radio_group_twin" disabled>
+                                            <legend class="sr_only">수당 누적 총액 100만원 초과여부</legend>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="있음_2" name="수당 누적 총액 100만원 초과여부" value="" role="radio" checked>
+                                                <label for="있음_2">
+                                                    <span class="label_text">있음</span>
+                                                </label>
+                                            </div>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="없음_2" name="수당 누적 총액 100만원 초과여부" value="" role="radio">
+                                                <label for="없음_2">
+                                                    <span class="label_text">없음</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="td">참여수당 관련 부정수급 방지 확인서 동의 여부<p class="txt_req">※ 반드시 전문보기 후 개인정보 수집 동의를 선택 할 수 있습니다<button type="button" class="txt_in_btn"><span>전문보기</span></button></p></div>
+                                    <div class="dd">
+                                        <fieldset class="radio_group radio_group_twin" disabled>
+                                            <legend class="sr_only">참여수당 관련 부정수급 방지 확인서 동의 여부</legend>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="동의" name="참여수당 관련 부정수급 방지 확인서 동의 여부" value="" role="radio" checked>
+                                                <label for="동의">
+                                                    <span class="label_text">있음</span>
+                                                </label>
+                                            </div>
+                                            <div class="new_radio_item">
+                                                <input type="radio" id="동의안함" name="참여수당 관련 부정수급 방지 확인서 동의 여부" value="" role="radio">
+                                                <label for="동의안함">
+                                                    <span class="label_text">없음</span>
+                                                </label>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="prog_wrap prog_applysummary box_group_wrap box_table_wrap after_border">
+                            <h3 class="t2_sb">신청 및 처리현황</h3>
+                            <div class="apply_summary_wrap mt8" role="region">
+                                <div class="apply_summary_header">
+                                    <div class="apply_summary_info  mb24">
+                                        <i></i>
+                                        <p class="apply_summary_tit">현재 참여신청서 <span>지급</span> 상태 입니다.</p>
+                                        <p class="apply_summary_tel s1_r ">담당자 : 김담당 (010-0000-0000)</p>
+                                    </div>
+                                </div>
+
+                                <!-- 버튼이 aria-expanded="true" 이면 보임 -->
+                                <div class="apply_summary_inner" id="applySummaryDetail">
+                                    <ul>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">제출</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">미지급</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                            <p class="apply_summary_reason">사유 : <br aria-hidden="true">대플 담당자가 등록한 보완 내용</p>
+                                        </li>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">지급</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                            <p class="apply_summary_reason">사유 : <br aria-hidden="true">대플 담당자가 등록한 보완 내용</p>
+                                        </li>
+                                        <li>
+                                            <div class="apply_summary_status">
+                                                <p class="status_label">환급</p>
+                                                <p class="status_date">2025-00-00</p>
+                                            </div>
+                                            <p class="apply_summary_reason">사유 : <br aria-hidden="true">대플 담당자가 등록한 보완 내용</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="apply_summary_action secon_action">
+                                    <button type="button" class="apply_summary_toggle" aria-expanded="true" aria-controls="applySummaryDetail"><span class="">접기</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="box_end_wrap" role="region" aria-label="제출 정보 영역">
+                            <div class="btn_box flex_wrap mt24">
+                                <button type="button" class="btn large type03 fw400 full_btn">목록</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        $(function () {
+                            // 닫기 버튼
+                            $(document).on("click", ".close_btn", function () {
+                                var $wrap = $(this).closest(".jobact_inner_cont");
+                                $wrap.find(".jobact_inner_ul").hide();
+
+                                // 버튼 active 상태 변경
+                                $(this).removeClass("active").attr("aria-expanded", "false");
+                                $wrap.find(".open_btn").addClass("active").attr("aria-expanded", "true");
+                            });
+
+                            // 열기 버튼
+                            $(document).on("click", ".open_btn", function () {
+                                var $wrap = $(this).closest(".jobact_inner_cont");
+                                $wrap.find(".jobact_inner_ul").show();
+
+                                // 버튼 active 상태 변경
+                                $(this).removeClass("active").attr("aria-expanded", "false");
+                                $wrap.find(".close_btn").addClass("active").attr("aria-expanded", "true");
+                            });
+                        });
+                    </script>
+
+                </div>
+            </div>
+            <!-- 본문 내용 -->
+
+
+
+
+
+
+
+            <div class="quick_top">
+                <a href="javascript:void(0)" class="btn_quick_top" title="맨위로 가기"><span class="blind">맨위로 가기</span></a>
+            </div>           
+            <div class="quick_share_page">
+				<a href="javascript:void(0)" id="btn_quick_share_page" class="btn_quick_share_page" title="공유하기" onclick="ComLib.getQuickShareInit('일자리 찾기','');">
+					<i class="quick_share_page_ico"></i>
+					<span class="blind">공유하기</span>
+				</a>
+			</div>
+        </div>
+        <div class="bottom_bar person"></div>
+    </body>
+    <script src="../mobile/js/include.js"></script>
+<script src="../mobile/js/include_share.js"></script>
+</html>

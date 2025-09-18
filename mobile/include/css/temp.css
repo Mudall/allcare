@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.radio_group {display: flex; align-items: center;}
+.radio_group input[type="radio"] {display: block; position: relative; width: 1.5rem; height: 1.5rem; margin-top: -0.125rem; border: none; cursor: pointer; opacity: 1; appearance: none;}
+.radio_group input[type="radio"]::before {content: ''; position: absolute; left: 0.125rem; top: 0.125rem; width: 1.25rem; height: 1.25rem; background-color: #fff; border-radius: 50%; transition: border-color .2s, box-shadow .2s background-color .5s; border: 1px solid var(--col_button);}
+.radio_group input[type="radio"]::after {content: ''; position: absolute; left: 50%; top: 50%; width: 0.5rem; height: 0.5rem; margin: -0.25rem 0 0 -0.25rem; background-color: #fff; border-radius: 50%;}
+.radio_group input[type="radio"]:checked::before {border-color: var(--col_blue); background-color: var(--col_blue); box-shadow: 0 0 0 0.3125rem var(--col_blue) inset;}
+.radio_group input[type="radio"] + label {display: block; margin: -0.125rem 0 0 0.25rem;}
+.radio_group input[type="radio"] ~ input[type="radio"] {margin-left: 1rem;}
+
+
+/* new_radio_item 라디오 수정 */
+.allcare .radio_group {gap: 16px;}
+.allcare .radio_group .new_radio_item {display: flex; align-items: center;}
+.allcare .radio_group .new_radio_item label, .radio_group .new_radio_item .label_text {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.allcare .radio_group_twin {display: flex; flex-direction: column; align-items: flex-start; gap: 8px;}
+
+.allcare .radio_group:disabled input[type="radio"]:checked::after {left: 67.5%; top: 65%; width: 0.75rem; height: 0.75rem; background-color: #444; transform: translate(-50%, -50%);} 
+.allcare .radio_group:disabled input[type="radio"]:checked::before {background-color: #fff; box-shadow: none; border: 1px solid var(--col_button);}
+
+
