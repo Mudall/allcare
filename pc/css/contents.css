@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+fieldset { border: none;}
+
+.radio_group input[type="radio"] {display: block; position: relative; width: 22px; height: 22px; margin-top: -2px; border: none; background-color: transparent; cursor: pointer; opacity: 1; appearance: none;}
+.radio_group input[type="radio"]::before {content: ''; position: absolute; left: 1px; top: 1px; width: 20px; height: 20px; background-color: #fff; border-radius: 50%; transition: border-color .2s, box-shadow .2s, background-color .5s; border: .0625rem solid var(--col_button);}
+.radio_group input[type="radio"]::after {content: ''; position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; background-color: #fff; border-radius: 50%; transform: translate(-50%, -50%);}
+.radio_group input[type="radio"]:checked::before {border-color: var(--col_blue); background-color: var(--col_blue); box-shadow: 0 0 0 5px var(--col_blue) inset;}
+.radio_group input[type="radio"] + label {display: block; margin: -2px 0 0 4px;}
+.radio_group input[type="radio"] ~ input[type="radio"] {margin-left: 16px;}
+.radio_group label { margin-left: 4px !important;}
 
 /* Allcare 공통 */
 /* new_table : 테이블 padding 값 수정 */
@@ -222,7 +231,7 @@
 .mypage .progmg.allcare .agm_box .agm_desc p {color: #333; font-size: 15px; font-weight: 600; line-height: 24px;}
 .mypage .progmg.allcare .agm_box .agm_desc strong {color: #ee2e62; font-size: 14px; font-weight: 600; line-height: 24px;}
 .mypage .progmg.allcare .agm_cho {width: 195px; display: flex; justify-content: center; align-items: center;}
-.mypage .progmg.allcare .agm_cho .box_radio_group {border: none; display: flex; align-items: center;}
+.mypage .progmg.allcare .agm_cho .box_radio_group {border: none; display: flex; align-items: center; gap: 10px;}
 .mypage .progmg.allcare .agm_cho .box_radio_group .radio_ui {margin-right: 4px;}
 .mypage .progmg.allcare .agm_cho fieldset .new_radio_item .ptcp_radiocustom {display: flex; align-items: center;} 
 .mypage .progmg.allcare .agm_cho fieldset .new_radio_item + .new_radio_item {margin-left: 16px;}
