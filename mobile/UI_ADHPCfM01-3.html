@@ -76,7 +76,7 @@
                                     </ul>
 
                                     <div class="toggle_wrap">
-                                        <ul class="toggle_inner_ul">
+                                        <ul class="toggle_inner_ul" style="display: block;">
                                             <li>
                                                 <div class="apply_summary_status">
                                                     <p class="status_label">변경신청</p>
@@ -111,8 +111,8 @@
                                             </li>
                                         </ul>
                                         <div class="toggle_btn_box">
-                                            <button class="button" class="toggle_close"><span>신청 및 처리현황 이력 접기</span></button>
-                                            <button class="button" class="toggle_open active"><span>신청 및 처리현황 이력 조회</span></button>
+                                            <button type="button" class="toggle_close active" style=""><span class="s1_r">신청 및 처리현황 이력 접기</span></button>
+                                            <button type="button" class="toggle_open" style="display: none;"><span class="s1_r">신청 및 처리현황 이력 조회</span></button>
                                         </div>
                                     </div>
                                 </li>
@@ -122,7 +122,46 @@
                     </div>
 
                     <script>
+                        $(document).ready(function () {
+                            // 닫기 버튼 클릭 시
+                            $('.toggle_close').click(function () {
+                                if ($(this).hasClass('active')) {
+                                    const $wrap = $(this).closest('.toggle_wrap');
 
+                                    // 해당 항목만 조작
+                                    $wrap.find('.toggle_inner_ul').css('display', 'none');
+                                    $wrap.find('.toggle_close').removeClass('active').hide();
+                                    $wrap.find('.toggle_open').addClass('active').show();
+                                }
+                            });
+
+                            // 열기 버튼 클릭 시
+                            $('.toggle_open').click(function () {
+                                if ($(this).hasClass('active')) {
+                                    const $wrap = $(this).closest('.toggle_wrap');
+
+                                    $wrap.find('.toggle_inner_ul').css('display', 'block');
+                                    $wrap.find('.toggle_open').removeClass('active').hide();
+                                    $wrap.find('.toggle_close').addClass('active').show();
+                                }
+                            });
+
+                            // 초기 설정 - 각 .toggle_wrap마다 적용
+                            $('.toggle_wrap').each(function () {
+                                const $wrap = $(this);
+                                const $closeBtn = $wrap.find('.toggle_close');
+
+                                if ($closeBtn.hasClass('active')) {
+                                    $wrap.find('.toggle_inner_ul').css('display', 'block');
+                                    $wrap.find('.toggle_open').hide();
+                                    $wrap.find('.toggle_close').show();
+                                } else {
+                                    $wrap.find('.toggle_inner_ul').css('display', 'none');
+                                    $wrap.find('.toggle_open').show();
+                                    $wrap.find('.toggle_close').hide();
+                                }
+                            });
+                        });
                     </script>
                 </div>
             </div>
