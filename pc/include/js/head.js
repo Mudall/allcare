@@ -16,5 +16,6 @@ str += '<link rel="stylesheet" href="../pc/include/css/main_company.css">';
 str += '<link rel="stylesheet" href="../pc/include/css/contents.css">';
 str += '<link rel="stylesheet" href="../pc/include/css/swiper-bundle.min.css">';
 str += '<link rel="stylesheet" href="../pc/include/css/jquery-ui.min.css">';
+str += '<link rel="stylesheet" href="../pc/include/css/temp.css">';
 
 document.write(str);

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.box_chk-group, .box_radio_group {display: inline-flex; justify-content: flex-start; align-items: center; flex-wrap: wrap;}
+.box_chk-group > span, .box_radio-group > span, .box_radio-container > span {display: inline-flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; min-height: 28px;}
+.radio_group input[type="radio"] {position: relative; display: block; margin-top: -1px; width: 22px; height: 22px; border: none; opacity: 1; appearance: none;}
+.radio_group input[type="radio"]::before {content: ''; position: absolute; left: 1px; top: 1px; width: 20px; height: 20px; border: 1px solid var(--col_button); border-radius: 50%; background-color: #fff; transition: border-color .2s box-shadow .2s background-color .5s;}
+.radio_group input[type="radio"]::after {content: ''; position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; border-radius: 50%; background-color: #fff; transform: translate(-50%, -50%);}
+.radio_group input[type="radio"]:checked::before {border-color: var(--col_blue); background-color: var(--col_blue); box-shadow: 0 0 0 5px var(--col_blue) inset;}
+.radio_group input[type="radio"]:disabled::before {border-color: var(--col_table); background-color: var(--col_button);}
+.radio_group input[type="radio"] ~ label {margin-left: 4px;}
+
+
+
+
+
+
+/* new_radio_item 라디오 수정 */
+.allcare .radio_group {gap: 16px;}
+.allcare .radio_group .new_radio_item {display: flex; align-items: center;}
+.allcare .radio_group .new_radio_item label, .radio_group .new_radio_item .label_text {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.allcare .radio_group_twin {display: flex; flex-direction: column; align-items: flex-start; gap: 8px;}
+
+.allcare .radio_group:disabled input[type="radio"]:checked::after {left: 67.5%; top: 65%; width: 0.75rem; height: 0.75rem; background-color: #444; transform: translate(-50%, -50%);} 
+.allcare .radio_group:disabled input[type="radio"]:checked::before {background-color: #fff; box-shadow: none; border: 1px solid var(--col_button);}
+
+
