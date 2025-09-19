@@ -90,16 +90,16 @@
 .mypage .progmg.allcare.allcare input[type="checkbox"].new_chkbox:checked::after {content: ''; position: absolute; width: 12px; height: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/ico10_chk.svg') no-repeat center / contain;} 
 .sub_tl + *:not(.box_notice_wrap) .allcare .t2_sb {line-height: 48px;}
 
-.allcare .radio_group, .allcare_popup.new_popup .radio_group {border: none;}
-.allcare .radio_group .new_radio_item, .allcare_popup.new_popup .radio_group .new_radio_item {display: flex; gap: 8px;}
-/* .allcare .radio_group .new_radio_item input[type="radio"],
-.allcare_popup.new_popup .radio_group .new_radio_item input[type='radio'] {cursor: pointer; background-color: #fff; appearance: none; -webkit-appearance: none; -moz-appearance: none; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
-.allcare .radio_group .new_radio_item input[type="radio"]:checked,
-.allcare_popup.new_popup .radio_group .new_radio_item input[type='radio']:checked {border: 5px solid var(--col_blue);} */
-.allcare .radio_group .new_radio_item label,
-.allcare_popup.new_popup .radio_group .new_radio_item label {flex: 1;}
+.allcare .box_radio_group, .allcare_popup.new_popup .box_radio_group {border: none;}
+.allcare .box_radio_group .new_radio_item, .allcare_popup.new_popup .box_radio_group .new_radio_item {display: flex; gap: 8px;}
+.allcare .box_radio_group .new_radio_item input[type="radio"],
+.allcare_popup.new_popup .box_radio_group .new_radio_item input[type='radio'] {cursor: pointer; background-color: #fff; appearance: none; -webkit-appearance: none; -moz-appearance: none; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
+.allcare .box_radio_group .new_radio_item input[type="radio"]:checked,
+.allcare_popup.new_popup .box_radio_group .new_radio_item input[type='radio']:checked {border: 5px solid var(--col_blue);}
+.allcare .box_radio_group .new_radio_item label,
+.allcare_popup.new_popup .box_radio_group .new_radio_item label {flex: 1;}
 
-.allcare .radio_group .radio_box_twin {display: flex; gap: 16px;}
+.allcare .box_radio_group .radio_box_twin {display: flex; gap: 16px;}
 
 /* 운영대학 목록 (UI_ADHPAaM01) */
 .support .youth.allcare .gsprog_uni>div+div {margin-top: 40px;}
@@ -200,11 +200,11 @@
 .mypage .progmg.allcare .req_mark {position: relative; padding-right: 12px; font-size: 16px; font-weight: 600; line-height: 28px;  color: #333;}
 .mypage .progmg.allcare table .req_mark {font-size: 15px;}
 .mypage .progmg.allcare .req_mark::after {content: ''; position: absolute; right: 0; top: 25%; transform: translateY(-50%); width: 5px; height: 5px; background-color: #ee2e62; border-radius: 50%;}
-.mypage .progmg.allcare .my_ptcp_from .radio_group input[type='radio'] + label {margin-left: 0;}
+.mypage .progmg.allcare .my_ptcp_from .box_radio_group input[type='radio'] + label {margin-left: 0;}
 .mypage .progmg.allcare .my_ptcp_from .ptcp_radiocustom {cursor: pointer;}
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_uni td .box_table_group {display: flex;}
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_uni td .box_table_group .btnSearch {margin-left: 8px; margin-bottom: 0;}
-.mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .radio_group {border: none;}
+.mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .box_radio_group {border: none;}
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type label {cursor: pointer; display: flex; align-items: center; margin-left: 0; font-size: 16px; line-height: 28px; font-weight: 400;  color: #333; vertical-align: baseline;}
 .mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .new_radio_item + .new_radio_item {margin-left: 0; margin-top: 10px;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_grade .input_txt {vertical-align: baseline;}
@@ -222,8 +222,8 @@
 .mypage .progmg.allcare .agm_box .agm_desc p {color: #333; font-size: 15px; font-weight: 600; line-height: 24px;}
 .mypage .progmg.allcare .agm_box .agm_desc strong {color: #ee2e62; font-size: 14px; font-weight: 600; line-height: 24px;}
 .mypage .progmg.allcare .agm_cho {width: 195px; display: flex; justify-content: center; align-items: center;}
-.mypage .progmg.allcare .agm_cho .radio_group {border: none; display: flex; align-items: center;}
-.mypage .progmg.allcare .agm_cho .radio_group .radio_ui {margin-right: 4px;}
+.mypage .progmg.allcare .agm_cho .box_radio_group {border: none; display: flex; align-items: center;}
+.mypage .progmg.allcare .agm_cho .box_radio_group .radio_ui {margin-right: 4px;}
 .mypage .progmg.allcare .agm_cho fieldset .new_radio_item .ptcp_radiocustom {display: flex; align-items: center;} 
 .mypage .progmg.allcare .agm_cho fieldset .new_radio_item + .new_radio_item {margin-left: 16px;}
 .mypage .progmg.allcare .box_end_wrap .submit_date_box {display: flex; justify-content: flex-end;}
@@ -531,12 +531,12 @@
 .mypage .progmg.allcare .btn_prof_edit {margin: auto 0}
 .mypage .progmg.allcare .btn_prof_edit span {position: relative; padding-right: 20px;}
 .mypage .progmg.allcare .btn_prof_edit span::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url('../images/mypage/ico16_line_right_filled.svg') no-repeat center / contain;}
-.mypage .progmg.allcare .prof_radio_wrap .radio_group {margin-top: 8px;}
-.mypage .progmg.allcare .prof_radio_wrap .radio_group li {padding: 12px 20px; border-top: 1px solid #ddd;}
-.mypage .progmg.allcare .prof_radio_wrap .radio_group li+li {border-bottom: 1px solid #ddd;}
-.mypage .progmg.allcare .prof_radio_wrap .radio_group li .new_radio_item label span.w {display: flex; flex-direction: column;}
-.mypage .progmg.allcare .prof_radio_wrap .radio_group li .new_radio_item label span.t {font-size: 15px; color: #333; font-weight: 400; line-height: 28px;}
-.mypage .progmg.allcare .prof_radio_wrap .radio_group li .new_radio_item label span.s {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group {margin-top: 8px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li {padding: 12px 20px; border-top: 1px solid #ddd;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li+li {border-bottom: 1px solid #ddd;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.w {display: flex; flex-direction: column;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.t {font-size: 15px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.s {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
 .mypage .progmg.allcare .newinput_w200 {width: 200px;}
 .mypage .progmg.allcare .box_notice_wrap.box_custom_wrap {padding: 8px 24px;}
 
@@ -546,14 +546,14 @@
 /* 참여신청서 - 조회_제출 (UI_ADHPCbS06) */
 
 /* 참여신청서 - 조회_불인정 (UI_ADHPCbS07) */
-.allcare .radio_group:disabled .new_radio_item label,
-.mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .radio_group:disabled label,
-.mypage .progmg.allcare .radio_group:disabled .new_radio_item input[type="radio"],
-.radio_group .new_radio_item input[type="radio"]:checked:disabled {cursor: initial;}
-.mypage .progmg.allcare .radio_group:disabled .new_radio_item input[type="radio"]:checked,
-.mypage .progmg.allcare .radio_group .new_radio_item input[type="radio"]:checked:disabled {position: relative; border: 1px solid #757575;}
-.mypage .progmg.allcare .radio_group:disabled .new_radio_item input[type="radio"]:checked::after,
-.mypage .progmg.allcare .radio_group .new_radio_item input[type="radio"]:checked:disabled::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.allcare .box_radio_group:disabled .new_radio_item label,
+.mypage .progmg.allcare .my_ptcp_from .box_table .ptcp_form_type .box_radio_group:disabled label,
+.mypage .progmg.allcare .box_radio_group:disabled .new_radio_item input[type="radio"],
+.box_radio_group .new_radio_item input[type="radio"]:checked:disabled {cursor: initial;}
+.mypage .progmg.allcare .box_radio_group:disabled .new_radio_item input[type="radio"]:checked,
+.mypage .progmg.allcare .box_radio_group .new_radio_item input[type="radio"]:checked:disabled {position: relative; border: 1px solid #757575;}
+.mypage .progmg.allcare .box_radio_group:disabled .new_radio_item input[type="radio"]:checked::after,
+.mypage .progmg.allcare .box_radio_group .new_radio_item input[type="radio"]:checked:disabled::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
 /* 참여신청서 - 회수_수정 (UI_ADHPCbS08) */
 
