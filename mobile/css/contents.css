@@ -531,6 +531,7 @@
 .mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dt .req_box p.req_txt {color: #ee2e62; font-weight: 400; font-size: 14px;} 
 .mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dd .label_text {font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
 .mypage .progmg.allcare .prog_qna_sec .prog_qna .prog_group .dd li+li {margin-top: 12px;}
+.mypage .progmg.allcare .text_form_box.type_qna {margin-top: 12px;}
 
 /* 상담이력 - 목록 없음 (UI_ADHPAeM01) */
 
