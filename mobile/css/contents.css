@@ -250,7 +250,8 @@
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap dt {border-top: 1px solid #eee; padding-top: 16px;} 
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap dt:first-child {border-top: none; padding-top: 0;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap.top_linewrap >div + div {border-top: 1px solid #eee;}
-.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dt {  font-size: 14px; color: #555; font-weight: 600; line-height: 24px;}
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dt,
+.mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dt .req_mark {font-size: 14px; color: #555; font-weight: 600; line-height: 24px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap>div+div .dt {margin-top: 16px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap .dd { margin: 8px 0 16px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
 .mypage .progmg.allcare .my_ptcp_from .box_table_wrap dt {font-size: 14px; color: #555; font-weight: 600; line-height: 24px;} 
