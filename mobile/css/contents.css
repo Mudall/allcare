@@ -12,6 +12,17 @@
 
 
 
+
+
+/* raido 초기화 */
+.allcare .radio_group input[type="radio"] {width: 16px; height: 16px; appearance: auto;}
+.allcare .radio_group input[type="radio"] + label {margin: 0 0 0 0.25rem;}
+.allcare input[type='radio'] {margin: 0; border: initial;}
+.allcare .radio_group input[type="radio"]::before,
+.allcare .radio_group input[type="radio"]::after,
+.allcare .radio_filed .new_radio_item input[type="radio"]:checked::after {display: none;}
+
+
 /* allcare 공통 */
 .allcare .radio_group {gap: 16px;}
 .allcare .radio_group .new_radio_item {display: flex; align-items: center;}
@@ -38,10 +49,10 @@
 .allcare .radio_filed .new_radio_item {display: flex; gap: 8px;}
 .allcare .radio_filed .new_radio_item + .new_radio_item {margin-top: 12px;}
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list .new_radio_item + .new_radio_item {margin-top: 20px;}
-.allcare .radio_filed .new_radio_item input[type="radio"] {appearance: none; -webkit-appearance: none; -moz-appearance: none; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
+/* .allcare .radio_filed .new_radio_item input[type="radio"] {appearance: none; -webkit-appearance: none; -moz-appearance: none; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
 .allcare .radio_filed .new_radio_item input[type="radio"]:checked {border: 5px solid var(--col_blue);}
 .allcare .radio_filed .new_radio_item input[type="radio"]:disabled:checked {position: relative; border: 1px solid #757575;}
-.allcare .radio_filed .new_radio_item input[type="radio"]:disabled:checked::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.allcare .radio_filed .new_radio_item input[type="radio"]:disabled:checked::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);} */
 .allcare .radio_filed .new_radio_item label {flex: 1;}
 .allcare .radio_filed .new_radio_item label .label_title { display: block; font-size: 16px; font-weight: 500; color: #333; line-height: 24px; }
 .allcare .radio_filed .new_radio_item label .label_text {font-size: 16px; font-weight: 400; color: #333; line-height: 24px; }
@@ -87,26 +98,19 @@
 .allcare .tab_menu.custom_split ul {padding: 0;}
 .allcare .tab_menu.custom_split li {width: 50%;}
 .allcare .tab_menu.custom_split li button {padding: .625rem;}
-
 .allcare .select_layer.dsp-none {display: none;}
 .allcare .select_layer {display: block;}
-
 .allcare .base_border_cont {position: relative; padding-bottom: 24px; margin-bottom: 8px;}
 .allcare .base_border_cont::after {content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
 .allcare fieldset {border: none;}
-
-
 .allcare .prog_list_sec {padding: 24px 20px 0;}
 .allcare .prog_list_sec .board_header {padding-bottom: 16px; align-items: center;}
 .allcare .prog_list_sec .board_header .count span {font-size: 14px; line-height: 28px; color: #333; font-weight: 400;}
 .allcare .prog_list_sec .board_header > p strong {font-size: 14px; line-height: 28px; color: var(--col_blue); font-weight: 600}
 .allcare .disabled {display: none;}
-
 .allcare .t1_sb { display: flex; align-items: center; height: 44px;}
 .allcare .t1_sb span { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; color: #111;}
-
 .allcare .t2_sb { display: inline-flex; align-items: center; height: 44px;}
-
 .allcare .icon_add .icon { display: block; width: 24px; height: 24px; margin-right: 8px;}
 .allcare .icon_add .num01 { background: url('../images/mypage/ico24_receipt_item.svg') no-repeat;}
 .allcare .icon_add .num02 { background: url('../images/mypage/ico24_member_register.svg') no-repeat;}
@@ -220,17 +224,9 @@
 .allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_count::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
 
 
-
-
-
-
-
-
 /* 참여신청서 - 목록없음 (UI_ADHPAbM01) */
 .mypage .progmg.allcare .pa_page_empty>.t3_sb {text-align: center;}
 .mypage .progmg.allcare .pa_page_empty figure {display: flex; justify-content: center;}
-
-
 
 /* 참여신청서 - 목록있음 (UI_ADHPAbM02) */
 .mypage .progmg.allcare .pa_page_wrap {position: relative; padding-bottom: 8px;}
@@ -292,19 +288,14 @@
 .mypage .progmg.allcare .my_ptcp_from .box_agm_wrap::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: calc(100% + 2.5rem); height: 8px; background-color: #f3f5f6;}
 .mypage .progmg.allcare .my_ptcp_from .dd_twincell {display: flex; flex-direction: column; gap: 8px;}
 .mypage .progmg.allcare .my_ptcp_from .dd_twincell .box_table_group:first-child .cell {width: 100%;}
-
 .mypage .progmg.allcare .my_ptcp_from p.job { font-size: 18px; font-weight: 600; color: var(--col_blue);}
-
 
 /* 참여신청서 - 조회 (UI_ADHPAbS04) */
 .mypage .progmg.allcare .prog_applysummary .apply_summary_inner .apply_summary_reason { margin-top: 8px; padding-left: 24px; position: relative; font-size: 14px; font-weight: 400; line-height: 24px; color: #e0024b;}
 .mypage .progmg.allcare .prog_applysummary .apply_summary_inner .apply_summary_reason::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 3px; background: url('../images/mypage/ico16_reply.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .radio_view_wrap .box_table_wrap dl label {font-weight: 600; font-size: 14px; line-height: 24px;}
 
-
 /* 참여신청서 - 회수(수정) (UI_ADHPAbS05) */
-
-
 
 /* [팝업] 운영 대학 검색 팝업 (UI_ADHPAbP06) */
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area {padding: 0 20px 148px;}
@@ -1021,6 +1012,8 @@
 .mypage .progmg.allcare .prechk_wrap .radio_etc p {margin-bottom: 4px;}
 .mypage .progmg.allcare .prechk_wrap .radio_etc .radio_input_item+.radio_input_item {margin-top: 8px;}
 .mypage .progmg.allcare .prechk_wrap .radio_etc .radio_input_item span {margin-left: 8px; font-size: 16px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .prechk_wrap .radio_etc .input_txt {padding: 10px 16px;}
+
 .mypage .progmg.allcare .prechk_wrap .pay_input {width: calc(100% - 26px); text-align: right; padding: 10px 16px;}
 .mypage .progmg.allcare .jobact_wrap .jobact_cont {margin-top: 12px; border: 1px solid #eee; border-radius: 4px; padding: 20px 16px;}
 .mypage .progmg.allcare .jobact_wrap .jobact_cont .jobact_hd {display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #eee;}
@@ -1098,4 +1091,3 @@
 .mypage .progmg.allcare .allowance_info_box .allowance_info_twin .dd {width: 100%;}
 .mypage .progmg.allcare .hd_btn_box .btn_all {border: 1px solid #757575; border-radius: 4px; padding: 4px 8px;}
 .mypage .progmg.allcare .hd_btn_box .btn_all span {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
-
