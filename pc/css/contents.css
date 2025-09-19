@@ -227,7 +227,7 @@ fieldset { border: none;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_major .cell_twin .new_ipt {max-width: 200px;}
 .mypage .progmg.allcare .new_selectbox {position: relative; width: 200px; height: 40px; border: 1px solid #757575; border-radius: 4px;}
 .mypage .progmg.allcare .new_selectbox select {padding: 6px 28px 6px 16px; width: 100%; height: 100%; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
-.mypage .progmg.allcare .new_selectbox::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .new_selectbox::after {content: ''; pointer-events: none; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_gradate .input_txt {max-width: 128px; padding: 6px 40px 6px 12px;}
 .mypage .progmg.allcare .my_ptcp_from .grade_wrap .tr_gradate .btn_calendar {margin: 0; right: 10px; transform: translateY(-25%);} 
 .mypage .progmg.allcare .agm_area {display: flex; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 8px;}
@@ -313,7 +313,7 @@ fieldset { border: none;}
 .allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box fieldset .direct_input_option .radio_ui {margin-right: 6px;}
 .allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box fieldset .direct_input_option #major_input_wrap {width: calc(100% - 150px);}
 .allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box .major_list_wrapper .major_list { overflow-y: auto; height: 228px; padding: 10px 18px 10px 0;}
-.allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box .major_list_wrapper .major_list li {position: relative; padding-left: 28px;}
+.allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box .major_list_wrapper .major_list li {position: relative;}
 .allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box .major_list_wrapper .major_list li + li {margin-top: 14px;}
 .allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box .major_list_wrapper .major_list li label {cursor: pointer; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare_popup.new_popup .newpop_major_search.newpop_inner .radio_box .major_list_wrapper .major_list li .new_radio_item {cursor: pointer; position: absolute; left: 0; top: 2px;}
@@ -353,7 +353,7 @@ fieldset { border: none;}
 .allcare_popup.newpop_pv .consent_area.type_1 .chk_box label {margin: 2px 0 2px 6px; line-height: 20px; cursor: pointer;}
 .allcare_popup.newpop_pv .consent_area.type_2 .radio_box {display: flex;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
 .allcare_popup.newpop_pv .consent_area.type_2 .radio_box .radio_tit {padding: 12px 20px; width: calc(100% - 170px); background-color: #f8f8f8;}
-.allcare_popup.newpop_pv .consent_area.type_2 .radio_box .radio_group {display: flex; justify-content: center; align-items: center; width: 170px; background-color: #fff;}
+.allcare_popup.newpop_pv .consent_area.type_2 .radio_box>.radio_group {width: 170px; gap: 16px; display: flex; justify-content: center; align-items: center; background-color: #fff;}
 .allcare_popup.newpop_pv .consent_area.type_2 .radio_box .radio_group .new_radio_item {display: flex; justify-content: center; align-items: center; position: relative;}
 .allcare_popup.newpop_pv .consent_area.type_2 .con_box {border-bottom: 1px solid #ddd; padding: 21px 20px;}
 .allcare_popup.newpop_pv .consent_area.type_2 .con_box .radio_table .table_tit {margin: 8px 0;}
@@ -553,9 +553,10 @@ fieldset { border: none;}
 .mypage .progmg.allcare .prof_radio_wrap .box_radio_group {margin-top: 8px;}
 .mypage .progmg.allcare .prof_radio_wrap .box_radio_group li {padding: 12px 20px; border-top: 1px solid #ddd;}
 .mypage .progmg.allcare .prof_radio_wrap .box_radio_group li+li {border-bottom: 1px solid #ddd;}
-.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.w {display: flex; flex-direction: column;}
-.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.t {font-size: 15px; color: #333; font-weight: 400; line-height: 28px;}
-.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .new_radio_item label span.s {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .box_chk-group.radio_group {gap: 8px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .box_chk-group.radio_group label span.w {display: flex; flex-direction: column;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .box_chk-group.radio_group label span.t {font-size: 15px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .prof_radio_wrap .box_radio_group li .box_chk-group.radio_group label span.s {font-size: 14px; color: #333; font-weight: 400; line-height: 24px;}
 .mypage .progmg.allcare .newinput_w200 {width: 200px;}
 .mypage .progmg.allcare .box_notice_wrap.box_custom_wrap {padding: 8px 24px;}
 
