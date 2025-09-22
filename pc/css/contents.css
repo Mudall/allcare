@@ -487,11 +487,12 @@ fieldset { border: none;}
 .mypage .progmg.allcare .pa_page_inner .oper_count {line-height: 28px;}
 .mypage .progmg.allcare .pa_page_inner .oper_time {margin: 4px 0;}
 .mypage .progmg.allcare .pa_page_inner .prog_tit { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; line-clamp: 2; max-height: 56px;}
-.mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li {position: relative; padding-left: 24px; color: #333; font-size: 16px; line-height: 28px; text-align: left;}
+.mypage .progmg.allcare .pa_page_inner .prog_tit p {font-size: 18px; line-height: 28px;}
+.mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li {position: relative; padding-left: 24px; color: #333; font-size: 14px; line-height: 28px; text-align: left;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li+li {margin-top: 4px;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li span {color: #333;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_year {font-weight: 400;}
-.mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .pa_page_inner .new_table td.oper_info li::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 6px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_year::before {width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .pa_page_inner .new_table td.oper_info .oper_count::before {background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .pa_page_inner .new_table .status .stat {display: none;}
@@ -548,9 +549,8 @@ fieldset { border: none;}
 /* 참여 신청서 - 목록있음 (UI_ADHPCbM02) */
 
 /* 참여 신청서 - 이전정보팝업 (UI_ADHPCbP03)*/
-.allcare_popup .newpop_inner_paf .inner_contents {width: 100%; background-color: #f5f6f8; padding: 40px 24px; border-radius: 8px;}
-.allcare_popup .newpop_inner_paf .inner_contents figure {display: flex; justify-content: center;}
-.allcare_popup .newpop_inner_paf .inner_contents figure .icon {display: block; width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
+.allcare_popup .newpop_inner_paf .inner_contents {min-width: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; background-color: #f5f6f8; padding: 40px 24px; border-radius: 8px;}
+.allcare_popup .newpop_inner_paf .inner_contents .icon {width: 56.65px; height: 60px; background: url('../images/mypage/ico60_app-form.svg') no-repeat center / contain;}
 .allcare_popup .newpop_inner_paf .inner_contents_txt {text-align: center;}
 .allcare_popup .newpop_inner_paf .inner_contents_txt .desc {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
 .allcare_popup .newpop_inner_paf .inner_contents_txt .desc time {color: var(--col_blue);}
