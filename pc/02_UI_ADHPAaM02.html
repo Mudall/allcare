@@ -574,51 +574,49 @@
                                     <tr class="new_date">
                                         <td class="new_th">운영 기간</td>
                                         <td colspan="3">
-                                            <fieldset class="form_box">
-                                                <legend>조회 기간 선택 및 날짜 입력</legend>
-
-                                                <div class="date_select">
-                                                    <label for="newDate" class="sr_only">조회 기간 선택</label>
-                                                    <select id="newDate" name="period">
-                                                        <option value="" selected disabled>선택</option>
-                                                        <option value="start">시작일</option>
-                                                        <option value="end">종료일</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
-                                                    <div class="cell">
-                                                        <span class="box_ipt w_small">
-                                                            <label for="schRcptStdte" class="sr_only">시작일</label>
-                                                            <input type="text" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" title="시작일 입력" placeholder="YYYY-MM-DD">
-                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
-                                                        </span>
+                                            <div class="flex_box al-item-c gap16">
+                                                <fieldset class="form_box">
+                                                    <legend>조회 기간 선택 및 날짜 입력</legend>
+    
+                                                    <div class="date_select">
+                                                        <label for="newDate" class="sr_only">조회 기간 선택</label>
+                                                        <select id="newDate" name="period">
+                                                            <option value="" selected disabled>선택</option>
+                                                            <option value="start">시작일</option>
+                                                            <option value="end">종료일</option>
+                                                        </select>
                                                     </div>
-                                                    <i class="date_line" aria-hidden="true">~</i>
-                                                    <div class="cell">
-                                                        <span class="box_ipt w_small">
-                                                            <label for="schRcptEndte" class="sr_only">종료일</label>
-                                                            <input type="text" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" title="종료일 입력" placeholder="YYYY-MM-DD">
-                                                            <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
-                                                        </span>
+    
+                                                    <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
+                                                        <div class="cell">
+                                                            <span class="box_ipt w_small">
+                                                                <label for="schRcptStdte" class="sr_only">시작일</label>
+                                                                <input type="text" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker" title="시작일 입력" placeholder="YYYY-MM-DD">
+                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
+                                                            </span>
+                                                        </div>
+                                                        <i class="date_line" aria-hidden="true">~</i>
+                                                        <div class="cell">
+                                                            <span class="box_ipt w_small">
+                                                                <label for="schRcptEndte" class="sr_only">종료일</label>
+                                                                <input type="text" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker" title="종료일 입력" placeholder="YYYY-MM-DD">
+                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </fieldset>
-
-                                            <ul class="from_btn_box">
-                                                <li><button type="button" value="clear" aria-selected="false">초기화</button></li>
-                                                <li><button type="button" value="today" aria-selected="false">오늘</button></li>
-                                                <li><button type="button" value="1week" aria-selected="false">일주일</button></li>
-                                                <li class="active"><button type="button" value="1month" aria-selected="true" >1개월</button></li>
-                                                <li><button type="button" value="3month" aria-selected="false">3개월</button></li>
-                                                <li><button type="button" value="6month" aria-selected="false">6개월</button></li>
-                                                <li><button type="button" value="1year" aria-selected="false">1년</button></li>
-                                            </ul>
+                                                </fieldset>
+    
+                                                <ul class="from_btn_box mt0">
+                                                    <li><button type="button" value="1week" aria-selected="false">일주일</button></li>
+                                                    <li class="active"><button type="button" value="1month" aria-selected="true" >1개월</button></li>
+                                                    <li><button type="button" value="3month" aria-selected="false">3개월</button></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="box_btn_wrap flex_al_c type02">
+                            <div class="box_btn_wrap flex_al_c type02 mt24">
                                 <button type="reset" id="popBtnClean" class="btn medium type01 reset newbtn_reset newbtn_w88">초기화</button>
                                 <button type="submit" id="srchBtn" class="btn medium fill type01 newbtn_w60">검색</button>
                             </div>
@@ -627,7 +625,7 @@
 
                     <div class="box_table_wrap">
                         <div class="box_table_hd">
-                            <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                            <p class="tit" role="text">전체 <span class="txt_total">1111</span>건</p>
                             <div class="section_right">
                                 <span class="sel round new_sel_span">
                                     <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
@@ -640,7 +638,7 @@
                             </div>
                         </div>
                         <!-- table -->
-                        <table class="box_table auto-count new_table">
+                        <table class="box_table new_table prog_type_a">
                             <caption>프로그램 정보, 운영정보을(를) 제공하는 표</caption>
                             <colgroup>
                                 <col style="width: 60%">
@@ -667,12 +665,12 @@
                                                 <span class="onsite on">대면</span>
                                                 <span class="offsite">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>AAA 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>AAA 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -693,12 +691,12 @@
                                                 <span class="onsite">대면</span>
                                                 <span class="offsite on">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>BBB 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>BBB 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능 빠르고 쉽게 배우는 파이썬을 이용한 인공지능 </p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -719,12 +717,12 @@
                                                 <span class="onsite on">대면</span>
                                                 <span class="offsite">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>CCC 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>CCC 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -745,12 +743,12 @@
                                                 <span class="onsite on">대면</span>
                                                 <span class="offsite">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>DDD 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>DDD 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -771,12 +769,12 @@
                                                 <span class="onsite on">대면</span>
                                                 <span class="offsite">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>EEE 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>EEE 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -797,12 +795,12 @@
                                                 <span class="onsite">대면</span>
                                                 <span class="offsite on">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>FFF 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>FFF 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -823,12 +821,12 @@
                                                 <span class="onsite on">대면</span>
                                                 <span class="offsite">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>GGG 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>GGG 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -849,12 +847,12 @@
                                                 <span class="onsite">대면</span>
                                                 <span class="offsite on">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>HHH 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>HHH 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>
@@ -875,12 +873,12 @@
                                                 <span class="onsite">대면</span>
                                                 <span class="offsite on">비대면</span>
                                             </div>
+                                            <div class="prog_uni"><p>III 대학교</p></div>
                                         </div>
-                                        <div class="prog_uni"><p>III 대학교</p></div>
                                         <div class="prog_tit"><p class="t3_sb">빠르고 쉽게 배우는 파이썬을 이용한 인공지능</p></div>
                                     </td>
                                     <td>
-                                        <ul>
+                                        <ul class="oper_ul">
                                             <li class="oper_year">2025-01-01 ~ 2026-01-01</li>
                                             <li class="oper_time"><span>09</span>시간 <span>00</span>분</li>
                                             <li class="oper_count"><span>1000000</span>명</li>

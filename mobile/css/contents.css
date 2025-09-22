@@ -49,10 +49,6 @@
 .allcare .radio_filed .new_radio_item {display: flex; gap: 8px;}
 .allcare .radio_filed .new_radio_item + .new_radio_item {margin-top: 12px;}
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list .new_radio_item + .new_radio_item {margin-top: 20px;}
-/* .allcare .radio_filed .new_radio_item input[type="radio"] {appearance: none; -webkit-appearance: none; -moz-appearance: none; display: block; margin: 0; width: 22px; height: 22px; border: 1px solid #757575; border-radius: 50%;}
-.allcare .radio_filed .new_radio_item input[type="radio"]:checked {border: 5px solid var(--col_blue);}
-.allcare .radio_filed .new_radio_item input[type="radio"]:disabled:checked {position: relative; border: 1px solid #757575;}
-.allcare .radio_filed .new_radio_item input[type="radio"]:disabled:checked::after {content:''; position: absolute; display: block; background-color: #444; border-radius: 50%; width:12px; height:12px; top: 50%; left: 50%; transform: translate(-50%, -50%);} */
 .allcare .radio_filed .new_radio_item label {flex: 1;}
 .allcare .radio_filed .new_radio_item label .label_title { display: block; font-size: 16px; font-weight: 500; color: #333; line-height: 24px; }
 .allcare .radio_filed .new_radio_item label .label_text {font-size: 16px; font-weight: 400; color: #333; line-height: 24px; }
@@ -201,17 +197,11 @@
 .allcare .prog_list_sec .board_list .prog_item {padding: 16px 0; border-bottom: 1px solid #ddd;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_header {display: flex; align-items: stretch; gap: 4px;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_header>div span {height: 22px;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span {display: none; font-size: 12px; line-height: 1; font-weight: 400; color: #fff; padding: 4px 6px; border-radius: 4px; text-align: center;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span {display: none; font-size: 12px; line-height: 1; font-weight: 600; color: #fff; padding: 4px 6px; border-radius: 4px; text-align: center;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.on {display: flex; justify-content: center; align-items: center;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_sdl {background-color: #19b3bd; border: 1px solid #19b3bd;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_cdp {background-color: #e0024b; border: 1px solid #e0024b;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_lerc {background-color: var(--col_orange); border: 1px solid var(--col_orange);}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_pm {background-color: #9e00ff; border: 1px solid #9e00ff;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_etc {background-color: #555; border: 1px solid #555;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_site span {display: none; font-size: 12px; line-height: 1; font-weight: 400; padding: 4px 6px; border-radius: 4px; text-align: center;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_site span {display: none; font-size: 12px; line-height: 1; font-weight: 600; padding: 4px 6px; border-radius: 4px; text-align: center; color: #555; background-color: #F5F5F5; border: 1px solid #F5F5F5;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_site span.on {display: flex; justify-content: center; align-items: center;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_site .onsite {border: 1px solid var(--col_blue); color: var(--col_blue);}
-.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_site .offsite {border: 1px solid #333; color: 1px solid #333;}
+
 .allcare .prog_list_sec .board_list .prog_item article .prog_uni {margin-top: 8px;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_uni p {font-size: 16px; line-height: 28px; color: #333; font-weight: 400;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_tit {margin: 8px 0 16px;}
@@ -222,6 +212,22 @@
 .allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_year::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_time::before {content: '';position: absolute; width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_count::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
+
+.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_sdl {color: #0F6B71; background-color: #E7F7F8; border: 1px solid #E7F7F8;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_cdp {background-color: #E3EBE7; border: 1px solid #E3EBE7; color: #145C34;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_lerc {background-color: #F7EAE3; border: 1px solid #F7EAE3; color: #C05119;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_pm {background-color: #E8EBFA; border: 1px solid #E8EBFA; color: #3F58D4;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_etc {background-color: #EDE7F5; border: 1px solid #EDE7F5; color: #6B33AD;}
+
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_header {align-items: center;}
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_uni {margin: 0 0 0 12px;}
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_details {display: flex; flex-wrap: wrap; background-color: #f8f8f8; border-radius: 8px; padding: 16px;}
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_details .oper_year {width: 100%; font-weight: 600;}
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_details li+li {width: calc(50% - 16.5px); font-weight: 400;}
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_details li span {font-weight: 400;}
+.allcare .prog_list_sec .board_list.prog_type_a  .prog_item article .prog_details li.oper_count {margin-left: 33px;}
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_details li::before {top: 4px;}
+.allcare .prog_list_sec .board_list.prog_type_a .prog_item article .prog_details li.oper_count::after {content: ''; position: absolute; left: -17px; top: 50%; transform: translateY(-50%); width: 1px; height: 16px; background-color: #D9D9D9;}
 
 
 /* 참여신청서 - 목록없음 (UI_ADHPAbM01) */

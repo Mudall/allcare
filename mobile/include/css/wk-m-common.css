@@ -1828,7 +1828,7 @@ i.ico_share {
     right: 1rem;
     width: 5rem;
     height: 5rem;
-    background: url("/wk/static/images/ico_search1_3.png");
+    background: url("../../include/images/ico_search1_3.png");
     background-size: cover;
     content: "";
 }

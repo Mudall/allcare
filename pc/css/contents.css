@@ -161,16 +161,14 @@ fieldset { border: none;}
 .allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_uni p {margin: 8px 0; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_tit p {color: #111;}
 .allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc {display: flex; align-items: stretch; gap: 4px;}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span {display: none; padding: 4px 6px; border-radius: 4px; color: #fff; background-color: #19b3bd; border: 1px solid #19b3bd; font-size: 12px; font-weight: 400; line-height: 1; }
+.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span {display: none; padding: 4px 6px; border-radius: 4px; font-size: 12px; font-weight: 600; line-height: 1; color: #0F6B71; background-color: #E7F7F8; border: 1px solid #E7F7F8;}
 .allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span.on {display: block;}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_cdp {background-color: #e0024b; border: 1px solid #e0024b;}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_lerc {background-color: var(--col_orange); border: 1px solid var(--col_orange);}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_pm {background-color: #9e00ff; border: 1px solid #9e00ff;}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_etc {background-color: #555; border: 1px solid #555;}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span {display: none; font-size: 12px; font-weight: 400; line-height: 1;  padding: 4px 6px; border-radius: 4px;} 
+.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_cdp {background-color: #E3EBE7; border: 1px solid #E3EBE7; color: #145C34;}
+.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_lerc {background-color: #F7EAE3; border: 1px solid #F7EAE3; color: #C05119;}
+.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_pm {background-color: #E8EBFA; border: 1px solid #E8EBFA; color: #3F58D4;}
+.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_etc {background-color: #EDE7F5; border: 1px solid #EDE7F5; color: #6B33AD;}
+.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span {display: none; font-size: 12px; font-weight: 600; line-height: 1;  padding: 4px 6px; border-radius: 4px; color: #555; background-color: #F5F5F5; border: 1px solid #F5F5F5;} 
 .allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span.on {display: block;}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site .onsite {color: var(--col_blue); border: 1px solid var(--col_blue);}
-.allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site .offsite {color: #333; border: 1px solid #757575;}
 .allcare_popup.new_popup .uni_prog_tool .new_table td:first-child .prog_dsc .prog_year p {color: #333;}
 .allcare_popup.new_popup .uni_prog_tool .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare_popup.new_popup .uni_prog_tool .new_table td:last-child li+li {margin-top: 4px;}
@@ -196,6 +194,17 @@ fieldset { border: none;}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li.active {background-color: var(--col_blue);}
 .allcare_popup.new_popup .uni_prog_tool tr.new_date .from_btn_box li.active button {color: #fff;}
 
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_dsc {align-items: center;}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_uni p {margin: 0 0 0 12px; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_tit {margin-top: 8px;}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a .oper_ul {display: flex; flex-wrap: wrap;}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a .oper_ul li {font-size: 14px; line-height: 24px;} 
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a .oper_year {width: 100%; font-weight: 600;} 
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a .oper_time {width: calc(50% - 16.5px);}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a .oper_count {width: calc(50% - 16.5px); margin-left: 33px;}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a .oper_count:after {content: ''; position: absolute; left: -17px; top: 50%; transform: translateY(-50%); width: 1px; height: 16px; background-color: #D9D9D9;}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a td span {vertical-align: baseline; font-weight: 400;}
+.allcare_popup.new_popup .uni_prog_tool .new_table.prog_type_a td:last-child .oper_ul li::before {top: 4px;}
 
 /* 참여신청서 - 목록없음 (UI_ADHPAbM01) */
 .mypage .progmg.allcare .pa_page_empty {text-align: center; display: flex; flex-direction: column; align-items: center;}
@@ -392,21 +401,18 @@ fieldset { border: none;}
 .allcare .uni_prog_tool .new_table td:first-child .prog_uni p {margin: 8px 0; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare .uni_prog_tool .new_table td:first-child .prog_tit p {color: #111;}
 .allcare .uni_prog_tool .new_table td:first-child .prog_dsc {display: flex; align-items: stretch; gap: 4px;}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span {display: none; padding: 4px 6px; border-radius: 4px; color: #fff; background-color: #19b3bd; border: 1px solid #19b3bd; font-size: 12px; font-weight: 400; line-height: 1; }
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span {display: none; padding: 4px 6px; border-radius: 4px; color: #0F6B71; background-color: #E7F7F8; border: 1px solid #E7F7F8; font-size: 12px; font-weight: 600; line-height: 1; }
 .allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag span.on {display: block;}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_cdp {background-color: #e0024b; border: 1px solid #e0024b;}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_lerc {background-color: var(--col_orange); border: 1px solid var(--col_orange);}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_pm {background-color: #9e00ff; border: 1px solid #9e00ff;}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_etc {background-color: #555; border: 1px solid #555;}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span {display: none; font-size: 12px; font-weight: 400; line-height: 1;  padding: 4px 6px; border-radius: 4px;} 
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_cdp {background-color: #E3EBE7; border: 1px solid #E3EBE7; color: #145C34;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_lerc {background-color: #F7EAE3; border: 1px solid #F7EAE3; color: #C05119;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_pm {background-color: #E8EBFA; border: 1px solid #E8EBFA; color: #3F58D4;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_tag .tag_etc {background-color: #EDE7F5; border: 1px solid #EDE7F5; color: #6B33AD;}
+.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span {display: none; font-size: 12px; font-weight: 600; line-height: 1;  padding: 4px 6px; border-radius: 4px; color: #555; background-color: #F5F5F5; border: 1px solid #F5F5F5;} 
 .allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site span.on {display: block;}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site .onsite {color: var(--col_blue); border: 1px solid var(--col_blue);}
-.allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_site .offsite {color: #333; border: 1px solid #757575;}
 .allcare .uni_prog_tool .new_table td:first-child .prog_dsc .prog_year p {color: #333;}
 .allcare .uni_prog_tool .new_table td:last-child li {position: relative; padding-left: 24px; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
 .allcare .uni_prog_tool .new_table td:last-child li+li {margin-top: 4px;}
 .allcare .uni_prog_tool .new_table td:last-child li span {color: #333;}
-
 
 
 
@@ -684,17 +690,17 @@ fieldset { border: none;}
 .mypage .progmg.allcare .job_step_wrap li span {text-align: center; font-size: 16px; color: #555; font-weight: 400; line-height: 28px;}
 .mypage .progmg.allcare .job_step_wrap li.active {background-color: var(--col_blue);}
 .mypage .progmg.allcare .job_step_wrap li.active span {font-weight: 600; color: #fff;}
-.mypage .progmg.allcare .job_step_wrap li::before {z-index: 1; content: ''; position: absolute; left: -15px; top: 50%; transform: translateY(-50%); width: 15px; height: 44px; background: url('../images/mypage/step-bg_type03_b.svg') no-repeat;}
 .mypage .progmg.allcare .job_step_wrap li.connect + li.connect {margin-left: 0;}
-.mypage .progmg.allcare .job_step_wrap li.active::before {background-image: url('../images/mypage/step-bg_type02_b.svg');}
-.mypage .progmg.allcare .job_step_wrap li.active::after {z-index: 1; content: ''; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); width: 22px; height: 44px; background: url('../images/mypage/step-bg_type02_a.svg') no-repeat;}
 .mypage .progmg.allcare .job_step_wrap li:first-child {margin-left: 0;}
 .mypage .progmg.allcare .job_step_wrap li:first-child.active::before {content: none;}
 .mypage .progmg.allcare .job_step_wrap li.complete {background-color: #e3eeff;}
 .mypage .progmg.allcare .job_step_wrap li.complete span {position: relative; font-weight: 600; padding: 0 20px 0 10px;}
 .mypage .progmg.allcare .job_step_wrap li.complete span::after {content: ''; position: absolute; right: 0px; top: 50%; transform: translateY(-50%); background: url('../images/mypage/ico16_jobstep_chk.svg') no-repeat; width: 16px; height: 16px;}
 .mypage .progmg.allcare .job_step_wrap li.complete:before {content: none;}
-.mypage .progmg.allcare .job_step_wrap li.complete:after {z-index: 1; content: ''; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); width: 22px; height: 44px; background: url('../images/mypage/step-bg_type01_a.svg') no-repeat;}
+.mypage .progmg.allcare .job_step_wrap li::before {z-index: 1; content: ''; position: absolute; left: -15px;  width: 15px; height: 44px; background: url('../images/mypage/step-bg_type03_b.svg') no-repeat;}
+.mypage .progmg.allcare .job_step_wrap li.complete:after {z-index: 1; content: ''; position: absolute; right: -22px;  width: 22px; height: 44px; background: url('../images/mypage/step-bg_type01_a.svg') no-repeat;}
+.mypage .progmg.allcare .job_step_wrap li.active::before {background-image: url('../images/mypage/step-bg_type02_b.svg');}
+.mypage .progmg.allcare .job_step_wrap li.active::after {z-index: 1; content: ''; position: absolute; right: -22px;  width: 22px; height: 44px; background: url('../images/mypage/step-bg_type02_a.svg') no-repeat;}
 
 .mypage .progmg.allcare .jobstep_radio_wrap .tit_box .subtit {margin-top: 8px; font-size: 18px; color: #333; font-weight: 600; line-height: 28px;}
 .mypage .progmg.allcare .jobstep_radio_wrap .tit_box .desc {margin-top: 4px; font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
