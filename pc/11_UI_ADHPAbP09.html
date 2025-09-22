@@ -232,7 +232,7 @@
         <script src="../pc/js/contents.js"></script>
 
         <!-- 팝업내용 시작 -->
-        <section id="operPrgmPopup" class="new_popup allcare_popup newpop_uni_index" role="dialog" aria-modal="true" aria-labelledby="operPrgmPopupTitle">
+        <section id="operPrgmPopup" class="full_pop large full_01" style="display: block;" role="dialog" aria-modal="true" aria-labelledby="operPrgmPopupTitle">
             <header class="head type2 newpop_tit">
                 <h1 id="operPrgmPopupTitle" class="h2_sb">전공 찾기</h1>
                 <!-- 닫기 -->
@@ -241,154 +241,156 @@
                 </button>
             </header>
 
-            <form:form id="operPrgmForm" name="operPrgmForm" method="POST" modelAttribute="HPFSAA0101VO">
-                <div class="newpop_inner newpop_major_result">
-                    <div class="search_box">
-                        <article class="box_form_content">
-                            <table class="search_table">
-                            <colgroup>
-                                <col style="width:88px;">
-                                <col>
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <td class="new_th"><span>검색어</span></td>
-                                    <td>
-                                    <div class="box_sch_group">
-                                        <span class="box_ipt new_ipt">
-                                            <input id="keywordSearchBar" type="text" class="input_txt" title="전공 검색어를 입력" value="국어국문" placeholder="전공 관련 검색어를 입력하세요. 예) 법학, 철학">
-                                            <button type="reset" class="ico16_devare newbtn_del"><span class="blind">전공 검색어 삭제</span></button>
-                                        </span>
-                                        <button type="button" class="btn medium fill btn_search type01" onclick="callSearch()">검색</button>
-                                    </div>
-                                </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </article>
-                    </div>
-
-
-                    <div class="major_result_box mt24">
-                        <div class="major_result_tit">
-                            <p class="b1_r">전공 및 학과</p>
-                            <button type="button" class="btn small type02"  onclick="location.href='./UI_ADHPAbP08.html'"><span class="s1_sb">계열분류 보기</span></button>
+            <div class="cont">
+                <div class="allcare_popup newpop_uni_index">
+                    <div class="newpop_inner newpop_major_result">
+                        <div class="search_box">
+                            <article class="box_form_content">
+                                <table class="search_table">
+                                <colgroup>
+                                    <col style="width:88px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="new_th"><span>검색어</span></td>
+                                        <td>
+                                        <div class="box_sch_group">
+                                            <span class="box_ipt new_ipt">
+                                                <input id="keywordSearchBar" type="text" class="input_txt" title="전공 검색어를 입력" value="국어국문" placeholder="전공 관련 검색어를 입력하세요. 예) 법학, 철학">
+                                                <button type="reset" class="ico16_devare newbtn_del"><span class="blind">전공 검색어 삭제</span></button>
+                                            </span>
+                                            <button type="button" class="btn medium fill btn_search type01" onclick="callSearch()">검색</button>
+                                        </div>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </article>
                         </div>
-                        <fieldset class="box_radio_group">
-                            <legend>학과 검색결과 선택</legend>
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="11" value="11">
-                                <label for="11">
-                                    <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군 선택</span>
-                                    <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군</p>
-                                </label>
-                            </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="22" value="22">
-                                <label for="22">
-                                    <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문일문중문학과군 선택</span>
-                                    <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문일문중문학과군</p>
-                                </label>
-                            </div>
-                            
-                            
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="testtest" value="testtest">
-                                <label for="testtest">
-                                        <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문학과  선택</span>
-                                    <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문학과 </p>
-                                </label>
-                            </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="33" value="33">
-                                <label for="33">
-                                        <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문 영어영문학과군 선택</span>
-                                    <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문 영어영문학과군</p>
-                                </label>
+                        <div class="major_result_box mt24">
+                            <div class="major_result_tit">
+                                <p class="b1_r">전공 및 학과</p>
+                                <button type="button" class="btn small type02"  onclick="location.href='./UI_ADHPAbP08.html'"><span class="s1_sb">계열분류 보기</span></button>
                             </div>
+                            <fieldset class="box_radio_group">
+                                <legend>학과 검색결과 선택</legend>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="11" value="11">
+                                    <label for="11">
+                                        <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군 선택</span>
+                                        <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군</p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="44" value="44">
-                                <label for="44">
-                                        <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문영어영문학과 선택</span>
-                                    <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문영어영문학과</p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="22" value="22">
+                                    <label for="22">
+                                        <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문일문중문학과군 선택</span>
+                                        <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문일문중문학과군</p>
+                                    </label>
+                                </div>
+                                
+                                
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="testtest" value="testtest">
+                                    <label for="testtest">
+                                            <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문학과  선택</span>
+                                        <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문학과 </p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100002" value="02020100002">
-                                <label for="02020100002">
-                                    <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군 선택</span>
-                                    <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군</p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="33" value="33">
+                                    <label for="33">
+                                            <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문 영어영문학과군 선택</span>
+                                        <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문 영어영문학과군</p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100003" value="02020100003">
-                                <label for="02020100003">
-                                    <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
-                                    <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="44" value="44">
+                                    <label for="44">
+                                            <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문영어영문학과 선택</span>
+                                        <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국어국문영어영문학과</p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100004" value="02020100004">
-                                <label for="02020100004">
-                                    <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
-                                    <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100002" value="02020100002">
+                                    <label for="02020100002">
+                                        <span class="sr_only">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군 선택</span>
+                                        <p class="b1_r">인문계열 &gt; 언어문학 &gt; 국어국문학 &gt; 국문역사학과군</p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100096" value="02020100096">
-                                <label for="02020100096">
-                                    <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
-                                    <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100003" value="02020100003">
+                                    <label for="02020100003">
+                                        <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
+                                        <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100099" value="02020100099">
-                                <label for="02020100099">
-                                    <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
-                                    <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100004" value="02020100004">
+                                    <label for="02020100004">
+                                        <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
+                                        <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100006" value="02020100006">
-                                <label for="02020100006">
-                                    <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
-                                    <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100096" value="02020100096">
+                                    <label for="02020100096">
+                                        <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
+                                        <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100007" value="02020100007">
-                                <label for="02020100007">
-                                    <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
-                                    <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
-                                </label>
-                            </div>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100099" value="02020100099">
+                                    <label for="02020100099">
+                                        <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
+                                        <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
+                                    </label>
+                                </div>
 
-                            <div class="box_chk-group radio_group">
-                                <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100074" value="02020100074">
-                                <label for="02020100074">
-                                    <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
-                                    <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
-                                </label>
-                            </div>
-                        </fieldset>
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100006" value="02020100006">
+                                    <label for="02020100006">
+                                        <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
+                                        <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
+                                    </label>
+                                </div>
+
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100007" value="02020100007">
+                                    <label for="02020100007">
+                                        <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
+                                        <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
+                                    </label>
+                                </div>
+
+                                <div class="box_chk-group radio_group">
+                                    <input type="radio" onclick="searchModeValueCheck(this)" name="majorSearchCheckBox" id="02020100074" value="02020100074">
+                                    <label for="02020100074">
+                                        <span class="sr_only">TEST &gt; TEST &gt; TEST &gt; TEST 선택</span>
+                                        <p class="b1_r">TEST &gt; TEST &gt; TEST &gt; TEST </p>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="newpop_save uni_save btn_box">
+                        <button type="button" class="btn big type02" onclick="location.href='';">닫기</button>
+                        <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">적용</button>
                     </div>
                 </div>
-
-                <div class="newpop_save uni_save btn_box mt24">
-                    <button type="button" class="btn big type02" onclick="location.href='';">닫기</button>
-                    <button type="submit" id="submitBtn" class="btn big fill type01" onclick="">적용</button>
-                </div>
-            </form:form>
+            </div>
         </section>
 
 </body>
