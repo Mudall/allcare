@@ -348,24 +348,6 @@
                                     </div>
 
                                     <script>
-                                        // 신청 및 처리현황 on/off 토글
-                                        document.addEventListener('DOMContentLoaded', function () {
-                                            const toggleBtn = document.querySelector('.apply_summary_action .apply_summary_toggle');
-                                            const detailArea = document.getElementById('applySummaryDetail');
-
-                                            toggleBtn.addEventListener('click', function () {
-                                                const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-                                                toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
-                                                toggleBtn.classList.toggle('on', !isExpanded);
-                                                toggleBtn.classList.toggle('off', isExpanded);
-                                                if (!isExpanded) {
-                                                    detailArea.removeAttribute('hidden');
-                                                } else {
-                                                    detailArea.setAttribute('hidden', '');
-                                                }
-                                            });
-                                        });
-
 
                                         // 참여자 분류에서 1번 선택시 학적정보 보여주기 
                                         document.addEventListener('DOMContentLoaded', function () {
@@ -402,7 +384,8 @@
 
         </div>
         <script src="../pc/js/include.js"></script>
-        <script src="../pc/js/include_share.js"></script>        <script src="../pc/js/contents.js"></script>
+        <script src="../pc/js/include_share.js"></script>        
+        <script src="../pc/js/contents.js"></script>
 </body>
 
 </html>

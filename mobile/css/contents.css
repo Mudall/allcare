@@ -204,14 +204,15 @@
 
 .allcare .prog_list_sec .board_list .prog_item article .prog_uni {margin-top: 8px;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_uni p {font-size: 16px; line-height: 28px; color: #333; font-weight: 400;}
+.allcare .prog_list_sec .board_list .prog_ul.prog_type_01 .prog_item article .prog_uni p {font-size: 14px;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_tit {margin: 8px 0 16px;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_tit p {font-size: 18px; line-height: 28px; color: #111; font-weight: 600;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_details li {position: relative; padding-left: 24px; font-size: 14px; line-height: 24px; color: #333; font-weight: 400;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_details li+li {margin-top: 4px;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_details li span {font-weight: 600;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_year::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_time::before {content: '';position: absolute; width: 14px; height: 14px; left: 1px; top: 6px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
-.allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_count::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_year::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 5px; background: url('../include/images/ico16_date.svg') no-repeat center / contain;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_time::before {content: '';position: absolute; width: 16px; height: 16px; left: 1px; top: 4px; background: url('../include/images/ico16_time.svg') no-repeat center / contain;}
+.allcare .prog_list_sec .board_list .prog_item article .prog_details li.oper_count::before {content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 4px; background: url('../include/images/ico16_member_gray.svg') no-repeat center / contain;}
 
 .allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_sdl {color: #0F6B71; background-color: #E7F7F8; border: 1px solid #E7F7F8;}
 .allcare .prog_list_sec .board_list .prog_item article .prog_header .prog_tag span.tag_cdp {background-color: #E3EBE7; border: 1px solid #E3EBE7; color: #145C34;}
@@ -556,7 +557,7 @@
 
 
 /* 상담이력 - 목록 있음 (UI_ADHPAeM02) */
-.mypage .progmg.allcare .full_box {background-color: #f8f8f8; padding: 16px 20px; margin-bottom: 16px !important;} 
+.mypage .progmg.allcare .full_box {background-color: #f8f8f8; padding: 16px 20px; margin-bottom: 24px !important;} 
 .mypage .progmg.allcare .full_box form {display: flex; align-items: center; gap: 4px;}
 .mypage .progmg.allcare .full_box form .fullbox_search_btn {background-color: #fff; font-size: 16px; line-height: 28px; color: #333; font-weight: 400; width: 52px; height: 40px; display: flex; justify-content: center; align-items: center; border: 1px solid #757575; border-radius: 4px;} 
 .mypage .progmg.allcare .full_box form fieldset {width: calc(100% - 56px); display: flex; align-items: center; gap: 4px;}
