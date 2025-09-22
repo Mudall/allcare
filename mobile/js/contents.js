@@ -1,24 +1,31 @@
-// 신청 및 처리현황 on/off 토글
-$(document).ready(function() {
-    var $toggleBtn = $('.apply_summary_toggle');
-    var $detailArea = $('#applySummaryDetail');
-    var $labelSpan = $toggleBtn.find('span');
+// 토글 기능 공통 함수
+function initToggle($btn, $detailArea, openText, closeText) {
+    var $labelSpan = $btn.find('span');
 
-    $toggleBtn.on('click', function() {
-        var isExpanded = $toggleBtn.attr('aria-expanded') === 'true';
-        $toggleBtn.attr('aria-expanded', String(!isExpanded));
+    $btn.on('click', function() {
+        var isExpanded = $btn.attr('aria-expanded') === 'true';
+        $btn.attr('aria-expanded', String(!isExpanded));
 
         if (!isExpanded) {
             // 열림 상태
             $detailArea.removeAttr('hidden');
-            $labelSpan.text('접기').removeClass('open_bt');
+            $labelSpan.text(closeText).removeClass('open_bt');
         } else {
             // 닫힘 상태
             $detailArea.attr('hidden', '');
-            $labelSpan.text('열기').addClass('open_bt');
+            $labelSpan.text(openText).addClass('open_bt');
         }
     });
+}
+
+$(document).ready(function() {
+    // 신청 및 처리현황 토글
+    initToggle($('.apply_summary_toggle'), $('#applySummaryDetail'), '열기', '접기');
+
+    // 프로그램 신청 및 처리현황 토글
+    initToggle($('.prog_summary_toggle'), $('#progSummaryDetail'), '프로그램 참여 이력 조회', '접기');
 });
+
 
 
 

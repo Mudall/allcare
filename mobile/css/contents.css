@@ -307,12 +307,12 @@
 /* [팝업] 운영 대학 검색 팝업 (UI_ADHPAbP06) */
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area {padding: 0 20px 148px;}
 .mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_header .select_area .flex_box button {border: none; padding: 0 0 0 1.5rem;}
-.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li {padding: 16px 0; border-bottom: 1px solid #ddd;}
-.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_uni {display: flex; gap: 8px;  align-items: center;}
-.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_uni label P {font-size: 18px; color: #111; font-weight: 600; line-height: 28px;}
-.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_addr {margin: 8px 0 4px;}
-.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_addr p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
-.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_filed ul li .radio_list_tel p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
+.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_group ul li {padding: 16px 0; border-bottom: 1px solid #ddd;}
+.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_group ul li .radio_list_uni {display: flex; gap: 8px;  align-items: center;}
+.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_group ul li .radio_list_uni label P {font-size: 18px; color: #111; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_group ul li .radio_list_addr {margin: 8px 0 4px;}
+.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_group ul li .radio_list_addr p {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .newpop_uni_search .list_cont_area .board_list .radio_group ul li .radio_list_tel p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
 .mypage .progmg.allcare .newpop_uni_searchpop form.search_form {background-color: initial; padding-bottom: 200px;}
 .allcare .region_veiwpop_dimmed, .allcare .progtype_veiwpop_dimmed {z-index: 1000; width: 100%; height: 100%; display: block; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.16);}
 .allcare .form_area_region, .allcare .form_area_progtype {margin-top: 16px;}
@@ -346,6 +346,8 @@
 .allcare .search_hide_wrap .view_btn span::after {content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../include/images/ico24_arrow2_down.svg');}
 .allcare .search_hide_wrap .view_content.view_off {display: none;}
 .allcare .search_hide_wrap .view_btn.view_btn_close span::after {transform: translateY(-50%) rotate(180deg);}
+
+
 
 /* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP07) */
 .mypage .progmg.allcare .newpop_major .newpop_inner .search_area.categroy_search input[type=text] {font-size: 16px; color: #757575; font-weight: 400; line-height: 28px; padding: 10px 16px; width: calc(100% - 56px); height: 48px;}
@@ -385,7 +387,7 @@
 .mypage .progmg.allcare .newpop_regi .major_result_box {margin-top: 24px; padding: 0 20px 150px; overflow: hidden;}
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_tit {margin-bottom: 8px;}
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_tit p {color: #555;}
-.mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list {border: 1px solid #ddd; border-radius: 12px; padding: 16px 8px 16px 16px; overflow: hidden; height: 360px;}
+.mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list {border: 1px solid #ddd; border-radius: 12px; padding: 16px 8px 16px 16px; overflow: auto; height: 360px;}
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list .radio_filed {height: 100%; overflow-y: auto; padding-right: 8px;}
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list .radio_filed .new_radio_item {display: flex; gap: 8px;}
 .mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list .radio_filed .new_radio_item label {flex: 1;}
@@ -696,6 +698,13 @@
 /* 빌드업 - 경력개발로드맵_조회(변경신청후-회수) (UI_ADHPCdS07) */
 
 /* 점프업 - 참여신청서조회 (UI_ADHPCbM10) */
+
+.mypage .progmg.allcare .radio_group.radio_twin_type01 {display: flex; flex-direction: column; align-items: flex-start; gap: 20px;}
+.mypage .progmg.allcare .radio_group.radio_twin_type01 .new_radio_item {align-items: flex-start;}
+.mypage .progmg.allcare .radio_group.radio_twin_type01 .new_radio_item input {margin-top: 3px;}
+.mypage .progmg.allcare .newpop_regi .major_result_box .major_result_list .radio_group.radio_twin_type01 .new_radio_item + .new_radio_item {margin-top: 0;}
+.mypage .progmg.allcare .radio_group.radio_twin_type01 .new_radio_item label {flex: 1;}
+
 .mypage .progmg.allcare .radio_group.radio_twin_type02 {display: flex; flex-direction: column; align-items: flex-start;}
 .mypage .progmg.allcare .radio_group.radio_twin_type02 .new_radio_item {align-items: flex-start;}
 .mypage .progmg.allcare .radio_group.radio_twin_type02 .new_radio_item input {margin-top: 3px;}

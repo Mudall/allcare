@@ -68,7 +68,7 @@
                                         </dd>
                                         <dt class="req_mark">참여자 분류</dt>
                                         <dd>
-                                            <fieldset class="radio_group">
+                                            <fieldset class="radio_group radio_twin_type02">
                                                 <legend class="sr_only">참여자 분류 선택</legend>
                                                 <div class="new_radio_item">
                                                     <input type="radio" id="customType1" name="customType" value="graduate" checked>
@@ -149,22 +149,19 @@
                             </div>
 
 
-                            <div class="prog_wrap prog_applysummary box_group_wrap box_table_wrap">
-                                <h3 class="t3_sb mb16">신청 및 처리현황</h3>
-                                <div class="apply_summary_wrap" role="region">
+                            <div class="prog_wrap prog_applysummary after_border">
+                                <h3 class="t3_sb">신청 및 처리현황</h3>
+                                <div class="apply_summary_wrap mt8" role="region">
                                     <div class="apply_summary_header">
                                         <div class="apply_summary_info  mb24">
                                             <i></i>
-                                            <p class="apply_summary_tit">현재 <span>회수</span> 상태 입니다.</p>
+                                            <p class="apply_summary_tit">현재 참여신청서 <span>회수</span> 상태 입니다.</p>
                                             <p class="apply_summary_tel s1_r ">담당자 : 김담당 (010-0000-0000)</p>
-                                        </div>
-                                        <div class="apply_summary_action off">
-                                            <button type="button" class="apply_summary_toggle" aria-expanded="false" aria-controls="applySummaryDetail"><span>프로그램 참여 이력</span></button>
                                         </div>
                                     </div>
 
                                     <!-- 버튼이 aria-expanded="true" 이면 보임 -->
-                                    <div class="apply_summary_inner" id="applySummaryDetail" hidden>
+                                    <div class="apply_summary_inner" id="progSummaryDetail">
                                         <ul>
                                             <li>
                                                 <div class="apply_summary_status">
@@ -172,79 +169,13 @@
                                                     <p class="status_date">2025-00-00</p>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">제출</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">회수</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">제출</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">회수</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">제출</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">회수</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">제출</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">회수</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">제출</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">회수</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="apply_summary_status">
-                                                    <p class="status_label">제출</p>
-                                                    <p class="status_date">2025-00-00</p>
-                                                </div>
-                                            </li>
                                         </ul>
-                                        <div class="apply_summary_action secon_action">
-                                            <button type="button" class="apply_summary_toggle" aria-expanded="tru" aria-controls="applySummaryDetail"><span>접기</span></button>
-                                        </div>
+                                    </div>
+                                    <div class="apply_summary_action secon_action">
+                                        <button type="button" class="prog_summary_toggle" aria-expanded="true" aria-controls="progSummaryDetail"><span class="">접기</span></button>
                                     </div>
                                 </div>
-
+                                
                                 <div class="apply_summary_pv mt24">
                                     <p>
                                         개인정보 수집·이용·제공에 대한 동의 일자 : <br>
@@ -252,33 +183,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    const toggleBtns = document.querySelectorAll('.apply_summary_toggle'); 
-                                    const detailArea = document.getElementById('applySummaryDetail');
-
-                                    toggleBtns.forEach(btn => {
-                                        btn.addEventListener('click', function () {
-                                            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-                                            const newState = !isExpanded;
-
-                                            toggleBtns.forEach(b => b.setAttribute('aria-expanded', String(newState)));
-
-                                            const firstBtnWrap = toggleBtns[0].closest('.apply_summary_action');
-                                            if (firstBtnWrap) {
-                                                firstBtnWrap.classList.toggle('on', newState);
-                                                firstBtnWrap.classList.toggle('off', !newState);
-                                            }
-
-                                            if (newState) {
-                                                detailArea.removeAttribute('hidden');
-                                            } else {
-                                                detailArea.setAttribute('hidden', '');
-                                            }
-                                        });
-                                    });
-                                });
-                            </script>
 
 
 

@@ -425,24 +425,6 @@
                                 </div>
 
                                 <script>
-                                    // 신청 및 처리현황 on/off 토글
-$(document).ready(function() {
-    var $toggleBtn = $('.apply_summary_action .apply_summary_toggle');
-    var $detailArea = $('#applySummaryDetail');
-
-    $toggleBtn.on('click', function() {
-        var isExpanded = $toggleBtn.attr('aria-expanded') === 'true';
-        $toggleBtn.attr('aria-expanded', String(!isExpanded));
-        $toggleBtn.toggleClass('on', !isExpanded);
-        $toggleBtn.toggleClass('off', isExpanded);
-
-        if (!isExpanded) {
-            $detailArea.removeAttr('hidden');
-        } else {
-            $detailArea.attr('hidden', '');
-        }
-    });
-});
 
 
                                     // 참여자 분류에서 1번 선택시 학적정보 보여주기 
