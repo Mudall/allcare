@@ -20,7 +20,6 @@ async function loadSection(id, file) {
     ['header', '../pc/include/header.html'],
     ['footer', '../pc/include/footer.html'],
     ['quick_menu', '../pc/include/quick_menu.html'],
-    ['section_bottom', '../pc/include/section_bottom.html'],
     ['location.type_a', '../pc/include/location_a.html'],
     ['location.type_b', '../pc/include/location_b.html'],
     ['location.type_c', '../pc/include/location_c.html'],

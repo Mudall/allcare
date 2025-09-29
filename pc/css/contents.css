@@ -16,12 +16,11 @@ fieldset { border: none;}
 .radio_group input[type="radio"]:disabled:checked::after { background-color: #444;}
 
 .allcare .radio_group input[type="radio"],
-.allcare_popup .radio_group input[type="radio"] {width: 16px; height: 16px; appearance: auto;}
+.allcare_popup .radio_group input[type="radio"] {width: 18px; height: 18px; appearance: auto;}
 .radio_group input[type="radio"]::before,
 .allcare_popup .radio_group input[type="radio"]::before,
 .radio_group input[type="radio"]::after,
 .allcare_popup .radio_group input[type="radio"]::after {display: none;}
-
 
 /* Allcare 공통 */
 /* new_table : 테이블 padding 값 수정 */
@@ -190,9 +189,9 @@ fieldset { border: none;}
 .allcare_popup .uni_prog_tool .new_table .oper_count {font-weight: 400;}
 .allcare_popup .uni_prog_tool tr.new_date .date_select {position: relative; margin-right: 16px; background-color: #fff; border-radius: 4px; border: 1px solid var(--col_button);}
 .allcare_popup .uni_prog_tool tr.new_date .date_select .newDate {padding: 6px 60px 6px 12px; height: 40px; color: #555; appearance: none; -webkit-appearance: none; -moz-appearance: none; font-size: 16px; font-weight: 400; line-height: 28px;}
-.allcare_popup .uni_prog_tool tr.new_date .date_select::after {content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
+.allcare_popup .uni_prog_tool tr.new_date .date_select::after {pointer-events: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); background: url('../include/images/arrow16_down.svg') no-repeat center / contain;}
 .allcare_popup .uni_prog_tool .box_form_content {padding: 24px 40px;}
-.allcare_popup .uni_prog_tool .box_chk-group > span {margin-right: 18px;}
+.allcare_popup .uni_prog_tool .box_chk-group > span {margin-right: 22px;}
 .allcare_popup .uni_prog_tool th, 
 .allcare_popup .uni_prog_tool td {padding-top: 12px; padding-bottom: 12px;}
 .allcare_popup .uni_prog_tool .search_table td .box_chk-group {min-height: initial;}
@@ -204,13 +203,13 @@ fieldset { border: none;}
 .allcare_popup .uni_prog_tool tr.new_date .from_btn_box li.active button {color: #fff;}
 
 .allcare_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_dsc {align-items: center;}
-.allcare_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_uni p {margin: 0 0 0 12px; color: #333; font-size: 16px; font-weight: 400; line-height: 28px;}
+.allcare_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_uni p {margin: 0 0 0 12px; color: #333; font-size: 12px; font-weight: 400; line-height: 28px;}
 .allcare_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_tit {margin-top: 8px;}
+.allcare_popup .uni_prog_tool .new_table.prog_type_a td:first-child .prog_tit p {font-size: 16px;}
 .allcare_popup .uni_prog_tool .new_table.prog_type_a .oper_ul {display: flex; flex-wrap: wrap;}
 .allcare_popup .uni_prog_tool .new_table.prog_type_a .oper_ul li {font-size: 14px; line-height: 24px;} 
 .allcare_popup .uni_prog_tool .new_table.prog_type_a .oper_year {width: 100%; font-weight: 600;} 
-.allcare_popup .uni_prog_tool .new_table.prog_type_a .oper_time {width: calc(50% - 16.5px);}
-.allcare_popup .uni_prog_tool .new_table.prog_type_a .oper_count {width: calc(50% - 16.5px); margin-left: 33px;}
+.allcare_popup .uni_prog_tool .new_table.prog_type_a .oper_count {margin-left: 33px;}
 .allcare_popup .uni_prog_tool .new_table.prog_type_a .oper_count:after {content: ''; position: absolute; left: -17px; top: 50%; transform: translateY(-50%); width: 1px; height: 16px; background-color: #D9D9D9;}
 .allcare_popup .uni_prog_tool .new_table.prog_type_a td span {vertical-align: baseline; font-weight: 400;}
 .allcare_popup .uni_prog_tool .new_table.prog_type_a td:last-child .oper_ul li::before {top: 4px;}
@@ -300,13 +299,10 @@ fieldset { border: none;}
 .allcare_popup .newpop_uni_search.newpop_inner .new_table.radio_table .single_radio_item input[type="radio"] {cursor: pointer; display: block; margin: 0; width: 22px; height: 22px; background-color: #fff; border: 1px solid #757575; border-radius: 50%; position: relative; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
 .allcare_popup .newpop_uni_search.newpop_inner .new_table.radio_table .single_radio_item input[type="radio"]:checked::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; border: 5px solid var(--col_blue); border-radius: 50%;}
 .allcare_popup .newpop_uni_search.newpop_inner .new_table.radio_table .radio_group { display: flex; align-items: center; justify-content: center;}
-.allcare_popup .newpop_save.uni_save {padding:40px 0; display: flex; justify-content: center; align-items: center; position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); background-color: #fff; width: 100%;}
-.allcare_popup .newpop_save.uni_save button + button {margin-left: 16px;}
+.full_pop .box_btn_wrap.allcare_popsave[class*='flex_al'] {margin-top: 40px !important;}
 
 /* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP07) */
 .allcare_popup .newpop_major_search.newpop_inner {height: calc(100% - 186px);}
-.allcare_popup .newpop_major_search.newpop_inner .newpop_save {display: flex; justify-content: center;}
-.allcare_popup .newpop_major_search.newpop_inner .newpop_save button + button {margin-left: 16px;}
 .allcare_popup .newpop_major_search.newpop_inner .category_box {height: 228px; overflow: hidden; display: flex; border: 1px solid #ddd;}
 .allcare_popup .newpop_major_search.newpop_inner .category_box .category_lv {width: 33.3%;}
 .allcare_popup .newpop_major_search.newpop_inner .category_box .category_lv + .category_lv {border-left: 1px solid #ddd;}
@@ -323,7 +319,7 @@ fieldset { border: none;}
 .allcare_popup .newpop_major_search.newpop_inner .search_box .search_table tbody tr td {border: none;}
 .allcare_popup .newpop_major_search.newpop_inner .search_table tr th,
 .allcare_popup .newpop_major_search.newpop_inner .search_table tr td {padding-top: 0 !important; padding-bottom: 0 !important;}
-.allcare_popup .newpop_major_search.newpop_inner .radio_box {margin-bottom: 96px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; display: flex;}
+.allcare_popup .newpop_major_search.newpop_inner .radio_box {border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; display: flex;}
 .allcare_popup .newpop_major_search.newpop_inner .radio_box>.tit {width: 192px; display: flex; justify-content: center; align-items: center; background-color: #f8f8f8;}
 .allcare_popup .newpop_major_search.newpop_inner .radio_box fieldset {width: calc(100% - 192px); padding: 12px 20px;}
 .allcare_popup .newpop_major_search.newpop_inner .radio_box .major_list_wrapper {margin-top: 8px; border: 1px solid #ddd; border-radius: 4px; padding: 0 10px; }
@@ -345,7 +341,7 @@ fieldset { border: none;}
 /* [팝업] 전공찾기팝업 - 조회/선택/등록 (UI_ADHPAbP09) */
 .allcare_popup .newpop_major_result.newpop_inner {height: calc(100% - 168px);}
 .allcare_popup .newpop_major_result.newpop_inner .major_result_tit {border-bottom: 1px solid #ddd; padding: 8px 16px; background-color: #f8f8f8; display: flex; justify-content: space-between; align-items: center;}
-.allcare_popup .newpop_major_result.newpop_inner .major_result_box {margin-bottom: 96px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
+.allcare_popup .newpop_major_result.newpop_inner .major_result_box {border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
 .allcare_popup .newpop_major_result.newpop_inner .major_result_box fieldset {height: 276px; overflow-y: auto;}
 .allcare_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item {justify-content: flex-start; align-items: stretch; padding: 10px 16px;}
 .allcare_popup .newpop_major_result.newpop_inner .major_result_box .new_radio_item input {margin-top: 2px;}
@@ -544,9 +540,26 @@ fieldset { border: none;}
 
 /* >>>>>>>>>>>>>>>>>>>> 대학 재학생 맞춤형 고용서비스 시작 <<<<<<<<<<<<<<<<<<<< */
 
+/* (UI_ADHPCaM01) */
+.stuJobSvc_ban {position: relative; padding: 36px 40px; border-radius: 8px; background: var(--col_bg);}
+.stuJobSvc_ban .tit {display: flex; justify-content: space-between; align-items: flex-end;}
+.stuJobSvc_ban .tit strong {font-size: 32px; font-weight: 700;}
+.stuJobSvc_ban::after {position: absolute; bottom: 20px; right: 40px; width: 160px; height: 160px; background: url("../images/mypage/ico_search1_3.png"); content: "";}
+.mypage .progmg.allcare .statusdesc_cont {display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 24px 40px; background-color: rgb(77, 101, 225, 0.1); border-radius: 12px;}
+.mypage .progmg.allcare .statusdesc_cont .statusdesc_info {display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .statusdesc_cont .statusdesc_info i {width: 48px; height: 48px; background: url('../images/mypage/task-square.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .statusdesc_cont .statusdesc_box p {color: #333;}
+.mypage .progmg.allcare .statusdesc_cont .statusdesc_box p+p {margin-top: 4px; color: #111;}
+.mypage .progmg.allcare .statusdesc_cont button {position: relative; border: 1px solid #757575; border-radius: 4px; background-color: #fff; font-size: 16px; line-height: 28px; color: #333; padding: 6px 36px 6px 16px;}
+.mypage .progmg.allcare .statusdesc_cont button::after {position: absolute; content: ''; right: 16px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); background: url('../include/images/ico16_arrow_right.svg') no-repeat center / contain; }
+
+
+
 /* 참여 신청서 - 목록없음 (UI_ADHPCbM01) */
 
+
 /* 참여 신청서 - 목록있음 (UI_ADHPCbM02) */
+.mypage .progmg.allcare .box_notice_wrap .box_list_area .txt_list>div {font-size: 14px; line-height: 24px;}
 
 /* 참여 신청서 - 이전정보팝업 (UI_ADHPCbP03)*/
 .allcare_popup .newpop_inner_paf .inner_contents {min-width: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; background-color: #f5f6f8; padding: 40px 24px; border-radius: 8px;}
@@ -742,17 +755,49 @@ fieldset { border: none;}
 /* 점프업 - IAP관리_등록 (UI_ADHPCfS02) */
 .mypage .progmg.allcare .box_person_wraptypea .grad_depart_box {display: flex; align-items: baseline; gap: 24px;}
 .mypage .progmg.allcare .box_person_wraptypea .grad_depart_box .new_selectbox {max-width: 160px;}
-.mypage .progmg.allcare .box_person_wraptypea .grad_depart_box .new_selectbox select {color: #757575;}
 .mypage .progmg.allcare .td_hopejob .new_ipt {width: 240px;}
 .mypage .progmg.allcare .td_hopepay {display: flex; align-items: center; gap: 8px}
 .mypage .progmg.allcare .td_hopepay .new_ipt {width: 240px;}
 .mypage .progmg.allcare .td_hopepay .paytxt {font-size: 15px;}
-.mypage .progmg.allcare .td_tgregion .cell {width: 313px;}
-.mypage .progmg.allcare .td_tgcompany .cell {width: 192px;}
+.mypage .progmg.allcare .td_tgregion .cell {width: 369px;}
+.mypage .progmg.allcare .td_tgcompany .cell {width: 288px;}
 .mypage .progmg.allcare .td_hopeday .box_ipt input {width: 132px;}
 .mypage .progmg.allcare .td_hopeday .box_ipt .btn_calendar {right: 36px;}
 .mypage .progmg.allcare .td_tgregion .box_table_group {margin-left: 4px;}
 .mypage .progmg.allcare .td_tgcompany .box_table_group {margin-left: 4px;}
+.mypage .progmg.allcare .td_padd_type01 {padding: 6px 20px;}
+
+.mypage .progmg.allcare .empplan_area .empplan_li {display: flex; align-items: center; border: 1px solid #ddd; border-radius: 8px; padding: 24px 32px;}
+.mypage .progmg.allcare .empplan_area .empplan_li+.empplan_li {margin-top: 16px;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_ul {position: relative; display: flex; flex-wrap: wrap; gap: 8px 40px; margin-right: 20px; padding-right: 40px;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_ul::after {content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 100%; background-color: #ddd; display: block;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li {padding: 4px; display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li:nth-child(2n) {width: calc(45% - 10px);}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li:nth-child(2n-1) {width: calc(55% - 30px);}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .td {width: 100px; font-size: 16px; color: #333; font-weight: 600; line-height: 28px; word-break: keep-all;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .dd {width: calc(100% - 100px); flex: 1; }
+.mypage .progmg.allcare .empplan_area .empplan_inner_li.li_type01 {width: 100%;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li.li_type01 .td {margin-bottom: 15px;}
+.mypage .progmg.allcare .empplan_area .empplan_btn_wrap {height: 100%; display: flex; flex-direction: column; gap: 4px;}
+.mypage .progmg.allcare .empplan_area .empplan_btn_wrap button {min-width: initial;}
+.mypage .progmg.allcare .empplan_area .empplan_btn_wrap .td_move_btn {margin-top: 4px;}
+.mypage .progmg.allcare .empplan_area .empplan_li:first-child .empplan_btn_wrap .td_move_btn .move_up {cursor: initial; pointer-events: none;}
+.mypage .progmg.allcare .empplan_area .empplan_li:last-child .empplan_btn_wrap .td_move_btn .move_down {cursor: initial; pointer-events: none;}
+.mypage .progmg.allcare .empplan_area .empplan_li:first-child .empplan_btn_wrap .td_move_btn .move_up::after {background-image: url('../images/mypage/ico16_move_up_disable.svg');}
+.mypage .progmg.allcare .empplan_area .empplan_li:last-child .empplan_btn_wrap .td_move_btn .move_down::after {background-image: url('../images/mypage/ico16_move_down_disable.svg');}
+.mypage .progmg.allcare .empplan_area .empplan_li .add_btn {display: none;}
+.mypage .progmg.allcare .empplan_area .empplan_li:last-child .add_btn {display: block;}
+
+
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .dd .box_ipt {display: block; height: 40px;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .dd .box_ipt .input_txt {height: 100%;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .dd_jointime {display: flex; gap: 8px; align-items: center;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .dd_jointime .box_ipt {flex: 1;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .dd_jointime .jointime_txt {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .empplan_area .empplan_inner_li .box_datepicker .date_line {flex: 1;}
+.mypage .progmg.allcare .empplan_area .new_selectbox {width: initial;}
+
+
 
 /* 점프업 - IAP관리_조회/수정(저장) (UI_ADHPCfS03) */
 .mypage .progmg.allcare .employ_plan_wrap .box_table_hd {margin-bottom: 8px;}
@@ -784,6 +829,35 @@ fieldset { border: none;}
 .mypage .progmg.allcare .iapplan_ebdbtn_wrap .btn.type_full span {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 
 /* 점프업 - IAP관리_조회(제출) (UI_ADHPCfS04) */
+.mypage .progmg.allcare .empplan_result_area .empplan_result_li {position: relative; border: 1px solid #ddd; border-radius: 8px; padding: 24px 32px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_li+.empplan_result_li {margin-top: 16px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_toggle {position: absolute; top: 24px; right: 32px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_toggle button {width: 32px; height: 32px; display: none; position: relative;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_toggle button::after {content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/arrorw24_down.svg') no-repeat center / contain; width: 24px; height: 24px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_toggle button.toggle_open:hover::after {background-image: url('../images/mypage/arrorw24_up_blue.svg'); transform: translate(-50%, -50%) rotate(180deg);}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_toggle button.active {display: block;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_toggle button.toggle_close::after {background-image: url('../images/mypage/arrorw24_up_blue.svg');} 
+
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner {display:flex; flex-wrap: wrap; gap: 4px 60px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li {display: flex; align-items: center; gap: 8px; width: calc(50% - 30px); padding: 2px 0;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li.type_full {width: 100%;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li.type_txt {width: 100%; align-items: flex-start;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li .td {width: 160px; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li .dd {width: calc(100% - 160px); flex: 1; font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li .dd .txt_blue {margin-right: 17px; position: relative; font-size: 16px; color: #4D65E1; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li .dd .txt_blue::after {content: ''; position: absolute; right: -9px; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; display: block; background-color: #ddd;}
+
+.mypage .progmg.allcare .empplan_result_area .empplan_result_bott {margin-top: 16px; background-color: #f8f8f8; border-radius: 8px; padding: 12px 24px; display: flex; align-items: center;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_bott .td {width: 160px; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_bott .dd {width: calc(50% - 190px); font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_bott div:nth-child(2) {margin-right: 60px;}
+.mypage .progmg.allcare .empplan_result_area .empplan_result_bott.toggle_act,
+.mypage .progmg.allcare .empplan_result_area .empplan_result_inner li.toggle_act {display: none;}
+
+
+
+
+
 
 /* 점프업 - IAP관리_수정(보완요청_제출후) (UI_ADHPCfS05)*/
 .allcare .iapplan_tablelist_box .toggle_nbsp {line-height: 0; height: 8px;}
@@ -799,6 +873,11 @@ fieldset { border: none;}
 /* 점프업 - IAP관리_수정(변경신청_승인후)	(UI_ADHPCfS06) */
 .mypage .progmg.allcare .box_table_unable .txt_red {color: #e0024b;}
 .mypage .progmg.allcare .box_table_unable select, .box_table_unable input, .box_table_unable .text_form_inner, .box_table_unable textarea  {background-color: #f5f5f5;}
+.mypage .progmg.allcare .empplan_area .empplan_btn_wrap .add_on {display: block;}
+.mypage .progmg.allcare .new_selectbox select:disabled {background-color: #f5f5f5;}
+.mypage .progmg.allcare .empplan_inner_li.disabled .text_form_box .text_form_inner {background-color: #f5f5f5;}
+.mypage .progmg.allcare .empplan_inner_li.disabled .disabled_txt {margin-top: 8px; text-align: right; font-size: 14px; color: #E0024B; font-weight: 400; line-height: 24px;} 
+.mypage .progmg.allcare .empplan_area .empplan_inner_li.li_type01.disabled .td {margin-bottom: 45px;} 
 
 /* 점프업 - IAP관리_조회(변경제출)(UI_ADHPCfS07) */
 
@@ -878,7 +957,7 @@ fieldset { border: none;}
 
 
 /* 점프업 - 포인트신청관리_신청(등록) (UI_ADHPChM02) */
-.mypage .progmg.allcare .point_banner_wrap {display: flex; align-items: center; gap: 8px; background-color: rgba(25, 179, 189, 0.16); border-radius: 12px; padding: 24px 40px;}
+.mypage .progmg.allcare .point_banner_wrap {display: flex; align-items: center; gap: 8px; background-color: #f3f8ff; border-radius: 12px; padding: 24px 40px;}
 .mypage .progmg.allcare .point_banner_wrap .ico_jump_point {width: 48px; height: 48px; background: url('../images/mypage/ico48_jump_point.svg');}
 .mypage .progmg.allcare .point_banner_wrap .txt_box .desc {margin-top: 4px;}
 .mypage .progmg.allcare .txt_bold {font-weight: 600;}
@@ -903,10 +982,44 @@ fieldset { border: none;}
 .mypage .progmg.allcare .preapply_selfchk_wrap .radio_input_item input.focus_on {background-color: #fff; color: #333;}
 .mypage .progmg.allcare .preapply_selfchk_wrap .radio_input_item span {font-size: 15px; color: #333; font-weight: 400; line-height: 28px;}
 
+.mypage .progmg.allcare .plantog_area .plantog_box {background-color: #f8f8f8; border-radius: 8px; padding: 32px 40px;}
+.mypage .progmg.allcare .plantog_area .plantog_box+.plantog_box {margin-top: 16px;}
+.mypage .progmg.allcare .plantog_area .plantog_chk {margin-bottom: 12px;}
+.mypage .progmg.allcare .plantog_area .plantog_chk {display: flex; align-items: center; gap: 10px;}
+.mypage .progmg.allcare .plantog_area .plantog_chk input[type="checkbox"] {cursor: pointer;}
+.mypage .progmg.allcare .plantog_area .plantog_chk label {cursor: pointer; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .plantog_area .plantog_chk label .txt_blue {padding-left: 9px; margin-left: 8px; position: relative; color: var(--col_blue); }
+.mypage .progmg.allcare .plantog_area .plantog_chk label .txt_blue::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 12px; background-color: #ddd;}
+.mypage .progmg.allcare .plantog_area .plantog_li {border: 1px solid #ddd; background-color: #fff; border-radius: 8px; padding: 24px;}
+.mypage .progmg.allcare .plantog_area .plantog_li+.plantog_li {margin-top: 8px;} 
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_tit_box {margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_tit_box .tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_tit_box .toggle_box button {width: 32px; height: 32px; display: none; position: relative;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_tit_box .toggle_box button::after {content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: url('../images/mypage/arrorw24_down.svg') no-repeat center / contain; width: 24px; height: 24px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_tit_box .toggle_box button.active {display: block;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_tit_box .toggle_box .toggle_close::after {background-image: url('../images/mypage/arrorw24_up_blue.svg');} 
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box {display: flex; gap: 8px 40px; flex-wrap: wrap}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner {padding: 4px 0; display: flex; flex-wrap: wrap; align-items: center; width: calc(50% - 20px); gap: 8px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner.type_full {width: 100%;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner.type_fulltxt {width: 100%;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner.toggle_act {display: none;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner .td {word-break: keep-all; width: 120px; font-size: 16px; color: #555; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner .td span {font-size: 16px; color: #555; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner .dd {flex: 1; width: calc(100% - 120px); font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner .dd.dd_date .cell {max-width: 132px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner .dd .input_txt {padding: 0 32px 0 12px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner .dd.dd_time {display: flex; align-items: center; gap: 8px;}
+.mypage .progmg.allcare .plantog_area .plantog_li .plantog_desc_box .desc_inner .dd.dd_time .new_ipt {max-width: 120px;}
+.mypage .progmg.allcare .plantog_area .plantog_li.plantog_li_type01 .plantog_desc_box .desc_inner:nth-child(n+3):nth-child(-n+4) {align-items: flex-start;}
+.mypage .progmg.allcare .plantog_bt_area {padding: 24px 40px; background-color: #f8f8f8; border-radius: 8px; display: flex; justify-content: space-between; gap: 16px;} 
+.mypage .progmg.allcare .plantog_bt_area li {width: 33.3%; border: 1px solid #ddd; background-color: #fff; border-radius: 8px; padding: 8px 16px; display: flex; justify-content: center; align-items: center; gap: 24px;}  
+.mypage .progmg.allcare .plantog_bt_area li .td {font-size: 16px; color: #555; font-weight: 400; line-height: 28px;} 
+.mypage .progmg.allcare .plantog_bt_area li .dd {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;} 
+.mypage .progmg.allcare .plantog_bt_area li .dd span.count {font-weight: 600; color: #333; margin-right: 8px;}
+
 
 /* [팝업] 구직활동팝업 (UI_ADHPChP03) */
 .allcare_popup .newpop_inner.jobact_area {height: calc(100% - 185px);}
-.allcare_popup .jobact_wrap {margin-bottom: 96px;}
 .allcare_popup .jobact_list+.jobact_list {margin-top: 24px;}
 .allcare_popup .jobact_list .jobact_chk_box {display: flex; align-items: center; gap: 8px;}
 .allcare_popup .jobact_list .jobact_chk_box .jobact_chk_tit {font-size: 18px; color: #333; font-weight: 600; line-height: 28px;}
@@ -934,21 +1047,6 @@ fieldset { border: none;}
 
 
 /* 포인트관리_수정(저장후제출전) (UI_ADHPChS05) */
-.mypage .progmg.allcare .plantog_area ul .plantog_wrap {display: flex; gap: 40px;  border: 1px solid #ddd; padding: 32px 40px; border-radius: 8px;}
-.mypage .progmg.allcare ul .plantog_wrap + .plantog_wrap {margin-top: 16px;}
-.mypage .progmg.allcare .plantog_wrap .plantog_chk {width: 96px; } 
-.mypage .progmg.allcare .plantog_wrap .plantog_chk .chk_box {display: flex; gap: 8px; align-items: center;}
-.mypage .progmg.allcare .plantog_wrap .plantog_chk .chk_box label {cursor: pointer; min-width: 20px;}
-.mypage .progmg.allcare .plantog_wrap .plantog_chk .chk_box input {cursor: pointer; }
-.mypage .progmg.allcare .plantog_wrap .plantog_chk p {word-break: keep-all; margin-top: 8px; font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
-.mypage .progmg.allcare .plantog_wrap .plantog_table {flex: 1;}
-.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd {margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;}
-.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_tit {font-size: 16px; color: #333; font-weight: 600; line-height: 28px;}
-.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_toggle button {width: 24px; height: 24px; display: none; background: url('../images/mypage/arrorw24_up_blue.svg') no-repeat center / contain;} 
-.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_toggle button.close_btn {background-image: url('../images/mypage/arrorw24_down.svg');}
-.mypage .progmg.allcare .plantog_wrap .box_table_wrap .table_hd_toggle button.active {display: block;}
-.mypage .progmg.allcare .plantog_wrap .execut_table .td_activ_time {display: flex; gap: 8px; align-items: center;}
-.mypage .progmg.allcare .plantog_wrap .execut_table .td_activ_time .new_ipt input {width: 240px; display: block;}
 
 /* 포인트관리_조회(제출후) (UI_ADHPChS08)	 */
 
@@ -961,4 +1059,3 @@ fieldset { border: none;}
 .mypage .progmg.allcare .table_unselect input[type='text'],
 .mypage .progmg.allcare .preapply_selfchk_wrap .table_unselect .radio_input_item input[type='text'].focus_on {background-color: #f5f5f5;}
 .mypage .progmg.allcare input.money_amount {text-align: right;}
-

@@ -7,7 +7,6 @@
         <script src="../pc/js/jquery-3.7.1.min.js"></script>
 
         <link rel="stylesheet" href="../pc/css/contents.css">
-        <link rel="stylesheet" href="../pc/include/css/wk-common.css">
     </head>
     <body>
         <input type="hidden" id="currentMenuId">
@@ -206,7 +205,7 @@
                                                         <div class="section_right">
                                                             <span class="sel round new_sel_span">
                                                                 <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
-                                                                    <option value="10" selected="selected">10개씩 보기</option>
+                                                                    <option value="10" selected>10개씩 보기</option>
                                                                     <option value="30">30개씩 보기</option>
                                                                     <option value="50">50개씩 보기</option>
                                                                 </select>
@@ -310,13 +309,31 @@
                                                         </tbody>
                                                     </table>
                                                     
-                                                    <div class="section_bottom"></div>
+                                                    <div class="section_bottom">
+                                                        <div class="box_pagination">
+                                                            <button type="button" class="btn_page first" onclick="fn_Search(1); return false;"><span class="blind">처음으로 가기</span></button>&nbsp;
+                                                            <button type="button" class="btn_page prev" onclick="fn_Search(1); return false;"><span class="blind">이전</span></button>&nbsp;
+                                                            <button type="button" class="active" title="1 페이지 이동" aria-current="true">1</button>  &nbsp;
+                                                            <button type="button" onclick="fn_Search(2); return false;" title="2 페이지 이동">2</button>&nbsp;
+                                                            <button type="button" onclick="fn_Search(3); return false;" title="3 페이지 이동">3</button>&nbsp;
+                                                            <button type="button" onclick="fn_Search(4); return false;" title="4 페이지 이동">4</button>&nbsp;
+                                                            <button type="button" onclick="fn_Search(5); return false;" title="5 페이지 이동">5</button>&nbsp;
+                                                            <button type="button" class="btn_page next" onclick="fn_Search(11); return false;"><span class="blind">다음</span></button>&nbsp;
+                                                            <button type="button" class="btn_page last" onclick="fn_Search(9847); return false;"><span class="blind">마지막으로 가기</span></button>&nbsp;
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="done_info partici_box mt40">
-                                                <p class="b1_r">마이페이지에서 나의 신청현황을 확인하실 수 있습니다.</p>
-                                                <button type="button" class="btn small type02"><span>나의 참여현황 보기</span></button>
+                                            <div class="statusdesc_cont mt40">
+                                                <div class="statusdesc_info">
+                                                    <i aria-hidden="true" role="presentation"></i>
+                                                    <div class="statusdesc_box">
+                                                        <p class="s1_r">신청한 이력이 있으신가요?</p>
+                                                        <p class="t3_sb">나의 신청현황을 확인하실 수 있습니다.</p>
+                                                    </div>
+                                                </div>
+                                                <button type="button" id="statusDescText" onclick="">나의 신청현황 보기</button>
                                             </div>
 
                                     </div>

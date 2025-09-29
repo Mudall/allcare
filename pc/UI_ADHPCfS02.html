@@ -119,7 +119,7 @@
                                                                     <span class="sr_only">필수 입력</span>
                                                                 </label>
                                                             </th>
-                                                            <td>
+                                                            <td class="td_padd_type01">
                                                                 <div class="grad_depart_box">
                                                                     <span>1학년</span>
                                                                     <div class="new_selectbox">
@@ -312,7 +312,7 @@
                                                                         <label for="tgcompanyType6">
                                                                             <span class="label_text">기타지역</span>
                                                                             <div class="box_table_group">
-                                                                                <div class="cell">
+                                                                                <div class="cell cell_w369">
                                                                                     <span class="box_ipt new_ipt">
                                                                                         <input type="text" id="tgregion" class="input_txt" title="기타지역명" readonly="" placeholder="" disabled>
                                                                                         <button type="reset" class="newbtn_del ico16_delete"><span class="blind">삭제</span></button>
@@ -414,504 +414,402 @@
                                             <div class="box_table_hd">
                                                 <div class="plan_hd">
                                                     <h3 class="t2_sb">취업활동계획</h3>
-                                                    <p class="tit">전체 <span class="txt_total">1111</span>건</p>
+                                                    <p class="tit" role="text">전체 <span class="txt_total">1111</span>건</p>
                                                 </div>
                                                 <div class="section_right">
                                                     <span class="sel round new_sel_span">
-                                                        <select id="recordCountPerPage" name="recordCountPerPage" class="w100px" title="보기 갯수 선택">
-                                                            <option value="10" selected="selected">10개씩 보기</option>
-                                                            <option value="30">30개씩 보기</option>
-                                                            <option value="50">50개씩 보기</option>
+                                                        <select id="" name="" class="w100px" title="행추가 선택">
+                                                            <option value="10" selected>행 추가 10개</option>
+                                                            <option value="30">행 추가 30개</option>
+                                                            <option value="50">행 추가 50개</option>
                                                         </select>
                                                     </span>
-                                                    <button type="button" class="btn btn_round type02 btn_actvie_add" onclick="">행추가</button>
+                                                    <button type="button" class="btn btn_round type02 btn_actvie_add" onclick="">적용</button>
                                                 </div>
                                             </div>
 
-
-                                            <!-- box_table 이 없을때 사용 -->
-                                            <div class="iap_plan_area mb24">
-                                                <div class="notice_item">
-                                                    <p class="tit t3_sb">작성된 취업활동계획(IAP)이 없습니다.</p>
-                                                    <p class="b1_r">계획서를 작성해야 상담에 더욱 효과적인 도움을 받을 수 있습니다.</p>
-                                                </div>
-                                                <button type="button" class="btn semi_big type02 btn_actvie_add"><span>취업활동계획서 작성</sp></button>
-                                            </div>
-
-                                            <div class="box_table_wrap write type01 mt8">
-                                                <div class="iapplan_tablelist_box">
-                                                    <table class="box_table">
-                                                        <caption>중점영역, 참여방법, 참여기간, 참여시간, 참여기관(교내), 참여기관(외부), 목표달성시기, 활동내용(세부내용) 을(를) 제공하는 표</caption>
-                                                        <colgroup>
-                                                            <col style="width:140px">
-                                                            <col style="width:calc(50% - 140px)">
-                                                            <col style="width:140px">
-                                                            <col style="width:calc(50% - 140px)">
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="4">
-                                                                    <div class="iapplan_th_area">
-                                                                        <button type="button" class="btn xsmall type02 type_gray"><span>삭제</span></button>
-                                                                        <button type="button" class="btn xsmall type02 type_gray btn_top"><span class="blind">위로</span></button>
-                                                                        <button type="button" class="btn xsmall type02 type_gray btn_bottom"><span class="blind">아래로</span></button>
-                                                                    </div>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">중점영역</th>
-                                                                <td>
-                                                                    <div class="new_selectbox newsel_w240">
-                                                                        <label for="targetarea" class="sr_only">중점영역</label>
-                                                                        <select id="targetarea" name="targetarea" title="중점영역 선택">
+                                            <div class="empplan_area">
+                                                <ul class="empplan_ul">
+                                                    <li class="empplan_li">
+                                                        <ul class="empplan_inner_ul">
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">중점영역</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="중점영역 선택">
                                                                             <option disabled="" selected="">중점영역 선택</option>
                                                                             <option value="TEST">TEST</option>
                                                                             <option value="TEST">TEST</option>
                                                                         </select>
                                                                     </div>
-                                                                </td>
-
-                                                                <th scope="row">참여방법</th>
-                                                                <td>
-                                                                    <div class="new_selectbox newsel_w120">
-                                                                        <label for="howway" class="sr_only">참여방법</label>
-                                                                        <select id="howway" name="howway" title="참여방법 선택">
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여방법</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="참여방법 선택">
                                                                             <option disabled="" selected="">선택</option>
                                                                             <option value="TEST">TEST</option>
                                                                             <option value="TEST">TEST</option>
                                                                         </select>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">참여기간</th>
-                                                                <td>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기간</div>
+                                                                <div class="dd">
                                                                     <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
                                                                         <div class="cell">
-                                                                            <span class="box_ipt newipt_w132">
-                                                                                <label for="schRcptStdte" class="sr_only">시작일</label>
-                                                                                <input type="text" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker newinput_w132" title="시작일 입력" placeholder="YYYY-MM">
+                                                                            <span class="box_ipt">
+                                                                                <label for="시작일" class="sr_only">시작일</label>
+                                                                                <input type="text" id="시작일" name="시작일" class="btnCalendar input_txt hasDatepicker" title="시작일 입력" placeholder="YYYY-MM">
                                                                                 <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
                                                                             </span>
                                                                         </div>
                                                                         <i class="date_line" aria-hidden="true">~</i>
                                                                         <div class="cell">
-                                                                            <span class="box_ipt newipt_w132">
-                                                                                <label for="schRcptEndte" class="sr_only">종료일</label>
-                                                                                <input type="text" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker newinput_w132" title="종료일 입력" placeholder="YYYY-MM">
+                                                                            <span class="box_ipt">
+                                                                                <label for="종료일" class="sr_only">종료일</label>
+                                                                                <input type="text" id="종료일" name="종료일" class="btnCalendar input_txt hasDatepicker" title="종료일 입력" placeholder="YYYY-MM">
                                                                                 <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
                                                                             </span>
                                                                         </div>
                                                                     </div>
-                                                                </td>
-                                                                
-                                                                <th scope="row">참여시간</th>
-                                                                <td class="td_jointime">
-                                                                    <span class="box_ipt new_ipt newipt_w120">
-                                                                        <label for="jointime" class="sr_only">운영대학 검색</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여시간</div>
+                                                                <div class="dd dd_jointime">
+                                                                    <span class="box_ipt">
                                                                         <input type="text" class="input_txt" id="jointime" name="jointime" placeholder="" title="참여시간 입력">
                                                                         <button type="button" class="newbtn_del ico16_delete" aria-label="참여시간 입력 삭제">
                                                                             <span class="blind">삭제</span>
                                                                         </button>
                                                                     </span>
                                                                     <span class="jointime_txt">시간</span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">참여기관(교내)</th>
-                                                                <td class="td_join_org">
-                                                                    <span class="box_ipt new_ipt ">
-                                                                        <label for="onCampus" class="sr_only">참여기관(교내)</label>
-                                                                        <input type="text" class="input_txt newipt_w240" id="onCampus" name="onCampus" placeholder="" title="참여기관(교내) 입력">
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기관(교내)</div>
+                                                                <div class="dd">
+                                                                    <span class="box_ipt ">
+                                                                        <input type="text" class="input_txt" id="onCampus" name="onCampus" placeholder="" title="참여기관(교내) 입력">
                                                                         <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교내) 입력 삭제">
                                                                             <span class="blind">삭제</span>
                                                                         </button>
                                                                     </span>
-                                                                </td>
-                                                                
-                                                                <th scope="row">참여기관(외부)</th>
-                                                                <td class="td_join_org">
-                                                                    <span class="box_ipt new_ipt ">
-                                                                        <label for="outCampus" class="sr_only">참여기관(외부)</label>
-                                                                        <input type="text" class="input_txt newipt_w240" id="outCampus" name="outCampus" placeholder="" title="참여기관(외부) 입력">
-                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(외부) 입력 삭제">
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기관(외부)</div>
+                                                                <div class="dd">
+                                                                    <span class="box_ipt ">
+                                                                        <input type="text" class="input_txt" id="outCampus" name="outCampus" placeholder="" title="참여기관(교외) 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교외) 입력 삭제">
                                                                             <span class="blind">삭제</span>
                                                                         </button>
                                                                     </span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">목표달성시기</th>
-                                                                <td colspan="3">
-                                                                    <div class="new_selectbox newsel_w240">
-                                                                        <label for="targetday" class="sr_only">목표달성시기</label>
-                                                                        <select id="targetday" name="targetday" title="목표달성시기 선택">
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">목표달성시기</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="목표달성시기 선택">
                                                                             <option disabled="" selected="">선택</option>
                                                                             <option value="TEST">TEST</option>
                                                                             <option value="TEST">TEST</option>
                                                                         </select>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">활동내용<br>(세부내용)</th>
-                                                                <td colspan="3">
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li li_type01">
+                                                                <div class="td">활동내용 (세부내용)</div>
+                                                                <div class="dd">
                                                                     <div class="text_form_box">
                                                                         <div class="text_form_inner">
                                                                             <textarea placeholder="세부활동 내용을 작성해 주세요."></textarea>
                                                                         </div>
                                                                         <div class="text_info">
-                                                                            <p class="sr_only" id="interestHelp">최대 1,000 Byte까지 입력 가능합니다.</p>
-                                                                            <p class="count_info" id="interestCount"><span class="result_byte">994</span> / <span class="max_byte">400</span> Byte</p>
+                                                                            <p class="sr_only" id="interestHelp">최대 400 Byte까지 입력 가능합니다.</p>
+                                                                            <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">400</span> Byte</p>
                                                                         </div>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-
-                                                    <!--  -->
-
-                                                    <table class="box_table">
-                                                        <caption>중점영역, 참여방법, 참여기간, 참여시간, 참여기관(교내), 참여기관(외부), 목표달성시기, 활동내용(세부내용) 을(를) 제공하는 표</caption>
-                                                        <colgroup>
-                                                            <col style="width:140px">
-                                                            <col style="width:calc(50% - 140px)">
-                                                            <col style="width:140px">
-                                                            <col style="width:calc(50% - 140px)">
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="4">
-                                                                    <div class="iapplan_th_area">
-                                                                        <button type="button" class="btn xsmall type02 type_gray"><span>삭제</span></button>
-                                                                        <button type="button" class="btn xsmall type02 type_gray btn_top"><span class="blind">위로</span></button>
-                                                                        <button type="button" class="btn xsmall type02 type_gray btn_bottom"><span class="blind">아래로</span></button>
-                                                                    </div>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">중점영역</th>
-                                                                <td>
-                                                                    <div class="new_selectbox newsel_w240">
-                                                                        <label for="targetarea" class="sr_only">중점영역</label>
-                                                                        <select id="targetarea" name="targetarea" title="중점영역 선택">
-                                                                            <option disabled="" selected="">중점영역 선택</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </td>
-
-                                                                <th scope="row">참여방법</th>
-                                                                <td>
-                                                                    <div class="new_selectbox newsel_w120">
-                                                                        <label for="howway" class="sr_only">참여방법</label>
-                                                                        <select id="howway" name="howway" title="참여방법 선택">
-                                                                            <option disabled="" selected="">선택</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">참여기간</th>
-                                                                <td>
-                                                                    <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
-                                                                        <div class="cell">
-                                                                            <span class="box_ipt newipt_w132">
-                                                                                <label for="schRcptStdte" class="sr_only">시작일</label>
-                                                                                <input type="text" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker newinput_w132" title="시작일 입력" placeholder="YYYY-MM">
-                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
-                                                                            </span>
-                                                                        </div>
-                                                                        <i class="date_line" aria-hidden="true">~</i>
-                                                                        <div class="cell">
-                                                                            <span class="box_ipt newipt_w132">
-                                                                                <label for="schRcptEndte" class="sr_only">종료일</label>
-                                                                                <input type="text" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker newinput_w132" title="종료일 입력" placeholder="YYYY-MM">
-                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                
-                                                                <th scope="row">참여시간</th>
-                                                                <td class="td_jointime">
-                                                                    <span class="box_ipt new_ipt newipt_w120">
-                                                                        <label for="jointime" class="sr_only">운영대학 검색</label>
-                                                                        <input type="text" class="input_txt" id="jointime" name="jointime" placeholder="" title="참여시간 입력">
-                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여시간 입력 삭제">
-                                                                            <span class="blind">삭제</span>
-                                                                        </button>
-                                                                    </span>
-                                                                    <span class="jointime_txt">시간</span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">참여기관(교내)</th>
-                                                                <td class="td_join_org">
-                                                                    <span class="box_ipt new_ipt ">
-                                                                        <label for="onCampus" class="sr_only">참여기관(교내)</label>
-                                                                        <input type="text" class="input_txt newipt_w240" id="onCampus" name="onCampus" placeholder="" title="참여기관(교내) 입력">
-                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교내) 입력 삭제">
-                                                                            <span class="blind">삭제</span>
-                                                                        </button>
-                                                                    </span>
-                                                                </td>
-                                                                
-                                                                <th scope="row">참여기관(외부)</th>
-                                                                <td class="td_join_org">
-                                                                    <span class="box_ipt new_ipt ">
-                                                                        <label for="outCampus" class="sr_only">참여기관(외부)</label>
-                                                                        <input type="text" class="input_txt newipt_w240" id="outCampus" name="outCampus" placeholder="" title="참여기관(외부) 입력">
-                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(외부) 입력 삭제">
-                                                                            <span class="blind">삭제</span>
-                                                                        </button>
-                                                                    </span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">목표달성시기</th>
-                                                                <td colspan="3">
-                                                                    <div class="new_selectbox newsel_w240">
-                                                                        <label for="targetday" class="sr_only">목표달성시기</label>
-                                                                        <select id="targetday" name="targetday" title="목표달성시기 선택">
-                                                                            <option disabled="" selected="">선택</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">활동내용<br>(세부내용)</th>
-                                                                <td colspan="3">
-                                                                    <div class="text_form_box">
-                                                                        <div class="text_form_inner">
-                                                                            <textarea placeholder="세부활동 내용을 작성해 주세요."></textarea>
-                                                                        </div>
-                                                                        <div class="text_info">
-                                                                            <p class="sr_only" id="interestHelp">최대 1,000 Byte까지 입력 가능합니다.</p>
-                                                                            <p class="count_info" id="interestCount"><span class="result_byte">994</span> / <span class="max_byte">400</span> Byte</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-
-                                                    <!--  -->
-
-                                                    <table class="box_table">
-                                                        <caption>중점영역, 참여방법, 참여기간, 참여시간, 참여기관(교내), 참여기관(외부), 목표달성시기, 활동내용(세부내용) 을(를) 제공하는 표</caption>
-                                                        <colgroup>
-                                                            <col style="width:140px">
-                                                            <col style="width:calc(50% - 140px)">
-                                                            <col style="width:140px">
-                                                            <col style="width:calc(50% - 140px)">
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="4">
-                                                                    <div class="iapplan_th_area">
-                                                                        <button type="button" class="btn xsmall type02 type_gray"><span>삭제</span></button>
-                                                                        <button type="button" class="btn xsmall type02 type_gray btn_top"><span class="blind">위로</span></button>
-                                                                        <button type="button" class="btn xsmall type02 type_gray btn_bottom"><span class="blind">아래로</span></button>
-                                                                    </div>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">중점영역</th>
-                                                                <td>
-                                                                    <div class="new_selectbox newsel_w240">
-                                                                        <label for="targetarea" class="sr_only">중점영역</label>
-                                                                        <select id="targetarea" name="targetarea" title="중점영역 선택">
-                                                                            <option disabled="" selected="">중점영역 선택</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </td>
-
-                                                                <th scope="row">참여방법</th>
-                                                                <td>
-                                                                    <div class="new_selectbox newsel_w120">
-                                                                        <label for="howway" class="sr_only">참여방법</label>
-                                                                        <select id="howway" name="howway" title="참여방법 선택">
-                                                                            <option disabled="" selected="">선택</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">참여기간</th>
-                                                                <td>
-                                                                    <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
-                                                                        <div class="cell">
-                                                                            <span class="box_ipt newipt_w132">
-                                                                                <label for="schRcptStdte" class="sr_only">시작일</label>
-                                                                                <input type="text" id="schRcptStdte" name="schRcptStdte" class="btnCalendar input_txt hasDatepicker newinput_w132" title="시작일 입력" placeholder="YYYY-MM">
-                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
-                                                                            </span>
-                                                                        </div>
-                                                                        <i class="date_line" aria-hidden="true">~</i>
-                                                                        <div class="cell">
-                                                                            <span class="box_ipt newipt_w132">
-                                                                                <label for="schRcptEndte" class="sr_only">종료일</label>
-                                                                                <input type="text" id="schRcptEndte" name="schRcptEndte" class="btnCalendar input_txt hasDatepicker newinput_w132" title="종료일 입력" placeholder="YYYY-MM">
-                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                
-                                                                <th scope="row">참여시간</th>
-                                                                <td class="td_jointime">
-                                                                    <span class="box_ipt new_ipt newipt_w120">
-                                                                        <label for="jointime" class="sr_only">운영대학 검색</label>
-                                                                        <input type="text" class="input_txt" id="jointime" name="jointime" placeholder="" title="참여시간 입력">
-                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여시간 입력 삭제">
-                                                                            <span class="blind">삭제</span>
-                                                                        </button>
-                                                                    </span>
-                                                                    <span class="jointime_txt">시간</span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">참여기관(교내)</th>
-                                                                <td class="td_join_org">
-                                                                    <span class="box_ipt new_ipt ">
-                                                                        <label for="onCampus" class="sr_only">참여기관(교내)</label>
-                                                                        <input type="text" class="input_txt newipt_w240" id="onCampus" name="onCampus" placeholder="" title="참여기관(교내) 입력">
-                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교내) 입력 삭제">
-                                                                            <span class="blind">삭제</span>
-                                                                        </button>
-                                                                    </span>
-                                                                </td>
-                                                                
-                                                                <th scope="row">참여기관(외부)</th>
-                                                                <td class="td_join_org">
-                                                                    <span class="box_ipt new_ipt ">
-                                                                        <label for="outCampus" class="sr_only">참여기관(외부)</label>
-                                                                        <input type="text" class="input_txt newipt_w240" id="outCampus" name="outCampus" placeholder="" title="참여기관(외부) 입력">
-                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(외부) 입력 삭제">
-                                                                            <span class="blind">삭제</span>
-                                                                        </button>
-                                                                    </span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">목표달성시기</th>
-                                                                <td colspan="3">
-                                                                    <div class="new_selectbox newsel_w240">
-                                                                        <label for="targetday" class="sr_only">목표달성시기</label>
-                                                                        <select id="targetday" name="targetday" title="목표달성시기 선택">
-                                                                            <option disabled="" selected="">목표달성시기 선택</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                            <option value="TEST">TEST</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">활동내용<br>(세부내용)</th>
-                                                                <td colspan="3">
-                                                                    <div class="text_form_box">
-                                                                        <div class="text_form_inner">
-                                                                            <textarea placeholder="세부활동 내용을 작성해 주세요."></textarea>
-                                                                        </div>
-                                                                        <div class="text_info">
-                                                                            <p class="sr_only" id="interestHelp">최대 1,000 Byte까지 입력 가능합니다.</p>
-                                                                            <p class="count_info" id="interestCount"><span class="result_byte">994</span> / <span class="max_byte">400</span> Byte</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                                <div class="iapplan_ebdbtn_wrap mt24">
-                                                    <button type="button" class="btn type_full btn_actvie_add" aria-label="새로운 활동계획 행 추가"><span>행 추가 +</span></button>
-                                                    <div class="iapplan_submit_wrap">
-                                                        <div class="flex_box mt40 js_s">
-                                                            <button type="button" class="btn big type02 btn_s_r" aria-label="목록" onclick="">목록</button>
-                                                            <div class="flex_gap16">
-                                                                <button type="button" id="clearBtn" class="btn big type02" onclick="">초기화</button>
-                                                                <button type="button" id="saveBtn" class="btn big type01" onclick="">저장</button>
-                                                                <button type="submit" id="srchBtn" class="btn big fill type01" onclick="">제출</button>
-                                                            </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="empplan_btn_wrap">
+                                                            <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                            <button type="button" class="btn small type01 btn_w52 add_btn"><span>추가</span></button>
+                                                            <ul class="td_move_btn">
+                                                                <li><button type="button" class="move_up"><span class="sr_only">위로 이동</span></button></li>
+                                                                <li><button type="button" class="move_down"><span class="sr_only">아래로 이동</span></button></li>
+                                                            </ul>
                                                         </div>
+                                                    </li>
+                                                    <li class="empplan_li">
+                                                        <ul class="empplan_inner_ul">
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">중점영역</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="중점영역 선택">
+                                                                            <option disabled="" selected="">중점영역 선택</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여방법</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="참여방법 선택">
+                                                                            <option disabled="" selected="">선택</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기간</div>
+                                                                <div class="dd">
+                                                                    <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt">
+                                                                                <label for="시작일" class="sr_only">시작일</label>
+                                                                                <input type="text" id="시작일" name="시작일" class="btnCalendar input_txt hasDatepicker" title="시작일 입력" placeholder="YYYY-MM">
+                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <i class="date_line" aria-hidden="true">~</i>
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt">
+                                                                                <label for="종료일" class="sr_only">종료일</label>
+                                                                                <input type="text" id="종료일" name="종료일" class="btnCalendar input_txt hasDatepicker" title="종료일 입력" placeholder="YYYY-MM">
+                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여시간</div>
+                                                                <div class="dd dd_jointime">
+                                                                    <span class="box_ipt">
+                                                                        <input type="text" class="input_txt" id="jointime" name="jointime" placeholder="" title="참여시간 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여시간 입력 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                    <span class="jointime_txt">시간</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기관(교내)</div>
+                                                                <div class="dd">
+                                                                    <span class="box_ipt ">
+                                                                        <input type="text" class="input_txt" id="onCampus" name="onCampus" placeholder="" title="참여기관(교내) 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교내) 입력 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기관(외부)</div>
+                                                                <div class="dd">
+                                                                    <span class="box_ipt ">
+                                                                        <input type="text" class="input_txt" id="outCampus" name="outCampus" placeholder="" title="참여기관(교외) 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교외) 입력 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">목표달성시기</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="목표달성시기 선택">
+                                                                            <option disabled="" selected="">선택</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li li_type01">
+                                                                <div class="td">활동내용 (세부내용)</div>
+                                                                <div class="dd">
+                                                                    <div class="text_form_box">
+                                                                        <div class="text_form_inner">
+                                                                            <textarea placeholder="세부활동 내용을 작성해 주세요."></textarea>
+                                                                        </div>
+                                                                        <div class="text_info">
+                                                                            <p class="sr_only" id="interestHelp">최대 400 Byte까지 입력 가능합니다.</p>
+                                                                            <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">400</span> Byte</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="empplan_btn_wrap">
+                                                            <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                            <button type="button" class="btn small type01 btn_w52 add_btn"><span>추가</span></button>
+                                                            <ul class="td_move_btn">
+                                                                <li><button type="button" class="move_up"><span class="sr_only">위로 이동</span></button></li>
+                                                                <li><button type="button" class="move_down"><span class="sr_only">아래로 이동</span></button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="empplan_li">
+                                                        <ul class="empplan_inner_ul">
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">중점영역</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="중점영역 선택">
+                                                                            <option disabled="" selected="">중점영역 선택</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여방법</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="참여방법 선택">
+                                                                            <option disabled="" selected="">선택</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기간</div>
+                                                                <div class="dd">
+                                                                    <div class="box_table_group box_datepicker" aria-label="직접 날짜 입력">
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt">
+                                                                                <label for="시작일" class="sr_only">시작일</label>
+                                                                                <input type="text" id="시작일" name="시작일" class="btnCalendar input_txt hasDatepicker" title="시작일 입력" placeholder="YYYY-MM">
+                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="시작일 달력 선택"></button>
+                                                                            </span>
+                                                                        </div>
+                                                                        <i class="date_line" aria-hidden="true">~</i>
+                                                                        <div class="cell">
+                                                                            <span class="box_ipt">
+                                                                                <label for="종료일" class="sr_only">종료일</label>
+                                                                                <input type="text" id="종료일" name="종료일" class="btnCalendar input_txt hasDatepicker" title="종료일 입력" placeholder="YYYY-MM">
+                                                                                <button type="button" class="btn_calendar ui-datepicker-trigger" aria-label="종료일 달력 선택"></button>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여시간</div>
+                                                                <div class="dd dd_jointime">
+                                                                    <span class="box_ipt">
+                                                                        <input type="text" class="input_txt" id="jointime" name="jointime" placeholder="" title="참여시간 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여시간 입력 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                    <span class="jointime_txt">시간</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기관(교내)</div>
+                                                                <div class="dd">
+                                                                    <span class="box_ipt ">
+                                                                        <input type="text" class="input_txt" id="onCampus" name="onCampus" placeholder="" title="참여기관(교내) 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교내) 입력 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">참여기관(외부)</div>
+                                                                <div class="dd">
+                                                                    <span class="box_ipt ">
+                                                                        <input type="text" class="input_txt" id="outCampus" name="outCampus" placeholder="" title="참여기관(교외) 입력">
+                                                                        <button type="button" class="newbtn_del ico16_delete" aria-label="참여기관(교외) 입력 삭제">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li">
+                                                                <div class="td">목표달성시기</div>
+                                                                <div class="dd">
+                                                                    <div class="new_selectbox">
+                                                                        <select id="" name="" title="목표달성시기 선택">
+                                                                            <option disabled="" selected="">선택</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                            <option value="TEST">TEST</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="empplan_inner_li li_type01">
+                                                                <div class="td">활동내용 (세부내용)</div>
+                                                                <div class="dd">
+                                                                    <div class="text_form_box">
+                                                                        <div class="text_form_inner">
+                                                                            <textarea placeholder="세부활동 내용을 작성해 주세요."></textarea>
+                                                                        </div>
+                                                                        <div class="text_info">
+                                                                            <p class="sr_only" id="interestHelp">최대 400 Byte까지 입력 가능합니다.</p>
+                                                                            <p class="count_info" id="interestCount"><span class="result_byte">0</span> / <span class="max_byte">400</span> Byte</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="empplan_btn_wrap">
+                                                            <button type="button" class="btn small type02 type_gray btn_w52"><span>삭제</span></button>
+                                                            <button type="button" class="btn small type01 btn_w52 add_btn"><span>추가</span></button>
+                                                            <ul class="td_move_btn">
+                                                                <li><button type="button" class="move_up"><span class="sr_only">위로 이동</span></button></li>
+                                                                <li><button type="button" class="move_down"><span class="sr_only">아래로 이동</span></button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <!-- box_table 이 없을때 사용 -->
+                                                <div class="iap_plan_area mt16">
+                                                    <div class="notice_item">
+                                                        <p class="tit t3_sb">작성된 취업활동계획(IAP)이 없습니다.</p>
+                                                        <p class="b1_r">계획서를 작성해야 상담에 더욱 효과적인 도움을 받을 수 있습니다.</p>
+                                                    </div>
+                                                    <button type="button" class="btn semi_big type02 btn_actvie_add"><span>취업활동계획서 작성</sp></button>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="iapplan_end_wrap mt40">
+                                                <div class="flex_box js_s">
+                                                    <button type="button" class="btn big type02 btn_s_r" aria-label="목록" onclick="">목록</button>
+                                                    <div class="flex_gap16">
+                                                        <button type="button" id="clearBtn" class="btn big type02" onclick="">초기화</button>
+                                                        <button type="button" id="saveBtn" class="btn big type01" onclick="">저장</button>
+                                                        <button type="" id="" class="btn big fill type01" onclick="">제출</button>
                                                     </div>
                                                 </div>
-                                                
                                             </div>
                                         </div>
 
-                                        <script>
-                                            $(function(){
-                                                // 삭제 버튼
-                                                $(document).on("click", ".iapplan_th_area .btn:contains('삭제')", function(){
-                                                    var $table = $(this).closest("table.box_table");
-                                                    $table.remove();
-                                                });
 
-                                                // 위로 이동 버튼
-                                                $(document).on("click", ".iapplan_th_area .btn_top", function(){
-                                                    var $table = $(this).closest("table.box_table");
-                                                    var $prev = $table.prev("table.box_table");
-                                                    if($prev.length){
-                                                        $table.insertBefore($prev);
-                                                    }
-                                                });
 
-                                                // 아래로 이동 버튼
-                                                $(document).on("click", ".iapplan_th_area .btn_bottom", function(){
-                                                    var $table = $(this).closest("table.box_table");
-                                                    var $next = $table.next("table.box_table");
-                                                    if($next.length){
-                                                        $table.insertAfter($next);
-                                                    }
-                                                });
-
-                                                // 행 추가 버튼
-                                                $(document).on("click", ".btn_actvie_add", function(){
-                                                    var $wrapper = $(".iapplan_tablelist_box");
-                                                    var $lastTable = $wrapper.find("table.box_table").last();
-
-                                                    var $clone = $lastTable.clone();
-
-                                                    $clone.find("input, select, textarea").each(function(){
-                                                        var $el = $(this);
-
-                                                        if($el.is("select")){
-                                                            $el.prop("selectedIndex", 0);
-                                                        } else if($el.is(":checkbox, :radio")){
-                                                            $el.prop("checked", false);
-                                                        } else {
-                                                            $el.val("");
-                                                        }
-
-                                                        $el.removeAttr("id");
-                                                    });
-
-                                                    $clone.find("[aria-describedby]").removeAttr("aria-describedby");
-
-                                                    // 테이블 추가
-                                                    $wrapper.append($clone);
-                                                });
-                                            });
-                                        </script>
 
 
                                     </div>

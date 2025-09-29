@@ -979,7 +979,7 @@ body.dim:before {background-color:rgba(0, 0, 0, 0.16);content:"";position:fixed;
 .full_pop.max { min-width:100%;}
 .full_pop .head { position:relative;padding:0 0 24px;margin-bottom:24px; padding-right: 30px; border-bottom:1px solid var(--col_border);text-align:left;min-height:auto;z-index: 998;}
 .full_pop .head.type2 {margin-bottom:0;border-bottom:none}
-.full_pop > .closed {display:block;position:absolute;right:40px;top:36px;height:32px;width:32px; background:url("../images/ico32_close.svg") no-repeat 0 0;z-index:999}
+.full_pop > .closed {display:block;position:absolute;right:40px;top:36px;height:32px;width:32px; background:url("../../include/images/ico32_close.svg") no-repeat 0 0;z-index:999}
 .full_pop .pop_subtl, .full_pop .sub_tl_s01 { padding:0 0 16px}
 .full_pop .pop_subtl .essential {position:relative;top:-4px;left:6px}
 .full_pop > .cont {overflow-x:hidden;overflow-y:auto;height:100%;max-height: calc(100vh - 411px);}
