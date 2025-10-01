@@ -1056,8 +1056,8 @@ fieldset { border: none;}
 .mypage .progmg.allcare .nth_round_wrap .nth_round {color: var(--col_blue);}
 .mypage .progmg.allcare .nth_round_wrap .txt_blue {font-weight: 600;}
 .mypage .progmg.allcare .nth_round_wrap .row_space td {line-height: 0; height: 16px; padding: 0;}
-.mypage .progmg.allcare .table_unselect input[type='text'],
-.mypage .progmg.allcare .preapply_selfchk_wrap .table_unselect .radio_input_item input[type='text'].focus_on {background-color: #f5f5f5;}
+.mypage .progmg.allcare input[type='text']:disabled,
+.mypage .progmg.allcare .preapply_selfchk_wrap .radio_input_item input[type='text']:disabled.focus_on {background-color: #f5f5f5; color: #757575;}
 .mypage .progmg.allcare input.money_amount {text-align: right;}
 
 /* 개인정보 수집·이용·제공에 대한 동의서(참여자용) (UI_ADHPCbP11.html) */

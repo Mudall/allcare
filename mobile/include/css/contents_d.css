@@ -323,38 +323,43 @@
 }
 
 .ico24_file.word {
-    background: url("/cm/static/images/ico24_file_word.svg")
+    background: url("../images/ico24_file_word.svg")
 }
 
 .ico24_file.excel {
-    background: url("/cm/static/images/ico24_file_excel.svg")
+    background: url("../images/ico24_file_excel.svg")
 }
 
 .ico24_file.powerpoint {
-    background: url("/cm/static/images/ico24_file_ppt.svg")
+    background: url("../images/ico24_file_ppt.svg")
 }
 
 .ico24_file.img_file {
-    background: url("/cm/static/images/ico24_file_img.svg")
+    background: url("../images/ico24_file_img.svg")
 }
 
 .ico24_file.hw_file {
-    background: url("/cm/static/images/ico24_file_hangul.svg")
+    background: url("../images/ico24_file_hangul.svg")
 }
 
 .ico24_file.file_zip {
-    background: url("/cm/static/images/ico24_file_zip.svg")
+    background: url("../images/ico24_file_zip.svg")
 }
 
 .ico24_file.pdf {
-    background: url("/cm/static/images/ico24_file_pdf.svg")
+    background: url("../images/ico24_file_pdf.svg")
 }
 
 .ico24_fileattachments {
-    background: url("/cm/static/images/ico24_ui_fileattachments_filled.svg")
+    background: url("../images/ico24_ui_fileattachments_filled.svg")
 }
 
 /* 250819 추가end */
+.ico24_notice_gray {
+    background: url("../images/ico24_ui_!_gray.svg")
+}
+
+/* 250828 추가 */
 .ico48_searchWait {
     background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.54297 10.9266C2.54297 9.12152 4.00629 7.6582 5.81139 7.6582H34.2324C36.0375 7.6582 37.5009 9.12153 37.5009 10.9266V42.1898C37.5009 43.9949 36.0375 45.4582 34.2324 45.4582H5.81139C4.00629 45.4582 2.54297 43.9949 2.54297 42.1898V10.9266ZM5.81139 8.51083C4.47719 8.51083 3.3956 9.59242 3.3956 10.9266V42.1898C3.3956 43.524 4.47719 44.6056 5.81139 44.6056H34.2324C35.5666 44.6056 36.6482 43.524 36.6482 42.1898V10.9266C36.6482 9.59242 35.5666 8.51083 34.2324 8.51083H5.81139Z' fill='%23333333'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.4537 2.40002C17.8841 2.40002 16.6116 3.67248 16.6116 5.24213V5.38423H16.0432C14.7875 5.38423 13.7695 6.4022 13.7695 7.65792V9.7895C13.7695 10.1034 14.024 10.3579 14.338 10.3579H25.7064C26.0203 10.3579 26.2748 10.1034 26.2748 9.7895V7.65792C26.2748 6.4022 25.2568 5.38423 24.0011 5.38423H23.4327V5.24213C23.4327 3.67248 22.1602 2.40002 20.5906 2.40002H19.4537Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.4643 6.23687H16.0432C15.2584 6.23687 14.6222 6.87309 14.6222 7.65792V9.50529H25.4222V7.65792C25.4222 6.87309 24.7859 6.23687 24.0011 6.23687H22.5801V5.24213C22.5801 4.14337 21.6893 3.25266 20.5906 3.25266H19.4537C18.355 3.25266 17.4643 4.14337 17.4643 5.24213V6.23687ZM16.6116 5.24213C16.6116 3.67248 17.8841 2.40002 19.4537 2.40002H20.5906C22.1602 2.40002 23.4327 3.67248 23.4327 5.24213V5.38423H24.0011C25.2568 5.38423 26.2748 6.4022 26.2748 7.65792V9.7895C26.2748 10.1034 26.0203 10.3579 25.7064 10.3579H14.338C14.024 10.3579 13.7695 10.1034 13.7695 9.7895V7.65792C13.7695 6.4022 14.7875 5.38423 16.0432 5.38423H16.6116V5.24213Z' fill='%23333333'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.79492 14.9048C8.79492 14.6694 8.98579 14.4785 9.22124 14.4785L13.7686 14.4785C14.0041 14.4785 14.1949 14.6694 14.1949 14.9048C14.1949 15.1403 14.0041 15.3311 13.7686 15.3311L9.22124 15.3311C8.98579 15.3311 8.79492 15.1403 8.79492 14.9048Z' fill='%23333333'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.79492 23.9998C8.79492 23.7644 8.98579 23.5735 9.22124 23.5735L13.7686 23.5735C14.0041 23.5735 14.1949 23.7644 14.1949 23.9998C14.1949 24.2353 14.0041 24.4261 13.7686 24.4261L9.22124 24.4261C8.98579 24.4261 8.79492 24.2353 8.79492 23.9998Z' fill='%23333333'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.1836 14.9048C16.1836 14.6694 16.3745 14.4785 16.6099 14.4785H30.8204C31.0559 14.4785 31.2468 14.6694 31.2468 14.9048C31.2468 15.1403 31.0559 15.3311 30.8204 15.3311H16.6099C16.3745 15.3311 16.1836 15.1403 16.1836 14.9048Z' fill='%23333333'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.1836 23.9998C16.1836 23.7644 16.3745 23.5735 16.6099 23.5735H30.8204C31.0559 23.5735 31.2468 23.7644 31.2468 23.9998C31.2468 24.2353 31.0559 24.4261 30.8204 24.4261H16.6099C16.3745 24.4261 16.1836 24.2353 16.1836 23.9998Z' fill='%23333333'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.79492 19.4529C8.79492 19.2175 8.98579 19.0266 9.22124 19.0266L30.8212 19.0266C31.0567 19.0266 31.2476 19.2175 31.2476 19.4529C31.2476 19.6884 31.0567 19.8792 30.8212 19.8792L9.22124 19.8792C8.98579 19.8792 8.79492 19.6884 8.79492 19.4529Z' fill='%23333333'/%3E%3Cpath d='M44.3511 34.7953C44.3511 39.1006 40.87 42.5907 36.5759 42.5907C32.2818 42.5907 28.8008 39.1006 28.8008 34.7953C28.8008 30.4901 32.2818 27 36.5759 27C40.87 27 44.3511 30.4901 44.3511 34.7953Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M36.5759 41.7555C40.4099 41.7555 43.518 38.6393 43.518 34.7953C43.518 30.9514 40.4099 27.8352 36.5759 27.8352C32.7419 27.8352 29.6338 30.9514 29.6338 34.7953C29.6338 38.6393 32.7419 41.7555 36.5759 41.7555ZM36.5759 42.5907C40.87 42.5907 44.3511 39.1006 44.3511 34.7953C44.3511 30.4901 40.87 27 36.5759 27C32.2818 27 28.8008 30.4901 28.8008 34.7953C28.8008 39.1006 32.2818 42.5907 36.5759 42.5907Z' fill='%234D65E1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M38.3832 30.0509C37.4001 29.7475 36.418 29.7877 35.8301 29.914C35.6051 29.9623 35.3837 29.8187 35.3355 29.5931C35.2873 29.3676 35.4306 29.1456 35.6555 29.0973C36.3635 28.9452 37.4917 28.9019 38.6283 29.2527C39.7765 29.6071 40.9429 30.3685 41.669 31.8245C41.7719 32.0308 41.6885 32.2817 41.4827 32.3848C41.277 32.488 41.0268 32.4043 40.9239 32.198C40.3172 30.9814 39.3546 30.3508 38.3832 30.0509Z' fill='%234D65E1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M41.3096 40.0127C41.4805 39.9048 41.7268 39.9298 41.8597 40.0685L45.5185 43.8866C45.6515 44.0253 45.6207 44.2252 45.4498 44.3331C45.2789 44.441 45.0326 44.416 44.8997 44.2773L41.2408 40.4592C41.1079 40.3205 41.1387 40.1206 41.3096 40.0127Z' fill='%234D65E1'/%3E%3C/svg%3E%0A") no-repeat 0 0;
     background-size: 3rem;
@@ -401,59 +406,59 @@
 }
 
 .ico24_finance_lock {
-    background: url(/cm/static/mobile/images/ico24_finance_lock.png) no-repeat 0 0;
+    background: url(../images/ico24_finance_lock.png) no-repeat 0 0;
 }
 
 .ico48_email_cancel {
-    background: url(/cm/static/mobile/images/ico48-email-cancel-mo.png) no-repeat 0 0;
+    background: url(../images/ico48-email-cancel-mo.png) no-repeat 0 0;
 }
 
 .logo80_80_pass {
-    background: url(/cm/static/mobile/images/logo80_80_pass.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_pass.svg) no-repeat 0 0;
 }
 
 .logo80_80_Samsungpass {
-    background: url(/cm/static/mobile/images/logo80_80_Samsungpass.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_Samsungpass.svg) no-repeat 0 0;
 }
 
 .logo80_80_kakao {
-    background: url(/cm/static/mobile/images/logo80_80_kakao.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_kakao.svg) no-repeat 0 0;
 }
 
 .logo80_80_shinhan {
-    background: url(/cm/static/mobile/images/logo80_80_shinhan.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_shinhan.svg) no-repeat 0 0;
 }
 
 .logo80_80_payco {
-    background: url(/cm/static/mobile/images/logo80_80_payco.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_payco.svg) no-repeat 0 0;
 }
 
 .logo80_80_KB {
-    background: url(/cm/static/mobile/images/logo80_80_KB.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_KB.svg) no-repeat 0 0;
 }
 
 .logo80_80_naver {
-    background: url(/cm/static/mobile/images/logo80_80_naver.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_naver.svg) no-repeat 0 0;
 }
 
 .logo80_80_hana {
-    background: url(/cm/static/mobile/images/logo80_80_hana.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_hana.svg) no-repeat 0 0;
 }
 
 .logo80_80_banksalad {
-    background: url(/cm/static/mobile/images/logo80_80_banksalad.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_banksalad.svg) no-repeat 0 0;
 }
 
 .logo80_80_toss {
-    background: url(/cm/static/mobile/images/logo80_80_toss.svg) no-repeat 0 0;
+    background: url(../images/logo80_80_toss.svg) no-repeat 0 0;
 }
 
 .ico72_join_type_personal {
-    background: url(/cm/static/mobile/images/ico72_join_type_personal.png) no-repeat 0 0;
+    background: url(../images/ico72_join_type_personal.png) no-repeat 0 0;
 }
 
 .ico72_join_type_company {
-    background: url(/cm/static/mobile/images/ico72_join_type_company.png) no-repeat 0 0;
+    background: url(../images/ico72_join_type_company.png) no-repeat 0 0;
 }
 
 .file_progress_section {
@@ -703,17 +708,17 @@
 }
 
 .slider_card_system .swiper-slide:nth-child(1) {
-    background: url(/cm/static/mobile/images/bg_card_system_slider01.png) no-repeat 0 0;
+    background: url(../images/bg_card_system_slider01.png) no-repeat 0 0;
     background-size: contain;
 }
 
 .slider_card_system .swiper-slide:nth-child(2) {
-    background: url(/cm/static/mobile/images/bg_card_system_slider02.png) no-repeat 0 0;
+    background: url(../images/bg_card_system_slider02.png) no-repeat 0 0;
     background-size: contain;
 }
 
 .slider_card_system .swiper-slide:nth-child(3) {
-    background: url(/cm/static/mobile/images/bg_card_system_slider03.png) no-repeat 0 0;
+    background: url(../images/bg_card_system_slider03.png) no-repeat 0 0;
     background-size: contain;
 }
 
@@ -915,217 +920,217 @@
 }
 
 .select_bank_section button span.logo24_bank_jeju {
-    background: url(/cm/static/mobile/images/logo24_bank_sh_jeju.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_sh_jeju.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_citi {
-    background: url(/cm/static/mobile/images/logo24_bank_citi.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_citi.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_kakao {
-    background: url(/cm/static/mobile/images/logo24_bank_kakao.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_kakao.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_kb {
-    background: url(/cm/static/mobile/images/logo24_bank_kb.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_kb.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_ibk {
-    background: url(/cm/static/mobile/images/logo24_bank_ibk.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_ibk.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_bank_k {
-    background: url(/cm/static/mobile/images/logo24_bank_k.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_k.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_toss {
-    background: url(/cm/static/mobile/images/logo24_bank_toss.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_toss.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_nh {
-    background: url(/cm/static/mobile/images/logo24_bank_nh.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_nh.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_kdb {
-    background: url(/cm/static/mobile/images/logo24_bank_kdb.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_kdb.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_bn {
-    background: url(/cm/static/mobile/images/logo24_bank_bn.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_bn.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_bnk {
-    background: url(/cm/static/mobile/images/logo24_bank_bnk.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_bnk.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_gwanju {
-    background: url(/cm/static/mobile/images/logo24_bank_gwangju.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_gwangju.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_gwanju02 {
-    background: url(/cm/static/mobile/images/logo24_bank_gwangju02.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_gwangju02.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_suhyup {
-    background: url(/cm/static/mobile/images/logo24_bank_suhyup.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_suhyup.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_sinhyup {
-    background: url(/cm/static/mobile/images/logo24_bank_sinhyup.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_sinhyup.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_dgb {
-    background: url(/cm/static/mobile/images/logo24_bank_dgb.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_dgb.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_worri {
-    background: url(/cm/static/mobile/images/logo24_bank_worri.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_worri.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_hana {
-    background: url(/cm/static/mobile/images/logo24_bank_hana.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_hana.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_mg {
-    background: url(/cm/static/mobile/images/logo24_bank_mg.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_mg.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_epost {
-    background: url(/cm/static/mobile/images/logo24_bank_epost.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_epost.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_sb {
-    background: url(/cm/static/mobile/images/logo24_bank_sb.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_sb.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_jp {
-    background: url(/cm/static/mobile/images/logo24_bank_jp.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_jp.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_sc {
-    background: url(/cm/static/mobile/images/logo24_bank_sc.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_sc.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_nonghyup {
-    background: url(/cm/static/mobile/images/logo24_bank_nonghyup.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_nonghyup.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_deutsche {
-    background: url(/cm/static/mobile/images/logo24_bank_deutsche.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_deutsche.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_sj {
-    background: url(/cm/static/mobile/images/logo24_bank_sj.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_sj.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_nation {
-    background: url(/cm/static/mobile/images/logo24_bank_nation.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_nation.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_china {
-    background: url(/cm/static/mobile/images/logo24_bank_china.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_china.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_ccb {
-    background: url(/cm/static/mobile/images/logo24_bank_ccb.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_ccb.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_china_industrial {
-    background: url(/cm/static/mobile/images/logo24_bank_china_industrial.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_china_industrial.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_bnp {
-    background: url(/cm/static/mobile/images/logo24_bank_bnp.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_bnp.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_boa {
-    background: url(/cm/static/mobile/images/logo24_bank_boa.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_boa.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_hsbc {
-    background: url(/cm/static/mobile/images/logo24_bank_hsbc.png) no-repeat 0 50%;
+    background: url(../images/logo24_bank_hsbc.png) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_chungbuk {
-    background: url(/cm/static/mobile/images/logo24_bank_chungbuk.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_chungbuk.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_kodit {
-    background: url(/cm/static/mobile/images/logo24_bank_kodit.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_kodit.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_kibo {
-    background: url(/cm/static/mobile/images/logo24_bank_kibo.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_kibo.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_boram {
-    background: url(/cm/static/mobile/images/logo24_bank_boram.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_boram.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_peace {
-    background: url(/cm/static/mobile/images/logo24_bank_peace.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_peace.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_fsb {
-    background: url(/cm/static/mobile/images/logo24_bank_fsb.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_fsb.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_morgan {
-    background: url(/cm/static/mobile/images/logo24_bank_morgan.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_morgan.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_mhcbjpjt {
-    background: url(/cm/static/mobile/images/logo24_bank_mhcbjpjt.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_mhcbjpjt.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_ufj {
-    background: url(/cm/static/mobile/images/logo24_bank_ufj.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_ufj.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
 .select_bank_section button span.logo24_bank_rbs {
-    background: url(/cm/static/mobile/images/logo24_bank_rbs.svg) no-repeat 0 50%;
+    background: url(../images/logo24_bank_rbs.svg) no-repeat 0 50%;
     background-size: 1.5rem;
 }
 
@@ -1495,10 +1500,11 @@
 
 .question_leave {
     flex-direction: column;
-    gap: 0.625rem;
+    gap: 1rem;
     margin-top: 0.625rem;
 }
 
+/* 250828 수정 */
 .question_leave::before {
     display: block;
     content: "";
@@ -1856,19 +1862,19 @@
 }
 
 .mock_calc_section .cell .ico48_program06 {
-    background: url(/cm/static/mobile/images/ico48_program06.png) no-repeat 0 0;
+    background: url(../images/ico48_program06.png) no-repeat 0 0;
 }
 
 .mock_calc_section .cell .ico48_program07 {
-    background: url(/cm/static/mobile/images/ico48_program07.png) no-repeat 0 0;
+    background: url(../images/ico48_program07.png) no-repeat 0 0;
 }
 
 .mock_calc_section .cell .ico48_program08 {
-    background: url(/cm/static/mobile/images/ico48_program08.png) no-repeat 0 0;
+    background: url(../images/ico48_program08.png) no-repeat 0 0;
 }
 
 .mock_calc_section .cell .ico48_program09 {
-    background: url(/cm/static/mobile/images/ico48_program09.png) no-repeat 0 0;
+    background: url(../images/ico48_program09.png) no-repeat 0 0;
 }
 
 .employ_search_result .cont_list_area.line_type {
@@ -2040,7 +2046,7 @@
     align-items: center;
     height: 5rem;
     padding: 0 1.25rem;
-    background: url(/cm/static/mobile/images/ico16_arrow_right.png) no-repeat right 0.625rem top 50%;
+    background: url(../images/ico16_arrow_right.png) no-repeat right 0.625rem top 50%;
 }
 
 .join_type_section .btn_group a [class^=ico48] {
@@ -2048,19 +2054,19 @@
 }
 
 .join_type_section .btn_group a [class^=ico48].ico48_join_type_1 {
-    background: url(/cm/static/mobile/images/ico48_join_type_1.png) no-repeat 0 0;
+    background: url(../images/ico48_join_type_1.png) no-repeat 0 0;
 }
 
 .join_type_section .btn_group a [class^=ico48].ico48_join_type_2 {
-    background: url(/cm/static/mobile/images/ico48_join_type_2.png) no-repeat 0 0;
+    background: url(../images/ico48_join_type_2.png) no-repeat 0 0;
 }
 
 .join_type_section .btn_group a [class^=ico48].ico48_join_type_3 {
-    background: url(/cm/static/mobile/images/ico48_join_type_3.png) no-repeat 0 0;
+    background: url(../images/ico48_join_type_3.png) no-repeat 0 0;
 }
 
 .join_type_section .btn_group a [class^=ico48].ico48_join_type_4 {
-    background: url(/cm/static/mobile/images/ico48_join_type_4.png) no-repeat 0 0;
+    background: url(../images/ico48_join_type_4.png) no-repeat 0 0;
 }
 
 .join_type_section .btn_group a [class^=ico48] + span {
@@ -2744,27 +2750,27 @@
 }
 
 .utilization_method_rsum .ico39_work01 {
-    background: url(/cm/static/mobile/images/ico39_work01.png) no-repeat 0 0;
+    background: url(../images/ico39_work01.png) no-repeat 0 0;
 }
 
 .utilization_method_rsum .ico39_work02 {
-    background: url(/cm/static/mobile/images/ico39_work02.png) no-repeat 0 0;
+    background: url(../images/ico39_work02.png) no-repeat 0 0;
 }
 
 .utilization_method_rsum .ico39_work03 {
-    background: url(/cm/static/mobile/images/ico39_work03.png) no-repeat 0 0;
+    background: url(../images/ico39_work03.png) no-repeat 0 0;
 }
 
 .utilization_method_rsum .ico39_work04 {
-    background: url(/cm/static/mobile/images/ico39_work04.png) no-repeat 0 0;
+    background: url(../images/ico39_work04.png) no-repeat 0 0;
 }
 
 .utilization_method_rsum .ico39_work05 {
-    background: url(/cm/static/mobile/images/ico39_work05.png) no-repeat 0 0;
+    background: url(../images/ico39_work05.png) no-repeat 0 0;
 }
 
 .utilization_method_rsum .ico39_work06 {
-    background: url(/cm/static/mobile/images/ico39_work06.png) no-repeat 0 0;
+    background: url(../images/ico39_work06.png) no-repeat 0 0;
 }
 
 .utilization_method_rsum .border_box {

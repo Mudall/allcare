@@ -81,7 +81,7 @@ header .header_main_area .header_info{
 	display: flex;
 	justify-content: center;
 	align-items:center;
-	padding: 4px;
+	padding: 4px 16px;
 	font-size: 14px;
 	background-color: #EDF1F5;
 }
@@ -94,6 +94,7 @@ header .header_main_area .header_info .icon{
     background: url(../images/header_flag2.png) no-repeat;
 }
 
+header .header_main_area .header_info .text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 header .header_main_area {
   display: flex;
   flex-direction: column;
@@ -1078,7 +1079,8 @@ footer .footer_address .logos .logos-gov-info{
 }
 /* 옆으로 흐르는 텍스트 css */
 /* S: 옆으로 흐르는 텍스트 공지(20250630 수정) */
-.header_notice_area {position: absolute; left: 50%; top: 5.25rem; display: flex; padding: 0.625rem 1rem 0.625rem 1.25rem !important; width: 100%; height: 3.5rem !important; align-items: center; transform: translate(-50%,0); overflow: hidden;} /* 20250701 수정 */
+/*.header_notice_area {position: absolute; left: 50%; top: 5.25rem; display: flex; padding: 0.625rem 1rem 0.625rem 1.25rem !important; width: 100%; height: 3.5rem !important; align-items: center; transform: translate(-50%,0); overflow: hidden;} */
+.header_notice_area {display: flex;padding: 0.625rem 1rem 0.625rem 1.25rem !important;width: calc(100% + 40px);height: 3.5rem !important;align-items: center; margin: 0 -20px;}
 .header_notice_area span {line-height: initial; vertical-align: baseline;}
 .header_notice_area.person {background-color: #f2f4fc;}
 .header_notice_area.company {background-color: #f3fdf7;}
@@ -1086,7 +1088,7 @@ footer .footer_address .logos .logos-gov-info{
 .header_notice_area .txt_container ul {height: 2.5rem; overflow: hidden; display: flex; align-items: center;}
 .header_notice_area .txt_container ul li {list-style-type: none; display: none;}
 .header_notice_area .txt_container ul li.active {display: block;}
-.header_notice_area .txt_container ul li a {width: 100%; height: 100%; font-size: 0.875rem; color: #111; font-weight: 600; line-height: 1.25rem; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: break-all;}
+.header_notice_area .txt_container ul li a {width: 100%; height: 100%; font-size: 0.875rem; color: #111; font-weight: 600; line-height: 1.25rem; display: -webkit-box; -webkit-line-clamp: 1; line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: break-all;}
 .header_notice_area .txt_container ul li a span {color: #e0024b; font-weight: 600;}
 .header_notice_area .mo_btnbox {display: flex; align-items: center; justify-content: center; width: 24px; height: 100%; margin-left: 0.25rem;}
 .header_notice_area .mo_btnbox button {position: relative; width: 24px; height: 24px; cursor: pointer;}
