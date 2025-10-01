@@ -433,7 +433,7 @@ fieldset { border: none;}
 .mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li a {display: inline-flex; align-items: center; gap: 8px;}
 .mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li .ico24_file {margin: 0;}
 .mypage .progmg.allcare .prog_info_wrap tr.new_down .down_box ul li a p {max-width: 670px; position: relative; display: inline-block; font-size: 15px; color: #333; font-weight: 400; line-height: 28px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.mypage .progmg.allcare .prog_info_wrap tr.new_down span.down {width: 16px; height: 16px; background: url(../include/images/ico16_download2.svg.svg);}
+.mypage .progmg.allcare .prog_info_wrap tr.new_down span.down {width: 16px; height: 16px; background: url('../include/images/ico16_download2.svg');}
 .mypage .progmg.allcare .prog_info_wrap tr.new_desc .box_board_text {text-align: left;}
 
 /* 프로그램 신청 - 조회 (UI_ADHPAcS04) */
@@ -736,7 +736,7 @@ fieldset { border: none;}
 
 /* 점프업 - 취업준비도검사_ST5 (UI_ADHPCeS06) */
 .mypage .progmg.allcare .donepage .done_info_tit {padding-left: 32px; font-size: 24px; color: #111; font-weight: 600; line-height: 34px; position: relative;} 
-.mypage .progmg.allcare .donepage .done_info_tit:before {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_jopstep_done.svg') no-repeat center / contain;} 
+.mypage .progmg.allcare .donepage .done_info_tit:before {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_memo_search.svg') no-repeat center / contain;} 
 .mypage .progmg.allcare .earn_score {color: #EE2E62; font-weight: 600;}
 .mypage .progmg.allcare .cont_donechk_wrap {border: 1px solid #ddd; border-radius: 8px; padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;}
 .mypage .progmg.allcare .cont_donechk_wrap p {font-size: 16px; color: #555; font-weight: 400; line-height: 28px;}
@@ -805,7 +805,7 @@ fieldset { border: none;}
 .mypage .progmg.allcare .employ_plan_wrap .iap_plan_area {display: flex; flex-direction: column; align-items: center; border: 1px solid #ddd; border-radius: 8px; padding: 32px 24px;} 
 .mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .notice_item {margin-bottom: 16px; text-align: center; display: flex; flex-direction: column; align-items: center;}
 .mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .notice_item .tit {padding-left: 26px; position: relative; margin-bottom: 8px;}
-.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .notice_item .tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_employ_item.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .notice_item .tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_dash_apply.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .btn.semi_big {text-align: center; padding: 10px 16px;}
 .mypage .progmg.allcare .employ_plan_wrap .iap_plan_area .btn.semi_big span {font-size: 16px; color: #333; font-weight: 400; line-height: 28px;}
 .mypage .progmg.allcare .employ_plan_wrap .iapplan_th_area {display: flex; align-items: center; gap: 8px; justify-content: flex-end}
@@ -906,7 +906,7 @@ fieldset { border: none;}
 .mypage .progmg.allcare .iap_attfile_wrap {padding: 32px 40px; border: 1px solid #ddd; border-radius: 8px;}
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit {padding-bottom: 16px; border-bottom: 1px solid #eee;}
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit p {position: relative; padding-left: 32px; line-height: 30px;}
-.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit p::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_attfile.svg') no-repeat center / contain;}
+.mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_tit p::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_ui_fileattachments_filled.svg') no-repeat center / contain;}
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li {padding-left: 20px; position: relative;}
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li:after {content: ''; position: absolute; left: 10px; top: 10px; width: 3px; height: 3px; display: block; background-color: #555; border-radius: 50%;}
 .mypage .progmg.allcare .iap_attfile_wrap .iap_attfile_tit .att_desc li p {font-size: 14px; color: #555; font-weight: 400; line-height: 24px;}
@@ -933,8 +933,8 @@ fieldset { border: none;}
 .mypage .progmg.allcare .point_request_dashboard>li {width: 33.3%;}
 .mypage .progmg.allcare .point_request_dashboard>li .tit {font-size: 18px; color: #111; font-weight: 600; line-height: 28px; position: relative; padding-left: 28px;}
 .mypage .progmg.allcare .point_request_dashboard>li .tit::after {content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/mypage/ico24_dash_apply.svg') no-repeat center / contain;}
-.mypage .progmg.allcare .point_request_dashboard .li_approve .tit::after  {background-image: url('../images/mypage/ico24_dash_approve.svg');}
-.mypage .progmg.allcare .point_request_dashboard .li_refund .tit::after  {background-image: url('../images/mypage/ico24_dash_refund.svg');}
+.mypage .progmg.allcare .point_request_dashboard .li_approve .tit::after  {background-image: url('../images/mypage/ico16_download.svg');}
+.mypage .progmg.allcare .point_request_dashboard .li_refund .tit::after  {background-image: url('../images/mypage/ico24_wallet_coin.svg');}
 .mypage .progmg.allcare .point_request_dashboard .inner_box {min-height: 174px; margin-top: 8px; background-color: #fff; border-radius: 8px; border: 1px solid #ddd; padding: 24px 20px;}
 .mypage .progmg.allcare .point_request_dashboard .inner_box li {padding: 8px 0; display: flex; justify-content: space-between; align-items: baseline;}
 .mypage .progmg.allcare .point_request_dashboard .inner_box li:first-child {padding-top: 0;}
